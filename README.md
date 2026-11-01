@@ -147,7 +147,7 @@ This analyses `run_2_v2`, `run_3_v2`, and `run_4_v2`, checks that all nine numer
 
 ## 🖼️ Example Outputs
 
-The figures below show the saved thesis evaluation, rather than any newly executed evaluation.
+The figures below show the saved thesis evaluation
 
 **Cost versus aggregated accuracy**
 
@@ -187,11 +187,3 @@ python -m preprocessing.run_pipeline
 This uses the included scraped data and may need an initial tokenizer vocabulary download. Preprocessing intermediates are excluded from Git. The two-script classification/analysis workflow uses the frozen inputs directly.
 
 ---
-
-## 🎯 Evaluation Notes
-
-- **Aggregation:** majority voting, with the middle ordinal label selected when all three labels differ. Worker voting is applied within each repetition and then across repetitions; LLMC aggregates the three judge decisions.
-- **Selected cases:** Tables 7 and 8 use the fixed C01–C08 company mapping. New classifications may change which cases differ in correctness.
-- **Historical data:** V1 is excluded from the main analysis. The cost summary includes a separately labelled historical 48-company Gemini comparison; step 1 does not rerun that experiment, and it is excluded from the main cost-versus-accuracy plot.
-- **Reproducibility:** saved outputs allow analysis verification. New model responses may differ even with identical prompts and model IDs because provider deployments and behavior can change.
-- **Data:** classifications represent evidence in the supplied website snapshot. Human-reviewed labels are the evaluation benchmark; company mappings provide traceability. Website text retains its original third-party provenance.
