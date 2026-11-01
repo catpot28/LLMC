@@ -1,0 +1,426 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/sap-odata/
+page path  : /product/plugins/sap-odata/
+captured   : 2026-02-12 04:21:04 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_sap-odata__8bc06bb3.html.gz
+========================================================================
+
+Plugin: SAP OData | Dataiku
+
+Plugin: SAP OData | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+SAP OData
+
+SAP OData
+
+This plugin provides the capability to read from SAP using the OData protocol.
+
+Plugin information
+
+Version
+
+1.0.4
+
+Author
+
+Dataiku (Alex Bourret)
+
+Released
+
+2020-11-13
+
+Last updated
+
+2025-01-29
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+Description
+
+The purpose of this Dataiku Plugin is to allow DSS users to read from SAP using the OData protocol. SAP offers the possibility to expose SAP data structures using
+ABAP CDS Views
+. CDS Views can be made public and therefore consumed from external systems using the SAP
+ODATA access
+. The Plugin serves as a new Dataset for reading data from SAP. It is a read only dataset.
+
+How to set up
+
+The main prerequisite to use this Plugin is to know the credentials to connect to the SAP system (Username, Password, Client). SAP OData support depends on the SAP Netweaver Gateway. Check your SAP Version if your actual SAP Netweaver Gateway (e.g. NW 7.0) supports SAP OData.
+
+In DSS, go to
+App > Plugins > Installed > SAP OData > Settings > SAP/OData login
+
+Add a preset, name it and fill in the details.
+
+Fill in the preset
+
+The
+Resource
+box can contain the full URL of the service node to access, or the OData service’s URL with the service node left out. It this case, the end user of the plugin will be able to chose which service node to access. In an OData URL, the service node is the last segment of the URL path. For instance, if the resource is
+https://sapesX.sapdevcenter.com/sap/opu/odata/sap/SVC_NDE
+, the service node is
+SVC_NDE
+. The service node is also the name of the CDS View as defined and exposed using ABAP CDS Views within SAP.
+
+For the user’s comfort of use, a list of descriptions of available service nodes can be added to the preset. To do so, first make sure no service node is present in the resource’s URL. Then simply add the service node code and its actual description in the
+Service name
+section of the preset.
+
+How to use
+
+Go to your DSS flow
+
+Select
+SAP OData
+in the plugin section of the “+Dataset” menu and click on
+SAP OData
+in the combo box
+
+Pick the access type and the preset you previously configured
+
+If necessary, fill in the
+Service node
+box (see point 3 of the paragraph above)
+
+If the
+Entity
+box is left blank, the plugin will retrieve a list of entities accessible on this service node.
+
+Install In Dataiku
+
+To install the plugin, open the
+Apps menu, click Plugins and search for SAP or OData.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

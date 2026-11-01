@@ -1,0 +1,722 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/agentic-ai-factory-problems/
+page path  : /blog/agentic-ai-factory-problems/
+captured   : 2026-06-10 06:44:22 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_agentic-ai-factory-problems__79a8e722.html.gz
+========================================================================
+
+Building the enterprise agentic AI factory with DataRobot and Dell | DataRobot Blog
+
+Building the enterprise agentic AI factory with DataRobot and Dell | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Building the enterprise agentic AI factory with DataRobot and Dell
+
+The race to production-ready agentic AI is on — but for most enterprises, the finish line keeps moving. Models get built, pilots get run, and then teams hit a wall: the infrastructure, security, governance, and operational requirements for running AI agents at enterprise scale are far more complex than any single tool or vendor anticipated. At Dell Technologies World, DataRobot and Dell are showing what it looks like when those pieces come together — on infrastructure you own, on your terms. Today, DataRobot is also announcing new capabilities for managing workloads, ACLs, and agent identity.
+
+Who’s building the agentic AI factory — and what’s standing in their way
+
+The core challenge isn’t building AI agents — it’s running them in production on your own infrastructure in a way that is secure, scalable, reliable, compliant, and cost-effective all at once. Today that requires stitching together a custom runtime from open-source tools and proprietary vendors — expensive, slow, and still leaving gaps in observability, governance, and cost control. Every team in IT has a distinct stake in how it gets solved:
+
+IT Ops and ML Ops engineers
+need to ensure GPU and CPU resources are available on demand, that expensive compute resources aren’t idling between workloads, and that mission-critical agent systems stay resilient through infrastructure outages.
+
+Developers
+need continuous visibility into behavioral metrics like accuracy and hallucination rates alongside operational metrics like latency and cost — plus real-time intervention for toxic content and PII, and the ability to connect agents to institutional knowledge across enterprise systems.
+
+Security Ops teams
+must ensure agents access only what they’re authorized to — without becoming backdoors to restricted data — with approval workflows guarding against unauthorized deployments.
+
+Enterprise CIOs
+have become de facto owners of the AI runtime itself, responsible for IT Ops, Security Ops, and compliance, while also providing centrally approved tooling to data scientists and developers across the business.
+
+Four problems you have to solve to take agents to production
+
+Getting from a working prototype of one agent to a governed production scale workforce of thousands of agents means solving four interconnected challenges that most organizations underestimate:
+
+Scalable, reliable, cost-effective inference.
+Production agents need consistent latency, high availability, and efficient GPU utilization — without a team dedicated to managing the underlying infrastructure or absorbing unpredictable cloud billing.
+
+Embedded governance and monitoring.
+Governance can’t be bolted on after deployment. Behavioral monitoring, real-time guardrails, automated compliance reporting, and full cost visibility need to be built into the runtime from day one.
+
+Secure context, knowledge, and tools management.
+Agents need access to institutional knowledge across documents, emails, CRMs, and business systems — but that access must respect existing security controls and access policies, not route around them.
+
+Security and identity management.
+Agents are the new workforce and need even more controls than employees. This introduces identity and access challenges that traditional IT controls weren’t designed for — requiring agent-specific permissions, approval workflows, and revocation capabilities that operate at the speed security incidents demand.
+
+How DataRobot and Dell solve it — together
+
+DataRobot on Dell AI Factory with NVIDIA is purpose-built to address every layer of the production challenge — delivered through a pre-validated DataRobot blueprint on the Dell Automation Platform that takes enterprises from bare metal to a running, governed agent workforce in hours, not months.
+
+Scalable, reliable inference.
+Dell PowerEdge XE9680 and XE9780 servers with
+NVIDIA Blackwell GPUs
+, Dell PowerScale storage, and
+NVIDIA Spectrum-X Ethernet
+networking provide the compute foundation. The runtime of the DataRobot Agent Workforce Platform, co-engineered with NVIDIA, includes NIM microservices and maximizes throughput and minimizes latency — with predictable on-premise economics replacing unpredictable cloud billing. DataRobot provides same region and cross-region high availability and multi-tenancy with token quota allocation and management for fair-sharing of LLM inference endpoints.
+
+Embedded AI governance and monitoring.
+Real-time guardrails powered by
+NVIDIA NeMo Guardrails
+and other open source guardrails, continuous behavioral and operational monitoring with the broadest suite of out-of-the-box operational and behavioral metrics, automated compliance reporting, and full cost visibility come out of the box — keeping every agent audit-ready without additional integration work. DataRobot has a single pane of glass for observability into the entire AI ecosystem in an enterprise, or if you choose, you can export all metrics, logs and traces using our OTel collectors to your favorite dashboard. Built-in governance for models, agents and applications against security risks, compliance risks and operational risks, and approval workflows to guard against unauthorized deployments.
+
+Secure context, knowledge, and tools management.
+DataRobot has everything you need for enterprise connectivity and access to both structured data and unstructured data. This includes managed RAG workflows with a choice of popular vector databases (VDBs), native context memory management, and MCP server support for tools and skills. You can use DataRobot-provided or your own MCP servers.
+
+Security and identity management.
+The entire DataRobot Agent Workforce Platform runs within your own infrastructure perimeter, with existing enterprise Role Based Access Controls controls enforced at runtime. Integration with key IDPs like Okta. Along with the previous point, this helps to deliver comprehensive end-to-end governance across AI, IT, and infrastructure.
+
+Build, deploy, and run on your terms
+
+DataRobot on Dell AI Factory meets organizations where they are. Developers build using the frameworks they already know — LangChain, LlamaIndex, or any OSS tooling — and deploy from their preferred IDE with a single command. Agents connect to the data stores and enterprise systems already in use, with context and memory management built in. Workloads run wherever the business requires: on-premise, at the edge, in air-gapped or sovereign environments, or across hybrid cloud. The stack flexes to match your architecture — not the other way around. In addition, today DataRobot is announcing new capabilities to manage workloads, ACLs, and agent identity.
+
+What’s new: capabilities we’re announcing at Dell Technologies World
+
+Unified Workload API: one interface for every AI workload
+
+The DataRobot Unified Workload API gives enterprises a single interface for deploying, managing, and governing every type of AI workload — from traditional models to complex multi-component agentic applications. Whether you’re deploying a containerized agent, an NVIDIA NIM, an MCP server, or a full agentic application with front end, back end, tools, and guardrails, it all goes through one consistent interface. The platform automatically registers workloads as governed artifacts from creation — moving through draft, locked, and deployed states with full lineage tracking — eliminating the tradeoff between iteration speed and production compliance. IT administrators get unified visibility and governance across all workload types; developers go from code to a running, monitored agent in minutes.
+
+ACL Hydration: enterprise knowledge without the security risk
+
+Most RAG implementations ingest enterprise documents into a vector database with no record of who was authorized to see them — creating exactly the risk that causes security teams to block AI rollouts.
+ACL Hydration
+solves this by preserving ACLs (Access Control Lists) from docs in data sources (like SharePoint, Google Drive, Confluence, Jira, and Slack) when contents of those docs are stored in VDB of a RAG system at ingestion time. When the RAG vector database is accessed, this enforces the source ACLs, which are preserved alongside RAG. When permissions change in the source system, DataRobot refreshes the ACL graph automatically — so agents never operate on stale permissions, and when a user is removed from a source system, they get automatically removed in near-real time to protect against rogue activity. For Dell AI Factory customers running sensitive workloads on-premises, this give agents the full context of your enterprise without turning agents into a backdoor.
+
+Identity-first AI governance: agents as first-class enterprise identities
+
+Most enterprise AI agents today authenticate through static API keys or shared credentials — meaning their actions are logged against a developer key, not a distinct governed identity. In a non-deterministic system, that ambiguity is a real security liability: attribution breaks down, least privilege weakens, and containment requires rotating credentials instead of disabling a governed identity.
+The identity-first governance model from DataRobot
+, provisions agents as first-class identities directly inside the corporate identity provider — authenticated via short-lived, policy-controlled tokens, with every action attributed to a specific autonomous actor and permissions adjustable without touching code. Agents operate inside the same control plane that secures your workforce, with centralized revocation authority that works at the speed incidents actually require.
+
+See it in action at Dell Technologies World
+
+DataRobot and Dell will be together at Dell Technologies World, May 18-21 in Las Vegas. Come see the Agent Workforce Platform running live on Dell AI Factory with NVIDIA, and learn how organizations across financial services, healthcare, manufacturing, and the public sector are moving from AI experiments to production-grade agent workforces on infrastructure they own and control.
+
+Meet us at Dell Technologies World →
+
+Learn more about the DataRobot and Dell partnership at
+datarobot.com/solutions/partners/dell
+.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+Dr. Ramyanshu (Romi) Datta
+
+,
+
+Nikki Rouda
+
+May 18, 2026
+
+|
+6 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Practitioners
+
+Industry-standard LLM benchmarks in DataRobot
+
+May 27, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

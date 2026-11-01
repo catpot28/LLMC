@@ -1,0 +1,146 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/how-genai-makes-erp-insights-more-accessible
+page path  : /blogs/how-genai-makes-erp-insights-more-accessible
+captured   : 2026-01-15 11:02:16 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sap/www.sap.com_blogs_how-genai-makes-erp-insights-more-accessible__cb88edaf.html.gz
+========================================================================
+
+How GenAI can make ERP insights more accessible
+
+How GenAI can make ERP insights more accessible
+
+media-blend
+
+text-black
+
+How GenAI can make ERP insights more accessible
+
+Enabling users to ask conversational questions of ERP systems can drive new insights to improve processes.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+Counter to high expectations when generative AI (GenAI) debuted in 2022, companies have struggled to see strong ROI from their adoptions of the technology. There are useful applications, to be sure. Workers are introducing GenAI into their daily workflows, including writing documents, automating software code production, or brainstorming ideas. But the time freed up doesn’t always translate into higher value returns for the organization.
+
+“We’re hearing from a lot of CEOs and investors that they’re expecting returns now. It’s been a couple of years,” says Nate Suda, senior director and analyst at Gartner, during an April 2025 webinar. “Why is it not delivering?”
+
+GenAI
+has
+proven useful so far in some instances. But the applications of GenAI are only as good as the data one puts into a model. And that is a challenge.
+
+All of which leads us to a very specific use case for GenAI: directing it at the data in your ERP systems.
+
+For companies that have a strong handle on using ERP to manage business processes—and the extent of their ERP data—GenAI has the potential, through conversational queries of business data, to unlock concrete benefits. Faster access to relevant information on product performance, supply chain issues, and more.
+
+Directing small language model GenAI queries at ERP data
+
+Getting insights out of ERP data typically requires specialized tools, complex report-building, or IT support. It has meant investing in managing data (collecting and storing it, and ensuring it’s accurate and accessible), and building data lakes and data warehouses for report-building tools to query. The work also has required trained business users to manipulate business intelligence and analytics applications to derive insights according to users’ parameters.
+
+GenAI changes this model. It doesn’t eliminate the need for a strong information foundation. But with retrieval-augmented generation (RAG) techniques and small language models fine-tuned to sift through the data, users can ask questions in natural language and receive clear, useful responses. An internal language model based on your own data—also known as a small language model—can use RAG to deliver detailed answers from ERP without making users scroll through multiple screens of data.
+
+Imagine skipping the dashboards and spreadsheets and asking, “What was our highest-margin product last quarter?” or “Which suppliers have had late deliveries this month?” Business users can get answers fast, freeing up time and improving decision-making.
+
+This is low-hanging AI fruit for companies with well-established ERP systems. GenAI could assist with operational decision-making, offering insights into pricing, supply chain disruptions, or capacity planning. That’s good news. Researching new business patterns and modeling different planning assumptions, all using natural language queries with a tool like ChatGPT, is certainly an enticing prospect.
+
+But you’ll need to understand which business processes your ERP system covers (so you can know how to use GenAI). You will need to make sure you have useful GenAI tools. And you will need to help your people gain experience using them.
+
+ERP offers great potential as an application for GenAI because ERP systems are some of the richest sources of business data in any organization. Think of it as having an expert “digital minion” that understands your business (as described in the data and your processes), and can give you analysis, a summary, or a decision-support report—fast.
+
+Imagine skipping the dashboards and spreadsheets and asking, “What was our highest-margin product last quarter?”
+
+While not specifically about ERP systems, findings from a 2025 Harvard Business School
+working paper
+offers evidence for a performance boost using GenAI in a specific business process: innovation at consumer product giant Procter & Gamble. The researchers found that those using GenAI tools on innovation projects outperformed those without, whether they were working alone or in two-member teams. “This pattern suggests that AI’s immediate impact appears to stem more from its capacity to bolster individual cognitive capabilities than from fundamentally transforming human-to-human collaboration,” the authors write.
+
+Experiments underway
+
+Many managers recognize this potential and have begun experimenting. Roughly half of midsize companies are
+already using GenAI
+, according to a SAP Insights survey of 12,000 executives in companies with 250–1,500 employees. These “AI optimists” fully support using GenAI for everything from interacting with customers or vendors; developing forecasts, budgets, and investment strategies; and monitoring regulatory compliance—processes that use ERP data.
+
+According to the survey, AI optimists are keen to use GenAI to transform processes such as improving supply chain and logistics, as well as overall decision-making. Most AI optimists surveyed have been experimenting with GenAI since its inception, so they are now ready to scale up and watch the real benefits roll in.
+
+If you're considering how to deploy generative AI in your organization, start by mapping what the ERP system in your organization covers.
+
+When business users can query ERP data as easily as they type into a search engine, the value proposition rises.
+
+Typical ERP systems incorporate business operations from finance and procurement to logistics and HR. Ideally, all organizational data should reside in an ERP system to ensure a single view across the business. Finance teams rely on ERP to close the books quickly, sales uses ERP to manage orders, and procurement needs ERP to source and manage supplier relationships. This breadth of coverage makes ERP the perfect foundation for GenAI.
+
+“All of that stuff is inside the same ERP database, and it has the business context of those processes to go along with it,” says Jeff Word, professor at the University of North Texas and coauthor of a recent book about SAP ERP technology. “It’s not just training an AI agent on a dataset. You’re training it on how your business behaves and has behaved for years.”
+
+From complex queries to natural language questions
+
+Whether you're generating financial summaries or analyzing supplier trends, GenAI pointed at ERP can yield valuable insights quickly. But ERP data is stored in tables with complex relationships rather than as a mass of text used to train large language models. To ensure you’re getting the right data, it pays to use new techniques such as knowledge graphs, which store all the relationships between the different parts of your business.
+
+Examples of this in action include:
+
+Automating financial reports
+, gathering financial data and automatically calculating KPIs for a defined period.
+
+Providing insights into complex engineering data about oil wells and mines, as a consulting company has done for its customers, described in this
+article
+. Previously, customers needed to be experts to know what to look for, which limited access to a handful of people in their organizations, says the company’s CISO.
+
+Applying natural language queries to
+supply chain questions
+such as demand forecasting and production planning, as EY points out.
+
+Preparing your organization for using GenAI with ERP
+
+While the potential is real, the power of GenAI to produce new insights in ERP data won't unlock itself. Organizations need to prepare for GenAI by getting the right tools, training users, and ensuring their ERP data is clean and accessible.
+
+Look at what AI features your ERP system includes.
+Once you understand which business processes your ERP system covers, you should assess what your vendors are offering in terms of GenAI capabilities. GenAI models are rapidly becoming a commodity, with many different approaches available on the market. The real differentiation comes from deep integration in existing workflows, making AI use embedded and effortless.
+
+Get the right tools
+. Different tools offer different approaches, but the basic themes remain the same. You need a solid set of tools that orchestrate the AI process, including access to a wide choice of models; data “grounding” to ensure the GenAI is using the right dataset; data masking to ensure privacy; prompt management; and lifecycle management.
+
+Prepare your data.
+Traditional data warehouse and data lake approaches have given way to more federated “
+business data fabric
+” approaches that weave together “
+data products
+” from different sources while providing a unified, holistic view of operations.
+
+Train your teams.
+Just because your staff uses ChatGPT to write e-mails doesn't mean they're ready to query enterprise data. Introducing a new way of working with ERP systems will mean managing this change. Provide opportunities to practice and experiment in low-risk situations. (For more suggestions, see “
+The importance of AI literacy AI adoption
+.”)
+
+In an environment in which AI-based tools empower end users to have easier access to key business data, everybody becomes a kind of manager. Top skills become flexibility, adaptability, mindset, and imagination.
+
+Attitudes matter in the adoption of GenAI, the SAP Insights survey found. The optimists cohort in the survey are more ready for change. They are significantly less likely than the skeptics to report a lack of change management processes as a challenge to growth.
+
+ERP data gives GenAI the right data materials it needs to be truly useful. When business users can query ERP data as easily as they type into a search engine, the value proposition rises—better decisions, faster responses, and more strategic use of resources.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Why you should be an AI optimist
+
+Leaders in midsize companies don’t agree on whether AI should be a high priority yet. Here’s why, in numbers.
+
+Explore the research
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

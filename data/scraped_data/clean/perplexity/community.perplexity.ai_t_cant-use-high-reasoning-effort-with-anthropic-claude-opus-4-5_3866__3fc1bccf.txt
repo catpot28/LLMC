@@ -1,0 +1,191 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/cant-use-high-reasoning-effort-with-anthropic-claude-opus-4-5/3866
+page path  : /t/cant-use-high-reasoning-effort-with-anthropic-claude-opus-4-5/3866
+captured   : 2026-03-10 03:42:10 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/community.perplexity.ai_t_cant-use-high-reasoning-effort-with-anthropic-claude-opus-4-5_3866__3fc1bccf.html.gz
+========================================================================
+
+Can't use high reasoning effort with anthropic/claude-opus-4-5 - Bug Reports - Perplexity API Platform Forum
+
+Can't use high reasoning effort with anthropic/claude-opus-4-5 - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Can't use high reasoning effort with anthropic/claude-opus-4-5
+
+Bug Reports
+
+chat-completions
+
+sszymczy
+
+February 6, 2026, 1:29pm
+
+1
+
+Describe the Bug
+
+When calling “anthropic/claude-opus-4-5" model via agentic research API with “high” reasoning effort the API returns 400 “invalid request” error. It works without issues with reasoning effort set to “low” and “medium”.
+
+Expected Behavior
+
+API request completed successfully.
+
+Actual Behavior
+
+API returned 400 “invalid request” error.
+
+Steps to Reproduce
+
+$ export PERPLEXITY_API_KEY="...key value..."
+$ curl https://api.perplexity.ai/v1/responses \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{
+"model": "anthropic/claude-opus-4-5",
+"input": "calculate 2+2=",
+"reasoning": {
+"effort": "high"
+}
+}'
+
+API Request & Response (if applicable)
+
+Request:
+
+{
+"model": "anthropic/claude-opus-4-5",
+"input": "calculate 2+2=",
+"reasoning": {
+"effort": "high"
+}
+}
+
+response:
+
+{"error":{"message":"invalid request","type":"invalid_request","code":400}}
+
+Environment
+
+API Version:
+Current (no idea how to check)
+
+SDK (if applicable):
+N/A
+
+Operating System:
+Linux
+
+Logs or Screenshots (if applicable)
+
+Trying all three reasoning effort values:
+
+$ curl https://api.perplexity.ai/v1/responses -H "Authorization: Bearer $PERPLEXITY_API_KEY" -H "Content-Type: application/json" -d '{
+"model": "anthropic/claude-opus-4-5",
+"input": "calculate 2+2=",
+"reasoning": {
+"effort": "low"
+}
+}'
+{"created_at":1770384358,"id":"resp_9d79fcd9-a36c-4cdf-8747-4ecd3a643c38","model":"anthropic/claude-opus-4-5","object":"response","output":[{"content":[{"text":"2 + 2 = **4**","type":"output_text"}],"id":"msg_11c3891e-87ef-4180-9ca8-978706bc8f1b","role":"assistant","status":"completed","type":"message"}],"status":"completed","usage":{"cost":{"currency":"USD","input_cost":0.0005,"output_cost":0.00145,"total_cost":0.00195},"input_tokens":99,"output_tokens":58,"total_tokens":157}}
+$ curl https://api.perplexity.ai/v1/responses -H "Authorization: Bearer $PERPLEXITY_API_KEY" -H "Content-Type: application/json" -d '{
+"model": "anthropic/claude-opus-4-5",
+"input": "calculate 2+2=",
+"reasoning": {
+"effort": "medium"
+}
+}'
+{"created_at":1770384371,"id":"resp_43b3499f-f2be-4e52-8ada-1a5a7a73ecea","model":"anthropic/claude-opus-4-5","object":"response","output":[{"content":[{"text":"2 + 2 = **4**","type":"output_text"}],"id":"msg_d43ef1f1-6eee-4937-91ed-80748b52b079","role":"assistant","status":"completed","type":"message"}],"status":"completed","usage":{"cost":{"currency":"USD","input_cost":0.0005,"output_cost":0.00125,"total_cost":0.00175},"input_tokens":99,"output_tokens":50,"total_tokens":149}}
+$ curl https://api.perplexity.ai/v1/responses -H "Authorization: Bearer $PERPLEXITY_API_KEY" -H "Content-Type: application/json" -d '{
+"model": "anthropic/claude-opus-4-5",
+"input": "calculate 2+2=",
+"reasoning": {
+"effort": "high"
+}
+}'
+{"error":{"message":"invalid request","type":"invalid_request","code":400}}
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Not having internal COT <Think> in output of reasoning models
+
+General
+
+sonar-reasoning-pro
+
+1
+
+98
+
+November 3, 2025
+
+Why can't use OpenAI, Claude Model, Languages other than English have serious performance issues
+
+General
+
+1
+
+76
+
+May 16, 2025
+
+Hierarchical Multi-Agent Reasoning System with Integrated Fact-Verification and Self-Correction Loops
+
+Feature Requests
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+46
+
+December 3, 2025
+
+Reasoning not always correctly enclosed in `<think>...</think>`
+
+Bug Reports
+
+4
+
+173
+
+June 2, 2025
+
+What is the max output length for each model type?
+
+General
+
+sonar-reasoning
+
+0
+
+41
+
+November 16, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

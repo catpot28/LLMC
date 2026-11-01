@@ -1,0 +1,266 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/apna-interview-agents
+page path  : /blog/apna-interview-agents
+captured   : 2026-06-08 20:59:13 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_apna-interview-agents__94375ddd.html.gz
+========================================================================
+
+Apna scales 7.5 million AI interviews using ElevenLabs
+
+Apna scales 7.5 million AI interviews using ElevenLabs
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+ElevenAgents Stories
+Apna scales 7.5 million AI interview minutes using ElevenLabs
+Written by
+Tauseef
+
+Khan
+Ruta
+
+Bhatt
+Published
+Nov 7, 2025
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+On this page
+Introduction
+Why Apna chose ElevenLabs
+Orchestrating real-time human realism at scale
+Impact at scale
+Equalizing access to opportunity
+Unlocking the next frontier of learning
+Interview preparation in India has long been broken - generic, disconnected, and inaccessible to most job seekers.
+Apna
+, India’s leading job search and careers platform, set out to change that by making every mock interview feel like a real one - personalized to each role, company, and candidate.
+With over 60 million users and 10,000+ companies across 30,000+ roles, Apna’s vision required more than training modules. It demanded conversation - lifelike timing, empathy, and domain depth - at massive scale.
+To achieve this, Apna engineered one of the most advanced AI interview ecosystems, powered by ElevenLabs
+Text to Speech
+and
+Blue Machines
+’ voice orchestration platform. Together, these systems have delivered over 1.5 million AI interviews, totaling 7.5 million voice minutes, with sub-300 ms latency.
+
+Why Apna chose ElevenLabs
+For interview simulations to feel natural, voice quality and responsiveness are inseparable. Any audible delay or robotic tone breaks immersion and trust.
+Apna selected ElevenLabs for three core reasons:
+Low-latency streaming performance
+- responses begin playback within 150–180 ms.
+Multilingual capability
+- seamless synthesis across Indian English, Hindi, and code-mixed speech.
+Emotional nuance
+- tone modulation that mirrors human empathy and challenge.
+These qualities allow Apna to preserve the rhythm of real conversation while maintaining emotional credibility at scale.
+Orchestrating real-time human realism at scale
+To make these lifelike interviews possible, Apna had to solve a complex orchestration challenge. Delivering a mock interview that feels real takes more than scripted dialogue; it requires synchronized precision across voice, latency, empathy, and context – all operating in harmony at machine speed.
+Every company interviews differently. A product manager’s role might be tested on metrics reasoning; a bank credit officer role on compliance logic; and an e-commerce platform lead on route optimization.
+Behind the scene, Apna’s orchestration platform, Blue Machines, built a Retrieval-Augmented Generation (RAG) graph for each role × company intersection:
+● 10 000 + companies × 50–100 roles = ~500 million micro-models.
+● Each model anchored to company-specific rubrics, tone, and vocabulary.
+They integrated ElevenLabs’ streaming Text to Speech directly into its conversational loop. Each turn begins with candidate speech, processed by multilingual ASR and NLU models. Workflow logic then evaluates intent, emotion, and context, retrieves most relevant domain data, composes the next question, and plays it back through ElevenLabs — all within roughly
+300 milliseconds
+end-to-end.
+“Each synthesized response begins playback within ~150–180 ms, thanks to ElevenLabs’ low-latency APIs integrated directly into Apna and Blue Machines’ orchestration layer”, said Abhishek Ranjan, CTO, Apna
+At around 300 ms, the human brain perceives speech as continuous rather than delayed - the threshold where realism truly begins.
+Function
+Edge ingress
+Regional gateways + smart routing
+ASR + NLU
+Streaming multilingual recognition
+Workflow logic + persona
+Role logic + empathy modulation
+Context retrieval + evaluation
+Domain data fetch + validation
+TTS playback
+ElevenLabs voice synthesis start
+Total
+—
+Time (ms)
+Edge ingress
+30
+ASR + NLU
+90
+Workflow logic + persona
+40
+Context retrieval + evaluation
+40
+TTS playback
+100
+Total
+≈300 ms
+Stage
+Function
+Time (ms)
+Edge ingress
+Regional gateways + smart routing
+30
+ASR + NLU
+Streaming multilingual recognition
+90
+Workflow logic + persona
+Role logic + empathy modulation
+40
+Context retrieval + evaluation
+Domain data fetch + validation
+40
+TTS playback
+ElevenLabs voice synthesis start
+100
+Total
+—
+≈300 ms
+The result is a system that balances technical precision with emotional depth.
+Thousands of interviews run concurrently across Indian English, Hindi, and code-mixed speech
+, each maintaining the rhythm, empathy, and credibility of a real human exchange.
+Impact at scale
+Result
+Mock AI interviews conducted
+1.5 million+
+Voice minutes
+7.5 million+
+Average latency
+<300 ms
+Role–company models
+500 million+
+Metrics
+Result
+Mock AI interviews conducted
+1.5 million+
+Voice minutes
+7.5 million+
+Average latency
+<300 ms
+Role–company models
+500 million+
+Equalizing access to opportunity
+A 24-year-old candidate from Pune, India shared:
+The AI interviewer knew my résumé, switched between Hindi and English, and challenged me like a real HDFC bank panel. I cracked the job on my next attempt.
+For the first time, candidates can practice interviews that feel truly real – tailored to their résumé, company, and dream role.
+Apna’s AI Interview Prep shows how voice technology can democratize opportunity - giving millions of job seekers the same level of preparation once reserved for a privileged few.
+For many, practicing with a lifelike interviewer builds real confidence before their first human interview.
+By combining real-time voice with adaptive context and empathy, Apna has turned preparation into participation - giving everyone, regardless of background or language, an equal chance to succeed.
+Unlocking the next frontier of learning
+Apna’s AI Interview Prep defines the next generation of AI-driven learning and interviewing.
+Realistic, responsive voices powered by the ElevenLabs
+Text to Speech API
+let candidates experience personalized feedback, natural timing, and bilingual fluency that text-based practice could never offer.
+Through this collaboration, Apna has redefined what scalable learning sounds like - proving that voice-based AI can extend human opportunity, not replace it.
+Apna’s success demonstrates how high-fidelity voice can transform education, employability, and access to opportunity at national scale.
+If you’re building conversational learning tools, AI interviewers, or any system where realism and empathy matter, discover what's possible with
+ElevenLabs Conversational Agents Platform
+.
+Similar articles
+Meesho delivers real-time, multilingual customer support with voice agents
+Category
+ElevenAgents Stories
+Date
+Jul 17, 2025
+Cars24 uses ElevenLabs Agents to power India’s largest voice-driven car retail operation
+Category
+ElevenAgents Stories
+Date
+Dec 30, 2025
+Convin adds AI voice calling to its contact center platform
+Category
+ElevenAgents Stories
+Date
+Feb 7, 2025
+Production-Ready Conversational AI at Enterprise Scale: With Scale AI’s Felix Su
+Category
+ElevenAgents Stories
+Date
+Feb 4, 2025
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

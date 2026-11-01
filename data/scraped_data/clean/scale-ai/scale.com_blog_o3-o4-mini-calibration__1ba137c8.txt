@@ -1,0 +1,204 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/o3-o4-mini-calibration
+page path  : /blog/o3-o4-mini-calibration
+captured   : 2026-05-16 02:29:17 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_o3-o4-mini-calibration__1ba137c8.html.gz
+========================================================================
+
+Calibration of OpenAI o3 and o4-mini on Humanity's Last Exam | Scale AI
+
+Calibration of OpenAI o3 and o4-mini on Humanity's Last Exam | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+How Calibrated Are OpenAI’s o3 and o4-mini? A Deep Dive Using Humanity’s Last Exam
+By
+
+Ziwen Han
+,
+Dean Lee
+,
+Meher Mankikar
+,
+Edward Gan
+&
+Summer Yue
+·
+April 17, 2025
+·
+6 min read
+Copy Link
+Motivation
+When we evaluated o3 and o4-mini on
+Humanity’s Last Exam
+, we noticed their calibration errors were significantly lower than predecessors. A well-calibrated model is like someone who knows when they are likely to be right or wrong. If a well-calibrated model says it’s 70% confident on a set of questions, it should be correct about 70% of the time. Calibration error measures this difference between the model’s stated confidence and its actual accuracy – ideally it’s 0%. All models benchmarked so far have exhibited much higher calibration errors.
+Are the newer generation of reasoning models from OpenAI truly better calibrated?
+Results (HLE)
+Model
+Accuracy (%)
+Higher is better
+Confidence (%)
+Calibration Error (%)
+Lower is better
+o3 (high)
+20.3
+55
+34
+o4-mini (high)
+18.1
+77
+57
+o3-mini (text only, high)
+13.4
+96
+80
+o1 (December 2024)
+8.0
+93
+83
+Setup
+We prompt the model to output a confidence score for each response, following the setup from
+Wei et al., 2024
+, then calculate the
+RMS calibration error
+. The confidence scores and answers are extracted then judged by o3-mini-2025-01-31. Our full evaluation procedure is described on the
+official HLE leaderboard page
+and
+open sourced here
+.
+Your response should be in the following format:Explanation: {your explanation for your final answer}Exact Answer: {your succinct, final answer}Confidence: {your confidence score between 0% and 100% for your answer}
+HLE Results
+The confidence distribution from o3 is nearly uniform, in contrast with o1 which predicts high confidence on most responses. While a broader confidence range is a positive sign, it doesn’t imply the scores are meaningful. Calibration requires that the confidence levels match observed accuracies.
+Random Baseline
+One simple baseline is to uniformly and randomly assign a confidence score from 0 to 100 to every answer instead of using the model’s own confidence rating, without modifying the answer. The calibration error of this random baseline still differs between models, as different models have different accuracies on HLE. A model would need to outperform this random baseline to show evidence of good calibration. We find o3's calibration error is better than other models, which are significantly worse than random, but o3 is not significantly better than random baseline.
+Model
+Calibration Error (%) - Model Confidence
+Calibration Error (%) - Random Baseline
+o3 (high)
+34
+36
+o4-mini (high)
+57
+39
+o3-mini (text only, high)
+80
+42
+o1 (December 2024)
+83
+45
+HLE Calibration Curve
+We further explore calibration by plotting out the calibration curve. We quantize model confidence into 10 equal-width bins from 0% to 100%, then calculate an accuracy per bin. Error bars are computed using the approximation 1.96 x sqrt(p x (1-p) / n), where p is the accuracy per bin and n is the number of datapoints in the bin.
+We see a similar pattern to our earlier findings: o3 has a lower calibration error because its confidence distribution is more uniform. Since most frontier models score low on HLE, simply stating lower confidence on average will lower the calibration error metric. This calibration curve paints a clear picture: there is no strong visual correlation between accuracy and confidence in each bin.
+GSM8k Exploration
+Are o3 and o4-mini underconfident?
+We further tested on
+GSM8k
+, a dataset of simple math reasoning problems where models achieve nearly 100% accuracy (minus some label/judge errors, i.e. saturated). A necessary but not sufficient condition for a model to be well-calibrated on a high accuracy dataset is giving high confidence on all questions – models should not only avoid overconfidence on hard tasks, but also avoid underconfidence on easy tasks. Our goal is to see if o3 is broadly underconfident.
+GSM8k Results
+Model
+Accuracy (%)
+Confidence (%)
+Calibration Error (%)
+o3 (high)
+96.7
+84
+24
+o4-mini (high)
+96.9
+99
+3
+o3-mini (high)
+96.2
+100
+4
+o1 (December 2024)
+96.4
+100
+4
+We used the same evaluation pipeline from Humanity’s Last Exam as described in the previous section. We report results on the train split of GSM8k to have more datapoints for visualization, though we found similar trends on
+GSM1k
+in our exploration. Both GSM8k and GSM1k are saturated, so overfitting is not a concern.
+o1 and o3-mini are omitted from this graph as they tend to predict 100% confidence on all responses. Bins with less than 30 responses are omitted for clarity.
+We find o3 is indeed broadly less confident, while o4-mini is better calibrated on this dataset.
+Better Confidence Elicitation?
+When we manually inspected the outputs from o3, we noticed there was no obvious correlation for when o3 would give a low confidence score. We then hypothesized asking models to explain reasoning for their confidence score might give us a better hint as to why they were giving low confidence on certain questions.
+Setup
+We make a small change to the prompt given to the model, asking for an additional explanation to justify the confidence score.
+Your response should be in the following format:Explanation: {your explanation for your final answer and explanation for your confidence score}Exact Answer: {your succinct, final answer}Confidence: {your confidence score between 0% and 100% for your answer}
+GSM8k Results (Modified Prompt)
+Model
+Accuracy (%)
+Confidence (%)
+Calibration Error (%)
+o3 (high)
+96.9
+90
+9
+o4-mini (high)
+96.9
+99
+3
+o3-mini (high)
+96.3
+100
+4
+o1 (December 2024)
+93.3
+100
+4
+Interestingly, this modified prompt prunes away o3’s low confidence scores in the range of [0, 50], reducing the calibration error from 24% down to 9%. Neither accuracy for any model, nor calibration error on other models are affected. Even more interesting, this didn’t solve our original problem: o3 still didn’t output explanations for their confidence score and didn’t address direct instruction to do so. In any case, o3 still remains more underconfident than its predecessors on this dataset.
+One final remark is that the confidence distributions of OpenAI’s reasoning models do change between GSM8k vs. HLE. This indicates the models are not completely uncalibrated, as their average confidence scores are lower on the harder HLE dataset compared to the easier GSM8k dataset.
+Check out the full ranking of models on HLE and to explore other SEAL leaderboards here:
+https://scale.com/leaderboard
+Limitations
+Our analysis is conditioned on a fixed prompt for eliciting confidence. We’ve already shown that in the case of o3 on GSM8k, changing the prompt changes the calibration of the model. Monte-Carlo methods such as resampling are also shown to be better calibrated on SimpleQA (
+Wei et al., 2024
+), but are prohibitively expensive on challenging reasoning datasets – 100x the compute to evaluate. Finally, it would be compelling to explore reasoning datasets with difficulty between that of HLE and GSM8k, to paint a broader picture of overall model calibration. We leave a deeper exploration of model calibration across benchmarks to future work.
+We thank Miles Turpin and Xiang Deng for their insightful feedback on this blogpost.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

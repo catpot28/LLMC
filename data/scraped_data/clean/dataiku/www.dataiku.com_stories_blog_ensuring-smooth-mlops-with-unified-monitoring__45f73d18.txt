@@ -1,0 +1,291 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/ensuring-smooth-mlops-with-unified-monitoring
+page path  : /stories/blog/ensuring-smooth-mlops-with-unified-monitoring
+captured   : 2026-06-12 05:00:30 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_ensuring-smooth-mlops-with-unified-monitoring__45f73d18.html.gz
+========================================================================
+
+Ensuring Smooth MLOps With Unified Monitoring
+
+Ensuring Smooth MLOps With Unified Monitoring
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+
+Request demo
+
+Start Trial
+
+AI Governance & Architecture
+
+Ensuring Smooth MLOps With Unified Monitoring
+
+Aug 19, 2024
+
+4 min read
+
+/
+
+Chad Kwiwon Covin
+
+The concept of an
+MLOps
+workflow should be as smooth as butter. Monitoring models and data products should also be seamless, incorporating automation, metrics, and checks to ensure that human intervention can swiftly address any issues. This approach allows organizations to continue their AI initiatives without disruptions. However, in practice, the
+smoothness of many MLOps strategies
+often falls between gravel and sandpaper.
+
+As organizations create more data products and machine learning (ML) models, finding a standardized way to track them and intervene when issues pop up becomes challenging. This is particularly tough if multiple ML platforms are used to deploy models and track their post-deployment statuses. These issues lead to the last three words an executive wants to hear:
+lack of oversight.
+
+Even for mature organizations, oversight and governance over MLOps can be tricky. Enterprise-level organizations often use multiple platforms for model development and production. The issue here is platforms are siloed, requiring engineers to access many distinct systems to oversee AI pipelines. This can cut down on efficiency and make it difficult to maintain standardized governance across different platforms. Because this is such a common issue, Dataiku has made it a priority to centralize this process by bridging your ecosystem.
+
+If you haven’t noticed, Dataiku has been evolving into
+the
+comprehensive solution for managing all models and projects in production. Initially, we introduced support for
+External Models
+, enabling the use and tracking of already deployed third-party models in your Dataiku Flow. Next, we launched the capability to
+deploy anywhere
+, allowing models developed with Dataiku to be deployed on any cloud ML platform, Databricks, or Snowflake Snowpark Container Services (SPCS). Now, the most important piece of the puzzle has arrived: Unified Monitoring.
+
+Unified Monitoring: Bringing Unified Oversight to MLOps
+
+Unified Monitoring is a one-stop hub for all visibility and oversight into your MLOps. By utilizing External Models and Deploy Anywhere capabilities to extend coverage, this central watchtower enables operators to oversee and monitor pipelines and models developed and deployed across diverse platforms. With consolidated monitoring, you can view details of deployments, projects, and APIs deployed via the Dataiku Deployer, Databricks Model Serving, Snowflake SPCS, as well as cloud-based API endpoints from AWS SageMaker, Azure Machine Learning, Google Vertex AI.
+
+Now, you can see various monitoring statuses like including API endpoint activity, deployment, execution, and model health in a single place. This allows IT operators and ML engineers to discern which deployments are functional, which are not, and how to swiftly identify and rectify issues. Let’s dive into how it works!
+
+Monitoring in Practice
+
+Located within your Dataiku deployer, Unified Monitoring features three distinct screens: Overview, Dataiku Projects, and API Endpoints. Let's explore each screen in more detail.
+
+Overview
+
+We'll start with the primary overview screen. Dataiku projects for batch scoring and API endpoints for real-time scoring are listed and monitored, as well as API endpoints on AzureML, AWS SageMaker, Google Vertex AI, Databricks, and Snowflake SPCS. The overview screen acts as a triage dashboard, surfacing any deployments with errors and warnings towards the top, so that operators can quickly identify issues requiring their attention and resolve them. Users can click on objects to show a more comprehensive view, listing all deployment details.
+
+The overview in Unified Monitoring shows a count of how many deployments are on each infrastructure.
+
+Users can click on objects to show a more comprehensive view, listing all deployment details.
+
+Dataiku Projects
+
+The Dataiku Projects dashboard provides an overview of all batch deployment projects on your Dataiku automation node, featuring six critical statuses:
+global, deployment, model, execution, data, and governance.
+Each status can have four possible values: healthy, warning, error, no status. Each status looks to answer an important deployment question at a glance:
+
+Global:
+Are all statuses healthy and working?
+
+Deployment:
+Is the deployment up and running?
+
+Model:
+Are all model health checks, such as data or performance drift, passing?
+
+Execution:
+Are all automated scenarios running without error or warning?
+
+Data:
+Does the data pass all the data quality rules in a given project?
+
+Governance:
+Does the deployment have proper sign-off?
+
+These indicators facilitate rapid identification of potential issues within projects. For instance, if the model status presents a warning, an ML engineer can revisit the project to examine the model evaluation store. Similarly, an error in the execution status might indicate a problematic automation scenario. These statuses offer you a swift, efficient, and standardized method for pinpointing concerns at a glance.
+
+Filter dashboards by different stages and statuses to see only the information that is important to you.
+
+API Endpoints
+
+The final screen is the API Endpoints dashboard. Each row on this screen signifies an individual endpoint, either from the Dataiku API node or a cloud-based one. Endpoints possess three status types similar to those for Dataiku projects but also have details specific to real-time scoring.
+
+Hovering over the activity plots will show the volume of an endpoint at a specific time over the past 24 hours.
+
+Critical health details like response time, volume, and activity can be viewed at a glance, enabling IT operators and ML engineers to assess API performance and reliability. Instant visibility helps teams proactively tackle issues, optimize resource allocation for real-time use cases, and improve user experiences by ensuring APIs are performing well.
+
+Advanced Settings
+
+On top of the three dashboards, Unified Monitoring also allows administrators to choose which project and API infrastructures to explicitly monitor through the Settings. They also have easy access to full activity logs for troubleshooting purposes. However, the standout functionality in the advanced settings is the introduction of monitoring scopes.
+
+Add a scope to read deployment details from the cloud providers, Databricks, or Snowflake within the Unified Monitoring dashboard.
+
+This unique capability allows status details about remote API endpoints to be passed through to Dataiku’s Unified Monitoring dashboards. This means we can quickly understand the health statuses and performance metrics of API endpoints from any model deployed on a cloud service, Databricks, or Snowflake SPCS.
+
+Multiple scopes can be added at once to Unified Monitoring, even from disparate cloud environments.
+
+The impact is massive. IT operators now have a clear, consolidated view of deployment health across
+all
+ML platforms and a single place to monitor all MLOps activities.
+
+Unified Monitoring Is Necessary to Move Forward
+
+As more and more data and AI products become operational in an organization, the need for effective monitoring grows larger. Comprehensive oversight and solid governance empower organizations to accelerate progress and generate more models. Establishing an automated system for managing and supervising deployments is vital to thriving in this landscape.
+
+This is where Unified Monitoring becomes indispensable. A single, comprehensive view of your organization's deployments, irrespective of location or infrastructure, is a necessity.
+
+Let Dataiku streamline MLOps with Unified Monitoring and automation, quality checks for models and deployments, endpoint responsiveness details, and so much more. Through global oversight of your entire production, Dataiku is the platform that makes MLOps as smooth as you dreamed it to be.
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+Decision 7 of 7: when AI budgets require measurable proof
+
+Decision 6 of 7: when AI sprawl becomes enterprise risk
+
+The CEO trust paradox: AI confidence vs. control
+
+The AI accountability gap: CEOs own strategy, CIOs carry decisions
+
+You May Also Like
+
+Explore the Blog
+
+AI Governance & Architecture
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+CEOs have made a big bet. According to Dataiku's "Global AI confessions report: CEO edition 2026," based on a...
+
+May 27, 2026
+
+AI Governance & Architecture
+
+Decision 7 of 7: when AI budgets require measurable proof
+
+This is the seventh installment in our seven-part breakdown of insights from the report, "7 career-making AI...
+
+May 21, 2026
+
+AI Governance & Architecture
+
+Decision 6 of 7: when AI sprawl becomes enterprise risk
+
+This is the sixth installment in our seven-part breakdown of insights from the report, "7 career-making AI...
+
+May 21, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Blog
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Dataiku Customers
+
+Analyst Recognition
+
+Events Calendar
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Dataiku Partners
+
+Partner with Dataiku
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

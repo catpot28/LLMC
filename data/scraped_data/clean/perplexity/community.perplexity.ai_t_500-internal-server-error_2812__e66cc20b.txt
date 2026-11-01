@@ -1,0 +1,180 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/500-internal-server-error/2812
+page path  : /t/500-internal-server-error/2812
+captured   : 2026-04-12 12:02:17 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_500-internal-server-error_2812__e66cc20b.html.gz
+========================================================================
+
+500 Internal Server Error - Bug Reports - Perplexity API Platform Forum
+
+500 Internal Server Error - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+500 Internal Server Error
+
+Bug Reports
+
+sonar-reasoning-pro
+
+Lars
+
+November 25, 2025, 2:37pm
+
+1
+
+Describe the Bug
+
+I’ve been working with perplexity for over a year now and never got any errors, today I suddently keep getting 500 errors with the API.
+
+Expected Behavior
+
+Return a normal JSON response.
+
+Actual Behavior
+
+I have changed nothing on my end, the request just keeps failing after like a minute.
+
+API Request & Response (if applicable)
+
+Environment
+
+API Version:
+sonar-reasoning-pro
+
+SDK (if applicable):
+NodeJS V22.14
+
+Operating System:
+Windows & Linux
+
+Logs or Screenshots (if applicable)
+
+0|worker | {
+
+0|worker | error: {
+
+0|worker | message: ‘An internal server error has occurred.’,
+
+0|worker | type: ‘internal_server_error’,
+
+0|worker | code: 500
+
+0|worker | }
+
+0|worker | }
+
+0|worker | [Worker] Error: Cannot read properties of undefined (reading ‘0’)
+
+0|worker | result null
+
+Additional Context
+
+nope
+
+Kesku
+
+April 7, 2026, 2:41pm
+
+2
+
+Hey
+@Lars
+— this report is from November 2025, and intermittent 500 errors at that time were related to a transient infrastructure issue that has since been resolved.
+
+If you are still experiencing 500 errors, please open a new thread with the details (model, request payload, frequency) or email
+api@perplexity.ai
+and the team can investigate.
+
+General tip for production usage: implement retry logic with exponential backoff for 5xx errors — these are almost always transient.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Getting continuously internal server error 500 while calling the sonar api
+
+General
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+python-sdk
+
+2
+
+325
+
+November 6, 2025
+
+Sonar-reasoning-pro returning 500 Internal server error in the beginning of this week
+
+Bug Reports
+
+sonar-reasoning
+
+2
+
+538
+
+August 1, 2025
+
+API very slow / returning 5xx errors
+
+General
+
+2
+
+155
+
+May 15, 2025
+
+I think perplexity api is not working. As i have been unable to fetch response from it irrespective of continuous retries. Although it was working earlier it is not working since yesterday
+
+General
+
+sonar
+
+0
+
+26
+
+January 8, 2026
+
+For some reason getting "400" bad request
+
+Bug Reports
+
+sonar-pro
+
+1
+
+130
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

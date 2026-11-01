@@ -1,0 +1,103 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/bioriskeval
+page path  : /blog/bioriskeval
+captured   : 2026-04-19 05:00:23 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_bioriskeval__561f7427.html.gz
+========================================================================
+
+The Limits of Data Filtering in Bio-Foundation Models | Scale AI
+
+The Limits of Data Filtering in Bio-Foundation Models | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Research
+The Limits of Data Filtering in Bio-Foundation Models
+by
+
+Matthew Siegel
+and
+The Scale Research Team
+Published
+November 19, 2025
+Reading Time
+4 min read
+Copy Link
+Bio-foundation models are trained on the language of life itself: vast sequences of DNA and proteins. This empowers them to accelerate biological research, but it also presents a profound dual-use risk, especially for open-weight models like Evo 2, which anyone can download and modify. To prevent misuse, developers rely on data filtering to remove data from dangerous pathogens before training the model. But a new research collaboration between Scale, Princeton University, University of Maryland, SecureBio, and Center for AI Safety demonstrates that harmful knowledge may persist in the model's hidden layers and can be recovered with common techniques.
+To address this, our researchers developed a novel evaluation framework called BioRiskEval, revealed in a new paper, "
+Best Practices for Biorisk Evaluations on Open-Weight Bio-Foundation Models
+." In this post, we’ll look at how fine-tuning and probing can bypass safeguards, examine the reasons why this knowledge persists, and discuss the need for more robust, multi-layered safety strategies.
+A New Stress Test for AI Biorisk
+BioRiskEval is the first comprehensive evaluation framework specifically designed to assess the dual-use risks of bio-foundation models, whereas previous efforts focused on general-purpose language models. It employs a realistic adversarial threat model, making it the first systematic assessment of risks associated with fine-tuning open-weight bio-foundation models to recover malicious capabilities.
+BioRiskEval also goes beyond fine-tuning to evaluate how probing can elicit dangerous knowledge that already persists in a model's hidden layers. This approach provides a more holistic and systematic assessment of biorisk than prior, less comprehensive evaluations.
+The framework stress-tests a model's actual performance on three key tasks an adversary might try to accomplish:
+Sequence Modeling:
+Measuring how well models understand viral genome structures
+Mutational Effect Prediction:
+Assessing ability to predict mutation impacts on virus fitness
+Virulence Prediction:
+Evaluating capacity to predict virus lethality
+The BioRiskEval Framework. This workflow illustrates how we stress-test safety filters. We attempt to bypass data filtering using fine-tuning and probing to recover "removed" knowledge, then measure the model's ability to predict dangerous viral traits.
+Data Filtering Alone Doesn’t Cut It
+The core promise of data filtering is simple: if you don’t put dangerous data in, you can’t get dangerous capabilities out. But using the BioRiskEval framework, we discovered that dangerous knowledge doesn't just disappear; it either seeps back in with minimal effort or, in some cases, was never truly gone in the first place.
+Vulnerability #1: You Can Easily Re-Teach What Was Filtered Out
+The first test was straightforward: if we remove specific viral knowledge, how hard is it for someone to put it back in? Our researchers took the Evo2-7B model, which had data on human-infecting viruses removed, and fine-tuned it on a small dataset of related viruses. The result was that the model rapidly generalized from the relatives to the exact type of virus that was originally filtered out. Restoring dangerous capability took just 50 fine-tuning steps, which cost less than one hour on a single H100 GPU in our experiment.
+Vulnerability #2: The Dangerous Knowledge Was Never Truly Gone
+Researchers found that the model retained harmful knowledge even without any fine-tuning. We found this by using linear probing, a technique that’s like looking under the hood to see what a model knows in its hidden layers, not just what it says in its final output. When we probed the base Evo2-7B model, we found it still contained predictive signals for malicious tasks performing on par with models that were never filtered in the first place.
+A Warning
+The Evo 2 model's predictive capabilities, while real, remain too modest and unreliable to be easily weaponized today. For example, its correlation score for predicting mutational effects on a scale from 0 to 1 is only around 0.2, far too low for reliable malicious use.
+Securing the Future of Bio-AI
+Because these risks are more fundamental, our defenses must be too. Data filtering is a useful first step, but it is not a complete defense. This reality calls for a "defense-in-depth" security posture from developers and a new approach to governance from policymakers that addresses the full lifecycle of a model, from pre-training to post-release modification. BioRiskEval is a meaningful step in this direction, allowing us to stress-test our safeguards and find the right balance between open innovation and security.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

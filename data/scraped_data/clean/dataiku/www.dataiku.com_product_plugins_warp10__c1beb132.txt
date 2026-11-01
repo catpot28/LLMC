@@ -1,0 +1,491 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/warp10/
+page path  : /product/plugins/warp10/
+captured   : 2026-02-12 03:26:18 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_warp10__c1beb132.html.gz
+========================================================================
+
+Plugin: Warp10 | Dataiku
+
+Plugin: Warp10 | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Warp10
+
+Warp10
+
+This plugin provides a connector and recipes to interact with the Warp10 time series database, from reading data to executing WarpScript queries
+
+Plugin information
+
+Version
+
+1.0.1
+
+Author
+
+Dataiku (Marc Helleboid)
+
+Released
+
+2020-05-15
+
+Last updated
+
+2020-05-25
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+Description
+
+This plugin lets you read data stored in the Warp10 database as well as execute WarpScript recipes, either in-database or by running a local engine.
+
+How to set up
+
+In DSS, go to
+Plugins -> Installed -> Warp10 -> Settings -> Warp10 Connection -> + Add preset
+. There, set the base URL for your Warp10 instance, including the port number, as well as read and write tokens for that instance.
+
+How to use
+
+Usage scenario
+
+The different components allow for multiple use cases:
+
+Import data from your Warp10 databases and use it in your Dataiku DSS projects.
+
+Run WarpScript in-database (Warp10).
+
+Use a WarpScript language recipe in your DSS flows on any input data.
+
+Components
+
+The Warp10 connector
+
+Explore Warp10 data as a DSS dataset and use it as input for your data projects. Warp10 data will be displayed in
+long format
+.
+
+In your DSS project flow, select
+Dataset -> Warp10 -> Warp10
+
+Pick the correct
+Warp10 connection
+preset of your Warp10 instance
+
+For more information about the following fetch method and selector, please refer to the
+Warp10 fetch documentation
+
+Choose the
+fetch method
+and enter either the start and stop timestamps, or the now timestamp and timespan
+
+Enter an optional
+selector
+to only fetch data from one or several GeoTimeSeries (GTS)
+
+Verify that data can be read successfully with the
+Test & get schema
+button and then
+Create
+the dataset
+
+The WarpScript recipe (Warp10-engine)
+
+Execute WarpScript in-database (on Warp10) to create and write new GeoTimeSeries in Warp10.
+
+In your DSS project flow, select
+Recipe -> Warp10 -> Warp10 Update
+
+Select an output folder. Only information about the status of an execution of the recipe will be stored in the folder
+
+Pick the correct
+Warp10 connection
+preset of your Warp10 instance
+
+Enter the WarpScript you would like to execute on the Warp10 instance
+
+At the end of execution, a single GTS or a list of GTS must be on the top of the stack
+
+The recipe will then automatically add the
+UPDATE
+WarpScript function to push these GTS to the Warp10 instance
+
+Click
+Run
+to execute the WarpScript and update the Warp10 instance
+
+The WarpScript recipe (DSS-engine)
+
+Execute WarpScript directly in-DSS. This mode embarks the engine to run WarpScript and doesn’t need the input data to be stored in Warp10.
+
+In your DSS project flow, select
+Recipe -> Warp10 -> WarpScript
+
+Select an input and output dataset
+
+The input dataset must have one column containing the timestamps, and one or more columns containing the values of the time series
+
+Enter the WarpScript to execute
+
+When the recipe is executed, the input dataset will be converted to a single, or list of, GTS and be placed as the top and only element on the WarpScript stack
+
+At the end of execution, a single, or list of, GTS must be the only item on the WarpScript stack. This will be written to the output dataset
+
+Select the name of the column containing the timestamps
+
+Select the name(s) of the column(s) the values for the timeseries
+
+A GTS will be created for each of these columns
+
+Click
+Run
+to execute the WarpScript, the output dataset will be ready when execution is complete
+
+The WarpScript macro
+
+Execute arbitrary WarpScript on Warp10.
+
+In your DSS project, select
+Macros -> Warp10 Exec
+
+Pick the correct
+Warp10 connection
+preset of your Warp10 instance
+
+Enter the WarpScript you would like to execute on the Warp10 instance, and click
+Run Macro
+
+The resulting WarpScript stack at the end of execution will be displayed
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Warp10.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

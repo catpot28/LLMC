@@ -1,0 +1,310 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/v3
+page path  : /v3
+captured   : 2026-06-06 22:48:53 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_v3__9b46bb67.html.gz
+========================================================================
+
+Eleven v3 — Most Expressive AI Voice Model
+
+Eleven v3 — Most Expressive AI Voice Model
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+ElevenCreative
+Platform
+Models
+Docs
+Customers
+Pricing
+Menu
+ElevenCreative
+ElevenCreative
+Platform
+Models
+Docs
+Customers
+Pricing
+Contact sales
+Contact sales
+Sign in
+Sign in
+Meet Eleven v3.
+Our most expressive AI voice model.
+We're off under the lights here for this semi-final clash, the stadium buzzing with anticipation. ElevenLabs United in their iconic black and white shirts, pushing forward with intent straight from the opening whistle.
+EXCITED
+Driving down the wing, pace to burn. He skips past one, skips past two! Oh, this is beautiful. One-on-one with the full-back, cuts inside-oh, that's a lovely bit of footwork!
+SHOUTING
+And GOOOOAL! Oh my goodness! They've done it again!
+Mark
+Hey Chris… Knock knock.
+Chris
+chuckles
+I'm not doing this AGAIN!
+Mark
+laughing
+Come on man, PLEASE! I promise you'll love this one.
+Chris
+Nope. No no no. Never again. The last 10 weren't funny, the next 10 won't be funny, you're not funny! And you NEVER will be!
+Mark
+laughing
+How many ElevenLabs engineers does it take to screw in a lightbulb?
+hysterical laughing
+Chris
+angry
+Oh - my - god. I'm going home.
+Okay, so like I finally beat level 42 of that game I said I’d quit like... a month ago.
+laughs
+And then for the final big scary mega boss... it's just
+giggle
+like some cute little bunny rabbit
+hysterical laughing
+I just couldn't do it
+big laugh
+It was sooooooo cute!
+Marissa
+So I was thinking we could—
+Chris
+—test our new timing features?
+Marissa
+Exactly! How did you—
+Chris
+—know what you were thinking? Lucky guess! Sorry, go ahead.
+Marissa
+Okay, so if we both try to talk at the same time—
+Chris
+—we'll probably crash the system!
+Marissa
+Wait, are we crashing? I can't tell if this is a feature or a—
+Chris
+Bug! ...Did I just cut you off again?
+Marissa
+Yes, but honestly? This is kind of fun.
+Chris
+Race you to the next sentence!
+Marissa
+laughs
+We're definitely going to break something!
+Arr, the open ocean. Smell that, lads? That’s the scent of freedom… and just a hint of mutiny.
+laughs wickedly
+Now grab yer cutlasses, stow ya fear. Tonight, we dine like kings—or we sink like legends!
+evil laugh
+Scroll to explore
+Samara
+Narrate a story
+Play
+2 speakers
+Create a dialogue
+Play
+Announcer
+Voiceover a game
+Play
+Sergeant
+Play a drill sergeant
+Play
+Spuds
+Recount an old story
+Play
+Jessica
+Provide customer support
+Play
+In the ancient land of Eldoria, where skies shimmered and forests, whispered secrets to the wind, lived a dragon named Zephyros.
+[sarcastically]
+Not the “burn it all down” kind...
+[giggles]
+but he was gentle, wise, with eyes like old stars.
+[whispers]
+Even the birds fell silent when he passed.
+294
+/
+1000
+Samara
+Narrate a story
+2 speakers
+Create a dialogue
+Announcer
+Voiceover a game
+Sergeant
+Play a drill sergeant
+Spuds
+Recount an old story
+Jessica
+Provide customer support
+English
+Play
+Powered by Eleven v3
+Control the emotion, delivery and direction with audio tags
+Create controllable, expressive speech layered with emotion, audio events, and immersive soundscapes.
+Generate dynamic conversations between multiple speakers
+Create audio conversations where speakers share context and emotion, making generated dialogue sound natural and human.
+Take v3 anywhere - now available on mobile
+Create lifelike speech with rich emotion - all from your phone. Our voice AI delivers studio-quality performance from anywhere.
+Human-like speech in 70+ languages
+Reach global audiences with expressive and nuanced speech in every major language.
+English
+Chinese
+Spanish
+French
+Portuguese
+German
+Japanese
+Italian
+Hindi
+Experience our most expressive model with emotional depth and rich delivery.
+Eleven v3 is unlike other ElevenLabs models, offering a broad dynamic range controlled through inline audio tags.
+v3
+v2
+Multiple speakers (Dialogue Mode)
+Audio Tag Support
+Full range of emotions, direction and audio effects
+Basic tags like pauses and breaks
+Languages
+70+
+29
+Build with the Eleven v3 API
+Generate lifelike speech in 70+ languages with emotion, direction, and multi-speaker control using inline audio tags.
+POST
+/text-to-speech/:voice_id
+import
+{ ElevenLabsClient, play }
+from
+'@elevenlabs/elevenlabs-js'
+;
+
+import
+'dotenv/config'
+;
+
+const
+elevenlabs
+= new ElevenLabsClient();
+
+const
+voiceId
+=
+'JBFqnCBsd6RMkjVDRZzb'
+;
+
+const
+audio
+=
+await
+elevenlabs.textToSpeech.convert(voiceId, {
+
+text:
+'[slowly] Back then... [chuckles] we had no phones.
+
+[whispers] Just dirt roads and [coughs] big dreams. [sad] Then it happenend
+',
+
+modelId:
+'eleven_v3'
+,
+
+outputFormat:
+'mp3_44100_128'
+,
+});
+
+await
+play(audio);
+How were the samples in the video and website generated?
+They were generated with only the Eleven v3 model.
+How does dialogue generation work?
+Text to Dialogue weaves multiple voices together to create a seamless interaction between them. Matching prosody, emotional range and taking cues from audio tags, Text to Dialogue is a leap forward in generating engaging conversations.
+Is this available over API?
+Public API for Eleven v3 is now available. You may preview the
+eleven_v3 text to speech model capabilities here
+as well as its exclusive
+text to dialogue capabilities here
+.
+What audio tags are supported?
+Eleven v3 supports a wide variety of audio tags and are somewhat voice and context dependent.
+Read the prompting guide
+for further information.
+What languages does it support?
+Afrikaans (afr), Arabic (ara), Armenian (hye), Assamese (asm), Azerbaijani (aze), Belarusian (bel), Bengali (ben), Bosnian (bos), Bulgarian (bul), Catalan (cat), Cebuano (ceb), Chichewa (nya), Croatian (hrv), Czech (ces), Danish (dan), Dutch (nld), English (eng), Estonian (est), Filipino (fil), Finnish (fin), French (fra), Galician (glg), Georgian (kat), German (deu), Greek (ell), Gujarati (guj), Hausa (hau), Hebrew (heb), Hindi (hin), Hungarian (hun), Icelandic (isl), Indonesian (ind), Irish (gle), Italian (ita), Japanese (jpn), Javanese (jav), Kannada (kan), Kazakh (kaz), Kirghiz (kir), Korean (kor), Latvian (lav), Lingala (lin), Lithuanian (lit), Luxembourgish (ltz), Macedonian (mkd), Malay (msa), Malayalam (mal), Mandarin Chinese (cmn), Marathi (mar), Nepali (nep), Norwegian (nor), Pashto (pus), Persian (fas), Polish (pol), Portuguese (por), Punjabi (pan), Romanian (ron), Russian (rus), Serbian (srp), Sindhi (snd), Slovak (slk), Slovenian (slv), Somali (som), Spanish (spa), Swahili (swa), Swedish (swe), Tamil (tam), Telugu (tel), Thai (tha), Turkish (tur), Ukrainian (ukr), Urdu (urd), Vietnamese (vie), Welsh (cym)
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

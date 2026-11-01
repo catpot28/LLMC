@@ -1,0 +1,193 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/ability-to-disable-models/5081
+page path  : /t/ability-to-disable-models/5081
+captured   : 2026-05-14 04:25:42 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/community.perplexity.ai_t_ability-to-disable-models_5081__016592c2.html.gz
+========================================================================
+
+Ability to disable models - General - Perplexity API Platform Forum
+
+Ability to disable models - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Ability to disable models
+
+General
+
+chat-completions
+
+indrani_gajjarapu
+
+May 6, 2026, 3:06pm
+
+1
+
+Ability to disable models would be a great feature for multiple reasons. Personally, I do not trust OpenAI or Grok - specially when they are planning to have ads in there.
+
+Is this in the pipeline or something that can easily implemented?
+
+albert
+
+May 6, 2026, 10:19pm
+
+2
+
+Hey! Thanks for this great question.
+
+You can do this today with the Agent API. It accepts either a
+preset
+or an explicit
+models
+array
+, and that array doubles as an
+ordered fallback chain
+— so if you pass
+models=[, "perplexity/sonar", "anthropic/claude-sonnet-4-6"]
+, the runtime will only ever try those two, in that order.
+
+One thing to know: presets do route to specific third‑party models by default (for example,
+pro-search
+defaults to GPT‑5.x under the hood). To enforce your own policy but still keep a preset’s tools and system prompt, you can override the model alongside the preset, e.g.:
+
+client.responses.create(preset="pro-search", model="anthropic/claude-sonnet-4-6", input=...)
+. The
+presets docs
+explicitly show that all preset parameters, including
+model
+, are overrideable.
+
+If you’d rather stay Sonar‑centric, the Agent API also has Sonar‑style options: you can just use a Sonar model ID in
+models
+(or as
+model
+) and build your fallback chain around that, or stick to a single Sonar model only. The Agent API is designed as the “multi‑provider” layer for the platform, while the
+Sonar API
+is the more focused, web‑grounded chat endpoint.
+
+If you’re migrating from the Sonar API, the shape changes a bit (
+messages
+→
+input
+, and search filters/tools move under
+tools[...]
+), but the mental model is similar and the migration is pretty straightforward. The
+Sonar quickstart
+and
+Agent API quickstart
+have concrete examples for both sides if you want to compare them line–by–line.
+
+If you have any further questions, we’d love to answer them and keep the discussion going.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+119
+
+November 3, 2025
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+170
+
+April 7, 2026
+
+NVIDIA Nemotron 3 Super Now Available in Agent API
+
+Announcements
+
+0
+
+16
+
+March 13, 2026
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows
+
+Announcements
+
+0
+
+21
+
+March 11, 2026
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+185
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,551 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/agent-api/filters
+page path  : /docs/agent-api/filters
+captured   : 2026-05-20 19:29:03 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_agent-api_filters__b0227e8e.html.gz
+========================================================================
+
+Search Filters - Perplexity
+
+Search Filters - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Features
+Search Filters
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+Output Control
+Search Filters
+Image Attachments
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Domain Filters
+Date & Time Filters
+Location Filters
+Combining Filters
+Next Steps
+Features
+Search Filters
+Copy page
+Control and customize Agent API search results with filters
+Copy page
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+Control which search results are returned by applying filters to your web search queries. Filters help you focus on specific domains, time periods, or geographic locations to get more relevant results.
+
+​
+Domain Filters
+
+Domain filters allow you to include or exclude specific domains or URLs from search results. Use allowlist mode to restrict results to trusted sources, or denylist mode to filter out unwanted domains.
+
+You can add a maximum of 20 domains or URLs to the
+search_domain_filter
+list. The filter works in either allowlist mode (include only) or denylist mode (exclude), but not both simultaneously.
+
+Allowlist mode
+: Include only the specified domains/URLs (no
+-
+prefix)
+
+Denylist mode
+: Exclude the specified domains/URLs (use
+-
+prefix)
+
+You can filter at the domain level (e.g.,
+wikipedia.org
+) or URL level (e.g.,
+https://en.wikipedia.org/wiki/Chess
+) for granular control.
+
+Python
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+preset
+=
+"fast-search"
+,
+
+input
+=
+"Tell me about the James Webb Space Telescope discoveries."
+,
+
+instructions
+=
+"You are a helpful assistant."
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"filters"
+: {
+
+"search_domain_filter"
+: [
+
+"nasa.gov"
+,
+
+"wikipedia.org"
+,
+
+"space.com"
+
+]
+
+}
+
+}
+
+]
+
+)
+
+print
+(response.output_text)
+
+​
+Date & Time Filters
+
+Date and time filters help you find content published or updated within specific time periods. You can filter by publication date, last updated date, or use recency filters for relative time periods.
+
+Publication date filters
+: Filter by when content was originally published
+
+search_after_date_filter
+: Include content published after this date
+
+search_before_date_filter
+: Include content published before this date
+
+Last updated filters
+: Filter by when content was last modified
+
+last_updated_after_filter
+: Include content updated after this date
+
+last_updated_before_filter
+: Include content updated before this date
+
+Recency filter
+: Filter by relative time periods
+
+search_recency_filter
+: Use
+"hour"
+,
+"day"
+,
+"week"
+,
+"month"
+, or
+"year"
+for content from the past hour, 24 hours, 7 days, 30 days, or 365 days. Use
+hour
+for real-time data such as breaking news or live events.
+
+Specific date filters must be provided in the “%m/%d/%Y” format (e.g., “3/1/2025”). Recency filters use predefined values like “hour”, “day”, “week”, “month”, or “year”.
+
+Python
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"What are the latest AI developments?"
+,
+
+instructions
+=
+"You are an expert on current events."
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"filters"
+: {
+
+"search_recency_filter"
+:
+"hour"
+
+}
+
+}
+
+]
+
+)
+
+print
+(response.output_text)
+
+# Week recency
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"What are the latest AI developments?"
+,
+
+instructions
+=
+"You are an expert on current events."
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"filters"
+: {
+
+"search_recency_filter"
+:
+"week"
+
+}
+
+}
+
+]
+
+)
+
+print
+(response.output_text)
+
+​
+Location Filters
+
+Location filters tailor search results based on geographic context. This is useful for finding local businesses, regional news, or location-specific information.
+
+You can specify location using:
+
+Country code
+: Two-letter ISO 3166-1 alpha-2 code (e.g.,
+"US"
+,
+"FR"
+)
+
+City and region
+: Improve accuracy with city and region names
+
+Coordinates
+: Latitude and longitude for precise location targeting
+
+The
+city
+and
+region
+fields significantly improve location accuracy. We strongly recommend including them alongside coordinates and country code for the best results.
+
+Latitude and longitude must be provided alongside the country parameter—they cannot be provided on their own.
+
+Python
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"What are some good coffee shops nearby?"
+,
+
+instructions
+=
+"You are a helpful local guide."
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"user_location"
+: {
+
+"country"
+:
+"US"
+,
+
+"region"
+:
+"California"
+,
+
+"city"
+:
+"San Francisco"
+,
+
+"latitude"
+:
+37.7749
+,
+
+"longitude"
+:
+-
+122.4194
+
+}
+
+}
+
+]
+
+)
+
+print
+(response.output_text)
+
+​
+Combining Filters
+
+You can combine multiple filter types in a single request to create highly targeted searches. For example, you might restrict results to specific domains published within a recent time period, or filter by location and date range together.
+
+Python
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"Latest tech news from trusted sources."
+,
+
+instructions
+=
+"You are an expert on technology."
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"filters"
+: {
+
+"search_domain_filter"
+: [
+"techcrunch.com"
+,
+"theverge.com"
+],
+
+"search_recency_filter"
+:
+"week"
+
+},
+
+"user_location"
+: {
+
+"country"
+:
+"US"
+
+}
+
+}
+
+]
+
+)
+
+print
+(response.output_text)
+
+​
+Next Steps
+
+Agent API Quickstart
+Get started with the Agent API.
+Models
+Explore direct model selection and third-party models.
+Was this page helpful?
+Yes
+No
+Output Control
+Previous
+Image Attachments
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

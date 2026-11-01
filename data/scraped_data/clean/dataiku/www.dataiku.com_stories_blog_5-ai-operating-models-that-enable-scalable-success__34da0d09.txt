@@ -1,0 +1,552 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/5-ai-operating-models-that-enable-scalable-success
+page path  : /stories/blog/5-ai-operating-models-that-enable-scalable-success
+captured   : 2026-03-05 21:11:54 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_5-ai-operating-models-that-enable-scalable-success__34da0d09.html.gz
+========================================================================
+
+5 AI Operating Models That Enable Scalable Success
+
+5 AI Operating Models That Enable Scalable Success
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Analytics Modernization
+
+5 AI Operating Models That Enable Scalable Success
+
+May 29, 2025
+
+7 min read
+
+/
+
+Conor Jensen
+
+In the
+first article of this series
+, we explored how leading organizations are closing the AI talent gap by developing “unicorn teams” from within. But upskilling is only half the equation. Without the right organizational structure, even the most capable teams can struggle to scale their impact.
+
+In this next installation, we’ll explore five proven AI operating models that help organizations reduce friction, accelerate adoption, and drive ROI — whether you’re just getting started or scaling a mature AI function.
+
+Organizational Structure #1: Siloed
+
+This is the initial organizational structure for most companies where each team does their own independent experimentation with AI. There’s little or no sharing of infrastructure, data, best practices, or talent beyond perhaps a Slack or Teams channel and a wiki hub.
+
+Some teams might start with just a couple of developers using open source tools, others may bring in regional consulting firms to guide them through pilot projects, some may depend on large system integrators, while others outsource specific apps to development firms that specialize in AI. The goal in this early phase is simple:
+figure out if AI is worth further investment.
+
+The siloed structure is almost always temporary, lasting for just a few AI/ML product iterations. For some companies that’s a few quarters while for others it takes a couple of years. However, as soon as teams begin generating value, companies realize that specialization and shared infrastructure can reduce both costs and time to value. Even digital natives like Amazon, Google, and Uber quickly deployed shared platforms. The organizational structures and business initiatives in the following sections show how any company can now do that.
+
+Organizational Structure #2: Center of Excellence
+
+A
+Center of Excellence (CoE)
+is designed to go fast and jumpstart the adoption of AI within an organization. It is a centralized team that develops and maintains AI products for many business units and functions. Ideally the center is interdisciplinary because even though it’s centralized, success depends on business/tech collaboration and the creation of unicorn teams.
+Unilever used a CoE to accelerate their adoption of AI and bring their digital marketing analytics in-house
+.
+
+Tasks
+
+Key tasks of a CoE
+are:
+
+Manage a Portfolio of AI Products and Prioritize a Backlog:
+Many business units and functions will have AI and GenAI product ideas and many of the ideas will be impractical, high risk, or low ROI. A key role of a CoE is to evaluate and prioritize ideas and develop and maintain a portfolio of AI products. Ideally, the portfolio includes a mix of high risk-high reward and low risk-good reward ones. Some ideas will be beyond the state-of-the-art, and the CoE should resist working on such “science projects” regardless of how technically intriguing they might be.
+One example involves an auto insurer who tried to estimate accident repair costs solely from the text in a claim and a few photos. That failed so they pivoted to something much easier to predict and immediately valuable to their current claims workflow: estimating the likelihood that a car had frame damage.
+
+Create a Scalable Data Architecture and Infrastructure:
+
+AI — and GenAI in particular — uses a lot more data and computation than its analytical processors so new infrastructure is often needed. Today, that might include
+Snowflake
+,
+AWS
+Redshift, Google BigQuery, or
+Azure
+SQL Database for storage and Hadoop, Spark, Kubernetes, or vector databases for scalable compute and
+retrieval-augmented generation (RAG)
+. Tomorrow, it may include newer orchestration tools for managing GenAI pipelines across models, vendors, and deployment environments.
+
+Keep Track of AI Industry Innovation:
+
+The state-of-the-art in AI is changing rapidly — especially with the rise of GenAI, LLMs, and architectures like RAG and an
+LLM Mesh
+. Today, checking whether a photo is of a bird is straightforward and certainly not five years of work. Keeping up with new vendors and methods is a good use of a central AI team.
+
+Develop Champions in Each Business Unit and Function.
+This may be as simple as identifying who has the most requests in the backlog and communicating regularly with them. Champions are especially useful in surfacing relevant GenAI use cases, helping prioritize them, and evangelizing successes across business lines.
+
+Capture and Evangelize AI Value Stories:
+
+Initially, success stories may come from outside the organization to get people excited and understand what’s possible. Over time, they should be mostly internal to demonstrate how your company has generated value. The best format for storytelling depends on a company’s norms. Some use slides, one-pagers, or white papers. Many teams now use short videos, especially as GenAI tools make content creation faster.
+
+Metrics
+
+Measuring the success of a CoE helps to set funding levels and decide when to migrate to another organization structure. Metrics include value generated, ROI, percentage of business units and functions with an active champion, number of active executive-level champions, AI products per business unit or function, average AI product cost, AI products per person in the CoE, and average time to value of AI products.
+
+As AI and GenAI adoption increases, maintenance and operations costs can grow rapidly. Data pipelines need to be updated and tested so that AI models use the latest data. New data sources need to be explored. Models need to be retained and their accuracy and bias continuously monitored. Model APIs need to be scalable to support hundreds of users, and so on. Maintenance and operations leave less time to work on new products and keep up with AI industry innovations, resulting in a growing product backlog and unhappy business users.
+An AI platform, also known as an AI factory, manages those costs and the risk of an expanding backlog
+.
+
+Organizational Structure #3: Hub and Spoke
+
+A common goal of a CoE is to be so successful in generating AI value that its role is distributed around the company. It’s kind of like raising a teenager: If all goes well then they eventually leave. Thus, in less centralized organizational structures, CoE functions are distributed around an organization. That change can be culturally challenging since it reduces power and control.
+
+However, AI ROI generally increases as capabilities are decentralized. The
+International Institute for Analytics
+summed it up as, “Pushing analytics out from the central analytics function is, by definition, pushing data knowledge, data skills, and some data accountability out to the functional areas, increasing data literacy and building a broader data culture.”
+
+One of the top reasons that analytics and AI programs fail is that data teams are too isolated from business teams
+and thus work on things that aren’t valuable or that the business doesn’t want. A hub and spoke structure brings them closer together. AI experts (meaning advanced, graduate-level data scientists) are in the hub, business units and functions are in the spokes, and instead of communicating only via product requests and evangelism, they collaborate on product development. The hub is still responsible for many of the things they do in a CoE including infrastructure, standards, and tracking industry innovation.
+
+However, ownership of AI products shifts to the spokes. The spokes prioritize the backlog, are responsible for product adoption, track product performance, and have the overall responsibility for generating value. Companies that have scaled AI are
+three times more likely than average to use a hub and spoke organizational structure
+.
+
+Organizational Structure #4: Center for Acceleration
+
+If a CoE is designed for fast AI adoption, then a center for acceleration is designed for broad AI adoption among frontline domain experts. It’s a refinement of hub and spoke and Dataiku’s recommendation for many of our customers who already have a mature CoE.
+This model recognizes a critical but often overlooked challenge: scaling modern AI, GenAI, and AI agent development practices across both data scientists and business analysts. This structure shifts the onus for AI product development out of the center and into business units and functions. It aims to create unicorn teams in every spoke.
+
+Key benefits include:
+
+Increased innovation since domain experts directly participate in development.
+
+Increased agility since more roles, business units, and business functions are involved.
+
+Increased AI use case ROI since the business invests their own time and effort.
+
+Tasks
+
+Tasks that an AI Center for Acceleration is responsible for include:
+
+Furthermore, the metrics for measuring a center for acceleration include those for a CoE, plus performance indicators tracked at the business unit and function level — reflecting the distributed ownership of AI value.
+
+Organizational Structure #5: Embedded
+
+The last organizational structure is called embedded. In this model, there are just a very few central, shared resources and rules such as
+responsible AI
+guidelines, infrastructure, and a few common, curated datasets. As one of our most sophisticated customers told us, “We don’t live in 2000 anymore where you outsource data science to IT. We embed data science in every business function.” Many old companies have to learn this while digital natives such as Amazon, Google, and Uber have always done it that way.
+
+Embedded is the most decentralized, agile, and innovative structure since many business units and functions are involved, and they are loosely connected by rules and resources.
+Some view that movement toward decentralization as part of a macro trend underway for the past 300 years
+.
+
+A Common AI/ML Platform
+
+A lot of AI is developed today the way wagons, textiles, and other products were made before the industrial revolution: handmade by small groups of artisanal experts. Productivity was low and maintenance high. The industrial revolution changed that with automation, specialization, reuse, and collaboration. The same is now happening to AI. A common AI platform enables interdisciplinary team collaboration, high reuse, and automation covering the entire AI product lifecycle including:
+
+We’ve seen platforms increase team productivity across many companies and industries — and with Dataiku,
+automation reduces manual work by 50% in Year 1, 60% in Year 2, and 80% in Year 3 as users become more proficient
+. That’s like quadrupling — even quintupling — your team’s capacity over time, without additional hiring!
+
+However, there’s a catch. Many data scientists like to develop models by hand so they resist adopting a platform that takes away the fun parts of modeling. The ideal platform allows those that prefer to code to still build things by hand, but also get big productivity gains. A platform should be highly usable so that workers of all skill levels — from business analysts to graduate-level data scientists — want to use it.
+
+Usability is much more than just ease-of-use.
+Text editors are easy to use, but most people still can’t write decent poetry. According to
+Nielsen Norman Group, usability includes five key components
+that go beyond simplicity: learning curve, efficiency, memorability, error prevention, and user satisfaction.
+
+Here’s how multipersona AI/ML platforms (like Dataiku) address each of these components:
+
+Easy to Learn to Use:
+Visual data pipelines for non-coders, notebooks for coders, and dozens of built-in connectors (Snowflake, Salesforce, SAP, etc.)
+
+Efficient for the Task at Hand:
+One-click API deployment, job scheduling, reusable pipelines, and a single-pane-of-glass interface.
+
+Easy to Remember How to Use
+: Visual flows, built-in wikis, and automatic documentation make it easy to pick up where you left off.
+
+Prevents Serious Errors by Novice Users
+: Built-in quality checks, custom sign-offs, and always-on monitoring for drift, bias, and model risk.
+
+Satisfying to Use
+: Real collaboration across roles, measurable productivity gains, and a platform people actually enjoy using.
+
+Efficiency and satisfaction are critical to broad adoption. If a platform doesn’t make data workers’ jobs easier then they’ll stop using it, revert back to their old ways, and your upskilling program will have lost money and time.
+
+User satisfaction is also important. Data workers get satisfaction from collaborating, being efficient enough to occasionally try new things, and achieving business goals.
+One of our customers said that our platform is so usable that it enables fun and play
+. An investment bank said that Dataiku is a morale booster and makes work fun again. Another said that, after trying many others, it’s the only tool they can get their Excel users to move to.
+
+Tasks and Metrics
+
+Key tasks in managing a common AI/ML platform include license and vendor management, data architecture best practices, tracking industry innovations, and defining, measuring, and reporting user service level agreement (SLA) metrics. Key performance metrics are developer adoption rate, monthly active users, AI products per monthly active user (and other productivity measures), mean time between SLA violation, and SLA violations for the past few weeks.
+When a platform is truly usable, teams stick with it — and that’s when adoption takes root. It’s not just about access, but about efficiency, collaboration, and ongoing business value.
+
+Adoption: The Missing Link in Scaling AI
+
+The takeaway is clear: You don’t need more unicorns — you need stronger teams, supported by the right structures, shared platforms, and a commitment to upskilling. But even the best platform and training program won’t deliver value if no one uses it.
+
+Next, explore the critical ingredient that brings it all to life: adoption. From structured programs to internal branding and A/B-tested workflows, learn how organizations turn AI (including AI agent) intent into real impact — team by team, workflow by workflow.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Modernizing Analytics With Dataiku and Snowflake
+
+The Modern Analyst’s Simplified Path From Question to Insight
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+Feb 06, 2026
+
+Recommended
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the...
+
+Dec 18, 2025
+
+Recommended
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while maintaining...
+
+Dec 03, 2025
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,149 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/balancing-autonomy-determinism-when-applying-agentic-ai
+page path  : /blogs/balancing-autonomy-determinism-when-applying-agentic-ai
+captured   : 2026-02-07 15:04:03 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_balancing-autonomy-determinism-when-applying-agentic-ai__d8908539.html.gz
+========================================================================
+
+AI agents: Thinking fast, thinking slow
+
+AI agents: Thinking fast, thinking slow
+
+media-blend
+
+text-black
+
+AI agents: Thinking fast, thinking slow
+
+Balancing autonomy and determinism in Joule Agents
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+As artificial intelligence becomes ever more central to the modern business landscape, striking the right balance between autonomy and determinism is emerging as a critical challenge.
+
+This article sets the stage for a thoughtful exploration of agentic AI—intelligent systems that navigate between routine efficiency and flexible reasoning. Rather than applying deep reasoning to every problem, we’ll discuss why reserving advanced autonomy for truly complex challenges ensures reliability, predictability, and innovation in automation. To demonstrate our strategic approach to leveraging intelligent automation, I will outline how Joule and its agents are calibrated to apply the optimal level of intelligence to each business challenge, along with the guiding principles for deploying agentic AI effectively in enterprise environments.
+
+The key to agentic AI is knowing when not to apply it
+
+One theory that has profoundly impacted my perspective on thinking and decision making and influenced my decision to focus my PhD on how managers frame decisions is research on the cognitive practices and biases in decision making. The book summarizing many of the principles is
+Thinking, Fast and Slow
+, by Nobel Prize winner Daniel Kahneman.
+1
+This global bestseller delves into the intriguing mechanics of the human mind, articulating the ways we deploy two distinct types of cognitive processes: the swift, instinctual
+fast thinking
+, also referred to as System 1 thinking, and the deliberate, analytical
+slow thinking
+, also referred to as System 2 thinking. These systems influence our judgments, often leading to both noteworthy strengths and predictable errors in our decision making, yet they remain essential for effective and deliberate cognitive processes.
+
+Amid the whirlwind excitement surrounding artificial intelligence (AI) and specifically AI agents, this theory provides a crucial frame of reference. As mentioned in my earlier article, "
+Envision the future of generative AI with SAP's AI agents
+," we define agents following the
+framework of Andrew Ng
+, stating that agents apply reasoning, reflection, tool usage, and
+multi-agent access
+towards a predefined goal to achieve non-deterministic outcomes. Thus, AI agents qualify as System 2 thinkers by definition. They are always thinking slowly, in terms of reasoning over a problem, even though the level of reasoning can be optimized based on the complexity of the problems with test-time compute models.
+
+However, in the realm of agentic AI, there's a growing tendency to apply the more deliberate but slower System 2-like reasoning to every problem, leading to inefficiencies. Just as humans don't overthink simple tasks like opening a cereal box or hammering a nail, AI doesn't need complex reasoning and frontier AI models for straightforward tasks. By pushing AI to operate in a System 2 mode unnecessarily, we sacrifice speed, reliability, and cost-efficiency. Instead, many tasks would benefit from a System 1 approach. This approach means using faster, simpler models that quickly match user queries to known skills and carry them out based on how closely the query fits those skills.
+
+In essence, the key to unlocking greater efficiency and reliability in agentic AI lies, ironically, in recognizing when
+not
+to apply full agentic AI, but rather System 1 thinking, leveraging minimal intelligence for identifying which tasks to select and match parameters, and reserving System 2 reasoning for truly complex challenges. This approach, of course, also requires a certain level of intelligence and thus AI to be employed, but the intelligence would be limited to identifying the problem and recognizing a ready-made solution, which may involve simplified reasoning approaches but could also rely on simpler approaches like comparing embeddings of queries and skills.
+
+What is
+
+What are AI agents?
+
+AI agents are autonomous systems that can perform multistep functions without explicit direction.
+
+Learn more
+
+What does this mean for agentic AI in business?
+
+In the business world, the distinction between System 1 and System 2 thinking is crucial for deploying agentic AI efficiently. At SAP, we’ve embraced this concept with Joule, our intelligent copilot.
+
+Joule is designed to apply the appropriate level of intelligence to each task, ensuring maximum efficiency and reliability. Joule consists of three main components:
+
+Joule
+as our new UI in the age of AI
+
+Joule Agents
+(also including Joule skills), which contain the business logic and execute business processes using AI
+
+AI Foundation
+, which is increasingly turning into our operating system for AI, with all underlying platform services
+
+For applying our theory, we specifically focus on Joule Agents and skills, and here we need to differentiate between two main mechanisms: Reason and Act. Reason subsumes all activities Joule employs to create multi-step plans and reflect, whereas Act summarizes all tool activity, including tools like calling APIs, involving the human user, or calling tools or other agents via protocols (MCP/A2A). Joule’s approach to Reason is structured in three stages that are a testament to our obsession with reliable, relevant, and responsible task execution:
+
+Joule's approach to the Reason mechanism is structured in three stages.
+
+Joule skills (System 1 thinking)
+When you give Joule a straightforward task, like creating a purchase order or updating an HR record, it recognizes this as a Joule skill. Joule skills are routine, deterministic tasks that don't require complex reasoning models, just the identification of the right tool or process. This aligns with System 1 thinking: fast, efficient, and reliable.
+
+Joule native agenticness (lean System 2 thinking)
+For tasks that involve a sequence of steps—like creating a purchase order and confirming the creation to the supplier—Joule combines multiple skills into workflows. This stage relies on a lean version of System 2 thinking but handles more complex, yet deterministic and repetitive sequences within a consistent business logic. It requires reasoning, but only to identify a set of deterministic tools, which makes the result much more predictable and repeatable. It ensures an effective execution of a series of tasks in the correct order without needing the heavy cognitive load of full System 2 thinking. SAP Knowledge Graph plays a pivotal role in ensuring the reliability of such scenarios.
+
+Joule Agents (full System 2 thinking)
+For complex, non-deterministic tasks that require genuine reasoning and autonomy—for instance, evaluating analytical data or executing automations across departments—Joule leverages full agentic AI. This is where System 2 thinking comes in, using advanced reasoning models, a deeper grounding in the specific business context, and specialized tools to navigate the complexity of the task. Also, here SAP Knowledge Graph will allow us another level of grounding into entities involved (business data), execution logic (business configuration and logic), and execution flow (business process).
+
+By adopting this tiered approach, SAP ensures that Joule not only enhances efficiency and reliability but also aligns with real-world business needs. It applies the right level of intelligence to each scenario, from simple, repetitive tasks to complex, strategic decisions, ensuring that businesses can achieve more with less cognitive overhead and, more importantly, produce more reliable, predictable, and consistent business outcomes.
+
+The strategic role of reasoning in agentic AI
+
+Does this mean that reasoning is not essential? Not at all. While leveraging System 1 thinking for many tasks boosts efficiency, reasoning remains a cornerstone of agentic AI for specific, critical applications.
+
+Two core principles guide our approach to autonomy in business processes:
+
+Apply as much autonomy as necessary and as little as possible.
+Autonomy should allow one to select which deterministic tools to apply, but it should not generate different answers to the same or similar questions at hand. Applying as little autonomy as possible allows our Joule skills and agents to make results more predictable, consistent, and reliable. This principle is crucial, as business operations depend on consistency and deterministic outcomes. Achieving predictable and reliable results fosters organizational trust and operational continuity, particularly when applied to routine business processes.
+
+Apply reasoning and autonomy to complex problems & scaling deterministic tool creation
+Autonomy delivers significant value when applied to complex, non-routine, or high-priority tasks. In scenarios that demand a thorough understanding of business context and process intricacies, require precise semantic interpretation, span multiple business roles or domains, or involve unique activities such as advanced data analytics, the application of robust reasoning remains essential. Moreover, effective reasoning is instrumental in fulfilling our foundational principle: it enables the identification of optimal methods for task execution, subsequently informing the development of efficient System 1 tools—such as Joule skills—that drive operational excellence by ensuring outcomes are consistently deterministic, reliable, and scalable.
+
+Trust earned with agentic AI will allow for a paradigm shift in business software
+
+To encapsulate these principles, I’d like to echo the perspective of our Chief Technology Officer and Chief AI Officer, Philipp Herzig, who recently described the transformative paradigm shift underway in business software. We are transitioning from a reactive “insight to action” approach—where users interpret data and trigger actions manually—towards a more advanced “reason and act” model. In this new landscape, software proactively interprets information and proposes meaningful actions for the user.
+
+This shift is not merely technological; it is foundational to how we ensure real-world business success. As we embrace this evolution, it is critical to heed the guidance outlined above: we must apply technology judiciously, striking the right balance between reliable, deterministic workflows for routine scenarios and granting autonomy where complex, nuanced reasoning is required. Only by calibrating our systems in this way—ensuring highly predictable, consistent outcomes in straightforward cases, while empowering true autonomy for intricate, high-value tasks—can we foster both operational trust and innovation to navigate and allow for the above-described paradigm shift.
+
+1. Kahneman, Daniel.
+Thinking, Fast and Slow
+. Farrar, Straus and Giroux. 2011.
+
+true
+
+true
+
+/content/sapcom/countries/en_us/fragments/insights/article-details-no-footnote
+
+SAP Product
+
+Joule Agents
+
+The newest AI agents can help your business run faster.
+
+Discover Joule Agents now
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

@@ -1,0 +1,153 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/search-domain-filter-still-not-working/3044
+page path  : /t/search-domain-filter-still-not-working/3044
+captured   : 2026-01-21 22:19:07 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_search-domain-filter-still-not-working_3044__2654af91.html.gz
+========================================================================
+
+Search_domain_filter still not working - Bug Reports - Perplexity API Platform Forum
+
+Search_domain_filter still not working - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Search_domain_filter still not working
+
+Bug Reports
+
+sonar-pro
+,
+
+search-api
+
+polarbear
+
+December 11, 2025, 7:56pm
+
+1
+
+Hi all - there have been several bug reports about the search_domain_filter feature not working at all. I’ve tested and it’s still not working.
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+Hi all, I’m trying to make a api request like this
+url = "https://api.perplexity.ai/chat/completions"
+
+payload = {
+"model": "llama-3.1-sonar-large-128k-online",
+"messages": [
+{
+"role": "system",
+"content": (
+"Help find the latest news for the user through as many sources as possible. Compile "
+"it in an unbiased way"
+),
+},
+{"role": "user", "content"…
+
+Search_domain_filter issues
+
+Bug Reports
+
+The OpenAI API doesn’t know anything about Perplexity’s parameters. If you are ever using the OpenAI API for another API, and the other API has unique parameters, you have to pass them in extra_body.
+response = client.chat.completions.create(
+model="sonar-pro",
+messages=[
+{
+"role": "user",
+"content": "What is the most recent version of Python?"
+}
+],
+extra_body={"search_domain_filter": ["-python.org"]},
+)
+
+We know this works as well because…
+
+polarbear
+
+December 16, 2025, 11:26pm
+
+2
+
+Any update on this???
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Search_domain_filter issues
+
+Bug Reports
+
+1
+
+227
+
+May 15, 2025
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+4
+
+228
+
+May 15, 2025
+
+[SOLVED] Search API suddenly stops returning results when using search_domain_filter=["sec.gov"]
+
+Bug Reports
+
+search-api
+
+1
+
+57
+
+November 8, 2025
+
+Search_domain_filter unable to crawl sap.com or help.sap.com
+
+Bug Reports
+
+sonar
+
+3
+
+242
+
+August 7, 2025
+
+Disable search in API
+
+Bug Reports
+
+1
+
+174
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

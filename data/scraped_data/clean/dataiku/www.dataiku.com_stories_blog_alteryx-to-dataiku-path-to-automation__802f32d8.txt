@@ -1,0 +1,504 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/alteryx-to-dataiku-path-to-automation
+page path  : /stories/blog/alteryx-to-dataiku-path-to-automation
+captured   : 2026-02-09 04:48:37 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_alteryx-to-dataiku-path-to-automation__802f32d8.html.gz
+========================================================================
+
+Alteryx to Dataiku: Path to Automation
+
+Alteryx to Dataiku: Path to Automation
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Analytics Modernization
+
+Alteryx to Dataiku: Path to Automation
+
+May 15, 2024
+
+5 min read
+
+/
+
+Chris Helmus, Dmitri Ryssev
+
+We’re now all the way to part 5 of this Alteryx to Dataiku series! If you’ve had the chance to check out previous articles, you’re well on your way to understanding Dataiku’s take on analytics (we’ve covered the
+visual flow
+, how to work with
+datasets
+,
+recipes
+, and
+AutoML
+). Today, we’ll take a step back and look at how Dataiku stitches this all together with an easy path to automation and production across all of your projects. Dataiku’s approach is one of our favorite pieces of the platform. First, any and all work can be automated through scenarios. Then, once things are set up correctly, it’s just a few clicks to move your work to a safe production area.
+
+Dataiku’s path to production enables:
+
+Easy automation of any analytics work
+
+Comprehensive monitoring and alerting
+
+One click push to production
+
+What's It Like in Alteryx:
+
+Typically in Alteryx, you build in one place and automate in another, whether that’s in Alteryx Server or with Alteryx Analytics Cloud. If there are issues, it’s commonly an interactive process to make edits, re-push, and recheck for errors as things can work differently across those environments. Automation is primarily done via time-based schedules, while linking together different processes can require some code or leveraging concepts like chained applications. Once a large number of workflows are running, it can be somewhat difficult to keep an eye on all of them to understand performance and stay ahead of issues.
+
+How Dataiku Does It Differently:
+
+Automate Your Way: Decouple Automation From Your Flow Logic
+
+When you think of a Dataiku project, you might think of a
+flow
+— but that's just the tip of the iceberg. A project contains a wealth of additional features including documentation, dashboards, version history, discussions, and more. One of the most valuable aspects of a Dataiku project is the automation logic, which is defined separately from the flow itself.
+
+Defining Your Automation
+
+Dataiku
+Scenarios
+allow you to automate your flow with ease. A scenario is simply
+a set of actions that are triggered when specific conditions are met
+. These actions can be as simple as "run my entire flow end-to-end" or as nuanced as "execute only certain portions of the flow, given specific conditions." A scenario can include multiple steps, such as:
+
+Step 1: Build a dataset. (Note: Dataiku automatically detects all upstream dependencies/jobs that need to run in order to build any specific dataset in your flow.)
+
+Step 2: Check for
+data quality issues
+in your dataset.
+
+Step 3: Publish the final output to
+a dashboard
+.
+
+If any of these steps fail — for example, if there are invalid rows in your input data that cause Step 2 to fail — the scenario will abort and notify you via email, Microsoft Teams, Slack, or other channels using a
+Reporter
+.
+
+You also have complete control over what constitutes a job failure.
+Data quality rules
+can be tailored to check for a wide range of issues in your data, depending on the specific rules you want to apply. Want to run a check against missing/null values or discover whether an email address field contains only valid addresses? A few clicks and you can apply that rule to your dataset — or, if you have rules for other datasets that you want to reuse, simply copy and paste them over!
+
+Define data quality rules for your datasets, then incorporate them into your automation.
+
+Trigger Your Scenario With Ease
+
+Now that you've defined what your scenario will do, it's time to decide when it will run. Dataiku offers a range of triggers to fit your specific needs:
+
+Time-based: Execute your scenario every day, every month, every quarter, every 30 minutes, or at any other interval you choose.
+
+Dataset change: Trigger your scenario when a specific dataset (often an input dataset) is updated.
+
+SQL query change: Execute your scenario when the result of a predefined SQL query changes.
+
+Trigger after scenario: Chain one scenario after another, either within the same project or across different projects.
+
+Custom: Write your own automation logic in Python to create a custom trigger that meets your unique requirements.
+
+Various options for triggering a scenario to execute.
+
+As you can see, Dataiku offers an unparalleled level of flexibility and ease in defining the conditions under which your automation will occur, as well as what gets automated. Your scenario can be as complex or as simple as you like: It can encompass a wide
+range of actions
+(build a dataset, train a model, run Python code, export files, refresh dashboards, etc.), giving you maximum flexibility within an intuitive user interface. You can effortlessly create and manage multiple scenarios for a single flow, toggle them on and off, and even replicate them across different flows — all from a single place.
+
+Monitoring and Alerting: Automation Watchtower
+
+Automation is great, but with great power comes great responsibility. The more you automate, the more essential it is to know what’s happening behind the scenes. Dataiku has you covered, from visual logs to built-in monitoring to custom alerts.
+
+Let’s start from the most important building block. No matter how you kick off a job in Dataiku, you’ll always get an easy view of exactly what ran under the
+Jobs area of your project
+. Each job will break down visually into activities to help zero in on the details. If something breaks, you’ll not only have the error but also a pointer right to where the issue happened in your flow. No more struggling to figure out which icon in a flow caused a problem, from experimenting all the way through to automation.
+
+Track every job visually.
+
+Now, sometimes you’ll want to decide for yourself when a job “breaks.” Maybe it makes sense to force an error when certain key columns have too many missing values. Or maybe you’d like to let a process finish but mark a warning in the logs due to a much lower record count in the final output than normal. Fortunately, the same metrics and checks that can help you conditionally run pieces of your process also show up right in your job logs.
+
+Custom error created to highlight data quality issues.
+
+These logs make diagnosing issues easy, but they don’t give you the whole picture. To solve that, Dataiku provides Automation Monitoring to let you see one view of all of your automations across your projects. Imagine logging into Dataiku with a fresh cup of coffee, just a few clicks away from an easy color-coded timeline for each of your crucial processes. If you see an issue, there are links to those helpful scenario runs and job histories.
+
+Automation Monitoring: A timeline of successful runs and errors across projects.
+
+Finally, sometimes there are processes where you just have to know the second something goes wrong. For that, Dataiku has reporters to send alerts however you need them, from classic email to messaging apps like Teams and Slack. When these alerts are sent can be as customized as you want. For example, I might only want a message with a quick blurb when a particular step in a scenario fails. Or I might want to always send an email with a dashboard link and a file export whenever a job has no issues.
+
+Design to Automation: Easy and Seamless
+
+The final piece of the puzzle is moving the work you’ve made into a safe production area to run those automations. In Dataiku speak, this means moving your project from a Design node to an Automation node. As you’d expect, the platform has several features to make this a seamless experience.
+
+First off, Dataiku has a concept of a bundle — effectively a one-click way to package up everything your project needs, from data connections to logic to scenarios. This is similar to the concept of a .yxzp in Alteryx but with more fine-grained control over what gets brought along and what’s left behind. From there, that bundle can move to a sort of holding area called the Deployer that makes rolling back to any previous version of a process easy.
+
+Project bundles in the Deployer.
+
+The Deployer also helps automatically take care of any sort of changes that need to happen along the way to Automation. For example, I may need a data connection to remap to a production database schema. Or maybe once that bundle is moved it needs to be shared with a smaller number of users who will monitor it over time. All of this can be taken care of seamlessly and without any code!
+
+The best part about moving a project to Automation is that it has an identical interface to Design. This makes troubleshooting a breeze. For example, the same visual logs and automation monitoring interfaces highlighted earlier are available in Automation. And if there is an issue and a change needs to be made, you’ll always have a direct breadcrumb trail right back to what was built in Design.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Modernizing Analytics With Dataiku and Snowflake
+
+The Modern Analyst’s Simplified Path From Question to Insight
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+Feb 06, 2026
+
+Recommended
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the...
+
+Dec 18, 2025
+
+Recommended
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while maintaining...
+
+Dec 03, 2025
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

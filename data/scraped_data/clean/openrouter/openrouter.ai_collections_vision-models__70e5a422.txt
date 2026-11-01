@@ -1,0 +1,440 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/vision-models
+page path  : /collections/vision-models
+captured   : 2026-04-12 10:00:17 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_collections_vision-models__70e5a422.html.gz
+========================================================================
+
+AI Models with Vision: Multimodal LLMs for Image Understanding
+
+AI Models with Vision: Multimodal LLMs for Image Understanding
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Vision Models
+AI Models with Vision: Multimodal LLMs for Image Understanding
+Model rankings updated April 2026 based on real usage data.
+Discover AI models with vision capabilities that can analyze images, understand documents and answer questions about visual content. These multimodal LLMs combine image understanding with powerful language capabilities, enabling applications from document analysis to visual question answering.
+
+Whether you're building tools to interpret screenshots, analyze charts and diagrams, extract text from images or process video frames, OpenRouter provides access to leading vision models from Anthropic, Google, OpenAI and more through a single API.
+Browse All Models
+Compare Models
+Top Vision Models on OpenRouter
+Anthropic: Claude Opus 4.6
+1.22T
+tokens
+Academia
+(#8)
+Finance
+(#3)
+Health
+(#17)
+Legal
+(#19)
+Marketing
+(#28)
++
+7
+categories
+Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective for large codebases, complex refactors, and multi-step debugging that unfolds over time. The model shows deeper contextual understanding, stronger problem decomposition, and greater reliability on hard engineering tasks than prior generations.
+
+Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-production-ready documents, plans, and analyses in a single pass, and maintains coherence across very long outputs and extended sessions. This makes it a strong default for tasks that require persistence, judgment, and follow-through, such as technical design, migration planning, and end-to-end project execution.
+
+For users upgrading from earlier Opus versions, see our
+official migration guide here
+Show more
+by
+
+anthropic
+1M
+context
+$
+5
+/M input
+tokens
+$
+25
+/M output
+tokens
+Anthropic: Claude Sonnet 4.6
+1.19T
+tokens
+Academia
+(#6)
+Finance
+(#5)
+Health
+(#11)
+Legal
+(#12)
+Marketing
+(#6)
++
+7
+categories
+Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.
+Show more
+by
+
+anthropic
+1M
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+Google: Gemini 3 Flash Preview
+1.1T
+tokens
+Academia
+(#1)
+Finance
+(#4)
+Health
+(#1)
+Legal
+(#4)
+Marketing
+(#4)
++
+7
+categories
+Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool use performance with substantially lower latency than larger Gemini variants, making it well suited for interactive development, long running agent loops, and collaborative coding tasks. Compared to Gemini 2.5 Flash, it provides broad quality improvements across reasoning, multimodal understanding, and reliability.
+
+The model supports a 1M token context window and multimodal inputs including text, images, audio, video, and PDFs, with text output. It includes configurable reasoning via thinking levels (minimal, low, medium, high), structured output, tool use, and automatic context caching. Gemini 3 Flash Preview is optimized for users who want strong reasoning and agentic behavior without the cost or latency of full scale frontier models.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.50
+/M input
+tokens
+$
+3
+/M output
+tokens
+$
+1
+/M audio tokens
+OpenAI: GPT-4o-mini
+626B
+tokens
+Academia
+(#17)
+Finance
+(#8)
+Health
+(#10)
+Legal
+(#8)
+Marketing
+(#10)
++
+6
+categories
+GPT-4o mini is OpenAI's newest model after
+GPT-4 Omni
+, supporting both text and image inputs with text outputs.
+
+As their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than
+GPT-3.5 Turbo
+. It maintains SOTA intelligence, while being significantly more cost-effective.
+
+GPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences
+common leaderboards
+.
+
+Check out the
+launch announcement
+to learn more.
+
+#multimodal
+Show more
+by
+
+openai
+128K
+context
+$
+0.15
+/M input
+tokens
+$
+0.60
+/M output
+tokens
+MoonshotAI: Kimi K2.5
+610B
+tokens
+Academia
+(#12)
+Finance
+(#2)
+Health
+(#45)
+Legal
+(#24)
+Marketing
+(#34)
++
+7
+categories
+Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling.
+Show more
+by
+
+moonshotai
+262K
+context
+$
+0.3827
+/M input
+tokens
+$
+1.72
+/M output
+tokens
+Google: Gemini 2.5 Flash Lite
+569B
+tokens
+Academia
+(#4)
+Finance
+(#11)
+Health
+(#3)
+Legal
+(#3)
+Marketing
+(#1)
++
+6
+categories
+Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance across common benchmarks compared to earlier Flash models. By default, "thinking" (i.e. multi-pass reasoning) is disabled to prioritize speed, but developers can enable it via the
+Reasoning API parameter
+to selectively trade off cost for intelligence.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.10
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+$
+0.30
+/M audio tokens
+Google: Gemini 2.5 Flash
+549B
+tokens
+Academia
+(#2)
+Finance
+(#6)
+Health
+(#2)
+Legal
+(#2)
+Marketing
+(#2)
++
+7
+categories
+Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in "thinking" capabilities, enabling it to provide responses with greater accuracy and nuanced context handling.
+
+Additionally, Gemini 2.5 Flash is configurable through the "max tokens for reasoning" parameter, as described in the documentation (
+https://openrouter.ai/docs/use-cases/reasoning-tokens#max-tokens-for-reasoning
+).
+Show more
+by
+
+google
+1.05M
+context
+$
+0.30
+/M input
+tokens
+$
+2.50
+/M output
+tokens
+$
+1
+/M audio tokens
+xAI: Grok 4.1 Fast
+531B
+tokens
+Academia
+(#14)
+Finance
+(#18)
+Health
+(#4)
+Legal
+(#1)
+Marketing
+(#8)
++
+7
+categories
+Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window.
+
+Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+Show more
+by
+
+x-ai
+2M
+context
+$
+0.20
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+OpenAI: GPT-5.4
+511B
+tokens
+Academia
+(#11)
+Finance
+(#24)
+Health
+(#12)
+Legal
+(#21)
+Marketing
+(#12)
++
+6
+categories
+GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling high-context reasoning, coding, and multimodal analysis within the same workflow.
+
+The model delivers improved performance in coding, document understanding, tool use, and instruction following. It is designed as a strong default for both general-purpose tasks and software engineering, capable of generating production-quality code, synthesizing information across multiple sources, and executing complex multi-step workflows with fewer iterations and greater token efficiency.
+Show more
+by
+
+openai
+1.05M
+context
+$
+2.50
+/M input
+tokens
+$
+15
+/M output
+tokens
+Google: Gemini 3.1 Pro Preview
+420B
+tokens
+Academia
+(#10)
+Finance
+(#21)
+Health
+(#14)
+Legal
+(#6)
+Marketing
+(#24)
++
+7
+categories
+Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows. Building on the multimodal foundation of the Gemini 3 series, it combines high-precision reasoning across text, image, video, audio, and code with a 1M-token context window. Reasoning Details must be preserved when using multi-turn tool calling, see our docs here:
+https://openrouter.ai/docs/use-cases/reasoning-tokens#preserving-reasoning
+. The 3.1 update introduces measurable gains in SWE benchmarks and real-world coding environments, along with stronger autonomous task execution in structured domains such as finance and spreadsheet-based workflows.
+
+Designed for advanced development and agentic systems, Gemini 3.1 Pro Preview improves long-horizon stability and tool orchestration while increasing token efficiency. It introduces a new medium thinking level to better balance cost, speed, and performance. The model excels in agentic coding, structured planning, multimodal analysis, and workflow automation, making it well-suited for autonomous agents, financial modeling, spreadsheet automation, and high-context enterprise tasks.
+Show more
+by
+
+google
+1.05M
+context
+$
+2
+/M input
+tokens
+$
+12
+/M output
+tokens
+$
+2
+/M audio tokens

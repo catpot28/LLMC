@@ -1,0 +1,97 @@
+method,reviewed_label,predicted_label,count
+Single,None,None,13
+Single,None,Low,0
+Single,None,Medium,0
+Single,None,High,0
+Single,Low,None,6
+Single,Low,Low,6
+Single,Low,Medium,1
+Single,Low,High,0
+Single,Medium,None,0
+Single,Medium,Low,2
+Single,Medium,Medium,4
+Single,Medium,High,4
+Single,High,None,1
+Single,High,Low,0
+Single,High,Medium,0
+Single,High,High,12
+GPT worker,None,None,11
+GPT worker,None,Low,2
+GPT worker,None,Medium,0
+GPT worker,None,High,0
+GPT worker,Low,None,1
+GPT worker,Low,Low,7
+GPT worker,Low,Medium,5
+GPT worker,Low,High,0
+GPT worker,Medium,None,0
+GPT worker,Medium,Low,0
+GPT worker,Medium,Medium,8
+GPT worker,Medium,High,2
+GPT worker,High,None,1
+GPT worker,High,Low,0
+GPT worker,High,Medium,0
+GPT worker,High,High,12
+Mistral worker,None,None,13
+Mistral worker,None,Low,0
+Mistral worker,None,Medium,0
+Mistral worker,None,High,0
+Mistral worker,Low,None,7
+Mistral worker,Low,Low,5
+Mistral worker,Low,Medium,1
+Mistral worker,Low,High,0
+Mistral worker,Medium,None,0
+Mistral worker,Medium,Low,2
+Mistral worker,Medium,Medium,5
+Mistral worker,Medium,High,3
+Mistral worker,High,None,1
+Mistral worker,High,Low,0
+Mistral worker,High,Medium,0
+Mistral worker,High,High,12
+Gemini worker,None,None,12
+Gemini worker,None,Low,1
+Gemini worker,None,Medium,0
+Gemini worker,None,High,0
+Gemini worker,Low,None,1
+Gemini worker,Low,Low,9
+Gemini worker,Low,Medium,3
+Gemini worker,Low,High,0
+Gemini worker,Medium,None,0
+Gemini worker,Medium,Low,0
+Gemini worker,Medium,Medium,7
+Gemini worker,Medium,High,3
+Gemini worker,High,None,1
+Gemini worker,High,Low,0
+Gemini worker,High,Medium,0
+Gemini worker,High,High,12
+Worker vote,None,None,13
+Worker vote,None,Low,0
+Worker vote,None,Medium,0
+Worker vote,None,High,0
+Worker vote,Low,None,1
+Worker vote,Low,Low,9
+Worker vote,Low,Medium,3
+Worker vote,Low,High,0
+Worker vote,Medium,None,0
+Worker vote,Medium,Low,0
+Worker vote,Medium,Medium,7
+Worker vote,Medium,High,3
+Worker vote,High,None,1
+Worker vote,High,Low,0
+Worker vote,High,Medium,0
+Worker vote,High,High,12
+LLMC,None,None,13
+LLMC,None,Low,0
+LLMC,None,Medium,0
+LLMC,None,High,0
+LLMC,Low,None,3
+LLMC,Low,Low,8
+LLMC,Low,Medium,2
+LLMC,Low,High,0
+LLMC,Medium,None,0
+LLMC,Medium,Low,1
+LLMC,Medium,Medium,6
+LLMC,Medium,High,3
+LLMC,High,None,1
+LLMC,High,Low,0
+LLMC,High,Medium,0
+LLMC,High,High,12

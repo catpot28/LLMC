@@ -1,0 +1,745 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/scoring-more-goals-in-football-with-ai-predicting-the-likelihood-of-a-goal-based-on-on-the-field-events/
+page path  : /blog/scoring-more-goals-in-football-with-ai-predicting-the-likelihood-of-a-goal-based-on-on-the-field-events/
+captured   : 2026-05-17 15:06:57 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_scoring-more-goals-in-football-with-ai-predicting-the-likelihood-of-a-goal-based-on-on-the-field-__63b86641.html.gz
+========================================================================
+
+Scoring More Goals in Football with AI: Predicting the Likelihood of a Goal Based on On-the-Field Events | DataRobot Blog
+
+Scoring More Goals in Football with AI: Predicting the Likelihood of a Goal Based on On-the-Field Events | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Scoring More Goals in Football with AI: Predicting the Likelihood of a Goal Based on On-the-Field Events
+
+Can artificial intelligence predict outcomes of a football (soccer) game? In a special project created to celebrate the world’s biggest football tournament, the DataRobot team set out to determine the likelihood of a team scoring a goal based on various on-the-field events.
+
+My Dad is a big football (soccer) fan. When I was growing up, he would take his three daughters to the home games of Maccabi Haifa, the leading football team in the Israeli league. His enthusiasm rubbed off on me, and I continue to be a big football fan to this day (I even learned how to whistle!). I recently went to a Tottenham vs. Leicester City game in London as part of the Premier League, and I’m very much looking forward to the 2022 World Cup.
+
+Football is the most popular sport in the world by a vast margin, with the possible exception of American football in the U.S. Played in teams of 11 players on the field, every team has one objective—to score as many goals as possible and win the game. However, beyond a player’s skill and teamwork, every detail of the game, such as the shot place, body part used, location side, and more, can make or break the outcome of the game.
+
+I love the combination of data science and sports and have been lucky to work on multiple data science projects for DataRobot, including March Mania, McLaren F1 Racing, and advised actual customers in the sports industry. This time, I am excited to apply data science to the football field.
+
+In my project, I try to predict the likelihood of a goal in every event among 10,000 past games (and 900,000 in-game events) and to get insights into what drives goals. I used the DataRobot AI platform to develop and deploy a machine learning project to make the predictions.
+
+Football Goal Predictions with DataRobot AI Platform
+
+Using the
+DataRobot platform
+, I asked several critical questions.
+
+Which features matter most?
+On the macro level, which features drive model decisions?
+
+Feature Impact
+– By recognizing which factors are most important to model outcomes, we can understand what drives a higher probability of a team scoring a goal based on various on-the-field events of a team scoring a goal.
+
+Here is the relative impact:
+
+THE WHAT AND HOW:
+On a micro level, what is the feature’s effect, and how is this model using this feature?
+
+Feature effects
+– The effect of changes in the value of each feature on the model’s predictions, while keeping all other features as they were.
+
+From this football model, we can learn interesting insights to help make decisions, or in this case, decisions about what will contribute to scoring a goal.
+
+1. Events from the corner are highly likely to result in scoring a goal, regardless of which corner.
+
+Shot place
+– Ranked in first place.
+
+Situation
+– Ranked in third place, besides the corner if it’s a set piece. That occurs any time there is a restart of play from a foul or the ball going out of play, which provides a better starting position for the event to result in a goal.
+
+2. Events with the foot have a higher chance of resulting in a goal than events from the head. Although most people are right-footed, it looks like football players use both feet pretty equally.
+
+Body part
+– Ranked in second place.
+
+3. Events happening from the box—center, left and right side, and from a close range—have almost equal opportunities for a higher likelihood of a goal.
+
+Location –
+Ranked in 4th place.
+
+Time
+– In the first 10 minutes of the game, the intensity builds up and keeps its momentum going from between 20 minutes into the game and halftime. After halftime, we see another increase, potentially from changes in the team. At the 75-minute mark, we see a drop, which indicates that the team is tired. This leads to more mistakes and wasting more time on defense in an effort to keep the competitive edge.
+
+The insights from unstructured data
+
+DataRobot supports multimodal modeling, and I can use structured or unstructured data (i.e., text, images). In the football demo, I got a high value from text features and used some of the in-house tools to understand the text.
+
+From
+text prediction explanation
+, this example shows an event that occurred during the game and involved two players. The words “box” and “corner” have a positive impact, which is not surprising based on the insights we discovered earlier.
+
+From the
+world cloud
+, we can see the top 200 words and how each relates to the target feature. Larger words, such as
+kick
+,
+foul,
+
+shot
+, and
+attempt
+, appear more frequently than words in smaller text. The color red indicates a positive effect on the target feature, and blue indicates a negative effect on the target feature.
+
+The lifecycle of the model is not over at this step. I deployed this model and needed to see the predictions based on different scenarios. With a click from a deployed model,
+I created a predictor app
+to play like gamification—where fans can create different scenarios and see the likelihood of a goal based on a scenario from the model. For example, I created an event scenario in which there was an attempt from the corner using the left foot, along with some additional variables, and I got a 95.8% chance of a goal.
+
+Predict Football Goals with AI App by DataRobot
+
+Over 95% is pretty high. Can you do better than that?
+
+DataRobot launched this project at Global AI Summit 2022 in Riyadh, aligning with the lead up to the World Cup 2022 in Qatar. At the event, we partnered with SCAI | سكاي. to showcase the application and to let attendees make their own predictions.
+
+Watch the
+video
+to see the DataRobot platform in action and to learn how this project was developed on the platform. Or try to develop it by yourself using the data and use case located in DataRobot Pathfinder.
+
+Demo
+
+See DataRobot AI Platform in Action
+
+Related posts
+
+See other posts in AI Across Industries
+
+Blog
+
+How to make a cash flow forecasting app work for other systems
+
+Read More
+
+February 20, 2026
+
+|
+10 min read
+
+Blog
+
+Customer spotlight: Personify Health’s thoughtful approach to AI adoption
+
+Learn how Personify Health is accelerating AI adoption of more than 15 predictive and generative AI projects with DataRobot.
+
+Read More
+
+December 5, 2024
+
+|
+4 min read
+
+Authors
+
+by
+
+Atalia Horenshtien
+
+November 1, 2022
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI Across Industries
+
+Blog
+
+How to make a cash flow forecasting app work for other systems
+
+Read More
+
+February 20, 2026
+
+|
+10 min read
+
+Blog
+
+Customer spotlight: Personify Health’s thoughtful approach to AI adoption
+
+Learn how Personify Health is accelerating AI adoption of more than 15 predictive and generative AI projects with DataRobot.
+
+Read More
+
+December 5, 2024
+
+|
+4 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

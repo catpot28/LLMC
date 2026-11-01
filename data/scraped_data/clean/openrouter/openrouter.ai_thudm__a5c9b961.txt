@@ -1,0 +1,98 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/thudm
+page path  : /thudm
+captured   : 2026-01-13 16:14:49 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/openrouter/openrouter.ai_thudm__a5c9b961.html.gz
+========================================================================
+
+thudm | OpenRouter
+
+thudm | OpenRouter
+Skip to content
+OpenRouter
+Status
+Announcements
+Docs
+Support
+About
+Partners
+Enterprise
+Careers
+Pricing
+Privacy
+Terms
+
+© 2026 OpenRouter, Inc
+thudm
+Browse models from thudm
+6
+
+models
+Tokens processed on OpenRouter
+THUDM: GLM 4.1V 9B Thinking
+GLM 4.1V 9B Thinking
+37.6M
+tokens
+GLM-4.1V-9B-Thinking is a 9B parameter vision-language model developed by THUDM, based on the GLM-4-9B foundation. It introduces a reasoning-centric "thinking paradigm" enhanced with reinforcement learning to improve multimodal reasoning, long-context understanding (up to 64K tokens), and complex problem solving. It achieves state-of-the-art performance among models in its class, outperforming even larger models like Qwen-2.5-VL-72B on a majority of benchmark tasks.
+by
+
+thudm
+66K
+context
+$
+0.035
+/M input
+tokens
+$
+0.138
+/M output
+tokens
+THUDM: GLM Z1 Rumination 32B
+GLM Z1 Rumination 32B
+THUDM: GLM Z1 Rumination 32B is a 32B-parameter deep reasoning model from the GLM-4-Z1 series, optimized for complex, open-ended tasks requiring prolonged deliberation. It builds upon glm-4-32b-0414 with additional reinforcement learning phases and multi-stage alignment strategies, introducing “rumination” capabilities designed to emulate extended cognitive processing. This includes iterative reasoning, multi-hop analysis, and tool-augmented workflows such as search, retrieval, and citation-aware synthesis. The model excels in research-style writing, comparative analysis, and intricate question answering. It supports function calling for search and navigation primitives (
+search
+,
+click
+,
+open
+,
+finish
+), enabling use in agent-style pipelines. Rumination behavior is governed by multi-turn loops with rule-based reward shaping and delayed decision mechanisms, benchmarked against Deep Research frameworks such as OpenAI’s internal alignment stacks. This variant is suitable for scenarios requiring depth over speed.
+by
+
+thudm
+32K
+context
+THUDM: GLM Z1 9B
+GLM Z1 9B
+GLM-Z1-9B-0414 is a 9B-parameter language model developed by THUDM as part of the GLM-4 family. It incorporates techniques originally applied to larger GLM-Z1 models, including extended reinforcement learning, pairwise ranking alignment, and training on reasoning-intensive tasks such as mathematics, code, and logic. Despite its smaller size, it demonstrates strong performance on general-purpose reasoning tasks and outperforms many open-source models in its weight class.
+by
+
+thudm
+32K
+context
+THUDM: GLM 4 9B
+GLM 4 9B
+GLM-4-9B-0414 is a 9 billion parameter language model from the GLM-4 series developed by THUDM. Trained using the same reinforcement learning and alignment strategies as its larger 32B counterparts, GLM-4-9B-0414 achieves high performance relative to its size, making it suitable for resource-constrained deployments that still require robust language understanding and generation capabilities.
+by
+
+thudm
+32K
+context
+THUDM: GLM Z1 32B
+GLM Z1 32B
+GLM-Z1-32B-0414 is an enhanced reasoning variant of GLM-4-32B, built for deep mathematical, logical, and code-oriented problem solving. It applies extended reinforcement learning—both task-specific and general pairwise preference-based—to improve performance on complex multi-step tasks. Compared to the base GLM-4-32B model, Z1 significantly boosts capabilities in structured reasoning and formal domains. The model supports enforced “thinking” steps via prompt engineering and offers improved coherence for long-form outputs. It’s optimized for use in agentic workflows, and includes support for long context (via YaRN), JSON tool calling, and fine-grained sampling configuration for stable inference. Ideal for use cases requiring deliberate, multi-step reasoning or formal derivations.
+by
+
+thudm
+33K
+context
+THUDM: GLM 4 32B
+GLM 4 32B
+GLM-4-32B-0414 is a 32B bilingual (Chinese-English) open-weight language model optimized for code generation, function calling, and agent-style tasks. Pretrained on 15T of high-quality and reasoning-heavy data, it was further refined using human preference alignment, rejection sampling, and reinforcement learning. The model excels in complex reasoning, artifact generation, and structured output tasks, achieving performance comparable to GPT-4o and DeepSeek-V3-0324 across several benchmarks.
+by
+
+thudm
+33K
+context

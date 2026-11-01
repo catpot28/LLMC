@@ -1,0 +1,167 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/basic-web-search-chat-v-api/4314
+page path  : /t/basic-web-search-chat-v-api/4314
+captured   : 2026-04-12 12:47:26 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_basic-web-search-chat-v-api_4314__345f4fbf.html.gz
+========================================================================
+
+Basic web search: chat v API - General - Perplexity API Platform Forum
+
+Basic web search: chat v API - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Basic web search: chat v API
+
+General
+
+search-api
+
+UnclePauly
+
+March 24, 2026, 10:50am
+
+1
+
+Hi, newcomer to Perplexity here. I’m here because OpenAI couldn’t do web searching very well.
+
+I’ve been playing around with the free chat and Perplexity is doing does brilliantly well. I’m asking it to summarise current events using prompts like
+
+“Using live web searching and the latest news reports, summarise the latest events in the Iran / US war in a single paragraph and create a .txt file for download with the results”
+
+The results have been impressive…truly.
+
+Before we sign up for pro – I wanted to check, can we achieve
+everything
+we’ve been able to do in the chat interface via the API?
+
+Forgive the caution – but some AI companies’ APIs are a subset of what’s available in chat – I need to be sure. If you’re interested we’re basically creating a WordPress plugin for a newsdesk that takes inputs via a form, creates a JSON request and sends a prompt (like the one above) to Perplexity.
+
+dev
+
+March 31, 2026, 11:50pm
+
+2
+
+UnclePauly:
+
+I wanted to check, can we achieve
+everything
+we’ve been able to do in the chat interface via the API?
+
+While using
+sonar-reasoning-pro
+through the Chat Completions API I noted significantly worse response as compared to using Perplexity Web Chat for a specific use case. So I asked Perplexity back why, and this is what I got
+
+I generated the previous answer using Perplexity’s own stack, where I am described as “Perplexity, powered by GPT‑5.1,” integrated with Sonar-style search and reasoning, not via a raw
+sonar-reasoning-pro
+Chat Completions call like the one you ran yourself.
+
+Concretely, that means:
+
+I’m running in Perplexity’s hosted environment, which wraps a GPT‑5.1–class model with a search/retrieval and tool layer (Sonar) plus a fairly opinionated system prompt and citation behavior.
+
+The public
+sonar-reasoning-pro
+API you called is the same
+family
+of reasoning model used for Perplexity’s search experience, but your raw API call does not include Perplexity’s extra orchestration: automatic query decomposition, mandatory web search, URL selection, and answer-format constraints tailored to Q&A.
+
+That gap explains why you saw a “worse” response from
+sonar-reasoning-pro
+: with only your messages and generic search results about […] , the model didn’t get the targeted searches and heuristics that my environment added automatically.
+
+While the answer above may have been an hallucination, it seems like a reasonable explanation as to why I was getting different results. I was able to fix it by changing to
+sonar
+and tweaking my prompts.
+
+So the quick answer is “
+No, you can’t be guaranteed to get the same behavior
+”, however you may be able to get there with prompt engineering, context management, chain of thought, etc. and build a base of test cases to benchmark your results.
+
+UnclePauly
+
+April 4, 2026, 11:45am
+
+3
+
+Great answer. V useful
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+PKM Features? Web capture to add Personal Context
+
+Feature Requests
+
+chat-completions
+
+0
+
+61
+
+August 8, 2025
+
+Perplexity Search API on Vercel AI Gateway
+
+Announcements
+
+0
+
+2
+
+January 15, 2026
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Pro Search — Now Generally Available for Sonar Pro
+
+Announcements
+
+0
+
+0
+
+November 15, 2025
+
+Search API — Filter by Specific Domains
+
+Announcements
+
+0
+
+0
+
+October 13, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

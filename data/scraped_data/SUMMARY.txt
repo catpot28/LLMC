@@ -1,0 +1,63 @@
+==========================================================================
+SUMMARY — CC company-website scrape (built 2026-07-23)
+==========================================================================
+company                   pages   txt  pdf   raw MB  note
+--------------------------------------------------------------------------
+accenture                   500   500    0     13.1  capped at 500
+adobe                       500   500    0      4.5  capped at 500
+aircrete                    447   447    0     23.5  complete site
+anthropic                   500   500    0     18.7  capped at 500
+barilla                       2     2    0      0.0  CC coverage gap
+bavaria                       1     1    0      0.0  CC coverage gap
+burger-king                  22    22    0      0.1  CC coverage gap
+bybit                       500   500    0     29.7  capped at 500
+carmao                       57    57    0      1.9  complete site
+coca-cola                   500   500    0     10.0  capped at 500
+cohere                      500   500    0     25.5  capped at 500
+dataiku                     500   500    0     15.3  capped at 500
+datarobot                   500   500    0     14.5  capped at 500
+deutsche-bahn               500   500    0      4.2  capped at 500
+dominos                     500   500    0     36.6  capped at 500
+elevenlabs                  500   500    0     74.3  capped at 500
+escarda                      37    37    0      1.0  complete site
+fairphone                   500   500    0    114.6  capped at 500
+frankandcharlie               6     6    0      0.8  CC coverage gap
+google                      465   465    0     15.4  complete site
+grolsch                     272   272    0      8.2  complete site
+happy-italy                  18    18    0      0.2  CC coverage gap
+hugging-face                500   500    0     10.4  capped at 500
+ikea                        500   500    0     24.6  capped at 500
+jan-de-rijk                 500   500    0      6.1  capped at 500
+mckinsey                    500   500    0     12.8  capped at 500
+mistral-ai                  500   500    0     16.0  capped at 500
+mst                         500   500    0     19.0  capped at 500
+netpoint                     56    56    0      1.1  complete site
+nvidia                      500   500    0     25.1  capped at 500
+openai                      500   500    0      9.3  capped at 500
+openrouter                  500   500    0     10.5  capped at 500
+perplexity                  284   284    0     12.0  complete site
+plangarant                   81    81    0      1.1  complete site
+rabobank                    500   500    0     24.3  capped at 500
+revolut                     491   482    9     15.0  complete site
+royal-smilde                301   301    0      2.7  complete site
+royalleerdam                 23    23    0      0.5  CC coverage gap
+sap                         500   500    0      5.9  capped at 500
+scale-ai                    500   500    0     10.6  capped at 500
+sick                        380   369   11     22.1  complete site
+siemens                     500   500    0     14.2  capped at 500
+sligro-food-group           344   344    0      4.1  complete site
+svg-academy                 500   500    0      7.3  capped at 500
+synthesia                   500   500    0     37.0  capped at 500
+syzygy                      460   366   94     99.4  complete site
+teutloff                    165   165    0      8.7  complete site
+timenizer                     2     2    0      0.0  CC coverage gap
+titan                       449   417   32     22.7  complete site
+triodos-bank                500   500    0      2.5  capped at 500
+vnoncw                      500   500    0     14.0  capped at 500
+--------------------------------------------------------------------------
+TOTAL (51 companies)      18863                 850
+
+pages = one capture per unique URL, latest in the 2026 window;
+txt = cleaned text files; pdf = raw-only PDFs (not text-extracted);
+raw MB = gzipped raw source files. 0 permanent fetch failures.
+Full scoping rules and caveats: README.txt

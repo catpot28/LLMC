@@ -1,0 +1,176 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/advancing-safe-and-reliable-ai
+page path  : /blog/advancing-safe-and-reliable-ai
+captured   : 2026-04-19 05:59:54 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_advancing-safe-and-reliable-ai__d3bd534d.html.gz
+========================================================================
+
+Advancing Safe and Reliable AI | Scale AI
+
+Advancing Safe and Reliable AI | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Research
+Advancing Safe and Reliable AI: Scale's Research in Post-Training, Reasoning, and Evaluation
+by
+
+The Scale Team
+Published
+February 11, 2025
+Reading Time
+14 min read
+Copy Link
+At Scale, our research into the fundamental science governing AI systems is guided by our mission to elevate humanity. Our research agenda maps a path toward safer, more capable systems while measuring progress industry-wide. Through our work, we're building more than the next generation of evaluation frameworks for frontier models; we're establishing the foundational knowledge needed to ensure AI systems reliably reflect human values and serve human needs, even as they become more powerful.
+Our research challenges fundamental assumptions about how AI systems develop capabilities while establishing new frameworks for their evaluation and improvement. Our work spans several key areas:
+Post-Training Optimization
+Agents & Tool Use: Navigating What Comes Next
+Advanced Reasoning & Problem Solving
+Multimodal Systems: Addressing Hallucination Challenges
+Science of Data: Hybrid data, Data quality & interpretability
+Safety, Evaluations, and Alignment Lab (SEAL)
+
+SEAL Leaderboards
+Frontier Evaluation Frameworks & Benchmarking
+Scalable Oversight
+Agent Robustness
+Through investigation in these areas we uncover insights that deepen our understanding of these systems and push them to perform reliably across increasingly complex tasks.
+As a company with many partners across the AI community, we take neutrality seriously and aim to conduct research that advances fundamental improvements in AI capability and safety for everyone. This includes: enhancing model behavior with high-quality data, evaluating increasingly capable systems for both performance and safety, and ensuring reliability across complex tasks, all in service of elevating humanity's potential through responsible AI advancement.
+Post-Training Optimization
+Scale AI's post-training research explores innovative ways to improve LLM performance, steerability, and reliability. In one study, our research team refuted the commonly believed superficial alignment hypothesis, demonstrating instead that post-training can significantly scale capabilities in reasoning (math and multihop questions), task-specific skills (coding and instruction following), and knowledge integration beyond the pre-training cutoff. This revealed a power law relationship between the number of fine-tuning examples and model performance across diverse tasks, finding these capabilities are not determined solely during pre-training. [
+link
+]
+Figure 1: Breakdown of error responses by models finetuned with datasets of increasing data scales. The first group in each chart shows the Total Mistakes made on the test set by the models. Each error response is then independently evaluated for the different mistake types and thus can belong to multiple error types. There is a clear trend of models saturating on style and formatting improvements with just a few examples. However, reasoning and arithmetic errors continue to get better.
+Building on this foundation, we developed methods to enhance reward models through contrastive learning. By refining their internal representations, we enabled models to better distinguish between good and bad responses. This approach resulted in substantial improvements in both performance and steerability, allowing for practical applications like filtering incorrect outputs and guiding models toward specific qualities without sacrificing accuracy. [
+link
+] To further support our wider community, we've open-sourced our work on GitHub. [
+link
+]
+Figure 2: AUROC scores on the rewards attributed to partial base-model generations across 50 samples on GSM8k and MATH. The error bars depict the 95% confidence intervals (with sample size n=50) at each percentile of generation considered. The Q-Function reward model has an incremental increase in performance with more information, whereas, the traditional reward model’s performance is a lot more varied in attributing intermediate rewards.
+Our team also tackled the challenge of distribution shift, a common issue in real-world applications. Our analysis revealed that out-of-distribution (OOD) inputs (particularly OOD responses) lead to significant accuracy drops and unique calibration patterns. In response, we proposed a novel technique to detect OOD prompts and responses, improving reward model reliability and robustness under unpredictable conditions. [
+link
+]
+Agents & Tool Use: Navigating What Comes Next
+Scale's research covers a variety of agent capabilities, including but not limited to function calling with APIs, assisting software engineering (SWE) tasks, and using browsers or computers for consumer and enterprise tasks. These agents will be able to perform tasks that previously required human interaction by combining language understanding with the ability to use digital tools, navigate browsers, and control user interfaces. Our research team is focused on developing these capabilities while ensuring they remain safe.
+We are helping steer the transition to AI agents through our research in agent architectures and capabilities. In the following study, we developed a comprehensive benchmark called ToolComp tailored to evaluate multi-step tool use and reasoning. Developed through a collaboration between models and human annotators, ToolComp features human-edited and verified prompts, final answers, and processes supervision labels, allowing for the evaluation of both final outcomes and intermediate reasoning. [
+link
+]
+Figure 3: An example annotation path for collecting data that provides tool-call trajectories with human verified-final answers along with step-by-step process supervision labels. Each model generated step (Action Plan and ReAct steps) are first labelled as correct or incorrect. For the components labelled incorrect, a rewrite is made to correct the corresponding component. The annotations and rewrites are made by human annotators for the benchmark (or by a state-of-the-art LM for generating synthetic training data).
+Advanced Reasoning & Problem Solving
+Code generation represents one of AI's most fundamental reasoning challenges. Models struggle with repeatedly generating similar but incorrect solutions; however, simply increasing computational power doesn't lead to better results. To address this, our research team developed PLANSEARCH, a novel search algorithm that explores solutions by first generating diverse high-level plans in natural language before writing code. This approach significantly improved performance across multiple coding benchmarks, most notably achieving a 77% success rate on
+LiveCodeBench
+when combined with Claude 3.5 Sonnet, compared to 41.4% without search. Our findings demonstrate that enabling models to explore diverse problem-solving strategies in natural language, rather than directly in code, can dramatically improve their ability to find correct solutions. [
+link
+]
+Figure 4: Comparison of Repeated Sampling, both pass@1 and pass@k, and our novel method PlanSearch. On every model, our method outperforms baselines by a wide margin, with the best model-method combination of Claude 3.5 Sonnet / PlanSearch achieving performance nearly double that of the best model without search.
+We're also rigorously examining how well language models truly master fundamental reasoning tasks. Through GSM1k, a carefully crafted benchmark of grade school arithmetic problems, we uncovered that some models' reported mathematical abilities may be inflated due to data contamination, showing up to 8% performance drops on new but similar problems. This work highlights the importance of robust evaluation methods and reveals both the current capabilities and limitations of AI systems in basic reasoning tasks, helping guide the development of more genuinely capable models. [
+link
+]
+Figure 5: Notable models arranged by their drop in performance between GSM8k and GSM1k (lower is worse). We notice that Phi, Mistral and some models in the Llama family seem to be overfitting GSM8k, while models such as Gemini, GPT, and Claude show little to no signs of overfitting.
+Multimodal Systems: Addressing Hallucination Challenges
+Our research in multimodal AI has revealed limitations in even state-of-the-art vision-language models. Through extensive analysis, we discovered that leading models like InstructBLIP generate significant amounts of hallucinatory content in their outputs, including non-existent objects, unfaithful descriptions, and inaccurate relationships. To address this challenge, we've developed and open-sourced M-HalDetect, the first comprehensive multimodal hallucination detection dataset of its kind, enabling researchers worldwide to develop and benchmark more reliable multimodal AI systems. [
+link
+]
+Building on this foundation, we've developed innovative approaches to combat hallucinations through novel pre-training methods. By reimagining hallucination detection as a sequence labeling task, we've created an approach that cleverly leverages phrase grounding data and strategically introduces controlled hallucinations using text-only language models. This method creates valuable training signals without requiring extensive human annotations, making it both efficient and scalable for real-world applications. [
+link
+]
+Figure 6: Our approach for creating corrupted grounding data to pre-train multimodal hallucination detectors.
+To further enhance model reliability, we've developed "Zero-Shot-Enabled Temperature Scaling," a breakthrough approach that helps models accurately communicate their confidence levels in multimodal tasks. This advancement is particularly significant as it addresses the fundamental challenge of model calibration in zero-shot inference scenarios, where traditional calibration methods fall short. By enabling models to better assess and communicate their uncertainty, we're building more trustworthy AI systems that users can rely on with greater confidence. [
+link
+]
+Science of Data: Hybrid Data, Data Quality & Interpretability
+We conduct research that compares synthetic data with hybrid data (synthetic data with human input), driven in no small part by the AI community’s mixed opinions about the effectiveness of synthetic data in different data domains. We are also heavily investing in pushing the upper limits of hybrid data quality, while exploring the most cost-effective method for customers to get high quality hybrid data. The current output of such research exploration is our
+SOTA+ data
+, which we produce with a lower cost but with very high quality. Each data point would cause at least 2 frontier LLMs to fail for valid reasons.
+Figure 7: Diagram of our hybrid data generation pipeline.
+Scale's research into data quality and interpretability forms the foundation of our contributions to AI advancement. Our work spans multiple domains: data diversity analysis, data selection, reward hacking, and annotator behavior research. Through data diversity analysis, we examine how different dimensions, from knowledge domains to model capabilities, emerge naturally during data collection. Our reward-hacking studies focus on understanding the relationships between model behaviors and dataset characteristics. As data collection grows more complex and challenging, we continuously evolve our research methodologies to match these demands. This comprehensive approach to studying data quality and interpretability enables Scale to maintain the highest standards in our data collection processes.
+MultiChallenge: Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs
+We present MultiChallenge, a pioneering benchmark evaluating large language models (LLMs) on conducting multi-turn conversations with human users, a crucial yet underexamined capability for their applications. MultiChallenge identifies four categories of challenges in multi-turn conversations that are not only common and realistic among current human-LLM interactions, but are also challenging to all current frontier LLMs. The four challenges are: instruction retention, inference memory of user information, reliable versioned editing, and self-coherence. All four challenges require accurate instruction-following, context allocation, and in-context reasoning capabilities at the same time. For more detailed definitions of the four challenges, check out the full paper
+here
+.
+Scale’s Safety, Evaluations, and Alignment Lab (SEAL)
+Scale's Safety, Evaluations, and Alignment Lab (SEAL)
+advances AI safety research by building robust evaluation products and tackling the challenging research problems in evaluation and red teaming. While our evaluation frameworks serve the wider AI development community, our research teams actively create new techniques to address core safety challenges. While our evaluations initially centered on human expert evaluations, our approach has evolved to combine domain expertise with automated assessments. This hybrid methodology allows us to maintain reliability while significantly accelerating feedback loops. To avoid overfitting, we leverage proprietary datasets, with domain experts focusing on collecting high-quality data that enables robust automated evaluations.
+SEAL Leaderboards
+Our leaderboards illustrate the results of our evaluations of the latest LLMs across more than a dozen critical categories including: coding, mathematical reasoning, languages, visual-language understanding, agentic tool use, instruction following, and adversarial robustness. We continuously expand our benchmark suite to address emerging capabilities and challenges in AI development, while regularly updating our leaderboards with new models to maintain a dynamic, contest-like environment for measuring progress.
+Frontier Evaluation Frameworks & Benchmarking
+Strong evaluation frameworks are fundamental to AI progress, driving our research into assessment methodologies and benchmarking approaches. Our research demonstrates that combining human expertise with AI assistance can significantly improve evaluation efficiency while maintaining high accuracy, with our hybrid approach accurately matching human assessment in up to 86% of cases. This work has led to novel frameworks for both capabilities testing and safety evaluation, establishing new standards for comprehensive AI system assessment. [
+link
+]
+Figure 8: Overview of Capabilities and Safety evaluation frameworks. We introduce AI augmented approaches for evaluating the capabilities and safety of large language models, LLMs.
+These research advances directly inform Scale's AI evaluation products, enabling organizations to implement robust testing frameworks with greater efficiency and lower costs. Our evaluation platform incorporates these hybrid methodologies and benchmarking approaches, allowing teams to comprehensively assess their models across multiple dimensions of performance and safety. By bridging the gap between cutting-edge research and practical implementation, we're helping organizations deploy more reliable and trustworthy AI systems.
+Some of the innovative benchmarks and technical solutions we are developing are for specific evaluation challenges. One example is our research into the Weapons of Mass Destruction Proxy (WMDP) benchmark, which demonstrates how carefully designed datasets can serve dual roles in both evaluation and the development of safety techniques. Through methods like Representation Misdirection for Unlearning (RMU), we're showing how models can be made safer while preserving their core capabilities. [
+link
+]
+Humanity’s Last Exam
+What do we do when most of the current benchmarks used to measure LLMs have become saturated, with frontier models reaching or exceeding human-level performance? Along with the Center for AI Safety (CAIS) and nearly 1,000 subject experts from over 500 institutions worldwide, we developed
+Humanity's Last Exam
+(HLE): 3,000 expert-level problems designed to precisely measure model capabilities. The results are striking: even the best current models achieve less than 10% accuracy without tool augmentation while showing systematic overconfidence in their answers, in stark contrast to their near-human performance on standard benchmarks.
+Scalable Oversight
+How do we effectively evaluate and improve AI systems as they begin to surpass human capabilities in specialized domains? Our scalable oversight research addresses this challenge, developing methods for emerging domains beyond human performance and evaluation capabilities. Chain of Thought (CoT) explanations have emerged as a promising approach to improving oversight through understanding AI reasoning, but our research reveals critical limitations. Specifically, we are examining how CoT explanations are not always a faithful representation of a model's actual thinking.
+Our research focuses on two key strategies to address this challenge: adversarial evaluation of faithfulness and task decomposition. Adversarial evaluation involves deliberately testing models to uncover subtle errors and potentially deceptive reasoning patterns. By red-teaming training paradigms, we can expose how models might generate plausible but misleading explanations. Task decomposition takes a different approach, breaking complex problems into independently executed sub-questions that make it more difficult for models to coordinate and rationalize deceptive answers.
+This method, combined with our unique contributor base, enables us to generate high-quality human data and improve our ability to oversee increasingly sophisticated AI systems. Our ultimate goal is to create AI that is not just capable, but genuinely transparent and trustworthy. We recognize that as AI systems become more advanced, traditional evaluation methods like RLHF become increasingly challenging. By developing more robust approaches to understanding and verifying AI reasoning, we aim to ensure that these systems are safe, interpretable, and aligned with human values.
+Agent Robustness
+As AI systems increasingly move from language models to interactive agents, our evaluation scope has necessarily expanded. A crucial focus of our work is ensuring that AI agents maintain the same high standards of safety as their underlying LLMs, particularly in refusing harmful user instructions. This is especially critical given agents' direct interaction with the real world. To address this, we developed our Browser Agent Red-teaming Toolkit (BrowserART). Our findings revealed a significant safety gap: agents do not refuse harmful behaviors to the same degree as their corresponding refusal-trained LLMs, a problem that we are actively addressing in our work. [
+link
+]
+Figure 9: Top (motivation of our proposed red teaming suite BrowserART): while refusal-trained LLMs as chatbots are generally expected to refuse harmful instructions from malicious users, providing them with web browser access and prompting them as agents can significantly decrease the alignment. Bottom (result preview): We directly ask (i.e., w/o attacks) all LLMs and agents to fulfill harmful behaviors. We also employ LLM attack techniques to further jailbreak browser agents. A preview of results for GPT-4o and o1-preview is shown here. Attack Success Rate (ASR): the percentage of harmful behaviors attempted by a LLM or a browser agent.
+The Path Forward
+The research initiatives mentioned above, as well as other ongoing efforts, represent a body of knowledge designed to benefit the entire AI ecosystem. More than just technical advancements for their own sake, the outcomes of our work will allow AI systems to be deployed not only more effectively, but safely. We want to help ensure that the goal of AI development is not just more powerful models, but models that are built with human needs at the forefront - from safety to interpretability. By bringing together diverse lines of inquiry we are helping to build the foundational knowledge needed for the next generation of AI development. This holistic approach coupled with our commitment to open collaboration, positions us for continued success in finding opportunities for growth within our shared challenges.
+Read our research and learn how you can contribute here:
+https://scale.com/research
+Scale is hiring! Check out our open positions here:
+https://scale.com/careers
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

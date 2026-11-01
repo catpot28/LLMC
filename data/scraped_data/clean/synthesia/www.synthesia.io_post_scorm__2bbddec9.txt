@@ -1,0 +1,524 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/scorm
+page path  : /post/scorm
+captured   : 2026-04-22 12:13:30 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/synthesia/www.synthesia.io_post_scorm__2bbddec9.html.gz
+========================================================================
+
+What Is SCORM? The Complete Guide for L&D Teams (2026)
+
+What Is SCORM? The Complete Guide for L&D Teams (2026)
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Create account
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Team
+Use Case
+Industry
+Team
+Learning & Development
+Scale skills with multilingual training videos.
+Sales Enablement
+Train your sales reps and help them close more deals.
+Marketing
+Produce branded product videos in minutes.
+Business Operations
+Deliver consistent updates with video templates.
+Knowledge Management
+Turn your knowledge bases into engaging videos.
+IT & Cybersecurity
+Train employees on security and compliance with videos.
+Use case
+Technical Training
+Create engaging technical videos in minutes.
+Compliance Training
+Lower compliance risks with clear training videos.
+Sales Training
+Provide video training tailored to your sales team.
+Employee Development
+Build skills with video training programs.
+SOP
+Turn text-heavy SOPs and documents into videos.
+Product Video
+Create engaging product demos and tutorials in minutes.
+Industry
+Manufacturing
+Turn SOPs and manuals into engaging videos.
+Tech & Software
+Scale internal and customer training with AI.
+Healthcare
+Engage healthcare staff with avatar-led videos.
+Financial services
+Create secure, multilingual compliance training videos.
+Professional Services
+Transform onboarding and policies into quick videos.
+Retail
+Convert PDFs and webinars into mobile videos.
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+AI Ethics
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Blog
+/
+L&D & Training
+What Is SCORM? The Complete Guide for L&D Teams
+Written by
+Amy Vidor
+January 30, 2026
+Create SCORM-compliant training videos
+Get started for FREE
+In this article
+Text Link
+What is SCORM? Is it a file type? A standard? Something you just upload into an LMS and hope for the best?
+If you're like most L&D practitioners, you accepted SCORM as part of the workflow a long time ago, no questions asked. That's fine.
+But if you're now being asked to make decisions about it: which version, whether it's still the right choice, how to actually create a package, this is what you need to know. The good, the bad, and the (weird) parts nobody talks about.
+
+🥱 TL;DR
+
+SCORM is the most widely used standard for packaging and tracking eLearning content in LMS platforms.
+
+It defines how courses are packaged, launched, and tracked so content built in one tool runs in any SCORM-compliant LMS without custom integrations.
+
+SCORM 1.2 is the most widely supported version. SCORM 2004 adds more advanced tracking, richer reporting, and separate completion and success status.
+
+SCORM works well for structured, LMS-delivered training but has real limitations around analytics depth, offline learning, and content maintenance.
+
+Newer standards like xAPI and cmi5 were built to address those gaps, but SCORM remains the default for most enterprise LMS workflows.
+
+What is SCORM?
+SCORM stands for
+Sharable Content Object Reference Model
+. It is a technical standard: a set of rules that defines how eLearning content and LMS platforms talk to each other.
+SCORM
+Imagine you handed a kid a DVD and asked them to play it. The kid grabs a CD player, thinking hey, this looks like the right shape. But we know CD
+≠
+DVD.
+So what happens? The kid hits play and nothing happens. That's a compatibility problem.
+The same issue existed before SCORM. Someone might upload a course into an LMS only to find the animations didn't play, the buttons didn't work, or the progress didn't save. SCORM fixes that. It's a set of rules that defines how a course is packaged, how it launches inside an LMS, and how learner data like completion, score, and time spent gets recorded.
+Any course built to SCORM standards can be uploaded to any SCORM-compliant LMS and work the same way, regardless of which tool made it.
+🤔
+Did you know?
+The U.S. Department of Defense developed SCORM because they were tired of building digital training content for the military that only worked in specific systems. They delivered the first version in 2000 (along with the mouthful of an acronym).
+How does SCORM work?
+In case someone with a technical background is asking...
+SCORM defines a standard way for eLearning courses to interact with a Learning Management System.
+It governs three core parts of eLearning delivery:
+‍
+Content packaging
+
+A SCORM course is packaged as a single ZIP file containing all course assets and a manifest file (imsmanifest.xml). The manifest tells the LMS what the course includes, how it is structured, and which file to launch first. Because every SCORM package follows the same format, LMS platforms can import courses without custom setup.
+‍
+Course launch and communication
+
+When a learner opens a SCORM course, the LMS launches it in a browser window or embedded frame. While the course is running, it communicates with the LMS through a standardized JavaScript interface. The course sends updates to the LMS including completion status, progress, quiz results, and pass/fail data.
+‍
+Tracking and reporting
+
+SCORM defines how learner data is recorded inside the LMS. At its core, it captures completion status, pass/fail results, quiz scores, time spent, and basic interaction data like question responses. Because this data follows a shared standard, reports stay consistent even when courses are built in different authoring tools or managed across different teams.
+
+🎁 What's inside a SCORM package?
+
+The manifest file (imsmanifest.xml)
+— Tells the LMS what files are included, how the course is structured, and which file to launch first. If it's missing or malformed, the LMS will reject the package.
+
+Course assets
+— The actual content files: HTML, JavaScript, CSS, images, audio, and video.
+
+The runtime communication layer
+— A small JavaScript file that sends completion status, score, and time spent back to the LMS while a learner is inside the course.
+
+SCORM 1.2 vs SCORM 2004
+SCORM exists in multiple versions, but most organizations today choose between SCORM 1.2 (released in 2001) and SCORM 2004. No, the naming convention does not make sense.
+Both follow the same core principles: standardized packaging, LMS communication, and learner tracking. Where they differ is in reporting depth and data limits.
+SCORM 1.2 covers the fundamentals: whether a learner completed a course, whether they passed, and how long it took. It offers the broadest LMS compatibility and covers most basic tracking scenarios.
+SCORM 2004 goes further, separating completion status from success status and supporting more detailed interaction data at the question level. That distinction matters in regulated industries like pharmaceuticals or finance where audit trails require separate records of course completion and assessment results.
+Because this data follows a shared standard regardless of version, reports stay consistent even when courses are built in different authoring tools or managed across different teams.
+
+Feature
+
+SCORM 1.2
+
+SCORM 2004
+
+LMS Compatibility
+
+Broadest support
+
+Inconsistent support
+
+Completion vs. Success
+
+Single completion status
+
+Separate tracking
+
+Data Limits
+
+4,096 characters
+
+64,000 characters
+
+Quiz Tracking
+
+Basic
+
+Detailed interaction data
+
+Best For
+
+Maximum compatibility
+
+Advanced reporting and complex courses
+
+Which version should you choose?
+Default to SCORM 1.2 unless you have a specific reason to upgrade. It works in virtually every LMS and covers the vast majority of training scenarios most teams actually run into.
+Choose SCORM 2004 if you need separate completion and success tracking or detailed interaction data. One caveat: SCORM 2004's sequencing features are inconsistently supported across LMS platforms, so take that into consideration.
+Where does SCORM fall short?
+SCORM solves a specific problem well: packaging a course so it runs reliably in any LMS and reports back foundational metrics. For many training programs that's enough.
+But the way organizations think about learning
+has shifted
+since 2000 (I mean, we all survived Y2K). The expectation now is that L&D supports performance in the flow of work, ties learning to measurable outcomes, and keeps content agile enough to update as the business changes.
+SCORM was designed in an era of click-through modules, and those expectations expose its limits quickly:
+Thin analytics
+‍
+SCORM tracks completion, score, and time spent. What it can't capture is nuanced behavior like drop-off points, rewatch patterns, or practice performance.
+LMS-bound by design
+‍
+SCORM assumes the learner is inside an LMS and that the course can communicate back in real time. As learning moves into Slack, mobile apps, and on-the-job workflows, SCORM data doesn't follow.
+Limited learning design flexibility
+‍
+SCORM maps cleanly to linear course structures. Adaptive paths, scenario-based practice, and just-in-time experiences sit outside its scope.
+Inconsistent implementation
+‍
+LMS vendors implement SCORM with their own quirks. A package that works in one LMS can behave differently in another.
+High maintenance overhead
+‍
+Every content update requires re-exporting and re-uploading a new ZIP. If you're working in an AI-native authoring platform, existing SCORM packages often can't be edited inside those tools at all.
+Ultimately, the decision around whether to use SCORM is really an exercise in change management. If you have a robust content library that you plan to keep up to date, and it is all SCORM packages, moving away is a significant undertaking.
+If, on the other hand, you're looking to reimagine what it means to deliver learning, you may find yourself choosing a different path, one where modern tooling has made the alternatives genuinely viable.
+
+🌟 From experience
+
+In my last role, I sourced a new learning platform with an AI-native authoring tool. It was a deliberate choice. We wanted something more modern and flexible than what we had.
+
+The problem surfaced when our head of sales enablement realized she preferred a separate eLearning authoring tool for certain interactions. It exported SCORM, but those packages behaved awkwardly inside the new platform. Not broken, just not clean.
+
+We ended up with a patchwork solution. The eLearning authoring tool handled moments that needed specific interactivity. The native platform handled everything else. It worked, but it required people to know which tool to use for what, and why. That's not a system. That's a workaround.
+
+What are alternatives to SCORM?
+SCORM was designed to solve a specific interoperability problem between courses and LMS platforms. As you can imagine, the way we deliver learning has grown considerably more complex since 2001, and the standards have had to keep up.
+xAPI (Experience API)
+If you identify somewhere on the spectrum between luddite and tech-curious, you may have heard the term API. An API, or application programming interface, is a connection between one piece of software and another. For example, at Synthesia, we have customers who want to create videos from a dataset in a spreadsheet, so we have an API that allows you to generate a video from inside Google Sheets.
+xAPI was designed by the same people who created SCORM as a deliberate successor. Released in 2013, it allows any system to send a structured statement to a Learning Record Store (LRS).
+(If that sounds like
+gobbledygook
+, here's what it means.) Let's say you share a video training with employees via Slack. You can decide what data would be helpful to collect, structured as subject-verb-object statements. For example: "Sarah completed the video." "James stopped watching at minute five." "Maria rewatched the video three times."
+Those statements give you a richer picture of how training content is actually being used. With specific structured statements, you can also collect data that gets closer to measuring behavioral change.
+cmi5
+cmi5 was released in 2016 to bridge SCORM and xAPI. It uses xAPI for data tracking, but adds back the structured course launch and completion rules from SCORM. Essentially, it puts some guardrails on xAPI data.
+This was designed as a bit of a patchwork solution to help teams transitioning from SCORM to xAPI. For example, you might use SCORM for compliance tracking, which has regulatory implications. cmi5 gives you a path to transition toward xAPI without losing the structured completion reporting that compliance programs require.
+AICC
+Truthfully, I've never encountered AICC in the wild. It predates SCORM and passes data to an LMS over HTTP rather than through a JavaScript API. It is a legacy format that is still supported in some LMS platforms, particularly older custom solutions.
+Choosing between formats
+If your training lives primarily in an LMS and your reporting needs are straightforward, SCORM is still the right default. (Estimates put somewhere between 60 and 80 percent of all corporate training content delivered via SCORM in 2026.) If you're building something more ambitious, or your learning strategy is starting to extend beyond the LMS, xAPI or cmi5 may give you the infrastructure to support it.
+
+Which standard is right for you? (click to expand)
+
+Find your situation below and we'll point you in the right direction.
+
+I'm building compliance or regulatory training.
+
+Use SCORM. Compliance training needs reliable completion tracking, pass/fail reporting, and audit-ready data. Choose SCORM 1.2 for maximum compatibility, or SCORM 2004 if your compliance program requires separate tracking of course completion and assessment success.
+
+I'm building onboarding or role-based mandatory training.
+
+Use SCORM. Structured, LMS-delivered training with straightforward completion tracking is exactly what SCORM was designed for. If your LMS supports it and your reporting needs are standard, there's no compelling reason to use anything else.
+
+I need to track learning that happens outside the LMS.
+
+Use xAPI. If your learning strategy includes mobile, simulations, or on-the-job activities that don't launch from an LMS, SCORM data won't follow it. xAPI captures learning statements from any system and stores them in a Learning Record Store.
+
+I want richer learning data than completion and score.
+
+Use xAPI or cmi5. If you need behavioral data or learning signals that go beyond whether someone finished a course, xAPI gives you the flexibility to define and capture what matters. If you still need structured course launch rules alongside that richer data, cmi5 is the better fit.
+
+I'm migrating an existing SCORM content library.
+
+Stay with SCORM for now and plan deliberately. Unless your reporting requirements have outgrown what SCORM can deliver, a phased approach makes more sense than a full migration. New content can be built to xAPI or cmi5 standards while existing SCORM packages remain in place.
+
+I'm creating video-based training for LMS deliver.
+
+Use SCORM with a platform that handles the packaging for you. Platforms like Synthesia export video directly as SCORM 1.2 or SCORM 2004, so you don't need a separate authoring tool to get compliant, trackable content into your LMS.
+
+I'm dealing with several (or more) of these scenarios.
+
+Most organizations are. Audit what you have first. Use SCORM for what needs to stay in the LMS and pilot xAPI or cmi5 for new builds before committing to a broader migration.
+
+How to create a SCORM package
+Creating a SCORM package requires two things:
+An authoring tool that supports SCORM export
+An LMS that supports SCORM imports
+The authoring tool is where you build the course content and define the completion rules, such as a minimum score or time spent. The LMS is where learners access the content and where tracking data gets recorded.
+Most authoring tools follow the same general workflow. You build your course content, set your completion criteria, choose your SCORM version, and export. The tool handles the packaging, generating the imsmanifest.xml and zipping everything into a file ready for upload.
+💡Tip:
+If you're evaluating authoring tools, our
+eLearning authoring tools guide
+can help you decide.
+
+📋 What does SCORM compliant mean?
+
+SCORM compliant means that a tool, platform, or piece of content correctly supports the SCORM standard. This applies to two things: authoring tools that can export content as valid SCORM packages, and LMS platforms that can import, launch, and track those packages according to the specification.
+
+SCORM compliance is not a certification. There is no governing body that audits or approves tools. It is a self-reported designation, which means implementation quality varies. When evaluating tools, test a sample package in your specific LMS before committing.
+
+Does Synthesia support SCORM packages?
+Synthesia supports SCORM packages as a delivery format for
+video-based training
+. Videos can be
+exported
+as SCORM 1.2 or SCORM 2004 packages and uploaded to any SCORM-compliant LMS.
+The workflow looks like this:
+Create a training video in Synthesia, choose SCORM 1.2 or SCORM 2004 as the export format, define your completion rules, download the SCORM package, and upload it to your LMS to assign to learners.
+
+🛠️ Common SCORM upload issues
+
+Remove hidden system files (such as
+.DS_Store
+on macOS), which some LMS platforms reject.
+
+Make sure the
+imsmanifest.xml
+file is located at the root level of the ZIP package, not inside a subfolder.
+
+Validate your package in SCORM Cloud before uploading it to a production LMS.
+
+What happens when your video content changes?
+Traditional SCORM workflows require re-exporting and re-uploading a package every time content changes. Synthesia's SCORM export embeds a dynamic video player, so updates to the video are reflected in the LMS without regenerating or re-importing the package. If you're managing compliance training or product content that changes frequently, that's a lot less re-uploading.
+Can one SCORM package support multiple languages?
+For global training programs, a single SCORM package can support multiple languages. With Synthesia's
+multilingual video player
+, learners can select their preferred language within the same course. Completion is tracked the same way regardless of which language they choose, so your LMS reporting stays consistent across regions.
+The future of SCORM
+I'm not in the prediction business, and there's plenty written about the death of SCORM that has aged poorly over the past decade. What I will say is this: L&D has historically been stuck with the short end of the technology stick. The tools that other functions take for granted often arrive in learning environments years later, watered down, or bolted onto infrastructure that was never designed for them.
+Even a company like Synthesia, which is actively pushing the boundaries of what AI can enable for learning, has to accommodate SCORM. That's not a criticism. That's the reality of where enterprise learning infrastructure is today.
+The more interesting question is whether the conversation is even about SCORM anymore. Packaging standards are infrastructure. What they enable, or constrain, is the real debate. As organizations start asking learning to demonstrate behavioral change rather than completion, the standard that tracks it has to keep up with that ambition.
+Moving away from SCORM costs time, money, and organizational will. It means managing a change curve around where people go for content, how learning gets tracked, and what the LMS is even for. For most organizations, that's not a 2026 conversation. For some, it already was.
+Whether SCORM finds its obsolescence in the next decade or quietly persists for another twenty years, the more important shift is already happening. Less focus on how content is packaged. More focus on what it actually changes.
+Amy Vidor
+Amy Vidor, PhD is a Learning & Development Evangelist at Synthesia, where she researches learning trends and helps organizations apply AI at scale. With 15 years of experience, she has advised companies, governments, and universities on skills.
+Go to author's profile
+Book a demo
+Get a personalized demo tailored to your use case.
+
+No items found.
+
+No items found.
+
+You might also like
+View all posts
+L&D & Training
+Your L&D Tech Stack Doesn’t Need More Tools
+L&D often owns tools for content creation and delivery, while relying on other systems across the organization, like survey tools, intranets, and shared workspaces. Employees have always had different places they could go to learn. Now, AI has made it easier to access that learning in the flow of work. With this shift in mind, it’s worth revisiting your tech stack strategy so you can assess what adds value and what doesn’t.
+L&D & Training
+How to Measure Training ROI
+Proving ROI is frustrating when every program is held to the same standard. This post helps you choose the right measurement approach, then create a clear summary leaders can review — what changed, what you spent, and what assumptions you used.
+L&D & Training
+L&D Trends 2026: From AI Adoption to Skills Enablement
+Explore the most important learning and development trends for 2026, with a focus on AI, skills enablement, and what L&D maturity now demands of organizations.
+Synthesia
+Synthesia accelerates global expansion as enterprise contracts triple
+Synthesia
+KnowBe4 and Synthesia Transform Cybersecurity Training with AI Video
+Synthesia
+Scaling Avatars adoption responsibly with our new Avatar Governance Framework and Policy Template
+As more companies create avatars of their employees, including of senior executives, there's a gap in the market for policies covering how those likenesses are generated, used, or retired. Today, we are publishing two resources to address this need, which we hope will form the basis for a stronger governance framework for digital replicas.
+faq
+Frequently asked questions
+What does SCORM stand for?
+SCORM stands for Sharable Content Object Reference Model. It's a set of technical standards that define how eLearning content is packaged, launched, and tracked inside a Learning Management System.
+What is a SCORM package?
+A SCORM package is a ZIP file containing all course assets and an imsmanifest.xml file. The manifest tells the LMS how to launch the course, how it's structured, and what learner data to track.
+What is a SCORM course?
+A SCORM course is any eLearning course packaged according to SCORM standards so it can be uploaded, launched, and tracked in a SCORM-compliant LMS.
+What does "SCORM compliant" mean?
+A SCORM-compliant LMS or authoring tool correctly supports SCORM standards for launching courses, tracking learner progress, and reporting completion data.
+Most enterprise LMS platforms are SCORM compliant, though implementations can vary between vendors.
+What's the difference between SCORM 1.2 and SCORM 2004?
+SCORM 1.2 offers the broadest LMS compatibility and is the most common choice for straightforward compliance and onboarding programs.
+SCORM 2004 supports more advanced tracking, including separate reporting of completion and assessment success, larger data limits, and richer interaction data.
+The tradeoff is that SCORM 2004 support varies more across LMS platforms, and its sequencing features are inconsistently implemented.
+How do I create a SCORM package?
+SCORM packages are created using an authoring tool that supports SCORM export. Most tools let you build course content, define completion rules, and export the finished course as a ZIP file ready for LMS upload.
+The specific steps depend on the tool you're using. If you're working with video-based training, platforms like Synthesia handle the packaging automatically when you export.
+What is a SCORM wrapper?
+A SCORM wrapper is a lightweight shell that packages existing content, typically a video, PDF, or web page, as a SCORM-compliant course.
+It adds the imsmanifest.xml and the JavaScript communication layer needed for LMS tracking without requiring you to rebuild the content in a dedicated authoring tool.
+Is SCORM outdated?
+SCORM is not outdated, but it has real limitations. It was designed for structured, LMS-delivered courses and still works reliably for that use case. Its weaknesses show up when teams need richer learning analytics, offline tracking, adaptive learning paths, or data that flows beyond the LMS into other systems.
+Newer standards like xAPI and cmi5 were built for those scenarios. If your training lives primarily in an LMS and your reporting needs are straightforward, SCORM is still the right choice. If you need to track learning across multiple environments or build more personalized experiences, xAPI or cmi5 is worth evaluating.
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Training Videos
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Ethics Guidelines
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+VIDEO TEMPLATE
+VIDEO TITLE
+Create video from template
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Book your personalized Synthesia demo.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+See how Synthesia fits your use case, with tailored guidance and pricing for your specific needs.
+Book a demo

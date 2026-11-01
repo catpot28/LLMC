@@ -1,0 +1,239 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/async-chat-completion-stuck-in-in-progress-for-hours-while-sync-returns-successfully/3661
+page path  : /t/async-chat-completion-stuck-in-in-progress-for-hours-while-sync-returns-successfully/3661
+captured   : 2026-02-07 07:01:07 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_async-chat-completion-stuck-in-in-progress-for-hours-while-sync-returns-successfully_3661__0508df92.html.gz
+========================================================================
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully - Bug Reports - Perplexity API Platform Forum
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully
+
+Bug Reports
+
+sonar-deep-research
+
+Ashutosh_Joshi
+
+January 24, 2026, 2:57am
+
+1
+
+We are observing inconsistent and unexpected behavior between
+sync
+and
+async
+chat completion modes for the same query and model.
+
+In
+sync mode
+, the request completes successfully and returns the expected response in approximately
+20 seconds
+.
+
+In
+async mode
+, the same request remains in
+IN_PROGRESS
+status for an unusually long duration (
+2–3 hours
+), without failure or intermediate status updates.
+
+When the async request finally completes, the timestamps indicate that the actual execution time was
+approximately 1 minute
+, suggesting that the job was queued or stalled for hours before being executed.
+
+Details
+
+Model:
+
+sonar-deep-research
+
+Query:
+Same exact user query used in both sync and async modes
+
+Sync Mode Result
+
+Status:
+COMPLETED
+
+Response time: ~20 seconds
+
+Async Mode Result
+
+Status:
+IN_PROGRESS
+for ~2–3 hours
+
+No failure or error reported during this period
+
+Eventually transitions to
+COMPLETED
+
+Key Observation (Important)
+
+From the async job metadata:
+
+"created_at": 1768991705,
+"started_at": 1768991705,
+"completed_at": 1768991768
+
+This indicates:
+
+The async job
+completed in ~63 seconds
+
+However, the client observed the job in
+IN_PROGRESS
+state for
+multiple hours
+before this completion was surfaced
+
+This suggests the async job may have been:
+
+Queued or delayed for an extended period before actual execution, or
+
+Executed earlier but completion status was not updated or returned promptly
+
+Async Job State During Delay
+
+During the extended delay:
+
+status
+:
+IN_PROGRESS
+
+completed_at
+:
+null
+
+failed_at
+:
+null
+
+error_message
+:
+null
+
+No indication was provided that the job was queued, paused, or delayed.
+
+Will_Swannell
+
+February 1, 2026, 9:28pm
+
+2
+
+This is happening to me too.
+
+It seems to happen if I poll before it completes..
+
+It’s killing my app in production which is incredibly frustrating to happen from a larger platform like this.. Please can someone look at this! I’m happy to provide specific details.
+
+Sonar-deep-research taking longer than expected
+
+Ashutosh_Joshi
+
+February 3, 2026, 6:13am
+
+3
+
+The solution I found is to use
+cache=false
+in the polling API. With this, it returns a successfully completed response when the task finishes. This appears to be a caching issue in the Perplexity API.
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+7
+
+128
+
+February 5, 2026
+
+The Perplexity sonar-deep-research model is repeatedly staying in IN_PROGRESS and timing out
+
+Bug Reports
+
+sonar-deep-research
+
+0
+
+23
+
+January 24, 2026
+
+Async endpoints return different status for List vs Get on /completions endpoint
+
+Bug Reports
+
+sonar-deep-research
+
+0
+
+14
+
+January 26, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+279
+
+June 1, 2025
+
+Increased API latency since 12/25
+
+Bug Reports
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+node-sdk
+
+0
+
+48
+
+December 28, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

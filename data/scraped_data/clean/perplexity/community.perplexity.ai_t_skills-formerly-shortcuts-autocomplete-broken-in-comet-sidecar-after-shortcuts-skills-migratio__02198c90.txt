@@ -1,0 +1,182 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/skills-formerly-shortcuts-autocomplete-broken-in-comet-sidecar-after-shortcuts-skills-migration/5208
+page path  : /t/skills-formerly-shortcuts-autocomplete-broken-in-comet-sidecar-after-shortcuts-skills-migration/5208
+captured   : 2026-06-16 11:29:15 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_skills-formerly-shortcuts-autocomplete-broken-in-comet-sidecar-after-shortcuts-skills-migratio__02198c90.html.gz
+========================================================================
+
+Skills (formerly Shortcuts) autocomplete broken in Comet Sidecar after Shortcuts → Skills migration - Bug Reports - Perplexity API Platform Forum
+
+Skills (formerly Shortcuts) autocomplete broken in Comet Sidecar after Shortcuts → Skills migration - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Skills (formerly Shortcuts) autocomplete broken in Comet Sidecar after Shortcuts → Skills migration
+
+Bug Reports
+
+sonar-deep-research
+
+alexuander30535
+
+May 22, 2026, 9:30pm
+
+1
+
+Description:
+
+After Perplexity migrated “Shortcuts” to “Skills”, the
+/
+autocomplete in the Comet browser sidecar no longer works as expected.
+
+Steps to reproduce:
+
+Open any YouTube video in Comet browser
+
+Open the Comet sidecar (side panel)
+
+Click on the query input field
+
+Type
+/
+or start typing
+/video...
+
+Expected behavior:
+
+A dropdown list of saved Skills appears with autocomplete suggestions, allowing the user to select a skill (e.g.
+/video-techniques
+) without typing the full name.
+
+Actual behavior:
+
+No dropdown appears. No autocomplete suggestions. The only way to trigger a Skill is to type the full exact name manually — which defeats the purpose of the feature, especially since users can’t remember exact names after the migration.
+
+Additional context:
+
+I have 11 Skills saved (visible at perplexity.ai/account/shortcuts):
+/top-10
+,
+/top-15
+,
+/video-techniques
+,
+/community-deepdive
+,
+/trend-tracker
+,
+/ai-research
+,
+/tech-digest
+,
+/reddit-hot
+,
+/hn-daily
+,
+/fact-checker
+,
+/teach-me-comet
+
+Skills themselves work correctly when triggered with the full exact name
+
+This issue appeared after the Shortcuts → Skills migration
+
+The banner at perplexity.ai/account/shortcuts confirms the migration happened but autocomplete was not preserved
+
+Account:
+Pro subscriber
+
+Platform:
+Comet browser, Windows
+
+Location:
+Ukraine
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Perplexity Assistant in Comet update
+
+Feature Requests
+
+chat-completions
+
+1
+
+43
+
+April 7, 2026
+
+📢 Sonar API Updates – August 29, 2025
+
+Announcements
+
+sonar
+
+,
+
+chat-completions
+
+0
+
+344
+
+August 29, 2025
+
+Instant Search Engine Routing via Keyboard Shortcuts
+
+Feature Requests
+
+sonar-reasoning
+
+1
+
+162
+
+August 13, 2025
+
+Add Auto Scroll Feature in Comet broswer
+
+General
+
+chat-completions
+
+1
+
+73
+
+October 22, 2025
+
+Wildcards in shortcuts
+
+Feature Requests
+
+chat-completions
+
+0
+
+59
+
+August 20, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

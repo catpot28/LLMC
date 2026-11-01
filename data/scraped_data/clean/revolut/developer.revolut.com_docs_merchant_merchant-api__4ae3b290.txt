@@ -1,0 +1,233 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/merchant/merchant-api
+page path  : /docs/merchant/merchant-api
+captured   : 2026-01-15 14:24:56 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_merchant_merchant-api__4ae3b290.html.gz
+========================================================================
+
+Merchant API | Revolut Docs
+
+Merchant API | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Merchant API
+Version
+Introduction
+API versions
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Apple Pay merchant registration
+Other
+Introduction
+On this page
+Version: 2025-12-04
+
+Merchant API
+
+Welcome to the Revolut Merchant API - your solution to managing the core aspects of e-commerce and accepting online payments. Whether you're a startup, a growing business, or an established enterprise in the e-commerce industry, our API helps you streamline your operations.
+
+As a Revolut Business customer with a Merchant Account, you can use the
+Merchant API to leverage the following features:
+
+Order management
+
+Customer management
+
+Payment management
+
+Subscription management
+
+Payout management
+
+Dispute management
+
+Reporting analytics
+
+Webhook management
+
+Location management
+
+... and more.
+
+API versions
+​
+
+Caution
+We highly recommend using versioning in your API calls. If you don't provide a version header on the operations where it's required, you will receive an error response.
+
+The Merchant API uses request header versioning. Where it is required you need to use the
+Revolut-Api-Version
+header parameter to specify an API version. Each request, where it is indicated in the API specification, must contain a version header in the following format:
+
+'Revolut-Api-Version: 2025-12-04'
+
+Info
+For more information, see:
+API versions
+
+View Revolut's API specifications on GitHub
+
+Test the Merchant API
+​
+
+You can test the Merchant API in Postman by forking this collection:
+
+Authentication
+​
+API Key: Api-Key
+SSL
+API Key: Payload-Signature
+Each Merchant API request must contain an authorization header in the following format:
+'Authorization: Bearer <yourSecretApiKey>'
+
+To use this API, you need to generate API keys from your Revolut Business account. The Secret key is used in the authorization header for all server calls, while the Public key is provided with payment methods at checkout.
+Info
+For detailed instructions on generating your API keys, see:
+Generate API keys
+.
+Security Scheme Type:
+apiKey
+Header parameter name:
+Authorization
+Note
+This authentication protocol is used exclusively when using
+Fast checkout
+.
+Connection over HTTPS is using SSL authentication. For successful authentication, your system's certificate should be issued by a Public Certificate Authority (PCA) and your system should trust Revolut's public certificate.
+Security Scheme Type:
+http
+HTTP Authorization Scheme:
+ssl
+Note
+This authentication protocol is used exclusively when using
+Fast checkout
+.
+Data integrity and authorship will be verified using a payload-based signature. The response of a successful URL registration for address validation (see:
+Register address validation for Fast checkout
+) will contain a secret signing key.
+The signing key will be used by Revolut to compute a Hash-based Message Authentication Code (HMAC) payload signature whenever the registered URL is called, which should be verified by your backend.
+Security Scheme Type:
+apiKey
+Header parameter name:
+Revolut-Pay-Payload-Signature
+Was this page helpful?
+I like it
+Not really
+API versions
+Test the Merchant API
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

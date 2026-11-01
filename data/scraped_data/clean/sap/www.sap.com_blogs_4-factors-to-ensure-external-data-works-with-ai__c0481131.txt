@@ -1,0 +1,147 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/4-factors-to-ensure-external-data-works-with-ai
+page path  : /blogs/4-factors-to-ensure-external-data-works-with-ai
+captured   : 2026-01-20 21:05:44 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sap/www.sap.com_blogs_4-factors-to-ensure-external-data-works-with-ai__c0481131.html.gz
+========================================================================
+
+4 factors to ensure that external data works with AI
+
+4 factors to ensure that external data works with AI
+
+media-blend
+
+text-black
+
+4 factors to ensure that external data works with AI
+
+Combining internal and external data in AI models leads to better decisions. Answer these questions to stay on track.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+Picture a specialty clothing retailer, where decision-makers are puzzling out how to remain competitive on price while also maintaining margins. They decide to test an AI tool to help them.
+
+The COO prompts an
+AI agent
+: “Analyze our product margins, customer purchase history, and competitor pricing, and recommend optimal prices for our spring collection.” The AI agent gathers internal data, such as product costs, historical sales data, customer purchase patterns, and inventory levels. It then accesses external data, such as competitor pricing that has been scraped daily from their websites, data on market trends and economic indicators, social media chatter on consumer sentiment, and even weather forecasts that might affect what consumers will purchase.
+
+The AI agent generates pricing recommendations that increase profit margins by 12%. The agent suggests, for example, raising prices on premium yoga pants by 8% after detecting that competitors were out of stock and offering a 5% discount on lightweight jackets during an unseasonably warm spring forecast. Notably, the AI agent couldn’t reliably make those recommendations without consulting external data.
+
+As companies strive to base their business decisions completely on data, they often find that if they want to make strong decisions based on good data, they have to go outside the company to get it.
+
+Corporate data is more meaningful and insightful when it’s blended with a diverse group of other data. You might say that data is a social animal. It wants to be part of a community—to connect and tell stories—so one company’s data repository is not enough.
+
+Data is more meaningful and insightful when it’s blended with a diverse group of other data.
+
+This has never been truer than for generative AI models and AI agents. They're hungry for data, and not just what you already have in-house. By combining internal data with trusted external data—whether it’s rented marketing data from a business intelligence provider, publicly available economic reports, or social media chatter—various data points will provide businesses with far more value, including insights, and new, interesting, and wider perspectives.
+
+Consumer products and retail companies know the value of external data well. Traci Gusher, AI and data leader at EY Americas, asserted in
+a recent EY post
+that consumer packaged goods (CPG) companies need to capture both internal and external data to deepen relationships with consumers. “By analyzing external factors such as style trends, seasonality, regional variations, and major events, you can begin overlaying them with the information pulled from your own customer behavior data. This gives a more rounded, up-to-date picture of consumers and can inform everything from your product development roadmap to the type of brand collaborations you engage in.”
+
+But extending your data reach to external data is not as easy as dragging and dropping a file; you have to move the data into an application that structures and organizes it so that AI and analytics models can make sense of it. The external data (as well as the internal data) has to be credible (that is, correct), consumable (it’s in a usable format), and contextual (it’s the right data for the job you’re doing).
+
+Incorporating external data requires thoughtfulness. Just as you have to get to know someone before you can have a meaningful relationship, external data takes time and commitment. Here are four questions to ask about external data to broaden the perspective of an organization beyond their four walls—and to make the best business decisions.
+
+1. Is the data credible and complete?
+
+A persistent gap in data trust remains a barrier to innovation using data and AI—even when the data is internal. A 2025 SAP
+global survey
+of 1,200 business and technology leaders found that 55% cite poor data quality and consistency as their biggest challenge. And nearly half of these leaders pointed to the difficulty of blending and normalizing data across ecosystems as a key reason that innovation stalls.
+
+Having a contract with a reputable data provider doesn’t guarantee its completeness or applicability in the context of your company’s use of that data. For instance, some datasets may have good information on credit scores of organizations, the hierarchies in the companies and their affiliations, but may be missing details about a company’s recent merger, or leadership and contact information are out of date.
+
+Marketing departments are accustomed to relying on third-party rented external data, such as sellout data (sales to end customers), point-of-sale data (retail store-level transactions), vendor data, or sentiment data.
+
+Sellout data, for instance, is often not timely, doesn’t reflect the customer’s real shopping basket, and is missing valuable content—usually because retailers scrub that data about variables such as promotions before giving it to their manufacturers. Retailers, who are protective of their loyalty data, may be hesitant to give manufacturers insight into what they discounted to regular customers.
+
+When it’s time to define the business challenge for a query to an AI agent, it’s important that both external and internal data define things the same way.
+
+Consistent data definitions are another factor. When it’s time to define the business challenge for a query to an AI agent, it’s important that both external and internal data define things the same way. For example, do all data sources define Southeast Asia and Europe, the Middle East, and Africa (EMEA) the same way? Or when it comes to product sets, what does “luxury” brands or “beauty” brands include, and who defines what those are? This is where human intervention is critical. Data scientists can go through some of the datasets, run algorithms, and see if what comes back makes sense.
+
+2. Do you have the rights to use that data with your specific intent?
+
+Just about every external data provider will have contractual requirements for how their data can be consumed. Those contracts are usually handled in finance, not by the user, so fine-line details in that contract may not be shared with the community that’s using it.
+
+Let’s say an HR department has a subscription for Glassdoor recruiting data and uses information on salary levels and job descriptions meant specifically to create a baseline HR department hiring standard. When using AI, data managers may see this data and think that since that data is in the company’s data system, then they must have rights to use it. But it’s risky to build a model and generate training data with external data because they may be using that data without permission. This is where IT management should be involved in determining the usability of external data.
+
+Rules about storing external data are often subject to the regulatory environment. For example, EU citizens’ data must sit in EU data centers.
+
+Licensing is also part of data access, and IT management can ensure that the licenses for data access are internally well managed. AI can help with this. It can track how many logins and permissions were given to access the data, and track the levels of consumption and adoption of that data.
+
+Publicly available data, such as social media data that might be used to gauge consumer sentiment, is a bit trickier when it comes to use rights. Europe has the General Data Protection Regulation (GDPR), so data users can opt out of having their data shared; but, in the United States, data shared on social media platforms are typically fair game. But while there are no contracts, you can’t necessarily trust that the source of that data is reputable—or even real and not made-up.
+
+Publicly available data such as government data, geographic data, and economic trends data, have few if any use restrictions; but that sometimes requires tagging the data yourself with information on its source and use category before adding it to your taxonomy. More on that later.
+
+3. Where should external data sit in the data architecture—if anywhere at all?
+
+Rules about storing external data are often subject to the regulatory environment. For example, EU citizens’ data must sit in EU data centers. Other countries are enacting or planning to enact similar data protection rules, and a company’s compliance group should be consulted.
+
+Sometimes the shelf life of the data will help determine whether it should be brought into an organization’s cloud-based data repository and made available to users of data systems, or if it should be accessed from the outside source only when needed. For instance, if the logistics team wants to include weather data in an AI model to understand what impact the weather will have on transportation routes, the data is too dynamic to be stored in-house. It should be viewed, analyzed, and refreshed continuously from the external source.
+
+The size of the data and the amount of storage space it requires can also determine where it will reside. Storage can be expensive. Make sure the business use case—that is, the insights you expect—justifies the storage cost.
+
+If the data will reside in the company’s data management environment, the data team should ensure that it fits the business need and that there is good governance in place. That means understanding the contractual obligations, rights, and responsibilities of using the data, and taking into consideration the company’s values and standards. For instance, you might need to exclude data from a particular geographic region where the company has decided not to do business, whether due to geopolitical risk or other factors.
+
+When it comes to these questions, data teams will often serve as the “conscience” of the organization, taking into consideration the needs of the business unit that wants their challenges addressed and the IT department that wants to be the tool provider and enabler. The data team—with its knowledge of the data sources—is uniquely qualified to ask the right questions around which external data makes good business sense.
+
+4. When combining external data with internal datasets, is the data consumable and ready to be combined in a useful way?
+
+It’s not just about getting the external data; it’s making sense out of it—putting it in a format that can be combined with internal data and easily consumed. Ideally, external data should be curated, carefully selected, organized, and managed before it is mingled with internal data for AI modeling.
+
+This is where metadata and taxonomy come in—or data about the data. For instance, data must be tagged to identify its source and track its lineage before being transferred into data fields in internal databases and tables.
+
+Some public data already has these metadata attributes embedded in them. But other types, such as unstructured data and data in different languages, may not be as smooth to include.
+
+Unstructured data, such as audio and video data, require more work. A department store could share video data showing shoppers’ traffic flow patterns in a store and which displays they paused to look at, but it will not provide data on how many shoppers passed or what exact merchandise they were looking at. That will take human intervention (possibly with new AI capabilities that can count the number of human-like images in the video for you).
+
+When combining data sources, duplication and inaccuracies are a common problem that can skew results, so they need to be tackled first. For instance, external data might list the company IBM, but internal data refers to the company as I-B-M. You’ll likely get a laundry list of duplicate data unless you first normalize that name. Data intelligence platforms with AI and analytics models can help strip out those inaccuracies.
+
+Consider another example. A beverage producer plans to expand into Mexico. A marketing executive asks the data team to validate some assumptions he had about Mexican consumers, their beverage preferences, and related social media trends (such as drinks mentioned in these channels). This required external data, which his team licensed and used to formulate a pitch deck. But the results didn’t seem right.
+
+If you’re buying or renting global data, is it all standardized in terms of language? And if it isn’t, do you have translation capabilities?
+
+The AI output reflected in the deck didn’t align with the marketing executive’s expectations. He knows there’s a lot of tequila consumed in Mexico, but the data didn’t support that. Why? Well, Mexicans don’t drink “tequila,” they drink “Don Julio” or “Jose Cuervo” or “Patrón,” and they call it by those brand names, which were not included in the algorithm. Understanding those cultural differences and normalizing the data to equate brand names with “tequila” is essential for reliable AI outcomes.
+
+Language is another example. If you’re buying or renting global data, is it all standardized in terms of language? And if it isn’t, do you have the translation capabilities internally, or is that part of the data provider agreement?
+
+Data quality issues such as these can’t be fixed with technology alone. It will take businesspeople who know the business processes. This is a key reason companies appoint chief data officers and employ networks of business data owners who are responsible for the quality of the data used for the organization.
+
+Treating data as a business issue
+
+It makes sense that issues with bad or inconsistent data are often resolved more quickly if they’re approached as a business problem rather than a technology problem. Business leaders can find a business problem that is being caused or exacerbated by bad data, then create an ROI case to fix that one issue. The work done to resolve this will probably help other areas, too. Repeat the process and build on success.
+
+Combining external and internal data is all about asking the right questions, building the right hypothesis, having the right algorithms, and testing the waters to make sure you’re getting the kinds of results you expected. Answering these four questions will help put AI models on the right track toward making the best data-driven business decisions.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Getting your data right for AI
+
+Garbage in, garbage out. Here’s how to build a trustworthy AI foundation.
+
+Read the post
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

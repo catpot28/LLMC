@@ -1,0 +1,483 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/merchant/create-report-run
+page path  : /docs/merchant/create-report-run
+captured   : 2026-01-15 14:33:03 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_merchant_create-report-run__a4418c2b.html.gz
+========================================================================
+
+Create a new report run | Revolut Docs
+
+Create a new report run | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Merchant API
+Version
+Introduction
+API versions
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Introduction
+Create a new report run
+Retrieve report run details
+Download report file
+Webhooks
+Locations
+Apple Pay merchant registration
+Other
+Report runs
+Create a new report run
+Create a new report run
+
+Start generating a new report of the relevant transactions, and receive
+report_run_id
+.
+
+After generation is done, use the link in
+file_url
+to download the report. Use the
+Retrieve report run details
+operation to check the status of the report run.
+
+Request
+​
+Header parameters
+Header parameters
+Expand
+Authorization
+string(Bearer <yourSecretApiKey>)
+required
+Example:
+
+"Bearer sk_1234567890ABCdefGHIjklMNOpqrSTUvwxYZ_1234567890-Ab_cdeFGHijkLMNopq"
+This parameter accepts the
+Merchant API Secret key
+to authorise requests coming from the merchant's backend.
+
+It ensures that ensures that each request is authenticated and authorised by verifying the secret key. The secret key should be included in all request headers as a
+Bearer
+token.
+
+Info
+For more information, see:
+Authentication
+Request body
+Body
+
+any
+Expand
+One of
+·
+settlement_report
+A settlement report contains all the query information for generating reports of settled transactions associated with a Merchant account.
+filter
+object
+required
+List of filtering parameters to be applied to the report.
+from
+string(date-time)
+required
+This parameter specifies the start boundary for filtering transaction data in the report based on an order's
+payments.created_at
+parameter. It accepts ETC/UTC date and time in
+ISO 8601 format
+and includes all transactions created on or after this timestamp.
+
+Combined with the
+to
+parameter, this determines the report's timeframe, including all transactions between the two values.
+
+For example, by setting the
+from
+parameter to
+2021-01-01T00:00:00Z
+, the report will include transactions created from the first second of January 1, 2021, UTC, and onwards.
+to
+string(date-time)
+required
+This parameter specifies the end boundary for filtering transaction data in the report based on an order's
+payments.created_at
+parameter. It accepts ETC/UTC date and time in
+ISO 8601 format
+and includes all transactions created before this timestamp (exclusive).
+
+Combined with the
+from
+parameter, this determines the timeframe for the report, including all transactions between the two values.
+
+For example, setting the
+to
+parameter to
+2021-12-31T23:59:59Z
+will include all transactions in the report created up to, but not including, the last second of December 31, 2021, UTC.
+entity_types
+array of strings
+Possible values:
+[
+payment
+,
+refund
+,
+dispute
+]
+Select transactions by type to be included in the report.
+entity_states
+array of strings
+Possible values:
+[
+completed
+,
+failed
+,
+declined
+,
+processing
+,
+cancelled
+,
+reverted
+]
+Select transactions by state to be included in the report.
+
+If not provided, only
+completed
+transactions will be included in the report.
+currency
+string
+Possible length:
+
+>= 3 characters
+and
+<= 3 characters
+
+Example:
+
+"GBP"
+Select transactions with specific currencies to include in the report. Provide
+ISO 4217
+currency code in upper case.
+
+Info
+For more information about the supported currencies, see:
+Help Center
+.
+location_id
+string(uuid)
+Select transactions by location ID to be included in the report.
+
+Info
+For more information, see:
+Locations
+.
+format
+string
+required
+Possible values:
+[
+csv
+]
+
+Example:
+
+"csv"
+Format of the generated report file.
+type
+string
+required
+Possible values:
+[
+settlement_report
+,
+custom_report
+,
+payout_statement_report
+,
+icpp_fee_breakdown_report
+]
+
+Example:
+
+"settlement_report"
+Type of the report.
+
+Possible values:
+
+Type of report
+Description
+settlement_report
+Settlement report is a report including transactions settled to the user account. This parameter sets the predefined
+options
+and list of represented columns.
+custom_report
+Custom reports require users to define
+options
+.
+payout_statement_report
+Payout statement Reports provide a detailed breakdown of all transactions contributing to a specific payout amount. It requires the additional parameter
+filter.payout_id
+, which should be obtained from the payout ID retrieved via the
+payout list endpoint
+or from
+webhook events
+.
+icpp_fee_breakdown_report
+IC++ fee breakdown reports provide a detailed breakdown of fees for each IC++ transaction related to a payout. It requires the additional parameter
+filter.icpp_charge_id
+, which should be obtained from the
+related_icpp_charge_id
+column in the Payout statement report. A separate report should be generated for each IC++ transaction.
+options
+object
+Further options to customize the report.
+timezone
+string
+Example:
+
+"Europe/London"
+Defaults to
+ETC/UTC
+. Defines the output timezone for all timestamps displayed in the report.
+
+Has no effect on
+from
+or
+to
+parameters.
+columns
+array of strings
+Example:
+
+["transaction_id","amount","metadata.custom_attribute"]
+Names of the columns to be included in the report.
+
+If the
+columns
+parameter is not defined in the request, all available columns will be included in the report. An empty array will return an error.
+
+If you created orders using the
+metadata
+object, you can include them in the report by adding them with
+metadata.
+prefix. For example:
+metadata.custom_attribute
+.
+
+Available columns:
+
+Column name
+Description
+transaction_id
+Unique identifier of the transaction related to an order.
+order_id
+Unique identifier of the order.
+started_date
+Date and time the transaction was created.
+updated_date
+Date and time the transaction was last updated.
+completed_date
+Date and time the transaction was completed.
+type
+Type of the order.
+state
+State of the order.
+description
+Description of the order.
+merchant_order_ext_ref
+Merchant's order identifier for external reference.
+customer_id
+Unique identifier of the customer related to an order.
+amount
+Total amount of the order.
+currency
+The
+ISO 4217
+currency code that represents the currency of the order.
+settlement_amount
+Total amount settled on the merchant's account.
+settlement_currency
+The
+ISO 4217
+currency code that represents the currency of the settled amount.
+fee_amount
+Total amount of extra fees applied to the order.
+fee_currency
+The
+ISO 4217
+currency code that represents the currency of extra fees.
+processing_fee_amount
+Total amount of processing fees applied to the order.
+processing_fee_currency
+The
+ISO 4217
+currency code that represents the currency of processing fees.
+payment_method
+Type of the payment method the customer used to pay for the order.
+browser_url
+The URL where the customer initiated the payment.
+related_icpp_charge_id
+Unique identifier of the IC++ charge related to the transaction.
+This column is only available in the
+payout_statement_report
+.
+location_id
+Unique identifier of the location related to the transaction.
+This column is only available in
+settlement_report
+and
+custom_report
+.
+
+Response
+​
+201
+400
+401
+404
+Report run created, report started generating
+Response body
+Body
+
+object
+Expand
+report_run_id
+string(uuid)
+required
+Unique ID used for accessing report details. Use this to check report generation status.
+status
+string
+required
+Possible values:
+[
+processing
+,
+completed
+,
+failed
+,
+expired
+]
+Current status of the report run.
+file_url
+string
+Use this link to download report file. Not available, until
+status
+is
+completed
+.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

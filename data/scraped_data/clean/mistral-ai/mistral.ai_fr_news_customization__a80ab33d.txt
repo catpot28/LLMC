@@ -1,0 +1,407 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/customization/
+page path  : /fr/news/customization/
+captured   : 2026-06-09 08:20:07 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_customization__a80ab33d.html.gz
+========================================================================
+
+My Tailor is Mistral | Mistral AI
+
+My Tailor is Mistral | Mistral AI
+
+Contact
+
+Menu
+
+Produits
+
+Solutions
+
+Modèles
+
+Développeurs
+
+Blog
+
+Clients
+
+Entreprise
+
+Contact
+
+Commencez
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Produits
+Solutions
+Modèles
+Développeurs
+Blog
+Clients
+Entreprise
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Commencez
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact
+
+Recherche
+
+My Tailor is Mistral
+
+June 5, 2024
+
+Mistral AI team
+
+Retour au blog
+
+3 min read
+
+Partager cet article
+
+Copied!
+
+Today, we're introducing model customization on la Plateforme, to bring performance, speed and fine editorial control to your AI application. You can now easily and efficiently adapt Mistral AI models to your specific needs, reducing the cost and expertise required for customizing generative AI models at scale. Whether you want to fine-tune Mistral AI models on your own infrastructure or leverage our proprietary fine-tuning techniques with our managed fine-tuning services, we've got you covered.
+Fine-tuning is a powerful technique for customizing and improving the performance of LLMs, providing better responses, flexibility and efficiency to specific applications. When tailoring a smaller model to suit specific domains or use cases, it offers a way to match the performance of larger models, reducing deployment costs and improving application speed.
+Tailor Mistral models at home, on la Plateforme, and with the team
+We're proud to announce three different entry points for specialising Mistral AI models.
+Open-source fine-tuning SDK for Mistral models
+For developers who want to fine-tune Mistral's open-source models on their infrastructure, we've released
+mistral-finetune
+, a lightweight and efficient codebase for fine-tuning.
+Our codebase is built on the LoRA training paradigm, which allows for memory-efficient and performant fine-tuning. With mistral-finetune, you can fine-tune all our open-source models on your infrastructure without sacrificing performance or memory efficiency.
+Serverless fine-tuning services on la Plateforme
+To further facilitate fine-tuning without infrastructure hassle, we're introducing new fine-tuning services on la Plateforme. These services leverage Mistral's unique fine-tuning techniques, refined through extensive research and development, to allow fast and cost-effective model adaptation and effective deployment of fine-tuned models. It's a new step in our mission to expose advanced science methods to AI application developers. We use LoRA adapters under the hood to prevent forgetting base model knowledge and allow for efficient serving.
+
+Figure 1: Mistral LoRA finetuning is more efficient while having similar performance than full Fine-tuning for both Mistral 7B and Mistral Small: The evaluation metric is an normalized internal benchmark very similar to the MTBench evaluation (1 being the reference to full Fine-tuning of Mistral Small).
+Traditionally, fine-tuned models have required a significant investment for enterprises. Our expertise in the field enables us to offer fine-tuning in a highly efficient way, which translates into lower costs for both training and serving.
+Today, our fine-tuning services are compatible with Mistral 7B and Mistral Small. Thus, users who are leveraging one of these models can immediately use our API to customise our models effectively to meet their specific needs. We will add new models to our finetuning services over the coming weeks.
+Get started with by registering on
+la Plateforme
+, and discover our guide and our tutorial on how to build an application with a custom LLM.
+Custom training services
+Our custom training services involve fine-tuning Mistral AI models on a customer's specific applications using their own proprietary data. This approach enables the creation of highly specialized and optimized models for their particular domain. We propose advanced techniques such as continuous pretraining to include proprietary knowledge within the model weights themselves.
+These custom training services are available to a select group of customers and are tailored to meet their specific needs. Feel free to contact
+our sales team
+to know more.
+Join our community of builders
+If you're looking to dive in and experiment with our brand new fine-tuning API, be sure to participate in the Mistral Fine-Tuning Hackathon, taking place from June 5 - 30, 2024.
+You can find more details about the hackathon here
+.
+
+0%
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Sélectionner la langue
+
+Français
+
+English
+Français
+Italiano

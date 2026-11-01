@@ -1,0 +1,779 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-pro-and-sonar-reasoning-pro-returning-empty-search-results-across-all-queries-2026-05-01/5074
+page path  : /t/sonar-pro-and-sonar-reasoning-pro-returning-empty-search-results-across-all-queries-2026-05-01/5074
+captured   : 2026-05-14 04:28:39 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-pro-and-sonar-reasoning-pro-returning-empty-search-results-across-all-queries-2026-05-01__2ba1f05d.html.gz
+========================================================================
+
+sonar-pro and sonar-reasoning-pro returning empty search_results across all queries (2026-05-01) - Bug Reports - Perplexity API Platform Forum
+
+sonar-pro and sonar-reasoning-pro returning empty search_results across all queries (2026-05-01) - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+sonar-pro and sonar-reasoning-pro returning empty search_results across all queries (2026-05-01)
+
+Bug Reports
+
+sonar-pro
+
+Steve_Linn
+
+May 5, 2026, 9:54pm
+
+1
+
+Reporter:
+
+slinn201@gmail.com
+
+Date filed:
+2026-05-01 (Friday)
+
+Affected models:
+
+sonar-pro
+,
+sonar-reasoning-pro
+
+Severity:
+Service-impacting — automated job-discovery pipeline returning 0 results for all categories all day
+
+Summary
+
+Sonar’s web-search step is no longer feeding search results to the language model for our API calls today (2026-05-01). The model receives an empty
+<search_results>
+block (or “None”) and correctly responds with
+[]
+. This was visible in
+sonar-pro
+only as
+completion_tokens=1
+and an empty content body, but became fully diagnosable when we swapped to
+sonar-reasoning-pro
+, which exposed
+<think>
+traces in which the model itself states:
+“the search_results section is empty/None… There are NO search results provided.”
+
+The issue affects 3 of 4 of our prompt categories with
+searchResults=0
+and 1 category with
+searchResults=1
+(returning a single irrelevant URL:
+https://mmwlegal.com/author/mmwmmwlegal-com/
+). The same prompts and configuration worked normally earlier this morning (6:22 AM CDT) — at least for one of the four categories.
+
+We suspect either an account-level search degradation or a broader Sonar search-pipeline incident not currently reflected on
+status.perplexity.com
+.
+
+Reproducer
+
+POST https://api.perplexity.ai/chat/completions
+with body:
+
+{
+"model": "sonar-pro",
+"messages": [
+{ "role": "system", "content": "You are a thorough job-search assistant. Search multiple job boards (LinkedIn, Indeed, BuiltIn, company career sites) and return real currently-live postings that match the user's criteria. Return ONLY a valid JSON array of job objects — no commentary, no markdown fences, no prose outside the JSON. Only the 5 REQUIRED fields are mandatory; for OPTIONAL fields, return \"\" (empty string) when unknown rather than dropping the posting. Prefer returning 1–3 imperfect-but-real matches over returning []. Only return [] if you genuinely cannot find anything after searching." },
+{ "role": "user", "content": "Find Asset-Based Lending (ABL) analyst-level positions in the United States across THREE title families... [full prompt available on request — ~1600 prompt tokens of named-employer anchors and title-phrase enumerations]" }
+],
+"temperature": 0.3,
+"search_recency_filter": "month",
+"web_search_options": { "search_context_size": "medium" }
+}
+
+Observed behavior
+
+Across
+4 runs in 30 minutes
+spanning
+3 different configurations
+and
+2 models
+, all 4 prompt categories returned the same broken pattern. Detail below.
+
+Diagnostic field summary (sonar-pro)
+
+Run
+
+Time (CDT)
+
+Config
+
+Source
+
+finish_reason
+
+completion_tokens
+
+citations
+
+search_results
+
+content
+
+1
+
+06:22
+
+temp=0.3, context=medium, no max_tokens
+
+ABL
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+1
+
+06:22
+
+(same)
+
+SF
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+1
+
+06:22
+
+(same)
+
+FPA
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+1
+
+06:22
+
+(same)
+
+IBR
+
+stop
+
+1208
+
+(real)
+
+(real)
+
+5 real jobs
+
+2
+
+06:43
+
+temp=0, context=high, no max_tokens
+
+ABL
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+2
+
+06:43
+
+(same)
+
+SF
+
+stop
+
+1
+
+8
+
+8
+
+"[]"
+(cited Merriam-Webster for verb “find”)
+
+2
+
+06:43
+
+(same)
+
+FPA
+
+stop
+
+1
+
+1
+
+1
+
+"[]"
+(
+mmwlegal.com
+)
+
+2
+
+06:43
+
+(same)
+
+IBR
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+3
+
+06:55
+
+temp=0.2, context=high, max_tokens=4000
+
+ABL
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+3
+
+06:55
+
+(same)
+
+SF
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+3
+
+06:55
+
+(same)
+
+FPA
+
+stop
+
+5
+
+1
+
+1
+
+```json\n[]\n```
+(
+mmwlegal.com
+)
+
+3
+
+06:55
+
+(same)
+
+IBR
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+4
+
+07:07
+
+temp=0.3, context=medium, no max_tokens (= run 1 config)
+
+ABL
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+4
+
+07:07
+
+(same)
+
+SF
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+4
+
+07:07
+
+(same)
+
+FPA
+
+stop
+
+1
+
+1
+
+1
+
+"[]"
+(
+mmwlegal.com
+)
+
+4
+
+07:07
+
+(same)
+
+IBR
+
+stop
+
+1
+
+0
+
+0
+
+"[]"
+
+Critical:
+Run 4 used the
+exact same configuration
+as run 1, in which IBR succeeded — but in run 4 IBR returned the same broken
+[]
+as everything else. The only variable that changed was time of day and Sonar API behavior.
+
+Diagnostic field summary (sonar-reasoning-pro)
+
+Run
+
+Time (CDT)
+
+Source
+
+finish_reason
+
+completion_tokens
+
+citations
+
+search_results
+
+5
+
+07:18
+
+ABL
+
+stop
+
+626
+
+0
+
+0
+
+5
+
+07:18
+
+SF
+
+stop
+
+469
+
+0
+
+0
+
+5
+
+07:18
+
+FPA
+
+stop
+
+607
+
+1
+
+1 (
+mmwlegal.com
+)
+
+5
+
+07:18
+
+IBR
+
+stop
+
+620
+
+0
+
+0
+
+The reasoning model’s
+<think>
+traces are the smoking gun.
+Verbatim excerpts from
+choices[0].message.content
+(first ~500 chars):
+
+ABL:
+
+<think>
+The user is asking me to search for ABL (Asset-Based Lending) analyst-level positions in the United States across three title families. However, looking at the search results provided, I see:
+
+<search_results>
+
+Search results:
+
+None
+
+</search_results>
+
+There are NO search results provided. The search_results section is empty/None.
+
+SF:
+
+<think>
+...However, I've been given search results that are empty (no search results provided). The instruction says "None" under search_results.
+
+FPA:
+
+<think>
+...the "search results" provided to me are from a law firm website (mmwlegal.com) discussing legal topics like company directors, shareholder disputes, surrogacy, and insolvency. These search results are completely irrelevant to the FP&A job search request.
+
+IBR:
+
+<think>
+...The search results provided are "None" - so I need to conduct a search myself.
+However, I'm an AI assistant and I don't have the ability to browse the internet in real-time, access LinkedIn, Indeed, Builtin, company career sites, or any other live job boards.
+
+The model is explicitly stating it received no search results. This points to the search-retrieval step of Sonar — not the language-model step — being the failing component.
+
+Things we ruled out on our side
+
+Prompt content
+— IBR’s prompt was unchanged across runs 1–5; it worked in run 1 and broke in runs 2–5.
+
+Temperature
+— tested 0, 0.2, 0.3 with same result.
+
+max_tokens
+— tested with and without an explicit 4000-token budget.
+
+search_context_size
+— tested both
+medium
+and
+high
+.
+
+Model
+— tested both
+sonar-pro
+and
+sonar-reasoning-pro
+.
+
+search_recency_filter
+— kept at
+"month"
+throughout; not changed.
+
+API key / auth
+— all responses returned
+status=200
+with no auth or rate-limit errors.
+
+Account/billing
+— no plan changes today.
+
+Things we suspect are on Perplexity’s side
+
+Search retrieval pipeline returning empty results to the LLM.
+The reasoning-model
+<think>
+traces directly evidence this.
+
+The recurring
+mmwlegal.com/author/mmwmmwlegal-com/
+citation
+appearing in 3 of 5 runs across different prompts is suspicious — looks like a stale cache hit or a bug where one fixture leaks into unrelated queries.
+
+The status page (
+status.perplexity.com
+) shows no incidents, but the historical pattern of
+sonar-pro
+runs returning empty all week (per our cron history) suggests this may be a slow degradation rather than an acute outage.
+
+Request
+
+Investigate whether the search-retrieval step of Sonar is failing to populate
+<search_results>
+for our account on
+sonar-pro
+and
+sonar-reasoning-pro
+.
+
+Confirm whether other accounts are seeing the same pattern.
+
+Advise whether there is a workaround we can apply on the request side (different parameter combination, different model, etc.) that would re-engage the search step.
+
+Happy to enable additional verbose logging or share full request/response payloads for any of the 16+ failed calls captured today.
+
+Pre-flight checklist
+
+This is about the Perplexity API, not the Perplexity app, Comet, or web UI.
+
+I have removed API keys, secrets, and private data.
+
+I have included enough information for someone else to reproduce the issue.
+
+Bug type
+
+Error response or failed request
+
+Incorrect or unexpected model output
+
+Missing, invalid, or stale citations/search results
+
+Streaming issue
+
+Structured output or JSON schema issue
+
+SDK issue
+
+Billing, credits, or rate limit issue
+
+Dashboard, API key, or auth issue
+
+Other API bug
+
+Affected API area
+
+Agent API
+
+Search API
+
+Sonar API
+
+Embeddings API
+
+SDKs
+
+Dashboard, API keys, or auth
+
+Billing or credits
+
+Not sure
+
+Summary
+
+Expected behavior
+
+Actual behavior
+
+Minimal reproduction
+
+Response or error
+
+Request details
+
+Endpoint:
+
+Model or preset:
+
+SDK/language/version:
+
+Request ID:
+
+Approximate time and timezone:
+
+Consistent or intermittent:
+
+Additional context
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Sonar AP returning empty results or malformated |
+
+Bug Reports
+
+sonar
+
+0
+
+96
+
+September 5, 2025
+
+API vs Web Quality Issues
+
+Bug Reports
+
+sonar-pro
+
+3
+
+470
+
+November 5, 2025
+
+Search API results not matching Perplexity search results
+
+Bug Reports
+
+search-api
+
+0
+
+83
+
+November 30, 2025
+
+Introducing the Perplexity Search API 🚀
+
+Announcements
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+,
+
+python-sdk
+
+1
+
+1063
+
+September 25, 2025
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+85
+
+September 24, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

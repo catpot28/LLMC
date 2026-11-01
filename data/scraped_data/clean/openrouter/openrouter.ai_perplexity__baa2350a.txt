@@ -1,0 +1,285 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/perplexity
+page path  : /perplexity
+captured   : 2026-04-20 11:55:30 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_perplexity__baa2350a.html.gz
+========================================================================
+
+Perplexity Models on OpenRouter
+
+Perplexity Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Perplexity
+Access 15 Perplexity models on OpenRouter including Embed V1 4B, Embed V1 0.6B, and Sonar Pro Search. Compare pricing, context windows, and capabilities.
+Perplexity
+tokens processed on OpenRouter
+Perplexity: Embed V1 4B
+Embed V1 4B
+1.01B
+tokens
+pplx-embed-v1 -4B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 4B parameter model maximizing retrieval quality.
+by
+
+perplexity
+Mar 16, 2026
+32K
+context
+$0.03
+Perplexity: Embed V1 0.6B
+Embed V1 0.6B
+1.21B
+tokens
+pplx-embed-v1-0.6B is one of Perplexity's state-of-the-art text embedding models built for real-world, web-scale retrieval. pplx-embed-v1 is optimized for standard dense text retrieval with the 0.6B parameter model targeting lightweight, low-latency embedding generation.
+by
+
+perplexity
+Mar 16, 2026
+32K
+context
+$0.004
+Perplexity: Sonar Pro Search
+Sonar Pro Search
+289M
+tokens
+Exclusively available on the OpenRouter API, Sonar Pro's new Pro Search mode is Perplexity's most advanced agentic search system. It is designed for deeper reasoning and analysis. Pricing is based on tokens plus $18 per thousand requests. This model powers the Pro Search mode on the Perplexity platform. Sonar Pro Search adds autonomous, multi-step reasoning to Sonar Pro. So, instead of just one query + synthesis, it plans and executes entire research workflows using tools.
+by
+
+perplexity
+Oct 30, 2025
+200K
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+Perplexity: Sonar Reasoning Pro
+Sonar Reasoning Pro
+159M
+tokens
+Note: Sonar Pro pricing includes Perplexity search pricing. See
+details here
+Sonar Reasoning Pro is a premier reasoning model powered by DeepSeek R1 with Chain of Thought (CoT). Designed for advanced use cases, it supports in-depth, multi-step queries with a larger context window and can surface more citations per search, enabling more comprehensive and extensible responses.
+by
+
+perplexity
+Mar 7, 2025
+128K
+context
+$
+2
+/M input
+tokens
+$
+8
+/M output
+tokens
+Perplexity: Sonar Pro
+Sonar Pro
+1.62B
+tokens
+Note: Sonar Pro pricing includes Perplexity search pricing. See
+details here
+For enterprises seeking more advanced capabilities, the Sonar Pro API can handle in-depth, multi-step queries with added extensibility, like double the number of citations per search as Sonar on average. Plus, with a larger context window, it can handle longer and more nuanced searches and follow-up questions.
+by
+
+perplexity
+Mar 7, 2025
+200K
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+Perplexity: Sonar Deep Research
+Sonar Deep Research
+200M
+tokens
+Sonar Deep Research is a research-focused model designed for multi-step retrieval, synthesis, and reasoning across complex topics. It autonomously searches, reads, and evaluates sources, refining its approach as it gathers information. This enables comprehensive report generation across domains like finance, technology, health, and current events. Notes on Pricing (
+Source
+) - Input tokens comprise of Prompt tokens (user prompt) + Citation tokens (these are processed tokens from running searches) - Deep Research runs multiple searches to conduct exhaustive research. Searches are priced at $5/1000 searches. A request that does 30 searches will cost $0.15 in this step. - Reasoning is a distinct step in Deep Research since it does extensive automated reasoning through all the material it gathers during its research phase. Reasoning tokens here are a bit different than the CoTs in the answer - these are tokens that we use to reason through the research material prior to generating the outputs via the CoTs. Reasoning tokens are priced at $3/1M tokens
+by
+
+perplexity
+Mar 7, 2025
+128K
+context
+$
+2
+/M input
+tokens
+$
+8
+/M output
+tokens
+Perplexity: R1 1776
+R1 1776
+R1 1776 is a version of DeepSeek-R1 that has been post-trained to remove censorship constraints related to topics restricted by the Chinese government. The model retains its original reasoning capabilities while providing direct responses to a wider range of queries. R1 1776 is an offline chat model that does not use the perplexity search subsystem. The model was tested on a multilingual dataset of over 1,000 examples covering sensitive topics to measure its likelihood of refusal or overly filtered responses.
+Evaluation Results
+Its performance on math and reasoning benchmarks remains similar to the base R1 model.
+Reasoning Performance
+Read more on the
+Blog Post
+by
+
+perplexity
+Feb 19, 2025
+128K
+context
+Perplexity: Sonar Reasoning
+Sonar Reasoning
+Sonar Reasoning is a reasoning model provided by Perplexity based on
+DeepSeek R1
+. It allows developers to utilize long chain of thought with built-in web search. Sonar Reasoning is uncensored and hosted in US datacenters.
+by
+
+perplexity
+Jan 29, 2025
+127K
+context
+Perplexity: Sonar
+Sonar
+2.74B
+tokens
+Sonar is lightweight, affordable, fast, and simple to use — now featuring citations and the ability to customize sources. It is designed for companies seeking to integrate lightweight question-and-answer features optimized for speed.
+by
+
+perplexity
+Jan 27, 2025
+127K
+context
+$
+1
+/M input
+tokens
+$
+1
+/M output
+tokens
+Perplexity: Llama 3.1 Sonar 8B Online
+Llama 3.1 Sonar 8B Online
+Llama 3.1 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is the online version of the
+offline chat model
+. It is focused on delivering helpful, up-to-date, and factual responses. #online
+by
+
+perplexity
+Aug 1, 2024
+127K
+context
+Perplexity: Llama 3.1 Sonar 70B Online
+Llama 3.1 Sonar 70B Online
+Llama 3.1 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is the online version of the
+offline chat model
+. It is focused on delivering helpful, up-to-date, and factual responses. #online
+by
+
+perplexity
+Aug 1, 2024
+127K
+context
+Perplexity: Llama3 Sonar 70B Online
+Llama3 Sonar 70B Online
+Llama3 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is the online version of the
+offline chat model
+. It is focused on delivering helpful, up-to-date, and factual responses. #online
+by
+
+perplexity
+May 14, 2024
+28K
+context
+Perplexity: Llama3 Sonar 70B
+Llama3 Sonar 70B
+Llama3 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is a normal offline LLM, but the
+online version
+of this model has Internet access.
+by
+
+perplexity
+May 14, 2024
+33K
+context
+Perplexity: Llama3 Sonar 8B Online
+Llama3 Sonar 8B Online
+Llama3 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is the online version of the
+offline chat model
+. It is focused on delivering helpful, up-to-date, and factual responses. #online
+by
+
+perplexity
+May 14, 2024
+28K
+context
+Perplexity: Llama3 Sonar 8B
+Llama3 Sonar 8B
+Llama3 Sonar is Perplexity's latest model family. It surpasses their earlier Sonar models in cost-efficiency, speed, and performance. This is a normal offline LLM, but the
+online version
+of this model has Internet access.
+by
+
+perplexity
+May 14, 2024
+33K
+context

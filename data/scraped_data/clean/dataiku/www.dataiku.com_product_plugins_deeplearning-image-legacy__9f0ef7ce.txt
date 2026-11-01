@@ -1,0 +1,519 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/deeplearning-image-legacy/
+page path  : /product/plugins/deeplearning-image-legacy/
+captured   : 2026-02-12 03:48:02 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_deeplearning-image-legacy__9f0ef7ce.html.gz
+========================================================================
+
+Plugin: Deep learning for images (legacy) | Dataiku
+
+Plugin: Deep learning for images (legacy) | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Deep learning for images (legacy)
+
+Deep learning for images (legacy)
+
+This plugin provides recipes to perform image classification, feature extraction and transfer learning for images.
+
+⚠️ This plugin has been removed from the Dataiku public plugin store as of Dataiku 14.0 release. The functionality covered by this plugin is now available with Dataiku
+Computer vision
+features.
+
+This plugin provides several tools to use images in machine learning applications. You can use a pre trained model to score images and obtain classes, or for feature extraction (obtaining the values taken by a layer for each image). You can also retrain a model to specialize it on a particular set of images, this process is known as transfer learning.
+
+Retrain models and score images directly in Dataiku.
+
+This plugin relies on the Keras library. Keras is an open source neural network library written in Python. We use it to run on top of the TensorFlow library as it enables fast experimentation with deep neural networks.
+
+The plugin provides the following components:
+
+Download pre-trained models
+(Macro)
+
+Classify images
+(Recipe)
+
+Extract features from images
+(Recipe)
+
+Retrain image classification model
+(Recipe)
+
+Monitor the re-training of models with Tensorboard
+(Webapp template)
+
+Examples in the wild
+
+Our partner phData has published a tutorial covering
+emotion classification in videos
+.
+
+Plugin Information
+
+Version
+
+0.1.6
+
+Author
+
+Dataiku Labs (Y. Ghazouani, N. Servel et al.)
+
+Released
+
+2018-01-10
+
+Last updated
+
+2018-02-01
+
+License
+
+Apache Software License
+
+Copyright notice
+
+Original work Copyright (c) 2016 François Chollet
+
+Source code
+
+Github:
+CPU version
+,
+GPU version
+
+Reporting issues
+
+Github
+
+How To Use
+
+Recipes
+
+Classify images
+
+Use this recipe to score (classify) a set of images contained in a folder. This recipe outputs the predicted class for each image in the input image folder.
+
+Inputs:
+
+Folder containing the images to score.
+
+Folder containing a model in the h5 format. The folder can optionally contain a csv file with the model labels.
+
+Output:
+
+Dataset containing the image path and the predicted class.
+
+Extract features from images
+
+Use this recipe to extract the values taken by one of the layers of the neural network. This process is called feature extraction and can be used for
+transfer learning (feature extractor)
+. It is recommended to use the neural network’s latest dense layers, usually the one before the classification layer (penultimate).
+
+Inputs:
+
+Folder containing the images to apply the feature extraction.
+
+Folder containing a model in the h5 format.
+
+Output:
+
+Dataset containing the image path and a vector column with the output of each neuron in the selected layer.
+
+Retrain image classification model
+
+Use this recipe to warm-start the training of a deep learning model. Select a pre-trained model to use as a starting point to train a specialized deep learning model on your own images.
+
+Also known as
+transfer learning (with fine-tuning)
+, this method saves a lot of computational resources by not forcing you to retrain convolutional layers entirely. You can choose to keep them unchanged and retrain only the following layers, requiring smaller training sets. You can also choose to retrain the weights of all layers, in that case your image training set should be larger.
+
+You can use this recipe multiple times in a row for fine-tuning use cases.
+
+Inputs:
+
+Folder containing images to use for training.
+
+Folder containing a model in the h5 format.
+
+Dataset containing the image paths and corresponding classes.
+
+Output:
+
+Folder containing a h5 model, configuration files and Keras callbacks (including tensorboard logs).
+
+Macro
+
+Download pre-trained models
+
+The macro is used to download pre-trained models.
+
+You must first choose a name for the output folder where your model will be stored. Then you must select one of the available pretrained models:
+
+Resnet trained on Imagenet.
+More info.
+
+Xception trained on Imagenet.
+More info.
+
+Inception V3 trained on Imagenet.
+More info.
+
+VGG16 trained on Imagenet.
+More info.
+
+The output of this macro is a folder containing a pre-trained model. This model and its metadata are managed by the plugin to be used as input of the custom recipes.
+
+Tensorboard webapp in Dataiku.
+
+Webapp template
+
+Monitor the re-training of models with Tensorboard
+
+Use the Tensorboard webapp template to monitor the retraining of your deep learning models.
+
+This webapp needs to run in a code environment offering the tensorboard python package, see the setup instructions below.
+
+Start by
+creating a Python code environment
+with a name like tensorboard-env. Make sure to include the set of mandatory packages, Jupyter support is not required.
+
+Add the following packages to the list of packages to install:
+
+tensorflow==1.4.0
+
+flask==0.12.2
+
+Finally, select the code environment you created
+in the webapp settings
+.
+
+Make sure to edit the Python file and replace the model_folder with your own.
+
+Install In Dataiku
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Deep learning for images (legacy).
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

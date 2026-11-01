@@ -1,0 +1,727 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/responses-post
+page path  : /api-reference/responses-post
+captured   : 2026-02-11 15:40:39 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_responses-post__22a6f652.html.gz
+========================================================================
+
+Create Response - Perplexity
+
+Create Response - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Agent API
+Create Response
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Response
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Create Response
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/responses
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>"
+
+}
+
+'
+200
+Copy
+Ask AI
+{
+
+"created_at"
+:
+123
+,
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"content"
+: [
+
+{
+
+"text"
+:
+"<string>"
+,
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [
+
+{
+
+"end_index"
+:
+123
+,
+
+"start_index"
+:
+123
+,
+
+"title"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"id"
+:
+"<string>"
+,
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+: {
+
+"message"
+:
+"<string>"
+,
+
+"code"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+
+},
+
+"usage"
+: {
+
+"input_tokens"
+:
+123
+,
+
+"output_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+123
+,
+
+"output_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"cache_creation_cost"
+:
+123
+,
+
+"cache_read_cost"
+:
+123
+,
+
+"tool_calls_cost"
+:
+123
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+123
+,
+
+"cache_read_input_tokens"
+:
+123
+
+},
+
+"tool_calls_details"
+: {}
+
+}
+
+}
+Agent API
+Create Response
+Copy page
+Generate a response for the provided input with optional web search and reasoning.
+Copy page
+POST
+/
+v1
+/
+responses
+Try it
+Create Response
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/responses
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>"
+
+}
+
+'
+200
+Copy
+Ask AI
+{
+
+"created_at"
+:
+123
+,
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"content"
+: [
+
+{
+
+"text"
+:
+"<string>"
+,
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [
+
+{
+
+"end_index"
+:
+123
+,
+
+"start_index"
+:
+123
+,
+
+"title"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"id"
+:
+"<string>"
+,
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+: {
+
+"message"
+:
+"<string>"
+,
+
+"code"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+
+},
+
+"usage"
+: {
+
+"input_tokens"
+:
+123
+,
+
+"output_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+123
+,
+
+"output_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"cache_creation_cost"
+:
+123
+,
+
+"cache_read_cost"
+:
+123
+,
+
+"tool_calls_cost"
+:
+123
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+123
+,
+
+"cache_read_input_tokens"
+:
+123
+
+},
+
+"tool_calls_details"
+: {}
+
+}
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+input
+string
+(InputMessage · object | FunctionCallOutputInput · object | FunctionCallInput · object)[]
+string
+(InputMessage · object | FunctionCallOutputInput · object | FunctionCallInput · object)[]
+required
+Input content - either a string or array of input items
+​
+instructions
+string
+System instructions for the model
+​
+language_preference
+string
+ISO 639-1 language code for response language
+​
+max_output_tokens
+integer<int32>
+Maximum tokens to generate
+Required range
+:
+x >= 1
+​
+max_steps
+integer<int32>
+Maximum number of research loop steps.
+If provided, overrides the preset's max_steps value.
+Must be >= 1 if specified. Maximum allowed is 10.
+Required range
+:
+1 <= x <= 10
+​
+model
+string
+Model ID in provider/model format (e.g., "xai/grok-4-1", "openai/gpt-4o").
+If models is also provided, models takes precedence.
+Required if neither models nor preset is provided.
+​
+models
+string[]
+Model fallback chain. Each model is in provider/model format.
+Models are tried in order until one succeeds.
+Max 5 models allowed. If set, takes precedence over single model field.
+The response.model will reflect the model that actually succeeded.
+Required array length:
+1 - 5
+element
+s
+​
+preset
+string
+Preset configuration name (e.g., "fast-search", "pro-search", "deep-research").
+Pre-configured model with system prompt and search parameters.
+Required if model is not provided.
+​
+reasoning
+ReasoningConfig · object
+Show
+
+child attributes
+​
+response_format
+ResponseFormat · object
+Specifies the desired output format for the model response
+Show
+
+child attributes
+​
+stream
+boolean
+If true, returns SSE stream instead of JSON
+​
+tools
+(WebSearchTool · object | FetchUrlTool · object | FunctionTool · object)[]
+Tools available to the model
+
+WebSearchTool
+
+FetchUrlTool
+
+FunctionTool
+Show
+
+child attributes
+Response
+200
+application/json
+Successful response. Content type depends on
+stream
+parameter:
+
+stream: false
+(default):
+application/json
+with Response
+
+stream: true
+:
+text/event-stream
+with SSE events
+
+Non-streaming response returned when stream is false
+​
+created_at
+integer<int64>
+required
+​
+id
+string
+required
+​
+model
+string
+required
+​
+object
+enum<string>
+required
+Object type in API responses
+Available options
+:
+
+response
+
+​
+output
+(MessageOutputItem · object | SearchResultsOutputItem · object | FetchUrlResultsOutputItem · object | FunctionCallOutputItem · object)[]
+required
+
+MessageOutputItem
+
+SearchResultsOutputItem
+
+FetchUrlResultsOutputItem
+
+FunctionCallOutputItem
+Show
+
+child attributes
+​
+status
+enum<string>
+required
+Status of a response or output item
+Available options
+:
+
+completed
+,
+
+failed
+,
+
+in_progress
+,
+
+requires_action
+
+​
+error
+ErrorInfo · object
+Show
+
+child attributes
+​
+usage
+ResponsesUsage · object
+Show
+
+child attributes
+Was this page helpful?
+Yes
+No
+Search the Web
+Next
+⌘
+I
+x
+discord
+website
+Powered by

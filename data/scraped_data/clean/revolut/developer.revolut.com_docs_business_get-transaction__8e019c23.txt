@@ -1,0 +1,479 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/get-transaction
+page path  : /docs/business/get-transaction
+captured   : 2026-01-15 15:31:45 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_get-transaction__8e019c23.html.gz
+========================================================================
+
+Retrieve a transaction | Revolut Docs
+
+Retrieve a transaction | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Card invitations
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Simulations
+Team members
+Transactions
+Introduction
+Retrieve a list of transactions
+Retrieve a transaction
+Transfers
+Webhooks
+Transactions
+Retrieve a transaction
+Retrieve a transaction
+
+Retrieve the details of a specific transaction.
+The details can include, for example, cardholder details for card payments.
+
+You can retrieve a transaction with its details either by its
+transaction ID
+or by the
+request ID
+that was provided for this transaction at the time of its creation, for example, when you
+created a payment
+.
+
+To retrieve a transaction by its
+transaction ID
+, use:
+
+/transaction/\{transaction_id\}
+
+To retrieve a transaction by a
+request ID
+provided at transaction creation, use:
+
+/transaction/\{request_id\}?id_type=request_id
+
+For more details, see the guides:
+Retrieve transaction data
+.
+
+Request
+​
+Path parameters
+Path parameters
+Expand
+id
+string
+required
+The ID of the transaction, or the
+request ID
+provided at payment creation if
+id_type
+=
+request_id
+.
+Query parameters
+Query parameters
+Expand
+id_type
+string
+Possible values:
+[
+request_id
+]
+The type of the ID to retrieve the transaction by.
+
+Response
+​
+200
+4xx
+The information about a specific transaction
+Response body
+Body
+
+object
+Expand
+id
+string
+required
+The ID of the transaction.
+type
+string
+required
+Possible values:
+[
+atm
+,
+card_payment
+,
+card_refund
+,
+card_chargeback
+,
+card_credit
+,
+exchange
+,
+transfer
+,
+loan
+,
+fee
+,
+refund
+,
+topup
+,
+topup_return
+,
+tax
+,
+tax_refund
+]
+Indicates the transaction type.
+request_id
+string
+The request ID that you provided previously.
+state
+string
+required
+Possible values:
+[
+created
+,
+pending
+,
+completed
+,
+declined
+,
+failed
+,
+reverted
+]
+Indicates the transaction state. Possible values:
+
+created
+: The transaction has been created and is either processed asynchronously or scheduled for a later time.
+
+pending
+: The transaction is pending until it's being processed. If the transfer is made between Revolut accounts, this state is skipped and the transaction is executed instantly.
+
+completed
+: The transaction was successful.
+
+declined
+: The transaction was unsuccessful. This can happen for a variety of reasons, for example, insufficient account balance, wrong receiver information, etc.
+
+failed
+: The transaction was unsuccessful. This can happen for a variety of reasons, for example, invalid API calls, blocked payments, etc.
+
+reverted
+: The transaction was reverted. This can happen for a variety of reasons, for example, the receiver being inaccessible.
+
+reason_code
+string
+The reason code when the transaction
+state
+is
+declined
+or
+failed
+.
+created_at
+string(date-time)
+required
+The date and time the transaction was created in
+ISO 8601
+format.
+updated_at
+string(date-time)
+required
+The date and time the transaction was last updated in
+ISO 8601
+format.
+completed_at
+string(date-time)
+The date and time the transaction was completed in
+ISO 8601
+format.
+This is required when the transaction
+state
+is
+completed
+.
+scheduled_for
+string(date)
+The scheduled date of the payment, if applicable.
+Provided in
+ISO 8601
+format.
+related_transaction_id
+string(uuid)
+The ID of the original transaction to which this transaction is related.
+Returned, for example, when this transaction is a refund of the related transaction, or for transactions related to cashback.
+merchant
+object
+The information about the merchant (only for card transactions).
+id
+string(uuid)
+The ID of the merchant.
+name
+string
+The name of the merchant.
+city
+string
+The city of the merchant.
+category_code
+string
+The category code of the merchant.
+country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,3}$
+The bank country of the counterparty as 2-letter
+ISO 3166
+code.
+reference
+string
+The payment reference.
+legs
+array of objects
+required
+The legs of the transaction:
+
+For transactions between your Revolut accounts, there can be 2 legs, for example, an internal transfer made out of the GBP account and into the EUR account.
+
+For transactions in other cases, there is only 1 leg.
+
+leg_id
+string(uuid)
+required
+The ID of the leg.
+amount
+number(double)
+required
+The amount of the transaction.
+fee
+number(double)
+The amount of the transaction fee.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+bill_amount
+number(double)
+The billing amount for cross-currency payments.
+bill_currency
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+account_id
+string(uuid)
+required
+The ID of the account that the transaction is associated with.
+counterparty
+object
+TransactionCounterparty
+account_id
+string(uuid)
+The ID of the counterparty account.
+account_type
+string
+required
+Possible values:
+[
+self
+,
+revolut
+,
+external
+]
+Indicates the type of the account.
+id
+string(uuid)
+The ID of the counterparty.
+description
+string
+The transaction leg purpose.
+balance
+number(double)
+The total balance of the account that the transaction is associated with.
+card
+object
+The details of the card associated with the transaction.
+id
+string(uuid)
+The ID of the card.
+card_number
+string
+The masked card number.
+first_name
+string
+The first name of the cardholder.
+last_name
+string
+The last name of the cardholder.
+phone
+string
+The phone number of the cardholder in
+E.164
+format.
+references
+array of objects
+Possible number of items:
+
+non-empty
+and
+<= 5 items
+Card references (
+references
+).
+
+Note
+These are the references that were assigned to the card at the time the transaction was made.
+Any
+update
+to card references does not affect existing transactions.
+name
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The name of the card reference.
+Must be unique.
+value
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The value for this reference.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

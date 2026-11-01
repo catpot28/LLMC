@@ -1,0 +1,216 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/rlhf-text2sql
+page path  : /blog/rlhf-text2sql
+captured   : 2026-06-07 17:34:36 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_rlhf-text2sql__f9dbd9f9.html.gz
+========================================================================
+
+When RLHF Meets Text2SQL | Scale AI
+
+When RLHF Meets Text2SQL | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+When RLHF Meets Text2SQL
+By
+
+Shubhashis Roy Dipta
+&
+Vijay Kalmath
+·
+January 23, 2025
+·
+11 min read
+Copy Link
+Text2SQL systems promise to democratize access to enterprise data but often fail to handle the complexity of real-world database queries, even if they perform well on test datasets. We found that Reinforcement Learning from Human Feedback (RLHF) is a viable approach for active learning from incorrect production queries to improve Text2SQL accuracy.
+Using Mistral’s
+mixtral-8x7b-instruct
+model and the
+BIRD
+dataset, we demonstrate that RLHF with a hybrid reward model—which combines database execution and LLM evaluation—can improve SQL generation accuracy. Our approach achieves better performance than traditional supervised fine-tuning across most complexity levels by using 75% of training data for fine-tuning and 25% for RLHF with augmentation.
+In this blog post, we share our methodology, the effectiveness of
+Online Kahneman-Tversky Optimization
+(OKTO), and practical insights for leveraging RLHF for Text2SQL tasks.
+Text2SQL systems face two key challenges that impact accuracy: data scarcity and data distribution shift
+Data scarcity
+Whereas current LLM models are trained over a trillion tokens (15T for
+Llama3
+), the largest Text2SQL dataset (
+BIRD
+) has 80k query-SQL pairs (~2M tokens). Developing a large Text2SQL dataset is expensive and time-consuming, unlike a text-generation dataset, which can be scraped from the internet. Even though the positive text-SQL pair is hard to annotate, the negative data from incorrectly generated SQL is practically unlimited. RLHF can help us to use that negative data to align the model with the positive pairs.
+Data distribution shift
+The second issue is that SQL from real-life databases are much different from academic datasets. For example, consider the largest and most well-known SQL dataset: BIRD.
+Below is one of the “challenging” SQL queries from the BIRD dataset:
+SELECT T2.admfname1,
+T2.admlname1,
+T2.admfname2,
+T2.admlname2,
+T2.admfname3,
+T2.admlname3
+FROM satscores AS T1
+INNER JOIN schools AS T2
+ON T1.cds = T2.cdscode
+ORDER BY T1.numge1500 DESC
+LIMIT 1;
+And here is a randomly chosen, sanitized SQL query from a real-life database:
+SELECT u.name,
+Count(DISTINCT (t.reference_number))
+FROM table_a AS p,
+table_b AS prod,
+table_c AS pa,
+table_d AS aff,
+table_e AS u,
+table_f AS t
+WHERE u.user_id = aff.rvp_id
+AND prod.id = p.product_id
+AND p.ref_number = pa.ref_number
+AND pa.assignment_id = aff.affiliation_id
+AND t.transaction_id = aff.trx_code
+AND NOT prod.family_code ilike '%TYPE1%'
+AND NOT prod.family_code ilike '%TYPE2%'
+AND (
+t.trx_type ilike '%Payment%'
+OR t.trx_type ilike '%Cancellation%' )
+AND t.year = date_part('year', CURRENT_DATE) - 1
+AND date_part('quarter', t.date) = 3
+AND (
+NOT p.parent_org ilike '%Company1%'
+OR NOT p.parent_org ilike '%Company2%'
+OR NOT p.parent_org ilike '%Company3%' )
+AND u.region IN ('Region1',
+'Region2',
+'Region3')
+AND u.name <> ''
+GROUP BY 1
+ORDER BY 2
+As we can see, enterprise SQL is much more complex, longer, and hard to generate. One of the use cases of RLHF is to make stylistic changes to a previously trained model’s output. We hypothesized that we could force our model to generate more complex SQL through stylistic alignment that better represents real-life database SQL queries.
+Motivated by the issues above, our goal was to investigate if the negative data could push the alignment in the right direction and generate complex SQL to answer complex questions.
+We explored using RLHF to help with SQL alignment
+Previous papers have already shown that RLHF helps align text generation to follow instructions (
+Ouyang et al.
+), to generate helpful and harmless texts (
+Bai et al.
+), and to train general-purpose LLMs (
+Lllama2
+,
+Llama3
+,
+ChatGPT
+). Our central hypothesis was that we could use RLHF to make stylistic changes in SQL generation and force the model to generate more valid semantically correct SQL. Additionally, since we have a limited number of positive text-SQL pairs, can we use negative data with RLHF to get an LLM to generate more valid and complex SQL queries?
+Experimental Design
+The setup
+We used the
+mixtral-8x7b-instruct
+models as the base model. To start, we fine-tuned this model using 75% of the
+BIRD
+training data. Next, we took the remaining 25% of the dataset and synthetically augmented it. This was done by randomly reordering the in-context table schemas. We then used this augmented 25% of the data for the RLHF algorithm.
+We used the original dev and test data from the BIRD dataset during validation and testing. For the reward model, we used a combination of the DB_executor function and a general-purpose LLM. We implemented a dual-component reward model that combines a DB_executor function with a general-purpose Large Language Model (LLM). The DB_executor function processes SQL queries through the appropriate SQL engine and generates a binary reward based on successful query execution.
+To obtain a more nuanced evaluation, we then pass four elements to a judge LLM (specifically, mixtral-8x22b-instruct): the generated SQL query, the ground truth SQL query, and the database query results from both queries. This judge LLM provides a comprehensive reward assessment beyond simple binary execution success.
+Reward model
+One of the crucial parts of any RLHF algorithm is the reward model. Our first choice of the reward model for a Text2SQL is the DB_executor function. The issue is that the DB executor can only say if the generation is right or wrong, which gives very sparse rewards. The RLHF algorithm needs a partial reward to get the signal that the generation is going in the right direction; otherwise, there is not enough signal to improve the generation.
+Conventionally, a good reward model has to follow two rules:
+It should correctly say if the SQL is good or bad
+If a SQL is partially correct or on the right path to correct, it should return a partial reward (partially correct SQL). Training such a reward model for SQL is tricky because, to our knowledge, there is no preference dataset for SQLs.
+As a result, we decided to use a hybrid reward model where the generated SQL first goes to the DB_executor function. Then, the output/error from the DB execution goes to a general-purpose LLM to work as the final reward model. For the reward scoring, we used a custom prompt that mimics the professor-student role: the general purpose LLM acts as Professor and grades the generated SQL out of 50. The whole reward model pipeline is shown in Figure 1.
+Figure 1: Reward Model Pipeline
+Main pipeline
+At Scale, we performed various experiments to find the optimal split or configuration to align the model with positive SQL data. We fine-tuned the base model on 75% of the train data and kept the other 25% for RLHF train data. We also synthetically augmented 25% of the RLHF train data. The reasoning behind both of these choices is described in the next section. Figure 2 shows the system diagram of the whole pipeline.
+Figure 2: High-Level System Pipeline
+Key Findings
+In this section, we will briefly go through our main findings:
+Online KTO is the best RL algorithm for Text2SQL
+The holdout dataset for RLHF is necessary for providing enough signal for the policy model to learn
+Augmentation of the holdout dataset helps the RLHF algorithms
+Neither LLM nor DB execution is enough as a reward model on its own, but combined, they provide a good signal
+Online KTO works better than all other RLHF algorithms:
+We have tried out different RLHF algorithms -
+PPO
+,
+DPO
+,
+KTO
+, and both their online (
+ref
+) and offline versions. In the following figure, we can see the results for OKTO (Online KTO), ODPO (Online DPO), PPO (Offline), and Reinforce (Offline) RLHF algorithms.
+Figure 3: Results for OKTO (Online KTO), ODPO (Online DPO), PPO (Offline), and Reinforce (Offline) RLHF algorithms
+The results show that Online KTO performs better than all others. The hypothesis is three-fold:
+As stated in the
+KTO
+paper, KTO works better even with imbalanced data (negative data is 10x the positive data)
+As stated in the
+Llama3
+paper, DPO falls short when there are too many special tokens (SELECT, FROM, … in SQL)
+The offline RLHF algorithm limits learning to a fixed set of negative examples, while online RLHF enables dynamic learning through real-time SQL generation and reward feedback at each timestep t
+Holdout RLHF data is necessary
+The first question that comes to mind is why keep a holdout RLHF dataset? Why not use the whole dataset for fine-tuning and then the same dataset for the RLHF? We found out that doing so restricts any learning from the RLHF itself (shown in Figure 4). The main reasoning is that by fine-tuning, the model has already learned all of the query-SQL in the train set, so, during RLHF, it doesn’t make any mistakes, hence gets perfect reward, hence again very sparse reward scores, which doesn’t help in alignment.
+Figure 4: Test scores comparing SFT vs Online KTO, both on the full dataset
+Augmenting the dataset helps
+As mentioned in the above system pipeline diagram, the RLHF was done on 25% augmented train data. In this experiment, we explored the importance of augmentation. We augmented the data by shuffling the database schema on the context.
+So if for one question, Q1, the context sequence is C1, C2, C3, then on another instance, even if the question is Q1, the database schema can be C3, C1, C2. Our initial dev experiments revealed that 4x augmentation yields the most gain, so our initial 25% holdout dataset (~2k) has been augmented to ~8k query-SQL pairs.
+Figure 5: Test scores comparing Online KTO vs Online KTO with augmentation
+As we can see in the results, the augmented RLHF train data gave around a 2% boost in almost all the domains. The hypothesis is that shuffling the database schemas has two benefits: (1) More data/signal to train on, and (2) The model becomes more robust to the initial order of the database schemas and learns to retrieve the relevant DB schema.
+Using only LLM is not enough as a reward model
+In this experiment, we wanted to explore whether we can remove the database execution overhead and use only the general-purpose LLM as a reward model. The main motivation behind this was that DB execution is slow and hard to parallelize during multi-node training. In this experiment, the reward model (LLM) only gets the ground truth and predicted SQL to evaluate.
+Figure 6: Test scores comparing Online KTO (LLM + DB as reward function) vs Online KTO (Only mixtral 8x22b as reward function) vs Online KTO (Only llama3.1-70b as reward function)
+As expected, the results show the need for a database executor function. We hypothesize that this is because the LLM has no prior knowledge about the database schema or what output it will give when running on an actual database; hence, it can’t provide a reliable reward.
+Final Result
+Finally, we wanted to see what we achieved. Until now, we have used an SFT model trained on 75% of the train data and the other 25% for the RLHF. But what have we achieved compared to a full SFT model trained on complete data?
+Figure 7: Test scores comparing SFT (full train dataset) vs SFT (75% train data) vs OKTO (SFT 75% + RLHF 25%)
+As we can see from the results, even if we train the data using SFT on complete train data, our RLHF model (75% SFT + 25% RLHF) beats the full SFT model in all cases other than the Challenging domain. The decrease in performance in the challenging domain is due to the major gap in performance based on SFT on 75% vs. 100% of the data (potentially due to the random data split). The 8%+ gap was too large for the OKTO step to overcome.
+What’s Next
+From our experiments, we found that dataset size or split is a significant factor in Text2SQL RLHF. Future work will focus on developing synthetic or human-annotated Text2SQL datasets more aligned with real-life databases. Another direction to explore is creating preference datasets for SQL pairs, which will help to make a good reward model. Another plausible direction for training the RLHF Text2SQL model is to explore the mixture of different open-source datasets and how different split strategies affect the final performance.
+Conclusion
+Our research demonstrates that RLHF creates an effective production flywheel for Text2SQL systems. By learning from incorrect SQL queries in real-world use, models can continuously improve without requiring extensive manual annotation of correct query pairs. This transforms production errors from mere logs into valuable training signals, enabling Text2SQL systems to automatically adapt to enterprise-specific SQL patterns over time.
+Key findings show that reserving 25% of data for RLHF training and 4x augmentation through schema shuffling produces optimal results. The hybrid reward model combining DB execution and LLM evaluation proved superior to using either component alone.
+Online KTO emerged as the most effective RLHF algorithm for handling imbalanced datasets and SQL's abundant special tokens. Notably, the RLHF model trained on 75% SFT + 25% RLHF outperformed full SFT models in most domains, though it struggled with challenging queries due to the significant initial performance gap.
+This work provides valuable insights for improving Text2SQL systems using RLHF, particularly in scenarios with limited high-quality training data and complex target SQL patterns. If you’re interested in using our Text2SQL model for your enterprise use case or want to learn more about our
+GenAI solutions
+offering for Enterprise, please
+book a demo here
+.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

@@ -1,0 +1,95 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/rl-environments
+page path  : /blog/rl-environments
+captured   : 2026-05-16 02:52:39 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_rl-environments__4b105756.html.gz
+========================================================================
+
+The Next Frontier of Data Training: RL Environments | Scale AI
+
+The Next Frontier of Data Training: RL Environments | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Product
+The Next Frontier of Data Training: RL Environments
+By
+
+Chetan Rane
+·
+February 27, 2026
+·
+5 min read
+Copy Link
+AI is evolving from conversational interfaces into agents that take actions, from navigating software and coordinating across tools to carrying out complex, multi-step workflows that mirror real professional work. As this shift accelerates, the way models are trained is evolving as well. Frontier models increasingly need to learn through trial and error in realistic simulated environments rather than relying solely on static datasets or human preference feedback. AI labs are turning to reinforcement learning environments to safely teach agents how to plan, act, and improve without the risk of deploying unproven behavior in live production systems.
+Over the past several months, we’ve been working with leading model developers to build safe, high-fidelity environments designed specifically for training and evaluating agent behavior across capabilities like tool use, computer use, and coding. Today, nearly half of all of our new data training projects involve reinforcement learning environments, reflecting how quickly model development is shifting towards training agents in real-world settings. That’s why we’re introducing
+Scale RL Environments
+, a collection of simulated worlds where agents can be trained and evaluated on a wide range of tool use and computer use workflows. These environments span across consumer, enterprise, and domain-specific use cases, allowing model builders to train and test agents in highly realistic systems without the risk, instability, or scale constraints of production software.
+Our RL Environments offer:
+Realistic data universes:
+Our environments replicate real-world workflows and are populated with data mimicking real business and consumer workflows. Domain experts curate artifacts that capture the complexity, ambiguity, and edge cases of real professional work.
+Production-grade infrastructure:
+Run multiple training and evaluation jobs in parallel on your own setup, with seamless integration into existing agent execution frameworks and minimal engineering lift. Receive custom support from Scale’s engineering team to fit your existing environment setup.
+Expert-designed training data:
+Train on tasks designed by domain experts, each paired with both process and outcome verifiers.
+Inside Scale RL Environments
+Each RL Environment models the workflows and task structures found in real applications and tools, while providing the control and repeatability required for reinforcement learning and evaluation. An environment pairs simulated real world workflows with defined data and system state, allowing it to be reset and inspected between runs.
+RL Environments generate structured experience - trajectories of decisions, actions, and reward - that models learn from to improve agentic capabilities.
+Within each environment, tasks define concrete goals and starting conditions. Agent interactions are captured as trajectories that record every action, state change, and intermediate outcome. Results are evaluated using expert-designed verifiers that check for real, measurable changes in the system—not just whether an agent produced plausible text.
+Because environments are fully controlled, teams can run experiments in parallel, replay trajectories, inspect failures, and iterate quickly. RL Environments integrate directly into existing agent execution and training pipelines. Teams can use Scale’s built-in executor or their own frameworks, bringing existing models, prompts, and training loops while relying on Scale for the environments, data, and evaluation scaffolding.
+Why Scale RL Environments Work
+Scale’s RL Environments reflect the conditions of real work: incomplete data, conflicting records, and tasks that span multiple tools and interfaces. They require agents to maintain context, adapt mid-task, and recover from errors.
+Each task begins from a known system configuration, and agent behavior is evaluated using system-level checks that measure real outcomes in the environment. This produces consistent, repeatable signals that make it possible to compare approaches and improve agents over time. Because those signals are reliable, teams can train agents at scale without relying on live systems.
+So far, we’ve run a series of controlled training and evaluation experiments using open-source models across our off-the-shelf agent datasets and RL environments. In these runs, models trained within Scale RL Environments consistently showed measurable performance improvements on the corresponding public benchmarks, validating both the effectiveness of the environments and the quality of the training signal.
+Track the model’s steps and actions in the environment, alongside results and verifiers to evaluate performance.
+Getting Started
+Teams can start exploring RL Environments through inspecting simulated applications, reviewing expert-curated artifacts, and observing how agents interact with realistic systems. For training and evaluation at scale, environments can be run programmatically using Docker and existing agent execution frameworks.
+To see how we enable agent capabilities, explore
+Scale RL Environments
+.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

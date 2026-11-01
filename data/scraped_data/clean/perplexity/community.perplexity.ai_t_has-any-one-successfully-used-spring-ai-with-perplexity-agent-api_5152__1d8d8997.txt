@@ -1,0 +1,175 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/has-any-one-successfully-used-spring-ai-with-perplexity-agent-api/5152
+page path  : /t/has-any-one-successfully-used-spring-ai-with-perplexity-agent-api/5152
+captured   : 2026-06-16 12:55:56 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_has-any-one-successfully-used-spring-ai-with-perplexity-agent-api_5152__1d8d8997.html.gz
+========================================================================
+
+Has any one successfully used Spring AI with Perplexity Agent API? - General - Perplexity API Platform Forum
+
+Has any one successfully used Spring AI with Perplexity Agent API? - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Has any one successfully used Spring AI with Perplexity Agent API?
+
+General
+
+agent-api
+
+deleSerna
+
+May 16, 2026, 7:35am
+
+1
+
+Hello,
+
+Has anyone used the Perplexity Agent API with Spring AI?
+
+I am trying to add Perplexity support in
+embabel
+. Since
+/chat/completions/
+does not support agent, I have to use
+v1/agent
+but then I use the Spring AI’s OpenAI api’s but I ran into the below error.
+
+{
+
+"error": {
+
+"message": "validation failed: input array cannot be empty",
+
+"type": "invalid_request",
+
+"code": 400
+
+}
+
+}
+
+After debugging further, what I understood is, it is because of the request format used by Spring AI.
+
+I can reproduce the same error using the curl if I use the same request format.
+
+curl
+https://api.perplexity.ai/v1/agent
+\
+
+-H “Authorization: Bearer $PERPLEXITY_API_KEY” \
+
+-H “Content-Type: application/json” \
+
+-d '{
+
+"model": "perplexity/sonar",
+
+"messages": \[
+
+{"role": "system", "content": "Say OK"},
+
+{"role": "user", "content": "test"}
+
+\],
+
+"temperature": 0.6,
+
+"max_tokens": 100
+
+}’ | jq
+
+For eg: if I change the URL to
+https://api.perplexity.ai/chat/completions
+and the model , it works fine. Therefore, the issue is the way currently Spring AI send the request to the Perplexity .
+
+Before digging further into the Spring AI request model, I am wondering whether anyone has really successfully been able to use Spring AI to use the agent API?
+
+Just changing the URL to
+https://api.perplexity.ai/v1/responses
+as mentioned in the doc
+OpenAI Compatibility - Perplexity
+also did not work.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Does anyone try to use Perplexity API on Openclaw? Couldn't do it
+
+General
+
+agent-api
+
+5
+
+128
+
+April 13, 2026
+
+Cannot use spring-ai-openai-spring-boot-starter
+
+Bug Reports
+
+1
+
+118
+
+May 15, 2025
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows
+
+Announcements
+
+0
+
+33
+
+March 11, 2026
+
+Perplexity is not Available for Dify Perplexity Plugin
+
+General
+
+sonar
+
+,
+
+search
+
+1
+
+68
+
+May 19, 2026
+
+Perplexity Interface API vs Sonar LLM API
+
+General
+
+2
+
+322
+
+June 24, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

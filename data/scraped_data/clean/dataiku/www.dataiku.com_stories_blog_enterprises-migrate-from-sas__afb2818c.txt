@@ -1,0 +1,477 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/enterprises-migrate-from-sas
+page path  : /stories/blog/enterprises-migrate-from-sas
+captured   : 2026-02-09 06:10:56 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_enterprises-migrate-from-sas__afb2818c.html.gz
+========================================================================
+
+How Corios and Dataiku Help Enterprises Migrate From SAS
+
+How Corios and Dataiku Help Enterprises Migrate From SAS
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Partner
+
+How Corios and Dataiku Help Enterprises Migrate From SAS
+
+Sep 25, 2024
+
+3 min read
+
+/
+
+Robin Way
+
+This blog post was guest-written by
+Robin Way
+, Founder and CEO of Corios, and
+Austin Barber
+, VP of Enterprise Sales at Corios.
+
+As enterprises face the rise of new technologies that require fast adaptation, the pressure to modernize their analytics infrastructure is mounting.
+Corios
+offers a comprehensive solution, allowing organizations to transition their data, workloads, and users from SAS into the Dataiku environment. Together, Corios and Dataiku provide a smooth, cloud-based, scalable solution for enterprises looking to move beyond proprietary systems.
+
+At the heart of this transformation is the Corios Analytics Modernization Platform (AMP), which simplifies the migration process while future-proofing businesses’ analytics capabilities.
+
+For those looking to see a detailed, step-by-step walkthrough of how to migrate SAS assets into the Dataiku environment, Robin Way and Austin Barber offer deeper insights in the upcoming Product Days from Dataiku.
+
+Modernizing Analytics for Scalability and Flexibility
+
+The Corios platform, combined with Dataiku’s powerful data science environment, provides businesses with a seamless transition from SAS workloads to a cloud-native, open-source ecosystem. For SAS Enterprise Guide users accustomed to point-and-click functionality, Corios converts these workflows into Dataiku’s visual recipes — maintaining ease of use while eliminating the limitations of proprietary SAS code. This unlocks the flexibility required to excel in modern cloud environments like Kubernetes, Databricks, and AWS.
+
+Real-World Example: Credit Risk Migration for a Leading U.S. Bank
+
+Corios’ platform has already proven its effectiveness, particularly in the financial sector. For example, a major U.S. bank worked with Corios to migrate its
+Current Expected Credit Loss (CECL)
+and credit risk platform from SAS to Dataiku and Databricks. Facing an end-of-life event for their legacy SAS system, the bank needed a solution that could modernize their entire credit risk process — ranging from upstream ETL, model management, and reporting — while maintaining stringent governance.
+
+Using the Corios AMP, Corios migrated the bank’s entire
+credit risk system
+into the Dataiku platform, integrating it with Databricks as the processing engine. This migration offered several benefits, such as:
+
+Talent acquisition and retention
+: The move to Dataiku and
+Databricks
+provided access to a broader talent pool, familiar with modern, open-source technologies like Python and Spark, unlike the proprietary skills required for SAS.
+
+Enhanced performance and cost reduction
+: The bank’s analytics processes became faster and more cost-efficient, thanks to the cloud-native capabilities of Databricks and Dataiku’s easy-to-use interface.
+
+Governance and compliance
+: Dataiku’s robust
+governance
+features ensured the bank could meet regulatory requirements while simplifying complex workflows, such as credit risk forecasting, which demand precise control and orchestration.
+
+This phased migration took about 18 months, with the CECL use case being the top priority, followed by stress testing and ongoing performance monitoring.
+
+Technical Breakdown: Corios’ Key Tools for Migration
+
+Corios’s Scanner conducts a comprehensive inventory of all SAS code, data, and users in an organization. It analyzes the complexity, value, and frequency of use of each SAS workload, creating a detailed roadmap for migration. The tool helps organizations filter out low-value, unused, or redundant workloads, significantly reducing the number of jobs to be migrated.
+For example, a typical enterprise might start with around 20,000 SAS. Using the Scanner’s filtering criteria — such as removing jobs that haven’t been run in over 180 days or eliminating duplicates — this number can be reduced by 40% to 80%, allowing teams to focus on the most critical workflows.
+
+The Translator
+
+Corios’s Translator is responsible for converting SAS code into Dataiku-friendly formats. It can take SAS Enterprise Guide projects, which are heavily reliant on point-and-click operations, and convert them into visual recipes within Dataiku.
+More complex SAS code that can’t be transformed into a visual recipe is converted into Dataiku code recipes, often using Python or Spark as the underlying languages. This ensures that even the most complex SAS workflows can be migrated effectively.
+Additionally, the data converter handles the data migration. For instance, SAS proprietary datasets are converted into formats compatible with Databricks and
+AWS
+, using Databricks Unity Catalog to manage and organize these datasets within the
+Dataiku workflows
+.
+
+The Academy
+
+Migration requires not only technical migration of code and data but also upskilling of personnel. The Corios Academy offers nine online courses to train both SAS users and integration engineers on how to successfully operate within Dataiku’s environment.
+
+Courses cover essential topics such as migrating from SAS to Python, SAS to SQL, and SAS to Spark, ensuring teams are equipped to handle open-source, cloud-based platforms. The
+Corios Academy
+is crucial in supporting SAS users who may have little experience with cloud or open-source environments.
+
+Enhancing Governance and Efficiency With Dataiku
+
+One of the key advantages of migrating from SAS to Dataiku is the enhanced governance and control that comes with Dataiku’s platform. Dataiku’s centralized platform ensures data integrity and compliance with industry regulations, offering a streamlined and efficient workflow.
+For highly regulated industries like banking, where precise control is necessary, Dataiku’s governance features make it much easier to manage complex applications like credit risk forecasting. Furthermore, Dataiku’s intuitive interface bridges the gap between coders and non-coders, enabling broader participation in analytics projects while maintaining oversight.
+
+A Future-Ready Analytics Environment
+
+By moving from SAS to Dataiku, businesses are not just migrating analytic workloads — they’re adopting a future-ready analytics environment. Dataiku’s ability to seamlessly integrate with platforms like Databricks, combined with its flexible interface that supports both technical and non-technical users, makes it an ideal platform for scaling analytics across the enterprise.
+
+The Corios AMP provides the tools and expertise to facilitate this transformation, ensuring that enterprises can successfully
+migrate
+and
+modern
+.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+My AWS re:Invent Takeaway: The End of “Just Build an Agent”
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Modernizing Analytics With Dataiku and Snowflake
+
+Building Agents With Snowflake Cortex AI at Every Level
+
+Scaling GenAI in Financial Services With Dataiku and NVIDIA
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+My AWS re:Invent Takeaway: The End of “Just Build an Agent”
+
+Each year, AWS re:Invent takes place at roughly the same time and in roughly the same place as the National...
+
+Jan 08, 2026
+
+Recommended
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while maintaining...
+
+Dec 03, 2025
+
+Analytics Modernization
+
+Modernizing Analytics With Dataiku and Snowflake
+
+Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools...
+
+Nov 11, 2025
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

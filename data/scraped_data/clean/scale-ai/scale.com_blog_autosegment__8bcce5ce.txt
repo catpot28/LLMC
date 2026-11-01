@@ -1,0 +1,216 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/autosegment
+page path  : /blog/autosegment
+captured   : 2026-04-19 06:05:22 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_autosegment__8bcce5ce.html.gz
+========================================================================
+
+Reducing image labeling time by up to 30% and doubling segmentation quality. | Scale AI
+
+Reducing image labeling time by up to 30% and doubling segmentation quality. | Scale AI
+Scale AI logo
+Book a Demo
+→
+Log In
+←
+Blog
+Engineering
+Faster Semantic Segmentation with Machine Learning-Assisted Workflows
+by
+
+Andrew Kondrich
+,
+Saleh Hamadeh
+,
+Sean Li
+and
+Thomas Liao
+Published
+November 9, 2021
+Reading Time
+6 min read
+Copy Link
+Why build an ML-based workflow for data labeling?
+Delivering high-quality data labels quickly is a challenging task. Even for
+humans, image and video data commonly found in self-driving or robotic
+applications can be compositionally challenging to parse and correctly
+annotate. At Scale, we use machine learning to augment human workflows to both
+improve the quality and speed of labeling. Since deep learning models can
+struggle to perform consistently across diverse data domains like self-driving
+car scenes, finding the optimal balance between ML automation and human
+supervision is necessary to ensure we maintain high-quality.
+Autosegment
+, an ML-powered tool that can accurately segment instances
+within a human-defined bounding box, allows us to delegate high-level
+reasoning about semantics and taxonomy to Taskers (human labelers) and basic
+pixel-level processing to an ML model. This division of labor enables us to
+build a general purpose and accurate ML labeling tool. Despite using a simple
+neural network,
+Autosegment
+outperforms prior tools.
+The Challenge of Semantic Segmentation Labeling
+Semantic segmentation involves human Taskers identifying and labeling every
+pixel in a visual scene — a notoriously time-consuming and tedious process.
+Most Tasker time in this manual approach — about 95% — is consumed by
+time-intensive work, such as carefully tracing the outlines of objects in a
+scene. For example: it takes roughly one minute to trace the outline of a car
+and only three seconds to click on that outline and select the label “Car.”
+What if we could instead use machine learning to automate the most laborious
+parts of semantic segmentation? What if an ML model did the semantic
+segmentation, and the Tasker only had to select the right label?
+A visual scene which has been semantically segmented. Each pixel is color
+coded to denote the class of object it represents, i.e. Pedestrian, Road,
+Bike, etc.
+As ML engineers, we rely heavily on quantitative validation metrics, such as
+label accuracy and intersection-over-union (IoU), to determine the quality
+of our models. However, when building models that optimize for a particular
+business outcome — for instance, reducing the time it takes Taskers to
+semantically segment images — we need to think critically about which model
+to use and how we measure its performance..
+In this example, our objective is to produce predictions that streamline the
+Taskers’ job. This is not necessarily the same as “best model performance.”
+For example, an instance segmentation model might be consistently inaccurate
+by just a few pixels around an object. This model might have a high IoU
+score but very little practical usefulness because Taskers would need to
+re-do every trace of the outline.
+Conversely, a model that can perfectly segment an object, even if it only
+identifies half of it, would still be extremely useful. Despite having lower
+IoU validation scores, it’s still an improvement to the overall workflow.
+Because it takes so long to trace outlines manually, having a model produce
+pixel-accurate partial outlines is still a significant time saver.
+The Active Tooling Paradigm and the Autosegment Tool
+Autosegment
+is a machine learning tool that segments the most
+salient object within a human-provided box annotation. It incorporates
+Tasker feedback at annotation time in a way that is flexible and iterative.
+When building
+Autosegment
+, we realized early on that the only way
+to provide flexibility and high quality was to give Taskers access to Active
+Tools.
+Active Tools let Taskers make changes to the model inputs and parameters in
+real time to generate the best output for their use case. This is similar to
+“prompt engineering,” the process by which we can coerce a neural language
+model like GPT-3 to generate desired text when given precise prompts. For
+more information, OpenAI hosts
+excellent documentation
+on how to design prompts for their GPT-3 model.
+Humans working alongside models can produce better results faster than
+models alone
+Using Active Tools, we give Taskers as many options as possible to make
+their tasks easier. For example, they can adjust the annotation box shape
+and the prediction confidence threshold to configure the model to speed up
+their particular labeling task.
+A demo of the Autosegment tool.
+Enabling humans to freely explore the output space of the model is a key
+advantage of active tooling. We've already seen how this is useful.
+Overall, we have observed the median annotation time per scene is about 30%
+faster with
+Autosegment
+. We also interviewed Taskers to see how
+they are using the tool. While our model is trained to segment cars and
+motorcycles, one Tasker used the tool to segment everything. While this
+wasn’t a workflow we had envisioned, it halved their time per scene
+segmentation, from 40 minutes to 20 minutes. In a discussion we had with
+five Taskers, they explained that they consider Autosegment to be more
+accurate and efficient than previous ML solutions. Now we can simply supply
+robust and general online models and let Taskers optimize the rest.
+The
+Autosegment
+Model
+Autosegment
+is a convolutional neural network trained to segment
+the most salient instance within a Tasker-defined bounding box. This simple
+design allows us to significantly reduce our customers’ operational overhead
+to deploy ML, while providing pixel-perfect instance segmentations, even on
+previously unseen instance types.
+The
+Autosegment
+model does not have to be particularly complex to
+produce compelling results. Autosegment has no notion of different semantic
+types; instead, it abstractly identifies and segments based on scene
+composition.
+The model is trained to always generate a segmentation. The training data
+includes a few key classes like pedestrians and vehicles. The task is
+binary; it simply determines whether each pixel belongs to the salient
+object or not. We don’t train the model with negative samples. Instead, the
+model makes its best guess on each pixel to generate a segmentation.
+We define the salient instance as the object that owns the central pixel of
+the crop, so even if the scene is cluttered, the model can identify the
+target instance to segment. This binary segmentation task across instance
+classes and types allows the model to generalize well on new classes and
+taxonomies. Indeed, we can transfer not only between objects of the same
+class, such as cars in different countries, but between different classes
+altogether — for instance, moving from cars to motorcycles to street signs.
+This transfer can be achieved with limited retraining or, in some cases, no
+retraining at all, achieving zero-shot transfer.
+Using salient object detection on specific crops of the scene can generate
+even more accurate segmentation. We were able to double the edge precision
+score from 0.26 to 0.52 when compared to off-the-shelf full-scene semantic
+segmentation models.
+Instead of supplying a downsampled version of the whole image to a neural
+network, the selected region is fed to the model at full resolution. Because
+the input is smaller, fewer pooling operations are required to achieve a
+globally receptive field. As a result, there is less downsampling and
+blurring. Our model achieves better fidelity around the edges of instances,
+a crucial part of providing high-quality data annotations to our customers.
+Improving full-scene labeling to the same degree would require exponentially
+more effort and complexity.
+In summary, we developed Active Tooling to create an ML-based workflow
+capable of solving basic computer vision problems. This workflow helps our
+Taskers reach higher levels of quality faster than in previous workflows.
+Innovations like
+Autosegment
+are critical to enable the “Moore's
+Law of data labeling.” At Scale AI, we’re excited to push the boundaries of
+human-AI interaction for our customers.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Products
+Research
+Enterprise
+Government
+Resources
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

@@ -1,0 +1,94 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/get-started/linux
+page path  : /product/get-started/linux
+captured   : 2026-04-12 16:27:12 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_product_get-started_linux__26078534.html.gz
+========================================================================
+
+Dataiku: The Platform for AI Success
+
+Dataiku: The Platform for AI Success
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+Request a demo
+Start trial
+Request a demo
+Install Dataiku on GNU/Linux
+Download Dataiku and get started on Linux. Follow the steps below to start using the platform for AI success.
+1. Download DSS
+wget https://cdn.downloads.dataiku.com/public/dss/13.3.2/dataiku-dss-13.3.2.tar.gz
+Or, use this
+direct link.
+
+DSS works on Ubuntu, Debian, CentOS, RHEL and Amazon Linux. For version details, please see our
+Requirements page
+.
+2. Unpack
+Unpack the downloaded archive where you want to install DSS.
+You must keep the directory even after installation is complete.
+tar xzf dataiku-dss-13.3.2.tar.gz
+3. Install
+Launch the installation script. You need to choose:
+A directory where Dataiku DSS will store configuration and data.
+A base TCP port.
+dataiku-dss-13.3.2/installer.sh -d DATA_DIR -p 11000
+4. Start
+DATA_DIR/bin/dss start
+5. Enter the studio
+Browse to
+http://<your server address>:11000
+.
+Only Chrome and Firefox are supported.
+For additional information, or any issue, please see our
+Learn
+section.
+
+Product
+Run enterprise AI as one system
+Deliver AI agents
+Govern AI everywhere
+Deliver trusted analytics
+Scale machine learning impact
+Watch the Dataiku platform demo
+Solutions
+Banking & FSI
+Life sciences
+Retail & CPG
+Manufacturing
+Utilities & energy
+Telecommunications
+Public sector
+Solutions catalog
+Stories
+Dataiku customer stories
+Stories
+AI success stories
+Aviva: Powering insurance with data, machine learning, & AI
+Johnson & Johnson: Transforming vision care with generative AI
+Roche: Transforming patent workflows with agentic AI
+Novartis: Streamlining analytics & AI across the organization
+Perdue Farms: From data chaos to clarity with Dataiku
+Company
+About Dataiku
+Join Dataiku
+Dataiku partners
+Events calendar
+Customers
+Newsroom
+Dataiku for the future
+575 Lab – Dataiku's Open Source Office
+Get the latest from our team
+Find us on social media
+© 2026 Dataiku. All Rights Reserved.
+Privacy
+Trust
+Legal
+English

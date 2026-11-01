@@ -1,0 +1,774 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/choosing-the-right-vector-embedding-model-for-your-generative-ai-use-case/
+page path  : /blog/choosing-the-right-vector-embedding-model-for-your-generative-ai-use-case/
+captured   : 2026-04-21 11:14:40 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_blog_choosing-the-right-vector-embedding-model-for-your-generative-ai-use-case__54a7fccd.html.gz
+========================================================================
+
+Choosing the right vector embedding model for your generative AI use case | DataRobot Blog
+
+Choosing the right vector embedding model for your generative AI use case | DataRobot Blog
+
+Skip to content
+
+Location
+
+us
+
+jp
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Location
+
+us
+
+jp
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Choosing the right vector embedding model for your generative AI use case
+
+In
+our previous post
+, we discussed considerations around choosing a vector database for our hypothetical
+retrieval-augmented generation
+(RAG) use case. But when building a RAG application we often need to make another important decision: choose a vector embedding model, a critical component of many
+generative AI
+applications.
+
+A vector embedding model is responsible for the transformation of unstructured data (text, images, audio, video) into a vector of numbers that capture semantic similarity between data objects. Embedding models are widely used beyond RAG applications, including recommendation systems, search engines, databases, and other data processing systems.
+
+Understanding their purpose, internals, advantages, and disadvantages is crucial and that’s what we’ll cover today. While we’ll be discussing text embedding models only, models for other types of unstructured data work similarly.
+
+What Is an Embedding Model?
+
+Machine learning models don’t work with text directly, they require numbers as input. Since text is ubiquitous, over time, the ML community developed many solutions that handle the conversion from text to numbers. There are many approaches of varying complexity, but we’ll review just some of them.
+
+A simple example is
+one-hot encoding
+: treat words of a text as categorical variables and map each word to a vector of 0s and single 1.
+
+Unfortunately, this embedding approach is not very practical, since it leads to a large number of unique categories and results in unmanageable dimensionality of output vectors in most practical cases. Also, one-hot encoding does not put similar vectors closer to one another in a vector space.
+
+Embedding models were invented to tackle these issues. Just like one-hot encoding, they take text as input and return vectors of numbers as output, but they are more complex as they are taught with supervised tasks, often using a neural network. A supervised task can be, for example, predicting product review sentiment score. In this case, the resulting embedding model would place reviews of similar sentiment closer to each other in a vector space. The choice of a supervised task is critical to producing relevant embeddings when building an embedding model.
+
+Word embeddings projected onto 2D axes
+
+On the diagram above we can see word embeddings only, but we often need more than that since human language is more complex than just many words put together. Semantics, word order, and other linguistic parameters should all be taken into account, which means we need to take it to the next level –
+sentence embedding models
+.
+
+Sentence embeddings associate an input sentence with a vector of numbers, and, as expected, are way more complex internally since they have to capture more complex relationships.
+
+Thanks to progress in deep learning, all state-of-the-art embedding models are created with deep neural nets, since they better capture complex relationships inherent to a human language.
+
+A good embedding model should:
+
+Be fast
+since often it is just a preprocessing step in a larger application
+
+Return vectors of
+manageable dimensions
+
+Return vectors that
+capture enough information about similarity
+to be practical
+
+Let’s now quickly look into how most embedding models are organized internally.
+
+Modern Neural Networks Architecture
+
+As we just mentioned, all well-performing state-of-the-art embedding models are deep neural networks.
+
+This is an actively developing field and most top performing models are associated with some novel architecture improvement. Let’s briefly cover two very important architectures: BERT and GPT.
+
+BERT (Bidirectional Encoder Representations from Transformers) was published in 2018 by researchers at Google and described the application of the bidirectional training of “transformer”, a popular attention model, to language modeling. Standard transformers include two separate mechanisms: an encoder for reading text input and a decoder that makes a prediction.
+
+BERT uses an encoder that reads the entire sentence of words at once which allows the model to learn the context of a word based on all of its surroundings, left and right unlike legacy approaches that looked at a text sequence from left to right or right to left. Before feeding word sequences into BERT, some words are replaced with [MASK] tokens and then the model attempts to predict the original value of the masked words, based on the context provided by the other, non-masked words in the sequence.
+
+Standard BERT does not perform very well in most benchmarks and BERT models require task-specific fine-tuning. But it is open-source, has been around since 2018, and has relatively modest system requirements (can be trained on a single medium-range GPU). As a result, it became very popular for many text-related tasks. It is fast, customizable, and small. For example, a very popular all-Mini-LM model is a modified version of BERT.
+
+GPT (Generative Pre-Trained Transformer) by OpenAI is different. Unlike BERT, It is unidirectional, i.e. text is processed in one direction and uses a decoder from a transformer architecture that is suitable for predicting the next word in a sequence. These models are slower and produce very high dimensional embeddings, but they usually have many more parameters, do not require fine-tuning, and are more applicable to many tasks out of the box. GPT is not open source and is available as a paid API.
+
+Context Length and Training Data
+
+Another important parameter of an embedding model is context length. Context length is the number of tokens a model can remember when working with a text. A longer context window allows the model to understand more complex relationships within a wider body of text. As a result, models can provide outputs of higher quality, e.g. capture semantic similarity better.
+
+To leverage a longer context, training data should include longer pieces of coherent text: books, articles, and so on. However, increasing context window length increases the complexity of a model and increases compute and memory requirements for training.
+
+There are methods that help manage resource requirements e.g. approximate attention, but they do this at a cost to quality. That’s another trade-off that affects quality and costs: larger context lengths capture more complex relationships of a human language, but require more resources.
+
+Also, as always, the quality of training data is very important for all models. Embedding models are no exception.
+
+Semantic Search and Information Retrieval
+
+Using embedding models for semantic search is a relatively new approach. For decades, people used other technologies: boolean models, latent semantic indexing (LSI), and various probabilistic models.
+
+Some of these approaches work reasonably well for many existing use cases and are still widely used in the industry.
+
+One of the most popular traditional probabilistic models is BM25 (BM is “best matching”), a search relevance ranking function. It is used to estimate the relevance of a document to a search query and ranks documents based on the query terms from each indexed document. Only recently have embedding models started consistently outperforming it, but BM25 is still used a lot since it is simpler than using embedding models, it has lower computer requirements, and the results are explainable.
+
+Benchmarks
+
+Not every model type has a comprehensive evaluation approach that helps to choose an existing model.
+
+Fortunately, text embedding models have common benchmark suites such as:
+
+BEIR
+
+The article “BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models” proposed a reference set of benchmarks and datasets for information retrieval tasks. The original BEIR benchmark consists of a set of 19 datasets and methods for search quality evaluation. Methods include: question-answering, fact-checking, and entity retrieval. Now anyone who releases a text embedding model for information retrieval tasks can run the benchmark and see how their model ranks against the competition.
+
+MTEB
+
+Massive Text Embedding Benchmarks include BEIR and other components that cover 58 datasets and 112 languages. The public leaderboard for MTEB results can be found
+here
+.
+
+These benchmarks have been run on a lot of existing models and their leaderboards are very useful to make an informed choice about model selection.
+
+Using Embedding Models in a Production Environment
+
+Benchmark scores on standard tasks are very important, but they represent only one dimension.
+
+When we use an embedding model for search, we run it twice:
+
+When doing offline indexing of available data
+
+When embedding a user query for a search request
+
+There are two important consequences of this.
+
+The first is that we have to reindex all existing data when we change or upgrade an embedding model. All systems built using embedding models should be designed with upgradability in mind because newer and better models are released all the time and, most of the time, upgrading a model is the easiest way to improve overall system performance. An embedding model is a less stable component of the system infrastructure in this case.
+
+The second consequence of using an embedding model for user queries is that the inference latency becomes very important when the number of users goes up. Model inference takes more time for better-performing models, especially if they require GPU to run: having latency higher than 100ms for a small query is not unheard of for models that have more than 1B parameters. It turns out that smaller, leaner models are still very important in a higher-load production scenario.
+
+The tradeoff between quality and latency is real and we should always remember about it when choosing an embedding model.
+
+As we have mentioned above, embedding models help manage output vector dimensionality which affects the performance of many algorithms downstream. Generally the smaller the model, the shorter the output vector length, but, often, it is still too great for smaller models. That’s when we need to use dimensionality reduction algorithms such as PCA (principal component analysis), SNE / tSNE (stochastic neighbor embedding), and UMAP (uniform manifold approximation).
+
+Another place we can use dimensionality reduction is before storing embeddings in a database. Resulting vector embeddings will occupy less space and retrieval speed will be faster, but will come at a price for the quality downstream. Vector databases are often not the primary storage, so embeddings can be regenerated with better precision from the original source data. Their use helps to reduce the output vector length and, as a result, makes the system faster and leaner.
+
+Making the Right Choice
+
+There’s an abundance of factors and trade-offs that should be considered when choosing an embedding model for a use case. The score of a potential model in common benchmarks is important, but we should not forget that it’s the larger models that have a better score. Larger models have higher inference time which can severely limit their use in low latency scenarios as often an embedding model is a pre-processing step in a larger pipeline. Also, larger models require GPUs to run.
+
+If you intend to use a model in a low-latency scenario, it’s better to focus on latency first and then see which models with acceptable latency have the best-in-class performance. Also, when building a system with an embedding model you should plan for changes since better models are released all the time and often it’s the simplest way to improve the performance of your system.
+
+Stay ahead in the evolving landscape of generative AI. Watch our on-demand webinar,
+Navigating the Future of Generative AI
+to explore the latest trends and advancements.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Authors
+
+by
+
+Nick Volynets
+
+March 7, 2024
+
+|
+8 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Leaders
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+April 13, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Leaders
+
+Why enterprise AI ROI starts with observability
+
+April 10, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Leaders
+
+Best agentic AI platforms: Why unified platforms win
+
+April 8, 2026
+
+|
+10 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

@@ -1,0 +1,124 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/future-ai-learning
+page path  : /blog/future-ai-learning
+captured   : 2026-04-19 05:37:04 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_future-ai-learning__a242ce43.html.gz
+========================================================================
+
+The Future of AI Learning Environments | Scale AI
+
+The Future of AI Learning Environments | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Research
+The Future of AI Learning Environments: Verifiable Reward + Multi-Agent Interaction
+by
+
+Matthew Siegel
+and
+Sean Hendryx
+Published
+June 23, 2025
+Reading Time
+5 min read
+Copy Link
+📝
+Adaptive Guidance Accelerates Reinforcement Learning of Reasoning Models
+📝
+Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards
+What will the learning environments that train artificial super-intelligence look like? We can find clues in the organizations that consistently produce the world's greatest human talent and breakthroughs. There are two key traits always present, whether within frontier labs, top-tier universities, or leading tech companies: (1) an environment with rich, unhackable rewards that signal true success, and (2) a collaborative, multi-agent structure where interaction produces multiplicative returns.
+While recent AI research has shown consistent progress from reinforcement learning with verifiable rewards (RLVR) and separate advancements in the multi-agent space, we believe the next frontier lies in their integration. The most advanced AI systems of the future will not learn in isolation but in rich interactive ecosystems that combine objective, verifiable rewards with multi-agent learning.
+In two recent papers, Scale researchers make foundational steps in this direction. We demonstrate novel methods that integrate dynamic natural language feedback—a core component of collaborative learning—with verifiable rewards in a multi-agent, student-teacher setup. While in our initial experiments the student is trained while the teacher is frozen, we expect in the future this process will be iterated or that these models will co-evolve together.
+Adaptive Guidance Accelerates Reinforcement Learning of Reasoning Models
+In this paper, we first investigate the fundamental mechanics of how models learn via RLVR and then use those insights to accelerate progress.
+How
+Guide
+Works:
+Our research first found that models learn primarily through self-distillation (getting better at reliably finding answers they could already reach with multiple attempts) rather than capability gain (discovering genuinely new knowledge). Based on this key insight, our method
+Guide
+introduces a "teacher" that provides targeted hints only when a "student" model fails all of its attempts at a problem. The training algorithm (
+Guide-GRPO
+) then uses off-policy corrections to ensure the student learns to solve problems independently, without guidance, at test time.
+What We Found:
+We confirmed that learning in RLVR is primarily driven by self-distillation—compressing what a model could find in k attempts into a single, reliable answer.
+Providing targeted hints on failure dramatically increases the number of successful solutions, expanding the pool of correct examples available for self-distillation.
+Guide-GRPO
+was empirically and theoretically shown to improve learning efficiency and generalization compared to standard RLVR methods.
+These findings were demonstrated across large-scale experiments spanning over 500,000 problems and models ranging from 0.5B to 72B parameters.
+Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards
+In this paper, we apply the student-teacher concept to the complex, multi-step domain of software engineering, where reward signals are incredibly sparse.
+How
+Agent-RLVR
+Works:
+
+Agent-RLVR
+sets up a training loop where a student agent first attempts to solve a real-world software engineering issue (e.g., fixing a bug in a large codebase). Its proposed code patch is validated by running unit tests in a live environment. If the tests fail, a teacher agent provides targeted, natural language guidance based on the specific error, suggesting a plan or pointing to relevant files. The student agent then re-attempts the task with this guidance. The policy is updated via offline DPO, learning from the successful guided trajectories to prefer correct solutions.
+What We Found:
+Agent-RLVR
+is highly effective, elevating the performance of a 72B parameter model on the SWE-Bench benchmark from a 9.4% to a 22.4% Pass@1 success rate, using a relatively small dataset of 817 training environments.
+This guided approach significantly outperforms a strong Supervised Fine-Tuning (SFT) baseline, demonstrating the power of this RL method.
+The rich data generated from this process is also highly effective for training a separate reward model, which, when used to rank potential solutions at test time, boosts the final Pass@1 performance even further to 27.8%.
+Why This Approach Works
+At its core, this interactive student-teacher framework is effective because it directly addresses the critical bottleneck in agentic learning:
+sparse rewards
+. In a complex task like coding, an agent can make thousands of changes without ever stumbling upon a solution that passes unit tests and thereby receiving no learning signal. As the length and complexity of tasks increase, the likelihood of an agent reaching a goal state on its own decreases exponentially. By offering a targeted hint in
+natural language
+, the agents collaboratively collapse an impossibly vast search space into a manageable one, allowing the student to discover a successful trajectory far more efficiently. This mimics how humans learn complex skills through a feedback loop with mentors who provide crucial, timely guidance, rather than through pure, unguided trial and error.
+Ultimately, this work is a step toward building AI systems that learn from a broader and more sophisticated diversity of signals. The learning environments of the future will be defined by this rich interplay between objective, verifiable feedback from the environment and collaborative, natural language feedback from other agents. As we scale these methods to even more complex domains and larger models, we anticipate this collaborative learning paradigm will become essential infrastructure for training the next generation of AI systems.
+Acknowledgments
+Core Research Contributors:
+Jeff Da, Vaskar Nath, Elaine Lau, Anisha Gunjal, Manasi Sharma, Clinton Wang, Nikhil Barhate, Xiang Deng, Tommy Ma, Sean Hendryx
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

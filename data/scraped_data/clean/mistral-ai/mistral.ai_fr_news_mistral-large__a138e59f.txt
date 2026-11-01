@@ -1,0 +1,179 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/mistral-large
+page path  : /fr/news/mistral-large
+captured   : 2026-02-14 04:32:49 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_mistral-large__a138e59f.html.gz
+========================================================================
+
+Au Large | Mistral AI
+
+Au Large | Mistral AI
+Produits
+Solutions
+Recherche
+Ressources
+Tarifs
+Entreprise
+Essayez Studio
+Contactez-nous
+Au Large
+Mistral Large est notre modèle le plus performant. Il possède des capacités de raisonnements à l'état de l'art, et est également disponible sur Azure.
+Research
+Feb 26, 2024
+Mistral AI team
+Nous sommes ravis de vous présenter
+Mistral Large
+, notre modèle de langue le plus capable.
+Mistral Large
+est disponible via la Plateforme et également via Azure, notre premier partenaire de distribution.
+
+Mistral Large, notre nouveau modèle phare
+
+Mistral Large est notre nouveau modèle de génération de texte. Il atteint des capacités de raisonnement de haut niveau et peut être utilisé pour des tâches de raisonnement multilingue complexes, en particulier en compréhension et en transformation de texte, ainsi qu'en génération de code.
+
+Mistral Large obtient d'excellents résultats sur les benchmarks standards, ce qui en fait le deuxième modèle le plus performant au monde disponible via une API (consultez le détail des benchmarks plus bas).
+
+Figure 1: Comparison de GPT-4, Mistral Large (pré-entrainé), Claude 2, Gemini Pro 1.0, GPT 3.5 and LLaMA 2 70B sur MMLU (Measuring massive multitask language
+understanding).
+
+Mistral Large vient avec de nouvelles capacités :
+
+Il maîtrise
+l'anglais, le français, l'espagnol, l'allemand et l'italien
+, avec une compréhension nuancée de la grammaire et du contexte culturel.
+
+Sa
+fenêtre de contexte de 32K tokens
+permet de retrouver de l'information de manière précise dans des grands corpus de documents.
+
+Son
+suivi précis des instructions
+permet aux développeurs de définir leurs
+politiques de modération
+; nous proposons un mode sécurisé optionnel qui peut être activé pour la modération de contenu sensible.
+
+Il est nativement capable d'appeler des fonctions.
+Cela, combiné avec le mode "JSON output", mis en œuvre sur la Plateforme, permet le développement d'applications en lien avec des systèmes existants, et la modernisation des piles technologiques à grande échelle.
+
+Partenariat avec Microsoft pour fournir nos modèles sur Azure
+
+Chez Mistral, notre mission est de diffuser une IA à la pointe partout où elle peut être utilisée. À ce titre, nous sommes très heureux d'annoncer dès aujourd'hui la mise à disposition de nos modèles ouverts et commerciaux à Azure. C'est une étape importante dans notre parcours ! Nos modèles sont désormais disponibles via :
+
+La Plateforme
+: hébergée en toute sécurité sur l'infrastructure de Mistral en Union Européenne, elle permet aux développeurs de créer des applications et des services sur notre gamme complète de modèles.
+
+Azure
+: Mistral Large est disponible via
+Azure AI Studio et Azure Machine Learning
+, avec une expérience utilisateur similaire à celle de notre plateforme. Nos premiers clients l'ont utilisé avec
+succès
+.
+
+Déploiement en propre
+: nos modèles peuvent être déployés sur votre environnement pour les cas d'utilisation les plus sensibles avec accès à nos poids de modèle ; lisez les histoires de réussite sur ce type de déploiement, et contactez notre équipe pour plus de détails.
+
+Capacités de Mistral Large
+
+Comparons les performances de Mistral Large aux modèles LLM de tête sur les benchmarks couramment utilisés.
+
+Raisonnement et connaissances
+
+Mistral Large fait preuve de puissantes capacités de raisonnement. Dans la figure suivante, nous comparons ses performances à celle d'un certain nombre
+d'autre LLMs sur un ensemble d'évaluations standards.
+
+Figure 2 : Performances sur les benchmarks de bon sens, de raisonnement et de connaissances couramment utilisés pour évaluer les LLMs sur le marché : MMLU (Measuring massive multitask language in understanding), HellaSwag (10-shot), Wino Grande (5-shot), Arc Challenge (5-shot), Arc Challenge (25-shot), TriviaQA (5-shot) et TruthfulQA.
+
+Capacités multilingues
+
+Mistral Large est nativement multilingue. Il surpasse largement Llama 2 70B sur les benchmarks HellaSwag, Arc Challenge et MMLU en français, allemand, espagnol et italien.
+
+Figure 3 : Comparaison de Mistral Large, Mixtral 8x7B et LLaMA 2 70B sur HellaSwag, Arc Challenge et MMLU en français, allemand, espagnol et italien.
+
+Mathématiques et codage
+
+Dans le tableau ci-dessous, nous évaluons Mistral Large sur des tests de programmation et de mathématiques, et le comparons à d'autres LLMs sur le marché.
+
+Figure 4 : Performances sur les benchmarks de codage et de mathématiques populaires des modèles LLM de tête sur le marché.
+
+Un nouveau Mistral Small, optimisé pour les charges de travail à faible latence
+
+En parallèle de Mistral Large, nous sortons un nouveau modèle optimisé, Mistral Small, optimisé pour la latence et le coût. Mistral Small surpasse et a une latence plus faible que Mixtral 8x7B, ce qui en fait une solution intermédiaire raffinée entre notre offre de poids ouverts et notre modèle phare.
+
+Mistral Small bénéficie des mêmes innovations que Mistral Large en ce qui concerne l'activation RAG et l'appel de fonction.
+
+Nous simplifions notre offre de endpoints de génération pour fournir ce qui suit :
+
+Exposition de nos modèles ouverts à tarif compétitif: ce sont les endpoints
+open-mistral-7B
+et
+open-mixtral-8x7b
+.
+
+Nouveaux endpoints exposant nos modèles commerciaux:
+mistral-small-2402
+et
+mistral-large-2402
+. Nous maintenons toujours
+mistral-medium
+, que nous n'avons pas mis à jour.
+
+Nos
+benchmarks
+donnent une vision globale des compromis coût-performance dans la gamme des modèles Mistral.
+
+Au-delà de la nouvelle offre de modèles, la Plateforme permet désormais la gestion des organisations, la tarification multi-devises. Nous avons aussi mis à jour les niveaux de service sur la Plateforme. Depuis Décembre, nous avons fait beaucoup de progrès pour améliorer la qualité de service de tous nos endpoints.
+
+Format JSON et appel de fonction
+
+Le mode "JSON output" force la sortie du modèle à respecter la syntaxe JSON. Cette fonctionnalité permet aux développeurs d'interagir avec nos modèles de manière plus naturelle pour extraire des informations dans un format structuré. Celui-ci peut être facilement utilisé dans le suite de leurs pipelines.
+
+L'appel de fonction permet aux développeurs d'interfacer les modèles Mistral avec un ensemble de leurs propres outils, permettant des interactions plus complexes avec le code interne, les API ou les bases de données. N'hésitez pas à jeter un coup d'œil à notre
+guide d'appel de fonction
+.
+
+L'appel de fonction et le format JSON ne sont disponibles que sur mistral-small et mistral-large. Nous ajouterons la mise en forme à tous les endpoints prochainement, ainsi que l'activation de définitions de format plus fines.
+
+Essayez Mistral Large et Mistral Small dès aujourd'hui
+
+Mistral Large est disponible sur la Plateforme et Azure à partir d'aujourd'hui. Mistral Large est également exposé sur notre assistant,
+le Chat
+. Comme toujours, nous sommes impatients d'avoir vos retours !
+
+Partager
+Plus
+Actualités
+Modèles
+Services IA
+Le prochain chapitre de l'IA est le vôtre.
+
+Essayez Le Chat
+Construire avec AI Studio
+Parler à un expert
+Mistral AI ©
+2026
+Pourquoi Mistral
+Qui sommes-nous
+Nos clients
+Carrières
+Contactez-nous
+Explorer
+Solutions IA
+Partenaires
+Recherche
+Documentation
+Créer
+Studio
+Le Chat
+Vibe
+Mistral Compute
+Légal
+Conditions d'utilisation
+Politique de confidentialité
+Choix des cookies
+Contrat de traitement des données
+Mentions légales
+Marque
+fr
+Mistral AI ©
+2026

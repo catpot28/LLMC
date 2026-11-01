@@ -1,0 +1,209 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/perplexigrid
+page path  : /cookbook/showcase/perplexigrid
+captured   : 2026-01-25 03:31:08 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_perplexigrid__056f4877.html.gz
+========================================================================
+
+PerplexiGrid | Interactive Analytics Dashboards - Perplexity
+
+PerplexiGrid | Interactive Analytics Dashboards - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+PerplexiGrid | Interactive Analytics Dashboards
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+Features
+How it uses Sonar
+Usage
+Code Explanation
+Prompt Modes
+Tech Stack
+Links
+Community Showcase
+PerplexiGrid | Interactive Analytics Dashboards
+Copy page
+Instantly generate analytics dashboards from natural language using live data via Perplexity Sonar API.
+Copy page
+PerplexiGrid
+turns natural language into rich, interactive dashboards. Connect your data and mix it with live web data, ask a question, and let the Sonar API do the rest! Complete with drag-and-drop layout, AI widget generation, and ECharts-powered visualizations.
+
+​
+Features
+
+Natural Language to Dashboards
+: Convert plain English prompts into fully functional analytics dashboards with 25+ widget types
+
+Live Data Integration
+: Blend your own data sources with real-time web data for comprehensive insights
+
+Interactive Grid Layout
+: Drag-and-drop interface for customizing dashboard layouts and styling
+
+AI-Powered Refinement
+: Refine or add widgets using conversational updates
+
+Export & Share
+: Generate PDF exports, high-res images, and shareable dashboard links
+
+​
+How it uses Sonar
+
+PerplexiGrid leverages the Sonar API through four specialized modes:
+
+Full Dashboard Generation (f1)
+: Creates comprehensive dashboards with multiple widgets using Sonar Pro’s advanced capabilities
+
+Lightweight Mode (l1)
+: Generates quick visualizations for embedded systems and real-time applications
+
+Dashboard Updates (r1)
+: Enables dynamic modifications through natural language while maintaining context
+
+Widget Refinement (r2)
+: Provides precise control over individual widget updates
+
+The system uses structured JSON schema responses to ensure consistent, ECharts-compatible output that can be directly rendered as interactive visualizations.
+
+​
+Usage
+
+Open the app and start a new dashboard
+
+Prompt it like:
+“Show me market trends in AI startups in 2024”
+(Sonar generates chart configs, which are parsed and rendered as live widgets)
+
+Rearrange and style the widgets with the grid interface
+
+Add your own datasources to blend your data with live web data
+
+Refine them via text prompts or export the dashboard as needed
+
+Collaborate and share easily
+
+​
+Code Explanation
+
+The user sends messages that are turned into prompts to a Supabase Edge Function that wraps the Perplexity Sonar API.
+
+Depending on the mode (
+f1
+,
+l1
+,
+r1
+, or
+r2
+), the function generates full structured outputs for dashboards, lightweight visualizations, or targeted updates.
+
+The generated layout is parsed into structured widget definitions and passed through our widget creation engine.
+
+Explore our
+main sonar-api service here.
+
+​
+Prompt Modes
+
+Mode
+Description
+Use Case
+Notes
+f1
+First-time full dashboard generation
+User starts with an empty canvas and enters an initial prompt
+Produces a complete dashboard layout with multiple widgets
+l1
+Lightweight dashboard generation
+Used for quick insights or previews with minimal tokens
+Faster and cheaper, but returns fewer widgets with less instruction depth
+r1
+Full dashboard regeneration
+User wants to replace all existing widgets with a new prompt
+Rebuilds the entire dashboard while keeping layout intact
+r2
+Targeted widget update
+User wants to change a specific widget (e.g. “make this a pie chart”)
+Only the selected widget is modified based on the new instruction
+
+​
+Tech Stack
+
+Frontend
+: React + Vite (TypeScript), ECharts, react-grid-layout
+
+Backend
+: Supabase Edge Functions (TypeScript on Deno)
+
+AI Engine
+: Perplexity Sonar Pro
+
+Infrastructure
+: Supabase (PostgreSQL, RLS, Auth), Vercel deployment
+
+​
+Links
+
+GitHub Repository
+
+Live Demo
+
+Website
+
+Was this page helpful?
+Yes
+No
+Perplexity Dart & Flutter SDKs
+Previous
+Valetudo AI | Trusted Medical Answer Assistant
+Next
+⌘
+I
+x
+discord
+website
+Powered by

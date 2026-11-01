@@ -1,0 +1,302 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/bug-report-incorrect-citation-mapping-in-pro-search-api-responses/3112
+page path  : /t/bug-report-incorrect-citation-mapping-in-pro-search-api-responses/3112
+captured   : 2026-05-14 04:29:39 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/community.perplexity.ai_t_bug-report-incorrect-citation-mapping-in-pro-search-api-responses_3112__5804fa62.html.gz
+========================================================================
+
+Bug Report: Incorrect Citation Mapping in Pro Search API Responses - Bug Reports - Perplexity API Platform Forum
+
+Bug Report: Incorrect Citation Mapping in Pro Search API Responses - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Bug Report: Incorrect Citation Mapping in Pro Search API Responses
+
+Bug Reports
+
+sonar-pro
+,
+
+chat-completions
+
+Tim_A
+
+December 15, 2025, 11:12pm
+
+1
+
+We are testing Pro search in API calls to create daily email briefs. It is returning better results overall however the in-line citations ([1]) seem to be one-off from the actual citations in the search results URLs.
+
+Full report:
+
+Pro Search API returns citation numbers that don’t match the actual source article in
+search_results
+array.
+When using domain-limited searches with Pro Search, the model sometimes attributes quotes to the wrong
+search_results
+index, causing incorrect citation URLs.
+
+Steps to Reproduce
+
+API Configuration:
+
+Model:
+sonar-pro
+
+Search mode:
+auto
+(resolves to Pro Search for complex queries)
+
+Using
+search_domain_filter
+parameter with specific Substack domains
+
+Example Query:
+
+What insights or analysis has been published about content clipping or viral video production? Structure response with: SECTION 1 - DIRECT QUOTES (extract verbatim quotes with publication names), SECTION 2 - STRATEGIC ANALYSIS
+
+Domain filter:
+
+“search_domain_filter”: [
+
+“creatormag.blog”,
+
+“
+thepublishpress.com
+”,
+
+“
+contentgrip.com
+”,
+
+“
+liahaberman.substack.com
+”
+
+// (and others)
+
+]
+
+The Problem
+
+In the API response, Perplexity cites
+[3]
+for this ContentGrip quote:
+
+“Shared Collections expand TikTok’s existing save-and-organize functionality by allowing two users to jointly curate and manage saved videos.” [3]
+
+But
+search_results[2]
+(citation [3]) is actually:
+
+Title: “McDonald’s AI Christmas ad pulled - ContentGrip”
+
+URL:
+https://www.contentgrip.com/mcdonalds-pulls-ai-christmas-ad/
+
+This article is about McDonald’s, not TikTok Shared Collections
+
+The correct source is
+search_results[1]
+(citation [2]):
+
+Title: “TikTok Shared Feeds and Collections - ContentGrip”
+
+URL:
+https://www.contentgrip.com/tiktok-shared-collections-and-feeds/
+
+This is where the quote actually comes from
+
+Pattern Observed
+
+This happens consistently when:
+
+Multiple search results are from the same domain (e.g., several ContentGrip articles)
+
+Using Pro Search with domain filtering
+
+Requesting verbatim quotes with citations
+
+The model appears to synthesize across sources but mis-maps which specific article contained which quote.
+
+Environment
+
+API Endpoint:
+
+/v1/messages
+(Perplexity Sonar API)
+
+Model:
+
+sonar-pro
+
+Search Context:
+
+medium
+
+Access:
+Via Superblocks workflow automation (programmatic API calls)
+
+Supporting Data
+
+Full API Response (excerpt):
+
+{
+
+“message”: {
+
+“content”: “…ContentGrip\n\“Shared Collections expand TikTok’s existing save-and-organize functionality by allowing two users to jointly curate and manage saved videos.\” [3]…”
+
+},
+
+“search_results”: [
+
+{
+
+“title”: "A Prediction Market for Creator Videos? Bet. ",
+
+“url”: “
+https://news.thepublishpress.com/..
+.”
+
+},
+
+{
+
+“title”: “TikTok Shared Feeds and Collections - ContentGrip”,
+
+“url”: “
+https://www.contentgrip.com/tiktok-shared-collections-and-feeds/
+”
+
+},
+
+{
+
+“title”: “McDonald’s AI Christmas ad pulled - ContentGrip”,
+
+“url”: “
+https://www.contentgrip.com/mcdonalds-pulls-ai-christmas-ad/
+”
+
+}
+
+]
+
+}
+
+The quote cites [3] (McDonald’s article) but actually comes from [2] (TikTok article).
+
+Expected Behavior
+
+Citation numbers in the response content should correctly map to the
+search_results
+array index (1-indexed) where the information was sourced.
+
+Impact
+
+This breaks citation accuracy for automated research workflows that rely on Perplexity’s citation mapping. Users cannot trust that clicking a citation will take them to the correct source article.
+
+I do not think that this was an issue for us when we were using the normal Fast search but popped up when we started testing Pro search (actually set to auto but for these queries it is using pro due to complexity)
+
+Thanks in advance for any help!
+
+willpenman
+
+March 24, 2026, 12:58pm
+
+2
+
+This is happening to us too. We do not have search domain filters set up, and are not requesting verbatim quotes. I suspect it’s a problem related to there being multiple searches under the hood being bundled into one response. Have there been any updates? It’s not great for users to have citations that are definitely incorrect.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Significant Citation Discrepancy Between Perplexity Web UI and API
+
+Bug Reports
+
+search-api
+
+0
+
+208
+
+December 8, 2025
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+4
+
+279
+
+May 15, 2025
+
+'citations': [], 'search_results': [] not working when using search_domain_filter
+
+Bug Reports
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+python-sdk
+
+0
+
+63
+
+January 28, 2026
+
+API Returning empty search_results object
+
+Bug Reports
+
+sonar-pro
+
+9
+
+654
+
+August 12, 2025
+
+Model content vs search_results & citations references
+
+General
+
+sonar-pro
+
+1
+
+141
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

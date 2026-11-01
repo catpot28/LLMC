@@ -1,0 +1,209 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/fact-dynamics
+page path  : /cookbook/showcase/fact-dynamics
+captured   : 2026-01-25 03:29:02 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_fact-dynamics__47e13a4f.html.gz
+========================================================================
+
+Fact Dynamics | Real-time Fact-Checking Flutter App - Perplexity
+
+Fact Dynamics | Real-time Fact-Checking Flutter App - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Features
+Prerequisites
+Installation (Follow Detailed guideline on the Repository)
+Usage
+Real-time Speech Fact-Checking
+Image Analysis
+Screenshots
+Code Explanation
+Open Source SDKs
+Demo Video
+Links
+Community Showcase
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Copy page
+Cross-platform app for real-time fact-checking of debates, speeches, and images using Perplexity’s Sonar API
+Copy page
+​
+Fact Dynamics | Real-time Fact-Checking Flutter App
+
+Hackathon Submission
+- Built for Perplexity Hackathon in Information Tools & Deep Research categories.
+
+Fact Dynamics is a cross-platform Flutter app that provides real-time fact-checking for spoken content and images. Perfect for live debates, presentations, and on-the-fly information verification.
+
+​
+Features
+
+Real-time speech transcription and fact-checking during live conversations
+
+Image text extraction and claim verification with source citations
+
+Claim rating system (TRUE, FALSE, MISLEADING, UNVERIFIABLE) with explanations
+
+Source citations - Provides authoritative URLs backing each verdict
+
+Debate mode with continuous speech recognition and streaming feedback
+
+User authentication via Firebase (Google, Email) with persistent chat history
+
+Cross-platform support for iOS, Android, and Web
+
+​
+Prerequisites
+
+Flutter SDK 3.0.0 or newer
+
+Dart SDK 2.17.0 or newer
+
+Firebase CLI for authentication and database setup
+
+Perplexity API key for Sonar integration
+
+Device with microphone access for speech recognition
+
+​
+Installation (Follow Detailed guideline on the Repository)
+
+Copy
+Ask AI
+git
+clone
+https://github.com/vishnu32510/fact_pulse.git
+
+cd
+fact_pulse
+
+flutter
+pub
+get
+
+​
+Usage
+
+​
+Real-time Speech Fact-Checking
+
+Streams 5-second audio chunks through Flutter’s
+speech_to_text
+
+Sends transcribed snippets to Sonar API with structured prompts
+
+Returns JSON with claims, ratings (TRUE/FALSE/MISLEADING/UNVERIFIABLE), explanations, and sources
+
+​
+Image Analysis
+
+Uploads images/URLs to Sonar API for text extraction
+
+Verifies extracted claims against authoritative sources
+
+Provides comprehensive analysis with source attribution
+
+​
+Screenshots
+
+​
+Code Explanation
+
+Frontend: Flutter with BLoC pattern for state management targeting iOS, Android, and Web
+
+Backend: Firebase (Firestore, Authentication) for user data and chat history persistence
+
+Speech Processing: speech_to_text package for real-time audio transcription
+
+API Integration: Custom Dart client calling Perplexity Sonar API with structured prompts
+
+Image Processing: Built-in image picker with base64 encoding for multimodal analysis
+
+Data Architecture: Firestore collections per user with subcollections for debates, speeches, and images
+
+​
+Open Source SDKs
+
+Built two reusable packages for the Flutter community:
+
+perplexity_dart
+- Core Dart SDK for Perplexity API
+
+perplexity_flutter
+- Flutter widgets and BLoC integration
+
+​
+Demo Video
+
+​
+Links
+
+GitHub Repository
+- Full source code
+
+Live Demo
+- Try the web version
+
+Devpost Submission
+- Hackathon entry
+
+Was this page helpful?
+Yes
+No
+CityPulse | AI-Powered Geospatial Discovery Search
+Previous
+Perplexity Dart & Flutter SDKs
+Next
+⌘
+I
+x
+discord
+website
+Powered by

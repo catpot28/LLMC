@@ -1,0 +1,573 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/cib-ai-powered-insights-boost-lending-cx-call-centers
+page path  : /stories/blog/cib-ai-powered-insights-boost-lending-cx-call-centers
+captured   : 2026-02-14 01:03:03 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_cib-ai-powered-insights-boost-lending-cx-call-centers__33d6dbde.html.gz
+========================================================================
+
+CIB: AI-Powered Insights Boost Lending, CX, & Call Centers
+
+CIB: AI-Powered Insights Boost Lending, CX, & Call Centers
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Dataiku in Action
+
+CIB: AI-Powered Insights Boost Lending, CX, & Call Centers
+
+Aug 5, 2025
+
+9 min read
+
+/
+
+Marie Merveilleux du Vignaux
+
+Table Of Contents
+
+Filling the Gap Between Models and Business Language
+
+InsightGini: A Custom App Built on Dataiku
+
+The Problem of High Support Volume
+
+Driving Instant Credit Decisions
+
+CIB accelerated report generation, transformed its call center into a revenue driver, and automated instant credit decisions, enhancing efficiency.
+
+70%
+
+Reduction in report generation time
+
+50%
+
+Improvement in data accuracy & quality
+
+40%
+
+Increase in employee productivity
+
+As a leading financial institution in Egypt,
+CIB
+operates in an ever-changing landscape where being ahead in data-driven decision-making, operational efficiency, and customer-centric innovation help maintain a competitive edge. The bank faces challenges like integrating advanced analytics into actionable insights, streamlining complex workflows, and addressing the growing expectations for faster, more convenient financial services.
+With growing competition from other institutions and higher consumer expectations, CIB has come to understand that they need to adopt automated solutions to enhance customer satisfaction, reduce industry and organizational inefficiencies, and continually innovate in banking.
+First, with the promise of predictive modeling and AI bringing the potential to revolutionize decision-making, a gap has appeared between technical complexity and business understanding, becoming a barrier to actionable insights. Issues surrounding key components to a successful data strategy — integration, workflows, and retrieval — make it hard for banks like CIB to create timely, accurate reports without automation.
+Next, CIB’s contact center has struggled with high support volumes, which has driven up costs. Complex customer questions have required them to shift from reactive to proactive support.
+Finally, to onboard new members, especially in lending, CIB has found difficulty because of manual processes, the lack of credit histories, and growing competition.
+All three of these problems require solutions that use complex machine learning (ML) and AI while also balancing compliance and risk factors. CIB understood that to solve these challenges and remain competitive, they needed to find scalable, integrated, and automated ways to enhance the customer experience while also increasing operational efficiency.
+
+Filling the Gap Between Models and Business Language
+
+As more and more industries come to depend on analytical models to generate insights and make data-driven decisions, organizations gain deep knowledge into various aspects of their business, from understanding customer behavior and predicting volatile market trends to optimizing internal operations and forecasting financial performance.
+But even with the concurrent improvements in model quality, a gap has always existed between the highly technical nature of how AI and statistical models work and the ability of even seasoned business professionals to interpret and take action on the insights they produce. Reporting and insights must be as high quality as possible to keep up with the finance industry and allow for informed decision-making. However, banks tend to have harder times meeting deadlines without sacrificing quality.
+To solve for this, CIB believed that a strong, automated pipeline was critical to producing the results needed for data science use cases. This would bring the consistency and accuracy needed, while also effectively delivering on-demand reports. In addition, the solution needs to be able to scale, be easily integrated with their current data infrastructure, and decrease dependence on manual processes.
+
+InsightGini: A Custom App Built on Dataiku
+
+To tackle the difficulties of providing insights and data science with on-demand reports, CIB built the InsightGini app with Dataiku. Their solution includes a newly-built, completely automated, and thoroughly validated analytical layer on top of Dataiku. Data standardization and primary application source are both handled by this layer.
+
+"By lettering users enter a column name or description, the tool, built with Dataiku, streamlines the report generating process."
+
+Mohamed ElDesouky, Analytics Data Manager, CIB
+
+The input is matched with the most relevant columns in the analytical layer using a fine-tuned LLM model (paraphrase-mpnet-base-v2) that was trained on their proprietary data. Users can choose the columns that are most often utilized based on the model's suggestions. If further filters, like date ranges, are required, the tool will also ask the user to apply them. Following the user's selection, the app's backend processes a query utilizing a relational table that stores the join combinations from all analytical layer tables. This query is then used to generate the final view. Users are able to effortlessly access the insights after this final view is made available on the app interface.
+
+Transformative Results From a Single App
+
+CIB has seen dramatic transformation even in their daily operations, particularly in how insights are generated and used in their organization. Specifically, they have indicated improvements in key areas:
+
+Improved efficiency:
+Users throughout the organization can now generate reports without advanced technical expertise. This has reduced the time users spend waiting for analysts to prepare reports, resulting in quicker decision-making processes.
+
+Enhanced data quality and consistency:
+Because InsightGini standardizes its data inputs through an analytical layer, information used across reports is consistent and reliable. This higher quality has reduced errors, discrepancies, and the potential for misinterpretation, which in turn has led to more accurate business insights.
+
+Improved scalability and flexibility:
+Because the tool’s fine-tuned LLM suggests relevant columns improved with user input, CIB users can easily customize their reports to suit business requirements. Over time, the tool has been able to handle complex queries and larger data sets.
+
+Increased productivity:
+As the report generation process has become simpler for CIB, members throughout the organization can refocus their energy towards higher-value tasks like strategic decision-making instead of manual data collection and report creation.
+
+Faster insights:
+CIB can generate reports faster from request to insights because of the app’s automated query generation and relational table management. Business units can react more swiftly to quickly-moving market updates and operational challenges.
+
+Better decision-making:
+Users have access to real-time, on-demand access to high-quality reports, enhancing CIB’s ability to make informed decisions to drive business growth.
+
+Self-service expansion:
+InsightGini can serve as a broader self-service analytics platform, reducing reliance on DWH and encouraging data-driven autonomy.
+
+The numbers don’t lie:
+
+CIB has been able to reduce report generation time by 70%, from hours or even days to mere minutes.
+
+Employees report a 40% increase in productivity and can now focus on strategic tasks instead of manual report preparation
+
+Data accuracy and quality have improved by 50%, ensuring more reliable business insights.
+
+InsightGini’s intuitive UI triggered a 30% increase in satisfaction, driven by the intuitive interface and ease of generating custom reports.
+
+CIB’s InsightGini has optimized reporting and data analysis by automating previously manual workflows, standardizing data quality, and streamlining internal operations. Because it was integrated into CIB’s systems early, the tool’s scalability and flexibility has remained efficient and responsive, delivering real-time, accurate insights faster and more easily than before.
+
+The Problem of High Support Volume
+
+With a strong commitment to customer service and a growing customer base, CIB found itself with significant operational challenges when it came to their contact center. A high call volume directly impacted their bottom line, requiring substantial resources for staffing, infrastructure, and customer satisfaction initiatives. As customer inquiries grew more complicated, CIB found it difficult to maintain 24-hour support. They needed a solution that kept a high degree of customer interaction management while at the same time eased pressure on its call center — shifting it from a cost center into a source of revenue. This solution came in the form of two models built in Dataiku where CIB transformed the contact center into a revenue-generating channel by developing “Contact Center Callers Segmentation” model and the “Call Potential for Sale” model.
+
+Developing a Segmentation Method with AI
+
+After cleaning and analyzing their own data to ensure accuracy and reliability, CIB Data Science team coupled it with Dataiku’s analytics capabilities to develop a model that segmented customer activity levels and identified complex patterns in call reasons — the “Contact Center Callers Segmentation” model. Then, to make these insights actionable to users throughout their organization, the CIB team integrated the model’s results into a
+dashboard
+that gave stakeholders a clear visualization of key performance metrics.
+
+As a secondary, interdependent goal, CIB sought to turn their contact center into a revenue-generating channel. To do this, they built a model in Dataiku that analyzed call potential for sale. The model was trained on historical call data and was able to categorize and identify calls with the highest likelihood for product sales.
+
+"By analyzing behavioral data for our customers, our Data Science team built a model leveraging Dataiku platform in order to accurately predict successful outcomes and provide personalized product recommendations."
+
+Nelly Youssef, Head of Data Science and Advanced Analytics, CIB
+
+Adding the integration of a predictive model into the call center agent workflow streamlined their interactions. As they received real-time information about call potential and offered upsell recommendations, agents were able to tailor their calls to each customer.
+
+From Cost Center to Growth Engine
+
+The implementation on Dataiku resulted in optimized call center operations, higher revenue growth, and strengthened relationships with customers. Before the tools were implemented, call center agents had limited access to customer information to support cross-selling and therefore had trouble providing tailored help. After implementation, agents now have access to targeted information including financial profiles and preferences, enabling them to identify customer needs and provide targeted solutions — all contributing to rising customer satisfaction and reduced call handling times.
+
+The analytics tools implemented for the Call Center have had cascading positive effects throughout their organization, too. Executives have been able to identify emerging trends, identify areas for improvement, and allocate resources more effectively. Team members have been able to optimize the customer experience, improve efficiency, and foster an innovative culture. By targeting calls with higher odds of product acceptance, CIB has achieved an 80% reduction in overall effort, reducing costs and boosting sales.
+
+CIB’s success in this area can be attributed to a number of factors:
+
+Dataiku could be integrated directly with CIB’s existing systems, creating a unified view of all of the operations, increasing efficiency and cost savings.
+
+This integration allowed for versatility and adaptability, shifting with business goals and increases in data volume.
+
+"Ultimately, Dataiku’s role in the successful launch of this tool extended beyond its technical features. It served as a catalyst for innovation and improved customer engagement."
+
+Nelly Youssef, Head of Data Science and Advanced Analytics, CIB
+
+Driving Instant Credit Decisions
+
+A third area that required attention at CIB was that of streamlining the lending decision process for new customers — a historically time-consuming one. In a fast-moving banking industry, the traditional methods of onboarding new borrowers has involved significant amounts of paperwork, income verification, and manual intervention, leading somewhat to delays and customer dissatisfaction.
+In addition, many first-time borrowers lack comprehensive credit histories, making lending decisions difficult. CIB spotted an opportunity to not empower their risk teams, but also design a model to automate and expedite the credit process while ensuring regulatorily compliance. They needed a New-to-Bank (NTB) income imputation model to automate and expedite the lending onboarding process while maintaining compliance with regulatory and risk standards. This model would predict the income of customers who are new to the bank and have no or limited credit history.
+
+A Match Made With the Help of Dataiku
+
+One of CIB’s main reasons for opting to partner with Dataiku was because of the platform’s ability to facilitate collaboration across different roles. This particular use case and challenge involved a cross-functional team, each with a distinct role: Data engineers managed data pipelines, data scientists handled model development, and risk analysts validated model output and monitored model performance.
+CIB’s Data Science team also took advantage of Dataiku’s data manipulation and exploration features for advanced feature engineering. They transformed selected data fields into meaningful features using aggregations, normalization, and other techniques, then fed these into a multi-classification ML model to estimate a customer’s income tier. A second model was developed to run in tandem to ensure that no opportunities were lost with first-time borrowers as well.
+Dataiku’s main strengths of ML automation and functional UI helped the team test different algorithms and compare performance across multiple iterations. CIB tracked multiple performance metrics, helping them make data-driven decisions and decide which models were the most effective. They then used Dataiku’s deployment features to push them into production.
+
+"The introduction of this model has revolutionized our daily loan operations, particularly in the customer onboarding process. Previously, onboarding required significant manual labor, with teams manually verifying documents, estimating income, and assessing customer eligibility. This led to long processing times and increased operational costs. Today, the entire process is automated, given the integration of our in-house machine learning model using Dataiku into our digital lending platform."
+
+Nelly Youssef, Head of Data Science and Advanced Analytics at CIB
+
+Finally, the platform’s ability to create APIs was crucial in integrating the model into CIB’s digital lending platform, resulting in real-time predictions. This approach opened the door for CIB to deliver instant income estimates during the customer onboarding itself, improving the experience for both the bank and the customer.
+
+Revolutionizing Daily and Long-Term Operations
+
+Before the implementation of ML models within this business scope, onboarding new customers required teams to manually verify documents, estimate income, and assess customer eligibility. This led to inordinately long processing times and increased operational costs. After automating the entire process leveraging Dataiku, customers can submit their information, then the system takes care of the rest: everything from gathering customer data to estimating income, and assigning a credit limit.
+The increased velocity that CIB can move is easy to see as well — because the model can operate in near real-time, onboarding time has been reduced from days to minutes. Because they can onboard so quickly, they can take on more customers in less time, expanding reach and market share in a very competitive lending space. With a high level of customer satisfaction and the ability to move with agility, CIB has gained a powerful strategy in the microfinance space where speed is critical to success.
+The customer segments that CIB has reached is a fascinating result of implementing AI and ML into their onboarding strategy. Typically, customers with limited credit history are often overlooked by traditional banking processes. The systems CIB Data Science team built in partnership with Dataiku have allowed them to tap into these underserved customer segments — even with little customer information on hand, their tools can still estimate income and provide insights into which credit products they can offer.
+
+"One of the key factors contributing to CIB’s success on this project was Dataiku's seamless integration with existing systems which created a unified view of the bank’s operations, providing a solid foundation for data-driven decision-making. This integration streamlined processes and reduced manual tasks, leading to increased efficiency and cost savings. "
+
+Nelly Youssef, Head of Data Science and Advanced Analytics at CIB
+
+The tools that CIB developed couldn’t have been built without the extensive collaboration enabled through Dataiku. Smooth communication pipelines and code sharing between team members made managing model versions and choosing the best models for deployment much simpler. The interface made it easier for non-technical stakeholders to monitor performance and stay informed. Everyone from data scientists to risk managers worked together against shared targets, delivering a model that ultimately transformed their entire customer onboarding process.
+
+GET TO KNOW CIB
+
+Commercial International Bank (CIB) is Egypt’s leading private‑sector bank, providing a comprehensive range of corporate, retail, and investment banking services tailored to the needs of individuals, businesses, and institutions.
+
+www.cibeg.com
+
+FOUNDED IN
+
+1975
+
+TECH STACK
+
+Dataiku + Cloudera
+
+KEY CAPABILITIES
+
+Machine Learning
+
+AutoML
+
+AI Ecosystem
+
+GenAI & Agents
+
+Analytics & Insights
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Before AI Agents: The Technology Foundations CIOs Can’t Skip
+
+How ODALC Built a Governed AI Knowledge Agent to Open Architectural Research Access to Masses
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Roche unified patent research into a scalable AI foundation for patent intelligence, giving attorneys faster,...
+
+Feb 04, 2026
+
+Recommended
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Between 2023 and 2024, the value of generative & agentic AI in financial services remained mostly theoretical....
+
+Feb 03, 2026
+
+Recommended
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Supply chain disruption is the new normal, and most organizations aren't ready. Industry surveys confirm that...
+
+Feb 02, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

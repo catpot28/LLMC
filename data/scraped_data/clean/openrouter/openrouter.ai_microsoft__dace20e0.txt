@@ -1,0 +1,208 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/microsoft
+page path  : /microsoft
+captured   : 2026-04-14 02:47:11 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_microsoft__dace20e0.html.gz
+========================================================================
+
+Microsoft Models on OpenRouter
+
+Microsoft Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Microsoft
+Access 11 Microsoft models on OpenRouter including Phi 4 Reasoning Plus, Phi 4 Reasoning, and MAI DS R1. Compare pricing, context windows, and capabilities.
+Microsoft
+tokens processed on OpenRouter
+Microsoft: Phi 4 Reasoning Plus
+Phi 4 Reasoning Plus
+Phi-4-reasoning-plus is an enhanced 14B parameter model from Microsoft, fine-tuned from Phi-4 with additional reinforcement learning to boost accuracy on math, science, and code reasoning tasks. It uses the same dense decoder-only transformer architecture as Phi-4, but generates longer, more comprehensive outputs structured into a step-by-step reasoning trace and final answer. While it offers improved benchmark scores over Phi-4-reasoning across tasks like AIME, OmniMath, and HumanEvalPlus, its responses are typically ~50% longer, resulting in higher latency. Designed for English-only applications, it is well-suited for structured reasoning workflows where output quality takes priority over response speed.
+by
+
+microsoft
+May 1, 2025
+33K
+context
+Microsoft: Phi 4 Reasoning
+Phi 4 Reasoning
+Phi-4-reasoning is a 14B parameter dense decoder-only transformer developed by Microsoft, fine-tuned from Phi-4 to enhance complex reasoning capabilities. It uses a combination of supervised fine-tuning on chain-of-thought traces and reinforcement learning, targeting math, science, and code reasoning tasks. With a 32k context window and high inference efficiency, it is optimized for structured responses in a two-part format: reasoning trace followed by a final solution. The model achieves strong results on specialized benchmarks such as AIME, OmniMath, and LiveCodeBench, outperforming many larger models in structured reasoning tasks. It is released under the MIT license and intended for use in latency-constrained, English-only environments requiring reliable step-by-step logic. Recommended usage includes ChatML prompts and structured reasoning format for best results.
+by
+
+microsoft
+May 1, 2025
+33K
+context
+Microsoft: MAI DS R1
+MAI DS R1
+MAI-DS-R1 is a post-trained variant of DeepSeek-R1 developed by the Microsoft AI team to improve the model’s responsiveness on previously blocked topics while enhancing its safety profile. Built on top of DeepSeek-R1’s reasoning foundation, it integrates 110k examples from the Tulu-3 SFT dataset and 350k internally curated multilingual safety-alignment samples. The model retains strong reasoning, coding, and problem-solving capabilities, while unblocking a wide range of prompts previously restricted in R1. MAI-DS-R1 demonstrates improved performance on harm mitigation benchmarks and maintains competitive results across general reasoning tasks. It surpasses R1-1776 in satisfaction metrics for blocked queries and reduces leakage in harmful content categories. The model is based on a transformer MoE architecture and is suitable for general-purpose use cases, excluding high-stakes domains such as legal, medical, or autonomous systems.
+by
+
+microsoft
+Apr 21, 2025
+164K
+context
+Microsoft: Phi 4 Multimodal Instruct
+Phi 4 Multimodal Instruct
+Phi-4 Multimodal Instruct is a versatile 5.6B parameter foundation model that combines advanced reasoning and instruction-following capabilities across both text and visual inputs, providing accurate text outputs. The unified architecture enables efficient, low-latency inference, suitable for edge and mobile deployments. Phi-4 Multimodal Instruct supports text inputs in multiple languages including Arabic, Chinese, English, French, German, Japanese, Spanish, and more, with visual input optimized primarily for English. It delivers impressive performance on multimodal tasks involving mathematical, scientific, and document reasoning, providing developers and enterprises a powerful yet compact model for sophisticated interactive applications. For more information, see the
+Phi-4 Multimodal blog post
+.
+by
+
+microsoft
+Mar 8, 2025
+131K
+context
+Microsoft: Phi 4
+Phi 4
+283M
+tokens
+Microsoft Research
+Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. At 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs. For more information, please see
+Phi-4 Technical Report
+by
+
+microsoft
+Jan 10, 2025
+16K
+context
+$
+0.065
+/M input
+tokens
+$
+0.14
+/M output
+tokens
+Microsoft: Phi-3.5 Mini 128K Instruct
+Phi-3.5 Mini 128K Instruct
+Phi-3.5 models are lightweight, state-of-the-art open models. These models were trained with Phi-3 datasets that include both synthetic data and the filtered, publicly available websites data, with a focus on high quality and reasoning-dense properties. Phi-3.5 Mini uses 3.8B parameters, and is a dense decoder-only transformer model using the same tokenizer as
+Phi-3 Mini
+. The models underwent a rigorous enhancement process, incorporating both supervised fine-tuning, proximal policy optimization, and direct preference optimization to ensure precise instruction adherence and robust safety measures. When assessed against benchmarks that test common sense, language understanding, math, code, long context and logical reasoning, Phi-3.5 models showcased robust and state-of-the-art performance among models with less than 13 billion parameters.
+by
+
+microsoft
+Aug 21, 2024
+128K
+context
+Microsoft: Phi-3 Medium 4K Instruct
+Phi-3 Medium 4K Instruct
+Phi-3 4K Medium is a powerful 14-billion parameter model designed for advanced language understanding, reasoning, and instruction following. Optimized through supervised fine-tuning and preference adjustments, it excels in tasks involving common sense, mathematics, logical reasoning, and code processing. At time of release, Phi-3 Medium demonstrated state-of-the-art performance among lightweight models. In the MMLU-Pro eval, the model even comes close to a Llama3 70B level of performance. For 128k context length, try
+Phi-3 Medium 128K
+.
+by
+
+microsoft
+Jun 15, 2024
+4K
+context
+Microsoft: Phi-3 Mini 128K Instruct
+Phi-3 Mini 128K Instruct
+Phi-3 Mini is a powerful 3.8B parameter model designed for advanced language understanding, reasoning, and instruction following. Optimized through supervised fine-tuning and preference adjustments, it excels in tasks involving common sense, mathematics, logical reasoning, and code processing. At time of release, Phi-3 Medium demonstrated state-of-the-art performance among lightweight models. This model is static, trained on an offline dataset with an October 2023 cutoff date.
+by
+
+microsoft
+May 26, 2024
+128K
+context
+Microsoft: Phi-3 Medium 128K Instruct
+Phi-3 Medium 128K Instruct
+Phi-3 128K Medium is a powerful 14-billion parameter model designed for advanced language understanding, reasoning, and instruction following. Optimized through supervised fine-tuning and preference adjustments, it excels in tasks involving common sense, mathematics, logical reasoning, and code processing. At time of release, Phi-3 Medium demonstrated state-of-the-art performance among lightweight models. In the MMLU-Pro eval, the model even comes close to a Llama3 70B level of performance. For 4k context length, try
+Phi-3 Medium 4K
+.
+by
+
+microsoft
+May 24, 2024
+128K
+context
+WizardLM-2 8x22B
+WizardLM-2 8x22B
+1.1B
+tokens
+WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrates highly competitive performance compared to leading proprietary models, and it consistently outperforms all existing state-of-the-art opensource models. It is an instruct finetune of
+Mixtral 8x22B
+. To read more about the model release,
+click here
+. #moe
+by
+
+microsoft
+Apr 16, 2024
+66K
+context
+$
+0.62
+/M input
+tokens
+$
+0.62
+/M output
+tokens
+WizardLM-2 7B
+WizardLM-2 7B
+WizardLM-2 7B is the smaller variant of Microsoft AI's latest Wizard model. It is the fastest and achieves comparable performance with existing 10x larger opensource leading models It is a finetune of
+Mistral 7B Instruct
+, using the same technique as
+WizardLM-2 8x22B
+. To read more about the model release,
+click here
+. #moe
+by
+
+microsoft
+Apr 16, 2024
+32K
+context

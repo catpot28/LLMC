@@ -1,0 +1,187 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/conversational-ai-webrtc
+page path  : /blog/conversational-ai-webrtc
+captured   : 2026-06-12 13:52:23 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_conversational-ai-webrtc__9a49ecd2.html.gz
+========================================================================
+
+ElevenLabs Conversational AI now supports WebRTC
+
+ElevenLabs Conversational AI now supports WebRTC
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+Product
+ElevenLabs Conversational AI now supports WebRTC
+Written by
+Angelo
+
+Giacco
+Published
+Jul 21, 2025
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+On this page
+Introduction
+What This Means for Developers
+Proven Results from 11.ai Migration
+Get Started Today
+Real-time, low-latency AI conversations are here.
+We're excited to announce that ElevenLabs
+Conversational AI
+now supports WebRTC, unlocking best-in-class echo cancellation and background noise removal for your AI agents.
+What This Means for Developers
+Enhanced Conversation Quality
+Moving beyond our already low-latency foundation, WebRTC unlocks superior audio processing that wasn't possible with traditional streaming approaches. Your AI agents can now deliver the crystal-clear, natural conversations your users expect.
+Superior Audio Quality
+WebRTC unlocks best-in-class echo cancellation and background noise removal that's been battle-tested across billions of video calls. This eliminates the audio quality issues that can disrupt AI conversations.
+Seamless Browser Integration
+No plugins, no downloads. WebRTC works natively in all modern browsers, making it effortless to integrate real-time
+voice AI
+into web applications.
+Production-Ready Reliability
+Built on the same battle-tested WebRTC stack that powers billions of video calls worldwide, with automatic network adaptation and connection recovery.
+Proven Results from 11.ai Migration
+We've already migrated all usage on 11.ai to WebRTC and the results speak for themselves - dramatically improved client SDK performance and conversation quality. The superior audio processing capabilities of WebRTC have transformed the user experience, and we're excited to roll out these same improvements to all Conversational AI users across all SDKs, in-app and via the embed widget.
+Get Started Today
+WebRTC support is
+available now
+in our
+npm package
+as an alternative to WebSocket connections, and in our
+Swift SDK
+. React Native and
+Android
+SDKs with WebRTC support are coming shortly.
+Simple Integration - Just One Parameter
+
+Switching to WebRTC is as easy as changing a single parameter in your existing code:
+const conversation = useConversation();
+// Start a WebRTC conversation
+const conversationId = await conversation.startSession({
+agentId: '<your-agent-id>',
+connectionType: 'webrtc', // Switch from "websocket" to "webrtc"
+});
+For public agents, only the
+agentId
+is required. For authenticated conversations, use the REST API to generate conversation tokens.
+Ready to build the next generation of
+voice AI agent
+experiences? Join thousands of developers already using ElevenLabs Conversational AI to create engaging, responsive
+AI agents
+.
+Similar articles
+ElevenLabs is now a Kiro Power
+Category
+Product
+Date
+Apr 8, 2026
+Webinar Recap: How Nana Uses AI Agents to Transform Customer Experience
+Category
+Product
+Date
+Apr 5, 2026
+Webinar Recap: How Learna Scales Voice Learning with ElevenLabs
+Category
+Product
+Date
+Apr 1, 2026
+Webinar Recap: How Insurely Introduced Voice Agents To Their Contact Center
+Category
+Product
+Date
+Mar 30, 2026
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

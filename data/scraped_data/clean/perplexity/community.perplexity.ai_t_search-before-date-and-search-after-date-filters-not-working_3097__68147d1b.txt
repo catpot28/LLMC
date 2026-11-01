@@ -1,0 +1,182 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/search-before-date-and-search-after-date-filters-not-working/3097
+page path  : /t/search-before-date-and-search-after-date-filters-not-working/3097
+captured   : 2026-01-21 22:06:45 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_search-before-date-and-search-after-date-filters-not-working_3097__68147d1b.html.gz
+========================================================================
+
+Search_before_date and Search_after_date filters not working - Bug Reports - Perplexity API Platform Forum
+
+Search_before_date and Search_after_date filters not working - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Search_before_date and Search_after_date filters not working
+
+Bug Reports
+
+sonar-deep-research
+,
+
+search
+,
+
+python-sdk
+
+Paolo_Ursino
+
+December 15, 2025, 9:49am
+
+1
+
+Describe the Bug
+
+First: it is unclear if the date format should be ‘mm-dd-yyyy’, as described in the reference API, or ‘mm/dd/yyyy’. On one occasion, using ‘mm=dd-yyyy’ gave a format error only when I used one of them (either search_before or search_after), whereas if I set both (time interval), there was no error.
+
+Second: whatever you do, the filter by date seems to be ignored, and I tried with search_mode set to ‘academic’ or ‘web’.
+
+Using last_updated_before/after didn’t help, these seem to be ignored as well.
+
+Expected Behavior
+
+I expect the response.search_results to have results in the desired date range.
+
+Actual Behavior
+
+The search_before/after and/or last_updated_before/after have no effect on the search results
+
+Steps to Reproduce
+
+response = client.chat.completions.create(
+
+model=model, # A powerful model with web-search capabilities
+
+max_tokens=16384,
+
+messages=messages,
+
+temperature=0.2,
+
+response_format=response_format,
+
+search_before_date_filter="01/01/2020",
+
+last_updated_before_filter="01/01/2020",
+
+search_domain_filter=domain_filter_2,
+
+web_search_options={"search_context_size": "high"},
+
+search_mode="web"
+
+)
+
+Check response.search_results
+
+API Request & Response (if applicable)
+
+Environment
+
+API Version:
+[e.g., sonar-3.1]
+
+SDK (if applicable):
+[e.g., Python SDK v0.5]
+
+Operating System:
+[e.g., MacOS, Linux, Windows]
+
+Logs or Screenshots (if applicable)
+
+Add any logs or screenshots that can help debug the issue.
+
+Additional Context
+
+Add any other context about the problem here.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Date filtering not working for academic search mode - Sonar API
+
+Bug Reports
+
+0
+
+129
+
+June 12, 2025
+
+Search before date parameter
+
+General
+
+sonar-deep-research
+
+1
+
+54
+
+November 4, 2025
+
+Search for specific date range
+
+Bug Reports
+
+0
+
+41
+
+May 15, 2025
+
+Python API examples not correct
+
+Bug Reports
+
+sonar
+
+,
+
+search-api
+
+,
+
+python-sdk
+
+3
+
+208
+
+November 4, 2025
+
+Search_domain_filter issues
+
+Bug Reports
+
+1
+
+227
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

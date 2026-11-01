@@ -1,0 +1,410 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/kml-format/
+page path  : /product/plugins/kml-format/
+captured   : 2026-02-12 03:32:57 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_kml-format__f2dcfa91.html.gz
+========================================================================
+
+Plugin: KML format | Dataiku
+
+Plugin: KML format | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+KML format
+
+KML format
+
+This plugin adds KML and KMZ geospatial formats to DSS
+
+Share
+
+Plugin Information
+
+Version
+
+0.1.0
+
+Author
+
+Dataiku
+
+Released
+
+2020-11
+
+Last updated
+
+2020-11
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+KML is a file format used to display geographic data in an Earth browser such as Google Earth. KML uses a tag-based structure with nested elements and attributes and is based on the XML standard. (
+See official definition of KML
+)
+
+KMZ is a zip archive containing a
+doc.kml
+main file in the KML format and other arbitrary files. (
+See additional information on Google developers website about KMZ
+)
+
+This plugin enables reading both formats in DSS and creating datasets from KML or KMZ.
+
+Features
+
+In both cases (KML or KMZ), this plugin reads a KML and convert it as a DSS dataset. A KML file contains a nested structure (XML-like) of tags. For each geospatial object contained in a <Placemark> tag, a row of a DSS dataset is created. There are three expected types for the geospatial objects: Point, LineString and Polygons. Note that, any geospatial element in a DSS dataset is by default typed as
+geopoint
+, enabling automatic processing and visualisation related to geospatial data.
+
+How To Use
+
+Create a dataset from a file in DSS,
+
+Choose a KML or a KMZ file for dataset creation in DSS,
+
+Select
+KML/KMZ
+as the input format of your dataset, the plugin will select the appropriate processing of the input file based on its extension to extract tags.
+
+Given the output dataset, a chart can be created choosing the geometry chart type, information contained in the KML/KMZ will be displayed as usual in DSS,
+
+Import KMZ file as DSS dataset
+
+In the case where a KMZ is uploaded instead of a KML, the DSS plugin will apply a KML processing on the
+doc.kml
+file that must be contained in the KMZ archive.
+
+Additional instructions are available in our
+Github repository
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for KML.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

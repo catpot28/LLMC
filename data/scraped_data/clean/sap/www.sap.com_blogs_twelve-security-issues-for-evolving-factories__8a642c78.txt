@@ -1,0 +1,221 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/twelve-security-issues-for-evolving-factories
+page path  : /blogs/twelve-security-issues-for-evolving-factories
+captured   : 2026-02-16 09:25:47 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_twelve-security-issues-for-evolving-factories__8a642c78.html.gz
+========================================================================
+
+12 security issues to address as your factories evolve | SAP
+
+12 security issues to address as your factories evolve | SAP
+
+flex-height
+
+text-black
+
+12 security issues to address as your factories evolve
+
+Future factories will present different cybersecurity demands. Here’s how your company can keep up with the changes.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+For those security professionals charged with staying on top of the latest threats to global critical infrastructure, 2022 was the year of PIPEDREAM. Described by industrial security firm Dragos as “a Swiss Army knife” for hacking everything from factories to power grids, the massively scalable and broadly applicable piece of malware illustrates the growing cyber threat to industrial control systems (ICS).
+
+In the case of PIPEDREAM, the nightmare was averted. Cybersecurity professionals detected the malware framework before it was deployed, then developed defenses against it. But experts say PIPEDREAM is a leading indicator.
+
+“The worst is yet to come,” says Stuart Madnick, Founding Director of the Cybersecurity at MIT Sloan consortium, which focuses on critical infrastructure. Bad actors are prepared to exploit not only the vulnerabilities in operating technologies themselves, but also in the way those technologies interact. And there’s no simple solution—no patch—to address these risks.
+
+The threats are already here. PIPEDREAM was the seventh known ICS attack malware, especially notable for its modular capability and ability to harm a wide variety of operational technology (OT) environments. The protocols used in an ICS are in use across most industrial and critical infrastructure organizations, from oil pipelines and water treatment facilities to transportation systems and manufacturing operations.
+
+The factory of the future will face off against increasingly sophisticated threat actors and a rapidly evolving threat landscape.
+
+Dawn Cappelli, OT-CERT Director, Dragos
+
+Manufacturers, however, are especially vulnerable to cyber risk for several reasons.
+
+A rich attack surface.
+“Manufacturing security is much more complex than IT security, due to the abundance of legacy, obsolete, and end-of-life products on the manufacturing floor,” says Dawn Cappelli, director of operational technology—cyber emergency readiness team (OT-CERT) at Dragos. Key operational technologies that underpin manufacturing organizations are under attack now more than ever before, Cappelli says. These include names familiar to OT experts but foreign to even experienced IT security pros outside of manufacturing: CODESYS software for advanced process controls for the production; OPC Unified Architecture, a machine-to-machine communication protocol; and OMRON Servo for controlling precision actuators that rotate and push parts of a machine.
+
+A skill shortage.
+“Organizations continue to face acute and growing shortages of OT security skills to foster and support IT/OT integration, and securely support digital transformation efforts,”
+according to Gartner
+. Small and mid-size manufacturers are particularly challenged to compete for this expertise.
+
+A tool shortage.
+Because manufacturing equipment wasn’t connected to corporate IT networks, or the Internet, until recently, technical security products for OT are relatively new—and few. “OT is a decade (or more) behind IT,” says MIT Sloan’s Madnick.
+
+Manufacturers are particularly subject to ransomware attacks. Ransomware-as-a-service offerings make it easy even for low-skill cybercriminals to target and victimize companies. “Based on our visibility of ransomware events within ICS environments, manufacturing organizations remain the most frequent target,” says Cappelli, noting that a clear majority of recent ransomware attacks have targeted industrial infrastructure.
+
+It all adds up to a big challenge as factories grow more digitized and connected. The World Economic Forum recently confirmed the severity of the issue with
+a March 2023 publication
+co-authored with Cappelli and Mansur Abilkasimov, Deputy CISO at Schneider Electric.
+
+“The factory of the future will face off against increasingly sophisticated threat actors and a rapidly evolving threat landscape,” says Cappelli, previously CISO of Rockwell Automation and principal engineer at Carnegie Mellon’s CERT Division. “All that connectivity expands the attack surface for those factories, and it will be imperative that IT and OT teams work together on a comprehensive security strategy for IT, OT, and their manufacturing supply chain.”
+
+How to manufacture factory security
+
+Manufacturing leaders must understand and address these singular security challenges as they pursue advanced manufacturing technologies and approaches, including robotics and autonomous vehicles, AI and machine learning, digital twins, and the Industrial Internet of Things (IIoT). Those who understand the vagaries of OT are best positioned to lead this effort, says Ramsey Hajj, U.S. and global cyber OT leader at Deloitte & Touche.
+
+“It is important for manufacturers to define ownership of manufacturing security and how it differs from traditional, IT-focused information security because it will allow those who know the technology best to help tailor an approach in securing it—therefore maximizing factory uptime,” Hajj says. “Having the people who know manufacturing technology help lead the charge in securing it allows for more seamless introduction of new business and security-focused technologies.”
+
+Those familiar with the current and developing security challenges associated with advanced manufacturing lay out the most important goals for securing the factory of the future:
+
+1. Start with processes and governance.
+
+Buying the hot new technologies to run the factory of tomorrow is exciting; investing in a process is perhaps less so. But the former simply won’t work without the latter. “It’s important to put in the work to ensure the right number of people are assigned to the effort, so resources are not overworked,” says Hajj. “Technology is only as good as the processes and people behind it.”
+
+To allow for consistent governance, key stakeholder groups should work together to define the core controls that comprise their manufacturing security programs, the capabilities and services that enable those controls, and the groups and individuals responsible for operationalizing them. This collaborative approach will further the IT/OT convergence necessary to break down isolated groups and to focus efforts.
+
+2. Increase visibility into your environment.
+
+Visibility is the first—and most important—step to improving any organization’s security posture. It “plays a key role in most other cybersecurity controls, providing information to scope and define the problems that need solving,” says Cappelli. “Asset inventories, change configuration management, vulnerability management, detection of rogue access points, threat detection—all enabled through better visibility within an environment.”
+
+Yet Dragos’s 2022 review of ICS/OT cybersecurity found that 86% of organizations have limited-to-no visibility into their OT environment, making detection, triage, and response incredibly difficult at scale. Manufacturers will need to clarify the data flows between the IT and OT networks, as well as the assets that bridge this gap—for example, addressing Internet of Things (IoT), edge computing, and building automation systems. (More specifics on those newer categories of risk below.)
+
+One upside of more connectivity for production purposes in advanced manufacturing facilities is their passive monitoring platforms, which security can also use for greater visibility. “These platforms ingest traffic from the manufacturing networks to create a living map of the factory that shows live network and device-level activity,” says Hajj. “This data can be used to prevent and respond to malicious activity (security needs) and to enable both predictive and reactive maintenance (business needs).”
+
+Site-level monitoring can be integrated into a centralized security operations center to allow consistent alerting. “As the organization looks to enable security monitoring for manufacturing environments, a risk-based approach should be applied to introduce this capability to company locations that are the most critical first,” Hajj advises.
+
+3. Stay on top of industry recommended practices for ICS controls.
+
+The SANS Institute’s
+five critical controls
+—including monitoring network visibility (as mentioned above), as well as defensible architecture, secure remote access, risk-based vulnerability management, and incident response—can serve as the foundation of defensible ICS.
+
+Cappelli notes that threat awareness is integral to success. “Another strong pillar of defense is maintaining knowledge of the common tactics, techniques, and procedures enacted by adversaries and forming an accurate view of your organization’s posture relative to them,” says Cappelli.
+
+4. Secure the edge.
+
+Cloud-connected future factories will also use more “edge” or on-site computing resources to perform tasks such as running real-time analytics. “Edge computing presents a unique set of security challenges due to its decentralized and distributed nature,” Hajj says.
+
+Manufacturers will need to decide whether their existing network and IT security controls provide adequate protection for edge computing resources and consider implementing additional local security measures. Specifically, they should think about:
+
+Physical security
+Edge computing devices may be deployed in remote and unsecured locations, making them vulnerable to theft, tampering, or damage.
+
+Network security
+Edge computing devices are often connected to multiple networks, expanding the risk of cyberattacks and unauthorized access.
+
+Data privacy and security
+If edge computing devices collect or process sensitive data, they become targets for ransomware or data exfiltration.
+
+Software security
+Like any other hardware, edge computing devices run software that must be secure and updated regularly.
+
+Device management
+Manufacturers that must manage, monitor, and secure volumes of edge devices will need strong, scalable device management tools.
+
+5. Zero in on IIoT risk.
+
+The increasing use of IIoT devices, and the integration of these devices with traditional OT systems, presents new security challenges. “Many IIoT devices were not designed with security in mind and may have vulnerabilities that could be exploited by attackers,” Hajj says. In addition, some new IIoT device types may not be fully covered by existing security measures.
+
+Therefore, it is important for organizations to assess the security of IIoT devices before bringing them online, implementing appropriate security measures to protect against cyber threats. Some common solutions may include implementing network segmentation, using encryption, updating software and firmware, and performing regular IIoT-specific security assessments.
+
+6. Protect the power supply.
+
+Factories will increasingly use new sustainable sources of supply, such as capture and local storage of solar or wind power. These can present new risks and challenges for security and reliability. Physical or digital access to the battery storage systems, for example, could result in theft, tampering, or damage, potentially causing significant financial losses or physical harm, says Hajj.
+
+7. Safeguard building automation systems.
+
+Advanced manufacturing facilities use automated systems to control and monitor their building systems, including heating, ventilation, air conditioning, lighting, and physical security and access systems. While the building automation systems used in factories may differ from those used in office buildings, both are vulnerable to cyberattacks if not properly secured.
+
+“Building automation systems can be a concern for both IT and OT security,” says Hajj. “Attackers targeting building automation systems could gain access to sensitive information, such as building plans and occupancy patterns, or cause physical harm by manipulating building systems.”
+
+8. Consider industrial mobility vulnerability.
+
+Autonomous vehicles zipping around modern factories may also be considered part of OT. They automate and improve industrial processes. “However, they also present unique security challenges and vulnerabilities that must be considered,” says Hajj. The systems they use to navigate the environment and perform their tasks—sensors, communication systems, and control systems—may not have been designed with security in mind.
+
+And when autonomous vehicles integrate with ICS, that opens the door to additional cyber risk. “The use of proprietary protocols and communication systems by autonomous vehicles also presents new security challenges, as these protocols may not be well understood or fully tested for security vulnerabilities,” Hajj says.
+
+9. Consider the risks of new human-machine interactions.
+
+New technologies for controlling machinery—from sensors and cameras—also open the door to new security vulnerabilities and safety concerns. “Attackers could potentially exploit these inputs to gain unauthorized access,” says Hajj. “Moreover, the use of software to control machinery, such as gesture recognition systems, can create new security vulnerabilities, as attackers could potentially exploit software vulnerabilities to gain unauthorized access or cause malfunctions.”
+
+10. Reduce the cultural gaps between IT, security, and operations.
+
+Each discipline has its own history, priorities, and approaches—and they must come together to develop an effective security strategy for advanced manufacturing facilities. “Creating a collaborative culture and building common understanding between the teams takes time and requires support from leadership across the company,” Cappelli says.
+
+Manufacturing operations will need to expand their point of view. Rather than simply focusing on how everything is supposed to work in the factory, says Madnick, they must consider how existing functionality could be hijacked for nefarious reasons.
+
+By the same token, though, IT security pros may have a whole new set of technologies, protocols, and operational issues to understand.
+
+11. Consider the security posture of suppliers and partners.
+
+A manufacturing company is only as strong as its weakest link, and there is significant risk throughout the supply chain. Seven in 10 ransomware attacks in 2021 victimized companies with less than 500 employees—and almost half of those victims were in sectors with OT environments. “Larger manufacturers are impacted when small and medium suppliers cannot provide their products for an extended period—often months—after a ransomware attack,” says Cappelli.
+
+“It is important that manufacturing companies begin to consider the security posture of their supply chain and require a foundational security posture from their critical suppliers,” she says.
+
+As partners share more data through a “control tower”—a cloud-based central view and command center for reporting, analyzing, and automating supply chain activity throughout the process—the vital role of accurate and secure data only grows. So too does the need to ensure no tampering or data leakage occurs over this expanded attack surface.
+
+12. Create a manufacturing-specific response and recovery plan.
+
+Just as in the IT environment, it will likely be a matter of when—not if—OT systems are adversely affected. Thus, it’s important to not only monitor for threats but also be ready to respond to them.
+
+“Sometimes, we see organizations with no security monitoring capabilities within their manufacturing environments,” says Hajj. “As a result, they will not realize a cybersecurity event is occurring until it’s too late and there are physical effects on the processes.”
+
+Organizations should put monitoring processes in place and perform consistent network segregation and segmentation for their factory environments to help reduce the blast radius of potential cyber events.
+
+Just as importantly, companies need to define their incident response and recovery plans. These should address the unique vulnerabilities of OT systems, the implications of cyberattacks on them, and specific OT/ICS response protocols.
+
+To begin, they need a clear understanding of the OT environment, including power control systems, technology infrastructure such as servers and switches, control systems, Human Machine Interface (HMI) systems, supervisory control and data acquisition (SCADA) systems, engineering workstations, and environmental systems. Performing a risk assessment using one of the many tools available (from free, open-source products to paid services) can illustrate vulnerabilities which might be exploited, likely attack paths, and potential effects on equipment, control processes, business processes, partners, and customers.
+
+They’ll also need to involve engineering, electrical, and maintenance specialists who understand these systems to best determine how the industrial control process might be compromised by a cyberattack, and to develop the best response and recovery plans.
+
+“Response plans need to be defined for manufacturing environments with stakeholders identified to enable timely execution,” Hajj says. “Key systems need to be defined within the OT environments and focus needs to be given to confirming backups are available for these systems. Building out consistent, manufacturing security-specific governance gives organizations a significant head-start in both response and recovery.”
+
+Building a more secure future now
+
+Although the adoption of advanced manufacturing will take place over the coming years, the work to address the cybersecurity implications should start now. “Manufacturing security is much less mature than IT security,” says Cappelli, “and building programs takes significant time.”
+
+Program implementation must be done carefully to minimize any disruption to operations, and companies should take a risk-based approach, rolling out their manufacturing security program on a tiered basis over time. With increased focus on manufacturing by both cybercriminal gang and nation-state threat groups, it is important that companies begin by securing their highest priority plants using a risk-based approach.
+
+“Because of the distributed nature of factories, each often has unique risks and challenges,” says Hajj. “The rollout of consistent OT security programs takes time and effort, considering the number of locations most businesses operate. The longer they wait, the more risk increases as they continue to introduce more systems and connectivity to enable our future business strategies.”
+
+Furthermore, adds Cappelli, it is far more effective to get IT, operations, and cyber teams working together sooner rather than later to design, build, and secure the factory of the future.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Dive beneath the buzz words
+
+Editorial
+
+Building the Future Factory: A Special Report
+
+Best Practice Guide
+
+The Sustainable Factory of the Future
+
+Best Practice Guide
+
+Production Logistics and the New OT
+
+Business Case
+
+Advanced Manufacturing Skills Workers Will Need
+
+A Landscape View into Value Chain Relationships
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

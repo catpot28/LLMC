@@ -1,0 +1,1410 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/sonar/features
+page path  : /docs/sonar/features
+captured   : 2026-06-17 07:46:23 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_sonar_features__eee2b38b.html.gz
+========================================================================
+
+Core Features - Perplexity
+
+Core Features - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Features
+Core Features
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Agent SDKs
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Core Features
+Search Filters
+Media & Attachments
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Computer Analytics API
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Streaming Responses
+How Streaming Works
+Example
+Structured Outputs
+Example: Financial Analysis
+Next Steps
+Features
+Core Features
+Copy page
+Streaming and structured outputs for the Sonar API
+Copy page
+​
+Overview
+
+The Sonar API provides powerful features for building production-ready applications. This guide covers two core capabilities: streaming responses for real-time output and structured outputs for consistent data formats. For prompting guidance, see the
+Prompt Guide
+.
+
+​
+Streaming Responses
+
+Streaming allows you to receive partial responses from the Sonar API as they are generated, rather than waiting for the complete response. This is particularly useful for real-time user experiences, long responses, and interactive applications.
+
+Streaming is supported across all Sonar models.
+
+​
+How Streaming Works
+
+When streaming, you receive:
+
+Content chunks
+which arrive progressively in real-time
+
+Search results
+(delivered in the final chunk(s))
+
+Usage stats
+and other metadata
+
+Search results and metadata are delivered in the
+final chunk(s)
+of a streaming response, not progressively during the stream.
+
+​
+Example
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Create streaming completion
+
+stream
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Explain the architecture of retrieval-augmented generation (RAG) and the tradeoffs vs fine-tuning for domain adaptation."
+}],
+
+stream
+=
+True
+
+)
+
+# Process streaming response
+
+content
+=
+""
+
+for
+chunk
+in
+stream:
+
+if
+chunk.choices[
+0
+].delta.content:
+
+content_piece
+=
+chunk.choices[
+0
+].delta.content
+
+content
++=
+content_piece
+
+print
+(content_piece,
+end
+=
+""
+,
+flush
+=
+True
+)
+
+# Collect metadata from final chunks
+
+if
+hasattr
+(chunk,
+'search_results'
+)
+and
+chunk.search_results:
+
+search_results
+=
+chunk.search_results
+
+if
+hasattr
+(chunk,
+'usage'
+)
+and
+chunk.usage:
+
+usage_info
+=
+chunk.usage
+
+Response
+{
+
+"id"
+:
+"d85813fc-9af2-4ded-b192-bb58f1bc1c76"
+,
+
+"choices"
+: [
+
+{
+
+"delta"
+: {
+
+"content"
+:
+""
+,
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"index"
+:
+0
+,
+
+"message"
+: {
+
+"content": "Retrieval-augmented generation (RAG) is an architecture that pairs an LLM with an external knowledge source and a retrieval system, so the model can “look things up” at inference time instead of relying only on what’s in its weights.\n\nBelow is a compact walkthrough of the architecture and then a comparison with fine‑tuning for domain adaptation: when to use which, and why.\n\n---\n\n## 1. RAG Architecture\n\nConceptually, RAG has two big pieces:\n\n1. **Retrieval** – Find relevant information from external data sources.\n2. **Generation** – Use the LLM to answer, grounded in that retrieved information.\n\nA typical RAG pipeline looks like this:\n\n### 1.1 Data Ingestion & Indexing (Offline)\n\nBefore any user queries, you prepare your knowledge base.\n\n1. **Source data**\n - Documents, PDFs, wikis, tickets, APIs, databases, etc.\n\n2. **Preprocessing**\n - Cleaning (strip boilerplate, remove duplicates).\n - **Chunking** into passages (e.g., 200–1,000 tokens) with overlap so context isn’t cut mid‑section.\n - Optional: enrich with metadata (titles, timestamps, doc type, permissions).\n\n3. **Embedding & Indexing**\n - Use an **embedding model** to convert each chunk into a vector.\n - Store vectors + metadata in a **vector database** (Pinecone, FAISS, Chroma, Azure AI Search, etc.).\n - Often combined with **hybrid search**:\n - Vector similarity (semantic)\n - Keyword / BM25\n - Optionally “semantic ranking” to re-rank results using an LLM or specialized ranker.\n\nResult: a searchable index that maps queries to relevant text chunks.\n\n---\n\n### 1.2 Retrieval (Online, per query)\n\nWhen a user asks something:\n\n1. **Query understanding**\n - (Optional) LLM reformulates or expands the query (e.g., agentic retrieval, multi-query).\n - Convert the query to an embedding vector.\n\n2. **Search**\n - Retrieve top‑k chunks from the index via:\n - Vector similarity (cosine, dot product, etc.).\n - Possibly hybrid scoring (combine lexical + vector + metadata filters).\n\n3. **Context selection**\n - Filter / re-rank results.\n - Trim to fit within the **context window** budget.\n - Possibly structure as:\n - “Context blocks” with citations.\n - Grouped by document or section.\n\nOutput: a set of relevant passages plus metadata that will be given to the LLM.\n\n---\n\n### 1.3 Augmentation & Generation\n\n1. **Prompt construction (“augmentation”)**\n - Build a prompt with:\n - System / instruction message (e.g., “Answer only using the context; if unknown, say so.”)\n - User query.\n - Retrieved context (often with explicit separators and IDs for citations).\n\n2. **LLM response generation**\n - The LLM reads the augmented prompt and generates an answer.\n - Good prompts make the LLM:\n - Prefer retrieved facts over prior knowledge.\n - Use citations / references.\n - Refuse to guess when context is insufficient.\n\n3. **Post-processing (optional)**\n - Add citations from retrieved chunks.\n - Apply formatting, guardrails, or validation.\n - Possibly store conversation state or retrieved info in a **memory** store for future turns.\n\n---\n\n### 1.4 Variants / Architectures\n\nBeyond “simple RAG”, there are common extensions:\n\n- **Classic single‑query RAG** \n One query → one retrieval → one generation. Simple orchestration.\n\n- **Agentic / multi‑step RAG**\n - LLM decomposes a complex query into sub‑queries.\n - Runs multiple retrieval calls (possibly across different tools/indices/APIs).\n - Synthesizes a final answer from multiple sources.\n\n- **RAG with short‑term memory**\n - Stores conversation history / past retrieved items.\n - Uses them as additional context in subsequent turns.\n\n- **Advanced fusion strategies**\n - **Fusion‑in‑Decoder (FiD)** style: LLM encodes separate retrieved passages and fuses them during decoding for better grounding.\n\n---\n\n## 2. Fine‑Tuning for Domain Adaptation\n\n**Fine‑tuning** changes the model’s weights using domain-specific examples. Types:\n\n- **Instruction / supervised fine‑tuning (SFT)** \n Train on (input, output) pairs showing desired behavior in your domain (e.g., “Given a contract section, extract obligations as JSON”).\n\n- **Continued pretraining / domain-adaptive pretraining** \n Train the model further on large volumes of *unlabeled* domain text to align its internal representations with domain language.\n\nResults: the model “bakes in” the domain style, terminology, and typical answers into its parameters.\n\n---\n\n## 3. RAG vs Fine‑Tuning for Domain Adaptation: Tradeoffs\n\n### 3.1 What they each do best\n\n**RAG is strongest for:**\n\n- **Fresh, changing information**\n - Policies, prices, inventories, knowledge bases that change weekly/daily.\n- **Large proprietary corpora**\n - Millions of documents that you can’t feasibly bake into weights.\n- **Traceability & compliance**\n - Need to show *where* an answer came from (citations).\n- **Access control**\n - Different users see different subsets of data; you can filter retrieval by permissions.\n\n**Fine‑tuning is strongest for:**\n\n- **Capability and behavior adaptation**\n - New tasks or formats: classification, structured extraction, reasoning patterns.\n - Domain style, tone, “how to talk like us.”\n- **Low-latency, low-dependency deployments**\n - No retrieval infrastructure; just the model.\n\n---\n\n### 3.2 Data and maintenance\n\n**RAG:**\n\n- **Data requirements**\n - Mostly raw text; no labels required.\n - Basic cleaning and chunking needed.\n- **Maintenance**\n - Update index when docs change.\n - Swap or improve embedding model, retriever, ranker without retraining the LLM.\n- **Scalability of updates**\n - Adding a new manual or policy: just ingest and re-index.\n\n**Fine‑tuning:**\n\n- **Data requirements**\n - High‑quality labeled examples (for SFT).\n - Larger unlabeled corpora (for continued pretraining).\n- **Maintenance**\n - When domain changes, you may need more fine‑tuning.\n - Updating knowledge in weights is slower and more expensive than updating an index.\n\n---\n\n### 3.3 Cost and complexity\n\n**RAG:**\n\n- **Inference cost**\n - Extra cost for:\n - Vector search / retrieval.\n - Larger prompts (context tokens).\n - But can reuse a *single* base model across many domains.\n- **Infrastructure complexity**\n - Requires:\n - Vector DB or search engine.\n - Ingestion pipelines.\n - Orchestrator / application layer.\n- **Training cost**\n - Very low; mostly retrieval configuration (no or minimal model training).\n\n**Fine‑tuning:**\n\n- **Training cost**\n - GPU time, engineering, and experimentation for each domain/task.\n- **Inference cost**\n - Similar or slightly higher per token vs base model; no retrieval overhead.\n - If fine‑tuned model is smaller, can *reduce* inference cost vs using a big general model + RAG.\n- **Operational simplicity**\n - Serving a single model endpoint is simple; but you might end up with many specialized models.\n\n---\n\n### 3.4 Accuracy, hallucinations, and robustness\n\n**RAG:**\n\n- **Accuracy on factual, document‑answerable queries**\n - Often higher, because the model is explicitly grounded in the correct passages.\n- **Hallucination**\n - Substantially reduced if:\n - Retrieval is high‑quality.\n - Prompts enforce “answer only from context”.\n - Still possible if retrieval returns wrong/irrelevant chunks.\n- **Robustness to domain shifts**\n - If docs are up to date, RAG answers stay current; no retraining needed.\n\n**Fine‑tuning:**\n\n- **Accuracy**\n - Great when:\n - The domain is stable.\n - The task is repeatable and captured in training data.\n - But knowledge is “fuzzy” inside weights; the model may still fabricate details.\n- **Hallucinations**\n - Not eliminated; model may confidently invent facts if training didn’t cover specific items or if they changed.\n- **Robustness to domain shifts**\n - Degrades as real-world domain diverges from training data; needs fresh fine‑tuning.\n\n---\n\n### 3.5 Latency and UX\n\n**RAG:**\n\n- Additional network hops (search + LLM).\n- Index size and retrieval strategy affect speed.\n- Can often be optimized (caching, pre‑fetching, approximate nearest neighbor search), but still higher latency than “model‑only” in many setups.\n\n**Fine‑tuning:**\n\n- Single call to the model → lower baseline latency.\n- Useful for low-latency scenarios where a retrieval step is too slow or too brittle.\n\n---\n\n### 3.6 Security and governance\n\n**RAG:**\n\n- **Pros**\n - Data stays in your controlled stores; you can:\n - Enforce row‑level, document‑level access.\n - Log exactly which documents influenced an answer.\n - Easier to comply with “right to be forgotten” (remove/alter docs and re-index).\n- **Cons**\n - Need to secure search infrastructure and any caching layers.\n - Must integrate authorization into retrieval (e.g., filter by user permissions).\n\n**Fine‑tuning:**\n\n- **Pros**\n - After fine‑tuning, no need to expose live databases to the model.\n- **Cons**\n - Hard to remove specific facts once baked into weights.\n - Harder to prove what data influenced which answer.\n\n---\n\n## 4. When to Use RAG, Fine‑Tuning, or Both\n\n### Use RAG primarily when:\n\n- Your knowledge changes frequently (support docs, product specs, policies).\n- You care about traceability, citations, and grounding.\n- You have lots of text but little or no labeled data.\n- Different users should see different slices of the knowledge base.\n\n### Use fine‑tuning primarily when:\n\n- You need **new capabilities / tasks** rather than just access to new facts:\n - E.g., extract structured fields, follow complex internal workflows, reason in a specific way.\n- Domain is **relatively stable** and you can collect representative training data.\n- Latency and simplicity of runtime stack matter more than dynamic knowledge.\n\n### Combine both (common in production systems):\n\n- **RAG + fine‑tuned model**:\n - Fine‑tune for:\n - Domain style, tone, and task formats.\n - Better adherence to instructions and constraints.\n - Use RAG for:\n - Live, fine‑grained factual grounding.\n - Access to large knowledge bases.\n- This often gives:\n - Better reasoning + better grounding than either alone.\n\n---\n\n## 5. Practical heuristic\n\nFor “domain adaptation” specifically:\n\n- If your main need is: \n “The model must accurately answer questions based on our docs and stay up to date” → **Start with RAG.**\n- If your main need is: \n “The model must perform a specialized task or format complex outputs that we can demonstrate via examples” → **Add fine‑tuning.**\n- As your system matures: \n “We already have RAG, but answers are stylistically off / brittle on tricky tasks” → **Fine‑tune the model that sits behind your RAG pipeline.**\n\nIf you share your concrete domain (e.g., legal, medical, customer support) and constraints (latency, budget, data volume), I can outline a recommended architecture and whether to invest first in RAG, fine‑tuning, or both.",
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"created"
+:
+1779391571
+,
+
+"model"
+:
+"sonar-pro"
+,
+
+"citations"
+: [
+
+"https://humanloop.com/blog/rag-architectures"
+,
+
+"https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview"
+,
+
+"https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+,
+
+"https://www.geeksforgeeks.org/nlp/rag-architecture/"
+,
+
+"https://www.youtube.com/watch?v=fZM3oX4xEyg"
+,
+
+"https://www.databricks.com/blog/what-is-retrieval-augmented-generation"
+,
+
+"https://www.ibm.com/think/topics/retrieval-augmented-generation"
+,
+
+"https://www.k2view.com/what-is-retrieval-augmented-generation"
+,
+
+"https://www.nvidia.com/en-us/glossary/retrieval-augmented-generation/"
+
+],
+
+"object"
+:
+"chat.completion"
+,
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"8 Retrieval Augmented Generation (RAG) Architectures You Should ..."
+,
+
+"url"
+:
+"https://humanloop.com/blog/rag-architectures"
+,
+
+"date"
+:
+"2025-02-01"
+,
+
+"last_updated"
+:
+"2026-05-19"
+,
+
+"snippet"
+:
+"Unlike traditional models that rely solely on their pre-trained knowledge, RAG allows models to search external databases or documents during ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"RAG and Generative AI - Azure AI Search - Microsoft Learn"
+,
+
+"url"
+:
+"https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview"
+,
+
+"date"
+:
+"2026-01-15"
+,
+
+"last_updated"
+:
+"2026-03-19"
+,
+
+"snippet"
+:
+"Retrieval-augmented generation (RAG) is a pattern that extends LLM capabilities by grounding responses in your proprietary content. While ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"What is RAG? - Retrieval-Augmented Generation AI Explained - AWS"
+,
+
+"url"
+:
+"https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+,
+
+"date"
+:
+"2026-05-13"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"snippet"
+:
+"RAG is the process of optimizing the output of a large language model, so it references an authoritative knowledge base outside of its training data sources ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"RAG Architecture - GeeksforGeeks"
+,
+
+"url"
+:
+"https://www.geeksforgeeks.org/nlp/rag-architecture/"
+,
+
+"date"
+:
+"2026-05-09"
+,
+
+"last_updated"
+:
+"2026-05-19"
+,
+
+"snippet"
+:
+"Retrieval-Augmented Generation (RAG) is an architecture that enhances LLMs by combining them with external knowledge sources, ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Introduction To Undertsanding RAG(Retrieval-Augmented Generation)"
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=fZM3oX4xEyg"
+,
+
+"date"
+:
+"2025-08-31"
+,
+
+"last_updated"
+:
+"2026-05-21"
+,
+
+"snippet"
+:
+"Retrieval-Augmented Generation (RAG) is the process of optimizing the output of a large language model, so it references an authoritative ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"What is Retrieval Augmented Generation (RAG)? | Databricks"
+,
+
+"url"
+:
+"https://www.databricks.com/blog/what-is-retrieval-augmented-generation"
+,
+
+"date"
+:
+"2023-10-18"
+,
+
+"last_updated"
+:
+"2026-05-20"
+,
+
+"snippet"
+:
+"Retrieval augmented generation is an AI pattern that improves large language model answers by first retrieving relevant documents from external data sources ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"What is RAG (Retrieval Augmented Generation)? - IBM"
+,
+
+"url"
+:
+"https://www.ibm.com/think/topics/retrieval-augmented-generation"
+,
+
+"date"
+:
+"2024-10-21"
+,
+
+"last_updated"
+:
+"2026-04-24"
+,
+
+"snippet"
+:
+"RAG is an architecture for optimizing the performance of an artificial intelligence (AI) model by connecting it with external knowledge bases."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"What is Retrieval-Augmented Generation (RAG)? A Practical Guide"
+,
+
+"url"
+:
+"https://www.k2view.com/what-is-retrieval-augmented-generation"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-04-18"
+,
+
+"snippet"
+:
+"RAG is a Generative AI (GenAI) architecture that augments a Large Language Model (LLM) with fresh, trusted data retrieved from authoritative internal knowledge ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"What is Retrieval-Augmented Generation (RAG)? | NVIDIA Glossary"
+,
+
+"url"
+:
+"https://www.nvidia.com/en-us/glossary/retrieval-augmented-generation/"
+,
+
+"date"
+:
+"2026-03-16"
+,
+
+"last_updated"
+:
+"2026-05-21"
+,
+
+"snippet"
+:
+"RAG is an AI technique where an external data source is connected to a large language model (LLM) to generate domain-specific or the most up-to-date responses ..."
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"status"
+:
+null
+,
+
+"type"
+:
+null
+,
+
+"usage"
+: {
+
+"completion_tokens"
+:
+2538
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+8e-05
+,
+
+"output_tokens_cost"
+:
+0.03807
+,
+
+"total_cost"
+:
+0.04415
+,
+
+"citation_tokens_cost"
+:
+null
+,
+
+"reasoning_tokens_cost"
+:
+null
+,
+
+"request_cost"
+:
+0.006
+,
+
+"search_queries_cost"
+:
+null
+
+},
+
+"prompt_tokens"
+:
+27
+,
+
+"total_tokens"
+:
+2565
+,
+
+"citation_tokens"
+:
+null
+,
+
+"num_search_queries"
+:
+null
+,
+
+"reasoning_tokens"
+:
+null
+,
+
+"search_context_size"
+:
+"low"
+
+}
+
+}
+
+​
+Structured Outputs
+
+Structured outputs enable you to enforce specific response formats from Perplexity’s models, ensuring consistent, machine-readable data that can be directly integrated into your applications without manual parsing.
+
+We support
+JSON Schema
+structured outputs. To enable structured outputs, add a
+response_format
+field to your request with the following structure:
+
+{
+
+"response_format"
+: {
+
+"type"
+:
+"json_schema"
+,
+
+"json_schema"
+: {
+
+"schema"
+: {
+/* your JSON schema object */
+}
+
+}
+
+}
+
+}
+
+Improve Schema Compliance
+: Give the LLM hints about the output format in your prompts to improve adherence to the structured format. Include phrases like “Please return the data as a JSON object with the following structure…”
+
+The first request with a new JSON Schema may incur a delay on the first token (typically 10-30 seconds) as the schema is prepared. Subsequent requests will not see this delay.
+
+​
+Example: Financial Analysis
+
+from
+perplexity
+import
+Perplexity
+
+from
+typing
+import
+List, Optional
+
+from
+pydantic
+import
+BaseModel
+
+class
+FinancialMetrics
+(
+BaseModel
+):
+
+company:
+str
+
+quarter:
+str
+
+revenue:
+float
+
+net_income:
+float
+
+eps:
+float
+
+revenue_growth_yoy: Optional[
+float
+]
+=
+None
+
+key_highlights: Optional[List[
+str
+]]
+=
+None
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+:
+"Summarize Apple's most recent annual 10-K filing: revenue by segment, gross margin trend, and operating cash flow."
+
+}
+
+],
+
+response_format
+=
+{
+
+"type"
+:
+"json_schema"
+,
+
+"json_schema"
+: {
+
+"schema"
+: FinancialMetrics.model_json_schema()
+
+}
+
+}
+
+)
+
+metrics
+=
+FinancialMetrics.model_validate_json(completion.choices[
+0
+].message.content)
+
+print
+(
+f
+"Revenue: $
+{
+metrics.revenue
+}
+B"
+)
+
+Response
+{
+
+"id"
+:
+"3edb88c4-495d-4767-ae43-c38d21c7ad30"
+,
+
+"choices"
+: [
+
+{
+
+"delta"
+: {
+
+"content"
+:
+""
+,
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"index"
+:
+0
+,
+
+"message"
+: {
+
+"content"
+:
+"Apple’s **most recent annual 10-K** in the search results is the **fiscal 2024 Form 10-K** for the year ended **September 28, 2024**.[2][3]
+\n\n
+- **Revenue by segment:** Apple reported **net sales by reportable segment** of **Americas: $112.0B**, **Europe: $101.3B**, **Greater China: $66.9B**, **Japan: $25.0B**, and **Rest of Asia Pacific: $32.1B** in fiscal 2024.[2]
+\n
+- **Gross margin trend:** Gross margin rose from **$169.1B in fiscal 2023** to **$180.7B in fiscal 2024**; as a percentage of net sales, that is **~44.1%** in 2024 versus **~44.1%** in 2023, so the *level* increased but the margin rate was essentially flat year over year.[2]
+\n
+- **Operating cash flow:** Apple generated **$118.3B** of **net cash from operating activities** in fiscal 2024, up from **$110.5B** in fiscal 2023.[2]
+\n\n
+If you want, I can also break this down into a compact table with **three-year trends** from the 10-K."
+,
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"created"
+:
+1779895999
+,
+
+"model"
+:
+"sonar-pro"
+,
+
+"citations"
+: [
+
+"https://www.apple.com/newsroom/pdfs/fy2025-q2/FY25_Q2_Consolidated_Financial_Statements.pdf"
+,
+
+"https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+,
+
+"https://investor.apple.com/sec-filings/sec-filings-details/default.aspx?FilingId=17933082"
+,
+
+"https://investor.apple.com/sec-filings/default.aspx"
+,
+
+"https://investor.apple.com/investor-relations/default.aspx"
+,
+
+"https://www.annualreports.com/Company/apple-inc"
+,
+
+"https://www.sec.gov/Archives/edgar/data/320193/000119312515356351/d17062d10k.htm"
+
+],
+
+"object"
+:
+"chat.completion"
+,
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"[PDF] Consolidated Financial Statements - Apple"
+,
+
+"url"
+:
+"https://www.apple.com/newsroom/pdfs/fy2025-q2/FY25_Q2_Consolidated_Financial_Statements.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2025-08-29"
+,
+
+"snippet"
+:
+"(1) Net sales by reportable segment: Americas. $. 40,315 $. 37,273 $. 92,963 $. 87,703. Europe. 24,454. 24,123. 58,315. 54,520. Greater China. 16,002. 16,372."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"aapl-20240928 - SEC.gov"
+,
+
+"url"
+:
+"https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+,
+
+"date"
+:
+"2024-09-28"
+,
+
+"last_updated"
+:
+"2026-03-30"
+,
+
+"snippet"
+:
+"Operating income for each segment consists of net sales to third parties, related cost of sales, and operating ... Apple Inc. | 2024 Form 10-K | 57."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"SEC Filings Details - Apple Investor Relations"
+,
+
+"url"
+:
+"https://investor.apple.com/sec-filings/sec-filings-details/default.aspx?FilingId=17933082"
+,
+
+"date"
+:
+"2024-11-01"
+,
+
+"last_updated"
+:
+"2026-05-15"
+,
+
+"snippet"
+:
+"SEC Filings · Leadership and Governance · Our Values · FAQ · Contact. SEC Filings Details. Form 10-K. Nov 01, 2024. Annual Report. HTML Format ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"SEC Filings - Apple Investor Relations"
+,
+
+"url"
+:
+"https://investor.apple.com/sec-filings/default.aspx"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-15"
+,
+
+"snippet"
+:
+"SEC Filings. SEC Groupings. All Filings, Annual Filings, Quarterly Filings, Current Reports, Proxy Filings, Registration Statements, Section 16 Filings ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Investor Relations - Apple"
+,
+
+"url"
+:
+"https://investor.apple.com/investor-relations/default.aspx"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-04-17"
+,
+
+"snippet"
+:
+"2024 10-K · 2023 10-K · 2022 10-K. Additional Reports. Net Sales by Category. Reclassification of FY18 net sales ... Green Bond Report. Annual green bond impact ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Apple Inc. - AnnualReports.com"
+,
+
+"url"
+:
+"https://www.annualreports.com/Company/apple-inc"
+,
+
+"date"
+:
+"2024-01-01"
+,
+
+"last_updated"
+:
+"2025-12-16"
+,
+
+"snippet"
+:
+"Apple Inc. MOST RECENT 2024 Annual Report and Form 10K. View PDF View Form 10K (HTML)."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Form 10-K - SEC.gov"
+,
+
+"url"
+:
+"https://www.sec.gov/Archives/edgar/data/320193/000119312515356351/d17062d10k.htm"
+,
+
+"date"
+:
+"2010-09-25"
+,
+
+"last_updated"
+:
+"2026-03-08"
+,
+
+"snippet"
+:
+"The following table shows net sales by operating segment and net sales and unit sales ... Includes sales of Apple TV, Apple Watch, Beats products, iPod and ..."
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"status"
+:
+null
+,
+
+"type"
+:
+null
+,
+
+"usage"
+: {
+
+"completion_tokens"
+:
+282
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+8e-05
+,
+
+"output_tokens_cost"
+:
+0.00423
+,
+
+"total_cost"
+:
+0.01031
+,
+
+"citation_tokens_cost"
+:
+null
+,
+
+"reasoning_tokens_cost"
+:
+null
+,
+
+"request_cost"
+:
+0.006
+,
+
+"search_queries_cost"
+:
+null
+
+},
+
+"prompt_tokens"
+:
+27
+,
+
+"total_tokens"
+:
+309
+,
+
+"citation_tokens"
+:
+null
+,
+
+"num_search_queries"
+:
+null
+,
+
+"reasoning_tokens"
+:
+null
+,
+
+"search_context_size"
+:
+"low"
+
+}
+
+}
+
+Links in JSON Responses
+: Requesting links as part of a JSON response may not always work reliably. Use the links returned in the
+citations
+or
+search_results
+fields from the API response instead.
+
+​
+Next Steps
+
+Sonar Prompt Guide
+Sonar-specific prompting caveats and best practices.
+Pro Search for Sonar Pro
+Enhanced search with automated tools, multi-step reasoning, and real-time thought streaming.
+Sonar API Search Filters
+Learn how to control search behavior with filters and parameters.
+Sonar API Media Attachments
+Send and receive images, videos, and files with the Sonar API.
+Was this page helpful?
+Yes
+No
+Prompt Guide
+Previous
+Search Filters
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

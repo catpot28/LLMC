@@ -1,0 +1,179 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/ai-buyer-beware-ai-liability
+page path  : /blogs/ai-buyer-beware-ai-liability
+captured   : 2026-03-07 19:07:00 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/sap/www.sap.com_blogs_ai-buyer-beware-ai-liability__9eeef530.html.gz
+========================================================================
+
+AI Buyer Beware: You Are Accountable for How Your AI Works | SAP
+
+AI Buyer Beware: You Are Accountable for How Your AI Works | SAP
+
+flex-height
+
+text-black
+
+AI buyer beware: Know how your AI works
+
+Businesses are on the hook if their AI systems harm someone. Here’s how to be prepared.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+You’re the CEO of a community bank. While seeking ways to cut costs during the fallout from the pandemic, you’re intrigued when one of your executives shows you a plan to cut call-center costs by 30%. The idea is to replace many of your customer service agents by offering support through an advanced chatbot driven by natural language processing (NLP), a branch of artificial intelligence (AI). By learning the patterns of informal human speech over time, the hip-sounding bots help customers get what they need more quickly than a human agent would while maintaining that all-important sense of connection.
+
+It’s a classic win-win, until the day your chatbot becomes the target of Internet trolls who “teach” it a barrage of racist and misogynistic phrases. No one knows exactly how it happened, but within just a few hours, your friendly chatbot has transformed into a bigoted bully, spewing insults at your customers. The ensuing maelstrom is an immediate black eye for your reputation, not to mention the talk of customer lawsuits. If you had only known before you bought the software, you might have asked more questions.
+
+Think this couldn’t happen to you? Think again.
+Microsoft fell victim
+to a scenario very much like this in 2016. You can bet the technology giant has fine-tuned its AI algorithms since then, but it’s worth noting that a company that was supposed to understand how to deploy AI suffered a damaging, unexpected outcome. The lesson for lesser mortals? When it comes to AI, proceed with caution to avoid being derailed by intentional abuse,
+accidental bias
+, or other problems.
+
+Complex machine learning algorithms are rapidly taking over much of the heavy lifting in our society—helping to diagnose cancers more accurately than humans, plowing through piles of college applications to pinpoint worthy candidates, speeding through mortgage loan paperwork. The possibilities are endless.
+
+The benefits are legion—speed, lower cost, and the ability to unearth more sophisticated insights than humans can muster. No one knows the scope of the potential because no one (or very few people) really understands how these complex AI systems do what they do.
+
+Yet AI’s lure is powerful. Many companies just set up AI systems and let them run. The numbers tell the story. Businesses of every size, in every industry worldwide, are and will be purchasing AI systems—everything from robotic process automation software to NLP to machine learning algorithms. IDC projects global AI spending will grow dramatically, surpassing $300 billion in 2026. During the worst of the COVID-19 lockdowns,
+large enterprises continued to push forward
+with their AI projects, according to a Capgemini survey, with 53% moving AI pilot projects into production. Many in the boardroom see AI as an emerging way out of today’s business constraints.
+
+Not so fast there.
+
+AI is not only a new type of software but also an entirely new type of corporate risk. It is not like traditional software, where developers and IT managers understand the code and functionality. With AI, the underlying structural code is documented and understood. But with systems like the bank chatbot and machine learning systems that “learn” over time
+how
+that code completes its business mission, it’s completely unknown and virtually beyond human comprehension. We haven’t seen many high-profile cases yet, but make no mistake: the looming legal liability surrounding biased data or a faulty decision made by an automated system poses a risk to businesses. To
+your
+business.
+
+Much of the problem is because there’s a lack of transparency in the way AI systems operate. When businesses use AI systems, they are blind to everything but the inputs and outputs. So, for example, attempting to train a machine learning system to recognize a certain type of vehicle would be foiled by the simple human error of giving it only pictures of vehicles in the snow to learn from. The human knows snow in the picture is irrelevant to the type of vehicle; the machine learning system does not. This situation—flawed data inputs—can immediately lead to cascading bad outcomes, including increased financial, legal, reputational, and even cybersecurity risk. Another major problem: usually, there’s no clear picture of how the machine did what it did. Ultimately, people have zero visibility to how and why an AI system behaves and makes decisions—the so-called “black box” problem.
+This represents a fundamental threat to users of AI systems.
+
+There are many implications. For example, as
+Amazon learned all too painfully
+(more on that below), AI systems that filter job candidate resumes could potentially introduce gender or racial
+bias
+into your employee-management process. Who’s responsible in that case? The business that uses the software, or the company that developed it? Do you know whether or not the software you buy will introduce bias? Who makes the call?
+
+The black box problem: Unexplainable AI
+
+The lack of transparency within AI grows by the day. AI systems were already complex and beyond most humans’ comprehension when they first came on the market more than a decade ago, but their opacity and complexity keep intensifying. In just one year, Open AI’s natural language generation AI, GPT-3, has become over 1,000% more complex. Explainability—the ability to describe how AI systems do what they do—becomes a distant thought.
+
+For the good of society
+and
+business, organizations need to become transparent in how they train models, and implementations must gravitate toward explainable methods. Clearly, we need a sea change in priority toward producing AIs that can be inspected and explained. To build trust requires showing users the rules algorithms follow so people can determine if they are fair and equitable.
+
+One possible approach is using a second AI system to deconstruct how the first system arrived at a result, says Dr. Iria Giuffrida, professor of the practice of law and deputy director at the Center for Legal and Court Technology, William & Mary Law School. One system goes from A to B, the other from B to A.
+
+Good intentions fall by the wayside quickly when algorithms get to work.
+
+“Imagine an AI system that receives inputs, does its processing, and creates an output,” says Giuffrida. “Then there’s another AI system that is given the same data but the other way around, starting with the output. The task of the second system is to work out how the first got from A to B.” Of course, there are many possible avenues from one point to another. An explainer system can only point to a few likely paths. And nothing makes the second system particularly trustworthy—not at this point, anyway. So, at best, explainer AI systems could show possible pathways of decision-making, something that can be particularly important in the context of regulatory compliance (more on that below).
+
+Unless you are aware of the conceivable pitfalls and thoughtfully curate a system’s learning process, there is enormous potential for problems. Let’s revisit that Amazon recruiting tool from 2017.
+
+Good intentions fall by the wayside quickly when algorithms get to work.
+
+“Nobody set out to say, ‘I just want a white, middle-aged male,’” says Giuffrida, but those were the job candidates the system ultimately delivered. “The machine learning function itself was not malfunctioning—it did what it was designed to do. The bias was in how the data scientists defined ‘successful candidate’ by reference to existing employees, without giving a second thought about gender and race.” There’s a cautionary tale here, as with the Microsoft anecdote above: if a massive company like Amazon, with all the resources in the world at its disposal, can so easily run afoul of its intentions, how can others expect to do better?
+
+In the past, standards for software have provided a way for businesses to evaluate whether it performs as advertised. But a commonly defined and usable standard for explainable AI is far off, and it is yet unclear where it will come from or whether it will even be workable. In the meantime, businesses will want to use AI systems. They have to take risks, after all, or everyone has to go home. To get a better understanding of the risks, we need to understand the current legal landscape to see where liability lurks.
+
+Legal doctrines and laws that govern the emerging situation
+
+Business and technology executives wondering where potential legal risk lies should look to two possibilities: tort law (which provides liability for harm caused by faulty products and negligent behavior) and contract law (which, for instance, governs the software user’s right to make a claim against the software vendor). There are few AI-related cases to provide guidance at the moment, so it’s important to understand the doctrines that could apply. Let’s look first at tort law.
+
+The industrial age ushered in the concept of product liability, which gradually gained acceptance as legal doctrine. Over time, according to Fox Rothschild LLP partner Chris Michael Temple, the concept of “strict liability” developed, which protected consumers from defective and dangerous products. Temple advises industrial companies that are increasingly using robotics and AI-assisted machinery to aid in manufacturing processes.
+
+AI is not just a new type of software, but a completely new type of corporate risk.
+
+“Traditionally when a product left the manufacturer’s hands, the manufacturer was representing that the product was safe for its intended use,” says Temple. So, the manufacturer of a cutting machine with a faulty safety mechanism, for example, would be liable to people who were harmed by that defect—open and shut. Strict liability has provided the basis of hundreds of cases and product recalls ever since.
+
+“But products that leverage machine learning and other forms of AI are different in that they transform and evolve into something other than what they were when they left the originator’s facility,” says Temple. An autonomous car, for example, might be completely fit for safe transportation as it drives itself off the lot. If an onboard machine learning system evolves so the vehicle is no longer safe, much liability could follow, but not under a traditional theory of products liability. It likely won’t be enough for the car maker to say the autonomous car was safe when purchased. What’s needed is new case law or a legal doctrine to establish liability under a tort theory. This is not unlikely, says Temple, as the law changes quickly. But law typically evolves in response to the application of emerging technologies like AI, rather than before something goes wrong.
+
+How do you combat AI bias?
+
+Humans must teach AI to play fair and constantly question the results.
+
+Learn more
+
+If tort law does not furnish a ready answer today, what about contract law? Spoiler alert: there won’t be much opportunity for an auto manufacturer to sue the software company that developed the AI system used in the car. Here’s why.
+
+Contract law offers broad restrictions on liability for software vendors. Software has never been considered a “product” for the purposes of product liability. In fact, software providers currently demand broad limitations on liability for the use of their software. And these restrictions generally hold up in court.
+
+Absent a pressing public policy concern, the courts rarely deviate from settled case law; therefore, “those basic principles around limitation on liability provisions in contracts are going to stand,” says Jeff Andrews, chair of the Bracewell law firm’s technology transactions practice, who negotiates contracts for corporate software buyers across industries. If a self-driving car makes a decision that causes an accident, the company that developed the code is currently immune from liability in a suit brought by the manufacturer. The standard to recover against the AI developer will be gross negligence—very difficult to prove. As with torts, there is no telling if or how contract law will evolve to accommodate AI and other emerging technologies. In the meantime, absent applicable case law, it is safest to assume the AI software user is most likely to be held responsible for damage that ensues from its use.
+This means you.
+
+GDPR: A potential framework for understanding AI liability
+
+While there have not yet been many lawsuits to provide clues as to how AI liability will likely shake out, the General Data Protection Regulation (GDPR), which currently governs data privacy issues in the European Union, spells out at least a portion of the legal responsibilities of those using software systems to make automated decisions about individuals, such as whether to grant a mortgage or accept a college applicant: to wit, the duty that companies have to ensure that automated decision-making tools do not discriminate against individuals. The GDPR also provides the right of appeal to someone adversely affected by an automated decision, and many legal experts say this implies a “right to explanation” for the reasons behind the decision.
+
+This is a potential bombshell for any company using AI systems within the E.U. Not only do these organizations need to
+protect against
+automated decisions that have harmful consequences, they also need to provide anyone so affected an appeal of that decision. While many of today’s automated decisions are implemented using standard statistical techniques, opaque AI systems are rapidly entering this area. As they do, meeting this requirement is going to be a major challenge for their users.
+
+If an organization uses opaque AI systems to make a decision, which is an increasing practice, the organization using that decision must ensure there is no bias in the data—a very tall if not impossible order given the current “black box” state of AI. Then, there has to be due process around the automated decision. All of this is problematic at best.
+
+There’s a great deal of excitement about the vast opportunity AI affords. In the face of all the excitement, it’s sobering to have to stop and assess risk. But without doing that, you could leave your organization vulnerable to existential threats. So, here’s some practical advice on how to approach AI risk.
+
+Addressing AI risk—six places to begin:
+
+1. Be as clear as possible about what you will use the AI system for—before you buy it.
+
+Liability flows from all AI use, so you want to make very sure you understand exactly what those uses are. “The process means a lot of back and forth between the business and the technology team. And key executives might have different views, so they have to speak with each other,” says Giuffrida. This crucial first step helps you avoid a situation where you buy a bot to automate one aspect of a process but find the business starts using it for everything but the kitchen sink. You can’t vet that bot only once—you have to do it every time you use it for a different application.
+
+2. Work with your legal advisors before you make the investment to mitigate AI risk as much as possible.
+
+Understand your organization’s risk appetite and make a thorough assessment of whether it wants to take on the scope of liability associated with the AI technology you will use.
+
+If a financial services organization is interested in using AI technology to identify and stop fraud, for example, it will need to take precautions to ensure both compliance with applicable regulations and lack of bias in the data set on which the system was trained. Seek advice from legal counsel with a track record in this area, advises Giuffrida. Be sure to proceed at your own pace of comprehension. “If you don’t understand something, you’ve got to say, ‘I’m sorry. I know I sound stupid, but I don’t understand what you’re talking about when you say this.’”
+
+3. Understand the lifecycle of the AI system.
+
+There’s a date of installation when the AI system gets up and running. But how long will it operate? Is this something that’s going to be used for six months? Or is the intended lifecycle of this technology and process indefinite? The lifecycle is important because it helps you understand the window within, which you need for monitoring the performance of the technology, says Temple.
+
+4. Ask pointed questions of the technology vendor.
+
+Understand both what you are using the system for (that is, what you would like it to do) and how it is accomplishing that. If you simply buy a black box, you will end up with a big legal bill. You need to ask questions about how the vendor created the system and how it’s maintained. Any company that does business in the E.U. must ask specifically how the AI system meets the GDPR provisions to protect against harmful profiling and bad automated decisions. This conversation is like what happened during the early days of cybersecurity when technology buyers were unsure what questions to ask information security vendors. Don’t be satisfied with an easy answer. There’s too much at stake.
+
+5. Don’t ever buy an AI system without a total understanding of its cybersecurity provisions.
+
+You could be picking up an unknown ball of risks to data privacy, for general cybersecurity and even national security.
+
+6. Keep a human in the loop.
+
+Though it may appear to go against the very point of using AI, maintaining human intervention in automated decision processes can be a hedge against bad results from machines. “Having an individual in the loop to double-check what the algorithm is spitting out is definitely risk mitigation,” says Andrews. So, in a hiring setting, it would theoretically be possible to check if the system identified the most qualified candidate or if that person got screened out. If the candidate were not selected, the employer could alter its data or attributes to narrow down what is contributing to the bias. How practical this advice is, however, and whether it will be workable over time, remains to be seen. As with all things AI, you will likely have to adapt your approach over time.
+
+It can be a dizzying exercise to try to imagine the scope of potential harm (ranging from reputational mishaps all the way up to human injury or death) from business use of AI systems. And it is sobering to understand that our courts have not yet spelled out clear lines of responsibility. Yet businesses are already using AI systems—more are doing it every day. So, the best posture at this point is to join with your business and legal counterparts to understand and mitigate the known risks as much as possible.
+
+“The hope is that the law will evolve in a way that encourages the development, the investment in, and the creation of these technologies. But there’s a lot of work to be done by a lot of people to develop the outcome of what those laws could be,” says Temple. Exciting times indeed.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer
+
+Prepping the business for an AI world
+
+More on what it takes to realize the full potential of AI for your enterprise.
+
+Explore our coverage
+
+location
+
+sidebar

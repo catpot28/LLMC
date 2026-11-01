@@ -1,0 +1,211 @@
+=== SOURCE =============================================================
+company    : Netpoint (netpoint)
+url        : https://www.netpoint.de/neuigkeiten/it-infrastruktur-der-zukunft/
+page path  : /neuigkeiten/it-infrastruktur-der-zukunft/
+captured   : 2026-05-18 18:14:25 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/netpoint/www.netpoint.de_neuigkeiten_it-infrastruktur-der-zukunft__1310811b.html.gz
+========================================================================
+
+Netpoint - Die IT Infrastruktur der Zukunft
+
+Netpoint - Die IT Infrastruktur der Zukunft
+
+Zum Inhalt springen
+
+Menü
+
+Die IT Infrastruktur der Zukunft
+
+Geschrieben von Martin Drückes
+
+Hybride Cloud-Lösungen werden sich als Standard durchsetzen, da eine reine Cloudinfrastruktur nicht für alle Unternehmen optimal ist.
+
+Zero-Trust-Sicherheit wird zum neuen Standard, indem jedes Gerät und jeder Nutzer als potenziell unsicher betrachtet und kontinuierlich authentifiziert wird.
+
+„Software defined everything“ und „Infrastructure as Code“ ermöglichen eine flexiblere, automatisierte und zentral verwaltbare IT-Infrastruktur.
+
+Die Entwicklung von IT-Infrastrukturen war schon immer rasant und erforderte von IT-Fachkräften enorme Flexibilität. Doch kaum eine Entwicklung hat bisher so zentrale Änderungen mit sich gebracht wie die Einführung der Cloud. Ob es SaaS-Lösungen wie Microsoft 365 oder die Cloudplattformen der großen Cloud-Anbieter sind, die Einführung hat nicht nur Auswirkungen auf die Infrastruktur an sich, sondern zieht auch eine Anpassung zentraler Prozesse mit sich – sowohl innerhalb der IT- als auch in den Fachabteilungen. Aber die Erfahrung hat auch gezeigt, dass eine reine Cloudinfrastruktur nicht in allen Kundensituationen die optimale Lösung ist und zumindest auf absehbare Zeit hybride Lösungen der „way to go“ sind. Im Folgenden aber werden die Rahmenbedingungen beschrieben, welche maßgeblich für die IT-Infrastruktur der Zukunft sind.
+
+Infrastrukturen werden als Code dargestellt
+
+In den Umgebungen der großen Hyperscaler ist „Infrastructure as code“ längst kein neues Thema mehr. Dabei werden Ressourcen innerhalb der Cloudsysteme als Code beschrieben und an die Plattform des Hyperscalers übermittelt – diese baut dann die Infrastrukturen basierend auf den als Code übermittelten Bauplänen. Einen großen Vorteil bieten hier Herstellerunabhängige Sprachen wie Terraform, da die Vorlagen mit wenig Anpassungen unabhängig von der Cloudplattform bereitgestellt werden können.
+
+Aber auch in lokalen Infrastrukturen wird das Thema „Infrastructure as Code“ in Zukunft an Bedeutung gewinnen. Mit Lösungen wie RedHat Ansible kann die codebasierte Bereitstellung auf Plattformen wie VMWare erweitert werden und immer mehr Netzwerkhersteller bieten Integrationen in die „Infrastructure as Code“-Lösungen.
+Dadurch können Infrastrukturen mit wenig Aufwand automatisiert bereitgestellt und angepasst werden. Und mit Hilfe von Codeverwaltungslösungen können Änderungen an bestehenden Infrastrukturen gleichzeitig dokumentiert werden.
+
+Zero-Trust wird zum Standard
+
+Im Security Bereich galt lange Zeit der eigene Perimeter als die sichere Grenze, d.h. der Fokus der Security-Bemühungen lag vor allem darauf zu verhindern, dass Angreifer Zugriffe auf das interne Netz bekommen, während Akteure innerhalb des Netzwerks weitestgehend vertraut wurde. Durch immer clever werdende Angriffsszenarien gilt dieser Grundgedanke heute nicht. Stattdessen etabliert sich seit einigen Jahren der Zero-Trust-Ansatz und wird sich in den kommenden Jahren als Standard durchsetzen.
+
+Der Grundgedanke hinter Zero-Trust steckt dabei eigentlich schon im Namen: es wird davon ausgegangen, dass jedes Gerät potenziell kompromittiert sein könnte und daher erst einmal nicht vertrauenswürdig ist. Daher ist grundsätzlich beim Zugriff auf Ressourcen eine Authentifizierung und Autorisierung notwendig. Für letztere werden verschiedene Faktoren ausgewertet, z.B. ob das zugreifende Geräte den festgelegten Sicherheitseinstellungen entspricht oder ob für den Benutzer gerade eine aktive Risikobewertung vorliegt.
+
+Zusätzlich kann der Ansatz durch die Verwendung von KI-gestützer Analyse unterstützt werden. Durch die Erfassung von Securityevents und Anmeldelogs können so z.B. Bewegungsmuster der Mitarbeiter innerhalb der IT erstellt werden. Diese werden dann automatisch auf Abweichungen überprüft, die auf eine Kompromittierung des Benutzeraccounts schließen lassen.
+
+Software defined everything
+
+In den letzten Jahren kommen verstärkt Technologien wie SD-WAN zum Einsatz und lösen klassische Konstrukte wie z.B. MPLS ab. „SD“ steht dabei für „software defined“. Anders als z.B. bei einem klassischen MPLS-Netzwerk werden die verschiedenen Standorte dabei aber nicht durch einen Provider miteinander verbunden. Stattdessen schalten sich die Router, natürlich stark vereinfach ausgedrückt, zu einem WAN zusammen und nutzen dabei die vorhandenen Anbindungen ans Internet. Dadurch wird das eigene WAN flexibler: fällt zum Beispiel die Leitung eines Providers aus, schalten die Router automatisch auf eine Fallback-Leitung. Auch im Storage und Datacenter-Bereich erhält das Prinzip software defined immer mehr Beachtung.
+
+Monitoring und Automatisierung werden vereinheitlicht
+
+Im Bereich Monitoring und Automatisierung wird eine Vereinheitlichung stattfinden. Gerade das Monitoring der eigenen Infrastruktur ist heute ein aufwändiger Prozess, da sich die Schnittstellen der Hersteller oft voneinander unterscheiden und wenig Standardisierung herrscht. Auch Automatisierungen, z.B. die automatisierte Installation von Updates stellen Administratoren immer wieder vor Probleme.
+
+Die Umstellung auf „software defined“-Komponenten und Infrastructure as Code wird in Zukunft einige Dinge vereinfachen. So können z.B. Geräte über als Code definierte Konfigurationen standardmäßig in vorhandene Monitoring Lösungen integriert werden.
+
+Mit Lösungen wie Azure ARC ist es bereits möglich Windows Server auf einer zentralen Plattform zu verwalten, unabhängig davon wo die virtuelle Maschine betrieben wird.
+
+Das könnte Sie außerdem interessieren:
+
+Log-Management und SIEM – Frühwarnsystem für Cyber-Angriffe
+
+In den vorigen Teilen unserer Serie stand Prävention im Vordergrund – von Backups über Awareness-Schulungen bis hin zu Zero Trust....
+
+Beitrag lesen
+
+Juniper AI-Driven SD-WAN: Effizienz und Sicherheit für globale Netzwerke
+
+Eine Case Study über praktische Netzwerk-Optimierung Ein internationaler Hersteller von Genussmitteln betreibt 47 Standorte weltweit. Wie viele Unternehmen seiner Größe...
+
+Beitrag lesen
+
+Schutz von Servern und Cloud – Sichere Infrastruktur auf allen Ebenen
+
+Server- und Cloud-Sicherheit – was Entscheider jetzt wissen müssen Nach dem Schutz von Endgeräten und Clients rücken nun Server und...
+
+Beitrag lesen
+
+Netpoint GmbH
+Madrider Straße 18
+
+41069 Mönchengladbach
+Deutschland
++49 (0) 2161 49524 – 0
+info@netpoint.de
+
+Netpoint IT Services Inc.
+3800 Airport Blvd., Suite 101
+Mobile, AL 36608
+USA
++1 (0) 251 3273682
+
+Navigation
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Connect
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+AGB
+
+Datenschutz
+
+Impressum
+
+Cookies
+
+AGB
+
+Datenschutz
+
+Impressum
+
+Cookies
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Deutsch
+English
+
+Kontaktiere uns
+
+E-Mail
+
+Telefon
+
+Kontaktformular
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.

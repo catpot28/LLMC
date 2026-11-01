@@ -1,0 +1,26 @@
+{
+  "experiment_id": "model_comparison_gemini_v2",
+  "inputs": {
+    "companies": 49,
+    "path": "data/classification_inputs/companies.jsonl",
+    "sha256": "f215c9d472cb81ee9091af0d4c46fb3d565474ce7201f7c02ab69e5cfc294b95"
+  },
+  "kind": "separate_single_model_comparison",
+  "missing_company_ids": [
+    49
+  ],
+  "model": {
+    "id": "google/gemini-2.5-pro",
+    "key": "gemini"
+  },
+  "prompt": {
+    "path": "prompts/single_v2.txt",
+    "sha256": "ed4b3b148737e4b08101b632a4fd4e0192af3551677a51ebc5aadec3212d9237"
+  },
+  "results": {
+    "path": "single/results.jsonl",
+    "records": 48,
+    "sha256": "810d9ef19d529a43aa5c76f7662917affba26821bcbb986d5e29aeccdb331f72"
+  },
+  "run_number": 1
+}

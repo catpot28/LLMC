@@ -1,0 +1,170 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/im-unable-to-provide-the-requested-financial-summary/5076
+page path  : /t/im-unable-to-provide-the-requested-financial-summary/5076
+captured   : 2026-05-14 03:35:50 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/community.perplexity.ai_t_im-unable-to-provide-the-requested-financial-summary_5076__348f4081.html.gz
+========================================================================
+
+I'm unable to provide the requested financial summary - General - Perplexity API Platform Forum
+
+I'm unable to provide the requested financial summary - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+I'm unable to provide the requested financial summary
+
+General
+
+sonar-pro
+,
+
+chat-completions
+,
+
+search-api
+
+El_Arte
+
+May 5, 2026, 9:54pm
+
+1
+
+I'm unable to provide the requested financial summary for **GOOGL** because the search results returned no data.\n\nThis could occur for several reasons:\n\n- **Search failure**: The search query did not return results from financial news sources, SEC databases, or market data providers.\n- **Data availability**: Depending on your information access and the current date (May 1, 2026), real-time financial data may not be accessible through my search capabilities.\n- **Symbol verification**: While GOOGL (Alphabet Inc., Class A shares) is a valid ticker symbol, confirm it matches your intended company.\n\n**To proceed**, I would need:\n\n- Functional search results from financial news sources, SEC EDGAR, earnings transcripts, or analyst platforms covering GOOGL.\n- Clarification on the desired date range for recent developments.\n\nPlease resubmit your query with active search results, or verify that the search infrastructure is returning data for this ticker symbol.
+
+albert
+
+May 7, 2026, 4:24pm
+
+2
+
+Hey! In this case we’d recommend using the newly launched Finance Search tool for the Agent API, we’ve done lots of testing with similar queries as the one above and had great results with them.
+
+Here’s the announcement post
+Finance Search is now live in the Perplexity Agent API
+
+El_Arte
+
+May 8, 2026, 2:52am
+
+3
+
+Yes, it’s better.
+
+But it is so much slower.
+
+albert
+
+May 8, 2026, 3:21am
+
+4
+
+Glad to hear you’re getting better results. Here are a few things you can try to lower the latency:
+
+Match the configuration to your use case. The
+Recommended configurations
+
+table
+in the Finance Search docs lists three setups with explicit Latency / Quality / Cost tradeoffs. The “Live market data and quotes” config is the fastest — it uses perplexity/sonar with max_steps: 1 and max_tokens: 1024, and only enables finance_search in the tool list.
+
+You can also change from a preset to using a specific model — for example choosing a fast tier model (Haiku / GPT-5 mini / Gemini Flash) over a heavier model (Opus / GPT-5 / Gemini Pro).
+
+Lower reasoning_effort if you’re on a reasoning model — low is what the docs use in the balanced configuration.
+
+Cap max_tokens (and max_steps) and ask for concise output in instructions. Reduces both generation time and the number of
+
+tool-calling rounds.
+
+Tighten the prompt — the docs’ Prompt guidance (
+Finance Search - Perplexity
+) section recommends leading with the business question and adding a specific time window, which keeps the tool from over-fetching.
+
+Model choice and reasoning effort tend to be the most impactful, so probably worth starting there. Performance is an active focus for the team post-launch as well.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Search Over SEC Filings with Sonar
+
+Announcements
+
+0
+
+14
+
+July 1, 2025
+
+SEC Filings Search now Live!
+
+Announcements
+
+1
+
+265
+
+June 30, 2025
+
+Finance Search is now live in the Perplexity Agent API
+
+Announcements
+
+agent-api
+
+,
+
+finance
+
+0
+
+65
+
+May 6, 2026
+
+API query for news sites in domain filters return no data and no citations
+
+Bug Reports
+
+sonar-pro
+
+5
+
+234
+
+August 12, 2025
+
+How to access Perplexity Finance page data (quote, daily narratives, analyst history) via API?
+
+Feature Requests
+
+search-api
+
+,
+
+search
+
+2
+
+61
+
+May 1, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

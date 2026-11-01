@@ -1,0 +1,188 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/elevenlabs-voices-a-comprehensive-guide
+page path  : /elevenlabs-voices-a-comprehensive-guide
+captured   : 2026-04-13 23:16:05 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/elevenlabs/elevenlabs.io_elevenlabs-voices-a-comprehensive-guide__4211f47f.html.gz
+========================================================================
+
+ElevenLabs — ElevenLabs Voices: A comprehensive guide
+
+ElevenLabs — ElevenLabs Voices: A comprehensive guide
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Go to app
+Contact sales
+Log in
+Sign up
+Sign up
+ElevenLabs Voices: A comprehensive guide
+Introduction
+At ElevenLabs, we're pushing the boundaries of innovation in generative voice AI. This guide provides an overview of our practices, processes, and the technology behind our platform's voices.
+Categorization of Voices on ElevenLabs
+1. ElevenLabs Voices
+Users on our platform can choose from a number of readily available, pre-made voices. These are the voices you see by default inside the Speech Synthesis drop-down menu. They fall into two categories:
+Legally Contracted Voices
+These are voices obtained through legal, paid partnerships with professional voice actors. They make up the majority of the voices you’ll find in Speech Synthesis. We prioritize them not only for their unparalleled quality but also as a testament to our commitment to supporting artists in the industry.
+Collaboration with professional voice actors on specific projects.
+Voice actors compensated on fixed-term contracts.
+Licensing agreements in place ensuring voice actors retain rights to their voices.
+Randomly Generated Voices
+These are voices produced using complex algorithms that sample voice characteristics at random. These voices are generated with our Voice Design tool.
+Unique and novel - every generated voice is different.
+Do not imitate or replicate any specific individual's voice.
+Do not belong to any specific individual.
+2. User Voices
+VoiceLab is our suite of tools available to users for voice creation and customization. It comprises two voice cloning models (Instant Voice Cloning (IVC) and Professional Voice Cloning (PVC), and Voice Design - a tool for generating new voices by randomly sampling vocal properties.
+Instant Voice Cloning (IVC)
+Instant Voice Cloning enables users to quickly produce a digital likeness of a voice based on short samples. IVC is engineered to offer quick results, with lower preview quality, making it easy to experiment with various voice styles.
+Key features:
+Rapid cloning from short voice samples.
+Security measures:
+Unlike training from scratch, where vast amounts of data are needed, this technique uses what is called zero-shot learning. Here, the AI listens to a short audio clip and instantly grasps how to replicate a voice, without the need for further training. The results won’t identically resemble the original upload samples.
+Voices added by an individual user for Instant Voice Cloning remain exclusive to that user's account and cannot be shared. No other user has access to voices created using IVC.
+User responsibilities:
+Prior to each voice sample upload, users must confirm they have obtained the necessary rights and permissions to clone the specific voice. This is a mandatory step to initiate the cloning process.
+For more information on how to use our voice cloning technology safely, please see our
+Voice Cloning Guide
+.
+Misuse of the voice cloning feature, especially for unauthorized or commercial purposes without proper consent, results in strict repercussions, including permanent bans.
+Professional Voice Cloning (PVC)
+Professional Voice Cloning is a more advanced voice cloning feature that allows users to create a high-fidelity replica of their own voice. This involves training a dedicated model on a large set of voice samples – at least 30 minutes of clean audio data.
+Key features:
+High-fidelity, ultra-realistic voice reproduction.
+Security measures:
+Due to the high fidelity of output produced with PVC, we’ve implemented robust security measures to ensure that users can only clone their own voice.
+After uploading speech data for training, a user must pass a verification step: a text captcha prompt is provided, which the user must read aloud within a 10-second timeframe.
+We validate the request by comparing the voice profile from this recording with the voice contained in the data uploaded by the user for cloning.
+If there’s a match, the request is sent for fine-tuning. If not, the user has 4 verification attempts remaining. After all attempts are exhausted without success, the user must reach out via our help center for manual voice verification.
+By default, voices added by an individual user remain exclusive to that user's account.
+Users can choose to share their Professional Voice Clone via Voice Library for others to use and earn rewards when they do.
+User responsibilities:
+Similar to IVC, our Terms of Service stress the importance of respecting individual rights. Misuse of this feature, in breach of our terms, results in swift and firm action, up to and including permanent bans from our platform.
+Voice Design
+Voice Design allows for generation of new synthetic voices based on user-chosen parameters, such as age, gender and accent. Voices created this way remain consistent in speech characteristics across languages.
+Key features:
+Unique and novel - every generated voice is different.
+Do not imitate or replicate any specific individual's voice.
+Do not belong to any specific individual.
+3. Shared Voices
+Voice Library is our environment for voice sharing. Users can either share voices generated using Voice Design or their own voice generated with Professional Voice Cloning.
+Community Voice Sharing & Rewards
+Compatibility:
+Voice Design
+Professional Voice Cloning
+Features:
+Usage Rewards: Users earn rewards when others utilize their shared voice.
+Voice Discovery: Explore and use voices from the library for various content needs.
+All voices in the Voice Library come with a free commercial use license.
+A Note on Content Sharing
+While ElevenLabs offers advanced tools for voice generation and voice cloning, it's important to note that
+our platform does not offer a mechanism for publishing or sharing any audio files.
+Voice Library enables users to share certain voices, which can in turn be used to produce new audio content, but it doesn’t permit the sharing of any actual audio content itself.
+Any distribution or sharing of content produced using our tools outside of our platform rests entirely on the user's discretion and responsibility.
+We encourage responsible and respectful use of our technology and we will act decisively if we’re notified of any breaches to our
+Terms of Service
+. We trust our community to be mindful of the potential implications of voice cloning and to act in accordance with the law and our platform's guidelines.
+Our Commitment to Transparency
+We've introduced tools and resources to facilitate responsible use of our technology.
+AI Speech Classifier
+: Let’s anyone verify if an audio sample originated from ElevenLabs.
+Voice Captcha protection: Ensures the Professional Voice Cloning service remains secure.
+Education
+: Collaborative guides on safe and legal use of voice cloning technology drafted with legal experts.
+Terms of Service
+: Guidelines stressing lawful use of our technology.
+If you come across content which you suspect was generated on our platform that raises concerns, please report it
+here
+.
+Closing Note
+As pioneers in AI-driven voice technologies, we prioritize transparency, integrity, and respect. We cherish our collaborations with the voice actor community and always seek to create value for our users while respecting individual rights. As we journey further, we remain committed to augmenting human creativity responsibly.
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+Cookie Settings
+English
+English
+हिन्दी
+Español
+Deutsch
+Français
+日本語
+Polski
+Svenska
+Português

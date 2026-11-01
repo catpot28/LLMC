@@ -1,0 +1,297 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/music-api
+page path  : /music-api
+captured   : 2026-05-19 04:44:16 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/elevenlabs/elevenlabs.io_music-api__6255549b.html.gz
+========================================================================
+
+Eleven Music API - Studio-Grade AI Music Generation
+
+Eleven Music API - Studio-Grade AI Music Generation
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Sign up
+Sign up
+Eleven Music API
+Studio-grade AI music generation for your products
+Get API key
+View docs
+Generate custom tracks from text prompts with full control over genre, mood, structure, and duration. Trained on licensed stems and music, available for broad commercial use.
+Music API
+Create music from a single prompt
+import
+{ ElevenLabsClient }
+from
+
+"@elevenlabs/elevenlabs-js"
+;
+
+const
+
+elevenlabs
+= new ElevenLabsClient();
+
+const
+
+track
+=
+await
+elevenlabs.music.compose({
+
+prompt:
+
+"
+A fast-paced electronic track for a high-adrenaline video game
+"
+,
+
+musicLengthMs:
+
+30_000
+,
+
+modelId:
+
+"music_v1"
+,
+
+});
+
+TypeScript
+TypeScript
+Python
+Run
+Run code
+Get API Key
+Synthesia
+Meta
+Perplexity
+Twilio
+Lovable
+Research-led music generation, built for commercial use
+Get API key
+Read licensing terms
+Eleven Music is trained on licensed stems and music, designed from the start for broad commercial use. Studio-grade audio output without the complexity of traditional music licensing.
+Self-Serve
+For individuals and small teams building with the Music API
+Pay as you go API access
+Up to 4,800 min/month generation
+Broad commercial use online and offline
+Streaming, stems, and timestamps
+Get started
+Enterprise
+For organizations building music into products at scale
+All media rights incl. film, TV, games
+Inpainting API access
+10+ concurrent generations
+Custom attribution and co-branding
+Contact sales
+Everything you need to build with AI music
+Generate and control music programmatically - from one-shot tracks to section-level composition integrated into your product.
+Prompt-driven composition
+Generate complete tracks from a single text prompt. Control genre, mood, structure, and instrumentation with natural language - Eleven Music interprets complex, multi-layered prompts with nuance.
+Section-by-section control
+Go beyond one-shot generations. Use composition plans to define intros, verses, choruses, and outros with independent styles, lyrics, and durations per section.
+Streaming generation
+Stream music in real time for interactive experiences. Ideal for dynamic scoring in games, live creative tools, and media applications.
+Licensed and cleared for commercial use
+Created in collaboration with labels, publishers, and artists. All generated music is available for broad commercial use. No complex licensing to manage.
+Built for modern media and interactive products
+Cinematic scores
+Corporate music
+Game soundtracks
+Match any mood
+Multilingual vocals
+Cinematic scores
+Orchestral
+Epic
+Triumphant
+Fantasy
+Prompt
+A rich orchestral track, deeply cinematic, symphonic strings, brass and woodwinds, an epic fantasy, triumphant, jubilant, crescendo, finale.
+Powering world-class products and brands
+“
+Sonic Hub just got a game-changing upgrade: With Eleven Music, we're supercharging our audio operating system for brands, agencies and creators, fusing our deep expertise in understanding and coding the sound of a brand with Eleven Music's unparalleled quality of execution in AI music creation. Get ready for a new industry benchmark!
+”
+“
+From dubbing Reels in local languages, to generating music and character voices in Horizon, ElevenLabs platform enables global creators, businesses, and enterprises to build with voice, music, and sound at scale.
+”
+“
+ElevenLabs made it easy for us to quickly bring powerful text-to-speech capabilities to our SDK, allowing Agents to respond in real time with expressive voices to user questions or as feedback to what it's seeing.
+”
+“
+Twilio has integrated ElevenLabs' generative AI voice technology into its CPaaS, enhancing ConversationRelay. This integration allows businesses and developers to create conversational AI voice interactions that sound human, feel expressive, and respond in real time directly from the Twilio CPaaS platform.
+”
+Built for production
+Enterprise-grade security
+Data encrypted in transit and at rest. SOC 2 and GDPR compliant. Team-level access control and API key management.
+Python and TypeScript SDKs
+Official Python and TypeScript SDKs with type safety, streaming support, and clear examples. Integrate music generation into any application in minutes.
+Dedicated support
+Enterprise plans include custom workflows, integration support, dedicated account management, and custom SLAs. Priority support for production-critical applications.
+Frequently asked questions
+What is the Eleven Music API?
+The Eleven Music API lets you generate high-quality, original music from text prompts. You can control genre, mood, structure, duration, and language - and integrate music generation directly into your product or workflow via POST /v1/music.
+Is music generated with the API cleared for commercial use?
+Yes. Eleven Music is trained on licensed stems and music, created in collaboration with labels, publishers, and artists. Songs are available for broad commercial use on all paid plans. Film, TV, and large studio game rights require an Enterprise plan. See the Eleven Music v1 Terms at elevenlabs.io/eleven-music-v1-terms for the full commercial rights table.
+What audio quality does the API output?
+Eleven Music generates studio-grade audio at up to 44.1 kHz. Supported output formats include MP3 (various bitrates up to 192kbps), PCM (up to 48 kHz), u-law, a-law, and Opus. High-quality downloads (PCM 44.1 kHz) are available from the Pro plan.
+How many languages are supported for vocals?
+Eleven Music supports vocals in 59 languages, with native-like quality in 11 languages including English, Portuguese, Italian, Finnish, and Greek.
+Can I control the structure of a track?
+Yes. Use a simple prompt for one-shot generation, or pass a composition_plan with individual sections - each with its own name, styles, duration, and lyrics. Sections support positive and negative style directions for fine-grained control.
+How long can generated tracks be?
+Track duration is configurable via music_length_ms, supporting lengths from 3 seconds (3,000ms) to 10 minutes (600,000ms). Individual sections within a composition plan can be 3 seconds to 2 minutes each.
+Does the API support streaming?
+Yes. Streaming generation allows real-time playback for interactive tools, games, and dynamic scoring applications.
+What is in-painting?
+In-painting lets you regenerate specific sections of an existing track while preserving the rest - using the source_from parameter in composition plans. This is currently available to enterprise clients.
+How does pricing work?
+Self-serve plans include monthly generation limits (from 11 to 4,800 minutes) and monthly download limits. Enterprise plans offer custom limits and expanded commercial rights. See the pricing page at elevenlabs.io/pricing for current plan details.
+What about copyright and licensing?
+Unlike competitors facing legal challenges, Eleven Music is built on properly licensed data. We partnered with labels, publishers, and artists to ensure all generated music is cleared for commercial use. Specific prohibited inputs (artist names, song titles, lyrics) are outlined in the Music Terms at elevenlabs.io/music-terms.
+What SDKs are available?
+Official SDKs for Python and JavaScript/TypeScript. You can also use the HTTP API directly - POST
+https://api.elevenlabs.io/v1/music
+with a JSON body.
+For more information, see the API Reference here:
+https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music
+Where can I find code examples and documentation?
+API reference at
+https://elevenlabs.io/docs/api-reference/music/compose
+. Guides and cookbooks at
+https://elevenlabs.io/docs/cookbooks/music
+.
+Do you offer enterprise support?
+Yes. Enterprise plans include SOC 2 compliance, GDPR support, in-painting access, 10+ finetune slots, custom co-branding terms, dedicated support, and custom SLAs.
+Latest updates
+ElevenLabs is now a Kiro Power
+Category
+ElevenAPI
+Date
+Apr 8, 2026
+Scribe v2 just got an upgrade
+Category
+ElevenAPI
+Date
+Apr 2, 2026
+How Scribe v2 Realtime Works
+Category
+ElevenAPI
+Date
+Mar 4, 2026
+How to use Agent Skils
+Category
+ElevenAPI
+Date
+Feb 17, 2026
+ElevenLabs Agent Skills
+Category
+ElevenAPI
+Date
+Feb 6, 2026
+Introducing the ElevenLabs × Lovable integration
+Category
+ElevenAPI
+Date
+Dec 16, 2025
+Elevenlabs OSS Engineers Fund: supporting the open-source projects that shape our work
+Category
+ElevenAPI
+Date
+Dec 15, 2025
+Add a Santa Voice Agent to Your React App in Minutes
+Category
+ElevenAPI
+Date
+Dec 9, 2025
+Introducing ElevenLabs UI: Open-source audio & agent components for the web
+Category
+ElevenAPI
+Date
+Oct 7, 2025
+The highest-quality AI Music generator
+Talk to sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+X - Developers
+LinkedIn
+GitHub
+YouTube
+YouTube - Developers
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

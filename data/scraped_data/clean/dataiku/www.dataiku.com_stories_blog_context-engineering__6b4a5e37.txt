@@ -1,0 +1,475 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/context-engineering
+page path  : /stories/blog/context-engineering
+captured   : 2026-04-14 06:19:55 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_context-engineering__6b4a5e37.html.gz
+========================================================================
+
+Context engineering: building AI systems that scale
+
+Context engineering: building AI systems that scale
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Context engineering: building AI systems that scale
+
+Mar 25, 2026
+
+4 min read
+
+/
+
+Julia Tran
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+There's a version of the story where prompt engineering was always just a stepping stone. In 2022 and 2023, a certain kind of expertise emerged: the ability to coax better outputs from large language models (LLMs) by carefully crafting instructions.
+
+Practitioners learned that telling a model to “think step by step” improved its reasoning, that framing it as an expert could sharpen its tone, that negative examples were sometimes more powerful than positive ones. This was prompt engineering, and for a while it felt like the central skill of the AI era.
+
+It isn't anymore, or at least it's no longer sufficient on its own. As organizations push AI beyond demos and into production, the problems they encounter aren't primarily about how instructions are phrased. They're about what information the model sees, when it sees it, how that information was selected, and what happens when it turns out to be wrong. These questions belong to a different discipline: context engineering.
+
+The term, popularized by AI researcher Andrej Karpathy, describes the challenge of filling a model's context window with precisely the right information at each step of a workflow. It sounds deceptively simple. In practice, it touches nearly every layer of an AI system's architecture, and getting it wrong is one of the most common reasons that systems which look promising in development break down in production.
+
+The context window is not a dump truck
+
+Modern LLMs can process enormous amounts of text. Context windows that once maxed out at 4,000 tokens now routinely accommodate hundreds of thousands, and some models are approaching the million-token range. This has led to a tempting assumption: If the model can hold more, just put more in. Pipe in all the documents, all the chat history, all the tool outputs, and let the model sort it out.
+
+This approach fails in several distinct ways. The most straightforward is cost: Large contexts are expensive to process and add latency to every request. But the subtler failures are more dangerous.
+
+Research has consistently shown that model accuracy degrades when context is bloated with irrelevant information. The model doesn't just ignore noise; it gets confused by it. This is sometimes called the “lost in the middle” problem, where information buried deep in a long context is less likely to be retrieved accurately than information near the beginning or end.
+
+There are three failure patterns worth understanding in detail:
+
+Context poisoning:
+In a multi-step agentic workflow, the model's outputs from one step become inputs to the next. If the model makes an incorrect assumption early on, that error propagates forward. Each subsequent step reasons on top of a flawed premise. By step six, the system may be confidently executing a task entirely disconnected from what was actually requested.
+
+Context distraction:
+More information isn't always better. When agents have access to too many tools with overlapping capabilities, or when documents are loaded without filtering for relevance, the model struggles to identify the signal within the noise. Accuracy drops not because the right information is absent, but because it's buried.
+
+Context clash:
+This occurs when the context contains contradictory information, such as a policy document that's been updated since the version in the knowledge base, or a tool output that conflicts with a retrieved fact. Models don't handle contradiction gracefully. They don't flag it; they pick a side and proceed, often unpredictably.
+
+What context engineering actually involves
+
+Context engineering is partly a set of techniques and partly a design philosophy. At the technique level, the most important development has been retrieval-augmented generation, or RAG. Rather than loading entire knowledge bases into a prompt, RAG systems retrieve only the documents most relevant to a given query and inject only those into the context.
+
+Done well, this keeps context lean and relevant. Done poorly, it introduces its own failure modes: retrieval systems that surface the wrong documents, chunking strategies that split information at the wrong boundaries, or embeddings that miss semantic nuance.
+
+Tool selection is another underappreciated dimension. In agent architectures, models are given access to a suite of tools including web search, code execution, database queries, and external APIs. The instinct is to give agents maximum capability by exposing everything. But research and practical experience both suggest that tool overload impairs decision-making.
+
+When an agent must choose among thirty tools with overlapping capabilities, it makes worse choices than when offered a focused set of ten. Dynamic tool loadouts, where the system selects which tools to expose based on the current task, are one solution, though they add orchestration complexity.
+
+Context pruning addresses the problem of growing context over the course of a long workflow. As a session accumulates conversation history, tool outputs, and intermediate reasoning steps, the context expands. Pruning strategies keep the working window manageable without losing important state. This is harder than it sounds; deciding what to discard requires its own judgment.
+
+Context as infrastructure, not just configuration
+
+The deeper shift that context engineering represents is moving AI design from the level of individual prompts to the level of systems. A prompt is something you write; a context engineering strategy is something you build and maintain. It involves decisions about data pipelines, knowledge base design, retrieval architecture, agent orchestration, and evaluation methodology.
+
+This is where enterprise AI platforms that unify data, orchestration, and governance become genuinely valuable rather than just convenient. Platforms designed for operationalizing AI systems, like Dataiku, allow teams to:
+
+Build RAG pipelines from governed data sources.
+
+Manage the vector stores that underpin semantic retrieval.
+
+Orchestrate multi-agent workflows with explicit state management.
+
+Monitor context quality and cost across production pipelines.
+
+These aren't features you'd typically build from scratch for a single use case. They're infrastructure concerns that cut across all AI applications in an organization. Context engineering requires collaboration between people who understand what the AI needs to know (domain experts, product teams) and people who understand how to build the systems that deliver that knowledge (data engineers, ML engineers, platform teams). It's not a task you can hand to a single prompt engineer working in isolation.
+
+Why this matters now
+
+The shift from prompt engineering to context engineering reflects a maturation in how the industry thinks about AI deployment. Early applications were narrow: a chatbot with a fixed persona, a classifier trained on a specific dataset, a tool that did one thing well. As organizations have pushed AI into more complex and higher-stakes workflows, the limitations of treating each model call as an isolated event have become impossible to ignore.
+
+Context engineering doesn't solve all of these problems. It doesn't address model hallucination at the source, doesn't eliminate the need for human oversight in critical decisions, and doesn't make evaluation easy. But it provides a framework for thinking systematically about what a model knows at each step of a workflow, and for building systems that degrade gracefully when things go wrong rather than catastrophically.
+
+It also sets up the next challenge. Even a well-designed context engineering strategy operates within the span of a single session or workflow. What happens when you need agents that remember things across sessions, that build up knowledge over time, recognize returning users, and learn from past mistakes? That's the problem of agent memory, and it requires an entirely different set of architectural solutions.
+
+Ready to move from prompts to production? Explore how Dataiku enables scalable AI systems
+
+CONTACT US
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Recursive AI: when models start managing their own context
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+Agent memory: the missing layer in enterprise AI systems
+
+AI observability: how enterprises control autonomous agents
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+Recursive AI: when models start managing their own context
+
+There's a bottleneck at the heart of how large language models process information, and it hasn't gone away...
+
+Apr 09, 2026
+
+GenAI & Agents
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+By the end of 2026, the "AI honeymoon" will be officially concluded. For healthcare and life sciences...
+
+Apr 01, 2026
+
+GenAI & Agents
+
+Agent memory: the missing layer in enterprise AI systems
+
+Ask most people to describe the memory of a large language model and they'll point to the context window, the...
+
+Mar 31, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

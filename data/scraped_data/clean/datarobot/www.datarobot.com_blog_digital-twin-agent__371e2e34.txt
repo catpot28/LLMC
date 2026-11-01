@@ -1,0 +1,744 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/digital-twin-agent/
+page path  : /blog/digital-twin-agent/
+captured   : 2026-06-10 06:32:12 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_digital-twin-agent__371e2e34.html.gz
+========================================================================
+
+How to build a digital twin agent (with guardrails) | DataRobot Blog
+
+How to build a digital twin agent (with guardrails) | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+How to build a digital twin agent (with guardrails)
+
+The second post from Build Club, our weekly live build session. A companion GitHub repo can be found
+here
+.
+
+Your inbox is not the problem. The problem is that you are the person other people are waiting on.
+
+Some of those messages need you specifically. Most of them need an answer you have already given six times this quarter, or context that lives in a doc you wrote last year, or a decision someone could make themselves with the right pointer. You cannot tell which is which until you read them. So the threads pile up. You drop some. Whatever you are responsible for moves slower because of it.
+
+There is a pattern emerging for handling this: a digital twin agent that triages your inbound, drafts your first-pass responses, and only escalates the messages that actually need you. The pattern works. The hard part is not the agent. The hard part is shipping it without leaking a credential into a vector database on day one.
+
+Carson Gee, a Senior Principal Software Engineer at DataRobot, kicked off DataRobot’s first Build Club session with the load-bearing fact: he has hundreds of unread messages. The session that followed walked through how he built a digital twin agent to triage them.
+
+This post is the recipe. The short version is that you can stand up a digital twin agent on the DataRobot platform in about an hour. The honest version is that the last 20 minutes are the ones that matter, because that is where moderation, observability, and the boundary between “demo” and “production” get decided.
+
+What a digital twin agent does
+
+CaaS pinging Carson Gee to let him know he needs to make an engineering decision.
+
+A digital twin is not a replacement for your judgment. It is a triage layer in front of it. Carson named it Carson-as-a-Service (CaaS), and it does four things.
+
+CaaS listens in every Slack channel it is added to, but only on direct mentions. When someone @-mentions Carson, an agentic workflow categorizes the message: does this need Carson personally, can it be answered from his prior writing, or can it wait. If it needs him, it drafts a briefing and DMs him. If it doesn’t, it answers in his tone.
+
+Prompt-driven scheduled jobs that can run on a custom cadence.
+
+CaaS runs scheduled deep-research jobs on topics he is tracking. And maintains a database of Carson’s Confluence pages, blog posts, and saved memories, so the responses sound like him.
+
+The asymmetry is favorable. An hour of setup buys back roughly 30 minutes a day of triage work, indefinitely, with the option to keep tuning. The pattern generalizes across roles. It works for the engineer who owns the on-call rotation, the product manager who fields every “is this on the roadmap” question, the manager whose calendar is booked by other people’s decisions, and the support lead whose inbox is full of questions they have answered before. The common shape is the same: a lot of repeat-pattern inbound, a small fraction that actually needs you, and no good way to tell them apart at a glance.
+
+Let’s build a digital twin agent
+
+Everything below assumes you have a
+DataRobot account
+. You will also need to use the
+Agentic Starter application template
+. Related templates used are open-sourced and linked below.
+
+Step 1: Start with the Agentic Starter application template
+
+The
+Agentic Starter application template
+gives you a FastAPI server, a deployment scaffold, and an LLM-backed agent template. You can fork it or access it directly in the DataRobot UI.
+
+Carson’s twin is, structurally, the unmodified starter kit plus a Slack app, a vector database wired to a files API, and a personality prompt.
+
+Step 2: Add the Slack listener
+
+Use the
+DataRobot Slack app template
+to get the bot token and app token wired up. The one customization that matters: filter the Slack listener so the bot only acts on direct mentions. Without this, the bot logs every message in every channel it sits in, which is both an observability problem and a privacy problem.
+
+Step 3: Mount a knowledge base
+
+This is the step that decides whether the twin sounds like you or like a generic LLM. Point the knowledge base at content you have actually authored: Confluence pages, blog drafts, meeting notes, the last six months of your own long-form Slack messages. Carson used an MCP connector to pull his Confluence space into the knowledge base, then layered a “memories” mechanism on top so he could append new context via a tool call from within Slack itself.
+
+The knowledge base is backed by a DataRobot vector database, which gets attached to the LLM blueprint. Today, updates to the underlying files trigger a vector DB rebuild. Incremental updates are on the roadmap. In the meantime, batch your knowledge updates.
+
+Step 4: Write a personality prompt
+
+The default system prompt produces a generic assistant. That is not what you want. The first version of your twin will be too whimsical, too direct, or too earnest, and the second version is the one people actually want to talk to. You only learn the difference by deploying. Carson’s prompt explicitly instructs the model to be “direct, with character,” and includes opinions on technical topics he holds in real life. Yours should too.
+
+Step 5: Add a PII guardrail before you ship
+
+This is the step the live audience forced into the build, and it is the one most teams skip. Here is what it looks like in practice.
+
+DataRobot ships a global Presidio PII detection model. You can find it in
+DataRobot’s model registry
+and deploy from there. Then, on the custom model that backs your LLM blueprint, open the evaluation and moderation panel and attach the PII detector as a moderation model.
+
+Set the moderation method to
+replace
+(which anonymizes detected entities like SSNs and credit card numbers with bracketed placeholders) or
+block
+(which short-circuits the response entirely). Tune the probability threshold based on how strict you want the failure mode to be. A threshold of 0.5 is sensitive enough to catch most obvious leaks; lower thresholds will start to false-positive on benign messages and make the twin feel broken.
+
+Attach the moderation to the LLM Blueprint Model. This is the same evaluation-and-moderation panel as before, just attached one layer up so every agent call gets moderated. The UI generates a moderation_config.yaml in the Model’s assets.
+
+Copy that YAML into the agent folder in your local project so the guardrail travels with your deployment. Smart diffing on the deployment side handles small revisions automatically; you only need to reattach the moderation by hand if you make a major change to the LLM Blueprint configuration.
+
+Step 6: Deploy your digital twin agent
+
+Send the twin a few test prompts: an obviously benign one, one with a fake SSN, one with a fake credit card. Confirm both that the moderated response renders correctly in Slack and that the trace shows the moderation firing.
+
+If you put the guardrail on the LLM, you will see the raw input in the agent trace and the moderated output downstream. If you put it on the agent, the trace will reflect the moderated input end to end. Decide which one your security review wants and document it.
+
+What this Build Club session taught us
+
+The session was scheduled as a productivity demo. It turned into an extended tour of the moderation and observability surface area we ship to customers. That detour is the point. The productivity argument for a digital twin is not in dispute. The honest constraints on shipping one are.
+
+Three takeaways from watching it play out live, in front of an audience that included security engineers.
+
+The gap between “I built a thing for myself” and “I built a thing I can defend to security” is wider than it should be. The first version of any twin will not have the guardrails the second version needs. Plan for the moderation step. Do not treat it as polish.
+
+Observability is a double-edged feature for an agent that lives in Slack. Tracing is what you want when debugging an agentic workflow. It is not what you want when someone has just pasted a credential into the bot. The right pattern is redacted display backed by encrypted-at-rest payload storage, scoped per trace by sensitivity.
+
+The self-healing direction is real and worth experimenting with. Carson’s twin writes her own agent definitions back to the files API and reloads them as personalized variants, so the version of the twin talking to you can be tuned for you. That is not in the starter kit yet. It is in the next version of this build.
+
+Try it yourself
+
+Build Club runs weekly. Each session takes one volunteer driver, one hour, and an idea voted on by the audience. The format is deliberately unrehearsed: we build live, the build breaks live, and we fix it live. If you are building on DataRobot or thinking about enterprise-ready agents and want inspiration, this is the series for it.
+
+Get started
+
+DataRobot’s official GitHub:
+https://github.com/datarobot-oss/datarobot-agent-skills
+
+Slack app template:
+https://github.com/datarobot-oss/slack-bot-app
+
+Part one of this series:
+https://www.datarobot.com/blog/agent-build-club/
+
+Join the conversation in the
+DataRobot Slack community
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Authors
+
+by
+
+Amber Bennoui
+
+,
+
+Carson Gee
+
+June 2, 2026
+
+|
+7 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+Industry-standard LLM benchmarks in DataRobot
+
+May 27, 2026
+
+|
+8 min read
+
+Read More
+
+Inside the Product
+
+A practical guide for platform teams managing shared AI deployments
+
+May 22, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

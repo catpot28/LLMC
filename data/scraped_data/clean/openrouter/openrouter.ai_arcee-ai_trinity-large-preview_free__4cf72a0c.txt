@@ -1,0 +1,144 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/arcee-ai/trinity-large-preview:free/
+page path  : /arcee-ai/trinity-large-preview:free/
+captured   : 2026-02-08 02:38:45 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/openrouter/openrouter.ai_arcee-ai_trinity-large-preview_free__4cf72a0c.html.gz
+========================================================================
+
+Trinity Large Preview (free) - API, Providers, Stats | OpenRouter
+
+Trinity Large Preview (free) - API, Providers, Stats | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Models
+Chat
+Rankings
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Models
+Providers
+Pricing
+Enterprise
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Arcee AI: Trinity Large Preview (free)
+arcee-ai
+/
+trinity-large-preview:free
+Chat
+Compare
+Created
+Jan 27, 2026
+131,000
+context
+$
+0
+/M input tokens
+$
+0
+/M output tokens
+Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing.
+
+It excels in creative writing, storytelling, role-play, chat scenarios, and real-time voice assistance, better than your average reasoning model usually can. But we’re also introducing some of our newer agentic performance. It was trained to navigate well in agent harnesses like OpenCode, Cline, and Kilo Code, and to handle complex toolchains and long, constraint-filled prompts.
+
+The architecture natively supports very long context windows up to 512k tokens, with the Preview API currently served at 128k context using 8-bit quantization for practical deployment. Trinity-Large-Preview reflects Arcee’s efficiency-first design philosophy, offering a production-oriented frontier model with open weights and permissive licensing suitable for real-world applications and experimentation.
+Chat
+Compare
+Model weights
+Overview
+Providers
+Performance
+Apps
+Activity
+Uptime
+Quickstart
+Providers for Trinity Large Preview (free)
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for Trinity Large Preview (free)
+Compare different providers across OpenRouter
+All locations
+Sorting API Example
+Apps using Trinity Large Preview (free)
+Top public apps this month
+Recent activity on Trinity Large Preview (free)
+Total usage per day on OpenRouter
+Prompt
+5.14B
+Completion
+60.2M
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for Trinity Large Preview (free)
+Uptime stats for
+Trinity Large Preview (free)
+
+across all providers
+Sample code and API for Trinity Large Preview (free)
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports reasoning-enabled models that can show their step-by-step thinking process. Use the
+reasoning
+parameter in your request to enable reasoning, and access the
+reasoning_details
+array in the response to see the model's internal reasoning before the final answer. When continuing a conversation, preserve the complete
+reasoning_details
+when passing messages back to the model so it can continue reasoning from where it left off.
+
+Learn more about reasoning tokens
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

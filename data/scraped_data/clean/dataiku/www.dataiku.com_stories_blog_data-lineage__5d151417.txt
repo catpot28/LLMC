@@ -1,0 +1,434 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/data-lineage
+page path  : /stories/blog/data-lineage
+captured   : 2026-02-14 01:38:22 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_data-lineage__5d151417.html.gz
+========================================================================
+
+Data Lineage: The Key to Impact and Root Cause Analysis
+
+Data Lineage: The Key to Impact and Root Cause Analysis
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Analytics Modernization
+
+Data Lineage: The Key to Impact and Root Cause Analysis
+
+Oct 11, 2024
+
+2 min read
+
+/
+
+Lauren Anderson
+
+Data has to be updated as new analysis needs come along, but in complex, multi-project data pipelines where data is heavily interconnected, more often than not these updates lead to unintended consequences. Even small tweaks can cause issues that range from numbers being slightly off in a dashboard to complete project breakdowns.
+
+However, when the connections between data are unknown, gaining visibility into these impacts before they occur or understanding the root cause of those changes afterward becomes nearly impossible. This is where data lineage comes into play.
+
+What Is Data Lineage?
+
+Data lineage is a representation of all the transformations applied to a given column across datasets and projects, both upstream and downstream. Think of it as a map that shows every twist and turn data takes — detailing the column sources, transformations, and destinations. With proper lineage in place, data teams can trace data-related issues back to their root causes and assess the potential impact of a change on downstream systems.
+
+Data Lineage in Root Cause Analysis
+
+When errors or discrepancies arise in your data, performing a root cause analysis is critical to finding the source. Without data lineage, identifying where the issue originated can feel like searching for a needle in a haystack. Did the error stem from incorrect data ingestion? Was it caused by a faulty transformation or an issue in a downstream system?
+
+Data lineage simplifies this process by providing a visual map that shows you exactly how a column’s data was modified and highlights where issues may have occurred. By tracing the problem back through its lineage, you can quickly isolate the faulty step in your data pipeline, saving time and preventing future errors.
+
+Suppose a key business report contains inaccurate figures, and the team needs to find out why. Using data lineage, you can trace the data backward, from the final report, through each transformation and aggregation step, all the way to the initial data source. This helps identify whether the issue was with data collection, an incorrect calculation, or a faulty transformation rule, allowing you to fix the problem at its origin.
+
+Data Lineage in Impact Analysis
+
+When making changes to a data pipeline — whether modifying a dataset, transforming data, or updating models — understanding how those changes will affect downstream applications is crucial. This is where impact analysis comes into play.
+
+Data lineage enables you to clearly see which systems, reports, or models rely on a particular column in a dataset. By understanding these dependencies, you can anticipate potential disruptions or inaccuracies that might arise due to your changes.
+
+For example, if a financial dataset needs to be enriched with the numbers of a new region, but it’s used in multiple projects for reports and dashboards, there’s a high probability that the change will affect those downstream solutions. Data lineage lets you visualize all the downstream projects and models that this column is associated with, which allows the team to take preemptive actions, such as updating reports, adjusting models, or notifying stakeholders, before any issues or confusion arises.
+
+Data Lineage, Now in Dataiku
+
+Data lineage is now accessible from many locations within Dataiku — from the
+prepare recipe
+to the
+data catalog
+and more — allowing you to easily trace lineage between columns across all projects.
+
+Easily conduct root cause analysis and impact analysis with data lineage in Dataiku.
+
+Recently, Dataiku released a suite of
+data quality
+features to improve visibility into data quality in Dataiku that can alert you to quality issues in your data. Now, with data lineage, you can go a step further to diagnose the cause of any data quality rule failures for faster troubleshooting.
+
+With data lineage, Dataiku gives you more observability over your data, so that you can ensure your insights are built on a solid foundation.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Modernizing Analytics With Dataiku and Snowflake
+
+The Modern Analyst’s Simplified Path From Question to Insight
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+Feb 06, 2026
+
+Recommended
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the...
+
+Dec 18, 2025
+
+Recommended
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while maintaining...
+
+Dec 03, 2025
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

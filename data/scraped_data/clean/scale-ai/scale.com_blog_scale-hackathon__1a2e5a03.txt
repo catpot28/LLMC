@@ -1,0 +1,256 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/scale-hackathon
+page path  : /blog/scale-hackathon
+captured   : 2026-04-19 05:53:54 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_scale-hackathon__1a2e5a03.html.gz
+========================================================================
+
+Encouraging innovative thinking and tackling Scale AI's biggest challenges. | Scale AI
+
+Encouraging innovative thinking and tackling Scale AI's biggest challenges. | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Company
+Scale Hackathon
+by
+
+Shannon Hong
+Published
+October 28, 2020
+Reading Time
+6 min read
+Copy Link
+The Scale AI team hosted its first ever Hackathon last month. The hackathon
+was designed to:
+Encourage innovative thinking to solve some of Scale’s biggest challenges
+Encourage innovative thinking to solve some of Scale’s biggest challenges
+in practice
+Facilitate long-term cross-functional relationships
+Prototype and potentially launch impactful projects that make Scale better
+in practice
+instructions.
+Facilitate long-term cross-functional relationships
+Give all Scaliens a creative break from their daily work.
+in task creation.
+Scaliens across functions and teams leapt to the challenge, proposing 63 ideas
+and ultimately working on 10 separate projects comprising of 37 team members.
+Projects ranged from new product proposals to better internal search, from
+refactoring tech debt to streamlining instructions for Taskers.
+Project Highlights:
+The following are just some of the projects Scaliens tackled during the
+Hackathon. As a disclaimer, most of these projects are not live, nor do they
+indicate immediate plans to build these ideas.
+Super Instructions
+Winner: Best In Show
+Team Members:
+Shaun VanWeelden
+,
+Taisia Karaseva
+,
+Jeff Lin
+,
+Galen Bertozzi
+,
+Rashid Lasker
+,
+Ivan Roumec
+,
+Nofel Naoman
+,
+Lawder Paul
+Problem Statement: Annotation instructions are critical for
+the development of high-quality training data. Today’s annotation
+instructions are mostly made on static, non-interactive documents, not
+connected to the API payloads creating the task and requiring 3rd party
+solutions to host.
+Solution: The Super Instructions team tackled this problem
+in 3 ways:
+Bringing a world-class interactive design to the in-app educational
+Extending the Task Schema used in our APIs to accommodate labeling
+instructions.
+A session on Storybook for planning engineering deployments
+A session on Figma to understand Scale’s design resources and to enable
+Creating an in-app instruction builder that simultaneously creates the
+instructions as well as the API payloads that would need to be leveraged
+in task creation.
+Bringing a world-class interactive design to the in-app educational
+experience for those doing the annotating, including features like search,
+navigation, and zoomable images.
+The goal of this prototype was to re-imagine the experience both our
+customers and Taskers have when creating and completing work on Scale’s
+platform. We firmly believe better instruction design and more consistency
+leads to higher-quality annotations for all involved.
+Corp Search
+Winner: Audience Choice
+Team Members:
+Lawder Paul
+and
+James Lennon
+Problem Statement: “Corp” is Scale AI’s admin portal for
+employees to gather information on on-going projects and to influence the
+quality and outcome of data annotation. The Scale AI team has launched
+countless tools and introduced new functionalities to Corp to improve our
+operations but the Corp portal itself was not very user friendly. There are
+now so many tools in Corp that it can be hard to find the exact tool, and
+for new Scaliens it’s not always clear what different tools do.
+Solution: Corp Search allows employees to quickly search
+across all areas and tools within Corp, packaged in an elegant
+"command-line" interface that can be surfaced anywhere in Corp.
+Corp Migration
+Winner: Most Immediately Impactful
+Team Members:
+Diego Muracciole
+,
+Federico Marcos
+,
+Martin Cabral
+Problem Statement: As stated in the Corp Search project,
+Corp had become a complex and sophisticated tool used by many to provide the
+best service to our customers. Many of the Tasker and customer-facing
+features and tools were tied together or interlinked with Corp, making
+additional engineering work more challenging.
+Solution: The team spent the week separating these Tasker
+and customer-facing features were separated from Corp. The team also
+developed a framework to encourage internal modularity and code reuse to
+enable faster deployment in the future as Scale continues to grow. The team
+also ensured backwards compatibility with previous code to ensure daily
+operations could continue. This project has already enabled several
+refactors and performance improvements.
+The Great Refactor
+Team Members:
+Andrew Liu
+,
+Nick Induni
+,
+Steven Hao
+Problem Statement: Like many fast-growing startups, Scale
+AI has accumulated some level of tech debt in order to quickly deliver new
+features and products to our customers.
+Solution: The Great Refactor team looked to tackle this
+issue by investing a week of their time to improve code quality to optimize
+for long-term maintainability and development velocity.
+Tasker Scoresheets
+Team Members:
+Akshat Bubna
+,
+Rilka Li
+,
+Alan Yu
+Problem Statement: Although Taskers (our global data
+annotation workforce) regularly receive feedback on the quality of their
+submissions, it is difficult to provide granular feedback with specific
+areas of strength and weakness.
+Solution: The team developed Scoresheets that could be
+accessed on the Tasker dashboard. The dashboard allows Taskers to track
+their individual performance on specific skills over time and provides
+learning resources to improve at weak skills.
+Scale Grep
+Team Members:
+Jonathan Fung
+Problem Statement: Instead of searching through
+command-line grep, IDE search, or Github search, which can be slow and
+unwieldy, engineers need quick, interactive, on-the-fly code search that can
+generate quickly sharable links.
+Solution: We deployed two open-source projects, Livegrep
+and Webgrep internally, and added automated index-generation so that the
+code in our git repositories gets indexed every 2 hours. Now, engineers can
+search through our large codebase in milliseconds and click code fragments
+to generate sharable links to exact lines of code.
+Facilitating Interactions to Foster Cross-Functional Relationships
+In addition to working on impactful projects, another goal of the Hackathon
+was to facilitate cross-functional relationships. Fostering these
+connections when everyone is remote can be particularly tricky. How do you
+recruit teammates to work on your project when you can’t organically run
+into folks in hallways? How do you whiteboard ideas, or learn a new skill
+from teammates when you can’t physically sit together?
+Pitch Session
+To help idea originators find teammates, we held a company-wide pitch
+session a week before the Hackathon. Scaliens then spent the following week
+signing up for the pitched projects and forming cross-functional teams.
+Events and Activities
+To help Scaliens develop new skills, we organized workshops throughout the
+week of the Hackathon. Workshops included:
+A session on Storybook for planning engineering deployments
+A session on Figma to understand Scale’s design resources and to enable
+better designing and prototyping
+A session on Tableau to enhance data visualization.
+We also organized daily social activities and special events throughout the
+week to facilitate social bonding. These activities included a Daily “Brain
+Game” and a virtual Game Night.
+To help everyone get into the spirit of the Hackathon (whether they were on
+a team or not), we fully branded the hackathon experience. Our Brand
+Director,
+Ty Wilkins
+,
+created custom Zoom backgrounds, and branded swag, while Product Designer,
+Chun Jiang
+,
+designed our
+Paranormal Hacktivity
+mascot.
+Presentations and Hackathon Wrap-up
+Once projects were wrapped up, the teams presented their projects to the
+entire company. A team of internal judges gave out awards for “Best-In-Show”
+and “Most Immediately Impactful” and the entire company voted on a “Audience
+Choice” award. After the final presentations, Scaliens gathered in a virtual
+stretch session to unwind and relax.
+We hope this blog inspires you to host your own virtual hackathon or spark
+ideas for a hackathon that is in the works. If you’re interested in tackling
+new challenges and joining a collaborative and exciting team, take a look at
+all of our
+open positions
+!
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

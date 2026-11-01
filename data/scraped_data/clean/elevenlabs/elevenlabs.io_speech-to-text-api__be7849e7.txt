@@ -1,0 +1,323 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/speech-to-text-api
+page path  : /speech-to-text-api
+captured   : 2026-03-14 17:34:54 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/elevenlabs/elevenlabs.io_speech-to-text-api__be7849e7.html.gz
+========================================================================
+
+Transcription (STT) API - ElevenLabs
+
+Transcription (STT) API - ElevenLabs
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Go to app
+ElevenAPI
+APIs
+Customers
+Pricing
+Menu
+ElevenAPI
+ElevenAPI
+APIs
+Customers
+Pricing
+Sign up
+Sign up
+Speech to Text API
+Transcribe speech with ElevenLabs Scribe v2
+Highest accuracy speech to text for bulk applications. Detect emphasis & sound effects, and guide transcription with keyterm prompting.
+Get API key
+Explore docs
+
+Demo
+Code
+Uh, hi! So, um, I was wondering if you wanted to meet up for coffee? Maybe tomorrow morning? [nervous laugh] Totally fine if not!
+Natural Speech
+Low-quality Audio
+Accents
+Domain Terms
+Lovable
+Veed model
+Synthesia
+Stripe
+Perplexity
+Twilio
+Most accurate Speech to Text API for batch workloads
+Get API key
+Explore Docs
+Create captions, subtitles, and editable transcripts for podcasts, videos, interviews, and other recorded content – all with industry-leading accuracy via API.
+100%
+95%
+90%
+85%
+Scribe v2
+GPT 4o Transcribe
+Gemini 2.5 Pro
+Deepgram Nova 3
+Scribe v2 achieves industry-leading transcription accuracy, delivering clean, editable text even in challenging audio conditions or across diverse accents.
+Unprecedented transcription accuracy
+Scribe v2 achieves industry-leading transcription accuracy, delivering clean, editable text even in challenging audio conditions or across diverse accents.
+Uh, hi! So, um, I was wondering if you wanted to meet up for coffee? Maybe tomorrow morning? [nervous laugh] Totally fine if not!
+Natural Speech
+Low-quality Audio
+Accents
+Domain Terms
+Designed for every scenario
+Transcription that works in noisy environments, with background music, strong accents, and low-quality audio.
+Fine-grained control over timing, speakers, and non-speech events.
+The ElevenLabs Transcription API can detect laughter, emotion, and sound effects. Use keyterm prompting to guide transcription with domain-specific terms.
+Transcribe audio and video
+Upload MP3, MP4, WAV, MOV, and other common formats. Scribe handles files up to 10 hours with async processing and webhook notifications for large batches.
+Clean, editable transcripts
+Get properly punctuated, paragraph-structured text ready for editing, publishing, or downstream processing. No cleanup required.
+Keyterm prompting
+Boost recognition accuracy for up to 100 domain-specific terms. Product names, technical jargon, and specialized vocabulary transcribed correctly the first time.
+Dynamic audio tagging
+Capture non-speech events like laughter, applause, music, and background noise. Transcripts include the full context of your audio, not just the words.
+Smart speaker diarization
+Automatically identify and label up to 48 speakers. Clear attribution of who said what, organized into readable transcripts.
+Entity detection
+Automatically identify and tag 56 entity types including names, dates, locations, and organizations within your transcripts.
+Scribe v2
+Highest accuracy, designed for batch workloads.
+>95% Accuracy
+90+ Languages
+Non-Speech Event Detection
+Entity Detection
+Keyterm Prompting
+Read More
+Scribe v2 Realtime
+Lowest latency, for realtime workloads.
+Under 150ms Latency
+90+ Languages
+Transcription Streaming
+Voice Activity Detection
+Automatic Language Recognition
+Read More
+Transcribe speech in 90+ languages and a wide range of accents
+Delivering exceptional accuracy across accents, dialects, and recording conditions.
+Change the languageCode to preview languages
+import
+{
+ElevenLabsClient
+}
+from
+"@elevenlabs/elevenlabs-js"
+;
+
+const
+elevenlabs =
+new
+ElevenLabsClient
+({
+
+apiKey:
+"<your_api_key>"
+
+});
+
+const
+response =
+await
+
+fetch
+(
+
+"https://storage.googleapis.com/eleven-public-cdn/audio/marketing/nicole.mp3"
+
+);
+
+const
+audioBlob =
+new
+
+Blob
+([
+await
+response.
+arrayBuffer
+()], {
+type:
+"audio/mp3"
+});
+
+const
+transcription =
+await
+
+elevenlabs
+
+.speechToText.convert
+(
+{
+
+file: audioBlob,
+
+modelId:
+"scribe_v2"
+,
+
+tagAudioEvents:
+true
+,
+
+languageCode:
+"
+eng
+"
+English
+Chinese
+Spanish
+French
+Portuguese
+German
+Japanese
+Italian
+Hindi
+,
+// Set language
+
+diarize:
+true
+
+});
+
+console.
+log
+(transcription);
+English
+Chinese
+Spanish
+French
+Portuguese
+German
+Japanese
+Italian
+Hindi
+English
+Click to preview
+Powering the world’s leading companies and brands
+View customer stories
+“
+From dubbing Reels in local languages, to generating music and character voices in Horizon, ElevenLabs platform enables global creators, businesses, and enterprises to build with voice, music, and sound at scale.
+”
+“
+Scribe’s unmatched accuracy across so many languages lets Fieldy understand every daily conversation and easily scale across continents. Fieldy has increased user retention by 50% after moving to ElevenLabs Scribe.
+”
+“
+ElevenLabs made it easy for us to quickly bring powerful text-to-speech capabilities to our SDK, allowing Agents to respond in real time with expressive voices to user questions or as feedback to what it’s seeing.
+”
+“
+Twilio has integrated ElevenLabs’ generative AI voice technology into its CPaaS, enhancing ConversationRelay. This integration allows businesses and developers to create conversational AI voice interactions that sound human, feel expressive, and respond in real time directly from the Twilio CPaaS platform. We at ElevenLabs are excited that Twilio has chosen ElevenLabs to enhance ConversationRelay with the most expressive, human sounding voices available.
+”
+APIs built for production
+Enterprise-level data protection
+Data is encrypted in transit and at rest, with support for SOC 2, HIPAA, and GDPR compliance. EU Data Residency and Zero Retention modes are available for stricter data control.
+Python and TypeScript SDKs
+Official Python and TypeScript SDKs with type safety, streaming support, and clear examples.
+Elevated support and custom deployments
+Our team ensures a smooth launch and keeps your operations running reliably, delivering uninterrupted performance and peace of mind.
+Frequently asked questions
+What is the ElevenLabs Bulk Transcription API?
+The Bulk Transcription API is part of Scribe, our Speech to Text system designed for large-scale audio and video transcription. It enables developers and enterprises to process hours of recorded content with industry-leading accuracy across 99 languages.
+What types of audio and video files can I upload?
+Scribe supports all common formats, including MP4, MOV, MP3, WAV, and more.
+How accurate is Scribe for bulk transcription?
+Scribe v2 achieves best-in-class accuracy across 99 languages and is robust to challenging audio conditions, accents, and recording quality. It outperforms previous generation models and other leading APIs on public benchmarks.
+How long does transcription take for large files?
+Processing time depends on file length and concurrency. Scribe is optimized for throughput and can handle large-scale pipelines with high parallelization, delivering transcripts in seconds to minutes.
+Does Scribe support speaker separation and timestamps?
+Yes. The API provides smart speaker diarization, word- and character-level timestamps, and dynamic audio tagging for non-speech events like laughter or music.
+Can I customize the model for domain-specific terms?
+Yes. You can define custom vocabularies to ensure correct transcription of product names, technical terminology, or unique brand phrases using keyterm prompting.
+Is the Bulk Transcription API secure and compliant?
+Scribe supports SOC 2, GDPR, and optional HIPAA compliance. Data is encrypted in transit and at rest, and teams can enable EU data residency or Zero Retention modes for stricter control.
+How is the Bulk Transcription API priced?
+Pricing is usage-based, calculated per minute of input audio. Volume discounts and enterprise plans are available for high-throughput workloads. Contact our sales team to discuss your requirements.
+How can I get started?
+You can start transcribing immediately by generating an API key and exploring the API docs.
+Latest updates
+All updates
+How Scribe v2 Realtime Works
+Text to Speech API - Up To 40% Faster Globally
+Talk to a Statue: Building A Multi-Modal ElevenAgents-Powered App
+How to use Agent Skils
+ElevenLabs Agent Skills
+Introducing the ElevenLabs × Lovable integration
+Elevenlabs OSS Engineers Fund: supporting the open-source projects that shape our work
+Add a Santa Voice Agent to Your React App in Minutes
+Introducing ElevenLabs UI: Open-source audio & agent components for the web
+The most realistic audio AI platform
+Explore docs
+Get API key
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+ElevenAgents
+Voice Agents
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Cookie Settings
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy

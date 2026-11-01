@@ -1,0 +1,371 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/image-models
+page path  : /collections/image-models
+captured   : 2026-04-14 15:09:42 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_collections_image-models__922b626a.html.gz
+========================================================================
+
+Image Generation Models | OpenRouter
+
+Image Generation Models | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Image Models
+Image Generation Models
+Model rankings updated April 2026 based on real usage data.
+OpenRouter provides access to leading image generation models through a single, unified API gateway. Compare pricing, capabilities, and performance across multiple image generation APIs to find the best fit for models that transform text descriptions into high-quality images.
+Browse All Models
+Compare Models
+Image Generation Models on OpenRouter
+Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)
+Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest state of the art image generation and editing model, delivering Pro-level visual quality at Flash speed. It combines advanced contextual understanding with fast, cost-efficient inference, making complex image generation and iterative edits significantly more accessible. Aspect ratios can be controlled with the
+image_config API Parameter
+Show more
+by
+
+google
+66K
+context
+$
+0.50
+/M input
+tokens
+$
+3
+/M output
+tokens
+$
+60
+/M tokens
+Sourceful: Riverflow V2 Pro
+Riverflow V2 Pro is the most powerful variant of Sourceful's Riverflow 2.0 lineup, best for top-tier control and perfect text rendering.
+
+The Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.
+
+Pricing is $0.15 per 1K/2K output image and $0.33 per 4K output image.
+
+Additional features:
+
+Custom font rendering via font_inputs ($0.03/font, max 2)
+
+Image enhancement via super_resolution_references ($0.20/reference, max 4)
+
+See the image generation docs for details:
+https://openrouter.ai/docs/features/multimodal/image-generation
+
+Note: Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
+Show more
+by
+
+sourceful
+8K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+35.93
+/M tokens
+Sourceful: Riverflow V2 Fast
+Riverflow V2 Fast is the fastest variant of Sourceful's Riverflow 2.0 lineup, best for production deployments and latency-critical workflows.
+
+The Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.
+
+Pricing is $0.02 per 1K output image and $0.04 per 2K output image. Does not support 4K image output.
+
+Additional features:
+
+Custom font rendering via font_inputs ($0.03/font, max 2)
+
+Image enhancement via super_resolution_references ($0.20/reference, max 4)
+
+See the image generation docs for details:
+https://openrouter.ai/docs/features/multimodal/image-generation
+
+Note: Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
+Show more
+by
+
+sourceful
+8K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+4.79
+/M tokens
+Black Forest Labs: FLUX.2 Klein 4B
+FLUX.2 [klein] 4B is the fastest and most cost-effective model in the FLUX.2 family, optimized for high-throughput use cases while maintaining excellent image quality.
+
+Pricing is based on the output image. The first generated megapixel is charged $0.014. Each subsequent megapixel is charged $0.001.
+Show more
+by
+
+black-forest-labs
+41K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+3.418
+/M tokens
+ByteDance Seed: Seedream 4.5
+Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement and small-text rendering. The model’s multi-image composition capabilities have been significantly strengthened, and both reasoning performance and visual aesthetics continue to advance, enabling more accurate and artistically expressive image generation.
+
+Pricing is $0.04 per output image, regardless of size.
+Show more
+by
+
+bytedance-seed
+4K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+9.581
+/M tokens
+Black Forest Labs: FLUX.2 Max
+FLUX.2 [max] is the new top-tier image model from Black Forest Labs, pushing image quality, prompt understanding, and editing consistency to the highest level yet.
+
+Pricing is as follows,
+per the docs
+:
+Input: We charge $0.03 for each megapixel on the input (i.e. reference images for editing)
+Output: The first generated megapixel is charged $0.07. Each subsequent megapixel is charged $0.03.
+Show more
+by
+
+black-forest-labs
+47K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+17.09
+/M tokens
+Sourceful: Riverflow V2 Max Preview
+Riverflow V2 Max Preview is the most powerful variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
+
+Pricing is $0.075 per output image, regardless of size.
+
+Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
+Show more
+by
+
+sourceful
+8K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+17.96
+/M tokens
+Sourceful: Riverflow V2 Standard Preview
+Riverflow V2 Standard Preview is the standard variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
+
+Pricing is $0.035 per output image, regardless of size.
+
+Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
+Show more
+by
+
+sourceful
+8K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+8.383
+/M tokens
+Sourceful: Riverflow V2 Fast Preview
+Riverflow V2 Fast Preview is the fastest variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
+
+Pricing is $0.03 per output image, regardless of size.
+
+Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
+Show more
+by
+
+sourceful
+8K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+7.186
+/M tokens
+Black Forest Labs: FLUX.2 Flex
+FLUX.2 [flex] excels at rendering complex text, typography, and fine details, and supports multi-reference editing in the same unified architecture.
+
+Pricing is as follows,
+per the docs
+:
+We charge $0.06 for each megapixel on both input and output side.
+Show more
+by
+
+black-forest-labs
+67K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+14.65
+/M tokens
+Black Forest Labs: FLUX.2 Pro
+A high-end image generation and editing model focused on frontier-level visual quality and reliability. It delivers strong prompt adherence, stable lighting, sharp textures, and consistent character/style reproduction across multi-reference inputs. Designed for production workloads, it balances speed and quality while supporting text-to-image and image editing up to 4 MP resolution.
+
+Pricing is as follows,
+per the docs
+:
+Input: We charge $0.015 for each megapixel on the input (i.e. reference images for editing)
+Output: The first megapixel is charged $0.03 and then each subsequent MP will be charged $0.015.
+Show more
+by
+
+black-forest-labs
+47K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+$
+7.324
+/M tokens
+Google: Nano Banana Pro (Gemini 3 Pro Image Preview)
+Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro. It extends the original Nano Banana with significantly improved multimodal reasoning, real-world grounding, and high-fidelity visual synthesis. The model generates context-rich graphics, from infographics and diagrams to cinematic composites, and can incorporate real-time information via Search grounding.
+
+It offers industry-leading text rendering in images (including long passages and multilingual layouts), consistent multi-image blending, and accurate identity preservation across up to five subjects. Nano Banana Pro adds fine-grained creative controls such as localized edits, lighting and focus adjustments, camera transformations, and support for 2K/4K outputs and flexible aspect ratios. It is designed for professional-grade design, product visualization, storyboarding, and complex multi-element compositions while remaining efficient for general image creation workflows.
+Show more
+by
+
+google
+66K
+context
+$
+2
+/M input
+tokens
+$
+12
+/M output
+tokens
+$
+120
+/M tokens
+$
+2
+/M audio tokens

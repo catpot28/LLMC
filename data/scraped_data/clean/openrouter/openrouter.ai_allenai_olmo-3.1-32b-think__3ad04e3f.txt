@@ -1,0 +1,125 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/allenai/olmo-3.1-32b-think
+page path  : /allenai/olmo-3.1-32b-think
+captured   : 2026-01-16 15:20:50 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/openrouter/openrouter.ai_allenai_olmo-3.1-32b-think__3ad04e3f.html.gz
+========================================================================
+
+Olmo 3.1 32B Think - API, Providers, Stats | OpenRouter
+
+Olmo 3.1 32B Think - API, Providers, Stats | OpenRouter
+Skip to content
+OpenRouter
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Models
+Providers
+Pricing
+Enterprise
+Company
+About
+Announcements
+Careers
+Hiring
+Partners
+Privacy
+Terms of Service
+Support
+State of AI
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+AllenAI: Olmo 3.1 32B Think
+allenai
+/
+olmo-3.1-32b-think
+Chat
+Compare
+Created
+Dec 16, 2025
+65,536
+context
+$
+0.15
+/M input tokens
+$
+0.50
+/M output tokens
+Olmo 3.1 32B Think is a large-scale, 32-billion-parameter model designed for deep reasoning, complex multi-step logic, and advanced instruction following. Building on the Olmo 3 series, version 3.1 delivers refined reasoning behavior and stronger performance across demanding evaluations and nuanced conversational tasks. Developed by Ai2 under the Apache 2.0 license, Olmo 3.1 32B Think continues the Olmo initiative’s commitment to openness, providing full transparency across model weights, code, and training methodology.
+Chat
+Compare
+Model weights
+Overview
+Providers
+Performance
+Apps
+Activity
+Uptime
+Quickstart
+Providers for Olmo 3.1 32B Think
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for Olmo 3.1 32B Think
+Compare different providers across OpenRouter
+Sorting API Example
+Apps using Olmo 3.1 32B Think
+Top public apps this month
+Recent activity on Olmo 3.1 32B Think
+Total usage per day on OpenRouter
+Reasoning
+23.5M
+Prompt
+10.5M
+Completion
+6.18M
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for Olmo 3.1 32B Think
+Uptime stats for
+Olmo 3.1 32B Think
+
+across all providers
+Sample code and API for Olmo 3.1 32B Think
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports reasoning-enabled models that can show their step-by-step thinking process. Use the
+reasoning
+parameter in your request to enable reasoning, and access the
+reasoning_details
+array in the response to see the model's internal reasoning before the final answer. When continuing a conversation, preserve the complete
+reasoning_details
+when passing messages back to the model so it can continue reasoning from where it left off.
+
+Learn more about reasoning tokens
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

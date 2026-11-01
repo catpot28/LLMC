@@ -1,0 +1,235 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/cant-get-full-response-of-advance-deep-research-preset-prompt/3957
+page path  : /t/cant-get-full-response-of-advance-deep-research-preset-prompt/3957
+captured   : 2026-03-10 03:02:13 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/community.perplexity.ai_t_cant-get-full-response-of-advance-deep-research-preset-prompt_3957__d6cd8a8f.html.gz
+========================================================================
+
+Can't get full response of advance-deep-research preset prompt - Bug Reports - Perplexity API Platform Forum
+
+Can't get full response of advance-deep-research preset prompt - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Can't get full response of advance-deep-research preset prompt
+
+Bug Reports
+
+chat-completions
+
+FKey
+
+February 19, 2026, 3:02pm
+
+1
+
+Describe the Bug
+
+I am developing an app for automated research. I decided to use advanced-deep-research preset, but when I am sending request and proceed to receive Streamed output, I am receiving information that “Browser still returns ukrainian websitres. I will try another approach - direct URL-s to known articles and sources”.
+
+Expected Behavior
+
+To fullfill research completely.
+
+Actual Behavior
+
+It isn’t completing request, maybe I am parsing it wrong, look at code below.
+
+Steps to Reproduce
+
+Payload:
+
+endpoint /v1/responses
+
+{
+
+"input": <long prompt (about 40000 chars),
+
+"stream": True,
+
+"max_output_tokens": 128000,
+"preset": "advanced-deep-research
+
+}
+
+Parsing loop:
+
+for event in _sse_iter(resp):
+if time.time() - start_t > cfg.timeout_sec:
+log(" WARNING: timeout during streaming — partial content kept.")
+break
+
+etype = event.get("type", "")
+out_idx = event.get("output_index", 0)
+
+# --- Path A: full text in .done (all presets emit this) -------
+if etype == "response.output_text.done":
+text = event.get("text", "").strip()
+if text:
+done_texts[out_idx] = text
+log(f" output_text.done [{out_idx}]: {len(text):,} chars")
+
+# --- Path B: delta chunks (Claude-based presets) --------------
+elif etype == "response.output_text.delta":
+delta = event.get("delta", "")
+if delta:
+delta_buffers[out_idx] = delta_buffers.get(out_idx, "") + delta
+
+# --- Path C: output_item.done with type=message (safety net) --
+# advanced-deep-research emits this with full content[].text
+elif etype == "response.output_item.done":
+item = event.get("item", {})
+if item.get("type") == "message":
+for block in item.get("content", []):
+if block.get("type") == "output_text":
+text = block.get("text", "").strip()
+if text and out_idx not in done_texts:
+done_texts[out_idx] = text
+log(f" output_item.done/message [{out_idx}]: {len(text):,} chars")
+# Extract citations from search_results items streamed inline
+elif item.get("type") == "search_results":
+for result in item.get("results", []):
+url_val = result.get("url", "")
+if url_val and url_val not in citations:
+citations.append(url_val)
+
+# --- Entire response done: usage + any remaining citations ----
+elif etype == "response.completed":
+r = event.get("response", {})
+
+# Citations may also appear in response.output search_results
+for item in r.get("output", []):
+if item.get("type") == "search_results":
+for result in item.get("results", []):
+url_val = result.get("url", "")
+if url_val and url_val not in citations:
+citations.append(url_val)
+
+usage = r.get("usage", {})
+usage_dict["prompt_tokens"] = usage.get("input_tokens")
+usage_dict["completion_tokens"] = usage.get("output_tokens")
+usage_dict["total_tokens"] = (
+(usage.get("input_tokens") or 0) + (usage.get("output_tokens") or 0)
+or None
+)
+log(f" response.completed | tokens={usage_dict} | citations={len(citations)}")
+
+elif etype and not etype.startswith("response.output_text"):
+log(f" Event: {etype}")
+break
+
+Environment
+
+API Version:
+Agent API, /v1/responses, advanced-deep-research
+
+SDK (if applicable):
+-
+
+Operating System:
+Windows
+
+Tylor
+
+February 26, 2026, 3:34pm
+
+2
+
+Hi FKey,
+
+It looks like your streaming response might be getting cut off because of token limits or how the parser handles large chunks. One approach that some developers use is splitting the input into smaller segments or sending requests in batches, then combining the outputs. You might also want to experiment with tools designed for managing large research queries, I’ve found that
+this website
+provides helpful ways to organize and process big data inputs efficiently.
+
+Hopefully, trying smaller segments or using such tools can help you get complete responses from the advanced-deep-research preset.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Deep Research API response content is cut off unexpectedly while having finish reason "stop"
+
+Bug Reports
+
+13
+
+512
+
+October 30, 2025
+
+Deep Research API - Inconsistent Output Formatting (50% Success Rate)
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+106
+
+November 6, 2025
+
+Pereplexity Deep Research Report Cut-Off Midway
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+3
+
+139
+
+October 22, 2025
+
+When calling the sonar-deep-research model, the output report is always truncated and cannot be used normally.
+
+General
+
+sonar-deep-research
+
+,
+
+search-api
+
+2
+
+163
+
+October 22, 2025
+
+Deep Research Prompting - System Prompt?
+
+General
+
+sonar-deep-research
+
+1
+
+133
+
+August 27, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

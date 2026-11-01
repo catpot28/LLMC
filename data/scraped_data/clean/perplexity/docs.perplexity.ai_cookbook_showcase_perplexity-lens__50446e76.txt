@@ -1,0 +1,249 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/perplexity-lens
+page path  : /cookbook/showcase/perplexity-lens
+captured   : 2026-01-25 03:32:08 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_perplexity-lens__50446e76.html.gz
+========================================================================
+
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension - Perplexity
+
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+Features
+Prerequisites
+Installation
+Configuration
+Usage
+Code Explanation
+Links
+Community Showcase
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Copy page
+A browser extension that builds personalized knowledge graphs using Perplexity AI for smart text selection, webpage summarization, and contextual insights
+Copy page
+Perplexity Lens
+is a powerful browser extension that transforms your browsing experience by providing AI-powered insights using Perplexity AI and creating a personalized knowledge graph that visually connects the concepts you encounter online.
+
+​
+Features
+
+Smart Text Selection
+with AI-generated explanations for selected text
+
+Webpage Summarization
+for instant, concise overviews of entire pages
+
+Contextual RAG Insights
+using Retrieval-Augmented Generation for detailed context and meanings
+
+Knowledge Graph Visualization
+with interactive D3.js graphs showing concept connections
+
+Public Sharing
+with URL generation for sharing graphs with others
+
+User Authentication
+via Firebase for secure access
+
+Dual Storage
+with local IndexedDB and cloud Firebase storage
+
+Responsive UI
+fully functional across all devices
+
+​
+Prerequisites
+
+Node.js v14+ and npm v6+
+
+Google Chrome or compatible browser
+
+Firebase account for cloud functionality
+
+Firebase CLI (
+npm install -g firebase-tools
+)
+
+Perplexity API key and OpenAI API key
+
+​
+Installation
+
+Copy
+Ask AI
+# Clone the repository
+
+git
+clone
+https://github.com/iamaayushijain/perplexity-lens.git
+
+cd
+perplexity_lens
+
+# Install dependencies
+
+npm
+install
+
+# Build the extension
+
+npm
+run
+build
+
+​
+Configuration
+
+Edit
+src/config.ts
+:
+
+Copy
+Ask AI
+export
+const
+PERPLEXITY_API_KEY
+=
+'your-perplexity-key'
+;
+
+export
+const
+EMBEDDING_API_KEY
+=
+'your-openai-key'
+;
+
+export
+const
+FIREBASE_HOSTING_URL
+=
+'https://your-project-id.web.app'
+;
+
+​
+Usage
+
+Load Extension
+: Go to
+chrome://extensions/
+, enable Developer mode, click “Load unpacked” and select the
+dist/
+directory
+
+Sign In
+: Click the extension icon and authenticate via Firebase
+
+Use Features
+:
+
+Highlight Text
+: Select text on any webpage for AI-powered insights
+
+Summarize Page
+: Use the “Summarize” feature for webpage overviews
+
+Ask Anything
+: Hover or click on words/phrases for definitions or explanations
+
+View Graph
+: Navigate to the Graph tab to see your knowledge graph
+
+Explore
+: Zoom, drag, and hover over nodes in the interactive graph
+
+Share
+: Click “Share Graph” to generate a public link
+
+​
+Code Explanation
+
+Frontend
+: React with TypeScript and TailwindCSS for modern, responsive UI
+
+Browser Extension
+: Chrome extension architecture with popup and content scripts
+
+AI Integration
+: Perplexity AI for intelligent text explanations and summarization
+
+Knowledge Graph
+: D3.js for interactive graph visualization and concept connections
+
+Storage
+: Dual storage system with local IndexedDB and cloud Firebase
+
+Authentication
+: Firebase Auth for secure user access and data management
+
+RAG System
+: Retrieval-Augmented Generation for contextual insights and definitions
+
+​
+Links
+
+GitHub Repository
+
+Blog Post
+
+Was this page helpful?
+Yes
+No
+Flow & Focus | Personalized News for Genuine Understanding
+Previous
+Greenify | Localized community-driven greenification/plantation solution with AI
+Next
+⌘
+I
+x
+discord
+website
+Powered by

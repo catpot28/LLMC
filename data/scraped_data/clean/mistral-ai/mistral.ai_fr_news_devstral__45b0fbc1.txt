@@ -1,0 +1,428 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/devstral/
+page path  : /fr/news/devstral/
+captured   : 2026-06-14 19:05:03 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_devstral__45b0fbc1.html.gz
+========================================================================
+
+Devstral | Mistral AI
+
+Devstral | Mistral AI
+
+Contact
+
+Menu
+
+Produits
+
+Solutions
+
+Modèles
+
+Développeurs
+
+Blog
+
+Clients
+
+Entreprise
+
+Contact
+
+Commencez
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Produits
+Solutions
+Modèles
+Développeurs
+Blog
+Clients
+Entreprise
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Commencez
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact
+
+Recherche
+
+Devstral
+
+May 21, 2025
+
+By Mistral AI
+
+Retour au blog
+
+3 min de lecture
+
+Partager cet article
+
+Copier dans le presse-papiers
+
+Copié !
+
+Today we introduce Devstral, our agentic LLM for software engineering tasks. Devstral is built under a collaboration between Mistral AI and
+All Hands AI
+🙌, and outperforms all open-source models on SWE-Bench Verified by a large margin. We release Devstral under the Apache 2.0 license.
+
+Agentic LLMs for software development
+While typical LLMs are excellent at atomic coding tasks such as writing standalone functions or code completion, they currently struggle to solve real-world software engineering problems. Real-world development requires contextualising code within a large codebase, identifying relationships between disparate components, and identifying subtle bugs in intricate functions.
+Devstral is designed to tackle this problem. Devstral is trained to solve real GitHub issues; it runs over code agent scaffolds such as OpenHands or SWE-Agent, which define the interface between the model and the test cases. Here, we show Devstral’s performance on the popular SWE-Bench Verified benchmark, a dataset of 500 real-world GitHub issues which have been manually screened for correctness.
+Devstral achieves a score of 46.8% on SWE-Bench Verified, outperforming prior open-source SoTA models by more than 6% points. When evaluated under the same test scaffold (OpenHands, provided by
+All Hands AI
+🙌), Devstral exceeds far larger models such as Deepseek-V3-0324 (671B) and Qwen3 232B-A22B.
+In the table below, we also compare Devstral to closed and open models evaluated under any scaffold (including ones custom for the model). Here, we find that Devstral achieves substantially better performance than a number of closed-source alternatives. For example, Devstral surpasses the recent GPT-4.1-mini by over 20%.
+
+Versatile: local deployment ↔️ enterprise use ↔️ copilots
+Devstral is light enough to run on a single RTX 4090 or a Mac with 32GB RAM, making it an ideal choice for local deployment and on-device use. Coding platforms such as
+OpenHands
+can allow the model to interact with local codebases and provide fast resolution to issues. To try it yourself, view the
+documentation
+or
+tutorial video
+.
+The performance of the model also makes it a suitable choice for agentic coding on privacy-sensitive repositories in enterprises, especially ones subject to stringent security and compliance requirements.
+Finally, if you’re building or using an agentic coding IDE, plugin, or environment, Devstral is a great choice to add to your model selector.
+Availability
+We release this model for free under an Apache 2.0 license for the community to build on, customize, and accelerate autonomous software development. To try it for yourself, head over to our
+model card
+.
+The model is also available on our API under the name devstral-small-2505 at the same price as Mistral Small 3.1: $0.1/M input tokens and $0.3/M output tokens.
+Should you choose to self-deploy, you can download the model on
+HuggingFace
+,
+Ollama
+,
+Kaggle
+,
+Unsloth
+,
+LM Studio
+starting today.
+For enterprise deployments that require fine-tuning on private codebases, or higher-fidelity customization such as continued pre-training or distilling Devstral’s capabilities into other models, please
+contact us
+to connect with our applied AI team.
+What’s next
+Devstral is a research preview and we welcome feedback! We’re hard at work building a larger agentic coding model that will be available in the coming weeks.
+Interested in discussing how we can help your team put Devstral to use, and about our portfolio of models, products and solutions?
+Contact us
+and we’ll be happy to help.
+
+0%
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Sélectionner la langue
+
+Français
+
+English
+Français
+Italiano

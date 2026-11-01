@@ -1,0 +1,237 @@
+=== SOURCE =============================================================
+company    : OpenAI (openai)
+url        : https://deploymentsafety.openai.com/gpt-5-1
+page path  : /gpt-5-1
+captured   : 2026-06-17 00:43:33 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/openai/deploymentsafety.openai.com_gpt-5-1__ece06bdb.html.gz
+========================================================================
+
+GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum - OpenAI Deployment Safety Hub
+
+GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum - OpenAI Deployment Safety Hub
+
+Skip to content
+
+Deployment Safety Hub
+
+Home
+
+GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum
+
+In this card
+Introduction
+Baseline Model Safety Evaluations
+Disallowed Content Evaluations
+Jailbreaks
+Vision
+Preparedness Framework
+References
+
+View PDF
+↗
+
+Published November 12, 2025
+
+GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum
+
+Introduction
+Introduction
+Baseline Model Safety Evaluations
+Disallowed Content Evaluations
+Jailbreaks
+Vision
+Preparedness Framework
+References
+
+1. Introduction
+
+As described in our
+blog
+, GPT-5.1 Instant and
+GPT-5.1 Thinking are the next iteration of our GPT-5 models. GPT-5.1
+Instant is more conversational than our earlier chat model, with
+improved instruction following and an adaptive reasoning capability that
+lets it decide when to think before responding. GPT-5.1 Thinking adapts
+thinking time more precisely to each question. GPT-5.1 Auto will
+continue to route each query to the model best suited for it, so that in
+most cases, the user does not need to choose a model at all.
+The comprehensive safety mitigations for these models are largely the
+same as we described in the
+GPT-5 System
+Card
+. This system card addendum provides updated baseline safety
+metrics for these new model versions. As we noted in our recent GPT-5
+system card
+addendum
+on sensitive conversations
+, we have expanded the baseline safety
+evaluations that we conduct as part of pre-deployment safety review to
+include evaluations for mental health (covering situations where there
+are signs that a user may be experiencing isolated delusions, psychosis,
+or mania) and for emotional reliance (covering output related to
+unhealthy emotional dependence or attachment to ChatGPT).
+In this card we also refer to GPT-5.1 Instant as gpt-5.1-instant, and
+GPT-5.1 Thinking as gpt-5.1-thinking.
+
+2. Baseline Model Safety Evaluations
+
+2.1 Disallowed Content Evaluations
+
+We conducted benchmark evaluations across disallowed content
+categories. We report here on our Production Benchmarks, a new more
+challenging evaluation set with conversations representative of
+challenging examples from production data. As we noted in previous
+system cards, we introduced these Production Benchmarks to help us
+measure continuing progress given that our earlier Standard evaluations
+for these categories had become relatively saturated.
+These evaluations were deliberately created to be difficult. They
+were built around cases in which our existing models were not yet giving
+ideal responses, and this is reflected in the scores below. Error rates
+are not representative of average production traffic. The primary metric
+is not_unsafe, checking that the model did not produce output that is
+disallowed under the relevant OpenAI policy.
+
+Table 1: Production Benchmarks (higher is better)
+
+Category
+
+*New evaluations, as introduced in the
+GPT-5
+update on sensitive conversations
+.
+Overall, both gpt-5.1-thinking and gpt-5.1-instant show comparable
+safety performance to their GPT-5 predecessors on these particularly
+challenging evaluations, which are designed to target areas where our
+models still have room to improve.
+The new gpt-5.1-thinking model shows light regressions relative to
+gpt-5-thinking for content involving harassment and hateful language, as
+well as disallowed sexual content. We are working on further
+improvements for these categories.
+The new gpt-5.1-instant model outperforms gpt-5-instant-aug15 on all
+above evaluations, and performs slightly worse than gpt-5-instant-oct3
+on the evaluations for disallowed sexual content, violent content,
+mental health, and emotional reliance. We provide further context on the
+latter two safety categories below.
+Early signal on prevalence of undesired responses for
+sensitive situations
+In addition to these offline evaluations, we also share here some
+very early signal on the prevalence of undesired responses for sensitive
+situations based on online measurements that we ran during A/B testing.
+Given the extremely low prevalence of undesired model responses for
+sensitive situations, combined with the relatively small size of A/B
+tests, these online measurements have wide error bars. However, they can
+help provide early signal on potential improvements or regressions.
+After launch, we continue to run these measurements in order to gain
+more precise signal on prevalence of undesired responses in real-world
+usage, which more fully informs whether further mitigations are needed
+(such as routing to specific safer models). We report more information
+on the results of these early online measurements for mental health,
+emotional reliance, and self harm and suicide below.
+Online measurements and offline evaluations capture different
+elements of safety performance. Online measurements can provide
+real-time signals on the prevalence of risks in deployment, and are able
+to capture shifts in live user behavior with our models. In contrast,
+our offline evaluations focus on challenging conversations closer to a
+"worst case," and are typically very long conversations seeded with
+undesired behavior from past models in the previous turns.
+Mental Health, Emotional Reliance, and Self Harm and
+Suicide
+Mental health:
+On offline evaluations (i.e., the
+Production Benchmarks table shown above), gpt-5.1-instant shows a slight
+regression relative to gpt-5-instant-oct3, but still outperforms
+gpt-5-instant-aug15. gpt-5.1-thinking improves relative to
+gpt-5-thinking. On early online measurements, both gpt-5.1-instant and
+gpt-5.1-thinking show a slight, but low statistical confidence,
+improvement relative to gpt-5-instant-oct3 and gpt-5-thinking,
+respectively.
+As mentioned above, our evaluations capture challenging conversations
+that may not be representative of average production traffic. We will
+continue to investigate the mental health performance of this model
+post-launch.
+Emotional reliance:
+On offline evaluations, both
+gpt-5.1-instant and gpt-5.1-thinking show a slight regression relative
+to gpt-5-instant-oct3 and gpt-5-thinking, respectively. gpt-5.1-instant
+still improved relative to gpt-5-instant-aug15. Preliminary online
+measurements also show a regression for gpt-5.1-instant compared to
+gpt-5-instant-oct3, although the regression is low statistical
+confidence. Even with this possible regression, gpt-5.1-instant still
+performs better than gpt-5-instant-aug15 on online measurements.
+gpt-5.1-thinking shows an improvement in preliminary online measurements
+relative to gpt-5-thinking with high statistical confidence. We are
+further investigating the performance of these models on emotional
+reliance and are committed to improving the models’ behavior and
+updating our safeguards where needed.
+Self harm and suicide:
+Our preliminary online
+measurements were neutral for gpt-5.1-instant relative to
+gpt-5-instant-oct3, and showed improvements for gpt-5.1-thinking
+relative to gpt-5-thinking. However, these estimates have low
+statistical confidence.
+
+2.2 Jailbreaks
+
+We evaluate the robustness of models to jailbreaks: adversarial
+prompts that purposely try to circumvent model refusals for content it’s
+not supposed to produce.
+Below is an adaptation of the academic jailbreak eval, StrongReject
+
+[
+1
+]
+. This
+eval inserts a known jailbreak into an example from disallowed content
+evals. We then run it through the same policy graders we use for
+disallowed content checks. We test jailbreak techniques on base prompts
+across harm categories, and evaluate for not_unsafe according to
+relevant policy.
+
+Table 2: StrongReject
+
+Category
+
+We find that gpt-5.1-instant performs better than its predecessor,
+and that gpt-5.1-thinking is on par with its predecessor.
+
+2.3 Vision
+
+We ran the image input evaluations introduced with ChatGPT agent,
+that evaluate for not_unsafe model output, given disallowed combined
+text and image input.
+
+Table 3: Image input evaluations, with metric not_unsafe (higher is better)
+
+Category
+
+We find that both the instant and thinking variations of GPT-5.1
+perform generally on par with their predecessors. We are observing a
+regression of gpt-5.1-thinking on self-harm prompts with image inputs
+and are working on further improvements.
+
+3. Preparedness Framework
+
+GPT-5’s frontier capabilities are assessed under the Preparedness
+Framework as described in the original GPT-5 system card. As we did for
+GPT-5 at launch, we are continuing to treat GPT-5.1 as High risk in the
+Biological and Chemical domain, and continuing to apply the
+corresponding safeguards. For cybersecurity and AI self-improvement,
+evaluations of near-final checkpoints indicate that, like their GPT-5
+predecessor models, GPT-5.1 models do not have a plausible chance of
+reaching a High threshold.
+
+4. References
+
+[1]
+
+Alexandra Souly, Qingyuan Lu, Dillon Bowen, Tu
+Trinh, Elvis Hsieh, Sana Pandey, et al. A strongreject for empty
+jailbreaks.
+arXiv preprint arXiv:2402.10260
+.
+
+← Back to all updates
+
+OpenAI © 2015–2026
+Terms of Use
+Privacy Policy

@@ -1,0 +1,177 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/get-v1-async-sonar-api-request-returns-the-list-of-all-requests-instead-of-single-request-data/4506
+page path  : /t/get-v1-async-sonar-api-request-returns-the-list-of-all-requests-instead-of-single-request-data/4506
+captured   : 2026-04-12 13:04:31 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_get-v1-async-sonar-api-request-returns-the-list-of-all-requests-instead-of-single-request-data__83f01d88.html.gz
+========================================================================
+
+GET /v1/async/sonar/{api_request} returns the list of all requests instead of single request data - Bug Reports - Perplexity API Platform Forum
+
+GET /v1/async/sonar/{api_request} returns the list of all requests instead of single request data - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+GET /v1/async/sonar/{api_request} returns the list of all requests instead of single request data
+
+Bug Reports
+
+sonar-deep-research
+,
+
+chat-completions
+
+nikst
+
+March 31, 2026, 2:25pm
+
+1
+
+Describe the Bug
+
+API calls to GET /v1/async/sonar/{api_request} return the same response as calls to GET /v1/async/sonar
+
+Expected Behavior
+
+I expect the endpoint GET /v1/async/sonar/{api_request} to return the data for the specific async request with the given ID.
+
+Actual Behavior
+
+The endpoint GET /v1/async/sonar/{api_request} returns a list of all my async requests.
+
+Steps to Reproduce
+
+Call the API using the following request: GET /v1/async/sonar/{api_request}
+
+Observe the unexpected behavior.
+
+API Request & Response
+
+curl --location 'https://api.perplexity.ai/v1/async/sonar/9bb07b01-cbf3-4fec-9531-890ab8509a27' --header 'Authorization: Bearer'
+
+{
+"next_token": null,
+"requests": [
+{
+"id": "9bb07b01-cbf3-4fec-9531-890ab8509a27",
+"created_at": 1774957725,
+"started_at": null,
+"completed_at": 1774957832,
+"failed_at": null,
+"model": "sonar-deep-research",
+"status": "COMPLETED"
+}
+]
+}
+
+The same response is returned for an invalid ID:
+
+curl --location 'https://api.perplexity.ai/v1/async/sonar/abcdefg' --header 'Authorization: Bearer'
+
+Environment
+
+API Version:
+sonar-deep-research
+
+Operating System:
+MacOS
+
+2 Likes
+
+blinard
+
+April 2, 2026, 7:59am
+
+2
+
+Same here! Unable to retrieve the result of an async deepresearch.
+
+blinard
+
+April 7, 2026, 7:42am
+
+3
+
+Hey
+@nikst
+have you found a solution on your end?
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Unable to retrieve the result of an async deep research
+
+Bug Reports
+
+sonar-deep-research
+
+4
+
+23
+
+April 8, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+317
+
+June 1, 2025
+
+Sonar Deep Research — Async Mode and Reasoning Effort Now Live
+
+Announcements
+
+0
+
+0
+
+June 5, 2025
+
+Deep Research API
+
+General
+
+sonar-deep-research
+
+0
+
+39
+
+January 9, 2026
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+213
+
+February 5, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

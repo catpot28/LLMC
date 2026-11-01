@@ -1,0 +1,29 @@
+=== SOURCE =============================================================
+company    : Bybit (bybit)
+url        : https://www.bybit.com/en-GB/announcement-info/fund-rate/
+page path  : /en-GB/announcement-info/fund-rate/
+captured   : 2026-04-21 11:23:43 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/bybit/www.bybit.com_en-GB_announcement-info_fund-rate__9cb75796.html.gz
+========================================================================
+
+Funding Rate
+
+Funding Rate
+
+Funding Rate
+Actual Funding Rate
+Past Funding Rate
+Bybit Funding Rate consists of the Premium Index (P) and the Interest Rate (I). Bybit updates the Funding Rate every minute, and performs an N*-hour Time-Weighted-Average-Price (TWAP) of the Funding Rate over the series of minute rates.
+The Premium Index (P) is calculated as follows:
+P = [Max(0, Fair Buy Price - Index Price) - Max(0, Index Price - Impact Ask Price)] / Index Price
+The Funding Rate (F) is calculated using the Premium Index (P) and a clamp function:
+F = P + clamp(I - P, 0.05%, -0.05%)
+Interest Rate = 0.03%
+In the equation above, the clamp function ensures that the Funding Rate remains within the range of ±0.05% by limiting the difference between the Interest Rate (I) and the Premium Index (P).
+During periods of significant market volatility, Bybit may temporarily adjust the upper and lower limits of the Funding Rate to encourage the Perpetual Contract's price to return to a reasonable range.
+For a Pre-Market Perpetual contract, the Index Price is calculated based on the bid and ask order prices of the perpetual contract itself. This calculation also applies when Bybit is unable to obtain a reasonable index component for an official perpetual contract. In such cases, the Premium Index (P) will be set to zero to stabilize the funding rate.
+To learn more about the funding rates, please
+click here
+.
+Last Updated Time
+:

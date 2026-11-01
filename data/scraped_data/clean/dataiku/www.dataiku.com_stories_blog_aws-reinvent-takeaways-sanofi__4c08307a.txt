@@ -1,0 +1,486 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/aws-reinvent-takeaways-sanofi
+page path  : /stories/blog/aws-reinvent-takeaways-sanofi
+captured   : 2026-05-12 21:43:15 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_aws-reinvent-takeaways-sanofi__4c08307a.html.gz
+========================================================================
+
+My AWS re:Invent Takeaway: The End of “Just Build an Agent”
+
+My AWS re:Invent Takeaway: The End of “Just Build an Agent”
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Recommended
+
+GenAI & Agents
+
+Partner
+
+My AWS re:Invent Takeaway: The End of “Just Build an Agent”
+
+Jan 8, 2026
+
+3 min read
+
+/
+
+Jed Dougherty
+
+Table of Contents
+
+Agentic AI Is Growing Up (and Enterprises Are Getting Serious)
+
+Shadow AI Is the New Shadow IT
+
+Sanofi's North Star: AI at Scale With Governance Built In
+
+A Month Later, the Lesson Still Holds
+
+Each year, AWS re:Invent takes place at roughly the same time and in roughly the same place as the National Finals Rodeo. The result is a uniquely Vegas blend of Patagonia tech vests, oversized hoodies, and wranglers over cowboy boots, which makes the Cosmo Chandelier Bar game of “which conference does this guy belong to” all too easy.
+
+Over a period of five days, everyone's caffeine intake has doubled, if not tripled. Expo halls start to look the same, and at some point, you've wondered when the last time you went outside and saw the sun.
+
+The weeks after re:Invent, and let's be honest, it's actually about a month, tend to consist of reacclimating your brain to things like “the sun,” “fresh air,” and adjusting to the quiet after days of frenzy. But even with a little distance — and a slight recovery — the lessons from re:Invent and the customers I met with still feel important. Not because the conference itself was groundbreaking, but because the conversations are becoming increasingly consistent across industries. One of the clearest examples of this came from my conversation on stage with
+Sanofi
+, specifically, Kaoutar Sghiouer, Global Head of Data & AI. Their approach cuts through a lot of the noise, and it reinforced what I heard repeatedly throughout the week: agentic AI doesn’t scale without strong foundations.
+
+Agentic AI Is Growing Up (and Enterprises Are Getting Serious)
+
+The first clear theme is that organizations are becoming increasingly wary of the "1,000 monkeys at 1,000 typewriters" approach to agentic development.
+
+Early enthusiasm for "deploying agents" often resembled giving everyone access to tools and hoping someone would build something valuable. However, the bellwether companies are shifting toward a controlled deployment strategy — one where a core group of advanced designers builds reusable agents and tools that the rest of the organization can safely consume in a governed manner.
+
+That shift isn't about slowing innovation. It's about giving it a fighting chance to survive contact with production, regulation, and the next quarter's priorities.
+
+Shadow AI Is the New Shadow IT
+
+The second theme I heard in almost every serious conversation: governance — and the fear of
+unmanaged proliferation of agents
+. People are building and using agents across a wide variety of tools, with no centralized system to track what's being done, what data agents are accessing, who built them, how they'll be maintained, or whether they're duplicating efforts already underway somewhere else. We've had shadow IT for years. Now we have shadow AI.
+
+Organizations are looking for an agnostic, centralized governance layer on top of a fragmented ecosystem of third-party agent systems. The question is what that layer becomes:
+yet another catalog that needs to be manually updated
+(and inevitably becomes stale and useless), or a shared protocol that allows for discoverability and traceability across platforms.
+
+Enterprises have the opportunity to shape what “good” looks like — by establishing a shared foundation that makes agents discoverable, traceable, and governable across various tools. The organizations that succeed here will be the ones that treat governance as a product: something that enables scale and reuse, rather than a hindrance to innovation. And for many, that means combining internal platform ownership with partners who can help accelerate standardization and operational readiness.
+
+Sanofi's North Star: AI at Scale With Governance Built In
+
+These themes were highlighted in one of the most "real" moments of re:Invent for me: my on-stage conversation with
+Kaoutar at Sanofi.
+Sanofi's ambition is to shorten the timeline between therapy discovery and getting a treatment to market — a process that can take
+about 15 years
+. AI isn't a side project. It's a strategic lever across the entire value chain: R&D, manufacturing and supply, commercial operations, and employee experience.
+
+What stood out immediately is that they're not treating AI as a synonym for GenAI. Some problems are best solved with classical AI. Some benefit from GenAI. Agents may be suitable for specific workflows. However, the organizing principle remains the same: Technology should serve the objective, not the trend.
+
+"AI-Ready Data" Isn't a Dataset, It's a Trust System
+
+One of the most important concepts Kaoutar emphasized was what she calls
+AI-ready data
+.
+
+In Sanofi's definition, AI-ready data starts with shared accountability between business and IT/digital teams. Data must be accessible (people can find it), shareable (usable across functions), and secure. It must also be high quality, unbiased, trusted, and safe.
+
+AI-ready data starts with shared accountability between business and IT … The data must be known, shareable, secured, high-quality, unbiased, trusted, and safe.
+
+— Kaoutar Sghiouer, Global Head of Data & AI at Sanofi
+
+This framing matters because it reflects something many enterprises are learning the hard way: AI at scale is less about models and more about trust — and trust requires end-to-end traceability, guardrails, and accountability.
+
+Governance as a Filtering Mechanism (Not a Bureaucracy)
+
+Sanofi’s governance model is one of the clearest examples I’ve heard of what it looks like to operationalize seriousness. They have top-level AI governance led by ExCom members, and a “front door” process that requires high-level business sponsorship, digital sponsorship, and a commitment to demonstrate tangible value within
+three months
+in a sandbox environment. This approach filtered
+56 commercial use cases down to only two
+. That’s not a failure of creativity — that’s a success of prioritization. It’s the opposite of “1,000 monkeys,” and that’s precisely the point.
+
+A Month Later, the Lesson Still Holds
+
+It’s been a few weeks since re:Invent ended, and everyone has scattered back to their respective time zones, inboxes, and their everyday routines. And what’s clear is that the next phase of AI adoption won’t be defined by who builds the most agents. It will be defined by who intentionally builds the right ones: with AI-ready data, strong governance, and a clear north star that keeps experimentation aligned with measurable value.
+
+Vegas will always be Vegas. However, the work that truly matters begins when you return home.
+
+Tags
+
+Recommended
+
+GenAI & Agents
+
+Partner
+
+Share
+
+Build Agents, Models, and Analytics
+
+EXPLORE DATAIKU
+
+Keep Reading
+
+Introducing The Platform for AI Success
+
+Why Traditional Evaluation Doesn't Work for Agentic AI
+
+Dataiku Joins the Agentic AI Foundation to Strengthen AI Trust
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+You May Also Like
+
+More Blog Posts
+
+Recommended
+
+Introducing The Platform for AI Success
+
+Somewhere inside your organization, an AI agent is making a decision right now. You didn’t authorize it. You...
+
+Mar 09, 2026
+
+Recommended
+
+Why Traditional Evaluation Doesn't Work for Agentic AI
+
+For years, “human-in-the-loop” has been enterprise AI’s safety valve. If a model might behave unpredictably,...
+
+Feb 19, 2026
+
+Recommended
+
+Dataiku Joins the Agentic AI Foundation to Strengthen AI Trust
+
+AI systems are making critical decisions right now, yet most organizations can't explain how those decisions...
+
+Feb 18, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

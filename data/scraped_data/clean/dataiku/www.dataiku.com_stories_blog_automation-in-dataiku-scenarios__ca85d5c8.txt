@@ -1,0 +1,463 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/automation-in-dataiku-scenarios
+page path  : /stories/blog/automation-in-dataiku-scenarios
+captured   : 2026-01-23 05:02:59 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_automation-in-dataiku-scenarios__ca85d5c8.html.gz
+========================================================================
+
+Embracing Automation in Dataiku With Scenarios
+
+Embracing Automation in Dataiku With Scenarios
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Analytics Modernization
+
+Embracing Automation in Dataiku With Scenarios
+
+May 22, 2024
+
+3 min read
+
+/
+
+Lauren Anderson
+
+Many data teams still spend time on data pipeline tasks that could be automated. In fact,
+Accenture
+estimates that 76% of a U.S. worker’s tasks could be reinvented by combining new technologies and new ways of working. From rebuilding datasets from upstream data changes to retraining machine learning (ML) models when drift occurs, repetitive tasks still plague data teams.
+
+Luckily, Dataiku offers several automation capabilities to help reduce the amount of time data teams spend on manual, repetitive tasks, ensuring consistency and freeing up valuable time for data scientists and analysts to focus on more complex problems. In this blog post, we'll explore how automation and scenarios in Dataiku can transform data handling and give valuable time back to data teams.
+
+The Power of Automation in Dataiku: Key Benefits
+
+Automation in Dataiku brings several key benefits. Consistency and accuracy are enhanced as automated processes minimize the risk of human error. Whether it's data cleaning, transformation, or integration, automation ensures that tasks are performed uniformly every time. Efficiency is another significant advantage. By automating routine tasks, organizations can significantly reduce the time required to manage data workflows, leading to quicker insights and faster decision making.
+
+Additionally, automation enables organizations to scale their data operations seamlessly, handling larger datasets with ease. This scalability is crucial as data volumes grow, making manual processes in traditional spreadsheets untenable. Moreover, reducing manual intervention in data processes can lead to substantial cost savings, decreasing the need for extensive human resources dedicated to routine tasks.
+
+Dataiku allows users to automate various aspects of their data workflows through features and technologies like recipes, Generative AI, scenarios, and plugins.
+
+Recipes
+in Dataiku are reusable workflows that define a series of steps to transform data. By creating and automating recipes, you can ensure that data transformation processes are consistently applied across your datasets.
+Application as a recipe
+even lets you string together multiple recipes in a flow to create reusable mini-applications.
+
+Generative AI
+-based AI assistants help automate common data tasks. For example, AI Prepare uses
+Generative AI
+to allow you to automatically generate steps in a
+prepare recipe
+using natural language instructions. Additionally,
+
+AI Code Assistant
+
+helps you write, explain, or debug code, comment and document your work, create unit tests, and more.
+
+Plugins
+in Dataiku’s plugin library offer pre-built functionalities that can be integrated into your workflows, automating complex tasks such as information retrieval, MLmodel training, data visualization, and more.
+
+Scenarios
+in Dataiku are powerful tools for automating entire workflows, allowing you to schedule tasks, trigger actions based on specific conditions, and create complex sequences of operations.
+
+Unleashing the Power of Scenarios
+
+Scenarios take automation in Dataiku to the next level by providing a comprehensive framework for managing and executing workflows. They are particularly useful for orchestrating complex data processes that involve multiple steps and dependencies.
+
+One of the key features of scenarios is scheduling. Scenarios can be scheduled to run at specific times or intervals, making them ideal for tasks that need to be performed regularly, such as daily data refreshes or weekly reporting. Conditional triggers are another powerful feature. Scenarios can be configured to run based on specific conditions, such as when new data is available or when a particular dataset reaches a certain size.
+
+Scenarios offer multiple trigger types depending on your needs.
+
+Scenarios allow you to chain multiple actions together, creating intricate workflows that can handle complex data processes. Each step in a scenario can depend on the successful completion of the previous step, ensuring a logical flow of operations. Not to mention, you can configure scenarios to send notifications or alerts when specific events occur in tools like email, Slack, or Microsoft Teams, useful for monitoring the status of your workflows and staying informed about any issues that arise.
+
+Easily create reporters to notify users of scenario status, so that they are always in the know.
+
+Practical Example: Automating a Data Pipeline
+
+Let’s consider a practical example of how scenarios can be used to automate a data pipeline in Dataiku:
+
+Data Ingestion
+: Schedule a scenario to run every night at midnight to ingest new data from an external source (e.g., an API or a database).
+
+Data Cleaning
+: After the data is ingested, trigger a series of recipes to clean and preprocess the data, removing any inconsistencies and ensuring data quality.
+
+Model Training
+: If the scenario detects that the data has changed significantly or drift is occurring, it can trigger the retraining of ML models to ensure they remain accurate and relevant.
+
+Deployment:
+After retraining, you can automatically schedule deployment of the new model to ensure there’s no impact on downstream applications.
+
+Reporting and Alerts
+: After the models are retrained, the scenario can generate updated reports and dashboards, sending notifications to stakeholders to inform them of the latest insights.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Modernizing Analytics With Dataiku and Snowflake
+
+The Modern Analyst’s Simplified Path From Question to Insight
+
+Why Analyst Attention Is the Scarce Resource of 2025
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change
+
+Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the...
+
+Dec 18, 2025
+
+Recommended
+
+A Modern Approach to Analytics, Powered by Dataiku and Databricks
+
+Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while maintaining...
+
+Dec 03, 2025
+
+Analytics Modernization
+
+Modernizing Analytics With Dataiku and Snowflake
+
+Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools...
+
+Nov 11, 2025
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

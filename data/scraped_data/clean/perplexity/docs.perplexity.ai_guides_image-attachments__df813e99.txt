@@ -1,0 +1,449 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/guides/image-attachments
+page path  : /guides/image-attachments
+captured   : 2026-01-25 03:31:38 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_guides_image-attachments__df813e99.html.gz
+========================================================================
+
+Image Attachments with Sonar - Perplexity
+
+Image Attachments with Sonar - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Working with Attachments
+Image Attachments with Sonar
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Getting Started
+Overview
+Pricing
+Perplexity MCP Server
+Perplexity SDK
+Quickstart
+Guides
+Search
+Quickstart
+Best Practices
+Search and Filtering
+Grounded LLM
+Quickstart
+Models
+Pro Search
+Chat Completions SDK
+OpenAI Compatibility
+Prompting & Output Control
+Search & Filtering
+Working with Attachments
+Image Attachments with Sonar
+File Attachments with Sonar
+Admin
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Help & Resources
+Changelog
+Get in Touch
+API Roadmap
+Frequently Asked Questions
+System Status
+Privacy & Security
+Perplexity Crawlers
+On this page
+Overview
+Supported Features
+Input Methods
+1. URL of the Image
+2. Base64 Encoded Image Data
+Request Format
+Basic Usage
+Common Use Cases
+Screenshot Analysis
+Diagram Interpretation
+Product Analysis
+Document Processing
+Best Practices
+Pricing
+Limitations
+Working with Attachments
+Image Attachments with Sonar
+Copy page
+Learn how to upload and analyze images using Sonar models
+Copy page
+​
+Overview
+
+Sonar models support image analysis through direct image uploads. You can include images in your API requests to support multi-modal conversations alongside text. Images can be provided either as base64 encoded strings within a data URI or as standard HTTPS URLs.
+
+SDK Installation Required
+: Install the official SDK first -
+pip install perplexityai
+for Python or
+npm install @perplexity-ai/perplexity_ai
+for TypeScript/JavaScript.
+
+When using base64 encoding, the API currently only supports images up to 50 MB per image.
+
+Supported formats for base64 encoded images: PNG (image/png), JPEG (image/jpeg), WEBP (image/webp), and GIF (image/gif).
+
+When using an HTTPS URL, the model will attempt to fetch the image from the provided URL. Ensure the URL is publicly accessible.
+
+​
+Supported Features
+
+Image uploads can be useful for:
+
+Visual Question Answering
+: Ask questions about visual content (e.g., text in a screenshot, diagram interpretation)
+
+Context Analysis
+: Providing context for follow-up queries
+
+Multi-modal Conversations
+: Analyzing visual media as part of a multi-turn conversation
+
+Content Description
+: Get detailed descriptions of images
+
+Text Extraction
+: Extract text from images and documents
+
+​
+Input Methods
+
+You can provide images in your requests using two methods:
+
+​
+1. URL of the Image
+
+Provide a publicly accessible HTTPS URL pointing directly to the image file, for example:
+
+Copy
+Ask AI
+"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg"
+
+​
+2. Base64 Encoded Image Data
+
+Encode the image as base64 and embed it in a data URI, for example:
+
+Copy
+Ask AI
+data:image/png;base64,<BASE64_ENCODED_CONTENT>
+
+​
+Request Format
+
+Images must be embedded in the
+messages
+array, alongside any text input. Each image should be provided using the following structure:
+
+Copy
+Ask AI
+{
+
+"type"
+:
+"image_url"
+,
+
+"image_url"
+: {
+
+"url"
+:
+"<IMAGE_URL_OR_BASE64_DATA>"
+
+}
+
+}
+
+The
+url
+field accepts either:
+
+A URL of the image
+: A publicly accessible HTTPS URL pointing directly to the image file
+
+The base64 encoded image data
+: A data URI in the format
+data:image/{format};base64,{base64_content}
+
+​
+Basic Usage
+
+Base64 Encoded Data
+
+Image URL
+Use this method when you have the image file locally and want to embed it directly into the request payload. Remember the 50MB size limit and supported formats (PNG, JPEG, WEBP, GIF).
+cURL
+Python
+JavaScript
+TypeScript
+Copy
+Ask AI
+curl
+--location
+'https://api.perplexity.ai/chat/completions'
+\
+
+--header
+'accept: application/json'
+\
+
+--header
+'content-type: application/json'
+\
+
+--header
+"Authorization: Bearer
+$SONAR_API_KEY
+"
+\
+
+--data
+'{
+
+"model": "sonar-pro",
+
+"stream": false,
+
+"messages": [
+
+{
+
+"role": "user",
+
+"content": [
+
+{
+
+"type": "text",
+
+"text": "Can you describe this image?"
+
+},
+
+{
+
+"type": "image_url",
+
+"image_url": {
+
+"url": "data:image/png;base64,$BASE64_ENCODED_IMAGE"
+
+}
+
+}
+
+]
+
+}
+
+]
+
+}'
+|
+jq
+
+Use this method to reference an image hosted online. Ensure the URL is publicly accessible and points directly to the image file.
+cURL
+Python
+JavaScript
+TypeScript
+Copy
+Ask AI
+curl
+--location
+'https://api.perplexity.ai/chat/completions'
+\
+
+--header
+"accept: application/json"
+\
+
+--header
+"content-type: application/json"
+\
+
+--header
+"Authorization: Bearer
+$SONAR_API_KEY
+"
+\
+
+--data
+'{
+
+"model": "sonar-pro",
+
+"stream": false,
+
+"messages": [
+
+{
+
+"role": "user",
+
+"content": [
+
+{
+
+"type": "text",
+
+"text": "Can you describe the image at this URL?"
+
+},
+
+{
+
+"type": "image_url",
+
+"image_url": {
+
+"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg"
+
+}
+
+}
+
+]
+
+}
+
+]
+
+}'
+|
+jq
+
+​
+Common Use Cases
+
+​
+Screenshot Analysis
+
+Copy
+Ask AI
+question
+=
+"What text is visible in this screenshot?"
+
+​
+Diagram Interpretation
+
+Copy
+Ask AI
+question
+=
+"Explain the workflow shown in this diagram"
+
+​
+Product Analysis
+
+Copy
+Ask AI
+question
+=
+"Describe the features and specifications of this product"
+
+​
+Document Processing
+
+Copy
+Ask AI
+question
+=
+"Extract all the key information from this document image"
+
+​
+Best Practices
+
+Image Quality Guidelines
+
+Use high-resolution images for better text extraction
+
+Ensure good contrast for text recognition
+
+Avoid heavily compressed images when detail is important
+
+Use appropriate image formats (PNG for screenshots, JPEG for photos)
+
+File Size Optimization
+
+Keep images under 50MB for base64 encoding
+
+Compress images when possible without losing critical detail
+
+Consider using HTTPS URLs for very large images
+
+Use WebP format for balanced quality and size
+
+URL Best Practices
+
+Ensure URLs are publicly accessible (no authentication required)
+
+Use direct links to image files, not web pages
+
+Test URLs in a browser before using in API calls
+
+Consider using CDNs for reliable image hosting
+
+​
+Pricing
+
+Images are tokenized based on their pixel dimensions using the following formula:
+
+Copy
+Ask AI
+tokens = (width px × height px) / 750
+
+Examples:
+
+A 1024×768 image would consume: (1024 × 768) / 750 = 1,048 tokens
+
+A 512×512 image would consume: (512 × 512) / 750 = 349 tokens
+
+These image tokens are then priced according to the input token pricing of the model you’re using (e.g.,
+sonar-pro
+,
+sonar
+, etc.). The image tokens are added to your total token count for the request alongside any text tokens.
+
+To optimize costs, resize images to the minimum resolution needed for your use case while maintaining adequate quality.
+
+​
+Limitations
+
+sonar-deep-research
+does not support image input
+
+Ensure provided HTTPS URLs are publicly accessible
+
+Base64 images have a 50MB size limit
+
+Supported formats: PNG, JPEG, WEBP, and GIF
+
+Was this page helpful?
+Yes
+No
+Returning Videos with Sonar
+Previous
+File Attachments with Sonar
+Next
+⌘
+I
+x
+discord
+website
+Powered by

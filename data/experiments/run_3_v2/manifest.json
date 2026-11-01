@@ -1,0 +1,29 @@
+{
+  "experiment_id": "run_3_v2",
+  "inputs": {
+    "companies": 49,
+    "path": "data/classification_inputs/companies.jsonl",
+    "sha256": "f215c9d472cb81ee9091af0d4c46fb3d565474ce7201f7c02ab69e5cfc294b95"
+  },
+  "models": {
+    "judge": "qwen/qwen3.7-plus",
+    "single": "mistralai/mistral-small-2603",
+    "workers": [
+      "openai/gpt-5-mini",
+      "mistralai/mistral-small-2603",
+      "google/gemini-2.5-pro"
+    ]
+  },
+  "prompt_version": "v2",
+  "prompts": {
+    "judge": {
+      "path": "prompts/judge_v2.txt",
+      "sha256": "e25595e3124ac9b1d590531f11eac3f72e01f3c7c660a2c8fe200ddc0c9e1088"
+    },
+    "workers_and_single": {
+      "path": "prompts/single_v2.txt",
+      "sha256": "ed4b3b148737e4b08101b632a4fd4e0192af3551677a51ebc5aadec3212d9237"
+    }
+  },
+  "run_number": 2
+}

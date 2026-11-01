@@ -1,0 +1,133 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/reduce-cold-start-time-llm-inference
+page path  : /blog/reduce-cold-start-time-llm-inference
+captured   : 2026-04-19 05:53:44 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_reduce-cold-start-time-llm-inference__f0ca3a5c.html.gz
+========================================================================
+
+How To Reduce Cold Start Times For LLM Inference | Scale AI
+
+How To Reduce Cold Start Times For LLM Inference | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Engineering
+How To Reduce Cold Start Times For LLM Inference
+by
+
+Yunfeng Bai
+,
+Will Song
+and
+Jui-Tse Hung
+Published
+August 29, 2023
+Reading Time
+6 min read
+Copy Link
+At Scale, we host a diverse set of deep learning models for both internal and external users. The recent boom of large language models (LLMs) brought a set of new technical challenges and pod cold start is one of the most important. By reducing cold start time, we were able to reduce cost while maintaining a stable latency SLA. We’d like to share our learnings on why cold start is an important problem and how we reduced the cold start time of LLMs with
+LLM Engine
+.
+Why Cold Start Time Is Important
+Without a fast enough cold start, users will often permanently provision GPUs for peak traffic. GPU hosting costs are significantly more expensive than the average CPU-based microservice. To formalize this idea in equations,
+If we can cold start pods and make predictions within the latency SLA, we won’t need any warm pods; otherwise we need to keep some warm pods based on the max amount of traffic we want to keep within SLA and the throughput per node.
+Then we could calculate compute seconds per wall clock second by dividing the total amount of requests and per pod throughput and plus number of warm pods. Lastly we could get the cost for serving all requests by multiplying compute seconds with the cost per second and duration.
+As a concrete example, the chart below illustrates the hosting costs of one of our products as a function of user traffic. The X-axis shows the number of requests and the Y-axis is cost. The blue line is the cost curve for a configuration that has 3x the cold start time than the red line while all other configuration values are the same. When cold start time is high (blue line), we need to keep more warm pods to maintain latency SLA when there are more requests; however if cold start time is short enough (red line), we could spin up pods right when requests come in and only keep a small amount of warm pods for safety. This difference made a huge impact on cost.
+Measurements
+To understand where time is spent during cold start, we measured LLM endpoint cold start time for a Llama 2 7B model by looking at Kubernetes events and duration for each step that runs in the container. Here’s the time breakdown:
+As shown in the chart, the actual model loading time is quite small and most of the time is spent on pulling docker images and downloading model weights.
+Faster Pod Initialization
+Since pulling images from repositories takes the majority of the time, we focused our efforts here first. From our prior experiences working on optimizing inference for various deep learning models like image generation models, we’ve already encountered similar problems, but with LLMs the docker images are bigger and the problem is more prominent. We tried a few ideas and eventually optimized away this portion of time by caching images onto the nodes using Kubernetes daemonsets. We utilized the same technique for LLM images. The following chart describes the process:
+A
+cacher
+periodically scans through the database to get all “
+high priority
+” models, together with a full set of (GPU, docker image) pairs. We then construct and create/replace one daemonset for each type of GPU, and run each image with sleep commands like
+/bin/sh -ec 'while : ; do sleep 30 ; done'
+. This way we could dynamically maintain the set of images and preload them onto the nodes, and effectively eliminate docker image pulling time.
+In addition to image caching, we reduced time to provision new nodes by creating
+balloon deployments
+per GPU type to prewarm nodes. These pods have low priority and will be preempted when actual workloads are created.
+Faster Model Weights Loading
+We utilize
+s5cmd
+to download model weights which is
+much faster
+than aws-cli. We used to put all files into a tarball for simplicity, but found that it’s bad for concurrent download. We instead stored model files with 2GB chunks and had s5cmd download all the files in parallel. We also did some quick benchmarks for s5cmd parameters and chose 512 for --numworkers and 10 for --concurrency. With those changes we pushed the download time of the Llama 2 7B model (12.6GB) from 85s to 7s, achieving 14.4Gbps, which is close to the EBS volume bandwidth limit (16Gbps) for our host. Here is an example how we invoke s5cmd:
+s5cmd --numworkers 512 cp --concurrency 10 {source_folder} {destination_folder}
+We heavily utilize
+text-generation-inference
+(TGI) to serve models. TGI prefers
+safetensors
+, a file format for storing tensors, and it loads
+2 times faster
+than raw PyTorch bin files. With safetensor files it could load the model in less than 20 seconds. Thus by default now we store only safetensors (with
+model.save_pretrained(output_dir, safe_serialization=True
+)) to avoid TGI having to convert PyTorch bin files on the fly.
+Summary
+With all the optimizations applied we successfully reduced cold start time from more than 6 minutes to less than 40 seconds. This greatly improved our GPU utilization and our ability to deal with spiky traffic. Given the current 30-40s lag, it is now possible to save cost by having zero workers for sporadic workloads.
+Future Work
+Though this approach conceptually works, we still need to implement (and open source) auto scaling from zero since Kubernetes’ Horizontal Pod Autoscaler does not scale from zero.
+We fine tune models with PEFT (Parameter-Efficient Fine-Tuning). The code is currently private and we will open source in the near future.
+We currently merge back PEFT trained weights onto the base model. This is cost inefficient since we need to maintain one deployment per fine-tuned model, and the cold start optimizations presented here only partially mitigate this problem. Internally, we have implemented dynamic loading / unloading for LoRA and IA3 adapters with DeepSpeed-sharded models. This way only one deployment is needed per base model, and each process would dynamically swap out adapters when serving traffic from different fine-tunes. The future work is to open-source this framework and get adapters working with continuous batching.
+To better generalize our image cache beyond just “high-priority” endpoints, we are investigating lazy-loading of images with projects like stargz.
+Next Steps
+Looking to customize and serve LLMs? Try
+LLM Engine
+today!
+Learn more about how Scale can help you
+customize LLMs for your unique use case
+.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

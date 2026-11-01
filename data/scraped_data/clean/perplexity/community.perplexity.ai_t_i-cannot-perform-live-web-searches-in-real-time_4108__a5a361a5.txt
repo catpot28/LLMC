@@ -1,0 +1,173 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/i-cannot-perform-live-web-searches-in-real-time/4108
+page path  : /t/i-cannot-perform-live-web-searches-in-real-time/4108
+captured   : 2026-04-12 12:50:08 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_i-cannot-perform-live-web-searches-in-real-time_4108__a5a361a5.html.gz
+========================================================================
+
+"I cannot perform live web searches in real-time" - General - Perplexity API Platform Forum
+
+"I cannot perform live web searches in real-time" - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+"I cannot perform live web searches in real-time"
+
+General
+
+sonar-deep-research
+,
+
+chat-completions
+,
+
+node-sdk
+
+uluhonolulu
+
+March 11, 2026, 6:58am
+
+1
+
+I have code in production that uses sonar-deep-research. A few days ago, I started receiving responses saying they cannot use live search. How come deep research doesn’t use live web search?
+
+I’m using the chat completion SDK, and about half of the answers contain this disclaimer.
+
+Here’s a typical response (note that I asked it to provide recent data):
+
+I appreciate the query, but I need to clarify my actual capabilities and constraints.
+
+I cannot perform live web searches in real-time. I’m designed to create comprehensive research reports based on search results that have already been provided to me, which is what I see in the context above from sources dated March 3-9, 2026.
+
+The search results you’ve provided contain several recent news items I can cite:
+
+**Today’s date in UTC:** Monday, March 09, 2026, 7:06:59 PM UTC (as stated in my system context)
+
+**A real news item from the last 7 days:** The death toll in U.S. and Israeli bombing campaigns across Iran has risen to over 1,000 people, with strikes hitting 153 cities and more than 500 sites since operations began on Saturday, March 1, 2026[2].
+
+**Source URL:**
+https://www.democracynow.org/2026/3/3/headlines
+
+-–
+
+**SEARCH_USED:** no
+
+**LIVE_SOURCES_COUNT:** 0
+
+**WHY_SEARCH_WAS_NEEDED:** I worked from pre-provided search results rather than performing live searches, as I lack real-time web search capabilities.
+
+If you’d like me to create a comprehensive research report using the provided search results on a particular topic related to the current events shown, I’m happy to do so following my standard report format.
+
+2 Likes
+
+Rfairweather
+
+March 26, 2026, 2:30pm
+
+2
+
+I have the exact same issue. This symptom is also reported here by someone else:
+`sonar-deep-research` intermittently fails to activate web search via the API - Bug Reports - Perplexity API Platform Forum
+
+Is this being investigated? I have had to switch to OpenAI’s deep research API in the meantime…
+
+mr_robot
+
+March 27, 2026, 5:47pm
+
+3
+
+same issue here. sonar-deep-research reported that the knowledge cut-off was April 2024 and it does not have access to real-time data
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Deep Research API
+
+General
+
+sonar-deep-research
+
+0
+
+39
+
+January 9, 2026
+
+Upload Documents and Cross-Reference with Live Web Search
+
+Announcements
+
+0
+
+1
+
+October 8, 2025
+
+Introducing the Perplexity Search API 🚀
+
+Announcements
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+,
+
+python-sdk
+
+1
+
+1008
+
+September 25, 2025
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+317
+
+June 1, 2025
+
+`sonar-deep-research` intermittently fails to activate web search via the API
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+51
+
+March 26, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

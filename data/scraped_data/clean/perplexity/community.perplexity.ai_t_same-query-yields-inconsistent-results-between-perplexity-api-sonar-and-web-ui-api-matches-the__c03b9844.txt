@@ -1,0 +1,220 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/same-query-yields-inconsistent-results-between-perplexity-api-sonar-and-web-ui-api-matches-the-wrong-person-web-ui-is-correct/4015
+page path  : /t/same-query-yields-inconsistent-results-between-perplexity-api-sonar-and-web-ui-api-matches-the-wrong-person-web-ui-is-correct/4015
+captured   : 2026-03-10 03:27:30 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/community.perplexity.ai_t_same-query-yields-inconsistent-results-between-perplexity-api-sonar-and-web-ui-api-matches-the__c03b9844.html.gz
+========================================================================
+
+Same query yields inconsistent results between Perplexity API (sonar) and Web UI: API matches the wrong person, Web UI is correct - General - Perplexity API Platform Forum
+
+Same query yields inconsistent results between Perplexity API (sonar) and Web UI: API matches the wrong person, Web UI is correct - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Same query yields inconsistent results between Perplexity API (sonar) and Web UI: API matches the wrong person, Web UI is correct
+
+General
+
+sonar
+,
+
+search-api
+
+hellowo
+
+February 26, 2026, 3:34pm
+
+1
+
+Hi Perplexity team,
+
+We’ve encountered a reproducible issue while using the
+Perplexity API (sonar)
+: the
+same query
+produces clearly different conclusions between the
+API
+and the
+Web UI
+. The Web UI response is more cautious and aligns with what we expect, but the API returns a confident “profile-style” answer that appears to be
+mapped to a different person with the same/similar name
+, resulting in an incorrect conclusion.
+
+What we’re seeing
+
+API result:
+The API confidently outputs a person’s “title/experience/background,” but after verification it appears to be a
+wrong match
+(possibly due to differences in entity disambiguation, retrieval, or reranking).
+
+Web UI result:
+The Web UI indicates that the exact spelling does
+not
+directly match, then more carefully suggests possible name variants/candidates and explains the reasoning based on sources. This outcome is more accurate.
+
+Steps to reproduce
+
+Use a query in the following format:
+
+"<PersonName> <Region> <Company> LinkedIn"
+
+Call the
+Perplexity API (sonar)
+with that query and obtain the answer.
+
+Run the
+same query
+in the
+Perplexity Web UI
+and compare the result.
+
+Expected behavior
+
+The API result should be consistent with the Web UI, or at least:
+
+avoid confidently asserting a single identity when the match is ambiguous; and/or
+
+provide a Web-like disambiguation approach (name variants, multiple candidates, and stronger source-grounding).
+
+Actual behavior
+
+The API returns a highly confident answer that appears to be
+misattributed
+to the wrong person, while the Web UI correctly handles ambiguity and avoids the wrong mapping.
+
+Questions
+
+Do the
+Web UI
+and
+API
+use different retrieval/reranking/entity-disambiguation pipelines or different model versions?
+
+Is there any API parameter/mode to make the API behavior closer to the Web UI (e.g., stricter grounding, citations-only output, stronger disambiguation)?
+
+We’d appreciate any guidance on how to make the API results more consistent with the Web UI, or how to prevent the API from producing confident but incorrect entity mappings in ambiguous cases. Thank you!
+
+Kesku
+
+February 26, 2026, 3:36pm
+
+2
+
+Hi
+@hellowo
+, Right now there isn’t enough concrete detail for us to reliably reproduce what you’re seeing. To dig in, could you share:
+
+The
+exact query
+you’re sending to the API
+
+The
+full API request payload
+(model, parameters, etc.)
+
+A
+sanitized snippet of the API response
+that shows the incorrect “profile-style” answer
+
+A
+screenshot or copy
+of the corresponding Web UI answer for the same query
+
+That will let us check whether there are any differences in configuration, model, or search behavior that explain the mismatch.
+
+Separately, for new integrations we strongly recommend using the
+Agent API with the
+web_search
+tool
+instead of calling the legacy Sonar models directly.
+
+You can find the Agent API docs here:
+
+Perplexity
+
+Overview - Perplexity
+
+If you share a concrete example (request + responses), we can check whether this is a configuration issue, a model behavior difference, or something we should treat as a bug on our side.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+API vs Web Quality Issues
+
+Bug Reports
+
+sonar-pro
+
+3
+
+419
+
+November 5, 2025
+
+Why does the Perplexity Sonar PRO API fail to fetch detailed profiles from web links like the Perplexity Chat UI does—should I use a different Perplexity model for this?
+
+General
+
+sonar-pro
+
+0
+
+58
+
+October 28, 2025
+
+Why don't I receive the same level of response using the API as I do using the official UI search?
+
+Bug Reports
+
+9
+
+1203
+
+May 15, 2025
+
+Sonar AP returning empty results or malformated |
+
+Bug Reports
+
+sonar
+
+0
+
+89
+
+September 5, 2025
+
+PerplexityPro response vs SonarPro response
+
+Bug Reports
+
+sonar-pro
+
+0
+
+148
+
+September 19, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

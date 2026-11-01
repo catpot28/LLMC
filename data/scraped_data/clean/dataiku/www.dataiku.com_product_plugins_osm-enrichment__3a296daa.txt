@@ -1,0 +1,515 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/osm-enrichment/
+page path  : /product/plugins/osm-enrichment/
+captured   : 2026-01-21 09:44:06 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_osm-enrichment__3a296daa.html.gz
+========================================================================
+
+Plugin: OpenStreetMap Enrichment | Dataiku
+
+Plugin: OpenStreetMap Enrichment | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+OpenStreetMap Enrichment
+
+OpenStreetMap Enrichment
+
+This plugin provides a recipe to list Points of Interest from OpenStreetMap and create an aggregated heatmap
+
+Plugin information
+
+Version
+
+1.1.0
+
+Author
+
+Dataiku (Jane BELLAICHE, Pierre Pfennig)
+
+Released
+
+2018-08-03
+
+Last updated
+
+2025-04-13
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to to retrieve, for a specific geographic area, a list of given “Points of Interests” (POI) from OpenStreetMap. The plugin provides two recipes:
+
+OpenStreetMap dataset enrichment: It takes as an input a dataset containing a columns with polygons, and retrieves for each polygon the list of Points of Interests.
+
+OpenStreetMap enrichment
+(deprecated: it will be removed in further versions)
+: The input is not a dataset but a single polygon, specify either by drawing a bounding box on a map, or by giving coordinates of a bounding box. The recipe will retrieve all the Points Of Interest for this specific bounding box.
+
+Note : This plugin uses geometry coordinates in lat-long (EPSG:4326). You can convert them by using the “Change coordinate system” step in a prepare recipe before using this plugin.
+
+Index
+
+How to set up
+
+How to use
+
+OpenStreetMap Dataset Enrichment
+
+Input
+
+Settings
+
+Output
+
+Limitations
+
+OpenStreetMap Enrichment (deprecated)
+
+Settings
+
+Limitations
+
+How to set up
+
+Right after installing the plugin, you will need to build its code environment. Note that Python version 3.6 or 3.7 is required.
+
+How to use
+
+The two recipes can be found by clicking on the OpenStreetMap Enrichment icon, on the right panel, in the ‘Plugin recipes’ section.
+
+Note that, as for other features of DSS, all geometries are expressed in the SRID 4326. Therefore, before manipulating any geospatial data in DSS, it is mandatory to project in this SRID.
+
+OpenStreetMap Dataset Enrichment
+
+Let’s assume that you have a dataset containing a Geometry column, each row in this column corresponds to a polygon or a multi-polygons. For each of these polygons, you want to collect from Open Street Map the Points of Interests that are located within the boundaries of the polygon. By using the OSM Dataset Enrichment recipe, you’ll be able to get for each polygon, the different points of interests filtered by
+tags
+or
+keys
+.
+
+After clicking on the ‘OpenStreetMap Enrichment’ icon on the right panel, select the ‘OpenStreetMap Dataset Enrichment recipe’.
+
+Input
+
+Dataset containing a Geometry column with POLYGON or/and MULTIPOLYGON
+
+Settings
+
+Input parameters
+
+The
+Geometry column
+parameter lets you choose the column of your input dataset containing geometry data, composed of polygons or/and multipolygons.
+
+Filter Point Of Interests (POIs)
+
+Type of POIs
+: this parameter is used to filter the points of interests on
+tags
+(for example ‘amenity’) or
+keys
+(for example ‘shop’). You can also specify, for a certain tag or key, a specific category of points of interest, for example ‘amenity=bank’ or ‘shop:manga’
+
+This parameter cannot be empty
+.
+
+Running mode
+
+R
+equest by batch:
+If selected, will perform request by batches. It will be faster but can generate runtime errors issues.
+
+Output parameters
+
+Additional POIs information
+: Create additional column containing details about the points of interest. If selected:
+
+POIs enrichment keys
+: Information to retrieve for each Point of Interest (for example ‘name’, ‘brand’, ‘operator’). The information are identified by
+keys
+. The information may not be available for all the points of interests so you may have empty rows.
+
+All the information about the point of interest will also be stored in the ‘tags’ column in the output dataset, in an array. This additional parameter simply enable you to get a precise information in a separate column.
+
+Output
+
+Output dataset:
+Dataset enriched with point of interests found in each geometry with one row per geometry per point of interest. Additional columns:
+
+geopoint: contains the location of the store with the Geopoint format.
+
+tags: contains all the information about the point of interest, stored as an array
+
+one column per input filter: for each filter specified in the ‘
+Type of POIs’
+parameter, you’ll get one column with the detail about the type of category of the point of interest.
+
+one column per input enrichment key: for each key specified in the ‘
+POIs enrichment keys’
+parameter, you’ll get on column with the information value of the point of interest.
+
+failure_response: if the points of interest could not be retrieve, you’ll get the error message.
+
+Enriched output dataset
+
+Limitations
+
+Overpass API is a public API shared with a lot of users, and it has an important rate-limiting. If you want to use this recipe on big polygons, here are the strategies you should follow to get sure to get positive responses from the API:
+
+uncheck the “request by batch” button
+
+Simplify your polygons coordinates
+
+Split your dataset
+
+OpenStreetMap Enrichment (deprecated)
+
+Warning: this recipe is deprecated and will be removed in further versions.
+
+This recipe provides the ability to retrieve a list of given “Points of Interests” (POI) from OpenStreetMap for a given bounding box.
+
+It also creates an aggregated heatmap based on the categories of the POI. The plugin is based on the
+Overpass API
+.
+
+Settings
+
+You first need to set the bounding box of the POI you want to retrieve (min_latitude, min_longitude, max_latitude, max_longitude).
+
+Then you need to specify the “grid_size”. We will take the box you just defined and divide the width and the height grid_size times, which means you will get grid_size*grid_size rectangles to aggregate the POI.
+
+You can optionally decide to specify additional tags (ie POI) to retrieve. You can take a look at the available tags here. The default list for this plugin is shop, leisure, sport, tourism, historic, amenity, railway.
+
+Limitations
+
+Even if you specify additional tags in the advanced option, they will not be used in the heatmap because the possible values associated to the tags are very diverse and they need to be processed to classify them into some categories (food, public_service …).
+
+You may have to refresh your browser the first time you create a recipe with this plugin (if the map doesn’t appear)
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for OpenStreetMap Enrichment.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

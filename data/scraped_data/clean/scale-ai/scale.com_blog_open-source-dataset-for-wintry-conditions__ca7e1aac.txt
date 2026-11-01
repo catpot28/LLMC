@@ -1,0 +1,136 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/open-source-dataset-for-wintry-conditions
+page path  : /blog/open-source-dataset-for-wintry-conditions
+captured   : 2026-04-19 05:15:51 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_open-source-dataset-for-wintry-conditions__ca7e1aac.html.gz
+========================================================================
+
+Overcoming a critical challenge to the widespread use of autonomous vehicles | Scale AI
+
+Overcoming a critical challenge to the widespread use of autonomous vehicles | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Company
+Open Sourcing the World's First AV Dataset for Wintry Environments
+by
+
+Alexandr Wang
+Published
+February 3, 2020
+Reading Time
+3 min read
+Copy Link
+Self-driving cars promise to improve mobility, build a more efficient
+transportation system and even save lives.
+But while the industry has been making great progress, to date the field has
+struggled to build cars and artificial intelligence models that can handle all
+weather conditions.
+Snow is hard to drive in—as many drivers are well aware. But wintry conditions
+are especially hard for self-driving cars because of the way snow affects the
+critical hardware and AI algorithms that power them.
+Take a car trained to drive on the wide, sunny boulevards of Arizona or
+California and place it on a snowy street like this, and things will go wrong:
+Snow covering the road markings would make it hard for the car to stay in its
+lane.
+Accumulated snow significantly reduces the color contrast, making it harder
+for the car’s system to recognize objects, like trees or parked cars covered
+in snow—or even pedestrians.
+Most problematically, snowfall makes it hard for a vehicle’s cameras and LiDAR
+sensors to see, which significantly reduces safety:
+A skilled human driver can handle the same road in all weathers—but today’s AV
+models can’t generalise their experience in the same way. To do so, they need
+much more data.
+Until now, there has not yet been an open dataset of annotated LiDAR data and
+images of driving in snowy weather that researchers can use to develop more
+robust systems.
+CADC: A new dataset for wintry conditions
+In partnership with the University of Waterloo and the University of Toronto,
+we’ve been applying our technology to this challenge.
+Today, we’re open sourcing the world’s first AV dataset in wintry
+conditions—the Canadian Adverse Driving Conditions dataset (CADC, or cad-see.)
+Drawn from 20 km of driving in harsh, snowy conditions in southwestern Ontario
+over the past two winters, CADC contains 7,000 frames of LiDAR and camera data
+spread over 70 driving sequences—featuring a wide range of perception
+challenges for AV models that can handle wintry conditions. Scale provided the
+annotations that makes the data usable by researchers.
+Researchers at the Universities of Waterloo and Toronto have also released a
+detailed academic paper outlining the technical features of the data collected
+and object detection labels provided, which you can view on arXiv
+here
+.
+Ultimately, this is about safety. Without robust data, self-driving models
+can’t learn how to handle snowy conditions—preventing us from being able to
+make AV systems a reality for the many millions of people who live in places
+that receive wintry weather.
+As Professor Krzyzstof Czarnecki at the University of Waterloo says, “We want
+to engage the research community to generate new ideas and enable innovation.
+This is how you can solve really hard problems, the problems that are just too
+big for anyone to solve on their own.”
+We hope this dataset will make it easier for researchers to achieve the
+next-generation breakthroughs in AV systems that will take us one step closer
+to self-driving vehicles that work safely in a wide range of different
+environments.
+As Professor Steven Waslander at the University of Toronto says, “We’re hoping
+that both industry and academia go nuts with it. We want the world to be
+working on driving everywhere.
+“Bad weather is a condition that is going to happen.”
+You can find the dataset on the
+Waterloo website
+, with dataset
+support tools available on
+GitHub
+.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

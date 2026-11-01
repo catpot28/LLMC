@@ -1,0 +1,345 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/solutions/catalog/llm-enhanced-esg-document-intelligence/
+page path  : /solutions/catalog/llm-enhanced-esg-document-intelligence/
+captured   : 2026-04-15 04:32:52 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_solutions_catalog_llm-enhanced-esg-document-intelligence__4a99457d.html.gz
+========================================================================
+
+LLM-Enhanced ESG Document Intelligence | Dataiku
+
+LLM-Enhanced ESG Document Intelligence | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+The Platform for AI Success
+
+Run Enterprise AI as One System
+Deliver AI Agents
+Govern AI Everywhere
+Deliver Trusted Analytics
+Scale Machine Learning Impact
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+The Dataiku blog
+
+Get expert takes on analytics and AI innovation.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Start trial
+Request a demo
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Solutions
+
+Catalog
+
+LLM-Enhanced ESG Document Intelligence
+
+LLM-Enhanced ESG Document Intelligence
+
+Generate ESG insights from a large and complex corpus of documents in seconds thanks to the power of Generative AI.
+
+Share
+
+At investment banks or firms, analysts often spend many hours manually searching through documentation to uncover environmental, social, and governance (ESG)-related risks in order to monitor existing exposure and build new portfolios. Due to the volume of data and the manual nature of work key data points may be overlooked, increasing the likelihood of costly and damaging risk.
+
+With large language models (LLMs) and Dataiku, credit or equity analysts can simply ask questions in natural language to generate readable insights from a large and complex corpus of documents, all with source citations. For example:
+
+Between Company 1 and Company 2, which is the company most exposed to environmental risks?
+
+What is Company 3 policy to encourage gender equality and mitigate discrimination?
+
+Was Company 4 involved in human rights controversies in the last five years?
+
+Feature Highlights
+
+Increase Efficiency:
+Reduce time spent manually searching for ESG data points with automatically generated insights to refocus analysts on higher value tasks.
+
+Reduce Error:
+With manual review, firms increase the possibility of missing key details. Using LLM interrogation, massive amounts of data are analyzed at once, reducing human error potential.
+
+Reduce Exposure:
+Identify previously unknown patterns and connections that could impact revenue and reputation.
+
+Proactivity:
+With instant queries, gain the ability to respond more quickly and ahead of the market.
+
+Increase Revenue:
+With improved speed and responsiveness, gain a leg up on competition and increase returns.
+
+How It Works: Architecture
+
+A flow built in Dataiku reads documents and splits them into meaningful chunks of a few hundred words. Chunks are then indexed according to the company and the year they relate to. ESG keywords are searched in the chunks to link each keyword with the list of matched chunks. These chunks are then encoded using a sentence embedding transformer.
+
+The end user enters a question into a web application that calls an LLM via public API. The application infers the companies and years intended by the user and generates a list of keywords to look for in the documents, using an LLM. Chunks are preselected using the filters defined above (companies, years, and keywords). The application then encodes the question and looks for the 5-10 chunks with the closest match.
+
+The parts of the documents are sent over into an LLM along with a prompt, and the LLM generates an answer in the web application based on the chunks provided. Sources are reordered and displayed based on their similarity with the answer. In just a matter of a few clicks, the user can generate a new answer to a new question.
+
+Using this application for publicly available reports does not require strong scrutiny on data privacy considerations. Leveraging public available APIs with the right data pre-processing can allow organizations to accelerate on such use cases, as long as the application is used by a professional having access to the underlying documents to do the right checks.
+
+To go deeper and contemplate direct usage by customers, specific retraining of the LLM and usage in a private environment would be advised.
+
+Responsibility Concerns
+
+This use case involves corporate or business documents and provides a summary report for end users. Outputs should be regularly reviewed for consistency and correctness in accordance with subject matter expert knowledge about ESG topics.
+
+Additionally, end users should be aware that the summary or answers provided by a model are not a guarantee of correctness and be encouraged to use their best judgment when acting upon information returned by the model.
+
+Want to Learn More?
+
+See how Dataiku can help bring your Generative AI applications to life quickly and safely.
+
+CONTACT US
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,3347 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/getting-started/quickstart
+page path  : /docs/getting-started/quickstart
+captured   : 2026-06-17 07:42:08 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_getting-started_quickstart__05c1a641.html.gz
+========================================================================
+
+Quickstart - Perplexity
+
+Quickstart - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Getting Started
+Quickstart
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Agent SDKs
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Computer Analytics API
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Generating an API Key
+Overview
+Available APIs
+Choosing the Right API
+Installation
+Authentication
+Making Your First API Call
+Streaming Responses
+Next Steps
+Additional Resources
+Getting Started
+Quickstart
+Copy page
+Generate an API key and make your first call in < 3 minutes.
+Copy page
+​
+Generating an API Key
+
+Get your Perplexity API Key
+Navigate to the
+API Keys
+tab in the API Portal and generate a new key.
+Click here
+
+See the
+API Groups
+page to learn more about API groups.
+
+Pricing
+Pay-as-you-go pricing for all APIs. No subscription required.
+See pricing
+
+​
+Overview
+
+The Perplexity API provides four core APIs for different use cases:
+Agent API
+for accessing OpenAI, Anthropic, Google, and xAI models with unified search tools and transparent pricing,
+Search
+for ranked web search results,
+Sonar
+for web-grounded AI responses with Sonar models, and
+Embeddings
+for generating text embeddings.
+
+All APIs support both REST and SDK access with streaming, filtering, and advanced controls.
+
+​
+Available APIs
+
+Agent API
+Third-party models from OpenAI, Anthropic, Google, and more with presets and web search tools.
+Search
+Ranked web search results with filtering, multi-query support, and domain controls.
+Sonar
+Web-grounded AI responses with citations, conversation context, and streaming support.
+Embeddings
+Generate high-quality text embeddings for semantic search and RAG.
+
+​
+Choosing the Right API
+
+Use the Agent API when...
+
+You need
+multi-provider access
+to OpenAI, Anthropic, Google, and more models through one API
+
+You want
+granular control
+over model selection, reasoning, token budgets, and tools
+
+You want
+presets
+for common use configurations or full customization for advanced workflows
+
+Best for:
+Agentic workflows, custom AI applications, multi-model experimentation
+Use the Search API when...
+
+You need
+raw search results
+without LLM processing
+
+You want to
+build custom AI workflows
+with your own models
+
+You need
+search data
+for indexing, analysis, or training
+
+Best for:
+Custom AI pipelines, data collection, search integration
+Use the Sonar API when...
+
+You want
+Perplexity’s Sonar models
+optimized for research and Q&A
+
+You need
+built-in citations
+and conversation context
+
+You prefer
+simplicity
+—just send a message and get a researched answer
+
+Best for:
+AI assistants, research tools, Q&A applications
+Use the Embeddings API when...
+
+You need
+semantic similarity
+between texts for search or recommendations
+
+You’re building
+RAG pipelines
+that require vector representations of documents
+
+You need to
+cluster, classify, or compare
+text without generating a response
+
+Best for:
+Semantic search, RAG applications, text classification, recommendation systems
+
+​
+Installation
+
+Install the SDK for your preferred language:
+
+Python
+Typescript
+pip
+install
+perplexityai
+
+​
+Authentication
+
+Set your API key as an environment variable:
+
+macOS/Linux
+
+Windows
+export
+PERPLEXITY_API_KEY
+=
+"your_api_key_here"
+
+setx PERPLEXITY_API_KEY
+"your_api_key_here"
+
+OpenAI SDK Compatible:
+Perplexity’s API supports the OpenAI Chat Completions format. You can use OpenAI client libraries by pointing to our endpoint. See the
+OpenAI Compatibility Guide
+for examples.
+
+​
+Making Your First API Call
+
+Choose your API based on your use case:
+
+Agent API
+
+Search API
+
+Sonar API
+Use for third-party models with web search tools and presets:
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+# Initialize the client (uses PERPLEXITY_API_KEY environment variable)
+
+client
+=
+Perplexity()
+
+# Make the API call with a preset
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"Summarize the core findings of the original 'Attention Is All You Need' transformer paper and explain why it changed NLP."
+,
+
+)
+
+# Print the AI's response
+
+print
+(response.output_text)
+
+Example Response
+The response includes structured output with tool usage and citations:
+{
+
+"background"
+:
+false
+,
+
+"completed_at"
+:
+1756485272
+,
+
+"created_at"
+:
+1756485272
+,
+
+"error"
+:
+null
+,
+
+"frequency_penalty"
+:
+0
+,
+
+"id"
+:
+"resp_1234567890"
+,
+
+"incomplete_details"
+:
+null
+,
+
+"instructions"
+:
+"## Abstract
+\n
+<role>
+\n
+You are an AI assistant developed by Perplexity AI. Given a user's query, your goal is to..."
+,
+
+"max_output_tokens"
+:
+null
+,
+
+"max_tool_calls"
+:
+null
+,
+
+"metadata"
+: {},
+
+"model"
+:
+"openai/gpt-5.1"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"type"
+:
+"message"
+,
+
+"id"
+:
+"msg_abc123"
+,
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"content"
+: [
+
+{
+
+"type"
+:
+"output_text"
+,
+
+"text"
+:
+"Recent developments in AI include..."
+,
+
+"annotations"
+: [
+
+{
+
+"type"
+:
+"citation"
+,
+
+"url"
+:
+"https://example.com/article1"
+
+}
+
+],
+
+"logprobs"
+: []
+
+}
+
+]
+
+}
+
+],
+
+"parallel_tool_calls"
+:
+true
+,
+
+"presence_penalty"
+:
+0
+,
+
+"previous_response_id"
+:
+null
+,
+
+"prompt_cache_key"
+:
+null
+,
+
+"reasoning"
+:
+null
+,
+
+"safety_identifier"
+:
+null
+,
+
+"service_tier"
+:
+"default"
+,
+
+"status"
+:
+"completed"
+,
+
+"store"
+:
+true
+,
+
+"temperature"
+:
+1
+,
+
+"text"
+: {
+
+"format"
+: {
+
+"type"
+:
+"text"
+
+}
+
+},
+
+"tool_choice"
+:
+"auto"
+,
+
+"tools"
+: [
+
+{
+
+"type"
+:
+"web_search"
+
+},
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+"top_logprobs"
+:
+0
+,
+
+"top_p"
+:
+1
+,
+
+"truncation"
+:
+"disabled"
+,
+
+"usage"
+: {
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+0.0046
+,
+
+"output_cost"
+:
+0.0078
+,
+
+"tool_calls_cost"
+:
+0.005
+,
+
+"total_cost"
+:
+0.0174
+
+},
+
+"input_tokens"
+:
+3681
+,
+
+"input_tokens_details"
+: {
+
+"cached_tokens"
+:
+0
+
+},
+
+"output_tokens"
+:
+780
+,
+
+"output_tokens_details"
+: {
+
+"reasoning_tokens"
+:
+0
+
+},
+
+"tool_calls_details"
+: {
+
+"search_web"
+: {
+
+"invocation"
+:
+1
+
+}
+
+},
+
+"total_tokens"
+:
+4461
+
+},
+
+"user"
+:
+null
+
+}
+
+Use for ranked web search results without LLM processing:
+Python
+TypeScript
+cURL
+from
+perplexity
+import
+Perplexity
+
+# Initialize the client (uses PERPLEXITY_API_KEY environment variable)
+
+client
+=
+Perplexity()
+
+# Make the API call
+
+search
+=
+client.search.create(
+
+query
+=
+"SpaceX Starship architecture and orbital test milestones"
+,
+
+max_results
+=
+5
+
+)
+
+# Print the search results
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+Example Response
+The response includes ranked search results with titles, URLs, and snippets:
+{
+
+"results"
+: [
+
+{
+
+"title"
+:
+"SpaceX Starship Flight 10: Full Mission Recap"
+,
+
+"url"
+:
+"https://example.com/starship-flight-10"
+,
+
+"snippet"
+:
+"SpaceX successfully completed its tenth Starship test flight, achieving full booster recovery and orbital insertion..."
+,
+
+"date"
+:
+"2026-02-20"
+,
+
+"last_updated"
+:
+"2026-02-21"
+
+},
+
+{
+
+"title"
+:
+"Starship Launch Manifest: 2026 Schedule and Updates"
+,
+
+"url"
+:
+"https://example.com/starship-2026-schedule"
+,
+
+"snippet"
+:
+"SpaceX has announced an ambitious 2026 launch manifest for Starship, targeting monthly flights and the first cargo mission..."
+,
+
+"date"
+:
+"2026-01-15"
+,
+
+"last_updated"
+:
+"2026-03-01"
+
+}
+
+],
+
+"query_info"
+: {
+
+"query"
+:
+"SpaceX Starship architecture and orbital test milestones"
+,
+
+"normalized_query"
+:
+"spacex starship launch updates 2026"
+
+}
+
+}
+
+Use for web-grounded AI responses with Perplexity’s Sonar models:
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+# Initialize the client (uses PERPLEXITY_API_KEY environment variable)
+
+client
+=
+Perplexity()
+
+# Make the API call
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[
+
+{
+"role"
+:
+"user"
+,
+"content"
+:
+"Explain the underlying physics of magnetic confinement fusion and the role of the Lawson criterion."
+}
+
+]
+
+)
+
+# Print the AI's response
+
+print
+(completion.choices[
+0
+].message.content)
+
+Example Response
+The response includes the AI’s answer with citations and search results:
+{
+
+"id"
+:
+"66f3900f-e32e-4d59-b677-1a55de188262"
+,
+
+"model"
+:
+"sonar-pro"
+,
+
+"created"
+:
+1756485272
+,
+
+"object"
+:
+"chat.completion"
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+0
+,
+
+"finish_reason"
+:
+"stop"
+,
+
+"message"
+: {
+
+"role"
+:
+"assistant"
+,
+
+"content"
+:
+"Several notable breakthroughs in fusion energy have been announced this year...[1][2]"
+
+}
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+12
+,
+
+"completion_tokens"
+:
+315
+,
+
+"total_tokens"
+:
+327
+
+},
+
+"citations"
+: [
+
+"https://example.com/article1"
+,
+
+"https://example.com/article2"
+
+]
+
+}
+
+Response — Summarize the core findings of the original 'Attention Is All You Need' transformer pap...
+{
+
+"id"
+:
+"resp_e80c520d-2788-4b3d-8662-6a0e3d611e8f"
+,
+
+"created_at"
+:
+1779391438
+,
+
+"model"
+:
+"openai/gpt-5.1"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"results"
+: [
+
+{
+
+"id"
+:
+1
+,
+
+"snippet": "Abstract:The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration.\nThe best performing models also connect the encoder and decoder through an attention mechanism.\nWe propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\nExperiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train.\nOur model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU.\nOn the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature.\nWe show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+
+"title"
+:
+"[1706.03762] Attention Is All You Need - arXiv"
+,
+
+"url"
+:
+"https://arxiv.org/abs/1706.03762"
+,
+
+"date"
+:
+"2017-06-12"
+,
+
+"last_updated"
+:
+"2026-05-19"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+2
+,
+
+"snippet": "At each layer, each token is then contextualized within the scope of the context window with other (unmasked) tokens via a parallel multi-head attention mechanism, allowing the signal for key tokens to be amplified and less important tokens to be diminished.\n...\nThe original version of the transformer architecture was proposed in the 2017 paper \"Attention Is All You Need\" by researchers at Google.\nThe predecessors of transformers were developed as an improvement over previous architectures for machine translation, but have found many applications since.\n...\nOn 2017-06-12, the original (100M-parameter) encoder–decoder transformer model was published in the \"Attention is all you need\" paper.\nAt the time, the focus of the research was on improving seq2seq for machine translation, by removing its recurrence to process all tokens in parallel, but preserving its dot-product attention mechanism to keep its text processing performance.\nThis led to the introduction of a multi-head attention model that was easier to parallelize due to the use of independent heads and the lack of recurrence.\nIts parallelizability was an important factor to its widespread use in large neural networks.",
+
+"title"
+:
+"Transformer (deep learning) - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Transformer_(deep_learning)"
+,
+
+"date"
+:
+"2019-08-25"
+,
+
+"last_updated"
+:
+"2026-05-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+3
+,
+
+"snippet"
+:
+"We propose a novel, simple network architecture based solely onan attention mechanism, dispensing with recurrence and convolutions entirely.Experiments on two machine translation tasks show these models to be superiorin quality while being more parallelizable and requiring significantly less timeto train."
+,
+
+"title"
+:
+"Attention is All you Need - NIPS papers"
+,
+
+"url"
+:
+"https://papers.nips.cc/paper/7181-attention-is-all-you-need"
+,
+
+"date"
+:
+"2017-01-01"
+,
+
+"last_updated"
+:
+"2026-05-21"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+4
+,
+
+"snippet": "The paper introduced a new deep learning architecture known as the transformer, based on the attention mechanism proposed in 2014 by Bahdanau *et al.* The transformer approach it describes has become the main architecture of a wide variety of artificial intelligence, including large language models.\nAt the time, the focus of the research was on improving Seq2seq techniques for machine translation, but the authors go further in the paper, foreseeing the technique's potential for other tasks like question answering and what is now known as multimodal generative AI.\n...\nThe paper is best known for introducing the Transformer architecture, which underlies most modern large language models (LLMs).\nA key reason why the architecture is preferred by most modern LLMs is the parallelizability of the architecture over its predecessors.\nThis ensures that the operations necessary for training can be accelerated on a GPU, allowing both faster training times and models of bigger sizes to be trained.\n...\nOn 2017-06-12, the original (100M-parameter) encoder–decoder transformer model was published in the \"Attention is all you need\" paper.",
+
+"title"
+:
+"Attention Is All You Need - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Attention_Is_All_You_Need"
+,
+
+"date"
+:
+"2023-12-04"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+5
+,
+
+"snippet": "In this video, YC's Ankit Gupta traces how AI learned to understand language — from early RNNs and LSTMs to attention mechanisms and the breakthrough 2017 paper Attention Is All You Need — the discovery that unlocked the modern AI era.\n...\n{ts:17} [Music] A transformer is a neural network that uses self attention to take input data\n{ts:26} like text or images, model the relationships between that data, and finally generate outputs like meaningful\n{ts:32} text responses, translations, or classifications.\n...\nThen came the big breakthrough in 2017 when a team of researchers at\n{ts:387} Google published a paper called attention is all you need, which proposed a new machine translation\n{ts:392} architecture that they called a transformer.\n...\n{ts:409} version of the encoder decoder architecture originally proposed in seek to seek.\nInstead of compressing inputs\n{ts:414} into a single vector embedding, transformers kept separate embeddings for each input token and updated these\n{ts:420} through self attention, a mechanism that updated token representations based on a learned weighted dotproduct over the\n{ts:426} embeddings of all other tokens in the sequence.\nBecause each token in this architecture could attend to all others\n{ts:431} simultaneously, transformers could process an entire sequence in parallel, making them dramatically faster than\n{ts:437} RNN's.\nRemarkably, they were also much more accurate on machine translation benchmarks.",
+
+"title"
+:
+"Transformers Explained: The Discovery That Changed AI Forever"
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=JZLZQVmfGn8&vl=en-US"
+,
+
+"date"
+:
+"2025-10-23"
+,
+
+"last_updated"
+:
+"2026-03-27"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+6
+,
+
+"snippet"
+:
+"●Presents a new neural architecture named the Transformer
+\n
+●Based solely on the attention mechanism widely used in SEQ2SEQ models
+\n
+●More parallelizable compared to existing state-of-the-art (SOTA) models
+\n
+●Achieves SOTA in 2 machine translation datasets
+\n
+…
+\n
+...
+\n
+• Less total computational complexity per layer
+\n
+• More parallelizable than existing fully autoregressive models
+\n
+• Shorten the path between tokens to enable model to learn long-term
+\n
+dependency better
+\n
+...
+\n
+Introduces a groundbreaking new model that is solely based on attention
+\n
+●
+\n
+Faster and better than existing models
+\n
+●"
+,
+
+"title"
+:
+"[PDF] Attention Is All You Need"
+,
+
+"url"
+:
+"https://ysu1989.github.io/courses/au20/cse5539/Transformer.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+7
+,
+
+"snippet": "The Transformer architecture has revolutionized natural language processing (NLP) since its introduction, establishing itself as a cornerstone for modern advancements in the field.\nThis architecture offers significant improvements in handling a wide range of NLP tasks, from translation to text summarization, by overcoming limitations inherent in previous models.\nIntroduced by Vaswani et al. in the paper “Attention is All You Need” in 2017, the Transformer architecture is characterized by its use of self-attention mechanisms and feed-forward neural networks.\nUnlike its predecessors, such as recurrent neural networks (RNNs) and long short-term memory networks (LSTMs), which process data sequentially, the Transformer processes input data in parallel.\nThis parallelization enables the model to leverage modern hardware more efficiently, resulting in faster training times and improved scalability.\nAt the heart of the Transformer is the self-attention mechanism, which allows the model to weigh the significance of different words in a sentence relative to each other.\nThis feature is critical for understanding contextual relationships and dependencies, regardless of the distance between words in the input sequence.\n...\nThis capacity to capture global dependencies without the constraints of sequential data processing is a notable advantage over traditional models.\n...\nThe Transformer architecture’s flexibility makes it suitable for a broad spectrum of NLP applications.\nIn machine translation, it has significantly improved the accuracy and fluency of translated text.\nFor tasks like text summarization, sentiment analysis, and question answering, Transformers provide state-of-the-art results by effectively capturing and modeling complex language patterns.\n...\nIn summary, the Transformer architecture has fundamentally changed the landscape of NLP by introducing a novel approach to processing and understanding language data.\nIts innovative use of self-attention and parallel processing has paved the way for numerous breakthroughs, making it an essential tool for anyone looking to advance in the field of natural language processing.",
+
+"title"
+:
+"What is the Transformer architecture in NLP? - Milvus"
+,
+
+"url"
+:
+"https://milvus.io/ai-quick-reference/what-is-the-transformer-architecture-in-nlp"
+,
+
+"date"
+:
+"2026-03-26"
+,
+
+"last_updated"
+:
+"2026-05-13"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+8
+,
+
+"snippet"
+:
+"In “Attention Is All You Need”, we introduce the Transformer, a novel neural network architecture based on a self-attention mechanism that we believe to be particularly well suited for language understanding.
+\n
+In our paper, we show that the Transformer outperforms both recurrent and convolutional models on academic English to German and English to French translation benchmarks.
+\n
+On top of higher translation quality, the Transformer requires less computation to train and is a much better fit for modern machine learning hardware, speeding up training by up to an order of magnitude.
+\n
+...
+\n
+In contrast, the Transformer only performs a small, constant number of steps (chosen empirically).
+\n
+In each step, it applies a self-attention mechanism which directly models relationships between all words in a sentence, regardless of their respective position."
+,
+
+"title"
+:
+"Transformer: A Novel Neural Network Architecture for Language ..."
+,
+
+"url"
+:
+"https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+9
+,
+
+"snippet"
+:
+"A new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely is proposed, which generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data."
+,
+
+"title"
+:
+"[PDF] Attention is All you Need | Semantic Scholar"
+,
+
+"url"
+:
+"https://www.semanticscholar.org/paper/Attention-is-All-you-Need-Vaswani-Shazeer/204e3073870fae3d05bcbc2f6a8e263d9b72e776"
+,
+
+"date"
+:
+"2017-06-12"
+,
+
+"last_updated"
+:
+"2025-03-22"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+10
+,
+
+"snippet": "Abstract:Natural Language Processing (NLP) has witnessed a transformative leap with the advent of transformer-based architectures, which have significantly enhanced the ability of machines to understand and generate human-like text.\nThis paper explores the advancements in transformer models, such as BERT and GPT, focusing on their superior performance in text understanding tasks compared to traditional methods like recurrent neural networks (RNNs).\nBy analyzing statistical properties through visual representations-including probability density functions of text length distributions and feature space classifications-the study highlights the models' proficiency in handling long-range dependencies, adapting to conditional shifts, and extracting features for classification, even with overlapping classes.\nDrawing on recent 2024 research, including enhancements in multi-hop knowledge graph reasoning and context-aware chat interactions, the paper outlines a methodology involving data preparation, model selection, pretraining, fine-tuning, and evaluation.\nThe results demonstrate state-of-the-art performance on benchmarks like GLUE and SQuAD, with F1 scores exceeding 90%, though challenges such as high computational costs persist.\nThis work underscores the pivotal role of transformers in modern NLP and suggests future directions, including efficiency optimization and multimodal integration, to further advance language-based AI systems.",
+
+"title"
+:
+"Exploring Transformer-Based Architectures for Text Understanding"
+,
+
+"url"
+:
+"https://arxiv.org/abs/2503.20227"
+,
+
+"date"
+:
+"2025-03-26"
+,
+
+"last_updated"
+:
+"2026-02-21"
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"type"
+:
+"search_results"
+,
+
+"queries"
+: [
+
+"Attention Is All You Need transformer paper core contributions"
+,
+
+"why transformer architecture changed NLP"
+,
+
+"Vaswani et al 2017 attention is all you need key results"
+
+]
+
+},
+
+{
+
+"id"
+:
+"msg_b9dc751b-50fd-4941-ad3d-00bb2eb98f73"
+,
+
+"content"
+: [
+
+{
+
+"text": "The paper “Attention Is All You Need” introduced the **Transformer**, a sequence‑to‑sequence model built entirely from attention and feed‑forward layers, and showed it could beat recurrent and convolutional models on machine translation while training much faster and scaling better.[web:1][web:8] This architectural shift made self‑attention the default building block for modern NLP and enabled today’s large language models.[web:2][web:4][web:7]\n\n## Core technical ideas\n\n- The Transformer removes recurrence and convolutions, using stacked self‑attention and position‑wise feed‑forward layers in both encoder and decoder.[web:1][web:3] Positional encodings are added to token embeddings so the model can represent order despite having no recurrence.[web:1] \n- It introduces **multi‑head** attention: several parallel attention heads project queries/keys/values, attend in different subspaces, then concatenate and linearly mix their outputs.[web:1][web:2] This lets the model capture different types of relations (e.g., syntax and coreference) in parallel.[web:1] \n- The paper emphasizes three attention types within the architecture: encoder self‑attention, decoder masked self‑attention (preventing access to future tokens), and encoder‑decoder attention where the decoder attends over encoder outputs.[web:1][web:8]\n\n## Empirical results in the paper\n\n- On WMT 2014 English→German translation, the base Transformer reaches 28.4 BLEU, surpassing prior state of the art, including ensembles, by over 2 BLEU.[web:1][web:3] On WMT 2014 English→French, a single Transformer achieves 41.8 BLEU after 3.5 days of training on 8 GPUs, outperforming earlier, much more expensive systems.[web:1] \n- The authors also show the model generalizes beyond translation by achieving strong results on English constituency parsing, even with limited labeled data.[web:1][web:9] These results demonstrate that attention‑only architectures are not just viable but competitive across sequence tasks.[web:1]\n\n## Why it was faster and more scalable\n\n- Self‑attention lets the model process all tokens in a sequence in parallel, unlike RNNs/LSTMs that must step through tokens sequentially, which makes it far more compatible with GPU/TPU hardware.[web:1][web:7] This parallelism reduced training time “by up to an order of magnitude” relative to recurrent models on the same tasks.[web:8] \n- For typical sequence lengths, the attention‑based layers in the paper have lower or comparable per‑layer computational complexity than recurrent or convolutional alternatives and much shorter paths between distant tokens, which helps learn long‑range dependencies.[web:1][web:6] This combination of efficiency and representational power is what made large‑scale pretraining feasible.[web:7][web:10]\n\n## How it changed NLP\n\n- The Transformer architecture became the foundation for major pretrained models such as BERT (encoder‑only), GPT (decoder‑only), and many others, which now dominate benchmarks in translation, question answering, summarization, and general language modeling.[web:2][web:7][web:10] These models exploit the same self‑attention blocks introduced in the 2017 paper, often with minor variants.[web:2] \n- By showing that attention‑only, highly parallel architectures can outperform traditional sequence models, the paper shifted the field’s default design pattern from RNNs/CNNs to transformers and opened the path to scaling parameters and data to today’s very large language models.[web:2][web:4][web:7] Its influence now extends beyond NLP to vision, speech, and multimodal models that reuse the same core transformer building blocks.[web:2][web:4]",
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [],
+
+"logprobs"
+: []
+
+}
+
+],
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+:
+null
+,
+
+"usage"
+: {
+
+"input_tokens"
+:
+6620
+,
+
+"output_tokens"
+:
+863
+,
+
+"total_tokens"
+:
+7483
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+0.0038
+,
+
+"output_cost"
+:
+0.00863
+,
+
+"total_cost"
+:
+0.01788
+,
+
+"cache_creation_cost"
+:
+null
+,
+
+"cache_read_cost"
+:
+0.00045
+,
+
+"tool_calls_cost"
+:
+0.005
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+0
+,
+
+"cache_read_input_tokens"
+:
+3584
+,
+
+"cached_tokens"
+:
+3584
+
+},
+
+"tool_calls_details"
+: {
+
+"search_web"
+: {
+
+"invocation"
+:
+1
+
+}
+
+},
+
+"output_tokens_details"
+: {
+
+"reasoning_tokens"
+:
+0
+
+}
+
+},
+
+"background"
+:
+false
+,
+
+"completed_at"
+:
+1779391438
+,
+
+"frequency_penalty"
+:
+0
+,
+
+"incomplete_details"
+:
+null
+,
+
+"instructions": "## Abstract\n<role>\nYou are an AI assistant developed by Perplexity AI. Given a user's query, your goal is to generate an expert, useful, factually correct, and contextually relevant response by leveraging available tools and conversation history. First, you will receive the tools you can call iteratively to gather the necessary knowledge for your response. You need to use these tools rather than using internal knowledge. Second, you will receive guidelines to format your response for clear and effective presentation. Third, you will receive guidelines for citation practices to maintain factual accuracy and credibility.\n</role>\n\n## Instructions\n<tools_workflow>\nBegin each turn with tool calls to gather information. You must call at least one tool before answering, even if information exists in your knowledge base. Decompose complex user queries into discrete tool calls for accuracy and parallelization. After each tool call, assess if your output fully addresses the query and its subcomponents. Continue until the user query is resolved or until the <tool_call_limit> below is reached. End your turn with a comprehensive response. Never mention tool calls in your final response as it would badly impact user experience.\n\n<tool_call_limit> Make at most three tool calls before concluding.</tool_call_limit>\n</tools_workflow>\n\n## Citation Instructions\n<citation_instructions>\nYour response must include at least 1 citation. Add a citation to every sentence that includes information derived from tool outputs.\nTool results are provided using `id` in the format `type:index`. `type` is the data source or context. `index` is the unique identifier per citation.\n<common_source_types> are included below.\n\n<common_source_types>\n- `web`: Internet sources\n- `page`: Full web page content\n- `conversation_history`: past queries and answers from your interaction with the user\n</common_source_types>\n\n<formatting_citations>\nUse brackets to indicate citations like this: [type:index]. Commas, dashes, or alternate formats are not valid citation formats. If citing multiple sources, write each citation in a separate bracket like [web:1][web:2][web:3].\n\nCorrect: \"The Eiffel Tower is in Paris [web:3].\"\nIncorrect: \"The Eiffel Tower is in Paris [web-3].\"\n</formatting_citations>\n\nYour citations must be inline - not in a separate References or Citations section. Cite the source immediately after each sentence containing referenced information. If your response presents a markdown table with referenced information from `web`, `memory`, `attached_file`, or `calendar_event` tool result, cite appropriately within table cells directly after relevant data instead in of a new column. Do not cite `generated_image` or `generated_video` inside table cells.\n\n## Response Guidelines\n<response_guidelines>\nResponses are displayed on web interfaces where users should not need to scroll extensively. Limit responses to 5 sections maximum. Users can ask follow-up questions if they need additional detail. Prioritize the most relevant information for the initial query.\n\n### Answer Formatting\n- Begin with a direct 1-2 sentence answer to the core question.\n- Organize the rest of your answer into sections led with Markdown headers (using ##, ###) when appropriate to ensure clarity (e.g. entity definitions, biographies, and wikis).\n- Your answer should be at least 3 sentences long.\n- Each Markdown header should be concise (less than 6 words) and meaningful.\n- Markdown headers should be plain text, not numbered.\n- Between each Markdown header is a section consisting of 2-3 well-cited sentences.\n- When comparing entities with multiple dimensions, use a markdown table to show differences (instead of lists).\n- Whenever possible, present information as bullet point lists to improve readability.\n- You are allowed to bold at most one word (**example**) per paragraph. You can't bold consecutive words.\n- For grouping multiple related items, present the information with a mix of paragraphs and bullet point lists. Do not nest lists within other lists.\n\n### Tone\n<tone>\nExplain clearly using plain language. Use active voice and vary sentence structure to sound natural. Ensure smooth transitions between sentences. Avoid personal pronouns like \"I\". Keep explanations direct; use examples or metaphors only when they meaningfully clarify complex concepts that would otherwise be unclear.\n</tone>\n\n### Lists and Paragraphs\n<lists_and_paragraphs>\nUse lists for: multiple facts/recommendations, steps, features/benefits, comparisons, or biographical information.\n\nAvoid repeating content in both intro paragraphs and list items. Keep intros minimal. Either start directly with a header and list, or provide 1 sentence of context only.\n\nList formatting:\n- Use numbers when sequence matters; otherwise bullets (-) with a space after the dash.\n- Use numbers when sequence matters; otherwise bullets (-).\n- No whitespace before bullets (i.e. no indenting), one item per line.\n- Sentence capitalization; periods only for complete sentences.\n\nParagraphs:\n- Use for brief context (2-3 sentences max) or simple answers\n- Separate with blank lines\n- If exceeding 3 consecutive sentences, consider restructuring as a list\n</lists_and_paragraphs>\n\n### Summaries and Conclusions\n<summaries_and_conclusions>\nAvoid summaries and conclusions. They are not needed and are repetitive. Markdown tables are not for summaries. For comparisons, provide a table to compare, but avoid labeling it as 'Comparison/Key Table', provide a more meaningful title.\n</summaries_and_conclusions>\n\n## Prohibited Meta-Commentary\n<prohibited_commentary>\n- Never reference your information gathering process in your final answer.\n- Do not use phrases such as:\n- \"Based on my search results...\"\n- \"Now I have gathered comprehensive information...\"\n- \"According to my research...\"\n- \"My search revealed...\"\n- \"I found information about...\"\n- \"Let me provide a detailed answer...\"\n- \"Let me compile this information...\"\n- \"Short Answer: ...\"\n- Begin answers immediately with factual content that directly addresses the user's query.\n</prohibited_commentary>\n\n<copyright_requirements>\n- Never reproduce copyrighted content (text, lyrics, etc.)\n- You may share public domain content (expired copyrights, traditional works)\n- When copyright status is uncertain, treat as copyrighted\n- Keep summaries brief (under 30 words) and original — don't reconstruct sources\n- Brief factual statements (names, dates, facts) are always acceptable\n</copyright_requirements>\n\nCurrent date: Thursday, May 21, 2026\n\n",
+
+"max_output_tokens"
+:
+8192
+,
+
+"max_tool_calls"
+:
+null
+,
+
+"metadata"
+: {},
+
+"parallel_tool_calls"
+:
+true
+,
+
+"presence_penalty"
+:
+0
+,
+
+"previous_response_id"
+:
+null
+,
+
+"prompt_cache_key"
+:
+null
+,
+
+"reasoning"
+:
+null
+,
+
+"safety_identifier"
+:
+null
+,
+
+"service_tier"
+:
+"default"
+,
+
+"store"
+:
+true
+,
+
+"temperature"
+:
+1
+,
+
+"text"
+: {
+
+"format"
+: {
+
+"type"
+:
+"text"
+
+}
+
+},
+
+"tool_choice"
+:
+"auto"
+,
+
+"tools"
+: [
+
+{
+
+"type"
+:
+"web_search"
+
+},
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+"top_logprobs"
+:
+0
+,
+
+"top_p"
+:
+1
+,
+
+"truncation"
+:
+"disabled"
+,
+
+"user"
+:
+null
+
+}
+
+Response — SpaceX Starship architecture and orbital test milestones
+{
+
+"id"
+:
+"3dbbb4d2-8102-47e7-8457-402f9f83c4df"
+,
+
+"results"
+: [
+
+{
+
+"snippet"
+:
+""
+,
+
+"title"
+:
+"SpaceX Starship - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/SpaceX_Starship"
+,
+
+"date"
+:
+"2018-11-21"
+,
+
+"last_updated"
+:
+"2026-05-19"
+
+},
+
+{
+
+"snippet"
+:
+""
+,
+
+"title"
+:
+"Starship flight test 1 - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Starship_flight_test_1"
+,
+
+"date"
+:
+"2022-05-28"
+,
+
+"last_updated"
+:
+"2026-05-13"
+
+},
+
+{
+
+"snippet"
+:
+""
+,
+
+"title"
+:
+"SpaceX Starship (spacecraft) - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)"
+,
+
+"date"
+:
+"2023-04-29"
+,
+
+"last_updated"
+:
+"2026-04-05"
+
+},
+
+{
+
+"snippet": "On June 19, a Starship prototype exploded on the launch pad at SpaceX’s Starbase facility in Texas during preparations for what would be its tenth test flight.\nAfter three consecutive failed orbital attempts this year, the upcoming launch is shaping up to be a pivotal moment in Elon Musk’s vision to send humans to Mars and beyond.\nSince its first orbital test flight in April 2023, Starship has made notable progress but has also suffered high-profile setbacks, keeping the project under close scrutiny.\nTo date, Starship has completed nine orbital test flights, following a series of ground-based trials.\nCurrent tests are focused on demonstrating the rocket’s ability to recover its booster, reach target altitudes, deploy payloads and execute controlled landings.\nAll these goals are key to making the vehicle reusable.\n...\n### Every Starship prototype built and tested to date:\n**April 3, 2019:** The Starhopper prototype climbed one foot in a tethered test hop.\n**April 5, 2019:** Starhopper rose three feet in a tethered hop, using the full length of the tether.\n**July 25, 2019:** Starhopper jumped to 65 feet (20 meters) in an untethered test flight.\n**Aug. 27, 2019:** Starhopper flew even higher, reaching 500 feet (150 meters), slewing sideways before descending slowly to a nearby landing pad.\n**Nov. 20, 2019:** A larger prototype, Mk1, was built but blew its top off during a cryogenic proof test (also known as a pressure stress test), rendering it unusable for flight.\n**May 29, 2020:** After earlier prototypes SN1 and SN3 exploded during ground tests, SpaceX found success with SN4, which completed five static fire tests before exploding during the final one.\n**Aug. 5, 2020:** SN5 successfully performed a 500-foot (150-meter) flight and landed on a nearby pad.\n**Sept. 3, 2020:** SN6 completed another 500-foot test flight.\n**Dec. 9, 2020:** SN8, the first prototype with fins and a nose cone, was designed to reach higher altitudes.\nIt ascended to 7.8 miles (12.5 kilometers) but descended too fast and exploded upon landing.\n**Feb. 2, 2021:** SN9 flew to 6 miles (10 kilometers) but crashed on landing after one engine failed to ignite.\n**March 3, 2021:** SN10 nearly completed a 6-mile flight but crushed its landing legs, causing it to tip and explode minutes after touchdown.\n**March 30, 2021:** SN11 successfully reached 6 miles but exploded mid-air during descent.\n(SpaceX skipped SN12, SN13, and SN14.)\n**May 5, 2021:** SN15 successfully completed a high-altitude flight and landed intact.\n**Nov. 18, 2023:** The second orbital test flight reached 93 miles (150 kilometers) and became the first Starship to reach outer space, but it exploded before completing its mission.\n**March 14, 2024:** The third orbital test flight reached approximately 1,515 feet (462 meters) before destructing ahead of a planned splashdown.\n**June 6, 2024:** The fourth orbital flight achieved a full ascent burn and completed a landing burn, concluding with a gentle splashdown in the Gulf of Mexico.\n**Oct. 13, 2024:** The fifth orbital flight marked the first successful booster recovery, with the booster returning to the launch tower.\nThe flight completed its mission with no engine failures and ended in a planned splashdown in the Indian Ocean.\n**Nov. 19, 2024:** During the sixth orbital test, the booster latched onto the catch tower but had to divert for a splashdown in the Gulf of Mexico.\nThe ship ignited one of its six engines in space, successfully reentered the atmosphere, and splashed down in the Indian Ocean.\n**Jan. 16, 2025:** The seventh orbital test launched successfully with all six engines ignited, but a fire eight minutes in caused the rocket to explode.\n**March 6, 2025:** The ship lost several engines during ascent, leading to a loss of altitude control and communication.\nIt diverted into a controlled area to prevent debris from falling into public spaces.\n**May 27, 2025:** The ninth orbital test flight marked the first reuse of a Super Heavy booster.\nHowever, the booster exploded unexpectedly, and the ship lost an engine due to a fuel leak.\nAfter abandoning its payload deployment attempt, Starship exploded over the Indian Ocean when it failed to properly reposition for reentry.",
+
+"title"
+:
+"From Hops to Orbit: A Fiery History of SpaceX's Starship Program"
+,
+
+"url"
+:
+"https://observer.com/2025/07/spacex-starship-test-timeline/"
+,
+
+"date"
+:
+"2025-07-23"
+,
+
+"last_updated"
+:
+"2026-05-12"
+
+},
+
+{
+
+"snippet"
+:
+""
+,
+
+"title"
+:
+"SpaceX Starship design history - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/SpaceX_Starship_design_history"
+,
+
+"date"
+:
+"2023-11-14"
+,
+
+"last_updated"
+:
+"2026-04-29"
+
+},
+
+{
+
+"snippet": "SpaceX's Starship program, which boasts the world's tallest and most powerful rocket, will eventually put people and cargo on Mars.\nThe latest prototype, SN20, is waiting for the chance to go into orbit.\nSeveral other prototypes have made flights, ground tests and sometimes even testing mistakes in the effort to improve future flights.\nHere's an overview of key milestones on Starship's road to the Red Planet.\n...\nMusk rebranded his Mars-colonizing spaceflight system as Starship in 2018.\n\"Technically, two parts: Starship is the spaceship/upper stage & Super Heavy is the rocket booster needed to escape Earth's deep gravity well (not needed for other planets or moons),\" Musk said in a 2018 tweet.\n...\nAt first, Musk planned to make Starship out of carbon fiber, but in January 2019, he announced that the craft would be built from stainless steel instead, Space.com reported.\n...\nMusk chose to put six Raptor engines on the Starship vehicle instead of seven.\nHe also changed the number of Raptors on the Super Heavy, initially dropping the number from 35 to 31 and then increasing it again to include up to 37 Raptors.\n(Not all engines will be needed on each flight, but at least 24 Raptors are required to carry the huge craft into space, Musk has said.)\n...\nStarhopper was a low-altitude prototype of the Starship system that looked more like a flying tank than an aerodynamic rocket.\nSpaceX did two \"static fire\" tests of the system at its facility in Boca Chica, Texas, to evaluate the performance of the engine in 2019, and then followed that up with four short test flights that same year.\n...\nOn the first free flight, on July 25, 2019, the prototype soared to an expected altitude of 65 feet (20 m).\nIts last flight before retiring on Aug. 27, 2019, was expected to go as high as 500 feet (150 m), in line with a limit imposed by the U.S. Federal Aviation Administration (FAA).\n...\nStarship's program tested several ground prototypes before attempting flight.\nThe list of major prototypes in 2019 to 2020 included MK1 (destroyed during a tank pressure test), MK2 (abandoned for a newer design), MK3/SN1 (destroyed during a pressurization test), SN2 (pressure tested successfully), SN3 (destroyed during a test of its pressure tank) and SN4 (destroyed during a static fire test, following several successful tests).\nStarship's SN5 and SN6 prototypes conducted low-altitude test hops.\nSN5 reached an altitude of about 500 feet on Aug. 4, 2020, and moved sideways in the sky to reach its landing area.\nSN6 also made a 500-foot jaunt on Sept. 3, 2020.\n...\nSpaceX deliberately destroyed SN7 during a ground test to gather data for future flights.\nSN8, which took to the air on Dec. 23, 2020, performed complex aerial maneuvers and flips during the program's first high-altitude launch.\nIt flew to 7.8 miles (12.5 kilometers) but failed to stick the landing, according to a video shot from the landing pad that showed it exploding in a fireball on the ground due to lower-than-expected pressure in the fuel tank header.\n...\nIn a quick sequence in February and March 2021, the Starship program sent aloft three more prototypes on high-altitude flights: SN9, SN10 and SN11.\nThe vehicles flew for about 6 minutes each, but all three experienced technical problems during landing that resulted in fiery crashes or after-touchdown explosions.\n...\nSpaceX's Starship SN15 prototype stuck the landing on the 60th anniversary of the United States' first-ever crewed spaceflight, when astronaut Alan Shepard blasted into space aboard NASA's Mercury capsule.\nOn May 5, 2021, SN15 soared 6.2 miles (10 km) into the sky and made several maneuvers in midair.\nSix minutes after takeoff, the prototype made a safe touchdown on a concrete landing pad at Boca Chica.\nAs of August 2021, this was the latest flight for the Starship program.\n...\n\"SN15 has vehicle improvements across structures, avionics and software, and the engines that will allow more speed and efficiency throughout production and flight: specifically, a new enhanced avionics suite, updated propellant architecture in the aft skirt and a new Raptor engine design and configuration.\"\n...\nSpaceX's newest Starship prototype briefly stood atop a Super Heavy rocket booster for the first time on Aug. 6, 2021, marking the tallest-ever rocket ever built.\n\"Dream come true,\" Musk wrote on Twitter of the stacked Starship.\nThe stacking test at Boca Chica included mating the two vehicles for an hour, with the joined Starship system standing 395 feet (120 m).\nFor comparison, NASA's massive Saturn V moon rocket, used for the Apollo missions, was just 363 feet (110 m) tall.\nIndividually, the Super Heavy stands 230 feet (70 m) tall, and Starship SN20 added another 165 feet (50 m) of height.\nThe two vehicles are expected to undergo numerous technical tests in August to prepare them for an orbital attempt.\n## Orbital flight attempt\nRegulation remains the big uncertainty as Starship awaits its chance to make an orbital flight test.\nIf all goes according to plan, Space.com reported, the spaceship will make a round-the-world trip to splash down off the coast of Hawaii after 90 minutes, while the first stage of the Super Heavy rocket should return to Earth 6 minutes after launch in the Gulf of Mexico.\nHowever, the FAA has undertaken an environmental assessment of the Starship's mission, which delayed SpaceX's plans to attempt the flight in July 2021.\nEven after the assessment is finished, there could be more certifications to consider.\n\"Depending on the outcome of that [environmental] assessment, it [SpaceX] may also be required to go through a more detailed review culminating in an updated environmental impact statement.\nOnly after that process is complete can the Federal Aviation Administration move on to licensing a possible orbital Starship launch,\" CNN Business reported in June 2021.",
+
+"title"
+:
+"SpaceX Starship: Key milestones for the world's most powerful rocket"
+,
+
+"url"
+:
+"https://www.livescience.com/spacex-starship-key-milestones.html"
+,
+
+"date"
+:
+"2021-08-26"
+,
+
+"last_updated"
+:
+"2026-05-19"
+
+},
+
+{
+
+"snippet"
+:
+""
+,
+
+"title"
+:
+"SpaceX - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/SpaceX"
+,
+
+"date"
+:
+"2004-07-16"
+,
+
+"last_updated"
+:
+"2026-05-21"
+
+},
+
+{
+
+"snippet": "SpaceX launched the third integrated flight test of its Super Heavy booster and Starship upper stage from the company’s Starbase orbital launch pad at 8:25 a.m.\nCT on March 14.\nThis flight test is an important milestone toward providing NASA with a Starship HLS for its Artemis missions.\n...\nOn March 14, SpaceX launched the third integrated flight test of its Super Heavy booster and Starship upper stage, an important milestone toward providing NASA with a Starship HLS for its Artemis missions.\nA complement of 33 Raptor engines, fueled by super-cooled liquid methane and liquid oxygen, powered the Super Heavy booster with Starship stacked on top, from the company’s Starbase orbital launch pad at 8:25 a.m.\nCDT.\nStarship, using six Raptor engines, separated from the Super Heavy booster employing a hot-staging technique to fire the engines before separation at approximately three minutes into the flight, in accordance with the flight plan.\nThis was the third flight test of the integrated Super Heavy-Starship system.\n...\nThis test accomplished several important firsts that will contribute to the development of Starship for Artemis lunar landing missions.\nThe spacecraft reached its expected orbit and Starship completed the full-duration ascent burn.\nOne objective closely tied to future Artemis operations is the transfer of thousands of pounds of cryogenic propellant between internal tanks during the spacecraft’s coast phase as part of NASA’s Space Technology Missions Directorate 2020 Tipping Point awards.\nThe propellant transfer demonstration operations were completed, and the NASA-SpaceX team is currently reviewing the flight data that was received.\nThis Tipping Point technology demonstration is one of more than 20 development activities NASA is undertaking to solve the challenges of using cryogenic fluids during future missions.\nAs a key step toward understanding how super-cooled propellant sloshes within the tanks when the engines shut down, and how that movement affects Starship’s stability while in orbit, engineers will study flight test data to assess the performance of thrusters that control Starship’s orientation in space.",
+
+"title"
+:
+"NASA Artemis Mission Progresses with SpaceX Starship Test Flight"
+,
+
+"url"
+:
+"https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-artemis-mission-progresses-with-spacex-starship-test-flight/"
+,
+
+"date"
+:
+"2024-03-14"
+,
+
+"last_updated"
+:
+"2026-04-18"
+
+},
+
+{
+
+"snippet": "SpaceX is continuing to make progress on the development of Starship, the largest rocket ever built, with the third test flight Thursday accomplishing considerably more than the previous two tests.\nThe 400-foot-tall Starship rocket lifted off from SpaceX’s Starbase facility in southeastern Texas at 8:25 a.m. local time.\nAlthough SpaceX has been developing Starship for years, this is only the third time the company has attempted an orbital mission.\nAfter liftoff, Starship proceeded through a nominal — aerospace speak for normal — ascend.\nAll 33 Raptor engines on the Super Heavy booster performed as designed, and the two stages separated around 2 minutes 45 seconds into the mission.\nCritically, the launch vehicle nailed a novel stage separation technique called “hot staging,” where the upper stage (also called Starship) lights its engines to push away the Super Heavy booster.\nThe hot-staging technique was performed for the first time, ever, during the second Starship test flight last November.\nFrom there, the Starship upper stage continued its ascent to orbit.\nSpaceX CEO Elon Musk congratulated the team on X, saying, “Starship reached orbital velocity!”\n> Starship reached orbital velocity!\n> Congratulations @SpaceX team!!\n> — Elon Musk (@elonmusk) March 14, 2024\nThe booster executed what’s called a boostback burn to adjust its trajectory as it aimed to splash down in the Gulf of Mexico — Falcon 9’s booster performs the same maneuver to vertically land back on Earth — but its engines failed to relight for the landing burn phase.\nThe Super Heavy was subsequently lost.\nThe company nailed another new milestone after it opened Starship’s payload door for the first time.\nThis capability is crucial for SpaceX’s plans to rapidly deploy many hundreds of next-generation Starlink satellites.\nAnother demonstration, a propellant transfer demo, was also completed, though the company did not go into the results of this test.\nPropellant transfer is a crucial part of the company’s plans to return humans to the moon for NASA.\nAs part of SpaceX’s plans for that NASA mission, the company has settled on a mission architecture that could include more than a dozen Starship refueling trips.\nBeing able to refuel the vehicle is also necessary for a future Mars mission.\nStarship continued on its coasting phase, but after around a half hour the company said it wouldn’t attempt to relight the engines to proceed with the test.\n...\nInstead, they let gravity do its work, and the Earth’s powerful gravitational forces pulled Starship back through the lower atmosphere.\nUltimately, mission controllers failed to reestablish communications with Starship, leading SpaceX’s Dan Huot to announce that they had lost the ship: “No splashdown today, but again just it’s incredible to see how much further we got this time around,” he said.",
+
+"title"
+:
+"SpaceX makes significant progress with third Starship orbital ..."
+,
+
+"url"
+:
+"https://techcrunch.com/2024/03/14/spacex-makes-significant-progress-with-third-starship-orbital-test-flight/"
+,
+
+"date"
+:
+"2024-03-14"
+,
+
+"last_updated"
+:
+"2026-05-20"
+
+},
+
+{
+
+"snippet": "**genesis of Starship** can be traced back to the early 2010s when SpaceX was actively exploring concepts for a fully reusable launch system.\n...\nDuring this phase, SpaceX experimented with different materials and manufacturing techniques, ultimately settling on stainless steel for the Starship's construction.\n...\n**Starhopper**, a scaled-down prototype, marked a pivotal moment in Starship's development.\n...\nIn 2019, Starhopper conducted several successful tethered and untethered hops, reaching altitudes of up to 150 meters.\nThese tests validated the Raptor engine's performance and demonstrated the feasibility of vertical takeoff and landing (VTOL), a critical capability for full reusability.\n...\n**SN15** represented a significant turning point in the Starship program.\n...\nIn May 2021, SN15 successfully completed a high-altitude flight test, reaching an altitude of 10 kilometers and performing a controlled landing.\nThis marked the first time a Starship prototype had successfully completed a full flight profile, including ascent, descent, and landing, without any major issues.\n...\nFollowing SN15, SpaceX shifted its focus to orbital flight tests.\nThe company began constructing Starship prototypes designed for orbital missions, along with the Super Heavy booster, the massive first stage that will propel Starship into orbit.\nThese prototypes, such as\n*Ship 20 and Booster 4*, underwent extensive testing at SpaceX's Starbase facility in Boca Chica, Texas.\nTesting included static fires of the Super Heavy's numerous Raptor engines, as well as cryogenic proof tests to ensure the structural integrity of both Starship and Super Heavy.\nThe development and testing of orbital-class Starship prototypes represent a major step towards realizing the ultimate goal of a fully reusable space transportation system.\nThese efforts pave the way for future orbital flight tests, which will provide critical data on the performance of Starship and Super Heavy in the harsh environment of space.\n...\nThe\n**first orbital flight test** of Starship is a highly anticipated event that will mark a major milestone in the program's development.\nThis test involves launching a Starship prototype atop a Super Heavy booster, sending it into orbit, and then attempting a controlled reentry and splashdown in the Pacific Ocean.\nThe data gathered from this test will be invaluable for understanding the performance of Starship in a real-world orbital environment and for identifying any areas that require further improvement.\nDespite several delays, SpaceX is working closely with regulatory authorities to obtain the necessary approvals for the orbital flight test.\nThe company has made significant progress in addressing environmental concerns and implementing safety measures to minimize risks.\nOnce the necessary approvals are in place, SpaceX plans to conduct the orbital flight test as soon as possible.\nThis test will be a crucial step towards validating the Starship design and demonstrating its capabilities for future missions.\n...\nFrom early concepts and prototypes to successful high-altitude flights and upcoming orbital tests, the Starship program has made remarkable progress in a relatively short period.",
+
+"title"
+:
+"SpaceX Starship Timeline: Key Milestones & Future"
+,
+
+"url"
+:
+"https://marcoauggiero.com/blog/spacex-starship-timeline-key-milestones-1761214439931"
+,
+
+"date"
+:
+"2025-10-23"
+,
+
+"last_updated"
+:
+"2025-10-30"
+
+}
+
+],
+
+"server_time"
+:
+null
+
+}
+
+Response — What is the underlying physics of magnetic confinement fusion, and what did the 2022 NI...
+{
+
+"id"
+:
+"75fcc616-6a7e-4382-984e-4a61e64724b7"
+,
+
+"choices"
+: [
+
+{
+
+"delta"
+: {
+
+"content"
+:
+""
+,
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"index"
+:
+0
+,
+
+"message"
+: {
+
+"content": "Magnetic confinement fusion (MCF) and the National Ignition Facility (NIF) result are about the same basic goal—getting light nuclei to fuse and release energy—but they rely on very different underlying physics and engineering strategies.\n\nI’ll split the answer into two parts:\n\n1. The underlying physics of magnetic confinement fusion \n2. What the 2022 NIF ignition result actually demonstrated\n\n---\n\n## 1. Underlying physics of magnetic confinement fusion\n\n### 1.1. Basic fusion requirements\n\nFusion is easiest (on Earth) with deuterium–tritium (D–T):\n\n- Reaction: \n D + T → He⁴ (alpha, 3.5 MeV) + n (14.1 MeV) \n- You need the fuel to:\n - Be hot enough (high temperature, ~10–20 keV ≈ 100–200 million °C)\n - Be dense enough\n - Stay confined long enough\n\nThese conditions are summarized by the **Lawson criterion** (or “triple product”):\n\n\\[\nn T \\tau_E \\gtrsim \\text{constant}\n\\]\n\nwhere \n- \\( n \\) = plasma density \n- \\( T \\) = temperature (in keV) \n- \\( \\tau_E \\) = energy confinement time \n\nFor D–T, a typical ignition condition is roughly:\n\n\\[\nn T \\tau_E \\sim 3 \\times 10^{21} \\,\\text{keV·s·m}^{-3}\n\\]\n\nMagnetic confinement aims for:\n\n- **Very high T**\n- **Moderate n** (much less than solid density)\n- **Long τ_E** (seconds to minutes in reactors)\n\nInertial confinement (like NIF) does the opposite:\n\n- **Extremely high n** (near solid or higher)\n- **Very short τ_E** (~nanoseconds)\n\nSame physics, very different regime.\n\n---\n\n### 1.2. Why magnets are needed\n\nAt fusion temperatures, the fuel is a **plasma**: an ionized gas of electrons and ions.\n\n- No solid material can touch a 100+ million °C plasma; it would vaporize instantly.\n- Plasmas are electrically conductive, so charged particles in them respond strongly to electromagnetic fields.\n\nMagnetic confinement uses **magnetic fields to keep the plasma away from the walls** and to control its shape and stability.\n\nKey physical ingredients:\n\n1. **Motion of charged particles in a magnetic field**\n\n A particle with charge \\( q \\) and velocity \\( \\mathbf{v} \\) in a magnetic field \\( \\mathbf{B} \\) experiences the Lorentz force:\n\n \\[\n \\mathbf{F} = q \\,\\mathbf{v} \\times \\mathbf{B}\n \\]\n\n - Component of velocity **parallel** to \\( \\mathbf{B} \\): free streaming along the field.\n - Component **perpendicular** to \\( \\mathbf{B} \\): circular motion (gyration) around the field line with:\n - Larmor radius \\( r_L \\propto \\frac{mv_\\perp}{|q| B} \\)\n - Gyrofrequency \\( \\Omega \\propto \\frac{|q| B}{m} \\)\n\n Result: particles spiral along magnetic field lines; they are strongly constrained **across** field lines but can move **along** them.\n\n2. **Using geometry to make closed paths**\n\n If field lines were straight, particles would stream out the ends. So MCF devices make **closed field geometries**, predominantly:\n\n - **Tokamak**: a torus (doughnut) with strong toroidal field and a poloidal field created by a plasma current, leading to **helical field lines**.\n - **Stellarator**: fully 3D external coils create twisted helical fields without needing a large plasma current.\n\n The goal is to create nested **magnetic surfaces**—closed shells of field lines. In an ideal case, particles remain on the same flux surface and do a random walk mainly along it, not across it.\n\n3. **Plasma as a conducting fluid (MHD)**\n\n On large scales, a hot plasma can be modeled by **magnetohydrodynamics (MHD)**:\n\n - It behaves like a conducting fluid embedded in a magnetic field.\n - The field and plasma are “frozen together” (for high conductivity), meaning field lines move with the plasma.\n - Pressure balance: \n \\[\n \\nabla p \\sim \\mathbf{j} \\times \\mathbf{B}\n \\]\n - Important dimensionless parameter: **plasma beta** \n \\[\n \\beta = \\frac{p_{\\text{plasma}}}{B^2 / (2\\mu_0)}\n \\]\n which measures the ratio of plasma pressure to magnetic pressure. Typical tokamaks operate at a few percent to maybe ~10% beta; higher β makes reactors smaller and cheaper but harder to stabilize.\n\n4. **Stability and turbulence**\n\n Confinement is not perfect:\n\n - **MHD instabilities**, like:\n - Kink modes\n - Ballooning modes\n - Sawteeth\n - Edge localized modes (ELMs)\n - **Microinstabilities** (ion temperature gradient, trapped‑electron modes, etc.) drive **turbulence**, greatly increasing radial transport of heat and particles.\n\n Turbulent transport sets the **effective confinement time**; controlling it is central to MCF physics.\n\n5. **Collisions, transport, and neoclassical effects**\n\n Even without turbulence, collisions and drifts cause **neoclassical transport**:\n\n - Particle guiding centers drift due to gradients and curvature in B:\n - \\( \\nabla B \\) drift\n - Curvature drift\n - Collisions make these drifts non-closed, causing slow radial diffusion.\n - In tokamaks, this gives rise to **bootstrap current**: a self-generated toroidal current due to pressure gradients and trapped particles, which can help sustain the plasma current without external drive.\n\n---\n\n### 1.3. Heating and self-sustainment\n\nTo reach and maintain fusion temperatures, the plasma is heated by:\n\n- **Ohmic heating**: due to the plasma current (like a resistive wire); effective only up to ~10–20 million °C.\n- **Auxiliary heating**:\n - Neutral beam injection (NBI)\n - Radio-frequency (RF) waves (e.g., ion cyclotron, electron cyclotron, lower hybrid)\n\nOnce the plasma is hot enough for D–T fusion, alpha particles (3.5 MeV helium nuclei):\n\n- Are born in the plasma and are **charged**, so they can be magnetically confined.\n- Transfer their energy to the plasma via collisions, providing **self‑heating**.\n\nThe goal for a reactor is **burning plasma**:\n\n- The alpha heating is comparable to or greater than external heating.\n- At full reactor conditions, you want **ignition**: alpha heating alone sustains the required temperature (in practice, a bit of external heating is often still expected).\n\nThe surrounding blanket captures the 14.1 MeV neutrons, converting their energy to heat and breeding tritium from lithium.\n\n---\n\n### 1.4. Key distinction: confinement vs ignition\n\nMagnetic confinement fusion experiments (e.g., JET, DIII‑D, EAST, KSTAR, and ITER in future):\n\n- Primarily aim to demonstrate good **confinement and stability** at high temperature and power levels.\n- Effective **fusion gain (Q)** is measured as:\n \\[\n Q_{\\text{plasma}} = \\frac{P_{\\text{fusion}}}{P_{\\text{external heating to plasma}}}\n \\]\n- ITER’s mission: show \\( Q_{\\text{plasma}} \\approx 10 \\) for long pulses, but total plant Q (including magnets, cryogenics, etc.) will be <1. It’s a physics experiment, not a power plant.\n\n---\n\n## 2. What the 2022 NIF ignition result demonstrated\n\nThe National Ignition Facility (NIF) uses **inertial confinement fusion** (ICF), not magnetic confinement. However, the 2022 NIF milestone is often discussed alongside MCF because it achieved “ignition” in an important, specific sense.\n\n### 2.1. The NIF approach in brief\n\nNIF compresses a tiny D–T fuel capsule using **192 high‑power lasers**:\n\n- Lasers deposit energy into a hohlraum (a cavity), producing x‑rays.\n- X‑rays symmetrically ablate the capsule surface, causing the remaining shell to implode.\n- The implosion compresses and heats the fuel to:\n - Very high density (100–1000× the solid density)\n - High temperature (~few keV)\n- The inertia of the compressed fuel confines it for a **very short time** (tens of picoseconds to nanoseconds)—hence “inertial” confinement.\n\n---\n\n### 2.2. The 2022 “ignition” result\n\nOn **5 December 2022**, NIF reported a shot where:\n\n- **Laser energy on target**: ~2.05 MJ \n- **Fusion energy output**: ~3.15 MJ\n\nThis demonstrated:\n\n1. **Fuel gain > 1** (also called “scientific ignition” in the inertial confinement community):\n\n - The fusion energy produced **exceeded the energy delivered by the lasers to the target**.\n\n2. **Alpha heating regime:**\n\n - A significant fraction of the heating of the hotspot came from fusion‑born alpha particles, not just from the lasers.\n - The burning plasma produced more fusion reactions because the alpha particles further heated the fuel (a **bootstrapping** effect).\n\n3. **Satisfaction of the ICF Lawson‑type ignition condition:**\n\n - For a brief moment, the core met the density–temperature–confinement requirements such that **fusion self-heating dominated over external heating in the hotspot**.\n\nWhat it did **not** demonstrate:\n\n- **Plant‑level energy gain**: The lasers themselves are only a few percent efficient electrically. Roughly:\n - ~300–400 MJ of electrical input to the laser system\n - 2 MJ of ultraviolet laser delivered to the target\n - 3.15 MJ of fusion output\n - So, overall system gain (fusion energy / electrical energy in) was still far < 1.\n\n- **Continuous or high‑repetition operation**: NIF is a single‑shot research device, not designed for power‑plant repetition rates (which would require tens of shots per second, each with high efficiency and a robust target delivery system).\n\nSo, the 2022 result is a **major physics milestone** (demonstrating a burning, self‑heating DT plasma in the ICF regime) but **not** a demonstration of practical fusion energy.\n\n---\n\n### 2.3. How this relates to magnetic confinement fusion\n\nEven though NIF and MCF are different approaches, the 2022 result is relevant to MCF in the following conceptual ways:\n\n- **Validation of fusion physics:** It confirms that, under the right conditions, **alpha self‑heating can dominate**, which is exactly what MCF devices like ITER and future DEMO reactors seek to achieve in a magnetically confined plasma.\n- **Lawson criterion in another regime:** NIF reached ignition in the high‑density, short‑time, inertial regime; MCF aims for ignition in the low‑density, long‑time, magnetic regime. Both rely on the same fundamental nuclear physics and plasma self‑heating.\n- **Motivational impact:** The NIF result has strengthened confidence that fusion ignition is achievable in practice and has accelerated investment across fusion approaches, including magnetic confinement.\n\n---\n\n### Summary\n\n- **Magnetic confinement fusion** uses strong magnetic fields to trap a hot, low‑density plasma in a toroidal (or otherwise closed) configuration. Charged particles spiral around magnetic field lines; by engineering those lines into closed, twisted surfaces (tokamaks, stellarators), we keep the plasma away from walls and try to minimize losses from turbulence and instabilities. The goal is a burning D–T plasma where alpha particles provide most of the heating.\n\n- The **2022 NIF ignition experiment** (in inertial confinement, not magnetic confinement) showed that a small, highly compressed D–T target can produce **more fusion energy than the laser energy delivered to it**, with substantial **self‑heating from fusion‑born alphas**—a burning plasma in the ICF regime. It’s a landmark **physics** achievement, though still far from a practical fusion power plant.",
+
+"role"
+:
+"assistant"
+,
+
+"reasoning_steps"
+:
+null
+,
+
+"tool_call_id"
+:
+null
+,
+
+"tool_calls"
+:
+null
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"created"
+:
+1779391563
+,
+
+"model"
+:
+"sonar-pro"
+,
+
+"citations"
+: [
+
+"https://www.york.ac.uk/physics-engineering-technology/ypi/research/mcf/"
+,
+
+"https://fusenet.eu/taxonomy/magnetic-confinement-fusion"
+,
+
+"https://blogs.otago.ac.nz/physicsnews/an-introduction-to-the-physics-of-magnetic-confinement-fusion/"
+,
+
+"https://www.youtube.com/watch?v=Q4EIhkimaTE"
+,
+
+"http://www.iaea.org/bulletin/magnetic-fusion-confinement-with-tokamaks-and-stellarators"
+,
+
+"http://ui.adsabs.harvard.edu/abs/2016NatPh..12..398O/abstract"
+,
+
+"https://www.nationalacademies.org/read/25802/chapter/8"
+,
+
+"https://en.wikipedia.org/wiki/Magnetic_confinement_fusion"
+
+],
+
+"object"
+:
+"chat.completion"
+,
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"Magnetic Confinement Fusion - University of York"
+,
+
+"url"
+:
+"https://www.york.ac.uk/physics-engineering-technology/ypi/research/mcf/"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-04-21"
+,
+
+"snippet"
+:
+"In magnetic confinement fusion (MCF), the fuel (deuterium and tritium) is heated to a temperature which is ten times hotter than the centre of the Sun."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Magnetic Confinement Fusion | FuseNet"
+,
+
+"url"
+:
+"https://fusenet.eu/taxonomy/magnetic-confinement-fusion"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2025-12-03"
+,
+
+"snippet"
+:
+"This book describes the advanced stability theories for magnetically confined fusion plasmas, especially in tokamaks. As the fusion plasma sciences advance, the ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"An introduction to the physics of magnetic confinement fusion"
+,
+
+"url"
+:
+"https://blogs.otago.ac.nz/physicsnews/an-introduction-to-the-physics-of-magnetic-confinement-fusion/"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2024-09-12"
+,
+
+"snippet"
+:
+"Magnetic-confinement fusion proposes to use large external electromagnetic coils to generate a series of nested magnetic field “surfaces” that wrap around the ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Fusion Tutorial 2: Magnetism and magnetic confinement - YouTube"
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=Q4EIhkimaTE"
+,
+
+"date"
+:
+"2020-08-04"
+,
+
+"last_updated"
+:
+"2025-07-24"
+,
+
+"snippet"
+:
+"This is the second UKAEA Fusion Tutorial in a series of six, covering the very basics of fusion and fusion energy research."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Magnetic Fusion Confinement with Tokamaks and Stellarators"
+,
+
+"url"
+:
+"http://www.iaea.org/bulletin/magnetic-fusion-confinement-with-tokamaks-and-stellarators"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+null
+,
+
+"snippet"
+:
+"Strong magnets in the reactors keep the ions confined. Electrons are also bound by the reactors' forces and play a role in the surroundings. The magnetic forces ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Magnetic-confinement fusion - NASA ADS"
+,
+
+"url"
+:
+"http://ui.adsabs.harvard.edu/abs/2016NatPh..12..398O/abstract"
+,
+
+"date"
+:
+"1999-01-01"
+,
+
+"last_updated"
+:
+"2025-03-17"
+,
+
+"snippet"
+:
+"Here we review the basic physics underlying magnetic fusion: past achievements, present efforts and the prospects for future production of electrical energy."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"6 Magnetic Confinement Fusion Energy: Bringing Stars to Earth"
+,
+
+"url"
+:
+"https://www.nationalacademies.org/read/25802/chapter/8"
+,
+
+"date"
+:
+"2021-04-05"
+,
+
+"last_updated"
+:
+"2026-05-13"
+,
+
+"snippet"
+:
+"In a magnetically confined fusion plasma, the goal is to magnetically trap the energetic alpha particles produced by fusion reactions. These alpha particles ..."
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"title"
+:
+"Magnetic confinement fusion - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Magnetic_confinement_fusion"
+,
+
+"date"
+:
+"2005-04-04"
+,
+
+"last_updated"
+:
+"2026-03-03"
+,
+
+"snippet"
+:
+"Magnetic confinement fusion (MCF) is an approach to generate thermonuclear fusion power that uses magnetic fields to confine fusion fuel in the form of a ..."
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"status"
+:
+null
+,
+
+"type"
+:
+null
+,
+
+"usage"
+: {
+
+"completion_tokens"
+:
+2681
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+7e-05
+,
+
+"output_tokens_cost"
+:
+0.04022
+,
+
+"total_cost"
+:
+0.04629
+,
+
+"citation_tokens_cost"
+:
+null
+,
+
+"reasoning_tokens_cost"
+:
+null
+,
+
+"request_cost"
+:
+0.006
+,
+
+"search_queries_cost"
+:
+null
+
+},
+
+"prompt_tokens"
+:
+24
+,
+
+"total_tokens"
+:
+2705
+,
+
+"citation_tokens"
+:
+null
+,
+
+"num_search_queries"
+:
+null
+,
+
+"reasoning_tokens"
+:
+null
+,
+
+"search_context_size"
+:
+"low"
+
+}
+
+}
+
+​
+Streaming Responses
+
+Enable streaming for real-time output with either API:
+
+Agent API
+
+Sonar API
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Make the streaming API call
+
+stream
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"Explain the three leading approaches to building a quantum computer: superconducting qubits, trapped-ion qubits, and photonic qubits."
+,
+
+stream
+=
+True
+
+)
+
+# Process the streaming response
+
+for
+chunk
+in
+stream:
+
+if
+chunk.type
+==
+"response.output_text.delta"
+:
+
+print
+(chunk.delta,
+end
+=
+""
+,
+flush
+=
+True
+)
+
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Make the streaming API call
+
+stream
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[
+
+{
+"role"
+:
+"user"
+,
+"content"
+:
+"Explain the three leading approaches to building a quantum computer: superconducting qubits, trapped-ion qubits, and photonic qubits."
+}
+
+],
+
+stream
+=
+True
+
+)
+
+# Process the streaming response
+
+for
+chunk
+in
+stream:
+
+if
+chunk.choices[
+0
+].delta.content:
+
+print
+(chunk.choices[
+0
+].delta.content,
+end
+=
+""
+)
+
+Response
+{
+
+"id"
+:
+"resp_a8dc1444-8a50-40c1-a918-f3d8de35c2f7"
+,
+
+"created_at"
+:
+1779391840
+,
+
+"model"
+:
+"openai/gpt-5.1"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"results"
+: [
+
+{
+
+"id"
+:
+1
+,
+
+"snippet": "Superconducting qubits are one of the most widely used\nphysical realizations of quantum computing due to their scalability [6] and the\nsuccess researchers have had in creating a universal set of quantum logic gates\nfor superconducting qubits [1].\nBoth Google and IBM have built functioning su-\nperconducting quantum computers with 72 and 53 qubits respectively, demon-\nstrating the feasibility of constructing a superconducting quantum computer.\nFinally, superconducting qubits are based on circuit systems that can be reli-\nably constructed in a modular fashion [2] making them an excellent foundation\non which to build quantum computers.\n...\nSuperconducting qubits are constructed out of what amount to classical\ncircuit elements that are supercooled and made small enough that the law of\nQuantum Mechanics apply.\nThis means that we will have to develop a means\nof constructing quantum Hamiltonians for systems which are usually treated\nand understood classically.\n...\nThis is incredibly\n...\nA Cooper pair is a system constructed out of a metallic superconducting is-\nland connected by a thin insulating barrier, called a Josephson Junction, to a\nsuperconducting electron reservoir (or in some cases a second superconducting\nisland).\nA Cooper pair box can be used to build a type of superconducting\nqubit known as a charge qubit where the state of the qubit is determined by\nthe number of Cooper pairs that have tunneled across the Josephson Junction\nto the superconducting island.\n...\nDespite the fact that tremendous advances have been made in the construction\nand manipulation of superconducting qubits, there is still great potential for\nimprovement.\nFor example, superconducting qubits, have fairly low coherence\n...\nThis is\ncan be remedied by using fluxonium qubits which couple the superconducting\nisland to the reservoir through an inductor rather than a capacitor and can\ncombine the benefits of the traditional Cooper-pair box and Transmon qubits\nwhile avoiding their drawbacks [3].\nHowever, fluxonium qubits have not been\nsuccessfully incorporated into large-scale circuits and their operation is far more\ndifficult, requiring further research [3].",
+
+"title"
+:
+"[PDF] A Brief Introduction to Superconducting Charge Qubits - Chicago U"
+,
+
+"url"
+:
+"https://homes.psd.uchicago.edu/~sethi/Teaching/P243-W2021/Final%20Papers/MFarrington_Advanced_Quantum_Mechanics_Final_Project%20(1).pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-03-29"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+2
+,
+
+"snippet": "These atoms are the heart of our quantum processing units.\nWe trap them in 3D space, and then use lasers to do everything from initial preparation to final readout.\n...\nMost quantum computers rely on superconducting circuits or exotic materials.\nIonQ takes a simpler, more powerful approach: we use single atoms—identical, stable, and natural—as the building blocks of computation.\n...\nOnce we've turned our atom into an ion, we use a specialized chip called a *linear ion trap* to hold it precisely in 3D space.\n...\nWe can (and do!) load any number of ions into a *linear chain*.\nThis on-demand reconfigurability allows us to theoretically create anything from a one-qubit system to a 100+ qubit system without having to fabricate a new chip or change the underlying hardware.\n...\nBefore we can use our ions to perform quantum computations, we have to prepare them for the task.\nThis has two major steps: *cooling*, which reduces computational noise and makes our ions better qubits, followed by *state preparation*, which initializes each ion into a well-defined “zero” state, ready to perform algorithms.\n...\nWe compute using a series of operations called *gates* to manipulate the qubits’ state, first encoding and then operating on the information we want to calculate.\n...\nUsing Doppler Cooling, we can create qubits that are half of one one-thousandth of a degree above absolute zero, without needing to refrigerate any of the supporting hardware.\nThis is extremely cold, but for optimal performance, we need to go colder, as close to absolute zero as we can.\nTo accomplish this, we use a collection of laser-based techniques called *resolved-sideband cooling* to produce qubits so cold that they are almost perfectly still at an atomic level.",
+
+"title"
+:
+"Our Trapped Ion Technology - IonQ"
+,
+
+"url"
+:
+"https://www.ionq.com/technology"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-20"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+3
+,
+
+"snippet"
+:
+"The theory of quantum computations is agnostic to the physical system—a quantum bit (qubit) is represented by the same vector regardless of the physical system that implements the quantum computation.
+\n
+The physical system can be based on matter, e.g. trapped ions and superconducting qubits, or based on photons, referred to as photonic quantum computation."
+,
+
+"title"
+:
+"Photonic Quantum Computing - arXiv"
+,
+
+"url"
+:
+"https://arxiv.org/html/2404.03367v1"
+,
+
+"date"
+:
+"2024-04-04"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+4
+,
+
+"snippet": "**Superconducting qubits** are among the most promising approaches to building quantum computers.\nIt is no surprise that this technology is being used by well-known tech companies in their quest to pioneer the quantum era.\nGoogle’s Sycamore claimed quantum advantage back in 2019 and, in 2021, IBM built its Eagle quantum computer with 127 qubits ! The central insight that allows for these quantum computers is that superconductivity is a quantum phenomenon, so we can use superconducting circuits as quantum systems that we can control at will.\nWe can actually bring the quantum world to a larger scale and manipulate it more freely!\n...\n1. **Well-characterized and scalable qubits**.\nMany of the quantum systems that we find in nature are not qubits, so we must find a way to make them behave as such.\nMoreover, we need to put many of these systems together.\n2. **Qubit initialization**.\nWe must be able to prepare the same state repeatedly within an acceptable margin of error.\n3. **Long coherence times**.\nQubits will lose their quantum properties after interacting with their environment for a while.\nWe would like them to last long enough so that we can perform quantum operations.\n4. **Universal set of gates**.\nWe need to perform arbitrary operations on the qubits.\nTo do this, we require both single-qubit gates and two-qubit gates.\n...\nIf we build a somewhat **small electric circuit using superconducting wires** and bring it to temperatures of about 10 mK, it becomes a quantum system with discrete energy levels.\n...\nThe regime that has been proven ideal is known as the **transmon regime**, and artificial atoms in this regime are called **transmons**.\nThey have proven to be highly effective as qubits, and they are used in many applications nowadays.\nWe can thus work with the first two energy levels of the transmon, which we will also denote \\(\\left\\lvert g \\right\\rangle\\) and \\(\\left\\lvert e \\right\\rangle,\\) the ground and excited states respectively.\n...\nthe second criterion is satisfied effortlessly.\n...\nThe typical times in which a single-qubit gate is executed are in the order of the nanoseconds, making superconducting\nquantum computers the fastest ones out there.\n...\nSuperconducting quantum computing has gained momentum in the last decade as a leading competitor\nin the race for building a functional quantum computer.\nIt is based on artificial versions of atomic systems\ndone using superconducting circuits, which allows for versatility and control.\nThey have been easy to scale so far, but increasing the qubit coherence time and the speed of quantum\noperations and measurements is essential to scaling this technology further.",
+
+"title"
+:
+"Quantum computing with superconducting qubits | PennyLane Demos"
+,
+
+"url"
+:
+"https://www.pennylane.ai/qml/demos/tutorial_sc_qubits"
+,
+
+"date"
+:
+"2022-03-21"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+5
+,
+
+"snippet"
+:
+"To create a functional quantum computer, we need to produce and control a
+\n
+large number of qubits.
+\n
+This feat has proven difficult, although significant
+\n
+progress has been made using trapped ions, superconducting circuits,
+\n
+and many other technologies."
+,
+
+"title"
+:
+"Photonic quantum computers | PennyLane Demos"
+,
+
+"url"
+:
+"https://pennylane.ai/qml/demos/tutorial_photonics"
+,
+
+"date"
+:
+"2022-05-30"
+,
+
+"last_updated"
+:
+"2026-05-05"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+6
+,
+
+"snippet": "The aim of this review is to provide quantum engineers with an introductory guide to the central concepts and challenges in the rapidly accelerating field of superconducting quantum circuits.\nOver the past twenty years, the field has matured from a predominantly basic research endeavor to a one that increasingly explores the engineering of larger-scale superconducting quantum systems.\nHere, we review several foundational elements—qubit design, noise properties, qubit control, and readout techniques—developed during this period, bridging fundamental concepts in circuit quantum electrodynamics and contemporary, state-of-the-art applications in gate-model quantum computation.\n...\nOne prominent platform for constructing a multiqubit quantum processor involves superconducting qubits, in which information is stored in quantum degrees of freedom (DOFs) of nanofabricated, anharmonic oscillators (AHOs) constructed from superconducting circuit elements.\nIn contrast to other platforms, e.g., electron spins in silicon\n9–14 and quantum dots, 15–18 trapped ions, 19–23 ultracold atoms, 24–27 nitrogen-vacancies in diamonds, 28,29 and polarized photons, 30–33 where the quantum information is encoded in natural microscopic quantum systems, superconducting qubits are macroscopic in size and lithographically defined.\nOne remarkable feature of superconducting qubits is that their energy-level spectra are governed by circuit element parameters and thus are configurable; they can be designed to exhibit “atomlike” energy spectra with the desired properties.\nTherefore, superconducting qubits are also often referred to as “artificial atoms,” offering a rich parameter space of possible qubit properties and operation regimes, with predictable performance in terms of transition frequencies, anharmonicity, and complexity.",
+
+"title"
+:
+"A quantum engineer's guide to superconducting qubits"
+,
+
+"url"
+:
+"https://pubs.aip.org/aip/apr/article/6/2/021318/570326/A-quantum-engineer-s-guide-to-superconducting"
+,
+
+"date"
+:
+"2019-06-17"
+,
+
+"last_updated"
+:
+"2025-06-08"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+7
+,
+
+"snippet"
+:
+"Photonic offers a unique quantum modality (spin-photon qubits) as the foundation for scalable, distributed, fault tolerant QC systems.
+\n
+Photonic’s core technology offers a plausible shortcut to large-scale fault-tolerant quantum computing."
+,
+
+"title"
+:
+"Photonic Inc.: Distributed Quantum Computing at Scale"
+,
+
+"url"
+:
+"https://photonic.com"
+,
+
+"date"
+:
+"2025-11-04"
+,
+
+"last_updated"
+:
+"2026-05-20"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+8
+,
+
+"snippet"
+:
+"Superconducting qubits are solid state electrical circuits fabricated using techniques adapted from those of conventional integrated microprocessors.
+\n
+They are based on the Josephson tunnel junction, which is so far the only non-dissipative, strongly nonlinear circuit element compatible with low temperature operation.
+\n
+In contrast to microscopic entities such as spins, atoms, or ions, superconducting qubits can be held firmly in one location in space and coupled strongly to their neighbors, an appealing feature for 2-qubit gate array implementation.
+\n
+Recently, the coherence factor of bare superconducting artificial atoms has reached that of the hydrogen atom for its 1S-2P transition (~ 20 million).
+\n
+This opinionated review will compare the prospects of the transmon and fluxonium artificial atoms for large scale quantum information processing."
+,
+
+"title"
+:
+"Keynote: Superconducting qubits for quantum computation - YouTube"
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=qsizrKrUZDg"
+,
+
+"date"
+:
+"2022-09-07"
+,
+
+"last_updated"
+:
+"2026-03-31"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+9
+,
+
+"snippet"
+:
+"In optical systems for quantum information processing, the unit of light in a given mode—or photon—is used to represent a qubit."
+,
+
+"title"
+:
+"Linear optical quantum computing - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Linear_optical_quantum_computing"
+,
+
+"date"
+:
+"2013-12-09"
+,
+
+"last_updated"
+:
+"2026-04-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+10
+,
+
+"snippet"
+:
+"Superconducting circuits are one of the most promising platforms for scalable quantum technology.
+\n
+In the last couple of decades, it has undergone significant development and is currently being explored by several large tech companies as the future of quantum computing.
+\n
+The analysis of superconducting circuits usually revolves around making efficient two-level quantum systems, also known as qubits, from circuits consisting of capacitors, linear inductors, and a nonlinear inductor also known as a Josephson junction.
+\n
+Superconducting qubits were sparked by the invention of the Josephson junction in the sixties, but a breakthrough came with the transmon qubit in 2007, which increased the lifetime of the qubits.
+\n
+Despite all this, no introductory text on the subject exists."
+,
+
+"title"
+:
+"Superconducting Circuit Companion---an Introduction with Worked ..."
+,
+
+"url"
+:
+"https://link.aps.org/doi/10.1103/PRXQuantum.2.040204"
+,
+
+"date"
+:
+"2021-12-14"
+,
+
+"last_updated"
+:
+"2025-11-11"
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"type"
+:
+"search_results"
+,
+
+"queries"
+: [
+
+"superconducting qubits overview"
+,
+
+"trapped ion quantum computing overview"
+,
+
+"photonic qubits quantum computing overview"
+
+]
+
+},
+
+{
+
+"id"
+:
+"msg_78f55417-7dad-435b-a49b-98933d85c9ee"
+,
+
+"content"
+: [
+
+{
+
+"text": "Superconducting qubits, trapped ions, and photonic qubits all implement the same abstract idea of a qubit but use very different physical systems, which leads to distinct strengths and weaknesses in speed, coherence, scalability, and engineering complexity.[web:3][web:4][web:5] Together they define the three main hardware “families” that leading labs and companies are pursuing for large‑scale quantum computers.[web:4][web:6] \n\n## Superconducting qubits \n\nSuperconducting qubits are tiny electrical circuits made from superconducting materials, typically incorporating Josephson junctions to create a nonlinear “artificial atom” whose lowest two energy levels serve as the qubit states |0⟩ and |1⟩.[web:4][web:6] These circuits are cooled to millikelvin temperatures (∼10 mK) so that quantum effects dominate, enabling fast microwave control of the qubits.[web:4] \n\nKey features: \n- **Speed and gate operations**: Single- and two-qubit gates are driven by microwave pulses and can operate in a few to tens of nanoseconds, making superconducting platforms among the fastest gate-based architectures.[web:4][web:6] \n- Scalability and fabrication: Qubits and couplers are patterned lithographically on chips, similar to classical integrated circuits, which supports dense 2D arrays and has enabled devices in the 50–100+ qubit range from companies like Google and IBM.[web:1][web:4][web:10] \n- Coherence and noise: Coherence times have improved dramatically (through designs like the transmon and fluxonium), but they remain limited by materials defects, electromagnetic noise, and crosstalk; engineering larger, error-corrected systems requires substantial advances in coherence and packaging.[web:1][web:4][web:6] \n\nSuperconducting circuits are attractive because they are highly **configurable**: their energy spectra and coupling strengths can be engineered by design, but this flexibility comes at the cost of complex cryogenics and sensitive microwave control infrastructure.[web:6][web:8] \n\n## Trapped‑ion qubits \n\nTrapped‑ion quantum computers encode qubits in internal electronic or hyperfine states of individual atomic ions (such as ytterbium or calcium) held in electromagnetic traps in ultra‑high vacuum.[web:2] The ions are arranged in linear chains or small 2D configurations, and lasers are used for cooling, state preparation, gate operations, and readout.[web:2] \n\nKey features: \n- **Identical, high‑fidelity qubits**: Because they use natural atoms, each qubit is effectively identical and extremely stable, with very long coherence times compared to most other platforms.[web:2][web:5] \n- Gate mechanisms: Multi-qubit gates exploit shared motional modes of the ions; tailored laser pulses entangle qubits by coupling internal states to collective motion.[web:2] \n- Coherence and error rates: Coherence times can be seconds to minutes, and gate and readout fidelities are among the highest in any architecture, but gate speeds (typically microseconds or longer) are slower than in superconducting systems.[web:2][web:5] \n\nScaling trapped‑ion systems involves engineering larger traps, complex laser delivery, and strategies like modular architectures where chains of ions are interconnected optically or through shuttling, which is technically demanding but conceptually compatible with fault‑tolerant schemes.[web:2][web:5] \n\n## Photonic qubits \n\nPhotonic quantum computing uses single photons as the carriers of quantum information, typically encoding qubits in degrees of freedom such as polarization, spatial modes, or time bins.[web:3][web:9] Computation is implemented using optical elements like beam splitters, phase shifters, nonlinear devices, and photon detectors, often in integrated photonic circuits.[web:3][web:5] \n\nKey features: \n- **Room‑temperature operation and low decoherence**: Photons interact weakly with the environment, so they can maintain quantum coherence over long distances, and many photonic platforms operate at or near room temperature (apart from some sources and detectors that may need cooling).[web:3][web:5] \n- Linear optical approaches: In linear optical quantum computing, single photons and linear optics plus measurements and feed‑forward can in principle realize universal quantum computation, though it requires complex resource states and high‑performance single‑photon sources and detectors.[web:3][web:9] \n- Integration and networking: Photonic qubits are naturally suited for quantum communication and for **distributed** architectures, and integrated photonic chips aim to combine sources, interferometers, and detectors for scalable, manufacturable systems.[web:3][web:5][web:7] \n\nMajor challenges for photonic platforms include generating indistinguishable single photons on demand, achieving high-efficiency, low-noise detection, and scaling up error-corrected architectures given the probabilistic nature of many photonic operations.[web:3][web:5] \n\n## Side‑by‑side comparison \n\n| Aspect | Superconducting qubits | Trapped‑ion qubits | Photonic qubits |\n|-----------------------|---------------------------------------------------|-------------------------------------------------------|--------------------------------------------------------|\n| Physical system | Superconducting circuits with Josephson junctions.[web:4][web:6] | Atomic ions in EM traps in vacuum.[web:2] | Single photons in optical modes.[web:3][web:9] |\n| Operating conditions | Millikelvin cryogenic temperatures.[web:4] | Ultra‑high vacuum; laser cooling near motional ground state.[web:2] | Often room temperature optics; some cryogenic detectors.[web:3][web:5] |\n| Gate speed | Nanoseconds (very fast).[web:4][web:6] | Microseconds or slower.[web:2] | Varies; many operations effectively instantaneous but often probabilistic.[web:3][web:5] |\n| Coherence | Microseconds–milliseconds; improving but limited by materials and noise.[web:4][web:6] | Very long (up to seconds or more).[web:2] | Very long in principle; limited by loss rather than dephasing.[web:3][web:5] |\n| Scalability outlook | Good near‑term chip‑scale scaling; packaging and error correction are main hurdles.[web:4][web:6][web:10] | Excellent qubit quality; scaling control and optics is challenging.[web:2][web:5] | Natural fit for large‑scale networking and integration; resource overhead still large.[web:3][web:5][web:7] |\n\nEach of these three approaches offers a different balance between speed, coherence, control complexity, and manufacturability, which is why all continue to be actively pursued as contenders for practical, fault‑tolerant quantum computers.[web:3][web:4][web:5]",
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [],
+
+"logprobs"
+: []
+
+}
+
+],
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+:
+null
+,
+
+"usage"
+: {
+
+"input_tokens"
+:
+6872
+,
+
+"output_tokens"
+:
+1528
+,
+
+"total_tokens"
+:
+8400
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+0.00411
+,
+
+"output_cost"
+:
+0.01528
+,
+
+"total_cost"
+:
+0.02484
+,
+
+"cache_creation_cost"
+:
+null
+,
+
+"cache_read_cost"
+:
+0.00045
+,
+
+"tool_calls_cost"
+:
+0.005
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+0
+,
+
+"cache_read_input_tokens"
+:
+3584
+,
+
+"cached_tokens"
+:
+3584
+
+},
+
+"tool_calls_details"
+: {
+
+"search_web"
+: {
+
+"invocation"
+:
+1
+
+}
+
+},
+
+"output_tokens_details"
+: {
+
+"reasoning_tokens"
+:
+0
+
+}
+
+},
+
+"background"
+:
+false
+,
+
+"completed_at"
+:
+1779391840
+,
+
+"frequency_penalty"
+:
+0
+,
+
+"incomplete_details"
+:
+null
+,
+
+"instructions": "## Abstract\n<role>\nYou are an AI assistant developed by Perplexity AI. Given a user's query, your goal is to generate an expert, useful, factually correct, and contextually relevant response by leveraging available tools and conversation history. First, you will receive the tools you can call iteratively to gather the necessary knowledge for your response. You need to use these tools rather than using internal knowledge. Second, you will receive guidelines to format your response for clear and effective presentation. Third, you will receive guidelines for citation practices to maintain factual accuracy and credibility.\n</role>\n\n## Instructions\n<tools_workflow>\nBegin each turn with tool calls to gather information. You must call at least one tool before answering, even if information exists in your knowledge base. Decompose complex user queries into discrete tool calls for accuracy and parallelization. After each tool call, assess if your output fully addresses the query and its subcomponents. Continue until the user query is resolved or until the <tool_call_limit> below is reached. End your turn with a comprehensive response. Never mention tool calls in your final response as it would badly impact user experience.\n\n<tool_call_limit> Make at most three tool calls before concluding.</tool_call_limit>\n</tools_workflow>\n\n## Citation Instructions\n<citation_instructions>\nYour response must include at least 1 citation. Add a citation to every sentence that includes information derived from tool outputs.\nTool results are provided using `id` in the format `type:index`. `type` is the data source or context. `index` is the unique identifier per citation.\n<common_source_types> are included below.\n\n<common_source_types>\n- `web`: Internet sources\n- `page`: Full web page content\n- `conversation_history`: past queries and answers from your interaction with the user\n</common_source_types>\n\n<formatting_citations>\nUse brackets to indicate citations like this: [type:index]. Commas, dashes, or alternate formats are not valid citation formats. If citing multiple sources, write each citation in a separate bracket like [web:1][web:2][web:3].\n\nCorrect: \"The Eiffel Tower is in Paris [web:3].\"\nIncorrect: \"The Eiffel Tower is in Paris [web-3].\"\n</formatting_citations>\n\nYour citations must be inline - not in a separate References or Citations section. Cite the source immediately after each sentence containing referenced information. If your response presents a markdown table with referenced information from `web`, `memory`, `attached_file`, or `calendar_event` tool result, cite appropriately within table cells directly after relevant data instead in of a new column. Do not cite `generated_image` or `generated_video` inside table cells.\n\n## Response Guidelines\n<response_guidelines>\nResponses are displayed on web interfaces where users should not need to scroll extensively. Limit responses to 5 sections maximum. Users can ask follow-up questions if they need additional detail. Prioritize the most relevant information for the initial query.\n\n### Answer Formatting\n- Begin with a direct 1-2 sentence answer to the core question.\n- Organize the rest of your answer into sections led with Markdown headers (using ##, ###) when appropriate to ensure clarity (e.g. entity definitions, biographies, and wikis).\n- Your answer should be at least 3 sentences long.\n- Each Markdown header should be concise (less than 6 words) and meaningful.\n- Markdown headers should be plain text, not numbered.\n- Between each Markdown header is a section consisting of 2-3 well-cited sentences.\n- When comparing entities with multiple dimensions, use a markdown table to show differences (instead of lists).\n- Whenever possible, present information as bullet point lists to improve readability.\n- You are allowed to bold at most one word (**example**) per paragraph. You can't bold consecutive words.\n- For grouping multiple related items, present the information with a mix of paragraphs and bullet point lists. Do not nest lists within other lists.\n\n### Tone\n<tone>\nExplain clearly using plain language. Use active voice and vary sentence structure to sound natural. Ensure smooth transitions between sentences. Avoid personal pronouns like \"I\". Keep explanations direct; use examples or metaphors only when they meaningfully clarify complex concepts that would otherwise be unclear.\n</tone>\n\n### Lists and Paragraphs\n<lists_and_paragraphs>\nUse lists for: multiple facts/recommendations, steps, features/benefits, comparisons, or biographical information.\n\nAvoid repeating content in both intro paragraphs and list items. Keep intros minimal. Either start directly with a header and list, or provide 1 sentence of context only.\n\nList formatting:\n- Use numbers when sequence matters; otherwise bullets (-) with a space after the dash.\n- Use numbers when sequence matters; otherwise bullets (-).\n- No whitespace before bullets (i.e. no indenting), one item per line.\n- Sentence capitalization; periods only for complete sentences.\n\nParagraphs:\n- Use for brief context (2-3 sentences max) or simple answers\n- Separate with blank lines\n- If exceeding 3 consecutive sentences, consider restructuring as a list\n</lists_and_paragraphs>\n\n### Summaries and Conclusions\n<summaries_and_conclusions>\nAvoid summaries and conclusions. They are not needed and are repetitive. Markdown tables are not for summaries. For comparisons, provide a table to compare, but avoid labeling it as 'Comparison/Key Table', provide a more meaningful title.\n</summaries_and_conclusions>\n\n## Prohibited Meta-Commentary\n<prohibited_commentary>\n- Never reference your information gathering process in your final answer.\n- Do not use phrases such as:\n- \"Based on my search results...\"\n- \"Now I have gathered comprehensive information...\"\n- \"According to my research...\"\n- \"My search revealed...\"\n- \"I found information about...\"\n- \"Let me provide a detailed answer...\"\n- \"Let me compile this information...\"\n- \"Short Answer: ...\"\n- Begin answers immediately with factual content that directly addresses the user's query.\n</prohibited_commentary>\n\n<copyright_requirements>\n- Never reproduce copyrighted content (text, lyrics, etc.)\n- You may share public domain content (expired copyrights, traditional works)\n- When copyright status is uncertain, treat as copyrighted\n- Keep summaries brief (under 30 words) and original — don't reconstruct sources\n- Brief factual statements (names, dates, facts) are always acceptable\n</copyright_requirements>\n\nCurrent date: Thursday, May 21, 2026\n\n",
+
+"max_output_tokens"
+:
+8192
+,
+
+"max_tool_calls"
+:
+null
+,
+
+"metadata"
+: {},
+
+"parallel_tool_calls"
+:
+true
+,
+
+"presence_penalty"
+:
+0
+,
+
+"previous_response_id"
+:
+null
+,
+
+"prompt_cache_key"
+:
+null
+,
+
+"reasoning"
+:
+null
+,
+
+"safety_identifier"
+:
+null
+,
+
+"service_tier"
+:
+"default"
+,
+
+"store"
+:
+true
+,
+
+"temperature"
+:
+1
+,
+
+"text"
+: {
+
+"format"
+: {
+
+"type"
+:
+"text"
+
+}
+
+},
+
+"tool_choice"
+:
+"auto"
+,
+
+"tools"
+: [
+
+{
+
+"type"
+:
+"web_search"
+
+},
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+"top_logprobs"
+:
+0
+,
+
+"top_p"
+:
+1
+,
+
+"truncation"
+:
+"disabled"
+,
+
+"user"
+:
+null
+
+}
+
+For a full guide on streaming, including parsing, error handling, citation management, and best practices, see our
+streaming guide
+.
+
+​
+Next Steps
+
+Now that you’ve made your first API call, explore each API in depth:
+
+Agent API
+Get started with third-party models and presets
+Search API
+Get started with web search results
+Sonar API
+Get started with web-grounded AI responses
+Embeddings API
+Get started with text embeddings
+
+​
+Additional Resources
+
+Perplexity SDK
+Learn about the official Perplexity SDK with type safety and async support
+Models
+Explore available models and their capabilities
+API Reference
+View complete API documentation with detailed endpoint specifications
+Examples
+Explore code examples, tutorials, and integration patterns
+
+Need help? Check out our
+community
+for support and discussions with other developers.
+Was this page helpful?
+Yes
+No
+Overview
+Previous
+Pricing
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

@@ -1,0 +1,271 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/significant-citation-discrepancy-between-perplexity-web-ui-and-api/2980
+page path  : /t/significant-citation-discrepancy-between-perplexity-web-ui-and-api/2980
+captured   : 2026-01-21 21:46:34 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_significant-citation-discrepancy-between-perplexity-web-ui-and-api_2980__c61ea421.html.gz
+========================================================================
+
+Significant Citation Discrepancy Between Perplexity Web UI and API - Bug Reports - Perplexity API Platform Forum
+
+Significant Citation Discrepancy Between Perplexity Web UI and API - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Significant Citation Discrepancy Between Perplexity Web UI and API
+
+Bug Reports
+
+search-api
+
+mini
+
+December 8, 2025, 3:03am
+
+1
+
+Hello,
+
+I would like to receive an official explanation regarding the citation quality differences between the Perplexity Web UI search and the Perplexity API responses.
+
+{
+"domains": [
+"ft.com",
+"wsj.com",
+"barrons.com",
+"marketwatch.com",
+"seekingalpha.com",
+"reuters.com",
+"cnbc.com",
+"motleyfool.com",
+"bloomberg.com",
+"investing.com",
+"finviz.com",
+"tradingeconomics.com",
+"simplywallst.com",
+"fortune.com",
+"forbes.com",
+"investors.com",
+"investopedia.com",
+"finance.yahoo.com",
+"theblock.co",
+"nasdaq.com",
+"morningstar.com"
+]
+}
+
+#payload
+payload = {
+"model": self.model,
+"search_domain_filter": domains,
+"messages": [
+{
+"role": "system",
+"content": "You are a concise and factual search agent. Search the web for the most relevant and recent information.",
+},
+{"role": "user", "content": query},
+],
+"temperature": 0.1,
+"top_p": 0.9,
+"presence_penalty": 1,
+# "return_citations": True,
+# "web_search_options": {"search_context_size": "low"},
+}
+
+#result.json
+{
+"test_date": "2025-12-08T10:04:10.380513",
+"test_type": "each",
+"model": "sonar-pro",
+"query": "NVIDIA news",
+"total_domains": 21,
+"success_count": 6,
+"fail_count": 15,
+"success": [
+{
+"domain": "investing.com",
+"status": "success",
+"citations": [
+"https://www.investing.com/news/company-news/nvidia-invests-2-billion-in-synopsys-as-part-of-strategic-partnership-93CH-4383769",
+"https://ca.investing.com/analysis/synopsys-nvidia-deal-highlights-undervalued-growth-after-a-weak-2025-200620326",
+"https://www.investing.com/news/stock-market-news/nvidia-invests-2-billion-in-chip-design-software-provider-synopsys-4383715",
+"https://ca.investing.com/news/insider-trading-news/seawell-a-brooke-nvidia-director-sells-23-million-in-nvda-stock-93CH-4349901",
+"https://www.investing.com/news/stock-market-news/nvidia-cfo-says-chipmaker-yet-to-finalize-100-billion-openai-deal-4386594",
+"https://www.investing.com/news/stock-market-news/analyst-shares-4-reasons-why-he-remains-bearish-on-nvidia-stock-into-2026-4383864",
+"https://ca.investing.com/analysis/nvidia-pops-postearnings-as-a-110-bn-threat-goes-unnoticed-200620030",
+"https://ca.investing.com/analysis/nvidia-earnings-3-red-flags-the-ai-trade-is-topping-200619943",
+"https://ca.investing.com/news/stock-market-news/nvidia-ceo-calls-china-a-bonus-opportunity-amid-surging-global-demand-93CH-4342318",
+"https://www.investing.com/news/stock-market-news/bipartisan-bill-aims-to-block-nvidias-advanced-chip-sales-to-china--ft-93CH-4391843"
+],
+"content": "Nvidia’s most recent news centers on a major strategic investment, expanding AI partnerships, and rising political scrutiny over China sales.\n\n**Key corporate and deal news**\n\n- **$2 billion Synopsys stake and expanded partnership:** \n Nvidia invested **$2 billion** in chip‑design software leader **Synopsys**, buying common stock at **$414.79 per share** as part of a multi‑year, non‑exclusive strategic tie‑up to integrate Nvidia’s **CUDA** and AI/accelerated computing into Synopsys’ engineering and simulation tools.[1][3] \n The collaboration targets GPU‑accelerated chip design, p
+
+At first, I used the Perplexity API’s
+search_domain_filter
+and called it with our domain list.
+
+Among all 21 domains, the API generated citations for only
+6
+of them.
+
+스크린샷 2025-12-08 111236
+913×450 33 KB
+
+For comparison, I tested the same domains individually in the Web UI.
+
+Using a repeated query like “{
+ft.com
+} NVIDIA news.” (changing only the domain),
+
+the Web UI cited
+20 out of 21 domains
+, with
+theblock.co
+being the only exception.
+
+This means there is a
+14-domain difference
+in citation results between the UI and the AP
+
+Next, I tried removing
+search_domain_filter
+entirely and asked the API using queries that directly included each domain, similar to how the Web UI processes searches.
+
+TEST_QUERY = "ft.com NVIDIA News"
+
+payload = {
+"model": self.model,
+"messages": [
+{
+"role": "system",
+"content": "You are a concise and factual search agent. Search the web for the most relevant and recent information.",
+},
+{"role": "user", "content": query},
+],
+"temperature": 0.1,
+"top_p": 0.9,
+"presence_penalty": 1,
+
+}
+
+#result.json
+{
+"test_date": "2025-12-08T11:17:59.886648",
+"test_type": "no_filter",
+"model": "sonar-pro",
+"query": "ft.com NVIDIA News",
+"result": {
+"status": "success",
+"citations": [],
+"content": "Here are some of the most recent and relevant NVIDIA‑related pieces from the Financial Times (ft.com). I can’t link directly, but you can find them by searching FT with the quoted headlines:\n\n1. **Nvidia and the AI chip boom**\n - FT has been running regular coverage on how Nvidia dominates the AI accelerator market (H100, B100/Blackwell, and next‑gen architectures) and how that drives data‑centre spending by Microsoft, Amazon, Google and Meta.\n - Articles focus on:\n - Whether hyperscalers can reduce reliance on Nvidia via in‑house chips (e.g., AWS Trainium, Google TPU, Microsoft Maia).\n - Capacity constraints, long lead times, and how much of Nvidia’s growth is sustainable versus “bubble‑like” AI capex.\n\n2. **US export controls and China**\n - FT has covered repeated rounds of US restrictions on advanced GPU exports to China and the Middle East and Nvidia’s responses (A800/H800, then other “compliant” variants).\n - Key themes:\n - Impact on Nvidia’s China data‑centre revenue.\n - How much lost China demand is offset by US and other markets.\n - The geopolitical risk premium now embedded in Nvidia’s valuation.\n\n3. **Valuation, earnings and market concentration**\n - Frequent FT markets and Lex columns analyse:\n - Nvidia’s quarterly earnings beats, guidance, and dependence on a small number of big cloud customers.\n - Whether Nvidia’s market cap and revenue growth imply an AI “mania” or are justified by margins and order visibility.\n - Comparison with prior tech bubbles and with other “Magnificent Seven” stocks.\n\n4. **Competition and ecosystem control**\n - Coverage of:\n - AMD’s MI300/MI325 and upcoming MI400 accelerators as the main rival in data‑centre GPUs.\n - Intel’s efforts (Gaudi line, foundry strategy) and how far behind it is.\n - Nvidia’s software moat (CUDA, cuDNN, networking/Mellanox, NVLink) and FT commentary on potential regulatory scrutiny over ecosystem lock‑in.\n\n5. **Nvidia’s role in broader AI and semiconductor supply chains**\n - FT pieces on:\n - How Nvidia’s demand shapes TSMC’s capex and advanced node roadmaps.\n - The impact on memory suppliers (HBM from SK Hynix, Samsung, Micron).\n - Power and infrastructure constraints in data centres driven by GPU clusters.\n\nTo see the latest, go to ft.com and search for:\n- “Nvidia FT Lex”\n- “Nvidia AI chips Financial Times”\n- “Nvidia US export controls China site:ft.com”\n\nThat will surface the most up‑to‑date news and opinion pieces on Nvidia from the FT.",
+"search_results": [],
+
+Running the tests again across all 21 domains,
+
+I observed that this approach produced 1–2 more citations compared to using
+search_domain_filter
+.
+
+However, the citation quality still showed a
+significant gap
+compared to Web UI search.
+
+The Perplexity official FAQ clearly states the following:
+
+스크린샷 2025-12-08 112102
+921×106 9.81 KB
+
+Given this, I would like to ask:
+
+Why does this citation quality difference occur between the Web UI and the API?
+
+Does the API truly use the same search system as the Web UI?
+
+Is this discrepancy intentional by design?
+
+Is there a roadmap to bring API citation quality to the same level as the Web UI?
+
+Please let me know.
+
+Thank you.
+
+2 Likes
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Why don't I receive the same level of response using the API as I do using the official UI search?
+
+Bug Reports
+
+9
+
+1038
+
+May 15, 2025
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+4
+
+228
+
+May 15, 2025
+
+Return_citations, more details
+
+Feature Requests
+
+3
+
+201
+
+May 15, 2025
+
+Bug Report: Incorrect Citation Mapping in Pro Search API Responses
+
+Bug Reports
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+32
+
+December 15, 2025
+
+Modify/Select sources to answer from
+
+Bug Reports
+
+2
+
+127
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

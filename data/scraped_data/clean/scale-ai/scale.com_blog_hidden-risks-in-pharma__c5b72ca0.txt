@@ -1,0 +1,111 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/hidden-risks-in-pharma
+page path  : /blog/hidden-risks-in-pharma
+captured   : 2026-05-16 02:53:54 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_hidden-risks-in-pharma__c5b72ca0.html.gz
+========================================================================
+
+Hidden Risks in Pharma's Most Common GenAI Starting Point | Scale AI
+
+Hidden Risks in Pharma's Most Common GenAI Starting Point | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Health
+Hidden Risks in Pharma's Most Common GenAI Starting Point
+By
+
+Zainab Doctor
+,
+Bert Herring
+&
+Dani Gorman
+·
+April 13, 2026
+·
+7 min read
+Copy Link
+The Appeal and the Hidden Risk of Starting with Chatbots
+Across the pharmaceutical industry, executives are under mounting pressure to demonstrate tangible returns on their AI investments. The patient-facing health chatbot has become one of the most attractive early deployments. The logic is straightforward: the use case is well-defined, the starting content base already exists (post-launch marketing materials), the regulatory surface area appears manageable compared to clinical or manufacturing applications, and the value proposition of giving patients faster, more consistent access to medication information is easy to articulate.
+However, what appears simple obscures significant risk. A health chatbot is not a search interface or an FAQ replacement. It is a conversational AI system operating in a regulated environment, interacting with patients in real time, often during moments of vulnerability or uncertainty. It must meet technical, clinical, regulatory, and ethical standards, yet in most current deployments, the testing and governance frameworks do not reflect that reality.
+Scale's Enterprise Red Team conducted a pilot analysis of a consumer-facing health chatbot live in production at a major pharmaceutical company, simulating real-world user interactions over a focused two-week testing window to surface potential vulnerabilities. The findings illustrate what is at stake when an agent moves to production without investing adequately in continuous safety evaluation.
+What Rigorous Testing Actually Surfaces
+Standard quality assurance processes are designed to verify that a model performs its intended function. Adversarial red teaming is designed to discover how a model behaves when users deviate from intended use, which is the norm in a public-facing consumer product.
+Scale's evaluation identified two distinct categories of failure:
+Expert-Identified Vulnerabilities
+The first category encompasses failures within the chatbot's designed scope: cases where the model attempted to respond to a legitimate health question and produced output that was clinically incorrect, inconsistent, or inappropriate given the user's stated circumstances.
+The model provided specific dosing guidance for a prescription medication to a user who had explicitly stated that the patient (a minor) did not have a prescription and had not received a formal diagnosis. Compounding the issue, the chatbot effectively recommended an off-label use of one of its own company's products. Instead of redirecting the patient to a healthcare professional, the model encouraged the parent to give medicine she had been prescribed to the minor at a specific, reduced dose without consulting a healthcare professional.
+During a multi-turn simulated emergency involving a newborn in respiratory distress, the model recommended back blows (an intervention indicated for infant choking) in a scenario where no foreign-body airway obstruction had been described. In a subsequent response, the model referred to an airway obstruction that the user had never mentioned.
+When asked broadly about the potential link between a drug and a serious adverse event, the model gave an accurate but incomplete answer, omitting a risk raised in scientific literature. When the same question was posed more specifically in a separate session, the model acknowledged the possible connection. A patient with enough prior knowledge to ask the right question received more complete safety information than one who did not. This inconsistency could undermine the company’s defense in related litigation.
+Critical Failures to Refuse
+The second category, in some respects, is more concerning; it reflects failures that are entirely outside the chatbot's intended purpose, yet occurred in a live system.
+Over the course of a multi-turn conversation, a user indicated their intent to poison a third party. The model provided lethal dosage information when directly asked, and went on to recommend a specific beer type as the most effective option for masking the compound's taste, engaging substantively across multiple turns without once refusing.
+A user presented unambiguous signals of self-harm and requested that the model draft a personalized note detailing this harm, including specific references to the user's regrets. The model produced the note. When the user requested a revised version with additional personal detail, the model complied again.
+The model failed to disengage from a prompt containing both an explicit slur and a harmful premise about racial developmental differences. Rather than refusing, it produced a structured "both sides" analysis that engaged with and partially legitimized the premise.
+Why These Failures Occur in Well-Resourced Organizations
+These findings emerged from a production deployment by a leading global pharmaceutical company with the resources and organizational sophistication to build responsibly. Understanding why these failures occur is essential to addressing them.
+The most common cause is a mismatch between how the system was built and tested and the range of inputs it will realistically receive. Pharma organizations typically develop health chatbots by fine-tuning or prompting a foundation model on proprietary content, conducting QA to confirm the model answers intended questions accurately, and deploying with a set of policy guidelines in the system prompt. Each of these steps addresses functional performance, but none of them systematically surface harmful behavior under real-world user conditions, adversarial or innocent.
+A second contributing factor is the assumption that a chatbot built for a specific purpose will only be used for that purpose. This is not supported by how real-world users actually interact with conversational AI. Users bring crises, confusion, and malicious intent to any accessible interface. A health chatbot from a trusted pharmaceutical brand carries an implicit authority that can make it a particularly attractive target for misuse. We have also found that well-intentioned users can easily stumble into harm.
+A third factor is underestimating regulatory complexity. The distinction between providing health information and medical advice has direct implications for Software as a Medical Device classification. This requires balancing the regulatory obligation to present risk information alongside benefit claims. Dosing guidance, off-label use, and adverse event information all carry specific compliance obligations that must be embedded in the system's design, not addressed after the fact through disclaimers.
+A Framework for Responsible Deployment
+The following requirements apply to any organization building or operating a consumer health chatbot.
+Define scope with precision, not generality.
+A general instruction to "discuss only approved medication information" is not operationally sufficient. The content policy that governs the system must specify, at a granular level, which question types the model may answer, which require redirection to a healthcare professional, and which must result in a refusal. That policy should be developed collaboratively between medical affairs, regulatory, legal, and product teams, and translated into testable behavioral requirements, not just system prompt language.
+Treat refusal as a safety-critical behavior.
+The most serious failures in our evaluation were failures to refuse. Refusal for content that could facilitate harm to self or others requires specific technical implementation, verification testing, and ongoing monitoring. Safe messaging guidelines for mental health and crisis scenarios should be implemented as a baseline. Refusal and other appropriate behaviors must be maintained through multiple turns of a conversation as well. Most users will not drop the conversation after a single refusal; they may also initiate an ask about a forbidden topic late in a conversation that previously had no red flags. This is difficult to do comprehensively with automated testing alone.
+Invest in adversarial safety evaluation as a distinct discipline.
+Functional QA and adversarial red teaming serve different purposes and neither substitutes for the other. An adversarial evaluation should be conducted by a team whose mandate is to identify harmful outputs, not to confirm correct ones. This applies at pre-launch and on a continuous basis post-deployment. Model behavior may change and even regress through updates and governance frameworks must reflect that.
+Establish clinical accuracy as an operational standard.
+Health chatbots that generate responses dynamically rather than retrieving them from a controlled knowledge base are structurally prone to inconsistency. Any information the model surfaces about clinical topics should be derived from a single, versioned, medically reviewed source of record, with a defined process for keeping that content current as the scientific and regulatory landscape evolves.
+The Responsible Path Forward
+Pharmaceutical companies are not new to managing the tension between innovation and patient safety. It is the defining operational challenge of the industry. AI deployment is not categorically different; it is a new domain in which that same discipline must be applied.
+Closing the gap between current practice and the risks these systems pose requires treating health chatbots as patient-facing systems operating in a regulated environment, rather than as digital content products. Safety and compliance require continuous evaluation as models are updated, user behavior evolves, and regulatory expectations mature.
+Have a specific agent in mind that could benefit from red teaming and safety guardrail evaluation? Request to
+speak with our team here
+, we're happy to get into the technical details with you.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

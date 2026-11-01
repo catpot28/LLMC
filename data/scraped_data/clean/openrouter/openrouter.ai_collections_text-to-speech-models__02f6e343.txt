@@ -1,0 +1,216 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/text-to-speech-models
+page path  : /collections/text-to-speech-models
+captured   : 2026-05-09 16:55:56 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_collections_text-to-speech-models__02f6e343.html.gz
+========================================================================
+
+Best Text-to-Speech Models | OpenRouter
+
+Best Text-to-Speech Models | OpenRouter
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Text-to-Speech
+Best Text-to-Speech Models
+Model rankings updated May 2026 based on real usage data.
+Text-to-speech models turn written text into spoken audio for assistants, narration, accessibility tools, voiceovers, learning apps, and customer support workflows. Browse top TTS models on OpenRouter and compare voices, latency, pricing, and provider capabilities to find the best speech model for your product.
+Browse All Models
+Compare Models
+Top Text-to-Speech Models on OpenRouter
+Google: Gemini 3.1 Flash TTS Preview
+55.7M
+tokens
+Gemini 3.1 Flash TTS Preview is a text-to-speech model from Google, and a substantial generational step up from Gemini 2.5 Flash TTS. It takes text input and produces audio output across 70+ languages — nearly 3× the language coverage of its predecessor.
+
+The headline addition is a system of 200+ inline audio tags (e.g.
+[whispers]
+,
+[laughs]
+,
+[excited]
+) that let developers steer delivery, emotion, and pacing mid-sentence, alongside a "director's chair" workflow in Google AI Studio for defining per-character Audio Profiles and scene-level context. It supports up to two speakers with independent voice and style configuration per speaker, outputs PCM audio at 24 kHz / 16-bit mono, and automatically watermarks all output with SynthID. Context window is 32k tokens.
+Show more
+by
+
+google
+8K
+context
+$
+1
+/M input
+tokens
+$
+20
+/M output
+tokens
+OpenAI: GPT-4o Mini TTS
+9.32M
+tokens
+GPT-4o Mini TTS is OpenAI's cost-efficient text-to-speech model. It converts text input into natural-sounding audio output, supporting a variety of voices and tones.
+Show more
+by
+
+openai
+4K
+context
+$
+0.60
+/M input
+tokens
+$
+0
+/M output
+tokens
+hexgrad: Kokoro 82M
+1.89M
+tokens
+Kokoro 82M is a lightweight, open-weight text-to-speech model from hexgrad. It converts text to speech across 8 languages (American and British English, Spanish, French, Hindi, Italian, Japanese, Portuguese, and Chinese) using 54 preset voices organized by language and gender. At 82M parameters, it is well-suited for multilingual TTS deployments where footprint and cost efficiency matter.
+Show more
+by
+
+hexgrad
+4K
+context
+$
+0.62
+/M input
+tokens
+$
+0
+/M output
+tokens
+Mistral: Voxtral Mini TTS
+145K
+tokens
+Voxtral Mini TTS is Mistral's text-to-speech model featuring zero-shot voice cloning and multilingual support. It converts text input into natural-sounding audio output.
+Show more
+by
+
+mistralai
+4K
+context
+$
+16
+/M input
+tokens
+$
+0
+/M output
+tokens
+Canopy Labs: Orpheus 3B
+37K
+tokens
+Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for natural prosody and expressive delivery. It offers 7 preset voices and is suited for narration, voice assistants, and interactive applications where naturalistic speech is a priority.
+Show more
+by
+
+canopylabs
+4K
+context
+$
+7
+/M input
+tokens
+$
+0
+/M output
+tokens
+Sesame: CSM 1B
+19K
+tokens
+CSM 1B is a conversational speech model from Sesame. It accepts text input and produces English speech output, with voice options spanning conversational and read-speech styles. At 1B parameters, it is suited for dialogue-oriented applications such as voice assistants and interactive agents.
+Show more
+by
+
+sesame
+4K
+context
+$
+7
+/M input
+tokens
+$
+0
+/M output
+tokens
+Zyphra: Zonos v0.1 Hybrid
+5K
+tokens
+Zonos v0.1 Hybrid is a text-to-speech model from Zyphra built on a hybrid architecture. It produces English speech output with coverage across American and British accents in male and female voices. It is suited for English-language voice applications requiring accent and gender variety.
+Show more
+by
+
+zyphra
+4K
+context
+$
+7
+/M input
+tokens
+$
+0
+/M output
+tokens
+Zyphra: Zonos v0.1 Transformer
+5K
+tokens
+Zonos v0.1 Transformer is a text-to-speech model from Zyphra built on a pure transformer architecture. It offers the same American and British English voice coverage as the Hybrid variant, and is suited for deployments where a transformer-only inference stack is preferred.
+Show more
+by
+
+zyphra
+4K
+context
+$
+7
+/M input
+tokens
+$
+0
+/M output
+tokens

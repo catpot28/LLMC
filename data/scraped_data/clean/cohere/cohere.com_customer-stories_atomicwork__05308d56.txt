@@ -1,0 +1,334 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/customer-stories/atomicwork
+page path  : /customer-stories/atomicwork
+captured   : 2026-06-14 13:12:46 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/cohere/cohere.com_customer-stories_atomicwork__05308d56.html.gz
+========================================================================
+
+Atomicwork Builds Atom AI with Cohere | Cohere
+
+Atomicwork Builds Atom AI with Cohere | Cohere
+North Mini Code. Cohere's first model for developers.
+Learn more
+Products
+Products
+
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+NEW
+High-performance models for agentic, multimodal, multilingual AI
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Models Overview
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+Global MMLU
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Merch Store
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+NEW
+High-performance models for agentic, multimodal, multilingual AI
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Models Overview
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+Global MMLU
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Merch Store
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+Jul 12, 2024
+4 minute read
+Atomicwork builds Atom AI with Cohere
+As the digital transformation partner of choice for customers in over 100 countries, Fujitsu’s 124,000 employees work to resolve some of the greatest challenges facing humanity.
+Customer stories
+Atomicwork is a unified service management platform that integrates AI agents, a modern service desk, and automated workflows.
+Industry
+Technology
+Category
+Customer
+Products
+Command, Rerank
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Overview
+Atomicwork, an IT service management company, recently launched an AI digital assistant,
+Atom AI
+, designed to transform productivity and IT support for modern enterprises by providing seamless self-service solutions. By leveraging Cohere's advanced models,
+Command R+
+and
+Rerank
+, with retrieval-augmented generation (RAG), Atomicwork has created a tool that significantly enhances the efficiency and effectiveness of IT support teams.
+The Challenge
+Atomicwork faced a significant challenge: their customers struggled to connect disparate business applications and internal services, leading to complex integrations and operational inefficiencies. This issue was particularly burdensome for IT departments, which had to manage an overwhelming volume of requests related to enterprise information, software updates, app provisioning, and troubleshooting. According to Aparna Chugh, Head of Product at Atomicwork, these recurring tasks accounted for 70% of the total volume of incoming IT requests, consuming 50% of IT teams' productive time.
+Atomicwork's goal was to create a solution that could seamlessly integrate enterprise knowledge and search functionalities into existing collaboration tools used by employees, thereby simplifying IT management and boosting productivity. The company recognized the potential of generative AI to address these challenges and decided to explore AI-based solutions. From the start, improving the quality of answers and reducing latency was the priority.
+“The Cohere team have been incredibly helpful design partners, collaborating closely with us — sharing best practices and guidelines, even helping tune prompts for very specific use cases for which we use the Cohere models.”
+Aparna Chugh
+
+Head of Product, Atomicwork
+Solution
+Head of AI Platform Shanthi Vardhan had been working on building solutions that leveraged natural language processing even before transformers were invented. While the rest of the team had a ton of experience in building enterprise products, large language models were fairly new to them. But from the start, they knew they wanted to build an AI assistant.
+They came across Cohere’s state-of-the-art models and took special notice when Cohere launched third-party API calling because it was very relevant for many of their use cases.
+Atomicwork's solution was to develop Atom AI, a digital IT support assistant powered by Cohere's advanced AI models, specifically Command R+ and Rerank. The development of Atom AI involved several key steps:
+Data integration and retrieval:
+Atomicwork connected various enterprise data sources, such as SharePoint, Confluence, and other knowledge bases, to enable comprehensive data retrieval. This integration allowed employees to search and find answers directly from collaboration tools like Slack and Microsoft Teams.
+Model selection:
+The company employed a combination of competitive models, including Cohere Command R+ and Rerank. The choice of these models was driven by the need for high accuracy and reduced latency in delivering relevant answers. Cohere's RAG system was pivotal in grounding responses in enterprise knowledge, ensuring the accuracy and reliability of the information provided.
+Customization and evaluation:
+Atomicwork customized its retrieval mechanism to use less context, thereby improving accuracy. The evaluation of answer quality was structured around faithfulness, relevancy, and context recall, ensuring that the solutions met the high standards required by enterprise clients.
+Collaboration and implementation:
+The integration of Cohere's models was seamless, with Rerank working out-of-the-box and easily integrating into Atomicwork's pipeline. Cohere's team provided valuable support in tuning prompts to enhance accuracy and reduce latency, ensuring that Atom AI delivered the desired performance.
+Starting with one AI scientist and a developer, Atomicwork has since built the team to three AI scientists and two AI developers, plus two more developers dedicated to building the AI platform. Building the solution took less than a week from proof-of-concept (POC) to evaluation and production using Rerank. And only two weeks to deploy with Command R+ for additional use cases.
+Impact
+According to CEO Vijay Rayapati, “The driving force behind Atomicwork's digital workplace experience solution is Cohere’s Enterprise AI platform, particularly its Command R+ model. Its unmatched accuracy and scalability — alongside Cohere Rerank — empowers Atom AI, our digital assistant, with the precision and performance required to deliver real-world results.”
+After running evaluation benchmarks, Atomicwork saw a
+20% improvement in accuracy using Cohere Rerank.
+And using Cohere models, the solution performed well across established metrics with
+75% improvement to latency
+and
+168% accuracy improvement over competitive models like GPT3.5
+.
+%
+improvement in accuracy using Cohere Rerank
+%
+improvement to latency using Cohere models
+%
+accuracy improvement over competitive models like GPT3.5
+Head of Product Aparna Chugh goes on to say, “The Cohere team have been incredibly helpful design partners, collaborating closely with us — sharing best practices and guidelines, even helping tune prompts for very specific use cases for which we use the Cohere models.”
+Overall, the implementation of Atom AI is having a transformative impact on Atomicwork's customers and their IT support processes by providing accurate and fast answers, enhancing operational efficiency. Atomicwork's journey in developing Atom AI underscores the transformative potential of AI in improving IT support and productivity.
+Customer stories
+Atomicwork is a unified service management platform that integrates AI agents, a modern service desk, and automated workflows.
+Industry
+Technology
+Category
+Customer
+Products
+Command, Rerank
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+What to read next
+Draftwise boosts legal productivity with Cohere's AI models
+Fujitsu launches Takane AI model in partnership with Cohere
+BambooHR optimizes AI search and retrieval
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Customer Stories
+Developers
+Events
+On-Demand Events
+Merch Store
+LLM University
+Documentation
+Release Notes
+Models Overview
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Customer Stories
+Developers
+Events
+On-Demand Events
+Merch Store
+LLM University
+Documentation
+Release Notes
+Models Overview
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Cohere ©
+2026
+Privacy
+Terms of Use
+Manage Cookies
+English

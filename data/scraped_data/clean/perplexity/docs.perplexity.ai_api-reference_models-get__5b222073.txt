@@ -1,0 +1,170 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/models-get
+page path  : /api-reference/models-get
+captured   : 2026-04-20 03:26:31 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_models-get__5b222073.html.gz
+========================================================================
+
+List Models - Perplexity
+
+List Models - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Agent API
+List Models
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+List Models
+cURL
+curl --request GET \
+--url https://api.perplexity.ai/v1/models
+200
+{
+"object": "list",
+"data": [
+{
+"id": "anthropic/claude-sonnet-4-6",
+"object": "model",
+"created": 0,
+"owned_by": "anthropic"
+},
+{
+"id": "openai/gpt-5.4",
+"object": "model",
+"created": 0,
+"owned_by": "openai"
+},
+{
+"id": "perplexity/sonar",
+"object": "model",
+"created": 0,
+"owned_by": "perplexity"
+}
+]
+}
+Agent API
+List Models
+Copy page
+List the models available for the Agent API. Returns model identifiers that can be used with the
+POST /v1/agent
+endpoint. The response follows the OpenAI List Models format for compatibility with third-party tools.
+Copy page
+GET
+/
+v1
+/
+models
+Try it
+List Models
+cURL
+curl --request GET \
+--url https://api.perplexity.ai/v1/models
+200
+{
+"object": "list",
+"data": [
+{
+"id": "anthropic/claude-sonnet-4-6",
+"object": "model",
+"created": 0,
+"owned_by": "anthropic"
+},
+{
+"id": "openai/gpt-5.4",
+"object": "model",
+"created": 0,
+"owned_by": "openai"
+},
+{
+"id": "perplexity/sonar",
+"object": "model",
+"created": 0,
+"owned_by": "perplexity"
+}
+]
+}
+Response
+200 - application/json
+Successful response with the list of available models.
+Response from the List Models endpoint. Contains a list of available models.
+​
+object
+enum<string>
+required
+The object type, which is always
+list
+.
+Available options
+:
+
+list
+
+Example
+:
+"list"
+​
+data
+object[]
+required
+A list of model objects.
+Show
+
+child attributes
+Was this page helpful?
+Yes
+No
+Create Agent Response
+Previous
+Search the Web
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

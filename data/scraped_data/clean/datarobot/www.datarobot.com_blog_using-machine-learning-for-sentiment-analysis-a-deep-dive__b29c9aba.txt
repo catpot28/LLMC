@@ -1,0 +1,824 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/using-machine-learning-for-sentiment-analysis-a-deep-dive/
+page path  : /blog/using-machine-learning-for-sentiment-analysis-a-deep-dive/
+captured   : 2026-05-16 17:36:31 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_using-machine-learning-for-sentiment-analysis-a-deep-dive__b29c9aba.html.gz
+========================================================================
+
+Using Machine Learning for Sentiment Analysis: a Deep Dive | DataRobot Blog
+
+Using Machine Learning for Sentiment Analysis: a Deep Dive | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Using Machine Learning for Sentiment Analysis: a Deep Dive
+
+This article was originally published at Algorithimia’s website. The company was
+acquired by DataRobot
+in 2021. This article may not be entirely up-to-date or refer to products and offerings no longer in existence.
+
+Sentiment analysis invites us to consider the sentence,
+You’re so smart!
+and discern what’s behind it. It sounds like quite a compliment, right? Clearly the speaker is raining praise on someone with next-level intelligence. However, consider the same sentence in the following context.
+
+Wow, did you think of that all by yourself, Sherlock? You’re so smart!
+
+Now we’re dealing with the same words except they’re surrounded by additional information that changes the tone of the overall message from positive to sarcastic.
+
+This is one of the reasons why detecting sentiment from natural language (NLP or natural language processing) is a surprisingly complex task. Any machine learning model that hopes to achieve suitable accuracy needs to be able to determine what textual information is relevant to the prediction at hand, have an understanding of negation, human patterns of speech, idioms, metaphors, etc, and be able to assimilate all of this knowledge into a rational judgment about a quantity as nebulous as “sentiment.”
+
+In fact, when presented with a piece of text, sometimes even humans disagree about its tonality, especially if there’s not a fair deal of informative context provided to help rule out incorrect interpretations. With that said, recent advances in deep learning methods have allowed models to improve to a point that is quickly approaching human precision on this difficult task.
+
+Sentiment analysis datasets
+
+The first step in developing any model is gathering a suitable source of training data, and sentiment analysis is no exception. There are a few standard datasets in the field that are often used to benchmark models and compare accuracies, but new datasets are being developed every day as labeled data continues to become available.
+
+The first of these datasets is the
+Stanford Sentiment Treebank
+. It’s notable for the fact that it contains over 11,000 sentences, which were extracted from movie reviews and accurately parsed into labeled parse trees. This allows recursive models to train on each level in the tree, allowing them to predict the sentiment first for sub-phrases in the sentence and then for the sentence as a whole.
+
+The Amazon Product Reviews Dataset provides over 142 million Amazon product reviews with their associated metadata, allowing machine learning practitioners to train sentiment models using product ratings as a proxy for the sentiment label.
+
+The IMDB Movie Reviews Dataset provides 50,000 highly polarized movie reviews with a 50-50 train/test split.
+
+The Sentiment140 Dataset provides valuable data for training sentiment models to work with social media posts and other informal text. It provides 1.6 million training points, which have been classified as positive, negative, or neutral.
+
+Sentiment analysis, a baseline method
+
+Whenever you test a machine learning method, it’s helpful to have a baseline method and accuracy level against which to measure improvements. In the field of sentiment analysis, one model works particularly well and is easy to set up, making it the ideal baseline for comparison.
+
+To introduce this method, we can define something called a
+tf-idf score
+. This stands for term frequency-inverse document frequency, which gives a measure of the relative importance of each word in a set of documents. In simple terms, it computes the relative count of each word in a document reweighted by its prevalence over all documents in a set. (We use the term “document” loosely.) It could be anything from a sentence to a paragraph to a longer-form collection of text. Analytically, we define the tf-idf of a term
+t
+as seen in document
+d
+, which is a member of a set of documents
+D
+as:
+
+tfidf(
+t, d, D
+) = tf(
+t, d
+) * idf(
+t, d, D
+)
+
+Where
+tf
+is the term frequency, and idf is the inverse document frequency. These are defined to be:
+
+tf(
+t, d
+) = count(t) in document d
+
+and
+
+idf(
+t, d, D
+) = -log(
+P
+(
+t | D
+))
+
+Where
+P
+(
+t | D)
+is the probability of seeing term t given that you’ve selected document D.
+
+From here, we can create a vector for each document where each entry in the vector corresponds to a term’s tf-idf score. We place these vectors into a matrix representing the entire set
+D
+and train a logistic regression classifier on labeled examples to predict the overall sentiment of D.
+
+Sentiment analysis models
+
+The idea here is that if you have a bunch of training examples, such as
+I’m so happy today!
+,
+Stay happy San Diego
+,
+Coffee makes my heart happy
+, etc., then terms such as “happy” will have a relatively high tf-idf score when compared with other terms.
+
+From this, the model should be able to pick up on the fact that the word “happy” is correlated with text having a positive sentiment and use this to predict on future unlabeled examples. Logistic regression is a good model because it trains quickly even on large datasets and provides very robust results.
+
+Other good model choices include SVMs, Random Forests, and Naive Bayes. These models can be further improved by training on not only individual tokens, but also bigrams or tri-grams. This allows the classifier to pick up on negations and short phrases, which might carry sentiment information that individual tokens do not. Of course, the process of creating and training on n-grams increases the complexity of the model, so care must be taken to ensure that training time does not become prohibitive.
+
+More advanced models
+
+The advent of deep learning has provided a new standard by which to measure sentiment analysis models and has introduced many common model architectures that can be quickly prototyped and adapted to particular datasets to quickly achieve high accuracy.
+
+Most advanced sentiment models start by transforming the input text into an embedded representation. These embeddings are sometimes trained jointly with the model, but usually additional accuracy can be attained by using pre-trained embeddings such as Word2Vec, GloVe, BERT, or
+FastText
+.
+
+Next, a deep learning model is constructed using these embeddings as the first layer inputs:
+
+Convolutional neural networks
+Surprisingly, one model that performs particularly well on sentiment analysis tasks is the convolutional neural network, which is more commonly used in computer vision models. The idea is that instead of performing convolutions on image pixels, the model can instead perform those convolutions in the embedded feature space of the words in a sentence. Since convolutions occur on adjacent words, the model can pick up on negations or n-grams that carry novel sentiment information.
+
+LSTMs and other recurrent neural networks
+RNNs are probably the most commonly used deep learning models for NLP and with good reason. Because these networks are recurrent, they are ideal for working with sequential data such as text. In sentiment analysis, they can be used to repeatedly predict the sentiment as each token in a piece of text is ingested. Once the model is fully trained, the sentiment prediction is just the model’s output after seeing all
+n
+tokens in a sentence.
+
+RNNs can also be greatly improved by the incorporation of an
+attention mechanism
+, which is a separately trained component of the model. Attention helps a model to determine on which tokens in a sequence of text to apply its focus, thus allowing the model to consolidate more information over more timesteps.
+
+Recursive neural networks
+Although similarly named to recurrent neural nets, recursive neural networks work in a fundamentally different way. Popularized by Stanford researcher Richard Socher, these models take a tree-based representation of an input text and create a vectorized representation for each node in the tree. Typically, the sentence’s parse tree is used. As a sentence is read in, it is parsed on the fly and the model generates a sentiment prediction for each element of the tree. This gives a very interpretable result in the sense that a piece of text’s overall sentiment can be broken down by the sentiments of its constituent phrases and their relative weightings. The SPINN model from Stanford is another example of a neural network that takes this approach.
+
+Multi-task learning
+Another promising approach that has emerged recently in NLP is that of
+multi-task learning
+. Within this paradigm, a single model is trained jointly across multiple tasks with the goal of achieving state-of-the-art accuracy in as many domains as possible. The idea here is that a model’s performance on task x can be bolstered by its knowledge of related tasks y and z, along with their associated data. Being able to access a shared memory and set of weights across tasks allows for new state-of-the-art accuracies to be reached. Two popular MTL models that have achieved high performance on sentiment analysis tasks are the
+Dynamic Memory Network
+and the
+Neural Semantic Encoder
+.
+
+Sentiment analysis and unsupervised models
+
+One encouraging aspect of the sentiment analysis task is that it seems to be quite approachable even for unsupervised models that are trained without any labeled sentiment data, only unlabeled text. The key to training unsupervised models with high accuracy is using huge volumes of data.
+
+One model developed by
+OpenAI
+trains on 82 million Amazon reviews that it takes over a month to process! It uses an advanced RNN architecture called a multiplicative LSTM to continually predict the next character in a sequence. In this way, the model learns not only token-level information, but also subword features, such as prefixes and suffixes. Ultimately, it incorporates some supervision into the model, but it is able to acquire the same or better accuracy as other state-of-the-art models with 30-100x less labeled data. It also uncovers a single sentiment “neuron” (or feature) in the model, which turns out to be predictive of the sentiment of a piece of text.
+
+Moving from sentiment to a nuanced spectrum of emotion
+
+Sometimes simply understanding just the sentiment of text is not enough. For acquiring actionable business insights, it can be necessary to tease out further nuances in the emotion that the text conveys. A text having negative sentiment might be expressing any of anger, sadness, grief, fear, or disgust. Likewise, a text having positive sentiment could be communicating any of happiness, joy, surprise, satisfaction, or excitement. Obviously, there’s quite a bit of overlap in the way these different emotions are defined, and the differences between them can be quite subtle.
+
+This makes the emotion analysis task much more difficult than that of sentiment analysis, but also much more informative. Luckily, more and more data with human annotations of emotional content is being compiled. Some common datasets include the
+SemEval 2007 Task 14
+,
+EmoBank
+,
+WASSA 2017
+, The Emotion in Text Dataset, and the
+Affect Dataset
+. Another approach to gathering even larger quantities of data is to use emojis as a proxy for an emotion label. 🙂
+
+When training on emotion analysis data, any of the aforementioned sentiment analysis models should work well. The only caveat is that they must be adapted to classify inputs into one of n emotional categories rather than a binary positive or negative.
+
+Further reading
+
+MonkeyLearn
+– A guide to sentiment analysis functions and resources.
+
+Stanford – Reading Emotions From Speech Using Deep Neural Networks, a publication
+
+Coursera
+– Applied Text Mining in Python video demonstration
+
+Trial
+
+Try now: create ML projects code-free
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+DataRobot
+
+March 7, 2019
+
+|
+8 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

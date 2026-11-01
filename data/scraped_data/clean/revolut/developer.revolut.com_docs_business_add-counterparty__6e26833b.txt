@@ -1,0 +1,514 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/add-counterparty
+page path  : /docs/business/add-counterparty
+captured   : 2026-01-15 14:44:56 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_add-counterparty__6e26833b.html.gz
+========================================================================
+
+Create a counterparty | Revolut Docs
+
+Create a counterparty | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Card invitations
+Counterparties
+Introduction
+Retrieve a list of counterparties
+Retrieve a counterparty
+Delete a counterparty
+Create a counterparty
+Validate an account name (CoP/VoP)
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Simulations
+Team members
+Transactions
+Transfers
+Webhooks
+Counterparties
+Create a counterparty
+Create a counterparty
+
+Create a new counterparty to transact with.
+
+Test accounts for Sandbox
+In the Sandbox environment, you cannot add real people and businesses as Revolut counterparties.
+To help you simulate
+Create a counterparty
+requests for counterparties of profile type
+personal
+, we created some test accounts.
+Look inside for test Revtags.
+To add a counterparty via Revtag, use one of these pairs for the
+name
+and
+revtag
+fields respectively:
+
+Test User 1
+&
+john1pvki
+
+Test User 2
+&
+john2pvki
+
+...
+
+Test User 9
+&
+john9pvki
+
+For more information, see the guides:
+Create a counterparty
+.
+
+Request
+​
+Counterparty to add
+Request body
+Body
+
+object
+Expand
+company_name
+string
+The name of the company counterparty.
+Use when
+individual_name
+or
+name
+isn't specified and
+profile_type
+is
+business
+.
+
+Caution
+The
+company_name
+must contain at least 2 letters (not just characters).
+For example, names like
+12
+will fail validation because they are two characters but not two letters.
+profile_type
+string
+Possible values:
+[
+personal
+,
+business
+]
+The type of the Revolut profile. Used when adding an existing Revolut user via Revtag.
+name
+string
+The name of the counterparty that you create for an existing Revolut user via Revtag.
+Provide the value only when you specify
+personal
+for
+profile_type
+.
+individual_name
+object
+The name of the individual counterparty.
+Use when company_name isn't specified.
+first_name
+string
+The first name of the individual counterparty.
+last_name
+string
+The last name of the individual counterparty.
+bank_country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,3}$
+
+Example:
+
+"GB"
+The country of the bank as 2-letter
+ISO 3166
+code.
+currency
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+revtag
+string
+The
+Revtag
+of the counterparty to add.
+account_no
+string
+The bank account number of the counterparty.
+iban
+string
+The IBAN number of the counterparty's account. This field is displayed for IBAN countries.
+sort_code
+string
+The sort code of the counterparty's account. This field is required for GBP accounts.
+routing_number
+string
+The routing number of the counterparty's account. This field is required for USD accounts.
+bic
+string
+The BIC number of the counterparty's account. This field is required for non-SEPA IBAN/SWIFT.
+clabe
+string
+The CLABE number of the counterparty's account. This field is required for SWIFT MX.
+ifsc
+string
+The IFSC number of the counterparty's account. This field is required for INR accounts.
+bsb_code
+string
+The BSB number of the counterparty's account. This field is required for AUD accounts.
+address
+object
+The address of the counterparty.
+street_line1
+string
+Example:
+
+"Revolut LTD"
+Street line 1 information.
+street_line2
+string
+Example:
+
+"1 Canada Square"
+Street line 2 information.
+region
+string
+The name of the region.
+city
+string
+Example:
+
+"London"
+The name of the city.
+country
+string
+required
+Example:
+
+"GB"
+The country of the counterparty as 2-letter
+ISO 3166
+code.
+postcode
+string
+required
+Example:
+
+"E14 5AB"
+The postcode of the counterparty address.
+
+Response
+​
+200
+400
+422
+4xx
+Added counterparty
+Response body
+Body
+
+object
+Expand
+id
+string(uuid)
+required
+The ID of the counterparty.
+name
+string
+required
+The name of the counterparty.
+revtag
+string
+The
+Revtag
+of the counterparty.
+profile_type
+string
+Possible values:
+[
+personal
+,
+business
+]
+The type of the Revolut profile. Used when adding an existing Revolut user via Revtag.
+country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,3}$
+The bank country of the counterparty as 2-letter
+ISO 3166
+code.
+state
+string
+required
+Possible values:
+[
+created
+,
+draft
+,
+deleted
+]
+Indicates the state of the counterparty.
+created_at
+string(date-time)
+required
+The date and time the counterparty was created in
+ISO 8601
+format.
+updated_at
+string(date-time)
+required
+The date and time the counterparty was last updated in
+ISO 8601
+format.
+accounts
+array of objects
+The list of public accounts associated with this counterparty.
+id
+string(uuid)
+required
+The ID of the counterparty's account.
+name
+string
+The name of the counterparty.
+bank_country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,3}$
+
+Example:
+
+"GB"
+The country of the bank as 2-letter
+ISO 3166
+code.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+type
+string
+required
+Possible values:
+[
+revolut
+,
+external
+]
+Indicates the type of account.
+account_no
+string
+The bank account number of the counterparty.
+iban
+string
+The IBAN number of the counterparty's account if applicable.
+sort_code
+string
+The sort code of the counterparty's account if applicable.
+routing_number
+string
+The routing number of the counterparty's account if applicable.
+bic
+string
+The BIC number of the counterparty's account if applicable.
+clabe
+string
+The CLABE number of the counterparty's account if applicable.
+ifsc
+string
+The IFSC number of the counterparty's account if applicable.
+bsb_code
+string
+The BSB number of the counterparty's account if applicable.
+recipient_charges
+string
+deprecated
+Possible values:
+[
+no
+,
+expected
+]
+Indicates the possibility of the recipient charges.
+
+Caution
+This field is deprecated and should be disregarded.
+It is returned for legacy purposes only.
+cards
+array of objects
+The list of cards associated with this counterparty.
+id
+string(uuid)
+required
+The ID of the counterparty's card.
+name
+string
+required
+The name of the counterparty.
+last_digits
+string
+required
+The last four digits of the card number.
+scheme
+string
+required
+Possible values:
+[
+visa
+,
+mastercard
+]
+The card brand.
+country
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{2,3}$
+The country of the card issuer as 2-letter
+ISO 3166
+code.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

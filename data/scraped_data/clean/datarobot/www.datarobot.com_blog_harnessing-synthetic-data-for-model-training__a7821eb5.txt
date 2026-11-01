@@ -1,0 +1,687 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/harnessing-synthetic-data-for-model-training/
+page path  : /blog/harnessing-synthetic-data-for-model-training/
+captured   : 2026-04-21 10:56:03 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_blog_harnessing-synthetic-data-for-model-training__a7821eb5.html.gz
+========================================================================
+
+Harnessing Synthetic Data for Model Training | DataRobot Blog
+
+Harnessing Synthetic Data for Model Training | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Harnessing Synthetic Data for Model Training
+
+It is no secret to anyone that high-performing ML models have to be supplied with large volumes of quality training data. Without having the data, there’s hardly a way an organization can leverage AI and self-reflect to become more efficient and make better-informed decisions. The process of becoming a data-driven (and especially AI-driven) company is known to be not easy.
+
+28% of companies that adopt AI
+cite lack of access to data as a reason behind failed deployments. –
+KDNuggets
+
+Additionally, there are issues with errors and biases within existing data. They are somewhat easier to mitigate by various processing techniques, but this still affects the availability of trustworthy training data. It’s a serious problem, but the lack of training data is a much harder problem, and solving it might involve many initiatives depending on the maturity level.
+
+Besides data availability and biases there’s another aspect that is very important to mention: data privacy. Both companies and individuals are consistently choosing to prevent data they own to be used for model training by third parties. The lack of transparency and legislation around this topic is well known and
+had already become
+a catalyst of lawmaking across the globe.
+
+However, in the broad landscape of data-oriented technologies, there’s one that aims to solve the above-mentioned problems from a little unexpected angle. This technology is synthetic data. Synthetic data is produced by simulations with various models and scenarios or sampling techniques of existing data sources to create new data that is not sourced from the real world.
+
+Synthetic data can replace or augment existing data and be used for training ML models, mitigating bias, and protecting sensitive or regulated data. It is cheap and can be produced on demand in large quantities according to specified statistics.
+
+Synthetic datasets keep the statistical properties of the original data used as a source: techniques that generate the data obtain a joint distribution that also can be customized if necessary. As a result, synthetic datasets are similar to their real sources but don’t contain any sensitive information. This is especially useful in highly regulated industries such as banking and healthcare, where it can take months for an employee to get access to sensitive data because of strict internal procedures. Using synthetic data in this environment for testing, training AI models, detecting fraud and other purposes simplifies the workflow and reduces the time required for development.
+
+All this also applies to training large language models since they are trained mostly on public data (e.g. OpenAI ChatGPT was trained on Wikipedia, parts of web index, and other public datasets), but we think that it is synthetic data is a real differentiator going further since there’s a limit of available public data for training models (both physical and legal) and human created data is expensive, especially if it requires experts.
+
+Producing Synthetic Data
+
+There are various methods of producing synthetic data. They can be subdivided into roughly 3 major categories, each with its advantages and disadvantages:
+
+Stochastic process modeling.
+Stochastic models are relatively simple to build and don’t require a lot of computing resources, but since modeling is focused on statistical distribution, the row-level data has no sensitive information. The simplest example of stochastic process modeling can be generating a column of numbers based on some statistical parameters such as minimum, maximum, and average values and assuming the output data follows some known distribution (e.g. random or Gaussian).
+
+Rule-based data generation.
+Rule-based systems improve statistical modeling by including data that is generated according to rules defined by humans. Rules can be of various complexity, but high-quality data requires complex rules and tuning by human experts which limits the scalability of the method.
+
+Deep learning generative models.
+By applying deep learning generative models, it is possible to train a model with real data and use that model to generate synthetic data. Deep learning models are able to capture more complex relationships and joint distributions of datasets, but at a higher complexity and compute costs.
+
+Also, it is worth mentioning that current LLMs can also be used to generate synthetic data. It does not require extensive setup and can be very useful on a smaller scale (or when done just on a user request) as it can provide both structured and unstructured data, but on a larger scale it might be more expensive than specialized methods. Let’s not forget that state-of-the-art models are prone to hallucinations so statistical properties of synthetic data that comes from LLM should be checked before using it in scenarios where distribution matters.
+
+An interesting example that can serve as an illustration of how the use of synthetic data requires a change in approach to ML model training is an approach to model validation.
+
+Model validation with synthetic data
+
+In traditional data modeling, we have a dataset (D) that is a set of observations drawn from some unknown real-world process (P) that we want to model. We divide that dataset into a training subset (T), a validation subset (V) and a holdout (H) and use it to train a model and estimate its accuracy.
+
+To do synthetic data modeling, we synthesize a distribution P’ from our initial dataset and sample it to get the synthetic dataset (D’). We subdivide the synthetic dataset into a training subset (T’), a validation subset (V’), and a holdout (H’) like we subdivided the real dataset. We want distribution P’ to be as practically close to P as possible since we want the accuracy of a model trained on synthetic data to be as close to the accuracy of a model trained on real data (of course, all synthetic data guarantees should be held).
+
+When possible, synthetic data modeling should also use the validation (V) and holdout (H) data from the original source data (D) for model evaluation to ensure that the model trained on synthetic data (T’) performs well on real-world data.
+
+So, a good synthetic data solution should allow us to model P(X, Y) as accurately as possible while keeping all privacy guarantees held.
+
+Although the wider use of synthetic data for model training requires changing and improving existing approaches, in our opinion, it is a promising technology to address current problems with data ownership and privacy. Its proper use will lead to more accurate models that will improve and automate the decision making process significantly reducing the risks associated with the use of private data.
+
+Free trial
+
+Experience the DataRobot AI Platform
+
+Less Friction, More AI. Get Started Today With a Free 30-Day Trial.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Authors
+
+by
+
+Nick Volynets
+
+September 28, 2023
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Leaders
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+April 13, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Leaders
+
+Why enterprise AI ROI starts with observability
+
+April 10, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Leaders
+
+Best agentic AI platforms: Why unified platforms win
+
+April 8, 2026
+
+|
+10 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

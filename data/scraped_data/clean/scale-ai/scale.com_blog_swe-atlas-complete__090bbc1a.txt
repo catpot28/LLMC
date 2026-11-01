@@ -1,0 +1,143 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/swe-atlas-complete
+page path  : /blog/swe-atlas-complete
+captured   : 2026-06-15 11:07:42 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_swe-atlas-complete__090bbc1a.html.gz
+========================================================================
+
+SWE Atlas is Complete: Measuring Coding Agents Across the Engineering Loop | Scale AI
+
+SWE Atlas is Complete: Measuring Coding Agents Across the Engineering Loop | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+SWE Atlas is Complete: Measuring Coding Agents Across the Engineering Loop
+By
+
+Matthew Siegel
+&
+The Scale Research Team
+·
+May 7, 2026
+·
+7 min read
+Copy Link
+SWE Atlas, Scale's benchmark suite for evaluating coding agents inside real software repositories, is now complete. With the Refactoring leaderboard now live alongside Codebase QnA and Test Writing, the suite evaluates how AI coding agents perform across a spectrum of professional software engineering tasks. Across the evaluation suite, these benchmarks measure the engineering loop across 284 tasks: understanding a system before changing it, validating that behavior holds, and maintaining structure as the codebase evolves.
+Built on the foundation of SWE-Bench Pro, the standard for measuring whether agents can resolve real software issues, SWE Atlas considers the engineering work behind those resolutions: the investigation, validation, and maintenance that determine whether code changes can be trusted. Across the suite, top systems cluster in the 40s, with none crossing 50%.
+SWE Atlas task distribution by benchmark and subcategory
+Gaps in the Engineering Loop
+The complete SWE Atlas reveals the gaps remain in the engineering loop for agents. In all three benchmarks
+agents struggle to investigate systems thoroughly, write tests with surgical precision, and complete refactors without leaving stale code behind.
+These are different failures, but they point to the same broader limitation: agents can often get part of the way there on tasks but they struggle to finish the work with the completeness real engineering requires.
+Reliability is a second gap. When models try the same task three separate times, they are two to three times more likely to succeed on one attempt than succeeding on all three. Capability and consistency are improving on different timelines, and a coding agent that solves a task on one attempt out of three is not reliable enough for real life environments.
+Pass rates across SWE Atlas: at least one of three trials passing (Pass@3), average per-trial pass rate (Pass@1), and all three trials passing (Pass³). Current model scores are available on the live leaderboard.
+Codebase QnA: Understanding the System
+In Codebase QnA, an agent is placed inside a real repository and asked the kinds of questions engineers face in real work. The benchmark spans five categories:
+Architecture and system design
+asks how a system's components are structured and how they interact.
+Root-cause analysis
+investigates confusing or seemingly broken behavior to determine why it's happening.
+Code onboarding
+covers the questions a new engineer would ask when getting oriented in an unfamiliar codebase.
+Security
+examines security properties, attack surfaces, and vulnerability patterns.
+API and library integration
+asks how to use a library's interfaces and understand its runtime behavior.
+Top scores sit in the low 40s, and the failure patterns are revealing. For example, GPT models tend to run experiments but miss rubric sub-questions, leaving answers incomplete. Claude models tend to reason from the source code without actually running anything, even when the prompt explicitly asks for runtime evidence. Different model families fail in different ways, but answering these questions well requires investigating the system in motion, beyond what reading the code alone can show.
+Test Writing: Validating Behavior
+Test Writing gives an agent a real repository with missing tests for an important behavior, described at a high level in the prompt. The agent has to explore the codebase, identify the right test targets, place the tests in the appropriate files, follow repository conventions, and produce a manifest of the tests it wrote. The benchmark spans three test types:
+Unit tests
+verify that individual pieces of code work correctly on their own.
+Integration tests
+check that multiple pieces of code function correctly when connected.
+Acceptance tests
+evaluate the fully assembled application against business requirements and end-user expectations.
+Top scores reach the mid 40s. The biggest failure mode is weak assertions: agents write tests that look comprehensive but pass equally well on broken code, so the tests would not catch regressions if a real bug were introduced.
+A common pattern is volume over precision: writing more tests does not necessarily improve performance, and higher test counts correlate with higher mutation failure rates. The leading model under a common scaffold writes the fewest tests on average and lands the highest score. The benchmark rewards agents that find the
+right
+tests to write, rather than agents that simply add
+more
+tests.
+Refactoring: Maintaining the System
+The final leaderboard in this suite, Refactoring, analyzes how models reorganize code. The refactoring tasks span four types:
+Decomposition
+breaks a large, monolithic component into smaller, focused pieces.
+Interface evolution
+changes how modules expose functionality, updating signatures and propagating those changes through consumers.
+Extraction
+pulls shared logic out into a dedicated utility or package.
+Relocation
+moves code to a more appropriate location in the codebase.
+Success requires editing across multiple files, updating call sites, preserving existing behavior, passing existing tests, removing stale code, keeping documentation aligned, and avoiding regressions.
+These are the broadest code-change tasks in SWE Atlas. Reference solutions involve roughly twice the lines of code changed and 1.7 times the file edits of SWE-Bench Pro tasks. They span production repositories across Go, TypeScript, Python, C, C++, and JavaScript. Top scores sit just under 50%.
+Most models pass on test-preservation but struggle on completeness. The common failures:
+Missed call sites.
+Refactors that touch one location but skip others that need the same change.
+Leftover dead code.
+Now-unused imports, helpers, or local definitions left behind after the move.
+Edge cases.
+Main paths work; edge cases break when the code is streamlined.
+Passing tests is necessary, but a complete refactor also has to leave the codebase cleaner than it found it.
+Strong Agents Investigate
+A pattern shows up across all three benchmarks: stronger agents are more investigative. The gap between models that explore aggressively and ones that don't is large, and it appears in every benchmark in the suite.
+In
+Codebase QnA
+, top models execute code at much higher rates than weaker ones, setting up applications, sending live requests, and performing runtime analysis to understand behavior rather than reasoning from the source alone. In
+Test Writing
+, the leading systems frontload codebase exploration, aggressively searching and reading early in the trajectory before writing any tests. In
+Refactoring
+, success correlates strongly with file-edit recall: whether the agent identified every file that needed changing instead of making incomplete or sloppy refactors.
+Across SWE Atlas, investigation correlates directly with success. Agents operate through tools, and SWE Atlas measures model-plus-scaffold behavior because that is how coding agents are actually used. Models running in their native scaffolds (Claude Code, Codex CLI) perform 1.5x to 2x more exploration, search, and execution than the same models on a generic harness, and they score noticeably higher. A coding agent's capability is inseparable from the environment it operates in.
+Moving Fast, but a Ceiling Remains
+Coding ability is not a single capability. A model can be strong at producing patches and still struggle to investigate a system. It can write plausible tests while missing the behavior that matters. It can pass existing tests while leaving a refactor incomplete. These are different failure modes, and they matter in different ways for production software.
+Frontier coding models have been moving fast on issue resolution. SWE-Bench Pro shows top frontier scores rising into the high 50s. SWE Atlas asks what happens around those patches: the investigation, validation, and maintenance work. The same models hover in the high 40s.
+Tracking the Claude Opus 4.x series shows substantial gains on each benchmark in the suite over the past eight months:
+Claude progress on SWE Atlas over an 8-month period
+Resolve rates roughly tripled on Codebase Q&A (from ~17% to ~49%), more than doubled on Test Writing, and climbed from under 20% to ~45% on Refactoring. Though trajectories are steep, the current ceiling is very much there.
+The concern now extends beyond code generation into engineering judgment under context: knowing what to look at, deciding what evidence matters, finding all the call sites a refactor touches, writing the right tests rather than many tests, and cleaning up after the change. With SWE Atlas complete, the shape of that gap is now visible and measurable on all three leaderboards.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

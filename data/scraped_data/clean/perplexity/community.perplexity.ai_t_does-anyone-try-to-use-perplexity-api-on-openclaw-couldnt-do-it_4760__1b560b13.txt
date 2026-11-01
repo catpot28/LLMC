@@ -1,0 +1,475 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/does-anyone-try-to-use-perplexity-api-on-openclaw-couldnt-do-it/4760
+page path  : /t/does-anyone-try-to-use-perplexity-api-on-openclaw-couldnt-do-it/4760
+captured   : 2026-04-12 11:56:08 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_does-anyone-try-to-use-perplexity-api-on-openclaw-couldnt-do-it_4760__1b560b13.html.gz
+========================================================================
+
+Does anyone try to use Perplexity API on Openclaw? Couldn't do it - General - Perplexity API Platform Forum
+
+Does anyone try to use Perplexity API on Openclaw? Couldn't do it - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Does anyone try to use Perplexity API on Openclaw? Couldn't do it
+
+General
+
+chat-completions
+
+leonideo
+
+April 9, 2026, 9:28am
+
+1
+
+I have try many time’s and different ways even with perplexity computer but it doesnt works at all… Mabe anyone do it already and have some setup tips for me
+
+Kesku
+
+April 9, 2026, 10:57pm
+
+2
+
+Hey! Have you read
+Perplexity with OpenClaw - Perplexity
+?
+
+leonideo
+
+April 9, 2026, 11:28pm
+
+3
+
+Yeah i see about search but i mean use as LLM model but have a problem, gpts does work at all, sonar same, claude works but only chat mode tools doesn’t work
+
+leonideo
+
+April 10, 2026, 3:12am
+
+4
+
+[FIX] OpenClaw + Perplexity Agent API: all tool calls fail with empty arguments
+{}
+
+OpenClaw version:
+2026.4.9
+
+Provider:
+Perplexity Agent API (
+https://api.perplexity.ai/v1
+)
+
+API type:
+
+openai-responses
+
+Model:
+
+perplexity/anthropic/claude-sonnet-4-6
+
+Symptom
+
+When using OpenClaw with the Perplexity Agent API in
+openai-responses
+mode, any tool (exec, write, read, etc.) fails with a validation error:
+
+text
+
+**
+Validation failed for tool "exec":
+
+- command: must have required property 'command'
+
+Received arguments:
+
+{}
+**
+
+Chat replies without tool calls work fine — only tool calling is broken. Arguments always come through as empty
+{}
+.
+
+Cause
+
+The streaming parser for the OpenAI Responses API (
+openai-responses-shared.js
+from
+@mariozechner/pi-ai
+) expects function call arguments to arrive incrementally via
+response.function_call_arguments.delta
+events.
+
+However,
+Perplexity Agent API sends all arguments immediately
+in the first
+response.output_item.added
+event (inside
+item.arguments
+) and never emits subsequent
+delta
+or
+done
+events for function arguments.
+
+Here’s what happens step by step:
+
+On receiving
+response.output_item.added
+with
+item.type === "function_call"
+, the parser creates a
+currentBlock
+with
+arguments: {}
+and stores
+item.arguments
+in
+partialJson
+.
+
+It then waits for
+response.function_call_arguments.delta
+events to fill
+arguments
+from
+partialJson
+— but
+Perplexity never sends those
+.
+
+When
+response.output_item.done
+comes, the parser creates a
+new
+
+toolCall
+object with correctly parsed arguments from
+partialJson
+and passes it in the stream event
+toolcall_end
+, but
+does not update
+the existing entry in
+output.content
+.
+
+The agent loop (
+agent-loop.js
+in
+@mariozechner/pi-agent-core
+) reads tool calls from
+message.content
+— where
+arguments
+are still
+{}
+.
+
+Validation fails since required properties are missing.
+
+Example from the session file:
+
+json
+
+{
+
+"type": "toolCall",
+
+"name": "exec",
+
+"arguments": {},
+
+"partialJson": "{\\"command\\": \\"echo \\\\\\"tools test ok\\\\\\"\\"}"
+
+}
+
+The arguments were correctly captured in
+partialJson
+, but never copied to
+arguments
+.
+
+Fix
+
+File to patch
+
+text
+
+/usr/lib/node_modules/openclaw/node_modules/@mariozechner/pi-ai/dist/providers/openai-responses-shared.js
+
+What to change
+
+Find the
+response.output_item.done
+handler for type
+function_call
+(around lines 392–405). It looks like this:
+
+javascript
+
+else if (item.type === "function_call") {
+
+const args = currentBlock?.type === "toolCall" && currentBlock.partialJson
+
+? parseStreamingJson(currentBlock.partialJson)
+
+: parseStreamingJson(item.arguments || "{}");
+
+const toolCall = {
+
+type: "toolCall",
+
+id: `${item.call_id}|${item.id}`,
+
+name: item.name,
+
+arguments: args,
+
+};
+
+currentBlock = null;
+
+stream.push({ type: "toolcall_end", contentIndex: blockIndex(), toolCall, partial: output });
+
+}
+
+Add two lines
+before
+
+currentBlock = null;
+:
+
+javascript
+
+else if (item.type === "function_call") {
+
+const args = currentBlock?.type === "toolCall" && currentBlock.partialJson
+
+? parseStreamingJson(currentBlock.partialJson)
+
+: parseStreamingJson(item.arguments || "{}");
+
+const toolCall = {
+
+type: "toolCall",
+
+id: `${item.call_id}|${item.id}`,
+
+name: item.name,
+
+arguments: args,
+
+};
+
+// FIX: update entry in output.content so agent-loop sees correct arguments
+**
+
+const idx = output.content.indexOf(currentBlock);
+
+if (idx >= 0) { output.content[idx] = toolCall; }
+
+currentBlock = null;
+
+stream.push({ type: "toolcall_end", contentIndex: blockIndex(), toolCall, partial: output });
+
+}
+**
+
+Restart gateway
+
+After saving the file, restart the gateway service:
+
+bash
+
+systemctl --user restart openclaw-gateway
+
+Why it works
+
+The
+toolcall_end
+event already contains the correct
+toolCall
+object with parsed arguments.
+
+The problem is that the agent loop reads tool calls from
+message.content
+, which still holds the old
+currentBlock
+with empty
+{}
+arguments.
+
+The patch replaces that outdated record with the properly parsed
+toolCall
+before clearing
+currentBlock
+.
+
+Warning about updates
+
+This patch modifies a file inside
+node_modules
+.
+
+Whenever OpenClaw is updated (
+npm update -g openclaw
+), the patch will be overwritten — you’ll need to reapply it until it’s merged upstream in
+@mariozechner/pi-ai
+.
+
+Extra: proper configuration for Perplexity Agent API
+
+Configuration file:
+~/.openclaw/openclaw.json
+
+Parameter
+
+Correct value
+
+Common mistake
+
+apiType
+
+openai-responses
+
+openai-completions
+— doesn’t work
+
+baseUrl
+
+https://api.perplexity.ai/v1
+
+/v1/agent
+— invalid path
+
+model
+
+perplexity/anthropic/claude-sonnet-4-6
+
+—
+
+Note:
+baseUrl
+must be
+https://api.perplexity.ai/v1
+, not
+/v1/agent
+.
+
+The API type should be
+openai-responses
+.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Perplexity API doesn't support tool call, even though Llama 3.1 does
+
+Bug Reports
+
+1
+
+221
+
+May 15, 2025
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+135
+
+April 7, 2026
+
+OpenClaw now supports the Perplexity Search API natively 🔍
+
+Announcements
+
+search-api
+
+0
+
+21
+
+April 1, 2026
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+134
+
+April 7, 2026
+
+More transparity and options for Perplexity pro application "labs" features
+
+Feature Requests
+
+0
+
+142
+
+June 16, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,1046 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/open-banking/create-domestic-payments
+page path  : /docs/open-banking/create-domestic-payments
+captured   : 2026-01-15 14:20:18 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_open-banking_create-domestic-payments__118159b4.html.gz
+========================================================================
+
+Create a domestic payment | Revolut Docs
+
+Create a domestic payment | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Open Banking API
+Introduction
+Accounts
+Transactions
+Payments
+Domestic
+Domestic payment
+Introduction
+Create a domestic payment consent
+Retrieve a domestic payment consent
+Get funds confirmation for a domestic payment consent
+Create a domestic payment
+Retrieve a domestic payment
+Scheduled payment
+Standing order
+International
+Draft
+File
+Applications
+Updates
+Payments
+Domestic
+Domestic payment
+Create a domestic payment
+Create a domestic payment
+
+Create a domestic payment.
+
+Note
+As is defined in the Open Banking Specifications, the
+/Data/Initiation
+and the
+/Data/Risk
+sections of the request must be an exact match for the related consent passed in
+ConsentId
+.
+
+See also
+Tutorials: Initiate your first payment
+.
+
+Request
+​
+Default
+Header parameters
+Header parameters
+Expand
+x-fapi-financial-id
+string
+required
+The unique ID of the
+ASPSP
+that the request is issued to.
+The ID of Revolut is
+001580000103UAvAAM
+.
+x-fapi-customer-last-logged-time
+string
+Pattern:
+Value must match regular expression
+^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4} \d{2}:\d{2}:\d{2} (GMT|UTC)$
+The date and time when the
+PSU
+last logged in with the
+TPP
+.
+
+All dates in the HTTP headers are represented as
+RFC 7231
+Full Dates.
+For example:
+Sun, 10 Sep 2017 19:43:31 UTC
+.
+x-fapi-customer-ip-address
+string
+The IP address of the
+PSU
+if the PSU is logged in with the
+TPP
+.
+x-fapi-interaction-id
+string
+An
+RFC4122
+UUID used as a correlation ID.
+Authorization
+string
+required
+The access token that you've generated.
+For more information, see
+Generate an access token
+.
+x-idempotency-key
+string
+required
+Possible length:
+
+<= 40 characters
+
+Pattern:
+Value must match regular expression
+^(?!\s)(.*)(\S)$
+Each request is processed only once per
+x-idempotency-key
+.
+The idempotency key is valid for 24 hours.
+x-jws-signature
+string
+required
+A
+detached JWS signature
+of the body of the payload.
+x-customer-user-agent
+string
+The user agent that the
+PSU
+is using.
+Request body
+Body
+
+object
+Expand
+Data
+object
+required
+OBWriteDataDomestic2
+ConsentId
+string
+required
+Possible length:
+
+non-empty
+and
+<= 128 characters
+The unique ID that the
+ASPSP
+assigns to identify the consent resource.
+Initiation
+object
+required
+The initiation payload that the initiating party sends to the
+ASPSP
+, which is used to request movement of funds from the debtor account to the creditor for a single domestic payment.
+InstructionIdentification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique ID that an instructing party assigns for an instructed party to unambiguously identify the instruction.
+
+This ID is used between the instructing party and the instructed party to refer to an individual instruction.
+It can be included in the messages related to the instruction.
+EndToEndIdentification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique and immutable ID that the initiating party assigns to unambiguously identify the transaction.
+
+This ID is used for reconciliation or to link tasks related to the transaction.
+It can be included in the messages related to the transaction.
+
+Note
+Faster Payments Scheme can access only 31 characters for the
+EndToEndIdentification
+field.
+InstructedAmount
+object
+required
+The amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency that the initiating party instructs.
+
+This amount has to be transported unchanged through the transaction chain.
+Amount
+string
+required
+Pattern:
+Value must match regular expression
+^\d{1,13}\.\d{1,5}$
+The amount of money where the unit of currency is explicit and compliant with
+ISO 4217
+.
+Currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3,3}$
+ISO 4217
+currency code in upper case.
+DebtorAccount
+object
+The details to identify the account.
+SchemeName
+string
+required
+Possible values:
+[
+UK.OBIE.IBAN
+,
+UK.OBIE.SortCodeAccountNumber
+,
+US.RoutingNumberAccountNumber
+,
+US.BranchCodeAccountNumber
+]
+
+Example:
+
+["UK.OBIE.IBAN","UK.OBIE.SortCodeAccountNumber"]
+The name of the identification scheme.
+Identification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 256 characters
+The account ID that an institution assigns to identify the account, which is known by the account owner.
+Name
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The account name that the account servicing institution assigns.
+
+The account name is the name or names of the account owner(s) represented at an account level.
+
+The account name is not the product name or the nickname of the account.
+SecondaryIdentification
+string
+Possible length:
+
+non-empty
+and
+<= 34 characters
+The secondary account ID that the account servicing institution assigns.
+
+Building societies can use this ID to identify accounts with a roll number in addition to a sort code and account number combination.
+CreditorAccount
+object
+required
+The details to identify the account.
+SchemeName
+string
+required
+Possible values:
+[
+UK.OBIE.IBAN
+,
+UK.OBIE.SortCodeAccountNumber
+,
+US.RoutingNumberAccountNumber
+,
+US.BranchCodeAccountNumber
+]
+
+Example:
+
+["UK.OBIE.IBAN","UK.OBIE.SortCodeAccountNumber"]
+The name of the identification scheme.
+Identification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 256 characters
+The account ID that the institution assigns to identify an account, which is known by the account owner.
+Name
+string
+required
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The account name that the account servicing institution assigns.
+
+The account name is the name or names of the account owner(s) represented at an account level.
+
+The account name is not the product name or the nickname of the account.
+
+Note
+ASPSP
+s might optionally validate this name to confirm the payee.
+SecondaryIdentification
+string
+Possible length:
+
+non-empty
+and
+<= 34 characters
+The secondary account ID that the account servicing institution assigns.
+
+Building societies can use this ID to identify accounts with a roll number in addition to a sort code and account number combination.
+CreditorPostalAddress
+object
+The postal address of the creditor, as defined by postal services.
+Department
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the department.
+SubDepartment
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the sub-department.
+StreetName
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the street.
+BuildingNumber
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The number of the building.
+PostCode
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The post code of the address.
+TownName
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The name of the town.
+CountrySubDivision
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The subdivision of the country, such as state, region, or county.
+Country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,2}$
+The name of the country.
+AddressLine
+array of strings
+Possible number of items:
+
+<= 7 items
+The information that locates and identifies the address of the creditor, presented in free format text.
+RemittanceInformation
+object
+The information used for matching an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
+Unstructured
+string
+Possible length:
+
+non-empty
+and
+<= 140 characters
+The information used for matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.
+Reference
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique reference that the creditor assigns to unambiguously identify the payment transaction.
+
+If available, the initiating party should provide this reference in the structured remittance information to enable reconciliation by the creditor upon receipt of the amount of money.
+
+If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.
+
+Note
+Faster Payments Scheme can accept only 18 characters for the
+Reference
+field.
+
+Caution
+Only one reference should be provided, if both
+Reference
+and
+Unstructured
+parameters are provided, then the
+Unstructured
+parameter will be ignored.
+SupplementaryData
+object
+Possible length:
+
+non-empty
+and
+<= 40 characters
+The additional information that cannot be captured in the structured fields and/or any other specific block.
+< * >
+string
+The additional information that cannot be captured in the structured fields and/or any other specific block.
+
+< * >
+acts as a placeholder here, and it represents an optional property (or multiple such properties) with an arbitrary name and data.
+
+To see an example, check the response body samples.
+Risk
+object
+required
+The Risk section contains the risk indicators that the initiating party sends to the
+ASPSP
+, which can be used to specify additional details for risk scoring for account information.
+PaymentContextCode
+string
+Possible values:
+[
+BillPayment
+,
+EcommerceGoods
+,
+EcommerceServices
+,
+Other
+,
+PartyToParty
+]
+The payment context.
+MerchantCategoryCode
+string
+The merchant category code.
+MerchantCustomerIdentification
+string
+The merchant customer identification.
+DeliveryAddress
+object
+The information that locates and identifies the delivery address, as defined by postal services or in free format text.
+AddressLine
+array of strings
+Possible number of items:
+
+<= 2 items
+The information that locates and identifies the delivery address, as defined by postal services, that is presented in free format text.
+StreetName
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the street.
+BuildingNumber
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The number of the building.
+PostCode
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The post code of the delivery address.
+TownName
+string
+required
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The name of the town.
+CountrySubDivision
+array of strings
+Possible number of items:
+
+<= 2 items
+The subdivision of the country, for example, state, region or county.
+Country
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{2,2}$
+The name of the country.
+
+Response
+​
+201
+400
+401
+403
+405
+406
+415
+429
+500
+Domestic Payment Created
+HTTP headers
+HTTP headers
+Expand
+x-jws-signature
+string
+Header containing a
+detached JWS signature
+of the body of the payload.
+x-fapi-interaction-id
+string
+An
+RFC4122
+UUID used as a correlation ID.
+Response body
+Body
+
+object
+Expand
+Data
+object
+required
+OBWriteDataDomesticResponse2
+DomesticPaymentId
+string
+required
+Possible length:
+
+non-empty
+and
+<= 40 characters
+The unique ID that the
+ASPSP
+assigns to uniquely identify the domestic payment resource.
+ConsentId
+string
+required
+Possible length:
+
+non-empty
+and
+<= 128 characters
+The unique ID that the
+ASPSP
+assigns to identify the consent resource.
+CreationDateTime
+string(date-time)
+required
+The date and time when the message was created.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Status
+string
+required
+Possible values:
+[
+AcceptedSettlementCompleted
+,
+AcceptedSettlementInProcess
+,
+Pending
+,
+Rejected
+]
+The status of the payment information group.
+StatusUpdateDateTime
+string(date-time)
+required
+The date and time when the resource status was updated.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Initiation
+object
+required
+The initiation payload that the initiating party sends to the
+ASPSP
+, which is used to request movement of funds from the debtor account to the creditor for a single domestic payment.
+InstructionIdentification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique ID that an instructing party assigns for an instructed party to unambiguously identify the instruction.
+
+This ID is used between the instructing party and the instructed party to refer to an individual instruction.
+It can be included in the messages related to the instruction.
+EndToEndIdentification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique and immutable ID that the initiating party assigns to unambiguously identify the transaction.
+
+This ID is used for reconciliation or to link tasks related to the transaction.
+It can be included in the messages related to the transaction.
+
+Note
+Faster Payments Scheme can access only 31 characters for the
+EndToEndIdentification
+field.
+InstructedAmount
+object
+required
+The amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency that the initiating party instructs.
+
+This amount has to be transported unchanged through the transaction chain.
+Amount
+string
+required
+Pattern:
+Value must match regular expression
+^\d{1,13}\.\d{1,5}$
+The amount of money where the unit of currency is explicit and compliant with
+ISO 4217
+.
+Currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3,3}$
+ISO 4217
+currency code in upper case.
+DebtorAccount
+object
+The details to identify the account.
+SchemeName
+string
+required
+Possible values:
+[
+UK.OBIE.IBAN
+,
+UK.OBIE.SortCodeAccountNumber
+,
+US.RoutingNumberAccountNumber
+,
+US.BranchCodeAccountNumber
+]
+
+Example:
+
+["UK.OBIE.IBAN","UK.OBIE.SortCodeAccountNumber"]
+The name of the identification scheme.
+Identification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 256 characters
+The account ID that an institution assigns to identify the account, which is known by the account owner.
+Name
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The account name that the account servicing institution assigns.
+
+The account name is the name or names of the account owner(s) represented at an account level.
+
+The account name is not the product name or the nickname of the account.
+SecondaryIdentification
+string
+Possible length:
+
+non-empty
+and
+<= 34 characters
+The secondary account ID that the account servicing institution assigns.
+
+Building societies can use this ID to identify accounts with a roll number in addition to a sort code and account number combination.
+CreditorAccount
+object
+required
+The details to identify the account.
+SchemeName
+string
+required
+Possible values:
+[
+UK.OBIE.IBAN
+,
+UK.OBIE.SortCodeAccountNumber
+,
+US.RoutingNumberAccountNumber
+,
+US.BranchCodeAccountNumber
+]
+
+Example:
+
+["UK.OBIE.IBAN","UK.OBIE.SortCodeAccountNumber"]
+The name of the identification scheme.
+Identification
+string
+required
+Possible length:
+
+non-empty
+and
+<= 256 characters
+The account ID that the institution assigns to identify an account, which is known by the account owner.
+Name
+string
+required
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The account name that the account servicing institution assigns.
+
+The account name is the name or names of the account owner(s) represented at an account level.
+
+The account name is not the product name or the nickname of the account.
+
+Note
+ASPSP
+s might optionally validate this name to confirm the payee.
+SecondaryIdentification
+string
+Possible length:
+
+non-empty
+and
+<= 34 characters
+The secondary account ID that the account servicing institution assigns.
+
+Building societies can use this ID to identify accounts with a roll number in addition to a sort code and account number combination.
+CreditorPostalAddress
+object
+The postal address of the creditor, as defined by postal services.
+Department
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the department.
+SubDepartment
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the sub-department.
+StreetName
+string
+Possible length:
+
+non-empty
+and
+<= 70 characters
+The name of the street.
+BuildingNumber
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The number of the building.
+PostCode
+string
+Possible length:
+
+non-empty
+and
+<= 16 characters
+The post code of the address.
+TownName
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The name of the town.
+CountrySubDivision
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The subdivision of the country, such as state, region, or county.
+Country
+string
+Pattern:
+Value must match regular expression
+^[A-Z]{2,2}$
+The name of the country.
+AddressLine
+array of strings
+Possible number of items:
+
+<= 7 items
+The information that locates and identifies the address of the creditor, presented in free format text.
+RemittanceInformation
+object
+The information used for matching an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
+Unstructured
+string
+Possible length:
+
+non-empty
+and
+<= 140 characters
+The information used for matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.
+Reference
+string
+Possible length:
+
+non-empty
+and
+<= 35 characters
+The unique reference that the creditor assigns to unambiguously identify the payment transaction.
+
+If available, the initiating party should provide this reference in the structured remittance information to enable reconciliation by the creditor upon receipt of the amount of money.
+
+If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.
+
+Note
+Faster Payments Scheme can accept only 18 characters for the
+Reference
+field.
+
+Caution
+Only one reference should be provided, if both
+Reference
+and
+Unstructured
+parameters are provided, then the
+Unstructured
+parameter will be ignored.
+SupplementaryData
+object
+Possible length:
+
+non-empty
+and
+<= 40 characters
+The additional information that cannot be captured in the structured fields and/or any other specific block.
+< * >
+string
+The additional information that cannot be captured in the structured fields and/or any other specific block.
+
+< * >
+acts as a placeholder here, and it represents an optional property (or multiple such properties) with an arbitrary name and data.
+
+To see an example, check the response body samples.
+Links
+object
+required
+Links relevant to the payload.
+Self
+string(uri)
+required
+The absolute URI to the resource.
+Next
+string(uri)
+The absolute URI to the next pagination resource.
+Prev
+string(uri)
+The absolute URI to the previous pagination resource.
+Meta
+object
+required
+Meta data relevant to the payload.
+TotalPages
+integer(int32)
+Used for pagination. Indicates how many pages of results are available.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

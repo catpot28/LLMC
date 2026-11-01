@@ -1,0 +1,669 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/codestral-2501/
+page path  : /fr/news/codestral-2501/
+captured   : 2026-06-09 09:32:27 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_codestral-2501__92cb415f.html.gz
+========================================================================
+
+Codestral 25.01 | Mistral AI
+
+Codestral 25.01 | Mistral AI
+
+Contact
+
+Menu
+
+Produits
+
+Solutions
+
+Modèles
+
+Développeurs
+
+Blog
+
+Clients
+
+Entreprise
+
+Contact
+
+Commencez
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Produits
+Solutions
+Modèles
+Développeurs
+Blog
+Clients
+Entreprise
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Commencez
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact
+
+Recherche
+
+Codestral 25.01
+
+January 13, 2025
+
+Mistral AI team
+
+Retour au blog
+
+4 min read
+
+Partager cet article
+
+Copied!
+
+Parmi toutes les innovations en IA de l'année écoulée, la génération de code a sans doute été la plus significative. Tout comme la chaîne de montage a rationalisé la fabrication et la calculatrice a transformé les mathématiques, les modèles de codage représentent un changement significatif dans le développement logiciel.
+Mistral AI a été à l'avant-garde de ce changement avec
+Codestral
+, un modèle de codage à la pointe de la technologie (SOTA) lancé plus tôt cette année. Léger, rapide et compétent dans plus de 80 langages de programmation, Codestral se spécialise dans les tâches à faible latence et haute fréquence telles que le remplissage au milieu (FIM), la correction de code et la génération de tests. Codestral a été utilisé par des milliers de développeurs comme un compagnon de codage très performant, augmentant régulièrement la productivité de plusieurs fois. Et aujourd'hui, Codestral reçoit une grande mise à jour.
+
+Codestral 25.01
+présente une architecture plus efficace et un tokenizer amélioré par rapport à l'original, générant et complétant le code environ 2 fois plus rapidement. Le modèle est désormais le leader incontesté pour le codage dans sa catégorie de poids, et SOTA pour les cas d'utilisation FIM dans tous les domaines.
+
+Benchmarks
+
+Nous avons évalué le nouveau Codestral avec les principaux modèles de codage de moins de 100 milliards de paramètres, largement considérés comme les meilleurs pour les tâches FIM.
+Vue d'ensemble
+
+Python
+SQL
+
+Moyenne sur plusieurs langages
+
+Modèle
+
+Longueur du contexte
+
+HumanEval
+
+MBPP
+
+CruxEval
+
+LiveCodeBench
+
+RepoBench
+
+Spider
+
+CanItEdit
+
+HumanEval (moyenne)
+
+HumanEvalFIM (moyenne)
+
+Codestral-2501
+256k
+
+86.6%
+
+80.2%
+
+55.5%
+
+37.9%
+
+38.0%
+
+66.5%
+50.5%
+
+71.4%
+
+85.9%
+
+Codestral-2405 22B
+32k
+81.1%
+78.2%
+51.3%
+31.5%
+34.0%
+63.5%
+50.5%
+65.6%
+82.1%
+
+Codellama 70B instruct
+4k
+67.1%
+70.8%
+47.3%
+20.0%
+11.4%
+37.0%
+29.5%
+55.3%
+-
+
+DeepSeek Coder 33B instruct
+16k
+77.4%
+80.2%
+49.5%
+27.0%
+28.4%
+60.0%
+47.6%
+65.1%
+85.3%
+
+DeepSeek Coder V2 lite
+128k
+83.5%
+83.2%
+49.7%
+28.1%
+20.0%
+72.0%
+41.0%
+65.9%
+84.1%
+
+Par langage
+
+Modèle
+HumanEval Python
+HumanEval C++
+HumanEval Java
+HumanEval Javascript
+HumanEval Bash
+HumanEval Typescript
+HumanEval C#
+HumanEval (moyenne)
+
+Codestral-2501
+
+86.6%
+
+78.9%
+
+72.8%
+
+82.6%
+
+43.0%
+
+82.4%
+
+53.2%
+
+71.4%
+
+Codestral-2405 22B
+81.1%
+68.9%
+
+78.5%
+
+71.4%
+40.5%
+74.8%
+43.7%
+65.6%
+
+Codellama 70B instruct
+67.1%
+56.5%
+60.8%
+62.7%
+32.3%
+61.0%
+46.8%
+55.3%
+
+DeepSeek Coder 33B instruct
+77.4%
+65.8%
+73.4%
+73.3%
+39.2%
+77.4%
+49.4%
+65.1%
+
+DeepSeek Coder V2 lite
+83.5%
+68.3%
+65.2%
+80.8%
+34.2%
+
+82.4%
+
+46.8%
+65.9%
+
+FIM (correspondance exacte d'une seule ligne)
+
+Modèle
+HumanEvalFIM Python
+HumanEvalFIM Java
+HumanEvalFIM JS
+HumanEvalFIM (moyenne)
+
+Codestral-2501
+
+80.2%
+
+89.6%
+
+87.96%
+
+85.89%
+
+Codestral-2405 22B
+77.0%
+83.2%
+86.08%
+82.07%
+
+OpenAI FIM API*
+80.0%
+84.8%
+86.5%
+83.7%
+
+DeepSeek Chat API
+78.8%
+89.2%
+85.78%
+84.63%
+
+DeepSeek Coder V2 lite
+78.7%
+87.8%
+85.90%
+84.13%
+
+DeepSeek Coder 33B instruct
+80.1%
+89.0%
+86.80%
+85.3%
+
+FIM pass@1 :
+
+Modèle
+HumanEvalFIM Python
+HumanEvalFIM Java
+HumanEvalFIM JS
+HumanEvalFIM (moyenne)
+
+Codestral-2501
+
+92.5%
+
+97.1%
+
+96.1%
+
+95.3%
+
+Codestral-2405 22B
+90.2%
+90.1%
+95.0%
+91.8%
+
+OpenAI FIM API*
+91.1%
+91.8%
+95.2%
+92.7%
+
+DeepSeek Chat API
+91.7%
+96.1%
+95.3%
+94.4%
+
+* GPT 3.5 Turbo est la dernière API FIM disponible chez OpenAI
+
+Disponible dès aujourd'hui
+
+Codestral 25.01 est déployé dans le monde entier auprès des développeurs via nos partenaires IDE / plugin IDE. Vous pouvez ressentir la différence en termes de qualité et de rapidité de réponse pour la complétion de code en sélectionnant Codestral 25.01 dans leur sélecteur de modèle respectif.
+Pour les cas d'utilisation en entreprise, en particulier ceux qui nécessitent la résidence des données et des modèles, Codestral 25.01 est disponible pour un déploiement local au sein de vos locaux ou VPC exclusivement depuis
+Continue
+. Découvrez la démo ci-dessous et essayez-le gratuitement dans Continue pour
+VS Code
+ou
+JetBrains
+.
+
+* Démo de Codestral 25.01 Chat
+Ty Dunn, co-fondateur de Continue, a déclaré : "Pour les assistants de code IA, la complétion de code constitue une grande partie du travail, ce qui nécessite des modèles excellents en remplissage au milieu (FIM). Codestral 25.01 marque une avancée significative dans ce domaine. Le nouveau modèle de Mistral AI est capable de fournir des suggestions plus précises, beaucoup plus rapidement - un élément crucial pour un développement logiciel précis et efficace. C'est pourquoi Codestral est notre modèle d'autocomplétion recommandé pour les développeurs."
+Si vous souhaitez créer votre propre intégration avec l'API Codestral, rendez-vous sur
+la Plateforme
+pour utiliser
+codestral-latest
+, ou en savoir plus sur notre
+documentation Codestral
+. L'API est également disponible sur Vertex AI de Google Cloud, en aperçu privé sur Azure AI Foundry, et bientôt sur Amazon Bedrock.
+Nous avons hâte d'entendre votre expérience avec Codestral 25.01.
+
+0%
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Sélectionner la langue
+
+Français
+
+English
+Français
+Italiano

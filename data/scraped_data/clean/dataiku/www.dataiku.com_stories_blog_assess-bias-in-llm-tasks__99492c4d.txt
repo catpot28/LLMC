@@ -1,0 +1,515 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/assess-bias-in-llm-tasks
+page path  : /stories/blog/assess-bias-in-llm-tasks
+captured   : 2026-02-09 06:16:15 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_assess-bias-in-llm-tasks__99492c4d.html.gz
+========================================================================
+
+Perturbing Prompts to Assess Bias in LLM Tasks
+
+Perturbing Prompts to Assess Bias in LLM Tasks
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Perturbing Prompts to Assess Bias in LLM Tasks
+
+Aug 18, 2025
+
+7 min read
+
+/
+
+Roseanna Hopper, Sibongile Toure
+
+As organizations increasingly integrate large language models (LLMs) into their operations, it has become critical to ensure that these systems operate fairly and responsibly across diverse populations. As with any AI or ML application, LLMs in both agentic and non-agentic settings can inadvertently learn and reproduce historical biases based on their training data, creating systems that systematically disadvantage certain groups. Last year, for example, a
+study at Stanford University
+found evidence of systematic bias in LLMs with respect to perceived racial and gender differences in certain names.
+
+One approach to bias evaluation is to test systems reactively through mechanisms like manual output review, spot checking, or basic post-deployment analysis. However, reactive assessment can miss subtle but systematic patterns of bias that emerge under more comprehensive examination. For organizations interested in
+responsible AI (RAI)
+, a post-hoc approach that does not incorporate fairness as a deployment prerequisite will not be sufficient.
+
+As part of Dataiku’s commitment to RAI, we would like to present two case studies in using data perturbations as an avenue for assessing bias in LLM outputs, using product review summaries and product marketing as the testing ground.
+
+Concepts in LLM Assessment
+
+The RAI approach to LLM evaluation involves incorporating fairness considerations at every stage of project development. This includes diving deeper than aggregate performance metrics, which can mask disparate impact across different subpopulations. Dataiku has robust
+subpopulation
+and
+what-if
+analysis capabilities for traditional AI and ML. The same principles that drive these analyses can be applied to thinking about LLM evaluation.
+
+This presents a challenge, given that LLMs generate open-ended text, make subjective judgments, and operate in contexts where the idea of correctness itself may be relative and context-dependent.
+
+Standard LLM evaluation metrics capture some of these aspects. For a deep dive into automated evaluation with respect to important contextual concepts like
+relevancy
+and
+faithfulness
+, we recommend taking a look at the blog post, “
+Moving Beyond Guesswork: How to Evaluate LLM Quality
+.
+” Metrics-based evaluations unequivocally have a role to play in LLM oversight, but are often focused on factual adherence and relevancy irrespective of cultural or interpersonal appropriateness. However, we can improve the relevancy of these metrics by producing multiple rounds of outputs with slight changes (or “perturbations”) to the data and comparing metrics between rounds. The same is true for metrics produced by more traditional statistical tests.
+
+When it comes to detecting bias, having a diverse team of humans in the loop can provide vital context. Even in the case of applications where there is no ground truth or reference answer, humans have the benefit of lived experience to provide the context needed to guide LLM use case development in the direction of fairness. Dataiku facilitates human-in-the-loop assessment with easy
+labeling
+capabilities, so human reviewers can quickly view, compare, and rate different rounds of LLM responses, giving developers clear feedback on whether they are on the right track or need to reassess their prompts or tasks.
+
+Technical Introduction to Data Perturbations
+
+Generative AI models are often "black box" models, so there can be limitations in understanding what data is used to train the model and how it is trained. Fine-tuning LLMs can be a potential opportunity for combating bias within the models since they can be trained on custom data, but this is not always a feasible option. While fine-tuning an LLM may be a proactive approach in the case that we don't have that option, data perturbations can also be used proactively to assess the LLM after the point of model training.
+
+Perturbation, by definition, is "a small change or disturbance that affects a system, object, or condition, often temporarily disrupting its normal state or behavior." When we take this concept and apply it to LLMs, it is the idea of introducing a small change to the input data. These changes can be applied to names, language, race, gender, education level, etc. After applying these perturbations, we want to observe if there are any changes in the model’s output. When working with these data perturbations, it is important to only change one piece of information at a time (e.g., male --> female). This way, we have a ground truth dataset, and we can understand the effect, if any, of changing the data.
+
+When it comes to the actual hands-on process of perturbing the data, there are multiple approaches we can take. The simplest is using data transformation steps to change attributes such as race, education level, or language. If we are perturbing elements like names, style of speech, etc., there are existing libraries such as
+HELM
+and
+LangTest
+that assist in this process.
+
+General Setup
+
+In order to test the utility of data perturbations in LLM bias assessment and explore statistical and human-in-the-loop evaluation, we prepared two case studies. In each, we began with an unaltered dataset that contained data of interest for prompting an LLM, including some user information. With that unaltered dataset, we prompted the LLM to use the data to perform some task, using the LLM output on this task as a baseline.
+
+Next, we perturbed one or more user-related fields in the data, then re-prompted the LLM on the same task using that perturbed data. This process simulates the process of
+what-if
+, effectively creating a ground truth and at least one counterfactual, allowing us to then assess the differences between the outputs.
+
+Testing a baseline dataset and a dataset with a perturbed value for age
+
+Case Study: Product Review Summarization
+
+Method
+
+This case study uses a simple statistical test to assess the differences in LLM outputs from baseline and perturbed datasets. This can sometimes be sufficient in order to detect bias.
+
+For this task, we utilize a public dataset of Amazon product reviews, and we want the LLM to rate the
+helpfulness
+of a particular product review. We selected ChatGPT-4o-mini for this task, and we asked it to consider the text of a review and the characteristics of its writer and return a binary “helpful” or “not helpful” score, outputting a 1 or a 0 respectively.
+
+After we do that procedure for the baseline dataset, the perturbations include testing counterfactuals for low or high educational attainment, and low or high customer lifetime value (CLV). Then, we can compare the mean helpfulness scores that each of these produce to determine whether the LLM is biased towards a significantly different assessment of helpfulness for one category or another.
+
+Data from
+Amazon Reviews 2023 dataset
+, HuggingFace, McAuley, et al.
+
+Findings
+
+For this particular dataset and LLM, when the LLM was told that each customer in the dataset was a "college graduate," it was more likely to classify the reviews as helpful
+as compared to the ground truth or to the case where
+each customer was presented as someone who "did not graduate high school." However, a two-sample t-test did not show statistically significant differences in mean helpfulness scores between any combination of the baseline, “did not graduate high school,” and “college graduate”
+test
+versions.
+
+The results were slightly different for the customer lifetime value perturbations. When the LLM was told that each customer in the dataset was a "high-value customer," it was statistically significantly more likely to classify the reviews as helpful than for the baseline or “low CLV” versions.
+
+This demonstrates how testing several forms of perturbations with simple statistical tests can serve as a guidepost for categories of bias that may affect LLM processes and outcomes for a particular dataset, prompt, and LLM.
+
+Case Study: Product Recommendation
+
+Method
+
+For this case study, we employed both a statistical and human-in-the-loop approach to test for biases.
+
+We used a Hugging Face dataset that contained product names and descriptions to generate product marketing emails. We aimed to test whether the content or tone of the email would change relative to the baseline when emails were generated on perturbed data. For this task, we used GPT-4o mini and prompted the LLM to create a personalized marketing email, taking into account the product and customer information without referencing it directly.
+
+To achieve this, we ran this prompt on the ground truth dataset, selecting one customer attribute (e.g., gender) as the baseline. We then perturbed that attribute and ran the prompt against the perturbed dataset. After generating marketing emails for both datasets, we compared the messages using both
+VADER sentiment
+analysis and human-in-the-loop assessment.
+
+For the human evaluation, we used a labeling task that showed the ground truth marketing message and the perturbed marketing message, without exposing the nature of the perturbation. This allowed the labeler to decide if there were perceptible differences in the tone or content of the message.
+
+Findings
+
+Our findings indicated no significant bias across all combined messages. However, when examining gender-specific perturbations, a pattern emerged. When male-targeted messages were rewritten for women, they became slightly more negative, with a statistically significant drop in VADER sentiment scores. Even more tellingly, when female-targeted messages were rewritten for men, they became significantly more positive and used more subjective, emotional language.
+
+This is significant because even small biases, when repeated across thousands of messages, can reinforce stereotypes and shape consumer perceptions. Simply being aware of these patterns can help marketers create more balanced content. This pattern was observed using a statistical approach.
+
+Regarding marketing for perturbations of race (White --> Black), we noticed patterns that were statistically insignificant but, when examined closely by human assessors, were concerning. To investigate this further, we introduced
+Emma Stratton's VBF framework
+(Value First, Benefit Second, Features Last) as an evaluation method to be used by human labelers to ensure assessment consistency. When utilizing this framework, we noticed that often in messages marketed to Black customers, the product rather than the customer was the "hero" of the message, which contrasted with messaging to White customers which framed the customer rather than the product as the "hero."
+
+In this case, human-in-the-loop assessment may have uncovered a perceptual nuance that statistical tests may not be sensitive enough to discover. What may appear to be “small” biases can compound over time and scale, which can have consequences both in terms of business value loss and RAI non-adherence.
+
+This case study demonstrates how human-in-the-loop assessment can help refine bias assessment beyond what statistical tests can provide. When working with a human in the loop, it is important to find a relevant framework (such as VBF above) or methodology that helps ensure consistency amongst the subject matter experts and ground the evaluation of the text.
+
+Final Thoughts
+
+As companies continue to utilize GenAI and LLMs within their larger strategy, they should be sure to keep the role of RAI design and assessment in mind. Overall, GenAI and LLMs can be incredibly beneficial, but this benefit does not come without concerns, in the same way traditional ML does not come without concerns. Luckily, there is an ever-growing suite of techniques in place to help test for issues like consistency, reliability, and unbiasedness.
+
+It is important to keep in mind that while there are statistical methods for bias testing, they may not show the whole story, and keeping a human in the loop where possible can provide key oversight. A human-in-the-loop method may not always be feasible depending on the size of the data, so targeting human oversight for high-risk or sensitive categories or subpopulations can be a middle ground.
+
+This is an ever growing field and the methods for testing may continue to improve alongside the LLMs.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Before AI Agents: The Technology Foundations CIOs Can’t Skip
+
+How ODALC Built a Governed AI Knowledge Agent to Open Architectural Research Access to Masses
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Roche unified patent research into a scalable AI foundation for patent intelligence, giving attorneys faster,...
+
+Feb 04, 2026
+
+Recommended
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Between 2023 and 2024, the value of generative & agentic AI in financial services remained mostly theoretical....
+
+Feb 03, 2026
+
+Recommended
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Supply chain disruption is the new normal, and most organizations aren't ready. Industry surveys confirm that...
+
+Feb 02, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

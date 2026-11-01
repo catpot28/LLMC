@@ -1,0 +1,138 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/add-elevenlabs-conversational-ai-to-wordpress-websites
+page path  : /blog/add-elevenlabs-conversational-ai-to-wordpress-websites
+captured   : 2026-06-09 12:26:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_add-elevenlabs-conversational-ai-to-wordpress-websites__072fc212.html.gz
+========================================================================
+
+Add ElevenLabs Conversational AI to your WordPress website
+
+Add ElevenLabs Conversational AI to your WordPress website
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+How to add the ElevenLabs Conversational AI widget to your WordPress website
+Published
+Nov 1, 2024
+Last updated
+Apr 7, 2026
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+On this page
+Introduction
+Before you get started
+Step-by-step guide
+Common issues and troubleshooting
+Advanced tips
+Final thoughts
+ElevenLabs’
+Conversational AI
+is a powerful
+customer support
+tool for creating interactive, AI-driven experiences that boost
+engagement
+. If you have a WordPress website then you can easily integrate custom HTML and JavaScript, including dynamic features like ElevenLabs’ Conversational AI.
+In this guide, we’ll show you how to add the Conversational AI widget to your WordPress site using Custom HTML Blocks for specific pages and Code Injection for global functionality.
+Before you get started
+Before starting, make sure you have the following:
+WordPress plan
+: For WordPress.com users, a Business or Commerce plan is required to add custom JavaScript. Self-hosted WordPress users can add code without these restrictions.
+ElevenLabs account
+: Configure your Conversational
+AI voice agent
+in ElevenLabs and copy the embed code, which includes < script > and < div > snippets.
+Basic WordPress knowledge
+: Familiarity with adding blocks, editing pages, or using plugins is helpful.
+Step-by-step guide
+Step 1: Prepare your ElevenLabs widget
+Log in to your ElevenLabs account.
+Go to the Conversational AI section.
+Configure your AI agent and copy the embed code, which includes:
+A < script > snippet to load the widget’s functionality.
+A < div > snippet to define where the widget will appear.
+Step 2: Add the widget to a specific page using Custom HTML blocks
+To display the widget on a specific page, use WordPress’s Custom HTML Block.
+Log in to your WordPress dashboard.
+Navigate to Pages and either create a new page or edit an existing one.
+Click the + icon to add a new block.
+Search for and select Custom HTML from the block options.
+Paste the < div > snippet from your ElevenLabs embed code into the block.
+Click Preview to confirm the widget is rendering correctly.
+Publish or update the page to make the changes live.
+Step 3: Add the script globally using a plugin or theme settings
+To ensure the widget functions properly, you need to include the < script > snippet globally.
+Option A: Using a plugin (recommended for non-developers)
+Install and activate a plugin like Header Footer Code Manager.
+Navigate to the plugin settings and create a new code snippet.
+Paste the < script > snippet into the Footer section.
+Set the snippet to run on All Pages.
+Save your changes.
+Option B: Adding the script directly to your theme
+Go to Appearance > Theme Editor in your WordPress dashboard.
+Open the footer.php file of your active theme.
+Paste the < script > snippet just before the closing < /body > tag.
+Save the file.
+Step 4: Publish and test
+Visit the page where you added the widget to confirm it appears and functions correctly.
+Test the widget on multiple devices and browsers to ensure it works seamlessly.
+Common issues and troubleshooting
+Struggling to get the widget up and running? These tips might help.
+Issue 1: Widget not displaying
+Cause
+: Missing or misplaced < script > or < div > snippets.
+Solution
+: Double-check that the < script > is added globally and the < div > is placed on the page.
+Issue 2: Widget misaligned
+Cause
+: Block alignment or missing styling.
+Solution
+: Use WordPress’s block alignment tools or add custom CSS to position the widget properly.
+Issue 3: Plugin conflicts
+Cause
+: Other plugins interfering with JavaScript execution.
+Solution
+: Deactivate plugins one by one to identify the conflict.
+Advanced tips
+Check out these tips for more help getting the widget to operate as you want.
+
+Customizing the widget:
+Use WordPress’s Customize > Additional CSS section to style the widget, ensuring it matches your site’s design.
+Testing across devices:
+Test the widget on desktop, tablet, and mobile devices to ensure a consistent user experience.
+Page-specific widgets:
+If you want the widget to appear only on specific pages, avoid adding the < script > snippet globally. Instead, include it within a plugin or block that targets those pages.
+Final thoughts
+Adding the ElevenLabs Conversational AI widget to your WordPress website is an effective way to engage visitors with AI-driven interactions. Whether you’re embedding it on a single page or across your entire site, WordPress provides the tools you need for seamless integration.
+Follow the steps outlined here, test your implementation thoroughly, and make adjustments as needed. If you encounter issues, don’t hesitate to reach out to ElevenLabs
+support
+for assistance.
+Or, if you haven’t already,
+sign up
+for ElevenLabs
+Agents Platform
+today to kickstart the process.
+Do I need coding experience to add the widget?
+No, basic familiarity with adding HTML blocks or using plugins is sufficient. Advanced edits may require minimal coding knowledge.
+Can I use the widget on a free WordPress plan?
+No, free WordPress.com plans do not support JavaScript or custom code. Upgrade to a Business or Commerce plan or use self-hosted WordPress.
+Why doesn’t the widget appear on all pages?
+Ensure the

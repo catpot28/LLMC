@@ -1,0 +1,911 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/sonar-post
+page path  : /api-reference/sonar-post
+captured   : 2026-04-20 03:16:11 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_sonar-post__210ae9a1.html.gz
+========================================================================
+
+Create Chat Completion - Perplexity
+
+Create Chat Completion - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Sonar API
+Create Chat Completion
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Create Chat Completion
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"model": "sonar",
+
+"messages": [
+
+{
+
+"role": "system",
+
+"content": "<string>"
+
+}
+
+]
+
+}
+
+'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+}
+Sonar API
+Create Chat Completion
+Copy page
+Generate a chat completion response for the given conversation.
+Copy page
+POST
+/
+v1
+/
+sonar
+Try it
+Create Chat Completion
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"model": "sonar",
+
+"messages": [
+
+{
+
+"role": "system",
+
+"content": "<string>"
+
+}
+
+]
+
+}
+
+'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+model
+enum<string>
+required
+Model to use, for example, sonar-pro
+Available options
+:
+
+sonar
+,
+
+sonar-pro
+,
+
+sonar-deep-research
+,
+
+sonar-reasoning-pro
+
+​
+messages
+ChatMessage · object[]
+required
+Array of messages forming the conversation history
+Show
+
+child attributes
+​
+max_tokens
+integer | null
+Maximum number of completion tokens to generate
+Required range
+:
+0 < x <= 128000
+​
+stream
+boolean | null
+default:
+false
+If true, returns streaming SSE response
+​
+stop
+string
+string[]
+string
+string[]
+Stop sequences. Generation stops when one of these strings is produced
+​
+temperature
+number | null
+Controls randomness in the response. Higher values make output more random. Range: 0-2
+Required range
+:
+0 <= x <= 2
+​
+top_p
+number | null
+Nucleus sampling parameter. Controls diversity via nucleus sampling
+Required range
+:
+0 <= x <= 1
+​
+response_format
+ResponseFormatText · object
+Optional. Controls the output format. Omit for default text output. Set
+type
+to
+json_schema
+for structured output.
+ResponseFormatText
+ResponseFormatJSONSchema
+Show
+
+child attributes
+​
+web_search_options
+WebSearchOptions · object
+Configuration options for web search behavior
+Show
+
+child attributes
+​
+search_mode
+enum<string> | null
+Source of search results (web, academic, or sec)
+Available options
+:
+
+web
+,
+
+academic
+,
+
+sec
+
+​
+return_images
+boolean | null
+When true, include image results in the response
+​
+return_related_questions
+boolean | null
+When true, generates suggested follow-up queries based on the search results
+​
+enable_search_classifier
+boolean | null
+When true, uses a classifier to determine if web search is needed for the query
+​
+disable_search
+boolean | null
+When true, disables all web search capabilities. The model responds based solely on its training data
+​
+search_domain_filter
+string[] | null
+Limit search results to specific domains (e.g. github.com, wikipedia.org)
+​
+search_language_filter
+string[] | null
+Filter results by language using ISO 639-1 codes (e.g. en, fr, de)
+​
+search_recency_filter
+enum<string> | null
+Filter by publication recency (hour, day, week, month, or year)
+Available options
+:
+
+hour
+,
+
+day
+,
+
+week
+,
+
+month
+,
+
+year
+
+​
+search_after_date_filter
+string | null
+Return results published after this date (MM/DD/YYYY)
+​
+search_before_date_filter
+string | null
+Return results published before this date (MM/DD/YYYY)
+​
+last_updated_before_filter
+string | null
+Return results last updated before this date (MM/DD/YYYY)
+​
+last_updated_after_filter
+string | null
+Return results last updated after this date (MM/DD/YYYY)
+​
+image_format_filter
+string[] | null
+Filter image results by format (e.g. png, jpg)
+​
+image_domain_filter
+string[] | null
+Limit image results to specific domains
+​
+stream_mode
+enum<string>
+default:
+full
+Controls the format of streaming events. 'full' suppresses reasoning events and includes metadata inline; 'concise' emits reasoning events separately
+Available options
+:
+
+full
+,
+
+concise
+
+​
+reasoning_effort
+enum<string> | null
+Controls how much effort the model spends on reasoning
+Available options
+:
+
+minimal
+,
+
+low
+,
+
+medium
+,
+
+high
+
+​
+language_preference
+string | null
+ISO 639-1 language code for preferred response language
+Response
+200
+application/json
+Successful Response
+​
+id
+string
+required
+Unique identifier for the completion
+​
+model
+string
+required
+Model used for generation
+​
+created
+integer
+required
+Unix timestamp when the completion was created
+​
+choices
+Choice · object[]
+required
+Array of completion choices
+Show
+
+child attributes
+​
+usage
+UsageInfo · object
+Token usage and cost information for a request
+Show
+
+child attributes
+​
+object
+string
+default:
+chat.completion
+Object type identifier
+​
+citations
+string[] | null
+URLs of sources used to generate the response
+​
+search_results
+ApiPublicSearchResult · object[] | null
+Search results used for context in the response
+Show
+
+child attributes
+​
+images
+ImageResult · object[] | null
+Array of images returned when return_images is true
+Show
+
+child attributes
+​
+related_questions
+string[] | null
+Array of related questions returned when return_related_questions is true
+Was this page helpful?
+Yes
+No
+Search the Web
+Previous
+Create Async Chat Completion
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

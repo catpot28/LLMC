@@ -1,0 +1,374 @@
+=== SOURCE =============================================================
+company    : fairphone (fairphone)
+url        : http://www.fairphone.com/author/kees-jongenburger/
+page path  : /author/kees-jongenburger/
+captured   : 2026-03-12 10:22:01 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/fairphone/www.fairphone.com_author_kees-jongenburger__4149c9fb.html.gz
+========================================================================
+
+Kees Jongenburger, Author at Fairphone
+
+Kees Jongenburger, Author at Fairphone
+
+Fairphone
+
+Search
+
+en
+
+User
+
+Basket
+
+0
+
+Login
+
+New customer? register here
+
+Products
+
+Fairphone 4
+
+Fairphone 3
+
+Accessories
+
+Spare Parts
+
+Story
+
+Our Mission
+
+Our Impact
+
+Blog
+
+Community
+
+Get Involved
+
+Events
+
+Forum
+
+Business
+
+Contact
+
+Fairphone
+
+Search
+
+Products
+
+Fairphone 4
+
+Fairphone 3
+
+Accessories
+
+Spare Parts
+
+Story
+
+Our Mission
+
+Our Impact
+
+Blog
+
+Community
+
+Get Involved
+
+Events
+
+Forum
+
+Business
+
+Contact
+
+Login
+
+English
+
+Change country
+
+Products
+
+Fairphone 4
+
+Fairphone 3
+
+Spare Parts
+
+Accessories
+
+Support
+
+Orders and Delivery
+
+Returns
+
+Connect
+
+Community
+
+Blog
+
+Press
+
+Kees Jongenburger
+
+28 April 2016
+
+Long-Lasting Design
+
+Releasing the Fairphone 2 Open Operating System
+
+Kees Jongenburger
+
+28 April 2016
+
+Long-Lasting Design
+
+Note from the editor: We wrote this post to be accessible to everyone, no matter how technical you are. If you are a developer and want to dive straight into the finer details, head over to
+code.fairphone.com
+.
+
+It’s finally here! Today we’re publishing our own version of Android for everyone to download and to install on their Fairphone 2. The launch of this open operating system is our next step in achieving our goals to improve transparency, longevity and ownership. (
+Read a more detailed explanation
+of our open design goals).
+
+At the start of 2016, we launched
+code.fairphone.com
+, our open source and development website. By publishing the source code, we invited everyone and anyone to contribute to the ecosystem of the Fairphone 2. Making this code run on a Fairphone 2 required some technical skills, and today we’re taking the next step by making the code available in an easy-to-use form, so anyone can download and install it. But what is it exactly?
+
+Our own Fairphone Open Source OS
+
+The Fairphone Open Source OS includes the standard Android operating system (version 5.1) plus all the
+special Fairphone features
+. Google Mobile Services (GMS) are NOT included, so you will need to find alternatives for things like email, maps, a browser and more. Once you start looking, you’ll be surprised by how many options are available, such as
+F-Droid
+, an alternative app store. Also, in this version, root access can be easily enabled via the developer settings.
+
+Going forward, the Fairphone Open Source OS will get the same support, regular updates and security fixes as the “normal” Fairphone OS with Google services, but please be aware that there may be a short timespan between releasing an update for each version in a given cycle.
+
+Important:
+No matter how excited you are, make sure you take the proper steps before downloading and installing the Fairphone Open Source OS, as
+doing so will erase all of your data
+. Back up your apps and data beforehand to avoid major frustrations later.
+
+But the source code itself is just part of the story. Keep reading to learn more about why we’re making it available, and why we think it’s so important.
+
+What does open source mean for you?
+
+Transparency: A phone that’s got nothing to hide
+
+With plenty of products, software included, when you buy the finished item you don’t know much about what’s required to make it, let alone how to modify it. To understand the benefits of open source, you can compare it to a recipe. Imagine you order a delicious soup at your favorite restaurant. You’d love to know what’s in it, but first you need to convince the chef to share his recipe. And once you get it, it opens up a new range of possibilities. You can learn about the ingredients, try to recreate it yourself, or start making changes and substitutions to suit your preferences. And even if you’re not a cook (aka a developer), you can share the recipe or collaborate with experts to gather advice and improvements.
+
+While we’d love to open up absolutely everything, we can’t provide the code for some of the “ingredients” (called binaries) provided by other companies that make specific parts of the hardware work. But by sharing our software “recipe”, we’re taking the next step to put the information and power in your hands. It’s up to you to decide if you want to view it, share it, tweak it or add something completely new.
+
+Ownership: A phone that’s yours, and only yours
+
+Out of the box, your Fairphone 2 comes pre-installed with Android 5.1, which includes Google Mobile Services. These apps and services are very popular and definitely useful, but we believe that to have true ownership of your phone, you should be able to make a conscious decision about what software you’d like to run.
+
+If you are comfortable with Google Mobile Services and like how they work, then you can choose to stick with the default operating system. But we want that choice to be completely yours. That’s why we’ve made it possible for you to install different operating systems on your phone (meaning the
+bootloader
+is unlocked).
+
+At the moment, you can pick between two different options: The default OS or the Fairphone Open Source OS. These are the only systems we can officially support for now. However, thanks to the development efforts of other software communities, it may soon be possible to use other operating systems like Jolla’s Salfish in the future.
+
+When deciding which OS is right for you, another important factor to consider is what you and your apps are allowed to do. This is determined in part by
+root access
+, which can be beautiful, but it can also be dangerous. Therefore, root access is not supported in the default software your Fairphone 2 ships with. (We are aware this decision is arguable, but we believe it is the best for the majority of users). If you would like to have root access, we advise you to move to the Fairphone Open Source OS. Once you install this build, you can easily enable root access under the developer settings.
+
+Longevity: The phone that stays with you for years to come
+
+The Fairphone 2’s modular design was made for DIY repair. By selling spare parts and providing repair guides (
+thanks, iFixit
+!), we aim to make it easy for anyone to fix their phone. But keeping your phone performing well for years to come requires more than just replacing parts.
+
+The other crucial element for your phone’s longevity is software. As time goes by, it needs to be updated and patched and security holes have to be fixed. We’re taking responsibility for keeping the default Fairphone 2 software running smoothly, but with this open source release, we’re also making it possible for external parties and developers to contribute to keeping the software up to date.
+
+In addition, other developer communities are now able to make alternative operating systems work with your phone. As we mentioned above, a
+community version of Sailfish OS
+is already available.
+
+We believe that our open source build combined with a wider choice of operating systems will provide greater diversity to ensure that you can use the phone much longer without being restricted to the updates provided by our own software team. And even though we don’t have the capacity in house to support your questions about these different operating systems, you can always turn to the relevant developer communities.
+
+May the source be with you
+
+Whether you’re looking for a straightforward default operating system or can’t wait to dig around in the code, we hope you now have a clearer idea why we’re releasing the Fairphone Open Source OS and collaborating with a range of developer communities. If you’re now curious to learn more, head straight to
+code.fairphone.com
+for everything you need to start tinkering. And in case you get stuck, don’t be afraid to
+post your questions on the community forum
+.
+
+We are also working on a system to accept community contributions (yes, there will be a public Gerrit for code review), and allow for more people to contribute to the code. Stay tuned!
+
+Share with Twitter
+
+Share with Linkedin
+
+Share with Facebook
+
+Share with email
+
+Share with phone
+
+Share this post
+
+Related posts
+
+iFixit Guest Blog: Important Notes to Take From Fairphone’s Design Team
+
+All
+
+02 December 2021
+
+Last week at iFixit we did a teardown of the Fairphone 4, which earned an exceedingly rare 10/10 on our repairability scale. During that teardown, I was impressed with many of the decisions the Fairphone design team made. With repair legislation around the corner in most markets around the world (and already in effect in...
+
+Read more
+
+Raising the bar on smartphones in the EU
+
+All
+
+01 December 2021
+
+We have already proven that it is possible to make a smartphone that is more sustainable and better for people and planet. But, you know us, we always aim to improve and encourage others in the industry to follow suit. What is the next thing we are planning, you ask? We want to influence the...
+
+Read more
+
+Together we can change the way products are made
+
+Want to get updates on how we’re changing the electronics industry?
+*
+
+We ask for your name and e-mail so that you can receive our newsletter for awesome project updates. You can withdraw permission at any time.
+
+We use MailChimp as our email platform. By clicking subscribe, you acknowledge that the information you provide will be transferred to MailChimp for processing in accordance with their
+Privacy Policy
+and
+Terms
+.
+
+Trustpilot
+
+Products
+
+Fairphone 4
+
+Fairphone 3
+
+Accessories
+
+Spare Parts
+
+Gift Card
+
+Where to buy
+
+For businesses
+
+Our business solutions
+
+Fairphone business resellers
+
+Services
+
+Customer Support
+
+My order
+
+Shipping
+
+Warranty
+
+Reuse and Recycle Program
+
+Refer a friend
+
+Impressum
+
+Returns Policy
+
+About
+
+About us
+
+Team
+
+Blog
+
+Open Source
+
+Events
+
+Jobs
+
+Press
+
+Contact Us
+
+Except where otherwise noted, content on this site is licensed under a
+Creative Commons License.
+
+© Fairphone 2022
+
+Terms and Conditions
+
+Privacy and Cookie Policy
+
+Connect
+
+#WeAreFairphone
+
+Forum
+
+Twitter
+
+Facebook
+
+Instagram
+
+YouTube
+
+Flickr
+
+LinkedIn
+
+Except where otherwise noted, content on this site is licensed under a
+Creative Commons License.
+
+© Fairphone 2022
+
+Terms and Conditions
+
+Privacy and Cookie Policy
+
+Get recurring updates on all things Fairphone
+Sign up to our newsletter and get €5 off on your next order.
+
+First name
+
+Email address
+*
+
+Opties
+*
+
+Community newsletter
+
+Product updates
+
+The €5 discount code will be sent by email. The code can be used on any orders from €75. By subscribing you agree to our
+Terms & Conditions
+and
+Privacy & Cookies Policy
+. We ask for your name and email so that you can receive our newsletter for awesome Fairphone projects and product updates. You can withdraw or update permission at any time.
+
+Close

@@ -1,0 +1,200 @@
+=== SOURCE =============================================================
+company    : Netpoint (netpoint)
+url        : https://www.netpoint.de/neuigkeiten/multi-faktor-authentifizierung/
+page path  : /neuigkeiten/multi-faktor-authentifizierung/
+captured   : 2026-04-10 20:04:41 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/netpoint/www.netpoint.de_neuigkeiten_multi-faktor-authentifizierung__fcb72596.html.gz
+========================================================================
+
+Netpoint - Mit der Multi-Faktor-Authentifizierung 99% aller Angriffe auf Identitäten abwehren.
+
+Netpoint - Mit der Multi-Faktor-Authentifizierung 99% aller Angriffe auf Identitäten abwehren.
+
+Zum Inhalt springen
+
+Menü
+
+Mit der Multi-Faktor-Authentifizierung 99% aller Angriffe auf Identitäten abwehren.
+
+Geschrieben von Dominik Ramachers
+
+Administratorenkonten sind ein häufiges Ziel von Cyberangriffen, weshalb eine Multi-Faktor-Authentifizierung (MFA) erforderlich ist, um 99 % dieser Angriffe abzuwehren.
+
+Microsoft 365 bietet verschiedene MFA-Methoden wie SMS-Codes, biometrische Authentifizierung, die Microsoft Authenticator App und besonders sichere FIDO2-Keys für passwortlose Anmeldungen.
+
+Für den Notfall sollten Unternehmen sogenannte Break-Glass-Accounts einrichten, die von MFA-Regeln ausgenommen sind und streng überwacht werden, um bei Störungen oder Fehlkonfigurationen den Zugriff zu gewährleisten.
+
+Administratorkonten werden von Hackern und Angreifern sehr oft direkt ins Visier genommen, da diese einen sehr großen Spielraum für Hacker bieten, Daten zu stehlen, Einstellungen vorzunehmen oder ähnliche Dinge am Netzwerk zu vollrichten. Administratoren arbeiten ständig mit sensiblen, kritischen und geheimen Daten, die für die Öffentlichkeit nicht frei zugänglich sein sollen. Ein erfolgreicher Cyberangriff auf einen Administratoraccount ohne eine vorher aktivierte Authentifizierungsmethode für das Administratorkonto hätte daher erhebliche Folgen für das jeweilige Unternehmen, deren Kunden und letztendlich dem wirtschaftlichen Erfolg. In diesem Artikel zeigen wir Ihnen, wie sie mit der Zwei-Faktor-Authentifizierung 99% aller Cyberangriffe auf Nutzerkonten abweisen können.
+
+Die Einrichtung einer Multi-Faktor Authentifizierung
+
+Die MFA (Multi Faktor Authentifizierung) oder auch Zwei-Faktor bzw. Zwei-Phasen Authentifizierung bezeichnet eine Methode, bei der eine oder mehrere zusätzliche Authentifizierungsmethoden beim Login genutzt werden. Im Folgenden zeigen wir, welche unterschiedlichen Verfahren für die Einrichtung einer MFA bei Microsoft 365 Konten verwendet werden können.
+
+Zum Beispiel besteht die Möglichkeit, nach Eingabe des Passworts eine SMS mit einem Zifferncode zu erhalten, welcher zusätzlich nach der Eingabe des Passworts eingegeben werden muss. Anderenfalls können biometrische Authentifizierungsmethoden wie einen Fingerabdrucksensor am Computer verwendet werden, die bei Windows in den Sicherheitseinstellungen über „Windows Hello“ aktiviert werden können.
+
+Weitere Möglichkeiten bietet die Microsoft Authenticator App, welche in jedem Smartphone App Store kostenlos erhältlich ist. Die App bietet neben einem Zahlencode die Option, eine Push-Benachrichtigung bei einem Anmeldeversuch zu erhalten, welche anschließend nur bestätigt werden muss. Dabei ist der Zugang zur App selbst durch ein Passwort oder eine biometrische Methode wie Fingerabdruck oder Gesichtserkennung geschützt. Ein weiterer Vorteil der Authenticator App ist die Tatsache, dass sie auch ohne eine aktive Internetverbindung genutzt werden kann.
+
+Wer die MFA-Authentifizierung noch auf die Spitze der Sicherheitsmöglichkeiten treiben möchte, kann sich auf einen FIDO2 Key verlassen. FIDO2 (Fast IDentity Online Protocol) bietet eine sehr starke passwortlose MFA und nutzt zwei Faktoren wie biometrische Merkmale, Hardware-Keys oder Smartcards. FIDO2 arbeitet auf einer kryptografischen Grundlage des Challenge-Response Verfahrens und bildet eine asymmetrische Verschlüsselung. FIDO2 Keys gibt es zusätzlich auch mit einem integrierten biometrischen Fingerbadruckscanner oder mit einer NFC-Schnittstelle für beispielsweise eine Anmeldung am Handy oder Tablet.
+
+Was tun, wenn doch einmal alles schief geht?
+
+Nun bleibt die Frage, was man tun kann, wenn beispielsweise der Multifaktor Dienst eine Störung hat oder eine Fehlkonfiguration einer Regel des Dienstes vorgenommen wurde. Dafür gibt es sogenannte Break-Glass-Accounts. Diese Accounts werden aus dem Regelwerk für die Anwendung der Multifaktor Authentifizierung ausgenommen, damit auch im Falle eines Fehlers oder eine Fehlkonfiguration des Dienstes weiterhin eine Zugriffsmöglichkeit gegeben ist. Zudem sind Break-Glass-Accounts mit einem sehr komplexen Passwort geschützt und jede Aktivität von einem solchen Account wird strengstens überwacht.
+
+Die Verwaltung von Administratorenkonten und Einrichtung einer möglichst komfortablen Multi-Faktor Authentifizierungsmethode ist Teil unseres Managed Services, den wir mit unserem Produkt N365 ganz individuell für unsere Kunden anbieten. Wenn Sie von den Leistungen eines Managed Service Partners profitieren möchten, der beispielsweise die Einrichtung von MFAs und Überwachung der Break-Glass Accounts für Sie übernimmt, kontaktieren Sie uns gerne unverbindlich. Wir beraten Sie in sämtlichen Leistungsbereichen und erstellen für Sie ein Servicepaket, welches genau auf Ihre Infrastruktur zugeschnitten ist.
+
+Das könnte Sie außerdem interessieren:
+
+Log-Management und SIEM – Frühwarnsystem für Cyber-Angriffe
+
+In den vorigen Teilen unserer Serie stand Prävention im Vordergrund – von Backups über Awareness-Schulungen bis hin zu Zero Trust....
+
+Beitrag lesen
+
+Juniper AI-Driven SD-WAN: Effizienz und Sicherheit für globale Netzwerke
+
+Eine Case Study über praktische Netzwerk-Optimierung Ein internationaler Hersteller von Genussmitteln betreibt 47 Standorte weltweit. Wie viele Unternehmen seiner Größe...
+
+Beitrag lesen
+
+Schutz von Servern und Cloud – Sichere Infrastruktur auf allen Ebenen
+
+Server- und Cloud-Sicherheit – was Entscheider jetzt wissen müssen Nach dem Schutz von Endgeräten und Clients rücken nun Server und...
+
+Beitrag lesen
+
+Netpoint GmbH
+Madrider Straße 18
+
+41069 Mönchengladbach
+Deutschland
++49 (0) 2161 49524 – 0
+info@netpoint.de
+
+Netpoint IT Services Inc.
+3800 Airport Blvd., Suite 101
+Mobile, AL 36608
+USA
++1 (0) 251 3273682
+
+Navigation
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Connect
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+AGB
+
+Datenschutz
+
+Impressum
+
+Cookies
+
+AGB
+
+Datenschutz
+
+Impressum
+
+Cookies
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Home
+
+Projekte
+
+Services
+
+Über Uns
+
+Karriere
+
+Neuigkeiten
+
+Kontakt
+
+Deutsch
+English
+
+Kontaktiere uns
+
+E-Mail
+
+Telefon
+
+Kontaktformular
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.
+
+Unser Support steht Ihnen 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr zur Verfügung.

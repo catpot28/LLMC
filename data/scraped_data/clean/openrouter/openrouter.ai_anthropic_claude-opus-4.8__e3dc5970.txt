@@ -1,0 +1,104 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/anthropic/claude-opus-4.8
+page path  : /anthropic/claude-opus-4.8
+captured   : 2026-06-12 14:30:57 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/openrouter/openrouter.ai_anthropic_claude-opus-4.8__e3dc5970.html.gz
+========================================================================
+
+Claude Opus 4.8 - API Pricing & Benchmarks | OpenRouter
+
+Claude Opus 4.8 - API Pricing & Benchmarks | OpenRouter
+Skip to content
+OpenRouter
+/
+No models found
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Blog
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Anthropic: Claude Opus 4.8
+anthropic
+/
+claude-opus-4.8
+Compare
+Playground
+Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for highly autonomous agents, long-horizon agentic work, knowledge work, and memory-driven tasks where coherence over extended sessions matters.
+
+It is particularly strong on multi-step reasoning, complex coding, and end-to-end project orchestration - large codebases, multi-stage debugging, and long-running asynchronous agent pipelines. Beyond coding, it handles knowledge work such as drafting documents, building presentations, and analyzing data, maintaining quality across very long outputs.
+Modalities
+In / Out Price
+High
+$5 / $25
+per 1M
+Context
+High
+1M
+Released
+May 27, 2026
+Anthropic: Claude Opus 4.8
+Compare
+Playground
+Providers
+Performance
+Pricing
+Benchmarks
+Apps
+Activity
+Uptime
+Quick Start
+Providers
+Providers
+Different companies host the same model. OpenRouter routes your request to one of them based on the routing mode you pick — Balanced (price + speed), Nitro (fastest), or Exacto (one fixed provider).
+Performance
+Throughput is how fast the model writes (tokens per second — higher is better). Latency is total round-trip time (lower is better). TTFT is time-to-first-token — how long before you see anything appear (lower is better).
+Pricing
+List price is the headline rate per million tokens. Effective price is what you actually pay after prompt caching is applied — for repeated context, this can be 60–80% cheaper. The chart below shows the rolling effective price over the past 30 days.
+Benchmarks
+Scores on standardized evaluations. Higher percentages are better — and rank percentile shows where this model lands among all models on OpenRouter.
+Apps
+Public apps that send the most traffic to this model. Good signal for what real production workloads look like — and a hint at which use cases this model is best suited for.
+Activity
+Token volume and request traffic to this model over time.
+Uptime
+Percent of requests that succeeded over the last 30 days. OpenRouter monitors every provider continuously and automatically retries on the next-best provider when one returns an error.
+Quick Start
+Drop-in code to call this model. OpenRouter's API is OpenAI-compatible — most SDKs work by just swapping the base URL. The only thing that changes between models is the model slug below.
+Standard

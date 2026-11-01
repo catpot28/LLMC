@@ -1,0 +1,744 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/agentic-ai-production-datarobot-q4-update/
+page path  : /blog/agentic-ai-production-datarobot-q4-update/
+captured   : 2026-05-16 17:24:18 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_agentic-ai-production-datarobot-q4-update__a239a5db.html.gz
+========================================================================
+
+DataRobot Q4 update: driving success across the full agentic AI lifecycle | DataRobot Blog
+
+DataRobot Q4 update: driving success across the full agentic AI lifecycle | DataRobot Blog
+
+Skip to content
+
+Location
+
+us
+
+jp
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Location
+
+us
+
+jp
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+DataRobot Q4 update: driving success across the full agentic AI lifecycle
+
+The shift from prototyping to having agents in production is
+the
+challenge for AI teams as we look toward 2026 and beyond. Building a cool prototype is easy: hook up an LLM, give it some tools, see if it looks like it’s working. The production system, now that’s hard. Brittle integrations. Governance nightmares. Infrastructure wasn’t built for the complexities and nuances of agents.
+
+For AI developers, the challenge has shifted from building an agent to orchestrating, governing, and scaling it in a production environment. DataRobot’s latest release introduces a robust suite of tools designed to streamline this lifecycle, offering granular control without sacrificing speed.
+
+New capabilities accelerating AI agent production with DataRobot
+
+New features in DataRobot 11.2 and 11.3 help you close the gap with dozens of updates spanning observability, developer experience, and infrastructure integrations.
+
+Together, these updates focus on one goal: reducing the friction between building AI agents and running them reliably in production.
+
+The most impactful areas of these updates include:
+
+Standardized connectivity through MCP on DataRobot
+
+Secure agentic retrieval through Talk to My Docs (TTMDocs)
+
+Streamlined agent build and deploy through CLI tooling
+
+Prompt version control through Prompt Management Studio
+
+Enterprise governance and observability through resource monitoring
+
+Multi-model access through the expanded LLM Gateway
+
+Expanded ecosystem integrations for enterprise agents
+
+The sections that follow focus on these capabilities in detail, starting with standardized connectivity, which underpins every production-grade agent system.
+
+MCP on DataRobot: standardizing agent connectivity
+
+Agents break when tools change. Custom integrations become technical debt. The Model Context Protocol (MCP) is emerging as the standard to solve this, and we’re making it production-ready.
+
+We’ve added
+an MCP server template
+to the DataRobot community GitHub.
+
+What’s new:
+An MCP server template you can clone, test locally, and deploy directly to your DataRobot cluster. Your agents get reliable access to tools, prompts, and resources without reinventing the integration layer every time. Easily convert your predictive models as tools that are discoverable by agents.
+
+Why it matters:
+With our MCP template, we’re giving you the open standard with enterprise guardrails already built in. Test on your laptop in the morning, deploy to production by afternoon.
+
+Talk to My Docs: Secure, agentic knowledge retrieval
+
+Everyone is building RAG. Almost nobody is building RAG with RBAC, audit trails, and the ability to swap models without rewriting code.
+
+The “
+Talk to My Docs” application template
+brings natural language chat-style productivity across all your documents and is secured and governed for the enterprise.
+
+What’s new:
+A secure, governed chat interface that connects to Google Drive, Box, SharePoint, and local files. Unlike basic RAG, it handles complex formats from tables, spreadsheets, multi-doc synthesis while maintaining enterprise-grade access control.
+
+Why it matters:
+Your team needs ChatGPT-style productivity. Your security team needs proof that sensitive documents stay restricted. This does both, out of the box.
+
+Agentic application starter template and CLI: Streamlined build and deployment
+
+Getting an agent into production should not require days of scaffolding, wiring services together, or rebuilding containers for every small change. Setup friction slows experimentation and turns simple iterations into heavyweight engineering work.
+
+To address this, DataRobot is introducing an agentic application starter template and CLI, both designed to reduce setup overhead across both code-first and low-code workflows.
+
+What’s new:
+An agentic application starter template and CLI that let developers configure agent components through a single interactive command. Out-of-the-box components include an MCP server, a FastAPI backend, and a React frontend. For teams that prefer a low-code approach, integration with NVIDIA’s NeMo Agent Toolkit enables agent logic and tools to be defined entirely through YAML. Runtime dependencies can now be added dynamically, eliminating the need to rebuild Docker images during iteration.
+
+Why it matters:
+By minimizing setup and rebuild friction, teams can iterate faster and move agents into production more reliably. Developers can focus on agent logic rather than infrastructure, while platform teams maintain consistent, production-ready deployment patterns.
+
+Prompt management studio: DevOps for prompts
+
+As prompts move from experiments to production assets, ad hoc editing quickly becomes a liability. Without versioning and traceability, teams struggle to reproduce results or safely iterate.
+
+To address this, DataRobot introduces the Prompt Management Studio, bringing software-style discipline to prompt engineering.
+
+What’s new:
+A centralized registry that treats prompts as version-controlled assets. Teams can track changes, compare implementations, and revert to stable versions as prompts move through development and deployment.
+
+Why it matters:
+By applying DevOps practices to prompts, teams gain reproducibility and control, making it easier to transition from prototyping to production without introducing hidden risk.
+
+Multi-tenant governance and resource monitoring: Operational control at scale
+
+As AI agents scale across teams and workloads, visibility and control become non-negotiable. Without clear insight into resource usage and enforceable limits, performance bottlenecks and cost overruns quickly follow.
+
+What’s new:
+The enhanced
+Resource Monitoring tab
+provides detailed visibility into CPU and memory utilization, helping teams identify bottlenecks and manage trade-offs between performance and cost. In parallel, Multi-tenant AI Governance introduces token-based access with configurable rate limits to ensure fair resource consumption across users and agents.
+
+Why it matters:
+Developers gain clear insight into how agent workloads behave in production, while platform teams can enforce guardrails that prevent noisy neighbors and uncontrolled resource usage as systems scale.
+
+Expanded LLM Gateway: Multi-model access without credential sprawl
+
+As teams experiment with agent behavior and reasoning, access to multiple foundation models becomes essential. Managing separate credentials, rate limits, and integrations across providers quickly introduces operational overhead.
+
+What’s new:
+The expanded LLM Gateway adds support for Cerebras and Together AI alongside Anthropic, providing access to models such as Gemma, Mistral, Qwen, and others through a single, governed interface. All models are accessed using DataRobot-managed credentials, eliminating the need to manage individual API keys.
+
+Why it matters:
+Teams can evaluate and deploy agents across multiple model providers without increasing security risk or operational complexity. Platform teams maintain centralized control, while developers gain flexibility to choose the right model for each workload.
+
+New supporting ecosystem integrations
+
+Jira and Confluence connectors:
+To power your vector databases, DataRobot provides a cohesive ecosystem for building enterprise-ready, knowledge-aware agents.
+
+NVIDIA NIM Integration:
+Deploy Llama 4, Nemotron, GPT-OSS, and 50+ GPU-optimized models without the MLOps complexity. Pre-built containers, production-ready from day one.
+
+Milvus Vector Database:
+Direct integration with the leading open-source VDB, plus the ability to select distance metrics that actually matter for your classification and clustering tasks.
+
+Azure Repos & Git Integration:
+Seamless version control for Codespaces development with Azure Repos or self-hosted Git providers. No manual authentication required. Your code stays centralized where your team already works.
+
+Get hands-on with DataRobot’s Agentic AI
+
+If you’re already a customer, you can spin up the
+GenAI Test Drive
+in seconds. No new account. No sales call. Just 14 days of full access inside your existing SaaS environment to test these features with your actual data.
+
+Not a customer yet? Start a
+14-day free trial
+and explore the full platform.
+
+For more information, please visit our
+Version 11.2
+and
+Version 11.3
+release notes in the DataRobot docs.
+
+Authors
+
+by
+
+Nikki Rouda
+
+December 17, 2025
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

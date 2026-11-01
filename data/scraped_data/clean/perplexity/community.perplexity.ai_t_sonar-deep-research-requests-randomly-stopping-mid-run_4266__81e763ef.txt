@@ -1,0 +1,155 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-deep-research-requests-randomly-stopping-mid-run/4266
+page path  : /t/sonar-deep-research-requests-randomly-stopping-mid-run/4266
+captured   : 2026-04-12 12:13:14 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-deep-research-requests-randomly-stopping-mid-run_4266__81e763ef.html.gz
+========================================================================
+
+sonar-deep-research⁠ requests randomly stopping mid-run - Bug Reports - Perplexity API Platform Forum
+
+sonar-deep-research⁠ requests randomly stopping mid-run - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+sonar-deep-research⁠ requests randomly stopping mid-run
+
+Bug Reports
+
+sonar-deep-research
+
+Eric-Geek
+
+March 21, 2026, 7:07pm
+
+1
+
+Has anyone seen ‎⁠sonar-deep-research⁠ requests randomly stopping mid-run? For example, incomplete responses, early termination, or errors during long deep-research calls. I’m trying to understand if this is an issue with my integration or a recent change on the API side.
+
+Kesku
+
+April 7, 2026, 2:40pm
+
+2
+
+Hey
+@Eric-Geek
+— this is a known pattern with
+sonar-deep-research
+. Because deep research queries can run for several minutes, synchronous requests are prone to timeouts and early termination.
+
+The recommended approach is to use
+async mode
+via the
+/v1/async/sonar
+endpoint:
+
+# 1. Submit the deep research request
+curl -X POST https://api.perplexity.ai/v1/async/sonar \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"model": "sonar-deep-research", "messages": [{"role": "user", "content": "Your research query here"}]}'
+
+# 2. Poll for results using the returned request_id
+curl https://api.perplexity.ai/v1/async/sonar/$REQUEST_ID \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY"
+
+Async mode decouples the request from the HTTP connection, so there is no risk of connection timeouts killing the research mid-run. You submit the request, get back a
+request_id
+, and poll for the result when it is ready.
+
+See the
+async deep research docs
+for the full reference.
+
+Alternatively, if you are using the Agent API, the
+deep-research
+preset also handles this — and you can use streaming (
+stream: true
+) to keep the connection alive while the research runs.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+213
+
+February 5, 2026
+
+GET /v1/async/sonar/{api_request} returns the list of all requests instead of single request data
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+chat-completions
+
+2
+
+35
+
+April 7, 2026
+
+Unable to retrieve the result of an async deep research
+
+Bug Reports
+
+sonar-deep-research
+
+4
+
+23
+
+April 8, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+317
+
+June 1, 2025
+
+`sonar-deep-research` intermittently fails to activate web search via the API
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+51
+
+March 26, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

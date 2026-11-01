@@ -1,0 +1,347 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/nousresearch
+page path  : /nousresearch
+captured   : 2026-04-17 18:46:44 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_nousresearch__5f71f346.html.gz
+========================================================================
+
+Nous Research Models on OpenRouter
+
+Nous Research Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Nous Research
+Access 18 Nous Research models on OpenRouter including Hermes 4 70B, Hermes 4 405B, and DeepHermes 3 Mistral 24B Preview. Compare pricing, context windows, and capabilities.
+Nous Research
+tokens processed on OpenRouter
+Nous: Hermes 4 70B
+Hermes 4 70B
+1.59B
+tokens
+Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama-3.1-70B. It introduces the same hybrid mode as the larger 405B release, allowing the model to either respond directly or generate explicit
+<think>
+...
+</think>
+reasoning traces before answering. Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+This 70B variant is trained with the expanded post-training corpus (~60B tokens) emphasizing verified reasoning data, leading to improvements in mathematics, coding, STEM, logic, and structured outputs while maintaining general assistant performance. It supports JSON mode, schema adherence, function calling, and tool use, and is designed for greater steerability with reduced refusal rates.
+by
+
+nousresearch
+Aug 26, 2025
+131K
+context
+$
+0.13
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+Nous: Hermes 4 405B
+Hermes 4 405B
+354M
+tokens
+Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with
+<think>
+...
+</think>
+traces or respond directly, offering flexibility between speed and depth. Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+The model is instruction-tuned with an expanded post-training corpus (~60B tokens) emphasizing reasoning traces, improving performance in math, code, STEM, and logical reasoning, while retaining broad assistant utility. It also supports structured outputs, including JSON mode, schema adherence, function calling, and tool use. Hermes 4 is trained for steerability, lower refusal rates, and alignment toward neutral, user-directed behavior.
+by
+
+nousresearch
+Aug 26, 2025
+131K
+context
+$
+1
+/M input
+tokens
+$
+3
+/M output
+tokens
+Nous: DeepHermes 3 Mistral 24B Preview
+DeepHermes 3 Mistral 24B Preview
+DeepHermes 3 (Mistral 24B Preview) is an instruction-tuned language model by Nous Research based on Mistral-Small-24B, designed for chat, function calling, and advanced multi-turn reasoning. It introduces a dual-mode system that toggles between intuitive chat responses and structured “deep reasoning” mode using special system prompts. Fine-tuned via distillation from R1, it supports structured output (JSON mode) and function call syntax for agent-based applications. DeepHermes 3 supports a
+reasoning toggle via system prompt
+, allowing users to switch between fast, intuitive responses and deliberate, multi-step reasoning. When activated with the following specific system instruction, the model enters a
+"deep thinking"
+mode—generating extended chains of thought wrapped in
+<think></think>
+tags before delivering a final answer. System Prompt: You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You should enclose your thoughts and internal monologue inside
+<think>
+
+</think>
+tags, and then provide your solution or response to the problem.
+by
+
+nousresearch
+May 9, 2025
+33K
+context
+Nous: DeepHermes 3 Llama 3 8B Preview
+DeepHermes 3 Llama 3 8B Preview
+DeepHermes 3 Preview is the latest version of our flagship Hermes series of LLMs by Nous Research, and one of the first models in the world to unify Reasoning (long chains of thought that improve answer accuracy) and normal LLM response modes into one model. We have also improved LLM annotation, judgement, and function calling. DeepHermes 3 Preview is one of the first LLM models to unify both "intuitive", traditional mode responses and long chain of thought reasoning responses into a single model, toggled by a system prompt.
+by
+
+nousresearch
+Feb 28, 2025
+131K
+context
+Nous: Hermes 3 70B Instruct
+Hermes 3 70B Instruct
+462M
+tokens
+Hermes 3 is a generalist language model with many improvements over
+Hermes 2
+, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board. Hermes 3 70B is a competitive, if not superior finetune of the
+Llama-3.1 70B foundation model
+, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user. The Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills.
+by
+
+nousresearch
+Aug 18, 2024
+131K
+context
+$
+0.30
+/M input
+tokens
+$
+0.30
+/M output
+tokens
+Nous: Hermes 3 405B Instruct
+Hermes 3 405B Instruct
+803M
+tokens
+Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board. Hermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user. The Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills. Hermes 3 is competitive, if not superior, to Llama-3.1 Instruct models at general capabilities, with varying strengths and weaknesses attributable between the two.
+by
+
+nousresearch
+Aug 16, 2024
+131K
+context
+$
+1
+/M input
+tokens
+$
+1
+/M output
+tokens
+Nous: Hermes 3 405B Instruct (free)
+Hermes 3 405B Instruct (free)
+74.6M
+tokens
+Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board. Hermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user. The Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills. Hermes 3 is competitive, if not superior, to Llama-3.1 Instruct models at general capabilities, with varying strengths and weaknesses attributable between the two.
+by
+
+nousresearch
+Aug 16, 2024
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Nous: Hermes 2 Theta 8B
+Hermes 2 Theta 8B
+An experimental merge model based on Llama 3, exhibiting a very distinctive style of writing. It combines the the best of
+Meta's Llama 3 8B
+and Nous Research's
+Hermes 2 Pro
+. Hermes-2 Θ (theta) was specifically designed with a few capabilities in mind: executing function calls, generating JSON output, and most remarkably, demonstrating metacognitive abilities (contemplating the nature of thought and recognizing the diversity of cognitive processes among individuals).
+by
+
+nousresearch
+Jul 11, 2024
+16K
+context
+NousResearch: Hermes 2 Pro - Llama-3 8B
+Hermes 2 Pro - Llama-3 8B
+39.4M
+tokens
+Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting of an updated and cleaned version of the OpenHermes 2.5 Dataset, as well as a newly introduced Function Calling and JSON Mode dataset developed in-house.
+by
+
+nousresearch
+May 27, 2024
+8K
+context
+$
+0.14
+/M input
+tokens
+$
+0.14
+/M output
+tokens
+Nous: Hermes 2 Mistral 7B DPO
+Hermes 2 Mistral 7B DPO
+This is the flagship 7B Hermes model, a Direct Preference Optimization (DPO) of
+Teknium/OpenHermes-2.5-Mistral-7B
+. It shows improvement across the board on all benchmarks tested - AGIEval, BigBench Reasoning, GPT4All, and TruthfulQA. The model prior to DPO was trained on 1,000,000 instructions/chats of GPT-4 quality or better, primarily synthetic data as well as other high quality datasets.
+by
+
+nousresearch
+Feb 21, 2024
+8K
+context
+Nous: Hermes 2 Mixtral 8x7B SFT
+Hermes 2 Mixtral 8x7B SFT
+Nous Hermes 2 Mixtral 8x7B SFT is the supervised finetune only version of
+the Nous Research model
+trained over the
+Mixtral 8x7B MoE LLM
+. The model was trained on over 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape, achieving state of the art performance on a variety of tasks. #moe
+by
+
+nousresearch
+Jan 16, 2024
+33K
+context
+Nous: Hermes 2 Mixtral 8x7B DPO
+Hermes 2 Mixtral 8x7B DPO
+Nous Hermes 2 Mixtral 8x7B DPO is the new flagship Nous Research model trained over the
+Mixtral 8x7B MoE LLM
+. The model was trained on over 1,000,000 entries of primarily
+GPT-4
+generated data, as well as other high quality data from open datasets across the AI landscape, achieving state of the art performance on a variety of tasks. #moe
+by
+
+nousresearch
+Jan 16, 2024
+33K
+context
+Nous: Hermes 2 Yi 34B
+Hermes 2 Yi 34B
+Nous Hermes 2 Yi 34B was trained on 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape. Nous-Hermes 2 on Yi 34B outperforms all Nous-Hermes & Open-Hermes models of the past, achieving new heights in all benchmarks for a Nous Research LLM as well as surpassing many popular finetunes.
+by
+
+nousresearch
+Jan 2, 2024
+4K
+context
+Nous: Hermes 2 Vision 7B (alpha)
+Hermes 2 Vision 7B (alpha)
+This vision-language model builds on innovations from the popular
+OpenHermes-2.5
+model, by Teknium. It adds vision support, and is trained on a custom dataset enriched with function calling This project is led by
+qnguyen3
+and
+teknium
+. #multimodal
+by
+
+nousresearch
+Dec 7, 2023
+4K
+context
+Nous: Capybara 7B
+Capybara 7B
+The Capybara series is a collection of datasets and models made by fine-tuning on data created by Nous, mostly in-house. V1.9 uses unalignment techniques for more consistent and dynamic control. It also leverages a significantly better foundation model,
+Mistral 7B
+.
+by
+
+nousresearch
+Dec 5, 2023
+8K
+context
+Nous: Capybara 34B
+Capybara 34B
+This model is trained on the Yi-34B model for 3 epochs on the Capybara dataset. It's the first 34B Nous model and first 200K context length Nous model.
+by
+
+nousresearch
+Nov 15, 2023
+200K
+context
+Nous: Hermes 70B
+Hermes 70B
+A state-of-the-art language model fine-tuned on over 300k instructions by Nous Research, with Teknium and Emozilla leading the fine tuning process.
+by
+
+nousresearch
+Oct 20, 2023
+4K
+context
+Nous: Hermes 13B
+Hermes 13B
+A state-of-the-art language model fine-tuned on over 300k instructions by Nous Research, with Teknium and Emozilla leading the fine tuning process.
+by
+
+nousresearch
+Aug 20, 2023
+4K
+context

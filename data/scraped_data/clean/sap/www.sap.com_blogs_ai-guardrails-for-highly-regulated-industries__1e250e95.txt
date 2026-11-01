@@ -1,0 +1,202 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/ai-guardrails-for-highly-regulated-industries
+page path  : /blogs/ai-guardrails-for-highly-regulated-industries
+captured   : 2026-01-15 00:25:21 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sap/www.sap.com_blogs_ai-guardrails-for-highly-regulated-industries__1e250e95.html.gz
+========================================================================
+
+AI guardrails for highly regulated industries | SAP
+
+AI guardrails for highly regulated industries | SAP
+
+flex-height
+
+text-black
+
+AI guardrails for highly regulated industries
+
+Executives can take cues from current regs while keeping an eye on developing laws and cases worldwide.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+Sometimes the best intentions can go awfully wrong. The same can be said when using AI—particularly
+generative AI (GenAI)
+—and the fallout can be painful in highly regulated industries and professions.
+
+A now-infamous case in point: the New York attorneys who were
+sanctioned
+by a judge for inadvertently presenting fake cases to the court as legal precedent in a personal injury lawsuit. The attorneys had used ChatGPT—the GenAI language processing tool—to conduct legal research for the court filing, and the cases it cited were merely AI “hallucinations” full of fictional judicial decisions and quotes. “Existing rules impose a gatekeeping role on attorneys to ensure the accuracy of their filings,” wrote judge P. Kevin Castel, who further said the attorneys acted in bad faith.
+
+Another example illustrates how a regulated company can be burned by AI that is used in third-party tools. A 2022
+class action lawsuit
+against State Farm claimed the insurance company’s algorithms and tools discriminated against Black policyholders. State Farm uses AI-driven third-party systems to perform the data analysis and claims automation tasks that were at the center of the lawsuit, according to a September 2023
+Memorandum Opinion
+.
+
+As GenAI infiltrates every industry—ready or not—challenges to the legal, regulatory, and
+ethical use of AI
+will continue to proliferate. Left unmanaged or even unknown in an organization, GenAI risks running afoul of current or upcoming regulatory and legal requirements. This has chief compliance officers (CCOs) nervous. “CCOs are more skittish about the risks that AI will introduce than they are optimistic about how AI will help them do their jobs,” says Matt Kelly, editor and CEO at Radical Compliance, a Web site devoted to corporate compliance, audit, and risk management issues. “They’re unsettled. Does the company have the right governance to adopt AI wisely? Does the CCO know who in the company is using it in the right ways? Are employees using it unwisely but nobody knows that? Maybe the people themselves don’t know if they’re using it badly.”
+
+CCOs know all the theoretical benefits of AI. For instance, AI could map regulatory obligations to specific controls or could be trained to generate new controls over time. “CCOs get that—but it’s more theoretical than real right now, and we’re a couple years away from seeing those full benefits happen,” Kelly says.
+
+We’re also years away from any final rules and regulations for AI use. Globally, regulatory requirements are just beginning to address GenAI, typically in response to incidents involving privacy, discrimination, or copyright infringement. The stakes will grow higher as these federal and global regulations come into play, especially in the most regulated industries—such as healthcare, financial services, government, and utilities—where violations often result in millions in fines, breakdowns of vital infrastructure, or crippling security breaches. Then there are the privacy and
+ethics concerns about GenAI
+; some of these issues are already being argued in lawsuits.
+
+Nervous compliance officers notwithstanding, for many of these companies, AI has already been unleashed. But it’s not too late to develop open and transparent plans to understand how it’s being used, to build in guardrails like acceptable use policies and approval processes, to require reporting on how AI is used to reach decisions, and to ensure that GenAI’s use complies with the organization’s values and ethics.
+
+Here’s a look at the evolving global regulatory landscape, GenAI’s opportunities and challenges in four highly regulated industries, and guidelines for creating AI policies today.
+
+New national AI compliance requirements
+
+Globally, more than
+1,000 AI policies
+and strategies are being initiated regarding governance, guidance, and regulation. The European Union (EU), China, and the United States have emerged as leaders in both development and governance of AI.
+
+U.S.
+
+Federal regulations are starting to take shape. The Biden administration laid out the Blueprint for an AI Bill of Rights and issued an executive order in October 2023, which directs specific agencies, led by the Commerce Department, to take actions to create regulatory requirements. The National Institute of Standards and Technology (NIST), which helps organizations understand and reduce their cybersecurity risk, has released a Voluntary AI Framework and is seeking input on testing and standards.
+
+EU
+
+In March 2024, the EU Parliament
+approved the landmark Artificial Intelligence Act
+, which provides comprehensive rules to govern the use of AI in the EU, making it the first major economic bloc to regulate this technology. The regulation is expected to complement the EU’s General Data Protection Regulation, which protects individuals’ rights over their personal data.
+
+The EU’s Artificial Intelligence Act aims to protect fundamental rights, democracy, the rule of law, and environmental sustainability from high-risk use of AI while encouraging innovation. The regulation limits AI for biometric identification systems by law enforcement and bans using AI systems to classify people or groups based on their social behavior or personality characteristics, among other restrictions. However, when AI is used in “high-risk systems”—including crucial infrastructure, education, employment, and essential private and public services like healthcare, banking, and elections—the regulation is vaguer. System owners must “assess and reduce risks, maintain use logs, be transparent and accurate about when and how AI is used, and ensure human oversight,” according to a Parliament
+press release
+—but the act offers limited specifics on how and to what degree these tasks should be performed.
+Formally endorsed by the
+EU Council
+in May 2024, the regulation will be fully enforced in 24 months, with enforcement of high-risk systems in three years.
+
+China
+
+China began implementing detailed, binding regulations on common AI applications as early as 2021, according to the
+Carnegie Endowment for International Peace
+. These rules formed the foundation of China’s developing AI governance regime, imposing new obligations on companies to intervene in content recommendations, granting new rights to users receiving content recommendations, and offering protections to gig workers subject to algorithmic scheduling. It was quickly followed by new regulations covering the use of deepfakes, which required AI providers to watermark AI-generated content and to ensure that content didn’t violate people’s “likeness rights” or harm the “nation’s image.” These two regulations formed China’s algorithm registry, a regulatory tool that has become central to the country’s AI governance regime.
+
+Overall, though, enforcement of these new regulations and directives has been patchy and limited, according to Fan Yang, research fellow at Melbourne Law School at the University of Melbourne, in an
+article
+for The Conversation. Current legal definitions of AI are still broad and raise concerns about how practical they are, she writes. Regulations cover a wide range of systems, which present different risks and may deserve different treatments. Many regulations lack clear definitions for risk, safety, transparency, fairness, and nondiscrimination, posing challenges for ensuring precise legal compliance, she adds.
+
+Applying current industry regulations to AI
+
+While U.S. companies wait for AI regulations to become clearer, “organizations are realizing not only that state and other AI regulations are evolving quickly but also that existing regulations apply to AI, so it is important to have a clear understanding of what levels of AI are being used and for what purpose,” says Amy Matsuo, principal and national leader, regulatory insights, at KPMG. “Chief risk and compliance officers may use existing frameworks for compliance management, model risk management, and third-party risk management to supervise and examine organizations in their development, use, and testing of AI,” she adds. “The time for sound risk governance and risk management is now.”
+
+Some regulators have already made it clear that existing authorities and regulations apply to “automated systems,” including algorithms, AI, predictive analytics, and innovative technologies, Matsuo says. Financial services regulators, for instance, have said that existing guidance and regulations apply to AI, and the U.S. Securities and Exchange Commission has proposed regulations on "covered technologies" and conflicts of interest related to AI use and outcomes. It has also issued enforcement actions relative to “AI washing,” which involves exaggerating the capabilities of a product or service that is sold as AI.
+
+Healthcare
+
+AI could greatly benefit the healthcare sector—for example, by reducing the number of forms that patients and administrators must fill out, helping doctors analyze medical images more quickly, and streamlining the development of new drugs.
+
+But AI technology could also run afoul of privacy laws, such as HIPAA in the U.S., as well as discrimination laws. Without proper oversight, diagnoses by
+AI can be biased
+by gender or race, especially when it’s not trained on data representing the population it’s being used to treat. (On the other hand, AI can also be a powerful tool to help detect and
+end bias
+when used the right way.)
+
+A wave of AI lawsuits has already begun against insurers over their use of AI and “advanced” technologies. Insurance companies Humana and UnitedHealthcare are facing
+class action suits
+from consumers and their estates for allegedly deploying advanced technology to deny claims. The lawsuits allege the insurers are using AI to decline care for beneficiaries in Medicare Advantage plans, but UnitedHealth argues that these AI-powered tools analyze data that helps insurers make coverage decisions. A spokesman for UnitedHealth Group says its “predict tool” is not used to make coverage determinations; those decisions, which are based on the terms of a member’s plan and criteria, are made by physician medical directors. But just how much the insurers rely on AI before humans intervene has been called into question.
+
+There are no standards established yet for GenAI use in healthcare, but it’s on the way. President Biden’s executive order to create AI standards directed the U.S. Department of Health and Human Services (HHS) to set up a safety program to take in reports on “harms or unsafe practices involving AI.” By December, the HHS national coordinator for health information technology issued a rule requiring more transparency around AI. Still, the porous nature of these directives is setting off a wave of lawsuits that is likely to continue until the technology is regulated and better understood.
+
+Healthcare leaders need to closely monitor AI experiments and use in all areas of patient care and to ensure appropriate testing and human oversight.
+
+Financial Services
+
+Finance industry regulations such as the 2010 Dodd-Frank Act, which was designed to protect U.S. consumers and taxpayers from egregious practices like predatory lending, brought a slew of new compliance requirements for banks doing business in the U.S. It also added stress-test requirements and mandatory risk committees.
+
+Today it’s not surprising that most financial services companies find it challenging to keep pace with the required changes and investments as they manage these controls and compliance. GenAI has emerged as a way to better manage Dodd-Frank requirements and to automate routine administrative and repetitive tasks. AI can also help determine an organization’s regulatory obligations and evaluate whether they’re being met. If they’re not, GenAI can map regulatory obligations to specific controls or can be trained to generate new controls over time.
+
+But there’s a downside. At a National Fair Housing Alliance conference in July 2023, the U.S. Federal Reserve’s top watchdog
+warned
+that AI and machine learning could encourage bias in lending practices.
+
+“While these technologies have enormous potential, they also carry risks of violating fair lending laws and perpetuating the very disparities that they have the potential to address,” Michael Barr, the Fed’s vice chair for supervision, said at the conference.
+
+While new AI tools could expand credit to more people relatively cheaply due to automated application processing, they also may exacerbate bias or inaccuracies that are inherent in data used to train the systems or may make inaccurate predictions, Barr added.
+
+The Fed later announced two policy initiatives to address appraisal discrimination in mortgage transactions. One proposed rule: institutions engaging in certain credit decisions would be required to adopt policies, practices, and control systems that ensure a “high level of confidence” in automated estimates and protect against manipulation of data. Another rule would help financial institutions incorporate “reconsiderations of value” into their home appraisal processes, which would allow a second look for errors, omissions, or discrimination.
+
+Financial CCOs need to interpret these vague directives, put policies in place that make AI use more transparent, and require those who use AI to explain how decisions are made.
+
+AI technology and finance
+
+Learn how AI can help you to automate tasks and make better decisions.
+
+Discover more
+
+Government
+
+The U.S. federal procurement process is a massive undertaking overseen by the Office of Management and Budget and the General Accounting Office. It involves extensive, detailed requests for proposals and due diligence before contracts can be awarded—and yet it still results in interminable legal disputes.
+
+Consider, for instance, the U.S. Department of Defense’s $10 billion, winner-take-all, decade-long
+JEDI contract
+. Initially awarded to Microsoft in 2019, the deal spent more than a year in court courtesy of a lawsuit and appeals by Amazon, all of which led to the contract being canceled entirely. If applied to the contracting process, AI could make awards like JEDI exponentially faster as well as more transparent. The factors and reasoning behind such decisions could be produced immediately rather than requiring year-long reviews involving manual write-ups.
+
+Many foreign governments have already made AI part of their inner workings. China, for instance,
+claims
+that AI contributed greatly to the suppression of COVID-19 during the pandemic through tracking of infected people and forecasting infection trends. It also uses AI technology as part of its
+social credit system
+—a mysterious, broad regulatory framework that uses complex algorithms to determine the “trustworthiness” of individuals, corporations, and governmental entities across China.
+
+How to keep up with new AI regulations
+
+Managing the risks associated with AI requires several steps, including taking inventory and assessing each use case, modifying the risk framework to incorporate new tools and trends, and adopting a risk mindset focused on monitoring outcomes, identifying risk threats, and enhancing overall governance of systems. Matsuo says there are four pillars that CCOs and other business leaders can follow:
+
+Develop governance.
+Create a trusted AI program with risk and compliance governance processes that cover the entire organization's use and assessment of AI. This includes defining risk roles and responsibilities and educating stakeholders about new and potential risks. CCOs could also assemble an AI committee that includes the chief IT security officer, compliance officer, general counsel, and the people likely to use AI regularly to come up with a basic AI policy. For instance, determine the uses of AI that are allowed and the uses that are off limits. Before AI is used, require that the committee knows where the underlying data is coming from and that users check the output to ensure accuracy and lack of bias or hallucinations
+
+Monitor usage and deployment.
+A trusted AI program will consider 10 core pillars across the AI lifecycle: fairness, transparency, explainability, accountability, data integrity, reliability, security, safety, privacy, and sustainability, Matsuo says. It’s important for CCOs to conduct or be key constituents to the risk assessment across these areas: AI development, business units using AI, IT, legal, and security. Organizations also need to evaluate testing, training, and deployment standards as well as identify key performance indicators to monitor outcomes and detect anomalies and fraud. The work doesn’t end there; CCOs will need to continually assess AI’s resiliency and reliability.
+
+Monitor compliance and legal risk.
+CCOs should monitor regulatory, legal, and reputational risks and ensure that stakeholder groups understand and implement the necessary requirements and controls. They should also align system deployments and governance standards with regulatory guidance as it emerges and develop mechanisms to identify, escalate, and manage potential vulnerabilities.
+
+Understand the tech strategy.
+Align risk management and oversight with the vision, strategy, and operating model for AI. CCOs need to take inventory of the AI landscape and planned use cases as well as monitor third-party risks that may arise from incorporating AI, Matsuo says. This will require close cooperation with IT, the chief information officer, the chief technology officer, and technology partners.
+
+With the proper safeguards, transparency, and oversight, highly regulated organizations should feel confident about experimenting with GenAI and unlocking its potential.
+
+SAP Product
+
+What is generative AI?
+
+A complete guide to unlock new capabilities with GenAI.
+
+Read the guide
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Read more
+
+/content/sapcom/countries/en_us/blogs/global-sales-help-finance-comply-with-local-rules
+
+/content/sapcom/countries/en_us/blogs/how-digital-twins-are-driving-the-future-of-business
+
+/content/sapcom/countries/en_us/blogs/how-to-spend-your-cybersecurity-budget
+
+location
+
+document-footer

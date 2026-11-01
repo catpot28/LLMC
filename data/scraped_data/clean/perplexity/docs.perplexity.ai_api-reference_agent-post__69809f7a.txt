@@ -1,0 +1,672 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/agent-post
+page path  : /api-reference/agent-post
+captured   : 2026-05-20 19:11:51 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_agent-post__69809f7a.html.gz
+========================================================================
+
+Create Agent Response - Perplexity
+
+Create Agent Response - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Agent API
+Create Agent Response
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Create Agent Response
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/agent
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>"
+
+}
+
+'
+200
+{
+
+"created_at"
+:
+123
+,
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"output"
+: [
+
+{
+
+"content"
+: [
+
+{
+
+"text"
+:
+"<string>"
+,
+
+"annotations"
+: [
+
+{
+
+"end_index"
+:
+123
+,
+
+"start_index"
+:
+123
+,
+
+"title"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"id"
+:
+"<string>"
+
+}
+
+],
+
+"error"
+: {
+
+"message"
+:
+"<string>"
+,
+
+"code"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+
+},
+
+"usage"
+: {
+
+"input_tokens"
+:
+123
+,
+
+"output_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"output_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"cache_creation_cost"
+:
+123
+,
+
+"cache_read_cost"
+:
+123
+,
+
+"tool_calls_cost"
+:
+123
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+123
+,
+
+"cache_read_input_tokens"
+:
+123
+
+},
+
+"tool_calls_details"
+: {}
+
+}
+
+}
+Agent API
+Create Agent Response
+Copy page
+Generate a response for the provided input with optional web search and reasoning.
+Copy page
+POST
+/
+v1
+/
+agent
+Try it
+Create Agent Response
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/agent
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>"
+
+}
+
+'
+200
+{
+
+"created_at"
+:
+123
+,
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"output"
+: [
+
+{
+
+"content"
+: [
+
+{
+
+"text"
+:
+"<string>"
+,
+
+"annotations"
+: [
+
+{
+
+"end_index"
+:
+123
+,
+
+"start_index"
+:
+123
+,
+
+"title"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"id"
+:
+"<string>"
+
+}
+
+],
+
+"error"
+: {
+
+"message"
+:
+"<string>"
+,
+
+"code"
+:
+"<string>"
+,
+
+"type"
+:
+"<string>"
+
+},
+
+"usage"
+: {
+
+"input_tokens"
+:
+123
+,
+
+"output_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"output_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"cache_creation_cost"
+:
+123
+,
+
+"cache_read_cost"
+:
+123
+,
+
+"tool_calls_cost"
+:
+123
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+123
+,
+
+"cache_read_input_tokens"
+:
+123
+
+},
+
+"tool_calls_details"
+: {}
+
+}
+
+}
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+input
+string
+(InputMessage · object | FunctionCallOutputInput · object | FunctionCallInput · object)[]
+string
+(InputMessage · object | FunctionCallOutputInput · object | FunctionCallInput · object)[]
+required
+Input content - either a string or array of input items
+​
+instructions
+string
+System instructions for the model
+​
+language_preference
+string
+ISO 639-1 language code for response language
+​
+max_output_tokens
+integer<int32>
+Maximum tokens to generate
+Required range
+:
+x >= 1
+​
+max_steps
+integer<int32>
+Maximum number of research loop steps.
+If provided, overrides the preset's max_steps value.
+Must be >= 1 if specified. Maximum allowed is 10.
+Required range
+:
+1 <= x <= 10
+​
+model
+string
+Model ID in provider/model format (e.g., "openai/gpt-5", "anthropic/claude-sonnet-4-6").
+If models is also provided, models takes precedence.
+Required if neither models nor preset is provided.
+​
+models
+string[]
+Model fallback chain. Each model is in provider/model format.
+Models are tried in order until one succeeds.
+Max 5 models allowed. If set, takes precedence over single model field.
+The response.model will reflect the model that actually succeeded.
+Required array length:
+1 - 5
+element
+s
+​
+preset
+string
+Preset configuration name (e.g., "fast-search", "pro-search", "deep-research").
+Pre-configured model with system prompt and search parameters.
+Required if model is not provided.
+​
+reasoning
+ReasoningConfig · object
+Show
+
+child attributes
+​
+response_format
+ResponseFormat · object
+Specifies the desired output format for the model response
+Show
+
+child attributes
+​
+stream
+boolean
+If true, returns SSE stream instead of JSON
+​
+tools
+(WebSearchTool · object | FinanceSearchTool · object | PeopleSearchTool · object | FetchUrlTool · object | FunctionTool · object)[]
+Tools available to the model
+Web search tool configuration for the Responses API
+WebSearchTool
+FinanceSearchTool
+PeopleSearchTool
+FetchUrlTool
+FunctionTool
+Show
+
+child attributes
+Response
+200
+application/json
+Successful response. Content type depends on
+stream
+parameter:
+
+stream: false
+(default):
+application/json
+with Response
+
+stream: true
+:
+text/event-stream
+with SSE events
+
+Non-streaming response returned when stream is false
+​
+created_at
+integer<int64>
+required
+Unix timestamp when the response was created
+​
+id
+string
+required
+Unique identifier for the response
+​
+model
+string
+required
+Model used for generation
+​
+object
+enum<string>
+required
+Object type identifier
+Available options
+:
+
+response
+
+​
+output
+(MessageOutputItem · object | SearchResultsOutputItem · object | FetchUrlResultsOutputItem · object | FunctionCallOutputItem · object)[]
+required
+Array of output items (messages, search results, tool calls)
+MessageOutputItem
+SearchResultsOutputItem
+FetchUrlResultsOutputItem
+FunctionCallOutputItem
+Show
+
+child attributes
+​
+status
+enum<string>
+required
+Status of the response
+Available options
+:
+
+completed
+,
+
+failed
+,
+
+in_progress
+,
+
+requires_action
+
+​
+error
+ErrorInfo · object
+Error details if the response failed
+Show
+
+child attributes
+​
+usage
+ResponsesUsage · object
+Token usage and cost information
+Show
+
+child attributes
+Was this page helpful?
+Yes
+No
+List Models
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

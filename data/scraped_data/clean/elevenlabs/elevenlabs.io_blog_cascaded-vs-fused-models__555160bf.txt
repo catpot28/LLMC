@@ -1,0 +1,256 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/cascaded-vs-fused-models
+page path  : /blog/cascaded-vs-fused-models
+captured   : 2026-04-21 07:03:57 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_cascaded-vs-fused-models__555160bf.html.gz
+========================================================================
+
+Cascaded vs Fused Models: Voice Agent Architectures
+
+Cascaded vs Fused Models: Voice Agent Architectures
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Sign up
+Sign up
+Blog
+Resources
+Cascaded vs Fused Models: How architecture determines whether your voice agent is enterprise-ready
+Last updated
+Apr 7, 2026
+•
+11 minutes reading time
+Authors
+Sergazy Kalmurzayev
+, Engineering
+,
+Fergal Burnett Small
+, Growth
+A breakdown of the five voice agent architectures and the tradeoffs between trust, configurability, and conversation quality.
+On this page
+Introduction
+What teams evaluate when choosing an architecture
+Can it handle complex tasks?
+Will it sound and feel human?
+Can I trust it in production?
+The tradeoffs between cascaded and fused architectures
+The five architectures
+1. Basic Cascaded
+2. Advanced Cascaded
+3. Hybrid Cascaded and Fused
+4. Sequential Fused
+5. Duplex Fused
+Choosing the right architecture for your use case
+Most people think voice agents are built using either a cascaded or fused architecture. In practice, agents are designed along a spectrum between the two, with five architectures typically used depending on the application.
+The agent's architecture determines its ability to behave reliably in production, adapt to specific business requirements, and sound natural in conversation. A fusion-based architecture like OpenAI's Realtime model may sound impressively lifelike in short exchanges. But when teams need to enforce compliance guardrails, debug a failed response, or swap in a stronger LLM when one launches next month, a single fused network offers little path forward.
+At ElevenLabs, we use an advanced cascade-based architecture. We leverage specialized components for speech recognition, reasoning, and speech generation for high levels of intelligence and reliability. We layer in contextual prosody, low-latency optimization, and intelligent turn-taking so conversations flow naturally. We built it this way because the enterprises and governments we work with require agents that both sound realistic and can be trusted in production with complex tasks.
+This article walks through the five main architectures, what they're good at, where they break down, and how we think about the foundation for agents deployed in critical workflows.
+What teams evaluate when choosing an architecture
+The questions teams ask typically fall into three categories.
+Can it handle complex tasks?
+Reasoning and model flexibility:
+Can you choose the best models for your use case, including the strongest available LLMs, and upgrade as better options become available?
+Agent logic:
+Can you define and control the conversation flows, decision rules, and escalation paths your agent follows?
+Tool use:
+Can the architecture support multi-step tool calling and integrations with external systems?
+Will it sound and feel human?
+Prosody:
+Does the agent deliver natural rhythm, intonation, and emotional tone?
+Latency:
+Are responses fast enough to feel conversational?
+Turn-taking:
+Does the agent know when to speak, pause, or yield?
+Can I trust it in production?
+Reliability:
+Does the agent behave predictably and consistently, or drift over time?
+Guardrails:
+Can the architecture enforce protections against unintended responses or adversarial users?
+Transparency:
+Does the architecture produce intermediate outputs, or is it a black box?
+The tradeoffs between cascaded and fused architectures
+Cascade-based architectures are built by chaining together specialized components:
+Speech to Text
+(STT), a Large Language Model, and
+Text to Speech
+(TTS). Each stage can be optimized, tested, and upgraded independently.
+Cascaded Architecture
+That modularity is what makes cascaded architectures the foundation of most enterprise-grade agents. Every stage produces inspectable outputs: readable text between STT and the LLM, between the LLM and TTS. Guardrails can be enforced at the text layer, latest frontier LLM can be integrated without modifying speech models, and when something fails, the source of the failure is generally identifiable.
+The longstanding criticism of cascaded architectures is that they lose prosodic cues. Speech is reduced to text, and intonation, rhythm, and emotion must be reconstructed on the output side. These cues can be partially recovered through explicit modeling, but they’re not captured as naturally as in fused approaches. Other dimensions, such as latency and turn-taking, can typically be optimized to comparable performance levels in both approaches.
+Fused Model
+Fused architectures take a fundamentally different approach. Recognition, reasoning, and generation all happen inside a single multimodal network. Audio enters, audio exits, with no inspectable layer in between.
+This lack of intermediate stages is both the appeal and the limitation. Fuzed architecture can preserve prosodic cues naturally, because speech never gets decomposed into text. However, there's limited ability to enforce guardrails, swap individual components, or inspect intermediate outputs to debug. There are also constraints on fine-tuning STT for industry-specific terminology or integrating a different LLM for stronger reasoning and tool calling. The system is one network, and teams are constrained to whatever reasoning capabilities it ships with, which today means lighter-weight cores that can't match frontier LLMs on complex tasks.
+The five architectures
+1. Basic Cascaded
+Audio is transcribed, the LLM generates a text reply, and TTS speaks it. Every stage operates on plain text, so you can see, test, and control everything.
+The trust advantages are clear: guardrails at the text layer, deterministic conversation flows, full audit trails. Because the LLM is a standalone component, you can pair the agent with whichever frontier model offers the strongest reasoning or tool-calling capabilities, and upgrade the moment a better one ships. The weakness is conversation quality: without contextual TTS, the agent sounds functional but flat. There's no emotional adaptation or prosodic variation, which is acceptable for reading back account balances but inadequate for handling a frustrated customer.
+Example use cases:
+
+IVR replacements in telecom and utilities
+FAQ handling for SaaS onboarding
+Outbound notifications like appointment confirmations, prescription reminders, and delivery alerts, where consistency matters more than warmth
+2. Advanced Cascaded
+The same modular architecture, but now multiple components operate with richer context. This is what we built with
+Expressive Mode
+in
+ElevenAgents
+. The
+Scribe v2 Realtime
+STT model goes beyond simple transcription, encoding emotion, tone, and prosody from the user's speech and feeding that context to the LLM and turn-taking system.
+The LLM then instructs the TTS on how to deliver speech - not just what to say - like "reassuringly," "with emphasis," "with urgency," adapting its tone dynamically across the conversation. The turn-taking system draws on the same signals, enabling the agent to determine when to respond and when to yield. Speech models are co-located in a single stack with no network hops between components, so latency stays low.
+The architecture retains everything from basic cascaded: full transparency, text-layer guardrails, component swappability, domain-tuning, and access to the strongest tool-calling and reasoning models available. It adds meaningfully better prosody, latency, and turn-taking. Teams can integrate a new frontier LLM the week it ships, or fine-tune STT for healthcare vernacular, without rebuilding any other component.
+Example use cases:
+
+Customer support for financial services, where empathetic delivery on a disputed charge call pairs with strict compliance guardrails and full interaction logging
+Healthcare receptionists triaging patient calls with appropriate urgency, HIPAA-compliant flows, and domain-tuned speech recognition for medical terminology
+Sales assistants that maintain a warm, persuasive tone while following a structured playbook and pushing updates to the CRM
+3. Hybrid Cascaded and Fused
+Some architectures feed acoustic features (pronunciation, emotion, tone) from the input speech directly into the LLM as embeddings, rather than converting to text first. TTS stays modular.
+This provides the LLM with richer input about
+how
+something was said, not just what was said, which is valuable for specific applications. The fused ASR+LLM block is harder to audit than a clean text handoff because the intermediate representation is an embedding, not something a human can read. The LLM is also no longer easily swappable, which constrains your reasoning and tool-calling capabilities to whatever model the fused block was built around.
+Example use cases:
+
+Language learning and pronunciation coaching, where hearing
+how
+a student speaks matters as much as what they say
+Tone-sensitive support with low complexity, where detecting frustration matters but the task itself is simple.
+4. Sequential Fused
+A single multimodal model handles recognition, reasoning, and generation in one pass, one turn at a time. This is the architecture behind models like OpenAI's Realtime API.
+The prosody can be strong. Because speech never gets decomposed into text, the model preserves pacing, intonation, and emotional cues naturally. Brief conversations can sound remarkably fluid.
+But there's limited ability to enforce guardrails without a text layer, limited intermediate outputs for debugging, and limited flexibility to swap in a better LLM or fine-tune the STT for your domain. The reasoning cores tend to be lighter-weight than frontier LLMs, so complex tool-calling and multi-step tasks suffer. When the task requires solving a complex problem, prosody alone is insufficient.
+Example use cases:
+
+Personal companions, entertainment chatbots, and applications where expressiveness drives engagement and compliance requirements are minimal.
+5. Duplex Fused
+Input and output are processed simultaneously, with the model listening and speaking at the same time. This can make brief exchanges feel strikingly natural, with genuine overlapping speech and fluid turn transitions.
+It is also the most difficult architecture to control, guardrails are very hard to enforce, and crosstalk introduces unpredictable errors. Inspecting, logging, or debugging is extremely difficult, and the system is largely closed with minimal options for component swapping, domain-tuning, or customization. Reasoning and tool use are even more constrained than in sequential fused models because the simultaneous processing leaves less capacity for complex logic. And the same simultaneous processing that makes short exchanges sound natural makes longer conversations unstable.
+Example use cases:
+
+Experimental companion apps, social voice platforms, and research demos where unpredictable behavior is acceptable.
+Choosing the right architecture for your use case
+The right architecture depends on what a given application requires. If you’re building an experience where natural-sounding speech is the primary feature, fused architectures deliver real strengths if you are willing to compromise on frontier reasoning, guardrails, and transparency. While fused models lead on prosody, advanced cascaded systems are getting closer every quarter, while fused models haven't made meaningful progress complex reasoning or trust due to limitations at the architectural level.
+For most businesses and governments, the best architecture is one that both sounds great and is capable, customizable, trustworthy, and ready to deploy at scale. That's why we chose to build
+ElevenAgents
+using an advanced cascaded architecture with investments in
+Expressive Mode
+and best-in-class, co-optimized models for
+Speech to Text
+and
+Text to Speech
+. This lets teams build agents with high levels of intelligence, reliability, and control paired with natural, human-like speech.
+As AI agents continue to expand across customer support, education, personal assistants, and more, those that succeed will be built on architectures tailored to their specific applications.
+Explore articles by the ElevenLabs team
+Unpacking ElevenAgent's Orchestration Engine
+Category
+Resources
+Date
+Feb 27, 2026
+Introducing Expressive Mode for ElevenAgents
+Category
+Product
+Date
+Feb 10, 2026
+How to use AI for creating dynamic video narratives
+Category
+Resources
+Date
+Jun 7, 2024
+Top 5 apps that read out text
+Category
+Resources
+Date
+Jun 7, 2024
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+English
+English
+Svenska
+Polski
+Português
+日本語
+한국어
+हिन्दी
+Español
+Français
+Deutsch
+Italiano
+简体中文

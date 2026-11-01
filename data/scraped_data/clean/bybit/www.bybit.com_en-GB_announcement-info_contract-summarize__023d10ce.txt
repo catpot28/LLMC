@@ -1,0 +1,74 @@
+=== SOURCE =============================================================
+company    : Bybit (bybit)
+url        : https://www.bybit.com/en-GB/announcement-info/contract-summarize/
+page path  : /en-GB/announcement-info/contract-summarize/
+captured   : 2026-04-20 03:55:05 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/bybit/www.bybit.com_en-GB_announcement-info_contract-summarize__023d10ce.html.gz
+========================================================================
+
+Derivatives Overview
+
+Derivatives Overview
+
+Derivatives Overview
+Contract Types
+Derivatives are financial instruments that derive value from the performance of an underlying asset. They are used to manage financial risk by allowing parties to hedge against potential adverse movements in market prices.
+Perpetual Contracts
+A perpetual contract is a type of derivative that, unlike traditional futures, has no expiration or settlement date. Bybit's perpetual contracts are margined in USDT, USDC, and base assets (also known as coin-margined).
+Funding Mechanism: This process entails the exchange of funding fees between long and short position holders every 8 hours, based on the funding rate. This exchange is contingent on the position being open at specific timestamps (00:00 UTC, 08:00 UTC, and 16:00 UTC).
+When the funding rate is positive, long position holders pay short position holders.
+When the funding rate is negative, short position holders pay long position holders.
+The
+Funding Fee
+calculation is:
+Funding Fee = Position Value * Funding Rate.
+For
+funding rate
+details,
+click here
+.
+Futures Contracts
+Bybit Futures contracts are denominated in USDT, USDC, and the underlying assets.
+Expiration dates are based on the last day of the following period: Current week, next week, third week, current month, next month, third month, current quarter, and next quarter.
+Settlement: The settlement price is based on the average Index Price within the last 30 minutes before expiration. The settlement time is at 8AM UTC on the expiration date. USDT and USDC contracts are cash-settled, meaning the contract seller pays the buyer's profit or loss in USDT or USDC, rather than transferring the underlying asset. Inverse contracts are settled in the underlying asset.
+Options Contracts
+Bybit Options are European options with BTC, ETH, or SOL as the underlying assets. The price is determined based on the last traded price (LTP) of the underlying asset and implied volatility. Settlement and margin are denominated in USDT or USDC.
+Margin Types
+In derivatives trading, margin acts as collateral for holding positions.
+Initial Margin
+is the amount needed to open (or increase) a position, while
+Maintenance Margin
+is the minimum amount that must be maintained to keep the position open.
+Index Price
+The Index Price is derived from a weighted average of multiple spot exchange quotes, adjusted by data usability and weight adjustment factors. The spot price of reference exchanges will be weighted based on trading volume and price distance from the volume-weighted average price.
+For index price calculations,
+click here
+.
+Mark Price
+The Mark Price, used by exchanges to estimate the true value of derivatives contracts, is derived from the Index Price, and adjusted with additional factors such as the Funding Rate, reflecting the cost of holding an open position in the market. In trading, the Mark Price is primarily used to:
+Calculate
+unrealized
+profit and loss.
+Trigger liquidation when the Mark Price reaches or exceeds the Liquidation Price.
+
+The Mark Price (Perpetual Contracts) calculation is:
+Mark Price = Median (Price 1, Price 2, Last Traded Price)
+Price 1 = Index Price × [1 + Last Funding Rate × % Time Remaining to Funding]
+Price 2 = Index Price + 5-min Moving Average
+5-min Moving Average = Moving Average [(Bid Price + Ask Price) / 2 - Index Price] (sampled once per second for the past 5 minutes)
+The Mark Price (Futures Contracts) calculation is:
+Mark Price = Index Price * (1 + Basis Rate)
+The Mark Price (Options Contracts) calculation is:
+Black-76 model with inputs of forward price, strike price, time to expiration, interest rate, and implied volatility (IV).
+
+The IV is based on: Spline Volatility Surface, SABR Volatility Surface
+References
+For information on Contract Details,
+click here
+.
+For details on Trading Parameters,
+click here
+.
+For details on Margin Parameters,
+click here
+.

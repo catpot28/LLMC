@@ -1,0 +1,505 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/ai-switching-problem
+page path  : /stories/blog/ai-switching-problem
+captured   : 2026-05-09 16:40:21 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_ai-switching-problem__1c4d214b.html.gz
+========================================================================
+
+Decision 5 of 7: when AI model choices become a switching problem
+
+Decision 5 of 7: when AI model choices become a switching problem
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+AI Governance & Architecture
+
+Machine Learning
+
+Reports & Guides
+
+Decision 5 of 7: when AI model choices become a switching problem
+
+Apr 17, 2026
+
+3 min read
+
+/
+
+Julia Berman
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+This is the fifth installment in our seven-part breakdown of insights from the report, "7 career-making AI decisions for CIOs in 2026."
+Read the full report here
+.
+
+In
+Decision #1
+, we explored how AI has become a leadership referendum. In
+Decision #2
+, we examined why explainability is becoming the gatekeeper for AI reaching production. For
+Decision #3
+, we discussed the accountability gap behind AI agents embedded in critical workflows. Most recently, in
+Decision #4
+, we addressed the growing cost of vendor regret — and why AI stack flexibility has become a career calculation.
+
+Now, with this fifth decision, we address what happens when the model layer itself becomes the constraint.
+
+AI will either be built on an architecture that can evolve as model capabilities shift, or it will be locked into assumptions that were accurate for a few months in 2024. The difference comes down to whether LLM flexibility was designed in from the start or treated as a problem to solve later.
+
+Multi-LLM is not a future state, it’s our operating reality
+
+For much of early enterprise AI adoption, organizations chose a primary LLM provider and built around it. The logic was reasonable: Standardizing on one model simplified integration, reduced governance complexity, and kept vendor relationships manageable.
+
+But now, that logic no longer holds.
+
+According to the
+recently-released report
+, based on a Dataiku/Harris Poll survey of 600 enterprise CIOs worldwide, 81% of CIOs expect to rely on two or more LLM providers in 2026 just to stay competitive. Why? Different models are genuinely better at different things.
+
+In fact, 93% of CIOs say different LLMs perform better for different use cases, and that this requires continual evaluation and switching. That's not a theoretical concern about future model releases. It's an operational reality in production environments today, where code generation, summarization, structured reasoning, and customer-facing interactions may each demand a different model to deliver reliable results.
+
+See all seven career-defining AI decisions faced by CIO leadership in 2026
+
+ACCESS FULL REPORT
+
+The switching decision is already happening
+
+Beyond evaluation, enterprises are actively moving between providers. Fifty-five percent of CIOs say they have already switched LLMs at least once, with cost reduction as the primary driver.
+
+That figure matters for two reasons. First, it confirms that LLM switching is not a hypothetical planning exercise. It's a live operational event that a majority of enterprises have already navigated. Second, it reveals that switching decisions are often financially motivated, which means they will keep happening as pricing environments shift and new model releases change the cost-performance calculus.
+
+The problem is that most enterprise AI architectures weren't designed with switching in mind. When models are deeply embedded in application logic, data pipelines, and prompt structures, replacing one provider with another requires significant rework. What should be a configuration decision becomes a reengineering project — with cost, delay, and risk attached.
+
+The AI architectural implication
+
+Model-layer flexibility is about preserving the ability to choose differently tomorrow without rebuilding the systems those models sit inside.
+
+That requires a specific kind of architecture, one where:
+
+Models are treated as interchangeable components rather than foundational dependencies
+
+Evaluation, routing, and deployment are managed at the platform level rather than embedded in individual applications
+
+Governance and traceability follow the model, regardless of which provider it came from
+
+Enterprises that build this way gain the ability to respond to market shifts, pricing changes, and capability improvements without compounding technical debt at each transition.
+
+What differentiates multi-LLM-ready architectures
+
+Enterprises that manage model diversity successfully tend to share three structural characteristics:
+
+1. They abstract the model layer from application logic.
+Prompts, orchestration, and business logic are decoupled from any specific LLM provider so that switching or adding models won’t require rewriting downstream systems.
+
+2. They manage evaluation as a continuous operation.
+Model performance is monitored and compared across providers on an ongoing basis. That creates the evidence base needed to justify switching decisions internally and defend them externally.
+
+3. They apply consistent governance across providers.
+Logging, traceability, and usage controls operate at the platform level (versus the model level). This ensures that as providers change, oversight remains intact.
+
+This is where architecture becomes strategic. When LLM dependencies are buried inside application code, every model transition creates new exposure. When they're managed at the platform level, provider flexibility becomes a durable operational capability.
+
+The leadership consequence
+
+The pressure on CIOs to deliver competitive AI performance will certainly persist. As model capabilities continue to advance unevenly across providers, the ability to evaluate, switch, and route intelligently will directly affect the quality and cost of AI outcomes at scale.
+
+The enterprises that treat multi-LLM as an architectural design principle — rather than a problem to solve reactively — will absorb those transitions smoothly. Otherwise, they’ll end up negotiating expensive migrations every time the model landscape shifts.
+
+In 2026, LLM flexibility is no longer a technical preference. It's a performance and cost variable that boards are already asking about. The CIOs who have built for optionality will have defensible answers. Those locked into single-model dependencies will be explaining why they don't.
+
+Download the 2026 CIO decisions survey report
+
+Tags
+
+AI Governance & Architecture
+
+Machine Learning
+
+Reports & Guides
+
+Share
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+AI governance for risk, audit, and regulatory readiness
+
+Decision 6 of 7: when AI budgets require measurable proof
+
+Climate resilience needs granularity (and how we can help you get there)
+
+AI ethics and governance: operationalizing responsible AI at enterprise scale
+
+Kiji Privacy Proxy™: protecting your data in the age of generative AI
+
+You May Also Like
+
+Explore the Blog
+
+AI Governance & Architecture
+
+AI governance for risk, audit, and regulatory readiness
+
+Most enterprises have an AI governance policy but struggle to answer the follow-up questions a regulator would...
+
+May 06, 2026
+
+AI Governance & Architecture
+
+Decision 6 of 7: when AI budgets require measurable proof
+
+This is the sixth installment in our seven-part breakdown of insights from the report, "7 career-making AI...
+
+May 06, 2026
+
+AI Governance & Architecture
+
+Climate resilience needs granularity (and how we can help you get there)
+
+Climate risk is no longer a medium-term concern managed through disclosure. On average, corporate climate risk...
+
+May 05, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

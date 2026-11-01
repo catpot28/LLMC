@@ -1,0 +1,275 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/feature-request-computer-api-availability-on-the-perplexity-api-platform/4746
+page path  : /t/feature-request-computer-api-availability-on-the-perplexity-api-platform/4746
+captured   : 2026-04-12 11:42:29 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_feature-request-computer-api-availability-on-the-perplexity-api-platform_4746__220667b1.html.gz
+========================================================================
+
+Feature Request: Computer API Availability on the Perplexity API Platform - Feature Requests - Perplexity API Platform Forum
+
+Feature Request: Computer API Availability on the Perplexity API Platform - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Feature Request: Computer API Availability on the Perplexity API Platform
+
+Feature Requests
+
+sonar-pro
+,
+
+chat-completions
+
+Farukh_Javed
+
+April 7, 2026, 3:39pm
+
+1
+
+Feature Request
+
+Please prioritize a limited-access Computer API for the Perplexity API platform. This would unlock production workflows for us where Perplexity already handles the research and reasoning well, but the final mile still requires browser or UI interaction. Even a constrained beta with sandboxing, screenshots, and action logs would be highly valuable.
+
+Even a constrained first release would be highly valuable.
+
+Problem Statement
+
+We have workflows where Perplexity can already handle the highest-value cognitive work: researching a topic, identifying relevant facts, synthesizing information, and determining what should happen next.
+
+The limitation is that the final step in many of these workflows still requires computer interaction rather than pure text generation. That may include navigating a web interface, pulling information from a portal, stepping through structured UI flows, or collecting information from systems that do not offer clean API access.
+
+Today, this forces us into a fragmented architecture:
+
+Perplexity for research and reasoning
+
+a separate browser automation or RPA stack for execution
+
+additional engineering effort to bridge context, state, logging, and controls across both systems
+
+That fragmentation increases implementation complexity, reduces reliability, and weakens the value of Perplexity as a unified platform for end-to-end intelligent workflows.
+
+Proposed Solution
+
+Expose a
+Computer API
+through the developer platform, ideally beginning with a constrained beta or preview release.
+
+A practical initial version could support:
+
+launching a controlled computer-use session
+
+providing a task or objective through the API
+
+navigating browser-based environments
+
+capturing screenshots or state snapshots
+
+returning structured action logs and final outputs
+
+applying domain restrictions, confirmation gates, and other safety controls
+
+A phased rollout would be more than sufficient. For example:
+
+Phase 1
+
+read-only or sandboxed browsing
+
+screenshots / visual state capture
+
+action traces and logs
+
+Phase 2
+
+limited UI interaction in constrained environments
+
+allowlisted domains
+
+configurable confirmation for sensitive actions
+
+Phase 3
+
+broader task execution support for production agent workflows
+
+Example use cases:
+
+combining Perplexity research with structured navigation of vendor or partner portals
+
+pulling information from web systems that lack practical API access
+
+supporting market intelligence, compliance, research operations, and internal workflow automation
+
+creating agentic pipelines where reasoning and execution happen in one system rather than two
+
+API Impact
+
+Which API component is affected?
+
+A new API capability for
+computer use / browser interaction / agentic task execution
+
+Is this related to a specific model?
+
+Potentially a dedicated computer-use-capable model, or an extension of an existing advanced model family
+
+Would this require new API parameters or changes to existing ones?
+
+Yes, likely including:
+
+session/environment configuration
+
+action permissions and tool scope
+
+screenshot / visual state outputs
+
+structured action trace or audit logs
+
+domain allowlists / sandbox controls
+
+confirmation requirements for sensitive actions
+
+timeout, retry, and completion criteria
+
+Alternatives Considered
+
+We have considered and, where necessary, used the following alternatives:
+
+separate browser automation frameworks
+
+third-party RPA or agent tooling
+
+manual execution after Perplexity produces guidance
+
+hybrid architectures where Perplexity handles reasoning and another stack handles actions
+
+These are all workable, but they are materially inferior to a native Perplexity solution because they:
+
+split reasoning from execution
+
+require more engineering overhead
+
+create handoff and state-management issues
+
+reduce observability and coherence
+
+limit the strategic value of Perplexity as a single developer platform
+
+Additional Context
+
+This request is not hypothetical. It reflects a real need for workflows where research and reasoning are only part of the job, and the remaining value comes from being able to carry that work through to structured interaction and execution.
+
+From a product standpoint, even a limited beta would be meaningful. A sandboxed, logged, and safety-constrained version would already unlock significant value and would likely be enough for us to evaluate production adoption.
+
+If there is already a roadmap, private beta, waitlist, or design partner program for Computer API availability, we would appreciate the opportunity to participate.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Input mid-processing
+
+Feature Requests
+
+chat-completions
+
+0
+
+41
+
+September 26, 2025
+
+About the Feature Requests category
+
+Feature Requests
+
+1
+
+263
+
+August 13, 2025
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+135
+
+April 7, 2026
+
+More transparity and options for Perplexity pro application "labs" features
+
+Feature Requests
+
+0
+
+142
+
+June 16, 2025
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+134
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

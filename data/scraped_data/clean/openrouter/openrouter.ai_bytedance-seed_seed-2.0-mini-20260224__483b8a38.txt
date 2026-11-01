@@ -1,0 +1,157 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/bytedance-seed/seed-2.0-mini-20260224
+page path  : /bytedance-seed/seed-2.0-mini-20260224
+captured   : 2026-04-20 19:48:03 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_bytedance-seed_seed-2.0-mini-20260224__483b8a38.html.gz
+========================================================================
+
+Seed-2.0-Mini - API Pricing & Providers | OpenRouter
+
+Seed-2.0-Mini - API Pricing & Providers | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+ByteDance Seed: Seed-2.0-Mini
+bytedance-seed
+/
+seed-2.0-mini
+Chat
+Compare
+Released
+Feb 26, 2026
+262,144
+context
+$
+0.10
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+Seed-2.0-mini targets latency-sensitive, high-concurrency, and cost-sensitive scenarios, emphasizing fast response and flexible inference deployment. It delivers performance comparable to ByteDance-Seed-1.6, supports 256k context, four reasoning effort modes (minimal/low/medium/high), multimodal understanding, and is optimized for lightweight tasks where cost and speed take priority.
+Chat
+Compare
+Overview
+Playground
+Providers
+Performance
+Pricing
+Apps
+Activity
+Uptime
+API
+Providers for Seed-2.0-Mini
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for Seed-2.0-Mini
+Compare different providers across OpenRouter
+All locations
+Sorting API Example
+Effective Pricing for Seed-2.0-Mini
+Actual cost per million tokens across providers over the past hour
+Apps using Seed-2.0-Mini
+Top public apps this month
+Recent activity on Seed-2.0-Mini
+Total usage per day on OpenRouter
+Prompt
+79M
+Reasoning
+50.8M
+Completion
+11.6M
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for Seed-2.0-Mini
+Uptime stats for
+Seed-2.0-Mini
+
+across all providers
+Sample code and API for Seed-2.0-Mini
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports reasoning-enabled models that can show their step-by-step thinking process. Use the
+reasoning
+parameter in your request to enable reasoning, and access the
+reasoning_details
+array in the response to see the model's internal reasoning before the final answer. When continuing a conversation, preserve the complete
+reasoning_details
+when passing messages back to the model so it can continue reasoning from where it left off.
+
+Learn more about reasoning tokens
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+OpenRouter SDK
+OpenAI SDK
+Raw
+Copy
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

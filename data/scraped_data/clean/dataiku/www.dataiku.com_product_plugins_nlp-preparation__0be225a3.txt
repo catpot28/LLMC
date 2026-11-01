@@ -1,0 +1,1144 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/nlp-preparation/
+page path  : /product/plugins/nlp-preparation/
+captured   : 2026-02-14 02:01:20 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_nlp-preparation__0be225a3.html.gz
+========================================================================
+
+Plugin: Text Preparation | Dataiku
+
+Plugin: Text Preparation | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Text Preparation
+
+Text Preparation
+
+Prepare text data with language detection, spell checking and text cleaning
+
+Share
+
+Plugin information
+
+Version
+
+1.4.0
+
+Author
+
+Dataiku (Alex COMBESSIE, Damien JACQUEMART)
+
+Released
+
+2020-09
+
+Last updated
+
+2026-01
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to:
+
+Detect dominant languages among
+114 languages
+
+If you have multilingual data, this step is necessary to apply custom processing per language
+
+Identify and correct misspellings in
+37 languages
+
+Tokenize, filter, and lemmatize text data in
+59 languages
+
+Note that languages are defined as per the
+ISO 639-1 standard
+with 2-letter codes.
+
+Table of contents
+
+How to set up
+
+How to use
+
+Language detection
+
+Spell checking
+
+Text cleaning
+
+Advanced topics
+
+Supported languages
+
+Language detection
+
+Spell checking
+
+Text cleaning
+
+How to set up
+
+Right after installing the plugin, you will need to build its code environment.
+
+Code environment creation
+
+Note that Python version 3.6 or 3.7 is required. If you are installing the plugin on macOS, the pycld3 dependency requires at least macOS 10.14. Finally, Conda is not supported, as pycld3 is not currently available on Anaconda Cloud.
+
+To use this plugin with containers, you will need to customize the base image. Please follow
+this documentation
+with this
+Dockerfile fragment
+.
+
+How to use
+
+Let’s assume that you have a Dataiku DSS project with a dataset containing raw text data of multiple languages. This text data must be stored in a dataset, inside a text column, with one row for each document.
+
+Navigate to the Flow, click on the
++ RECIPE
+button and access the
+Natural Language Processing
+menu. If your dataset is selected, you can directly find the plugin on the right panel.
+
+Plugin Recipe Creation
+
+Language Detection recipe
+
+Detect dominant languages among 114 languages
+
+Input
+
+Text dataset:
+Dataset with a text column
+
+Settings
+
+Language Detection Recipe Settings
+
+Fill INPUT PARAMETERS
+
+The
+Text column
+parameter lets you choose the column of your input dataset containing text data.
+
+The
+Language scope
+parameter allows you to specify the set of languages in your specific dataset. You can leave it empty (default) to detect all 114 languages.
+
+(Optional) Review ADVANCED parameters
+
+You can activate the
+Expert mode
+to access advanced parameters
+
+The
+Minimum score
+parameter allows you to filter detected languages based on the confidence score in the prediction. You can leave it at 0 (default) to apply no filtering.
+
+The
+Fallback language
+parameter is for cases where the detected language is not in your language scope, or the confidence score is below your specified minimum.
+
+You can leave it at “None” (default) to output an empty cell.
+
+If the fallback is used, the confidence score will be an empty cell.
+
+Output
+
+Output dataset:
+Dataset with 3 additional columns
+
+ISO 639-1 language code
+
+ISO 639-1 language name
+
+Probability score of the predicted language from 0 to 1
+
+Language Detection Output Dataset
+
+Spell Checking recipe
+
+Identify and correct misspellings in 37 languages
+
+Input
+
+Text dataset:
+Dataset with a text column
+
+(Optional) Custom vocabulary dataset
+
+This dataset should contain a single column for words that should not be corrected.
+
+This input is case-sensitive, so “NY” and “Ny” are considered as different words.
+
+If your data contains special terms or slang which are not in the
+bundled dictionaries
+, we recommend using this dataset.
+
+(Optional) Custom corrections dataset
+
+This dataset should contain two columns, the first one for words and the second one for your custom correction.
+
+Words are also case-sensitive.
+
+If the same word is present in both custom vocabulary and corrections, the custom correction will overrule the custom vocabulary.
+
+Use this dataset if you wish to correct the special terms or slang contained in your data.
+
+Settings
+
+Spell Checking Recipe Settings
+
+Fill INPUT PARAMETERS
+
+The
+Text column
+parameter lets you choose the column of your input dataset containing text data.
+
+The
+Language
+parameter lets you choose among 37 supported languages if your text is monolingual. Else, the Multilingual option will let you set a
+Language column
+.
+
+This
+Language column
+parameter can use the output of the Language Detection recipe or ISO 639-1 language codes computed by other means.
+
+(Optional) Review ADVANCED parameters
+
+You can activate the
+Expert mode
+to access advanced parameters.
+
+The
+Edit distance
+parameter allows you to tune the maximum
+edit distance
+between a word and its potential correction.
+
+The
+Ignore pattern
+parameter lets you define a regular expression matching words which should not be corrected.
+
+This is useful if you work with special-domain data with acronyms and codes
+
+Output
+
+Output dataset:
+Dataset with 4 additional columns
+
+Corrected text
+
+Misspelled text
+
+List of unique misspellings
+
+Number of misspellings
+
+Spell Checking Output Dataset
+
+(Optional) Diagnosis dataset with spell checking information on each word
+
+Spell Checking Diagnosis Dataset
+
+Note that including this optional diagnosis dataset will increase the recipe runtime.
+
+Text cleaning recipe
+
+Tokenize, filter, and lemmatize text data in 59 languages
+
+Input
+
+Text dataset:
+Dataset with a text column
+
+Settings
+
+Text Cleaning Recipe Settings
+
+Fill INPUT PARAMETERS
+
+The
+Text column
+parameter lets you choose the column of your input dataset containing text data.
+
+The
+Language
+parameter lets you choose among 59 supported languages if your text is monolingual. Else, the Multilingual option will let you set a
+Language column
+.
+
+This
+Language column
+parameter can use the output of the Language Detection recipe or ISO 639-1 language codes computed by other means.
+
+Review CLEANING PARAMETERS
+
+Select which types of token to filter in the
+Token filters
+parameter, among
+
+Punctuation: if all token characters are within the
+Unicode “P” class
+
+Stopword: if the token matches our
+per-language stopword lists
+
+These stopword lists are based on spaCy and NLTK, with an additional human review done by native speakers at Dataiku
+
+Number: if the token contains only digits (e.g. 11) or matches the written form of a number in the corresponding language (e.g. eleven)
+
+Currency sign: if all token characters are within the
+Unicode “Sc” class
+
+Datetime: if the token matches
+this regular expression
+for tokens like “10:04” or “2/10/2049”
+
+Measure: if the token matches
+this rule
+for tokens like “17th” or “10km”
+
+URL: if the token matches
+this rule
+for tokens starting with “http://”, “https://”, “www.” or matching a correct domain name
+
+Email: if the token matches
+this regular expression
+
+Username: if the token begins with “@”
+
+Hashtag: if the token begins with “#”
+
+Emoji: if one of the token characters is recognized as a
+Unicode emoji
+
+Symbol: if the token is not an emoji and if all token characters are within the
+Unicode “M”, “S” classes
+
+Activate
+Lemmatization
+to simplify words to their “
+lemma
+” form, sometimes called “dictionary” form.
+
+It uses
+spaCy per-language lookup data
+under the hood.
+
+Activate
+Lowercase
+to convert all words to lowercase.
+
+(Optional) Review ADVANCED parameters
+
+You can activate the
+Expert mode
+to access advanced parameters.
+
+The
+Unicode normalization
+parameter allows you to add a post-processing step to apply one of the
+unicodedata normalization
+methods.
+
+If you activate the
+Keep filtered tokens
+parameter, you will get an additional column for each selected
+Token
+
+filter
+.
+
+This is useful if you want to analyze the usage of tokens like emojis or hashtags in your text data.
+
+Output
+
+Output dataset:
+Dataset with additional columns
+
+Cleaned text after tokenization, filtering, and lemmatization
+
+If the
+Keep filtered tokens
+parameter is activated, one column for each filter: punctations, stopwords, numbers, etc.
+
+Text Cleaning Output Dataset
+
+Happy natural language processing!
+
+Advanced topics
+
+Supported languages
+
+Language detection
+
+Here are the 114 supported languages and their ISO 639-1 format:
+
+Afrikaans (af)
+
+Albanian (sq)
+
+Amharic (am)
+
+Arabic (ar)
+
+Aragonese (an)
+
+Armenian (hy)
+
+Assamese (as)
+
+Azerbaijani (az)
+
+Basque (eu)
+
+Belarusian (be)
+
+Bengali (bn)
+
+Bosnian (bs)
+
+Breton (br)
+
+Bulgarian (bg)
+
+Burmese (my)
+
+Catalan (ca)
+
+Central Khmer (km)
+
+Chinese (zh)
+
+Croatian (hr)
+
+Czech (cs)
+
+Danish (da)
+
+Dutch (nl)
+
+Dzongkha (dz)
+
+English (en)
+
+Esperanto (eo)
+
+Estonian (et)
+
+Faroese (fo)
+
+Finnish (fi)
+
+French (fr)
+
+Galician (gl)
+
+Georgian (ka)
+
+German (de)
+
+Greek (el)
+
+Gujarati (gu)
+
+Haitian (ht)
+
+Hausa (ha)
+
+Hebrew (he)
+
+Hindi (hi)
+
+Hungarian (hu)
+
+Icelandic (is)
+
+Igbo (ig)
+
+Indonesian (id)
+
+Irish (ga)
+
+Italian (it)
+
+Japanese (ja)
+
+Javanese (jv)
+
+Kannada (kn)
+
+Kazakh (kk)
+
+Kinyarwanda (rw)
+
+Kirghiz (ky)
+
+Korean (ko)
+
+Kurdish (ku)
+
+Lao (lo)
+
+Latin (la)
+
+Latvian (lv)
+
+Lithuanian (lt)
+
+Luxembourgish (lb)
+
+Macedonian (mk)
+
+Malagasy (mg)
+
+Malay (ms)
+
+Malayalam (ml)
+
+Maltese (mt)
+
+Maori (mi)
+
+Marathi (mr)
+
+Mongolian (mn)
+
+Nepali (ne)
+
+Northern Sami (se)
+
+Norwegian (no)
+
+Norwegian Bokmål (nb)
+
+Norwegian Nynorsk (nn)
+
+Nyanja (ny)
+
+Occitan (oc)
+
+Oriya (or)
+
+Panjabi (pa)
+
+Persian (fa)
+
+Polish (pl)
+
+Portuguese (pt)
+
+Pushto (ps)
+
+Quechua (qu)
+
+Romanian (ro)
+
+Russian (ru)
+
+Samoan (sm)
+
+Scottish Gaelic (gd)
+
+Serbian (sr)
+
+Shona (sn)
+
+Sindhi (sd)
+
+Sinhala (si)
+
+Slovak (sk)
+
+Slovenian (sl)
+
+Somali (so)
+
+Southern Sotho (st)
+
+Spanish (es)
+
+Sundanese (su)
+
+Swahili (sw)
+
+Swedish (sv)
+
+Tagalog (tl)
+
+Tajik (tg)
+
+Tamil (ta)
+
+Telugu (te)
+
+Thai (th)
+
+Turkish (tr)
+
+Uighur (ug)
+
+Ukrainian (uk)
+
+Urdu (ur)
+
+Uzbek (uz)
+
+Vietnamese (vi)
+
+Volapük (vo)
+
+Walloon (wa)
+
+Welsh (cy)
+
+Western Frisian (fy)
+
+Yiddish (yi)
+
+Yoruba (yo)
+
+Zulu (zu)
+
+Spell checking
+
+Here are the 37 supported languages and their ISO 639-1 format:
+
+Albanian (sq)
+
+Arabic (ar)
+
+Bulgarian (bg)
+
+Catalan (ca)
+
+Chinese (simplified) (zh)
+
+Croatian (hr)
+
+Czech (cs)
+
+Danish (da)
+
+Dutch (nl)
+
+English (en)
+
+Estonian (et)
+
+Finnish (fi)
+
+French (fr)
+
+German (de)
+
+Greek (el)
+
+Hebrew (he)
+
+Hungarian (hu)
+
+Icelandic (is)
+
+Indonesian (id)
+
+Italian (it)
+
+Japanese (ja)
+
+Latvian (lv)
+
+Lithuanian (lt)
+
+Persian (fa)
+
+Polish (pl)
+
+Portuguese (pt)
+
+Romanian (ro)
+
+Russian (ru)
+
+Serbian (sr)
+
+Slovak (sk)
+
+Slovenian (sl)
+
+Spanish (es)
+
+Swedish (sv)
+
+Thai (th)
+
+Turkish (tr)
+
+Ukrainian (uk)
+
+Vietnamese (vi)
+
+Text cleaning
+
+Here are the 59 supported languages and their ISO 639-1 format:
+
+Afrikaans (af) *
+
+Albanian (sq) *
+
+Arabic (ar) *
+
+Armenian (hy) *
+
+Basque (eu) *
+
+Bengali (bn)
+
+Bulgarian (bg) *
+
+Catalan (ca)
+
+Chinese (simplified) (zh) *
+
+Croatian (hr)
+
+Czech (cs)
+
+Danish (da)
+
+Dutch (nl)
+
+English (en)
+
+Estonian (et) *
+
+Finnish (fi) *
+
+French (fr)
+
+German (de)
+
+Greek (el)
+
+Gujarati (gu) *
+
+Hebrew (he) *
+
+Hindi (hi) *
+
+Hungarian (hu)
+
+Icelandic (is) *
+
+Indonesian (id)
+
+Irish (ga) *
+
+Italian (it)
+
+Japanese (ja) *
+
+Kannada (kn) *
+
+Latvian (lv) *
+
+Lithuanian (lt)
+
+Luxembourgish (lb)
+
+Macedonian (mk)
+
+Malayalam (ml) *
+
+Marathi (mr) *
+
+Nepali (ne) *
+
+Norwegian Bokmål (nb)
+
+Persian (fa)
+
+Polish (pl)
+
+Portuguese (pt)
+
+Romanian (ro)
+
+Russian (ru)
+
+Sanskrit (sa) *
+
+Serbian (sr)
+
+Sinhala (si) *
+
+Slovak (sk) *
+
+Slovenian (sl) *
+
+Spanish (es)
+
+Swedish (sv)
+
+Tagalog (tl)
+
+Tamil (ta) *
+
+Tatar (tt) *
+
+Telugu (te) *
+
+Thai (th) *
+
+Turkish (tr)
+
+Ukrainian (uk) *
+
+Urdu (ur)
+
+Vietnamese (vi) *
+
+Yoruba (yo) *
+
+* Lemmatization not supported
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Text Preparation.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

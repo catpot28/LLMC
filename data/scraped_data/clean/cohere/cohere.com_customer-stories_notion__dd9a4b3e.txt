@@ -1,0 +1,324 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/customer-stories/notion
+page path  : /customer-stories/notion
+captured   : 2026-04-12 09:19:04 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/cohere/cohere.com_customer-stories_notion__dd9a4b3e.html.gz
+========================================================================
+
+Notion enhances workspace search with Cohere Rerank | Cohere
+
+Notion enhances workspace search with Cohere Rerank | Cohere
+Products
+Products
+
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+Jan 20, 2025
+4 minute read
+Notion enhances workspace search with Cohere Rerank
+Notion partnered with Cohere to improve the speed and accuracy of its workspace search.
+Case studies
+Notion is a connected workspace platform that helps teams work faster and more efficiently.
+Industry
+Technology
+Category
+Customer
+Products
+rerank
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Key takeaways
+Notion integrated Cohere Rerank to enhance the accuracy, speed, and relevance of search results across large datasets in their connected workspace platform.
+The solution significantly improved search performance, reduced operational costs, and provided multilingual support, benefiting Notion's global user base.
+Cohere Rerank's scalability and precision were crucial in maintaining a top-tier user experience, driving satisfaction and revenue growth for Notion.
+Overview
+Notion, a connected workspace platform, recently launched Notion AI, a personalized assistant seamlessly integrated into the product to help teams work faster, write better, and think bigger. Notion AI taps into customer knowledge across their workspace and connected tools like Slack and Google Drive. To enhance its search capabilities in their workspace environments, Notion integrated Cohere Rerank into their platform.
+"Cohere is a key part of what makes Notion AI work. Cohere Rerank gives us both the speed and quality we need, and it’s consistently improving. It’s been essential for getting our AI Connectors out the door quickly."
+Simon Last
+
+Cofounder and CTO, Notion
+Challenge
+Notion's connected workspace enables teams to collaboratively write, plan, and organize their work in one central hub that integrates with their other tools. However, as organizations grow, so does the volume of information and knowledge accumulated across their Notion workspace, which can make it increasingly challenging for employees to quickly find the relevant content and answers they need.
+Notion needed a solution that would:
+Enhance the accuracy of search results across large datasets.
+Improve the speed of information retrieval for workspaces with high volumes of content including thousands of documents and databases.
+Maintain high relevance in search results without increasing storage costs by relying on embeddings or other costly solutions.
+Additionally, as a global company with a diverse user base, Notion required a solution capable of supporting multiple languages and handling non-English datasets effectively.
+Solution
+To address these challenges, Notion deployed
+Cohere Rerank
+and integrated the model directly into their workspace search.
+Cohere Rerank provided key advantages:
+Enhanced search relevance:
+Cohere’s ranking technology boosted the relevance of search results by applying Rerank before the generative model processes the user query. This ensured that users received the most accurate and contextually relevant results.
+Efficient document search:
+Notion’s workspaces often contain fewer than 1,000 documents. By skipping traditional embedding models for smaller workspaces and leveraging Rerank, Notion avoided embedding and vector search, reducing both complexity and costs.
+Scalable cloud infrastructure:
+Notion integrated the solution using Amazon SageMaker, allowing for auto-scaling capabilities. This infrastructure ensured that Notion could dynamically adjust computational resources based on user demand, optimizing performance during peak and off-peak hours.
+Multilingual support:
+Cohere’s solution natively supports
+many languages
+, ensuring that Notion’s global user base, more than half of whom work with multilingual datasets in EMEA and APAC, could benefit from the same enhanced search capabilities.
+Notion software engineer Abhishek Modi explains, “One big part of the search pipeline is precision. With Cohere Rerank, we no longer have to worry about it and can focus on other parts like recall.”
+"Cohere Rerank is one of the only high quality and fast multilingual rerankers on the market and that's why we use it. Every single search and Notion AI interaction goes through Cohere Rerank."
+Abhishek Mod
+
+Software Engineer, Notion
+Impact
+Using Cohere Rerank, Notion is able to deliver substantial benefits:
+Improved search performance
+: With Rerank, Notion significantly enhanced the speed and accuracy of their search results. Modi explains, “Cohere Rerank is very good at telling you, given a question how relevant is a given document to that question. And it's much more accurate than the embedding models which will take you from the 100,000 documents to the 200 documents.”
+Cost savings
+: By eliminating the need for embedding and vector search in many instances, Notion reduced both operational costs (associated with embedding and storage) and complexity, while maintaining high search relevance. Additionally, Cohere Rerank is used to combine search results from different sources for their customers like results from Slack and GitHub, which occurs quite frequently and provides another layer of cost savings while retaining high precision answers.
+Scalability
+: The implementation of
+Amazon Sagemaker
+’s auto-scaling features ensured that Notion’s search functionality could seamlessly handle variable traffic loads, providing an even more reliable performance across global markets.
+Notion was also interested in a close relationship with their LLM provider. Modi explains, “we wanted to have a closer relationship with whomever was going to build this with us, because an issue with a lot of the open source things is if you need to fix something, you need to go fix it yourself. The fact that we're able to partner with Cohere and work together to improve the solution was quite important for us.”
+And when it comes to performance metrics, Notion’s primary goal is to improve user experience month-on-month, so they focus KPIs on whether a negative experience, in this case a wrong or not-so-accurate answer, can be improved the next time it is asked. Latest figures show millions of Notion users have tried Notion AI features, contributing significant revenue growth to the company. A figure that is growing rapidly month-on-month.
+Notion’s use of Rerank helped them scale their tool’s search functionality while maintaining cost efficiency and delivering a top-tier user experience, driving greater satisfaction among their users.
+Case studies
+Notion is a connected workspace platform that helps teams work faster and more efficiently.
+Industry
+Technology
+Category
+Customer
+Products
+rerank
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+What to read next
+Draftwise boosts legal productivity with Cohere's AI models
+Fujitsu launches Takane AI model in partnership with Cohere
+BambooHR optimizes AI search and retrieval
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Cohere ©
+2026
+Privacy
+Terms of Use
+SaaS Agreement
+Manage Cookies
+English

@@ -1,0 +1,793 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/merchant/retrieve-payment-details
+page path  : /docs/merchant/retrieve-payment-details
+captured   : 2026-01-15 14:31:41 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_merchant_retrieve-payment-details__df7f8884.html.gz
+========================================================================
+
+Retrieve payment details | Revolut Docs
+
+Retrieve payment details | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Merchant API
+Version
+Introduction
+API versions
+Orders
+Customers
+Payments
+Introduction
+Pay for an order
+Retrieve payment list of an order
+Retrieve payment details
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Apple Pay merchant registration
+Other
+Payments
+Retrieve payment details
+Retrieve payment details
+
+Retrieve information about a specific payment, based on the payment's ID.
+
+Use this endpoint to track a payment's lifecycle, for example:
+
+When you develop a
+1-click checkout process
+
+When you build a
+subscription management system
+
+Request
+​
+Path parameters
+Path parameters
+Expand
+payment_id
+string(uuid)
+required
+The ID of the
+Payment
+object.
+Header parameters
+Header parameters
+Expand
+Authorization
+string(Bearer <yourSecretApiKey>)
+required
+Example:
+
+"Bearer sk_1234567890ABCdefGHIjklMNOpqrSTUvwxYZ_1234567890-Ab_cdeFGHijkLMNopq"
+This parameter accepts the
+Merchant API Secret key
+to authorise requests coming from the merchant's backend.
+
+It ensures that ensures that each request is authenticated and authorised by verifying the secret key. The secret key should be included in all request headers as a
+Bearer
+token.
+
+Info
+For more information, see:
+Authentication
+Revolut-Api-Version
+string(date)
+Possible values:
+[
+2023-09-01
+,
+2024-05-01
+,
+2024-09-01
+,
+2025-10-16
+,
+2025-12-04
+]
+
+Example:
+
+"2025-12-04"
+The version of the Merchant API, specified in
+YYYY-MM-DD
+format.
+
+Info
+For more information about API versioning, see:
+API versions
+.
+
+Response
+​
+200
+400
+401
+404
+Payment details
+Response body
+Body
+
+object
+Expand
+id
+string(uuid)
+required
+The ID of the payment.
+state
+string
+required
+Possible values:
+[
+pending
+,
+authentication_challenge
+,
+authentication_verified
+,
+authorisation_started
+,
+authorisation_passed
+,
+authorised
+,
+capture_started
+,
+captured
+,
+refund_validated
+,
+refund_started
+,
+cancellation_started
+,
+declining
+,
+completing
+,
+cancelling
+,
+failing
+,
+completed
+,
+declined
+,
+soft_declined
+,
+cancelled
+,
+failed
+]
+The status of the payment.
+decline_reason
+string
+Possible values:
+[
+3ds_challenge_abandoned
+,
+3ds_challenge_failed_manually
+,
+cardholder_name_missing
+,
+customer_challenge_abandoned
+,
+customer_challenge_failed
+,
+customer_name_mismatch
+,
+do_not_honour
+,
+expired_card
+,
+high_risk
+,
+insufficient_funds
+,
+invalid_address
+,
+invalid_amount
+,
+invalid_card
+,
+invalid_country
+,
+invalid_cvv
+,
+invalid_email
+,
+invalid_expiry
+,
+invalid_merchant
+,
+invalid_phone
+,
+invalid_pin
+,
+issuer_not_available
+,
+pick_up_card
+,
+rejected_by_customer
+,
+restricted_card
+,
+suspected_fraud
+,
+technical_error
+,
+transaction_not_allowed_for_cardholder
+,
+unknown_card
+,
+withdrawal_limit_exceeded
+]
+The reason for a
+failed
+or
+declined
+payment.
+
+A failed or declined payment can result from multiple reasons. To learn more, check our
+failure reasons
+.
+bank_message
+string
+The reason for a
+failed
+or
+declined
+payment, sent by the financial institution processing the payment.
+created_at
+string(date-time)
+required
+The date and time the payment was created.
+updated_at
+string(date-time)
+required
+The date and time the payment was last updated.
+token
+string(uuid)
+Temporary token of the payment used to fetch the reward offer during checkout and link user registrations to the given offers.
+
+The token is only valid for a limited time.
+amount
+integer
+required
+The order total expressed in minor currency units, according to the
+ISO 4217 standard
+. For example,
+7034
+in
+EUR
+corresponds to €70.34.
+
+Info
+Conversion between major and minor units varies by currency. For instance,
+100
+minor units equal £1.00 in
+GBP
+, whereas in
+ISK
+they represent 100 units. For more details, see the
+ISO 4217 standard
+.
+currency
+string(ISO 4217)
+Possible length:
+
+>= 3 characters
+and
+<= 3 characters
+ISO 4217
+currency code in upper case.
+
+Info
+For more information about the supported currencies, see:
+Help Center
+.
+settled_amount
+integer
+The amount of the settled payment (minor currency unit). For example,
+7034
+stands for €70.34.
+settled_currency
+string
+The currency of the settled payment.
+ISO 4217
+currency code in upper case.
+
+Info
+For more information about the supported currencies, see:
+Help Center
+.
+payment_method
+object
+The details of the payment method used to make the payment.
+One of
+·
+apple_pay
+Object containing details of a card used via Apple Pay.
+id
+string(uuid)
+ID of the saved payment method.
+
+Note
+The
+id
+parameter is only returned when the payment method is saved.
+type
+string
+required
+Possible values:
+[
+apple_pay
+,
+card
+,
+google_pay
+,
+revolut_pay_card
+,
+revolut_pay_account
+]
+The type of payment method used to pay for the order.
+
+Available values:
+
+Payment method
+type
+Description
+apple_pay
+The customer paid the order using Apple Pay.
+card
+The customer paid the order using their credit or debit card.
+google_pay
+The customer paid the order using Google Pay.
+revolut_pay_card
+The customer paid the order via Revolut Pay using their credit or debit card.
+revolut_pay_account
+The customer paid the order via Revolut Pay using their Revolut account.
+card_brand
+string
+Possible values:
+[
+visa
+,
+mastercard
+,
+american_express
+]
+The type of the card.
+funding
+string
+Possible values:
+[
+credit
+,
+debit
+,
+prepaid
+]
+The type of card funding.
+card_country_code
+string
+The 2-letter country code of the country where the card was issued.
+card_bin
+string
+Possible length:
+
+>= 6 characters
+and
+<= 6 characters
+The BIN of the card.
+card_last_four
+string
+Possible length:
+
+>= 4 characters
+and
+<= 4 characters
+The last four digits of the card number.
+card_expiry
+string(MM/YY)
+The expiry date of the card in the format of MM/YY.
+cardholder_name
+string
+The name of the cardholder.
+checks
+object
+The details of the check for card payment. Only for orders with successful payments.
+three_ds
+object
+The details of the 3D Secure check. Only for orders with successful payments.
+
+Note
+Not returned for Apple Pay and Google Pay payments.
+eci
+string
+The Electronic Commerce Indicator (ECI) value corresponds to the authentication result and indicates the level of security used when the payment information was provided.
+state
+string
+Possible values:
+[
+verified
+,
+failed
+,
+challenge
+]
+The result of 3D Secure check.
+version
+integer
+The 3D Secure version.
+cvv_verification
+string
+Possible values:
+[
+match
+,
+not_match
+,
+incorrect
+,
+not_processed
+]
+The result of CVV verification.
+
+Parameter value
+Description
+match
+CVV matches the card's CVV
+not_match
+CVV does not match the card's CVV
+incorrect
+CVV format is incorrect for this type of card
+not_processed
+CVV verification was not performed
+address
+string
+Possible values:
+[
+match
+,
+not_match
+,
+n_a
+,
+invalid
+]
+The result of address verification.
+postcode
+string
+Possible values:
+[
+match
+,
+not_match
+,
+n_a
+,
+invalid
+]
+The result of postcode verification.
+cardholder
+string
+Possible values:
+[
+match
+,
+not_match
+,
+n_a
+,
+invalid
+]
+The result of cardholder verification.
+authorisation_code
+string
+Possible length:
+
+>= 2 characters
+and
+<= 6 characters
+
+Pattern:
+Value must match regular expression
+^[a-zA-Z0-9]{2,6}$
+
+Example:
+
+"T483XF"
+The authorisation code (or auth code) is a short, alphanumeric code returned by the cardholder's issuing bank to the merchant's terminal or payment gateway.
+
+It serves as confirmation that the transaction has been approved and funds are available.
+arn
+string
+Possible length:
+
+>= 23 characters
+and
+<= 23 characters
+
+Example:
+
+"74839572049583726403928"
+Acquirer Reference Number (ARN) of the payment.
+
+Note
+Only returned for refund payments made by a card.
+capture_deadline
+string(date-time)
+The date and time by which the payment must be captured.
+
+After this deadline, the authorised funds may be automatically released by the card issuer.
+fingerprint
+string
+Possible length:
+
+>= 44 characters
+and
+<= 44 characters
+
+Example:
+
+"1JAllfQY4POhBV8DaddAQ4LC5RbMP8LMLvUdJW4s5JY="
+A unique identifier for a payment method, always 44 characters long. This fingerprint can be used to uniquely identify various payment methods.
+
+Fingerprint generation
+
+Payment method
+Description
+All payment methods
+A fingerprint is generated for all payment methods, including cards, Revolut Pay (card, account-to-account payments), Apple Pay, and Google Pay.
+Cards (Revolut Pay & Card Gateway)
+For cards, the fingerprint is based on the PAN. Cards processed via Revolut Pay and our card gateway will share the same fingerprint. Renewed cards (new expiry/CVV) retain the same fingerprint for efficient blocking.
+Apple Pay & Google Pay
+Since Apple Pay and Google Pay provide us Device PANs (DPAN), the fingerprint is based on the DPAN provided by Apple/Google, not the connected card's PAN. This means that a new DPAN (and fingerprint) is generated for cards in case they are re-added to the customer's digital wallet, or added to different devices.
+
+Detecting duplicate payment methods
+
+Fingerprints are a valuable tool for detecting duplicate payment methods by identifying if a payment method has been seen before. This capability, in turn, helps in preventing various types of misuse (e.g., exploitation of free trials, or association with known problematic accounts, which can be a form of fraud). To effectively use fingerprints for this purpose, you will need to create and maintain your own lists (e.g., blocklists of known problematic fingerprints, allowlists for trusted customers, or tracking frequently used fingerprints).
+
+The ideal way to utilise fingerprints is by combining them with a manual capture process. While automatic capture with subsequent refunds for problematic payments is possible, manual capture based on fingerprint validation is recommended.
+
+During your manual capture workflow, after a payment was authorised:
+
+Check the fingerprint status by comparing it against your maintained lists and internal business rules.
+
+If you decide to proceed with the payment (e.g., the fingerprint is not on a blocklist, or matches a trusted customer's previous payment method):
+Capture the order
+.
+
+If you decide not to proceed with the payment (e.g., the fingerprint matches a known fraudulent fingerprint, or exhibits suspicious patterns):
+Cancel the order
+.
+
+authentication_challenge
+object
+Details about the authentication challenge that should be performed to complete the authentication process. For more information about Revolut's 3DS solution, see:
+3D Secure overview
+.
+
+Only returned if the payment's state is
+authentication_challenge
+.
+One of
+·
+three_ds
+Information about the 3DS challenge.
+type
+string
+required
+Possible values:
+[
+three_ds
+,
+three_ds_fingerprint
+]
+Type of the authentication challenge the payment triggers.
+acs_url
+string(url)
+required
+The URL of the authentication challenge.
+billing_address
+object
+Object containing address details.
+street_line_1
+string
+Possible length:
+
+<= 100 characters
+Street line 1 information.
+street_line_2
+string
+Possible length:
+
+<= 100 characters
+Street line 2 information.
+region
+string
+Possible length:
+
+<= 100 characters
+The region associated with the address.
+city
+string
+Possible length:
+
+<= 100 characters
+The city associated with the address.
+country_code
+string
+required
+Possible length:
+
+<= 2 characters
+The 2-letter country code of the country associated with the address.
+postcode
+string
+required
+Possible length:
+
+<= 100 characters
+The postcode associated with the address.
+risk_level
+string
+Possible values:
+[
+low
+,
+high
+]
+The risk level of the card.
+
+If the risk level is
+high
+, the payment might be declined.
+fees
+array of objects
+The details of the order fee.
+type
+string
+Possible values:
+[
+fx
+,
+acquiring
+]
+The type of the order fee.
+amount
+integer
+The amount of the payment fee (minor currency unit). For example, enter
+7034
+for €70.34 in the field.
+currency
+string
+The currency of the payment fee.
+ISO 4217
+currency code in upper case.
+
+Info
+For more information about the supported currencies, see:
+Help Center
+.
+order_id
+string(uuid)
+The ID of the associated order.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

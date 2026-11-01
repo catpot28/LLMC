@@ -1,0 +1,169 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/use-threads-is-removed/3290
+page path  : /t/use-threads-is-removed/3290
+captured   : 2026-01-21 23:04:38 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_use-threads-is-removed_3290__a4bd1433.html.gz
+========================================================================
+
+Use_threads is removed? - General - Perplexity API Platform Forum
+
+Use_threads is removed? - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Use_threads is removed?
+
+General
+
+sonar-pro
+,
+
+chat-completions
+
+foodionic
+
+December 29, 2025, 7:40am
+
+1
+
+I’ve run into an issue with the
+Perplexity API
+and wanted to check whether anyone else has seen this.
+
+This request works fine:
+
+curl --request POST \
+--url https://api.perplexity.ai/chat/completions \
+--header "Content-Type: application/json" \
+--header "Authorization: Bearer pplx-..." \
+--data '{
+"model": "sonar-pro",
+"use_threads": false,
+"messages": [
+{
+"role": "user",
+"content": "Which movie won the Cannes film festival special jury prize in 1996?"
+}
+],
+"stream": false,
+"web_search_options": {
+"search_type": "pro"
+}
+}'
+
+I get a valid response.
+
+However, if I change just one parameter:
+
+"use_threads": true
+
+the API responds with:
+
+{"error":{"message":"Unauthorized","type":"unauthorized","code":401}}
+
+A few things that make this confusing:
+
+This exact example with
+use_threads
+used to be present in the Perplexity documentation.
+
+It has since been removed.
+
+I can’t find any up-to-date explanation of how
+threading is supposed to work now
+.
+
+The response I got at the time came from an
+Perplexity Agent support
+agent and did not provide any meaningful or actionable explanation.
+
+Questions:
+
+Is
+use_threads
+still supported?
+
+Does enabling threads require additional permissions, a different endpoint, or a different auth scope?
+
+Is this expected behavior or a bug in the API?
+
+What is the current, recommended way to handle conversation threads in Perplexity?
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Inserimento messaggi API direttamente visibili nel thread
+
+Feature Requests
+
+sonar-pro
+
+0
+
+34
+
+September 18, 2025
+
+Perplexity Interface API vs Sonar LLM API
+
+General
+
+2
+
+268
+
+June 24, 2025
+
+Add “Scroll to Bottom” Button in Chat Threads
+
+Feature Requests
+
+2
+
+145
+
+May 28, 2025
+
+Perplexity API doesn't support tool call, even though Llama 3.1 does
+
+Bug Reports
+
+1
+
+203
+
+May 15, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+76
+
+November 3, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

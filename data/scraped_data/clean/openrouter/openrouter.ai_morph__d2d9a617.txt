@@ -1,0 +1,151 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/morph
+page path  : /morph
+captured   : 2026-04-20 18:26:17 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_morph__d2d9a617.html.gz
+========================================================================
+
+morph Models | OpenRouter
+
+morph Models | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+morph
+Access 3 morph models on OpenRouter including Morph V3 Large, Morph V3 Fast, and Fast Apply. Compare pricing, context windows, and capabilities.
+morph
+tokens processed on OpenRouter
+Morph: Morph V3 Large
+Morph V3 Large
+1.11B
+tokens
+Morph's high-accuracy apply model for complex code edits. ~4,500 tokens/sec with 98% accuracy for precise code transformations. The model requires the prompt to be in the following format:
+<instruction>
+{instruction}
+</instruction>
+
+<code>
+{initial_code}
+</code>
+
+<update>
+{edit_snippet}
+</update>
+Zero Data Retention is enabled for Morph. Learn more about this model in their
+documentation
+by
+
+morph
+Jul 7, 2025
+262K
+context
+$
+0.90
+/M input
+tokens
+$
+1.90
+/M output
+tokens
+Morph: Morph V3 Fast
+Morph V3 Fast
+53M
+tokens
+Morph's fastest apply model for code edits. ~10,500 tokens/sec with 96% accuracy for rapid code transformations. The model requires the prompt to be in the following format:
+<instruction>
+{instruction}
+</instruction>
+
+<code>
+{initial_code}
+</code>
+
+<update>
+{edit_snippet}
+</update>
+Zero Data Retention is enabled for Morph. Learn more about this model in their
+documentation
+by
+
+morph
+Jul 7, 2025
+82K
+context
+$
+0.80
+/M input
+tokens
+$
+1.20
+/M output
+tokens
+Morph: Fast Apply
+Fast Apply
+Morph Apply is a specialized code-patching LLM that merges AI-suggested edits straight into your source files. It can apply updates from GPT-4o, Claude, and others into your files at 4000+ tokens per second. The model requires the prompt to be in the following format:
+<code>
+${originalCode}
+</code>
+\n
+<update>
+${updateSnippet}
+</update>
+Learn more about this model in their
+documentation
+by
+
+morph
+Jun 26, 2025
+32K
+context

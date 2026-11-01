@@ -1,0 +1,410 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/devstral-2507/
+page path  : /fr/news/devstral-2507/
+captured   : 2026-06-09 08:40:34 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_devstral-2507__65db66b3.html.gz
+========================================================================
+
+Upgrading agentic coding capabilities with the new Devstral models | Mistral AI
+
+Upgrading agentic coding capabilities with the new Devstral models | Mistral AI
+
+Contact
+
+Menu
+
+Produits
+
+Solutions
+
+Modèles
+
+Développeurs
+
+Blog
+
+Clients
+
+Entreprise
+
+Contact
+
+Commencez
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Produits
+Solutions
+Modèles
+Développeurs
+Blog
+Clients
+Entreprise
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Commencez
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact
+
+Recherche
+
+Upgrading agentic coding capabilities with the new Devstral models
+
+July 10, 2025
+
+Mistral AI
+
+Retour au blog
+
+3 min read
+
+Partager cet article
+
+Copied!
+
+Today, we introduce Devstral Medium, as well as an upgrade to Devstral Small. These models are released under the collaboration between Mistral AI and
+All Hands AI
+🙌, with a strong emphasis on generalization to different prompts and agentic scaffolds.
+The new Devstral Small 1.1 is released under the Apache 2.0 license, and is state-of-the-art amongst open models for code agents. Devstral Medium is available through our API, and sets a new point on the cost/performance pareto frontier, surpassing Gemini 2.5 Pro and GPT 4.1 for a quarter of the price.
+Devstral Small 1.1
+As with the previous version of Devstral Small, we release Devstral Small 1.1 under the Apache 2.0 license. While the architecture remains the same, with only 24B parameters, Devstral Small 1.1 comes with significant improvements over its predecessor:
+Enhanced Performance
+Devstral Small 1.1 achieves a score of 53.6% on SWE-Bench Verified, and sets a new state-of-the-art for open models without test-time scaling.
+Versatility and Generalization
+Devstral Small 1.1 excels when paired with OpenHands, and also demonstrates better generalization to different prompts and coding environments. Its versatility is further enhanced by supporting both Mistral function calling and XML formats, making it adaptable to a wide range of applications and agentic scaffolds.
+
+Devstral Medium
+Devstral Medium builds upon the strengths of Devstral Small and takes performance to the next level with a score of 61.6% on SWE-Bench Verified. Devstral Medium is available through our public API, and offers exceptional performance at a competitive price point, making it an ideal choice for businesses and developers looking for a high-quality, cost-effective model.
+For those who prefer on-premise solutions, Devstral Medium can be directly deployed on private infrastructure, offering enhanced data privacy and control. We also support custom finetuning for Devstral Medium, allowing enterprises to customize the model for specific use cases, and achieve optimal performance tailored to their specific requirements.
+
+Availability
+Both models are available through our API under the the following names:
+devstral-small-2507 at the same price as Mistral Small 3.1: $0.1/M input tokens and $0.3/M output tokens.
+devstral-medium-2507 at the same price as Mistral Medium 3: $0.4/M input tokens and $2/M output tokens.
+We release Devstral Small 1.1 under the Apache 2.0 license for the community to build on, customize, and accelerate autonomous software development. To try it for yourself, head over to our
+model card
+.
+Devstral Medium will also be available on
+Mistral Code
+for enterprise customers and on our
+finetuning API
+. To deploy and customize the model in your environment, please
+contact us
+.
+We are dedicated to open-sourcing our most accessible and impactful models, ensuring the open-source community can easily utilize and benefit from our advanced technology. While Devstral Small is easily usable for local deployment and available under the Apache 2.0 license for everyone to use and build upon, Devstral Medium is available on our API and offers high performance for developers and enterprises.
+
+0%
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Sélectionner la langue
+
+Français
+
+English
+Français
+Italiano

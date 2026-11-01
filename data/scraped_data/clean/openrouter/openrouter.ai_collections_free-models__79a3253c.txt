@@ -1,0 +1,437 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/free-models
+page path  : /collections/free-models
+captured   : 2026-04-10 20:39:57 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_collections_free-models__79a3253c.html.gz
+========================================================================
+
+Free AI Models on OpenRouter | OpenRouter
+
+Free AI Models on OpenRouter | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Free Models
+Free AI Models on OpenRouter
+Model rankings updated April 2026 based on real usage data.
+At OpenRouter, we believe that free models play a crucial role in democratizing access to AI. These models allow hundreds of thousands of users worldwide to experiment, learn, and innovate. Below you will find the top free AI models currently available on OpenRouter.
+
+We are continuing to actively expand our free model capacity by onboarding new providers and directly covering costs to help promote freely accessible models. While we can't guarantee what the future holds, we will continue to support free inference options on our platform.
+
+For the simplest way to get started, try
+openrouter/free
+, a router that automatically selects from available free models based on your request's requirements.
+Browse All Models
+Compare Models
+Top Free Models on OpenRouter
+NVIDIA: Nemotron 3 Super (free)
+638B
+tokens
+Academia
+(#34)
+Finance
+(#19)
+SEO
+(#30)
+Programming
+(#6)
+Roleplay
+(#42)
+NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.
+
+The model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.
+
+Fully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere — from workstation to cloud.
+Show more
+by
+
+nvidia
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Arcee AI: Trinity Large Preview (free)
+134B
+tokens
+SEO
+(#41)
+Programming
+(#26)
+Roleplay
+(#28)
+Technology
+(#29)
+Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing.
+
+It excels in creative writing, storytelling, role-play, chat scenarios, and real-time voice assistance, better than your average reasoning model usually can. But we’re also introducing some of our newer agentic performance. It was trained to navigate well in agent harnesses like OpenCode, Cline, and Kilo Code, and to handle complex toolchains and long, constraint-filled prompts.
+
+The architecture natively supports very long context windows up to 512k tokens, with the Preview API currently served at 128k context using 8-bit quantization for practical deployment. Trinity-Large-Preview reflects Arcee’s efficiency-first design philosophy, offering a production-oriented frontier model with open weights and permissive licensing suitable for real-world applications and experimentation.
+Show more
+by
+
+arcee-ai
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Z.ai: GLM 4.5 Air (free)
+63B
+tokens
+SEO
+(#49)
+Roleplay
+(#24)
+GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a "thinking mode" for advanced reasoning and tool use, and a "non-thinking mode" for real-time interaction. Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+Show more
+by
+
+z-ai
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+NVIDIA: Nemotron 3 Nano 30B A3B (free)
+45.1B
+tokens
+SEO
+(#22)
+NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.
+
+The model is fully open with open-weights, datasets and recipes so developers can easily
+customize, optimize, and deploy the model on their infrastructure for maximum privacy and
+security.
+Show more
+by
+
+nvidia
+256K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+MiniMax: MiniMax M2.5 (free)
+38.5B
+tokens
+Programming
+(#44)
+Translation
+(#34)
+MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.
+Show more
+by
+
+minimax
+197K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+OpenAI: gpt-oss-120b (free)
+35.2B
+tokens
+Finance
+(#48)
+SEO
+(#14)
+Programming
+(#50)
+gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.
+Show more
+by
+
+openai
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+NVIDIA: Nemotron Nano 12B 2 VL (free)
+16.3B
+tokens
+SEO
+(#48)
+NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s memory-efficient sequence modeling for significantly higher throughput and lower latency.
+
+The model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets optimized for optical-character recognition, chart reasoning, and multimodal comprehension.
+
+Nemotron Nano 2 VL achieves leading results on OCRBench v2 and scores ≈ 74 average across MMMU, MathVista, AI2D, OCRBench, OCR-Reasoning, ChartQA, DocVQA, and Video-MME—surpassing prior open VL baselines. With Efficient Video Sampling (EVS), it handles long-form videos while reducing inference cost.
+
+Open-weights, training data, and fine-tuning recipes are released under a permissive NVIDIA open license, with deployment supported across NeMo, NIM, and major inference runtimes.
+Show more
+by
+
+nvidia
+128K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+NVIDIA: Nemotron Nano 9B V2 (free)
+15.7B
+tokens
+NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.
+
+The model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.
+Show more
+by
+
+nvidia
+128K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+NVIDIA: Llama Nemotron Embed VL 1B V2 (free)
+8.29B
+tokens
+The Llama Nemotron Embed VL 1B V2 embedding model is optimized for multimodal question-answering retrieval. The model can embed 'documents' in the form of image, text, or image and text combined. Documents can be retrieved given a user query in text form. The model supports images containing text, tables, charts, and infographics.
+Show more
+by
+
+nvidia
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+OpenAI: gpt-oss-20b (free)
+7.13B
+tokens
+gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.
+Show more
+by
+
+openai
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Google: Gemma 4 31B (free)
+6.19B
+tokens
+Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
+Show more
+by
+
+google
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Google: Gemma 4 26B A4B (free)
+2.89B
+tokens
+Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.
+Show more
+by
+
+google
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Qwen: Qwen3 Coder 480B A35B (free)
+1.57B
+tokens
+Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).
+
+Pricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.
+Show more
+by
+
+qwen
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Meta: Llama 3.3 70B Instruct (free)
+979M
+tokens
+The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.
+
+Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
+
+Model Card
+Show more
+by
+
+meta-llama
+66K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Qwen: Qwen3 Next 80B A3B Instruct (free)
+946M
+tokens
+Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.
+
+The model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred.
+Show more
+by
+
+qwen
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+LiquidAI: LFM2.5-1.2B-Thinking (free)
+688M
+tokens
+LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.
+Show more
+by
+
+liquid
+33K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens

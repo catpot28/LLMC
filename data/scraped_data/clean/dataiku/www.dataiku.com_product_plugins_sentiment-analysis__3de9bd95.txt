@@ -1,0 +1,475 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/sentiment-analysis/
+page path  : /product/plugins/sentiment-analysis/
+captured   : 2026-01-21 08:55:04 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_sentiment-analysis__3de9bd95.html.gz
+========================================================================
+
+Plugin: Sentiment Analysis | Dataiku
+
+Plugin: Sentiment Analysis | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Sentiment Analysis
+
+Sentiment Analysis
+
+This plugin provides a recipe to estimate the sentiment polarity of text data.
+
+⚠️ Starting with Dataiku 14.0, this plugin has been deprecated. It is mostly superseded by
+Generative AI
+feature.
+
+Plugin Information
+
+Version
+
+1.6.0
+
+Author
+
+Dataiku (Alex COMBESSIE, Hicham EL BOUKKOURI)
+
+Released
+
+2018-07
+
+Last updated
+
+2023-04
+
+License
+
+BSD 3-Clause License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to estimate the sentiment polarity (positive/negative) of text data in English.
+
+Table of contents
+
+How to set up
+
+How to use
+
+How to set up
+
+Right after installing the plugin, you need to build its code environment.
+
+Code Environment Creation
+
+This plugin requires Python version 2.7, 3.6, or 3.7 to be installed on the machine hosting DSS.
+
+How to use
+
+Let’s assume that you have a Dataiku DSS project with a dataset containing text data in English. This text data must be stored in a dataset, inside a text column, with one row for each document.
+
+Navigate to the Flow, click on the
++ RECIPE
+button and access the
+Natural Language Processing
+menu. If your dataset is selected, you can directly find the plugin on the right panel.
+
+Plugin Recipe Creation
+
+Sentiment analysis recipe
+
+Estimate the sentiment polarity (positive/negative) of text data in English
+
+Input
+
+Text dataset:
+Dataset with a text column (in English)
+
+Example of Text Dataset
+
+Settings
+
+Sentiment Analysis Recipe Settings
+
+Fill Input parameters
+
+The
+Text column
+parameter lets you choose the column of your input dataset containing text data.
+
+Choose Model parameters
+
+Choose your
+Sentiment scale.
+
+Either binary (0 = negative, 1 = positive) or 1 to 5 (1 = highly negative, 5 = highly positive).
+
+Default is binary.
+
+Choose whether to
+Output predictions as numbers
+and/or
+Output predictions as categories
+.
+
+These parameters depend on the chosen
+Sentiment scale
+.
+
+Default is yes to both.
+
+Choose whether to
+Output confidence scores
+for the predicted sentiment polarity.
+
+Confidence scores are from 0 to 1.
+
+Default is false.
+
+Output
+
+Output dataset:
+Copy of the input dataset with additional columns on predicted sentiment polarity
+
+Example of Output Dataset
+
+Troubleshooting
+
+When installing / setting up the plugin’s code environment, getting an error
+Unsupported compiler -- at least C++11 support is needed
+: installing the
+python3-dev
+system package may help, see
+here
+.
+
+When installing / setting up the plugin’s code environment, getting a
+fatal error: Python.h: No such file or directory
+: installing the
+python3-dev
+system package may help, see
+here
+.
+
+Happy natural language processing!
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Sentiment Analysis.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

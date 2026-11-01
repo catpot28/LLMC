@@ -1,0 +1,461 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/tesseract-ocr/
+page path  : /product/plugins/tesseract-ocr/
+captured   : 2026-02-12 03:34:49 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_tesseract-ocr__76f38804.html.gz
+========================================================================
+
+Plugin: Text extraction and OCR | Dataiku
+
+Plugin: Text extraction and OCR | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Text extraction and OCR
+
+Text extraction and OCR
+
+This plugin provides recipes to extract text content from files or perform Optical Character Recognition (OCR) using the Tesseract or EasyOCR engines, as well as other image processing recipes.
+
+Plugin information
+
+Version
+
+2.4.0
+
+Author
+
+Dataiku
+
+Released
+
+2020-06
+
+Last updated
+
+2025-11
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+How to set up
+
+If you are a Dataiku admin user, you need to follow the instructions on the
+README.md
+file of the plugin GitHub page in order to install the required packages on the DSS instance machine.
+
+If you are not an admin, you can forward this to your admin and/or scroll down to the
+How to use
+section.
+
+Warning: You must first install Tesseract on your machine in order to use the tesseract OCR engine !
+
+How to use
+
+This plugin has multiple components: OCR recipe, Text extraction recipe, Image conversion recipe, Image processing recipe and a notebook template.
+
+For instance, some of these multiple components can be used together in a single flow to first convert PDFs into images, then process these images and finally extract text from them using OCR.
+
+Example of the complete flow (Conversion > Processing > Extraction)
+
+Text extraction recipe
+
+The Text extraction recipe takes as input a folder of various file types (pdf, docx, html, etc) and outputs a dataset with three columns: filename, extracted text and error messages when it failed to extract any text.
+
+For some input formats, it is possible to extract text in chunks, with an extra metadata column containing section info. This will output one row by unit of document. A unit can be a page in a PDF file or a section in a DOCX, HTML, Markdown, etc. These metadata can either be in plain text or JSON format.
+
+OCR recipe
+
+The OCR recipe takes as input a folder of PDF/JPG/JPEG/PNG/TIFF files and outputs a dataset with two columns: filename and extracted text from OCR.
+
+The recipe has multiple parameters:
+
+Recombine multiple-page PDF together:
+Extracted text from multiple-page PDFs and images with name pattern $FILENAME_pdf_page_XXXXX (images created from the same multiple-page PDF in the Image conversion recipe) are concatenated.
+
+OCR Engine:
+Both the Tesseract and EasyOCR engines are available. The
+Default
+option will select an installed OCR engine (if Tesseract is not installed on the instance, then EasyOCR will be the default engine).
+
+Specify language:
+Specify the language to be used by the OCR engine by entering its code name depending on the selected OCR engine (Tesseract languages must be installed beforehand, ask your admin). By default, if no language is specified, it will use English.
+
+Image conversion recipe
+
+Because the Text extraction recipe only works on greyscale JPG images, you may have to use the Image conversion recipe first.
+
+The Image conversion recipe takes as input a folder of images (JPG/JPEG/PNG/TIFF) and PDFs. It converts them into greyscale JPG images. If a PDF has multiple page, it creates a subfolder with one image per page.
+
+You can also set some advanced parameters in the image conversion:
+
+DPI (Dot Per Inch): set the DPI of images extracted from PDFs only.
+
+Quality: set the quality of images according to the PIL package parameter.
+
+Notebook template
+
+You may want to process images before extracting text from images in order to get better results.
+
+There is a notebook template where you can explore the effect of different image processing techniques.
+
+Go to notebook (G+N) and create a new python notebook. Select the template `Image processing for text extraction` and then check that the plugin code env is selected (you can set it in the tab Kernel > Change kernel).
+
+Choose the Image processing template when creating a new notebook
+
+Then, you can use the pre-defined functions or write your owns in order to explore different types of image processing. You need to enter the input folder id manually in the notebook.
+
+In the notebook, you can visualize the effect of image processing functions using the function
+display_images_before_after
+defined in the notebook (display image before and after processing):
+
+Visualize the effect of image processing functions
+
+You can also look at the extracted text before and after image processing using the function
+text_extraction
+_before_after
+defined in the notebook:
+
+Check the extracted text depending on image processing functions
+
+Image processing recipe
+
+This recipe will process each greyscale JPG images of the input folder using the functions defined by the user in the recipe parameter’s form. Both input and output of these functions are numpy array image.
+
+You can copy the functions you want from the notebook for example and paste them in the Image Processing recipe form.
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Tesseract - OCR.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

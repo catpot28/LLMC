@@ -1,0 +1,401 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/agent-api/image-attachments
+page path  : /docs/agent-api/image-attachments
+captured   : 2026-05-20 19:54:34 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_agent-api_image-attachments__0cc9e166.html.gz
+========================================================================
+
+Image Attachments - Perplexity
+
+Image Attachments - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Features
+Image Attachments
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+Output Control
+Search Filters
+Image Attachments
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Examples
+Request Format
+Agent API
+Pricing
+Next Steps
+Features
+Image Attachments
+Copy page
+Learn how to upload and analyze images using base64 encoding or HTTPS URLs
+Copy page
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+​
+Overview
+
+The Agent API supports image analysis through direct image uploads. Images can be provided either as base64 encoded strings within a data URI or as standard HTTPS URLs.
+
+When using base64 encoding, the API currently only supports images up to 50 MB per image.
+
+Supported formats for base64 encoded images: PNG (image/png), JPEG (image/jpeg), WEBP (image/webp), and GIF (image/gif).
+
+When using an HTTPS URL, the model will attempt to fetch the image from the provided URL. Ensure the URL is publicly accessible.
+
+​
+Examples
+
+Base64 Encoded Data
+
+HTTPS URL
+Use this method when you have the image file locally and want to embed it directly into the request payload. Remember the 50MB size limit and supported formats (PNG, JPEG, WEBP, GIF).
+Python
+TypeScript
+cURL
+import
+base64
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Read and encode image as base64
+
+def
+encode_image
+(
+image_path
+):
+
+with
+open
+(image_path,
+"rb"
+)
+as
+image_file:
+
+return
+base64.b64encode(image_file.read()).decode(
+"utf-8"
+)
+
+image_path
+=
+"image.png"
+
+base64_image
+=
+encode_image(image_path)
+
+# Analyze the image
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.5"
+,
+
+input
+=
+[
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+: [
+
+{
+"type"
+:
+"input_text"
+,
+"text"
+:
+"what's in this image?"
+},
+
+{
+
+"type"
+:
+"input_image"
+,
+
+"image_url"
+:
+f
+"data:image/png;base64,
+{
+base64_image
+}
+"
+,
+
+},
+
+],
+
+}
+
+],
+
+)
+
+print
+(response.output_text)
+
+Use this method when you have a publicly accessible image URL. The model will fetch the image from the provided URL.
+Python
+TypeScript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+image_url
+=
+"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg"
+
+# Analyze the image
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.5"
+,
+
+input
+=
+[
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+: [
+
+{
+"type"
+:
+"input_text"
+,
+"text"
+:
+"Can you describe the image at this URL?"
+},
+
+{
+
+"type"
+:
+"input_image"
+,
+
+"image_url"
+: image_url,
+
+},
+
+],
+
+}
+
+],
+
+)
+
+print
+(response.output_text)
+
+​
+Request Format
+
+​
+Agent API
+
+Images must be embedded in the
+input
+array when using message array format. Each image should be provided using the following structure:
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+: [
+
+{
+
+"type"
+:
+"input_text"
+,
+
+"text"
+:
+"What's in this image?"
+
+},
+
+{
+
+"type"
+:
+"input_image"
+,
+
+"image_url"
+:
+"<IMAGE_URL_OR_BASE64_DATA>"
+
+}
+
+]
+
+}
+
+The
+image_url
+field accepts either:
+
+A URL of the image
+: A publicly accessible HTTPS URL pointing directly to the image file
+
+The base64 encoded image data
+: A data URI in the format
+data:image/{format};base64,{base64_content}
+
+​
+Pricing
+
+Images are tokenized based on their pixel dimensions using the following formula:
+
+tokens = (width px × height px) / 750
+
+Examples:
+
+A 1024×768 image would consume: (1024 × 768) / 750 = 1,048 tokens
+
+A 512×512 image would consume: (512 × 512) / 750 = 349 tokens
+
+These image tokens are then priced according to the input token pricing of the model you’re using. The image tokens are added to your total token count for the request alongside any text tokens.
+
+​
+Next Steps
+
+Agent API Quickstart
+Get started with the Agent API
+Web Search
+Learn about the
+web_search
+tool.
+Was this page helpful?
+Yes
+No
+Search Filters
+Previous
+OpenAI Compatibility
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

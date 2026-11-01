@@ -1,0 +1,325 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/did-perplexity-remove-the-think-tags-from-sonar-reasoning-pro-api/3555
+page path  : /t/did-perplexity-remove-the-think-tags-from-sonar-reasoning-pro-api/3555
+captured   : 2026-06-16 11:35:25 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_did-perplexity-remove-the-think-tags-from-sonar-reasoning-pro-api_3555__acdbf333.html.gz
+========================================================================
+
+Did Perplexity remove the <think> tags from sonar-reasoning-pro API? - Bug Reports - Perplexity API Platform Forum
+
+Did Perplexity remove the <think> tags from sonar-reasoning-pro API? - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Did Perplexity remove the <think> tags from sonar-reasoning-pro API?
+
+Bug Reports
+
+sonar-reasoning-pro
+
+L_L
+
+January 17, 2026, 3:05am
+
+1
+
+Hi everyone,
+
+I’ve been using the
+sonar-reasoning-pro
+model via API recently, but I noticed that the
+<think>
+blocks (the chain-of-thought/reasoning process) seem to have disappeared from the response
+content
+.
+
+Previously, I could see the model’s internal reasoning, but now I only get the final output. Has anyone else noticed this change?
+
+Is there a specific parameter I need to toggle now to keep seeing the thoughts?
+
+Or is this a known bug/update?
+
+Would appreciate any insights. Thanks!
+
+Reuqest payload:
+
+{“model”:“sonar-reasoning-pro”,“messages”:[{“role”:“system”,“content”:“Please respond in Traditional Chinese.”},{“role”:“user”,“content”:[{“type”:“text”,“text”:“Latest news in Taiwan”}]}],“stream”:false}
+
+API esponse as below:
+
+{
+
+“id”: “9aebccb7-9366-4ae4-9ddc-c014ceb630ac”,
+
+“model”: “sonar-reasoning-pro”,
+
+“created”: 1768558651,
+
+“usage”: {
+
+“prompt_tokens”: 10,
+
+“completion_tokens”: 442,
+
+“total_tokens”: 452,
+
+“search_context_size”: “low”,
+
+“cost”: {
+
+“input_tokens_cost”: 0.0,
+
+“output_tokens_cost”: 0.004,
+
+“request_cost”: 0.006,
+
+“total_cost”: 0.01
+
+}
+
+},
+
+“citations”: [
+
+“
+https://www.youtube.com/watch?v=pDDgNSiXpDc
+”,
+
+“
+https://www.taipeitimes.com/News/front/archives/2026/01/16/2003850719
+”,
+
+“
+https://www.aei.org/articles/china-taiwan-update-january-9-2026/
+”,
+
+“
+https://www.siliconrepublic.com/business/us-taiwan-slash-tariffs-boost-us-chip-investments-250bn
+”,
+
+“
+https://www.commerce.gov/news/fact-sheets/2026/01/fact-sheet-restoring-american-semiconductor-manufacturing-leadership
+”
+
+],
+
+“search_results”: [
+
+{
+
+“title”: “US, Taiwan Clinch Deal to Cut Tariffs - YouTube”,
+
+“url”: “
+https://www.youtube.com/watch?v=pDDgNSiXpDc
+”,
+
+“date”: “2026-01-15”,
+
+“last_updated”: “2026-01-16”,
+
+“snippet”: “US, Taiwan Clinch Deal to Cut Tariffs | Bloomberg Businessweek Daily 1/15/2026 · Comments.”,
+
+“source”: “web”
+
+},
+
+{
+
+“title”: “US House passes bill with US$2.3bn military financing for Taiwan”,
+
+“url”: “
+https://www.taipeitimes.com/News/front/archives/2026/01/16/2003850719
+”,
+
+“date”: “2026-01-16”,
+
+“last_updated”: “2026-01-16”,
+
+“snippet”: “The US House of Representatives on Wednesday passed a bill to provide Taiwan with US$300 million in Foreign Military Financing (FMF) and up …”,
+
+“source”: “web”
+
+},
+
+{
+
+“title”: “China & Taiwan Update, January 9, 2026 | AEI”,
+
+“url”: “
+https://www.aei.org/articles/china-taiwan-update-january-9-2026/
+”,
+
+“date”: “2026-01-09”,
+
+“snippet”: “The PRC has openly discussed and simulated strikes against Taiwanese leadership and has likely considered options similar to the US capture of …”,
+
+“source”: “web”
+
+},
+
+{
+
+“title”: “US, Taiwan agree to slash tariffs, boost US chip investments by …”,
+
+“url”: “
+https://www.siliconrepublic.com/business/us-taiwan-slash-tariffs-boost-us-chip-investments-250bn
+”,
+
+“date”: “2026-01-16”,
+
+“last_updated”: “2026-01-16”,
+
+“snippet”: “A new bilateral deal will see Taiwanese chipmaking capabilities “reshoring” to the US, in exchange for lower tariffs and slash duties.”,
+
+“source”: “web”
+
+},
+
+{
+
+“title”: “Fact Sheet: Restoring American Semiconductor Manufacturing …”,
+
+“url”: “
+https://www.commerce.gov/news/fact-sheets/2026/01/fact-sheet-restoring-american-semiconductor-manufacturing-leadership
+”,
+
+“date”: “2026-01-15”,
+
+“last_updated”: “2026-01-16”,
+
+“snippet”: “Taiwanese companies building new U.S. semiconductor capacity may import up to 2.5 times that planned capacity without paying Section 232 duties …”,
+
+“source”: “web”
+
+}
+
+],
+
+“object”: “chat.completion”,
+
+“choices”: [
+
+{
+
+“index”: 0,
+
+“message”: {
+
+“role”: “assistant”,
+
+“content”: "台湾最近的重点新闻包括美台贸易协议、美国军事援助法案，以及人口老龄化问题。\n\n## 美台贸易与投资协议\n\n美国总统特朗普与台湾达成关键协议，**美国将对台湾商品的关税降至15%**，而**台湾承诺投入2,500亿美元用于芯片投资和信用担保**[1]。这项协议已谈判数月，是台北和华盛顿的重点优先事项[1]。\n\n根据协议条款，**台湾半导体制造公司(TSMC)将在美国建造4个额外工厂**，超过之前承诺的6个工厂，并包括2个封装设施[1]。这些投资将向美国提供关键的芯片产能，尤其是用于人工智能和数据中心的芯片[1]。\n\n## 美国军事援助\n\n**美国众议院通过法案，向台湾提供3亿美元的外交军事融资和最高20亿美元的贷款与贷款担保**[2]。众议院以341-79的高票数通过了这项2026年国家安全拨款法案[2]。\n\n该法案通过的背景是台湾在过去一个月遭遇网络攻击和中国人民解放军的军事演习[2]。众议院委员会主席约翰·穆勒纳尔表示，美国必须\"紧急\“向台湾交付武器，以在2027年及以后应对冲突威胁[2]。\n\n## 人口挑战\n\n台湾面临严重的人口危机。根据官方数据，**台湾已超越韩国成为最不愿意生育孩子的国家，年粗出生率为每千人4.62**[2]。此外，**65岁及以上人口已占总人口的20.06%**[2]，显示人口老龄化加速。”
+
+},
+
+“delta”: {
+
+“role”: “assistant”,
+
+“content”: “”
+
+},
+
+“finish_reason”: “stop”
+
+}
+
+]
+
+}
+
+Tim_Ferrand_IEO
+
+February 10, 2026, 7:46am
+
+2
+
+Hi everyone,
+
+I’m experiencing the same issue : the “think” tags are no longer appearing when using sonar-reasoning-pro. I have sent emails to the API support team 2-3 weeks ago but haven’t received a response yet.
+
+If anyone has insight into this or knows of a workaround, I’d greatly appreciate any information.
+
+Thanks
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Not having internal COT <Think> in output of reasoning models
+
+General
+
+sonar-reasoning-pro
+
+1
+
+134
+
+November 3, 2025
+
+Is sonar-reasoning the same as deepseek-reasoner?
+
+Bug Reports
+
+0
+
+77
+
+May 15, 2025
+
+Reasoning not always correctly enclosed in `<think>...</think>`
+
+Bug Reports
+
+4
+
+217
+
+June 2, 2025
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+1
+
+91
+
+June 9, 2026
+
+Q: Showing Think results in sonar-pro and others via CURL API?
+
+General
+
+4
+
+109
+
+May 26, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

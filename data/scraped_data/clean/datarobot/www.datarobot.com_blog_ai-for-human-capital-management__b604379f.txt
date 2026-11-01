@@ -1,0 +1,728 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/ai-for-human-capital-management/
+page path  : /blog/ai-for-human-capital-management/
+captured   : 2026-05-17 14:42:32 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_ai-for-human-capital-management__b604379f.html.gz
+========================================================================
+
+AI for Human Capital Management | DataRobot Blog
+
+AI for Human Capital Management | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+AI for Human Capital Management
+
+Hiring and retention across most government organizations is a challenge. For instance, in 2019, the Government Acquisition Office (GAO) researched and identified
+35 high-risk hiring areas
+. The Office of Personnel Management (OPM) began tracking time-to-hire (T2H) requirements in 2008 and found that the average government hire took around 100 days. As a comparison,
+external reports
+have found that public sector T2H averages three times as long as the private sector, 119 days compared to 36 days.
+
+A variety of factors combine to create this situation. Congressionally mandated reports on the government hiring process have highlighted the
+“unintelligible” job descriptions
+for many government positions. For example, a job description for a software engineer in the private sector was only one paragraph long, while the government job description was seven pages long. DataRobot can help identify qualified workers, accelerate the hiring process, and reduce turnover in a workforce. The
+DataRobot AI Platform
+has helped solve staffing issues across industries, including at one of the
+largest staffing firms
+in the world.
+
+Sample Use Case
+
+In this blog post, the DataRobot team will show how the
+DataRobot AI Platform
+can build models to predict if an employee will depart an organization in the next six months. Accurately forecasting which employees are likely to leave, as well as what the indicators or causes for their departure might be, enables leadership to intervene early and plan proactively. The goal of attrition and retention models is usually to find a balance between retaining top talent and accepting a reasonable level of attrition. This use case predicts a binary classification target of “likely to leave in the next six months” vs “unlikely to leave in the next six months.”
+
+DataRobot easily combines multiple datasets from different sources to create a comprehensive training dataset for this model. In this example, DataRobot joined five secondary datasets to one primary dataset using Feature Discovery. Each dataset contained various different information about an employee. For example, one dataset contains basic employee profile information while another includes information about the employee’s tardiness and absenteeism. The final training dataset consisted of 20,880 employee records with an approximate 70/30 split among retained and departed employees. Some data is missing from the records, which would increase the performance of an operational AI solution. For example, besides monetary bonuses, the dataset contained no information about employee performance or employee satisfaction.
+
+DataRobot’s
+Automated Feature Discovery
+used the 692 features from the original datasets to derive an additional 257 features that were used to increase predictive performance.
+Feature Lineage
+helps the user visualize the steps that DataRobot took to create the new feature. The feature in the following image finds the minimum time an employee was absent during the last six months.
+
+Example of Feature Lineage in DataRobot
+
+Use Case Results
+
+In only a few hours, the
+DataRobot platform
+produced a model capable of helping leaders identify at-risk employees and assisted with mitigation strategies so leaders and managers could focus attention on employees who may be at risk of leaving. A prioritized list of at-risk personnel allowed leaders and human resources teams to more accurately apply limited time and resources to prevent regrettable turnover.
+
+DataRobot automatically provides explainable insights such as prediction explanations to help leaders understand “why” a specific prediction is made. In the following image, DataRobot shows the user that the employee in Row ID 14131 of the dataset is very likely to depart in the next six months, and the top reasons for this prediction are absenteeism, how far the workplace is from their home, when they started at the company, and their salary.
+
+Example of DataRobot Prediction Explanations
+
+Another example of DataRobot’s explainable features is the word cloud, which can produce unique insights. In this example, this model’s word cloud shows that “when” an employee is absent from work impacts the prediction. If an employee at this organization is absent towards the end of the month (e.g., day 28, 29, or 30), it is more likely they will depart the company in the next six months.
+
+Example of Word Clouds in DataRobot
+
+DataRobot is also an industry leader in
+bias and fairness
+testing for models. AI bias and fairness features are especially important for use cases involving humans, such as hiring and retention. DataRobot’s unique bias and fairness tools test models for multiple forms of bias and enables users to perform root cause analysis to identify likely sources of bias in a dataset or in a model. This built-in capability allows organizations to fix issues before models are deployed into production.
+
+Additional DataRobot Use Cases
+
+The DataRobot AI Platform can support numerous human capital use cases across the government and homeland security organizations. The following includes a few additional use cases:
+
+Reviewing resumes and applications for meeting minimum experience requirements
+
+Predicting best recruiting approaches to prioritize recruiter’s time
+
+Predicting likelihood of staffing turnover across organizations
+
+Predicting requirements for staffing surges across organizations
+
+Contact a member of the DataRobot team today to learn more and see how your organization can become AI-driven.
+
+AI Platform for Public Sector
+
+See How DataRobot Delivers on the Promise of AI in Government
+
+Related posts
+
+See other posts in AI Across Industries
+
+Blog
+
+How to make a cash flow forecasting app work for other systems
+
+Read More
+
+February 20, 2026
+
+|
+10 min read
+
+Blog
+
+Customer spotlight: Personify Health’s thoughtful approach to AI adoption
+
+Learn how Personify Health is accelerating AI adoption of more than 15 predictive and generative AI projects with DataRobot.
+
+Read More
+
+December 5, 2024
+
+|
+4 min read
+
+Authors
+
+by
+
+Robbie Mackness
+
+,
+
+Chris Heller
+
+,
+
+Robert Annand
+
+May 31, 2022
+
+|
+4 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI Across Industries
+
+Blog
+
+How to make a cash flow forecasting app work for other systems
+
+Read More
+
+February 20, 2026
+
+|
+10 min read
+
+Blog
+
+Customer spotlight: Personify Health’s thoughtful approach to AI adoption
+
+Learn how Personify Health is accelerating AI adoption of more than 15 predictive and generative AI projects with DataRobot.
+
+Read More
+
+December 5, 2024
+
+|
+4 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

@@ -1,0 +1,161 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/google-contacts-connector-blocked-by-google-oauth-this-app-is-blocked-error/5225
+page path  : /t/google-contacts-connector-blocked-by-google-oauth-this-app-is-blocked-error/5225
+captured   : 2026-06-16 12:00:20 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_google-contacts-connector-blocked-by-google-oauth-this-app-is-blocked-error_5225__50cc8d20.html.gz
+========================================================================
+
+Google Contacts connector blocked by Google OAuth - "This app is blocked" error - Bug Reports - Perplexity API Platform Forum
+
+Google Contacts connector blocked by Google OAuth - "This app is blocked" error - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Google Contacts connector blocked by Google OAuth - "This app is blocked" error
+
+Bug Reports
+
+sonar
+
+someshpan
+
+May 25, 2026, 10:20pm
+
+1
+
+Bug Description
+
+When attempting to connect Google Contacts via the Perplexity connector (using Pipedream OAuth), Google displays the following error:
+
+“This app is blocked — This app tried to access sensitive info in your Google Account. To keep your account safe, Google blocked this access.”
+
+Steps to Reproduce
+
+Go to Perplexity settings > Connectors
+
+Click on Google Contacts
+
+Click “Connect” / “Add connector”
+
+The Pipedream OAuth popup opens
+
+Select Google account
+
+Google immediately shows “This app is blocked” — no way to proceed
+
+Expected Behaviour
+
+Google should show a permissions consent screen allowing the user to grant Perplexity/Pipedream access to Google Contacts.
+
+Actual Behaviour
+
+Google hard-blocks the connection because the Pipedream OAuth app has not been verified by Google for the sensitive Contacts scope.
+
+Environment
+
+Browser: Chrome (latest)
+
+OS: macOS
+
+Date: 24 May 2026
+
+Connector: Google Contacts (via Pipedream)
+
+Notes
+
+This is a Google OAuth app verification issue. The Pipedream OAuth client being used by Perplexity needs to go through Google’s verification process for the People API / Contacts scope. Until this is completed, no users will be able to connect Google Contacts.
+
+SophiaS
+
+May 29, 2026, 6:48pm
+
+2
+
+The issue was resolved. You should be able to connect.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Support syncing multiple Google / Gmail accounts under one Perplexity profile
+
+Feature Requests
+
+sonar
+
+1
+
+645
+
+August 13, 2025
+
+Automatic Google OAuth is overriding my current session
+
+Feature Requests
+
+1
+
+1005
+
+October 26, 2025
+
+API Permission denied problem
+
+Bug Reports
+
+search-api
+
+0
+
+48
+
+October 10, 2025
+
+Connection with Proton Services
+
+Feature Requests
+
+chat-completions
+
+,
+
+search-api
+
+1
+
+112
+
+October 22, 2025
+
+401 Authorization Required Response in API
+
+Bug Reports
+
+sonar-pro
+
+4
+
+582
+
+February 2, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

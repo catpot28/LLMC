@@ -1,0 +1,444 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/contextualized-embeddings-post
+page path  : /api-reference/contextualized-embeddings-post
+captured   : 2026-06-17 06:21:43 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_contextualized-embeddings-post__4941bf9a.html.gz
+========================================================================
+
+Create Contextualized Embeddings - Perplexity
+
+Create Contextualized Embeddings - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Embeddings API
+Create Contextualized Embeddings
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Analytics API
+GET
+Computer Usage Analytics
+Create Contextualized Embeddings
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/contextualizedembeddings
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": [
+
+[
+
+"<string>"
+
+]
+
+]
+
+}
+
+'
+200
+422
+{
+
+"object"
+:
+"list"
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"list"
+,
+
+"index"
+:
+123
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+123
+,
+
+"embedding"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"model"
+:
+"<string>"
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"currency"
+:
+"USD"
+
+}
+
+}
+
+}
+Embeddings API
+Create Contextualized Embeddings
+Copy page
+Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
+Copy page
+POST
+/
+v1
+/
+contextualizedembeddings
+Try it
+Create Contextualized Embeddings
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/contextualizedembeddings
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": [
+
+[
+
+"<string>"
+
+]
+
+]
+
+}
+
+'
+200
+422
+{
+
+"object"
+:
+"list"
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"list"
+,
+
+"index"
+:
+123
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+123
+,
+
+"embedding"
+:
+"<string>"
+
+}
+
+]
+
+}
+
+],
+
+"model"
+:
+"<string>"
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"currency"
+:
+"USD"
+
+}
+
+}
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+Request body for creating contextualized embeddings
+​
+input
+string[][]
+required
+Nested array structure where each inner array contains chunks from a single document. Chunks within the same document are encoded with document-level context awareness. Maximum 512 documents. Total chunks across all documents must not exceed 16,000. Total tokens per document must not exceed 32K. All chunks in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
+Required array length:
+1 - 512
+element
+s
+Minimum array length:
+1
+Minimum string length:
+1
+​
+model
+enum<string>
+required
+The contextualized embedding model to use
+Available options
+:
+
+pplx-embed-context-v1-0.6b
+,
+
+pplx-embed-context-v1-4b
+
+​
+dimensions
+integer
+Number of dimensions for output embeddings (Matryoshka). Range: 128-1024 for pplx-embed-context-v1-0.6b, 128-2560 for pplx-embed-context-v1-4b. Defaults to full dimensions (1024 or 2560).
+Required range
+:
+128 <= x <= 2560
+​
+encoding_format
+enum<string>
+default:
+base64_int8
+Output encoding format for embeddings. base64_int8 returns base64-encoded signed int8 values. base64_binary returns base64-encoded packed binary (1 bit per dimension).
+Available options
+:
+
+base64_int8
+,
+
+base64_binary
+
+Response
+200
+application/json
+Successful Response
+Response body for contextualized embeddings request
+​
+object
+string
+The object type
+Example
+:
+"list"
+​
+data
+Contextualized Embedding Object · object[]
+List of contextualized embedding objects
+Show
+
+child attributes
+​
+model
+string
+The model used to generate embeddings
+​
+usage
+Embeddings Usage · object
+Token usage for the embeddings request
+Show
+
+child attributes
+Was this page helpful?
+Yes
+No
+Create Embeddings
+Previous
+Generate Auth Token
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

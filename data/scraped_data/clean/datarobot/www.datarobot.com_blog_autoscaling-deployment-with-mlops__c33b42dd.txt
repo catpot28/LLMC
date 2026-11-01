@@ -1,0 +1,738 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/autoscaling-deployment-with-mlops/
+page path  : /blog/autoscaling-deployment-with-mlops/
+captured   : 2026-06-15 01:47:12 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_autoscaling-deployment-with-mlops__c33b42dd.html.gz
+========================================================================
+
+Autoscaling Deployment with MLOps | DataRobot Blog
+
+Autoscaling Deployment with MLOps | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Autoscaling Deployment with MLOps
+
+Investing in AI/ML is no longer an option but is critical for organizations to remain competitive. However, machine learning utilization is often unpredictable, which makes scaling sometimes a huge challenge. Many engineering teams don’t pay the necessary attention to it. The main reason is that they don’t have a clear plan to scale things up from the beginning. From our experience working with organizations across different industries, we learned about the main challenges related to this process. We combined the resources and expertise of DataRobot MLOps and Algorithmia to achieve the best results.
+
+In this technical post, we’ll focus on some changes we’ve made to allow custom models to operate as an algorithm on Algorithmia, while still feeding predictions, input, and other metrics back to the DataRobot MLOps platform—a true best of both worlds.
+
+Data Science Expertise Meets Scalability
+
+DataRobot AI platform
+has an absolutely fantastic training pipeline with AutoML and also has a rock-solid inference system. However, there are some reasons why your workflow might not make sense as a typical DataRobot deployment:
+
+Deep Learning Acceleration (GPU enablements)
+
+Custom logic, utilizing existing algorithms, acting as part of a larger workflow
+
+Already have your own training pipeline, have automatic retraining pipelines in development
+
+Want to save costs by being able to scale to zero workers; don’t need always-on deployments; want to be able to scale to 100 in the event your project becomes popular
+
+But have no fear! Since the integration of DataRobot and Algorithmia, we now have the best of both worlds, and this workflow enables that.
+
+Autoscaling Deployments with Trust
+
+Our team built a workflow that enables the ability to deploy a custom model (or algorithm) to the Algorithmia inference environment, while automatically generating a DataRobot deployment that is connected to the Algorithmia Inference Model (algorithm).
+
+When you call the Algorithmia API endpoint to make a prediction, you’re automatically feeding metrics back to your DataRobot MLOps deployment—allowing you to check the status of your endpoint and monitor for model drift and other failure modes.
+
+The Demo: Autoscaling with MLOps
+
+Here we will demonstrate an end-to-end unattended workflow that:
+
+trains a new model on the
+Fashion MNIST Dataset
+
+uploads it to an Algorithmia Data Collection
+
+creates a new algorithm on Algorithmia
+
+creates DataRobot deployment
+
+Links everything together via the MLOps Agent. The only thing you need to do is to call the API endpoint with the curl command returned at the end of the notebook, and you’re ready to use this in production.
+
+If you want to skip ahead and go straight to the code, a link to the Jupyter notebook can be found
+here
+.
+
+Operationalize ML Faster with MLOps Automation
+
+As we know, one of the biggest challenges that data scientists face after exploring and experimenting with a new model is taking it from a workbench and incorporating it into a production environment. This usually requires building automation for both model retraining, drift direction, and compliance/reporting requirements. Many of these can automatically be generated by the DataRobot UI. However, most of the time it can be easier to build your own dashboards specific to your use case.
+
+In this demo, we are completely unattended. There are no web UIs or buttons you need to click. You interact with everything via our Python clients wrapping our API endpoints. If you want to take this demo and rip out a few parts to incorporate into your production code, you’re free to do so.
+
+See Autoscaling with MLOps in Action
+
+Here I will demontstrate an end-to-end unattended workflow, all you need is a machine with a
+Jupyter notebook server
+running, an Algorithmia API Key, and a DataRobot API key.
+
+How to Get an Algorithmia API Key
+
+If you’re already an Algorithmia / Algorithmia Enterprise customer, please select your personal workspace and then select API Keys.
+
+You’ll need to select an API key that is management capable. Admin keys are not required for this demo. This may be a different path depending on your Algorithmia Cluster environment, if you’re having difficulties reach out to the DataRobot and Algorithmia team.
+
+If you aren’t an existing Algorithmia / Algorithmia Enterprise customer and would like to see the Algorithmia offering, please reach out to your DataRobot account manager.
+
+How to Get your DataRobot API Token
+
+To get your DataRobot API token, you first must ensure that MLOps is enabled for your account.
+
+After, under your profile, select developer tools to open the token window.
+
+Then select,
+Create new key
+. You should typically create a new API Key for every production model you have so that you can isolate them and disable them if they ever leak.
+
+This process may be different depending on your version of DataRobot. If you have any questions, please reach out to your account manager.
+
+Incorporating Your Tokens into the Notebook
+
+You’ve got your tokens, now lets add them to the notebook.
+
+from
+datarobot.mlops.connected.client
+import
+MLOpsClient
+
+from
+uuid
+import
+uuid4
+
+datarobot_api_token = "DATAROBOT_API_TOKEN"
+algorithmia_api_key = "ALGORITHMIA_API_TOKEN"
+algorithm_name = "fashion_mnist_mlops"
+algorithmia_endpoint = "https://api.algorithmia.com"
+datarobot_endpoint = "https://app.datarobot.com"
+
+Insert your API Tokens, along with your custom endpoints for DataRobot and Algorithmia. If your Algorithmia url is https://www.enthalpy.click, add https://api.enthalpy.click here to ensure we can connect. Do the same for your DataRobot endpoint.
+
+If you are not sure or you are using the serverless versions of both offerings, leave these as default and we can move on.
+
+Running the Notebook
+
+Now that your credentials have been added, you can train a model, create a DR deployment; create an algorithm on Algorithmia, and finally connect them together, automatically.
+
+Fashion MNIST Automatic Deployment Notebook
+
+Maximize Efficiency and Scale AI Operations
+
+At DataRobot, we’re always trying to build the best development experience and best productionization platform anywhere. This integration was a big step toward helping organizations to maximize efficiency and scale their AI operations; if you want to know more about DataRobot MLOps or have any suggestions on feature enhancements that can improve your workflow, reach out to us.
+
+Learn More About DataRobot MLOps
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Authors
+
+by
+
+James Sutton
+
+July 27, 2022
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build with Cursor and deploy production-ready AI agents on DataRobot
+
+June 12, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

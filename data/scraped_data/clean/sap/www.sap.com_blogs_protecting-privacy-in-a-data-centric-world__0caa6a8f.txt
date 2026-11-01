@@ -1,0 +1,154 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/protecting-privacy-in-a-data-centric-world
+page path  : /blogs/protecting-privacy-in-a-data-centric-world
+captured   : 2026-03-16 09:05:09 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/sap/www.sap.com_blogs_protecting-privacy-in-a-data-centric-world__0caa6a8f.html.gz
+========================================================================
+
+Protecting privacy in a data-centric world | SAP
+
+Protecting privacy in a data-centric world | SAP
+
+flex-height
+
+text-black
+
+Protecting privacy in a data-centric world
+
+Exchanging data is key to innovation. Here’s how to protect your customer data from unwanted use and exposure.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+It’s difficult to achieve breakthroughs in cancer research without studying real people and what happens to them. And these days, you can’t do that without looking at patient data while protecting the identities of the people attached to that data.
+
+That made the
+recent announcement
+from researchers at the National University of Singapore so important: they had created a data-based tool with the potential to revolutionize cancer diagnosis and treatment.
+
+The team used machine learning techniques against an anonymized data set containing information from both healthy individuals and cancer patients, 30,000 in all, who had opted to be part of the data set for the sake of science. The result was a genetic scorecard that doctors can use to detect cancer, predict patient survivability, and gauge how well an individual might respond to immunotherapy. The anonymized data aims to ensure that no individual identity can be discovered within the data. Called the
+Tumor Matrisome Index
+(TMI), the scorecard requires only a blood test, enabling patients to avoid invasive biopsies while providing critical information to help guide their oncologists in determining the best care. Observers believe TMI could become the gold standard for detecting cancer while also helping doctors predict patient survivability and select treatments – a major step forward for medical science and humanity.
+
+This breakthrough would not have been possible without patients – those with and without cancer – who agreed to share their data. And the ever-burgeoning volumes of all types of data hold the promise of more dormant innovations in virtually every area of life and work, from finding cures and novel treatments for disease to discovering the next invention that will revolutionize your market. But – and this is a big one – this data must be kept private, securely cloaking individual identifying characteristics known as Personal Identifying Information in keeping with the European Union’s General Data Protection Regulation (GDPR) and additional regulations, among other reasons.
+
+Just imagine, for instance, if the identity of a cancer patient in the TMI example was revealed. The damage could be incalculable. For starters, most cancer patients would not want their diagnosis made public, especially if the prognosis is terminal. Also,
+employees have been fired
+after disclosing their cancer diagnosis. And revealing this information would surely have a chilling effect on others who might have participated in medical research.
+
+The more enlightened approach to handling data arose not from an abundance of respect for individuals and their data but rather from the specter of lost money. Enacted in 2018, the GDPR marked a sea change in executives’ attitudes toward data privacy as it threatened fines of
+20 million euros (US$11.7) or 4% of global revenues
+for misuse of consumer data. Once executives saw penalties levied against high-profile companies like
+Google
+(hit with a painful $50-million fine in 2019), they understood they had to make big changes, such as better handling of data usage and making data policies easier to understand and more accessible to consumers.
+
+Enacted in 2018, the GDPR threatens fines of
+20 million euros or 4% of global revenues
+for misuse of consumer data.
+
+That’s not all. Companies also must guard data to carry out legal agreements with business partners – a notoriously tricky task – and to maintain trust with customers.
+More than 60% of North American consumers
+would rather purchase from companies that adequately protect their data, according to an ATB Ventures survey. In fact, being able to demonstrate you treat customer data with care and respect is shaping up to be a major competitive advantage. These factors mean we have to solve technical problems – anonymizing data and keeping it useful for analysis is difficult.
+
+That’s because some of the technologies and techniques used in recent years to remove identifying characteristics surrounding data have been revealed as
+inadequate
+, at least when used alone. It appears necessary to employ several techniques, even
+synthetic data sets
+, which use statistical models instead of actual personal data, to obtain the right degree of anonymization.
+
+As many high-profile examples have illustrated, protecting data partway isn’t good enough. For example, in 2010, because of data privacy issues,
+Netflix had to cancel its second $1 million-prize “Recommender Challenge”
+when someone figured out that the Netflix data set and the IMDb public movie ratings database, which included raters’ e-mail addresses, had significant overlap. So, it was possible to reveal personal identifiers for much of the Netflix data set – an unpleasant shock for the contest organizers and participants alike.
+
+Data protection is an imperfect science, yet here we are. Regulations like GDPR are not going away (the
+California Consumer Privacy Act
+and more like it are quite possibly coming). The Privacy Shield Framework that used to protect U.S. companies from having to comply with data protections for European customers has been
+struck down
+. Given the current climate, the safest bet is to implement robust protections for consumer data, period. The time for ignoring this issue is long past.
+
+It’s a conundrum: executives need both to take advantage of the opportunities represented by data and to guard against risks inherent in sharing data. Trust with consumers is a big deal – a growing number of so-called
+“passionates” will not buy from companies that do not embody their values
+. It’s a complicated space. This article will help, showing what is going on at a high level and different approaches you can take for the all-important protection of your customers’ data.
+
+Keep data private: Creating a program
+
+There is no universally accepted definition of privacy, which can make conversations regarding privacy risk management difficult, says Julie Snyder, a privacy architect at MITRE, a nonprofit technology company. Security encompasses concepts, such as integrity and availability of information, as well as confidentiality (in which personal data is kept private). Privacy also embodies
+Fair Information Practice Principles (FIPPs)
+, which have been around since the 1970s, when governmental data was exposed during the Watergate era. The principles include such ideas as promoting transparency in information collection and fairness in the use of data.
+
+While the FIPPs can help organizations meet their privacy obligations, more recently emerging tools are also necessary to help them identify and address the privacy risks experienced by individuals. The National Institute of Standards and Technology (NIST) offers such tools,
+as well as other resources
+, including the
+NIST Privacy Framework
+as a useful approach for organizations to get started with addressing the privacy issues most relevant to their own priorities.
+
+To effectively manage privacy risks to individuals – and therefore the risks to the organization that can arise from causing those privacy risks – organizations must understand their role in the data processing ecosystem and how they are handling their data at each stage of the information life cycle. This provides the foundation for assessing the risks of managing that data and the use of technologies and practices to protect data privacy, Snyder adds.
+
+Personal information defined
+
+Times have changed, and with them, so has the approach to data privacy.
+
+Learn more
+
+Risk assessments are a critical tool
+. Any organization within the purview of the GDPR will need to do a Data Protection Impact Assessment. If you’re in this boat, make sure you get help; there’s a lot of legalese. But this is not a cursory process and should not be limited to high-level discussion of the FIPPs without in-depth reviews of data flows, technologies, and engineering practices, says Snyder. A strong privacy program will help organizations pair strong privacy risk management practices with the unique needs of its organization. MITRE provides a “
+Privacy Maturity Model
+” that large enterprises may find useful for identifying privacy program practices. The model was prepared for governmental agencies and those that work with the government, but may easily be extrapolated for use in other industries, says Snyder.
+
+Organizational approaches to privacy risk management should also align with your organization’s overall appetite for risk, practices related to managing and mitigating risk, and how these approaches match corporate mission and business objectives. Naturally, each organization’s experience of this will be unique.
+
+The data-usage and assessment process can be complex for large and small organizations. The NIST provides a host of free tools to help businesses of all sizes create a data-privacy strategy and framework, including a manageable
+“Quick Start” guide
+for small- and medium-sized businesses. Jaime Lees, chief data officer for Arlington County Government in Virginia is quoted in the guide saying the NIST Privacy Framework was helpful and easy to follow, even without a large staff to figure out data privacy.
+
+Policies and strategies are the first step. Next come the technical means to achieve your goals.
+
+Keep data private: Technical approaches
+
+Encryption (a tool of data security) and data anonymization (a technique to protect data privacy) are the chief data-protection techniques currently in operation, used together or separately.
+
+To date, anonymization has been the main means of sanitizing data. Anonymization means the data has been altered – so it’s no longer easy to reconstruct what the original piece of data looked like – in such a way that maintains its usefulness. Anonymization involves a technical balancing act when removing identifying characteristics. Leave too many in and the sources of the underlying data can be revealed; strip out too much and the data itself becomes so attenuated it’s meaningless. For full data protection, as stated above, there is now agreement that data anonymization alone is not enough.
+
+Protecting customer data using encryption and anonymization is heavy lifting for just about any organization. Data-exchange platforms have sprung up as an answer. These aim to be “safe spaces” for participants to freely exchange private data. According to an Eckerson Group report, data exchanges are emerging as a key component of the data economy by connecting data suppliers and consumers through a seamless experience that incorporates the necessary levels of integration, privacy, security, and trust.
+
+Modern data exchanges reduce the traditional barriers that have made it difficult for organizations to find, acquire, and integrate third-party data, according to Eckerson Group. Data exchanges enable companies not only to acquire the volume of data their data scientists need to train machine learning models, but they can also help them unlock new data-based revenue streams, because the exchanges protect the data privacy instead of leaving companies to bear that burden. For example, automobile manufacturers now recognize that much value can be mined from their data as opposed to just racking up car sales. Data exchanges might be confined to peers (such as two divisions of the same corporation exchanging data with each other), private (which requires an invitation to participate), or public data marketplaces (
+AWS Data Exchange
+is a notable example and there are
+many more
+).
+
+On the more technical side of the use case spectrum, for companies that need to feed machine learning models high volumes of training data, there are many options. For instance, Inpher has proprietary technology it calls “Secret Computing” that aims to balance the tension between data access and data privacy. “Our customers are facing the challenges of needing to do data sharing and data collaboration, especially with machine learning workloads that require more and more data to be effective. But accessing that data is getting harder and harder with privacy restrictions and new regulations,” says Jordan Brandt, co-founder and CEO of Inpher. Its XOR platform uses “encryption in use” (a new approach that ensures data is never unprotected) to run machine learning computation across multiple parties’ data. It is used most often for financial, health, and other personal information.
+
+There are a
+myriad of other technical approaches to protecting data privacy
+, including cloud data protection, tokenization, and enterprise key management.
+
+The stakes for inadequate privacy protection are high, but as with security, privacy is one of those things where when you’re doing it right, nobody notices and says, “Hey, way to go.” The rise in high-dollar fines for violations of GDPR have gotten everyone’s attention, says Brandt. But consumers are by far the biggest audience for your data-privacy policies, and they are watching.
+
+“Maybe some companies are willing to pay a $100-million fine [for a GDPR violation]. But it’s the reputational risk of not managing consumer data properly that is more important,” he says. “You don’t want consumers to say, ‘I trusted them with my personal information, and now they’re misusing it.’” That outcome could put your whole company at risk.
+
+The stakes for inadequate privacy protection are high, but as with security, privacy is one of those things where when you’re doing it right, nobody notices and says, “Hey, way to go.”
+
+Yet the payoffs – to your customers, your bottom line, even to humanity – of sharing data are virtually limitless. Doctors are now using the Tumor Matrisome Index (mentioned above) to identify non-small cell lung cancer, which accounts for approximately 85% of all lung cancers, without the need for an invasive and painful biopsy. Next up: Researchers expect doctors will use the index in personalizing cancer treatments – identifying, for example, which patients would likely respond well to less-invasive immunotherapy as opposed to chemotherapy. As one researcher was quoted as saying, “This is a big step forward in personalizing cancer treatment and ensuring better patient outcomes.” Made possible by data.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

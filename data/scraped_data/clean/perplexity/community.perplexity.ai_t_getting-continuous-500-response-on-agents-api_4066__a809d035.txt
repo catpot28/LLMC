@@ -1,0 +1,137 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/getting-continuous-500-response-on-agents-api/4066
+page path  : /t/getting-continuous-500-response-on-agents-api/4066
+captured   : 2026-04-12 11:40:20 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_getting-continuous-500-response-on-agents-api_4066__a809d035.html.gz
+========================================================================
+
+Getting continuous 500 response on agents api - General - Perplexity API Platform Forum
+
+Getting continuous 500 response on agents api - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Getting continuous 500 response on agents api
+
+General
+
+chat-completions
+
+Jaswant_Rajput
+
+March 5, 2026, 8:57pm
+
+1
+
+Req url:
+https://api.perplexity.ai/v1/responses
+
+Req body:
+
+{
+
+"input": "Classify this company into its primary industry and sub-industry.\n\nCompany Name: TexAu\nCompany Description: TexAu is a sales platform for linkedin where users can automate linkedin workflows\n\nUse standard industry categories:\nTechnology, Healthcare, Financial Services, Manufacturing, Retail, Real Estate, Education, Energy, Media & Entertainment, Professional Services, Transportation, Government, Agriculture, Construction, Telecommunications, Hospitality, Non-Profit, Other\n\nReturn ONLY valid JSON:\n{\"industry\": \"Technology\", \"subIndustry\": \"Enterprise Software\", \"naicsCode\": \"511210\", \"confidence\": 0.9}",
+"instructions": "If you cannot determine the answer, return the following fallback: Return {\"industry\": \"Unknown\", \"subIndustry\": \"Unknown\", \"naicsCode\": null, \"confidence\": 0.0}",
+"max_output_tokens": 8192,
+"model": "openai/gpt-5-mini",
+"stream":false
+
+}
+
+Getting 500 internal server error with this messaeg:
+
+{
+
+"error": {
+"message": "An internal server error occurred. Please retry your request.",
+"type": "server_error",
+"code": 500
+}
+}
+
+No way to debug what’s wrong
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+PerplexityPro response vs SonarPro response
+
+Bug Reports
+
+sonar-pro
+
+1
+
+156
+
+April 7, 2026
+
+Structured output / JSON schema support
+
+Feature Requests
+
+3
+
+423
+
+May 16, 2025
+
+API/Billing Major Problem!
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+search-api
+
+1
+
+118
+
+March 31, 2026
+
+About the Bug Reports category
+
+Bug Reports
+
+0
+
+179
+
+May 14, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+110
+
+November 3, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

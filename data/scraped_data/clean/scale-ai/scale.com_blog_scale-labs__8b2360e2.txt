@@ -1,0 +1,111 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/scale-labs
+page path  : /blog/scale-labs
+captured   : 2026-06-15 11:06:08 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_scale-labs__8b2360e2.html.gz
+========================================================================
+
+Introducing Scale Labs | Scale AI
+
+Introducing Scale Labs | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Introducing Scale Labs
+By
+
+Bing Liu
+·
+March 9, 2026
+·
+4 min read
+Copy Link
+Today, we’re announcing the expansion of our research mandate with the launch of Scale Labs. Scale’s Safety, Evaluation, and Alignment Lab (SEAL), launched in 2023, cemented Scale’s authority in benchmarking frontier AI systems, with leading labs citing SEAL benchmarks across major model releases and system cards. Extending SEAL’s work, Scale Labs is our new hub for research initiatives spanning model capability, agentic and multimodal systems, post-training and evaluation methods, enterprise deployment, and our work with global governments and national research institutes to further enable their adoption of AI.
+Scale is uniquely positioned to expand our research efforts. Through collaborations across research, enterprise, and government, we see how advanced models are built, evaluated, and used in practice. Our history, along with operating the industry’s largest human evaluation infrastructure, gives us rare visibility into how AI systems behave both under rigorous evaluation and in real production environments. As AI advances, so does our perspective.
+What We Study
+Scale Labs studies how advanced AI systems actually behave as they become more powerful and deploy in real-world settings. We look at how to test, improve, and evaluate these systems so we understand how they behave in complex workflows, under pressure, and in high-stakes environments. We build better ways of measuring capability, reliability, and risk so that companies, governments, and national research institutes can use these systems with clearer expectations and stronger oversight. Our primary areas of focus include:
+Evaluation and Measurement:
+Designing methods to assess reasoning, robustness, calibration, safety and systemic risk as AI capabilities scale. This includes adversarial and adaptive testing approaches that remain informative beyond static benchmarks and better reflect real-world deployment conditions.
+Agentic and Multimodal Systems:
+Studying how systems plan, use tools, operate across modalities, and perform long-horizon tasks, including failure modes that emerge beyond static prompt–response settings.
+Post-Training and Oversight Methods:
+Advancing reinforcement learning, process supervision, structured feedback techniques, and control protocols to improve reliability, steerability, interpretability, and alignment.
+Enterprise Deployment:
+Examining how advanced systems behave in real-world workflows and high-stakes production environments, including reliability under operational constraints.
+AI Risk and Oversight Infrastructure:
+Building evaluation and control frameworks that support institutional oversight, including adversarial stress-testing, robustness analysis under distribution shifts, and measurement approaches aligned with national regulatory needs.
+Together, these areas center on understanding how advanced systems behave outside the lab, helping Scale and our partners to build the infrastructure to measure and oversee them responsibly.
+Selected Recent Work
+Recent launches include:
+SWE Atlas
+is composed of three separate evaluations with leaderboards that assess how agents understand, validate, and improve real software systems inside real repositories. The evaluations include:
+Codebase QnA
+- Understand complex codebases through runtime analysis and multi-file reasoning
+Test Writing
+- Write meaningful tests that exercise real functionality to increase code coverage
+Refactoring
+- Restructure code to improve readability & maintainability while preserving behavior
+Long-Horizon Augmented Workflows (LHAW)
+evaluates underspecification in extended tasks, generating controlled task variants that measure how agents detect ambiguity, seek clarification, and recover performance when information is incomplete.
+Versioning, Rewards, and Observations (VeRO)
+provides a reproducible evaluation harness with versioned agent snapshots, budget-controlled evaluation, structured execution traces, and a benchmark suite of target agents and tasks with reference evaluation procedures.
+Agentic Rubrics
+generates repository-grounded evaluation rubrics for software bug-fixing tasks, enabling agentic verifiers to score and re-rank candidate patches without executing tests by grading them against structured, context-specific criteria.
+Previous benchmarks developed under SEAL were designed to remain informative as frontier performance rises. These include Humanity’s Last Exam (HLE), MCP-Atlas, and SWE-Bench Pro, now
+recommended
+by OpenAI in place of SWE-Bench Verified. We are also extending benchmarks such as FORTRESS for use in national and public-sector contexts, expanding their role in AI safety evaluation.
+Looking Ahead
+The next phase of AI will be defined by how AI systems behave in the real world, in real-world workflows, institutions, and decision-making processes. Scale Labs exists to help the field and national governments understand and shape that behavior. Our work is already appearing across new research releases and academic venues, including recent papers accepted to ICLR exploring rubric-based rewards, evaluation-driven reinforcement learning, and agentic safety measurement.
+Explore our
+research page
+and ongoing commentary on our
+blog
+and on
+X
+.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

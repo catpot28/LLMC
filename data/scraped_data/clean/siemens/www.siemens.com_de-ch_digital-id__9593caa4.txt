@@ -1,0 +1,122 @@
+=== SOURCE =============================================================
+company    : Siemens (siemens)
+url        : https://www.siemens.com/de-ch/digital-id/
+page path  : /de-ch/digital-id/
+captured   : 2026-05-17 06:43:53 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/siemens/www.siemens.com_de-ch_digital-id__9593caa4.html.gz
+========================================================================
+
+Digital ID | Siemens
+
+Digital ID | Siemens
+
+Skip to main content
+
+Home
+Digital ID
+Digital certificates
+Digital ID
+Siemens Digital ID offers secure digital certificates for authenticating employees, products, and partners, enabling trusted network communication and verified identities.
+
+Siemens issues digital certificates ("Certificates", also known as "Digital IDs") to employees as well as products and solutions within the Siemens environment (including Siemens Energy and Siemens Healthineers), to its known business partners, and to Siemens web sites in accordance with its "Siemens CPS Issuing CA“.
+Certification Authority ("CA") contact information:
+Siemens Corporate PKI
+Siemens AG
+CYS, Attn. Siemens Issuing CA(s)
+81739 Munich
+Federal Republic of Germany
+Siemens Product PKI
+Siemens AG
+FT RPD, Attn. Siemens Product PKI
+81739 Munich
+Federal Republic of Germany
+E-mail:
+contact.pki@siemens.com
+Certificate Problem Reports to be reached out to:
+certificate-problem-report.pki@siemens.com
+(For internal use only – Siemens Employees can get support at
+https://intranet.siemens.com/pkihelpdesk
+)
+Certificate consumers can request
+test certificates
+of all the certificate types that the Siemens CA issues using the Certificate Problem Report email address above.
+Website:
+https://siemens.com/pki/
+Certificate Policy / Certification Practice Statement (“CP/CPS”):
+Siemens Corporate PKI
+Siemens CP
+Siemens CPS Root CA
+Siemens CPS Issuing CA
+Siemens EE Policy 2020
+Siemens EE Policy 2023
+Siemens CA Hierarchy Policy 2020/2021
+Siemens CA Hierarchy Policy 2023
+Siemens CPKI Obligation Policy
+Siemens Product PKI
+Product PKI Certificate Management Service – Central Certificate Policy
+(OID: 1.3.6.1.4.1.4329.99.1.2.0.2)
+Product PKI Certificate Management Service – Central Certification Practice Statement
+Product PKI Certificate Management Service – Certificate Policy for Siemens Product PKI Infrastructure Certificates
+(OID: 1.3.6.1.4.1.4329.99.1.2.1000.2)
+Product PKI Certificate Management Service – Certification Practice Statement for Siemens Product PKI Infrastructure Certificates
+(Further Object Identifiers (OID) starting with 1.3.6.1.4.1.4329.99. and 1.3.6.1.4.1.4329.38. are described in Chapter 7.1.6)
+Certification audits under ETSI standards
+The Siemens PKI is classified as a critical IT infrastructure service for the company and is yearly audited according to ETSI standards.
+Corporate PKI
+is audited according to
+ETSI EN 319 401
+ETSI EN 319 411-1
+Product PKI Certificate Management Service
+is audited according to
+ETSI EN 319 401
+ETSI EN 319 411-1
+Product PKI Digital Signature Service
+is audited according to
+ETSI EN 319 401
+The practices of the Digital Signature Service are described in the Service Level Agreement (SLA) and Service Description.
+CA and repository, licenses, confidentiality and audit:
+The Siemens PKI is classified as critical IT infrastructure of the company and was audited and certified in accordance with ETSI EN 319 411-1 v1.2.0. The ETSI audit report/conformance statement can be accessed through:
+Siemens ETSI Report (deep link)
+Limited warranty and disclaimer / Limitation of liability:
+Included in Siemens Certificate Policy ("CP").
+CA Certificates:
+Siemens has made the Siemens' CA(s) Certificates available for downloading. Please find an overview of the structure and different CA Certificates in
+Siemens PKI CA Hierarchy (PDF)
+.
+Download Siemens' CAs for persons and servers
+Download Siemens' CAs for AD computer certificates
+Public Certificate Repository:
+Siemens operates a publicly accessible Certificate Repository. In the Certificate Repository the Certificates of the Siemens PKI are stored. The Certificate Repository is available on the Internet to enable the exchange of secure e-mails with Siemens.
+The Certificate Repository offers an
+Online Search
+for Siemens certificates. To retrieve Certificates directly from the Certificate Repository, it must be set up and configured as LDAP directory in the respective e-mail encryption program.
+Access:
+Siemens
+
+Domain Name:
+cl.siemens.com
+IP-Address:
+194.138.21.32
+Port:
+389
+Search Base:
+o=trustcenter
+PGP certificates in the Certificate Repository:
+The Certificate Repository also contains the Siemens PGP certificates. It can be used with all PGP clients supporting LDAP.
+European Bridge CA:
+Siemens is a member of the
+European Bridge CA
+.
+The European Bridge CA operates a virtual Directory Service. Certificates of participants from different companies can be called up via this Directory Service.
+To use the Bridge-CA Repository it must be set up and configured as an LDAP directory the respective e-mail encryption program:
+Access:
+EBCA
+
+Domain Name:
+dir.ebca.de
+IP-Address:
+81.16.50.37
+Port:
+389
+Search Base:
+o=ebca

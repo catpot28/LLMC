@@ -1,0 +1,183 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/remote-mcp-connector-2-min-hang-then-stream-failed-placeholder-error-cors-failure-on-restricted-feature-loader-chunk-pro-web-jp-region-2026-05-08/5106
+page path  : /t/remote-mcp-connector-2-min-hang-then-stream-failed-placeholder-error-cors-failure-on-restricted-feature-loader-chunk-pro-web-jp-region-2026-05-08/5106
+captured   : 2026-06-16 11:45:20 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_remote-mcp-connector-2-min-hang-then-stream-failed-placeholder-error-cors-failure-on-restricte__80cc85da.html.gz
+========================================================================
+
+Remote MCP Connector: ~2 min hang then STREAM_FAILED_PLACEHOLDER_ERROR + CORS failure on restricted-feature-loader chunk (Pro web, JP region, 2026-05-08) - Bug Reports - Perplexity API Platform Forum
+
+Remote MCP Connector: ~2 min hang then STREAM_FAILED_PLACEHOLDER_ERROR + CORS failure on restricted-feature-loader chunk (Pro web, JP region, 2026-05-08) - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Remote MCP Connector: ~2 min hang then STREAM_FAILED_PLACEHOLDER_ERROR + CORS failure on restricted-feature-loader chunk (Pro web, JP region, 2026-05-08)
+
+Bug Reports
+
+chat-completions
+
+Juliusz_Fedyk
+
+May 10, 2026, 6:30pm
+
+1
+
+Platform:
+Perplexity Pro, Desktop Web (Chrome), JP region
+
+Date/Time:
+2026-05-08 ~14:15 JST
+
+Connector:
+mcp.workjournal.pro (remote MCP, OAuth-authenticated)
+
+What Happened
+
+Prompting “try listing my journals from workjournal” triggered a tool call that hung for ~2 min 6 s, then collapsed to a red “Sorry, something went wrong” banner. Re-adding the connector multiple times did not help.
+
+Browser Console Errors
+
+1. CORS failure:
+The
+restricted-feature-loader
+JS chunk (from
+pplx-next-static-public.perplexity.ai
+) was redirected through
+perplexity-ai.cloudflareaccess.com
+. The OPTIONS preflight returned no
+Access-Control-Allow-Origin
+header, so the script never loaded.
+
+2. Stream failure:
+
+PplxStreamError
+type=
+STREAM_FAILED_PLACEHOLDER_ERROR
+,
+errorCode=unknown
+
+Request IDs
+
+Request ID:
+f0d26f8e-958a-4efe-bd79-825b46bc21a9
+
+Backend UUID:
+22c0ef96-7f17-48f6-9081-6fb350879c90
+
+MCP Server Verified Healthy (not the issue)
+
+discovery: 200 in 274ms
+
+unauthenticated POST: 401 in 486ms
+
+openid-config: 200 in 683ms
+
+JWKS: 200 in 203ms
+
+Same connector works on Grok, ChatGPT, Claude Desktop, and workjournal CLI
+
+Hypothesis
+
+The
+restricted-feature-loader
+chunk is inadvertently gated behind Perplexity’s Cloudflare Access policy. Browsers never send cookies with OPTIONS preflights, so the chunk fails to load silently, breaking MCP stream rendering even when the backend responds successfully. After ~2 min the pplx-stream layer times out and shows the generic error. This aligns with a Warn-level Perplexity Website+API incident recorded by StatusGator on May 8, 2026.
+
+Research thread with full details
+
+https://www.perplexity.ai/search/when-you-read-this-from-a-work-pCxX._nyQfuMJ1Y7yA7o_w
+
+Alex_Romanov
+
+May 10, 2026, 6:37pm
+
+2
+
+Thanks for the thorough report,
+@Juliusz_Fedyk
+! Please make the thread ‘shareable’, too, so the team can look into this.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+401 Authorization Required Response in API
+
+Bug Reports
+
+sonar-pro
+
+4
+
+582
+
+February 2, 2026
+
+Custom MCP connector fails with 'did not return a client_secret' for RFC 7591-compliant public-client registrations
+
+Bug Reports
+
+chat-completions
+
+5
+
+154
+
+June 12, 2026
+
+API Permission denied problem
+
+Bug Reports
+
+search-api
+
+0
+
+48
+
+October 10, 2025
+
+Perplexity in openrouter chat
+
+General
+
+sonar-pro
+
+2
+
+183
+
+February 20, 2026
+
+Notion Connector stops working mid-session — "no API access" error, model selector disappears in UI
+
+Bug Reports
+
+sonar-pro
+
+0
+
+7
+
+June 12, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

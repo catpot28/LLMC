@@ -1,0 +1,510 @@
+=== SOURCE =============================================================
+company    : fairphone (fairphone)
+url        : https://www.fairphone.com/stories/heres-why-we-love-open-source-buildable-code-at-fairphone
+page path  : /stories/heres-why-we-love-open-source-buildable-code-at-fairphone
+captured   : 2026-04-15 12:59:01 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/fairphone/www.fairphone.com_stories_heres-why-we-love-open-source-buildable-code-at-fairphone__1d914290.html.gz
+========================================================================
+
+We're big fans of open-source buildable code at Fairphone.
+
+We're big fans of open-source buildable code at Fairphone.
+
+Shopping from the USA? We don't ship there directly yet, but you can buy from
+our official USA partners
+.
+
+Shop
+
+About
+
+Fairphone Stories
+
+Keep Club
+
+Business
+
+Support
+
+0
+
+en
+
+Smartphones
+
+Android™
+
+The Fairphone (Gen. 6)
+
+/e/OS
+
+The Fairphone (Gen. 6) /e/OS
+
+Family-friendly smartphones
+
+Trade in your old device
+
+Shop smartphone accessories
+
+Buy in a store
+
+Audio
+
+Fairbuds XL
+
+Fairbuds
+
+Shop audio accessories
+
+Accessories
+
+Cables
+
+Chargers
+
+Cases
+
+Screen protectors
+
+All accessories
+
+Spare parts
+
+All parts
+
+More about spare parts
+
+The Fairphone (Gen. 6)
+
+Discover more
+
+About
+
+About us
+
+Our impact
+
+Support
+
+Getting started with Fairphone
+
+Register your warranty
+
+Easy repairs
+
+Check or change an order
+
+Customer support
+
+Returns policy
+
+Shipping
+
+Contact us
+
+Repairs made easy
+
+Repair your device
+
+The Fairphone (Gen. 6)
+
+Discover more
+
+Smartphones
+
+Audio
+
+Accessories
+
+Spare Parts
+
+Gift card
+
+All products
+
+Smartphones for kids
+
+About
+
+Keep Club
+
+Business
+
+Support
+
+English (US)
+
+Smartphones
+
+Android™
+
+The Fairphone (Gen. 6)
+
+/e/OS
+
+The Fairphone (Gen. 6) /e/OS
+
+All smartphones
+
+Trade in your old device
+
+Shop smartphone accessories
+
+Buy in a store
+
+Audio
+
+Fairbuds XL
+
+Fairbuds
+
+All audio devices
+
+Shop audio accessories
+
+Buy in a store
+
+Support
+
+Getting started with Fairphone
+
+Register your warranty
+
+Easy repairs
+
+Check or change an order
+
+Customer support
+
+Returns policy
+
+Shipping
+
+Contact us
+
+Set your country and language
+
+Select your country
+
+Austria
+
+Belgium
+
+Bulgaria
+
+Croatia
+
+Czech Republic
+
+Denmark
+
+Estonia
+
+Finland
+
+France
+
+Germany
+
+Greece
+
+Hungary
+
+Ireland
+
+Italy
+
+Latvia
+
+Liechtenstein
+
+Lithuania
+
+Luxembourg
+
+Monaco
+
+Netherlands
+
+Norway
+
+Poland
+
+Portugal
+
+Romania
+
+San Marino
+
+Slovakia
+
+Slovenia
+
+Spain
+
+Sweden
+
+Switzerland
+
+United Kingdom
+
+United States
+
+Select to continue
+
+The country and valuta has changed
+
+The valuta has changed while you have items in your cart.
+
+Select your language
+
+Dutch / Nederlands
+
+English (US)
+
+French / Français
+
+German / Deutsch
+
+Select to continue
+
+SAVE SETTINGS
+
+Cancel
+
+How would you like to complete your order?
+
+Quickly checkout as a guest. You will have the chance to create an account later.
+
+Checkout as guest
+
+Or
+
+Login
+
+your e-mail
+
+This is not a valid email address
+
+Password
+
+This is not a valid email address
+
+login
+
+Back to stories
+
+Agnes Crepet
+
+Head of Software Engineering
+
+04 December 2025
+
+5
+min read
+
+Share this article
+
+Here's why we love open-source buildable code at Fairphone.
+
+If you have heard about Fairphone, chances are that you have already heard about Fairphone’s award-winning modular design that is easily repairable, and more sustainable in the long run. This approach is the physical embodiment of what our founder, Bas Van Abel, famously declared a decade ago:
+
+“
+If you can’t open it, you don’t own it.”
+
+However, it’s not just the hardware that we believe should be easily accessible to the end user. The software side of things should be, too, especially for people who like to code. From what we have seen, there are not a lot of brands currently who offer the necessary resources for smartphone users to develop and run their own custom Android builds on their devices. One is
+Sony
+, who lets you play with their Xperia devices. Another one, we are happy to report, is Fairphone.
+Why buildable code remains a unique offering
+Compared to iOS, Android, at its core, is open-source. It’s in the name of the publicly available, modifiable source code for the Android operating system—AOSP, or Android Open Source Project.
+However…
+In practice, running a fully functional version of Android on any device requires a lot of proprietary software from various component vendors, including the chipset manufacturer. On top of this, you also have Google’s own proprietary services that have been taken into account. The primary technical challenge is maintaining long-term software compatibility, as the open-source AOSP components must reliably communicate with various vendor-supplied, possibly pre-compiled or binary, components, which need to be adjusted when the operating system is updated.
+How we do things at Fairphone
+We publicly publish the Linux kernel device tree sources alongside GPL-licensed kernel sources, after seeking explicit approval from the chipset manufacturer for the same. This device tree provides a description of the hardware for the kernel, which is essential for the kernel to communicate with the phone’s hardware correctly. This practice, along with
+publishing our schematics
+, is beneficial for the open-source ecosystem and the Linux community, providing valuable information and a better understanding of how the hardware works. It also helps to bring up Linux on new hardware faster and easier.
+Our work-around for closed-source proprietary code that we cannot publish is to prepare proprietary software packages or ‘Blobs’ that people can combine with the open source code. Without this, device functionality can be severely impacted. It’s important to note that this is an ongoing process, where we need to ensure both the open source code and the blobs are updated on a regular basis. We have set up our processes in such a way that open sourcing is an integral part of our release process. It’s not just a one-time activity for a device launch.
+As you can see, extra efforts have to be undertaken to separate open source code and proprietary code, so that fully functionally bootable device images can be compiled and generated.
+So why do we do it?
+Given our company’s DNA and what we stand for as a brand, it makes perfect sense. We are fully committed to open source, and offering buildable code is integral to that commitment. Open sourcing our software brings visibility into how our software works, so users know what happens under the hood. It also allows users to collaborate with us on the software side of things. Our team gets input from the community on how to extend software support for devices they manage. This can accelerate our development cycle, potentially reduce internal development effort, and empower our users (as well as our employees) to feel a stronger sense of ownership and loyalty to the product and brand.
+Google’s recent decision to omit Pixel device trees and compress the Pixel kernel source history has made our work in this area even more important. Going forward, Fairphone devices can be used as potential “reference devices” for open-source ROMs. This ensures that developers and hobbyists can continue to build and flash their own custom Android versions, contributing to the longevity and open-source ecosystem of Fairphone devices.
+We’re proud to report that after a lot of hard work and dedication from our software team, the open source code for the Fairphone 5 and the Fairphone (Gen. 6) is now in excellent condition for building, just like the Fairphone 3 and 4. Try flashing these newly compiled images onto your Fairphone devices if you are so inclined, and use the code to build your own OS.
+We are also open-sourcing the Fairphone Moments feature on the new Fairphone. By handing the source code for the dedicated side-switch over to our developer community, we’re offering everyone the ultimate power to customize the physical button. It’s more than giving you a feature, it’s about giving you the factory itself. Because that’s true ownership. With your help, we’re supercharging both device longevity and extended support, ensuring your device stays stable secure and stable long after its release.
+THE FAIRPHONE (GEN. 6)
+|
+FAIRPHONE 5
+|
+FAIRPHONE MOMENTS
+Interested in learning more about all things open-source and Fairphone?
+Head over to our forum.
+
+Share this article
+
+Latest stories
+
+Celebrating seven years of the Fairphone 3
+
+It’s a bittersweet moment at Fairphone. On one hand, we’re officially retiring the Fairphone 3 and 3+. And while we
+
+Read more
+
+We just released the industry’s first ever nature report.
+
+Like it or not, capitalism and nature are deeply linked. Think about it. Over half of the world’s GDP depends
+
+Read more
+
+This is how we're supporting refugee communities around the world.
+
+In case you missed it, Fairphone has teamed up with the non-profit KLABU, who are driving positive impact through the
+
+Read more
+
+Stay connected
+
+Unlock exclusive deals, fresh stories and your shot to make a difference.
+
+Your e-mail
+
+Error state
+
+Yes, I would like to receive recurring e-mails from Fairphone. I can update my preferences, choose my favourite topics, or withdraw permission at any time. I can find more information in Fairphone’s
+
+Privacy Policy
+.
+
+SUBSCRIBE
+
+You're almost there! Confirm your newsletter subscription.
+
+Didn't receive an email? Check your spam folder.
+
+Excellent
+
+19,596
+
+reviews
+
+on
+
+Certification Notice
+
+Fairphone Newsletter
+
+Stay up to date with the latest news and stories from Fairphone.
+
+You're almost there! Please confirm newsletter subscription.
+
+Didn't receive the email? Please check your spam folder.
+
+your e-mail address
+
+Yes, I would like to receive recurring e-mails from Fairphone. I can update my preferences, choose my favourite topics, or withdraw permission at any time. I can find more information in Fairphone’s Privacy Policy.
+
+sign up
+
+Products
+
+The Fairphone (Gen. 6)
+
+The Fairphone (Gen. 6) with /e/os
+
+Fairbuds
+
+Fairbuds XL
+
+Spare Parts
+
+Accessories
+
+Gift Card
+
+Where to Buy
+
+services
+
+Re-use and Recycle Program
+
+Keep Club
+
+Refer a Friend
+
+Getting Started
+
+business
+
+Business Solutions
+
+Fairphone Business Resellers
+
+Android Enterprise
+
+Become a Sales Partner
+
+Professional Repairs
+
+Business Partner Program
+
+FairphonE
+
+About Us
+
+Stories
+
+Impact Report
+
+Careers
+
+Forum
+
+Press
+
+Software Longevity
+
+Open Source
+
+Fairphone x Murena
+
+Investor Relations
+
+Impressum
+
+support
+
+Customer Support
+
+Manage your Order
+
+Repair Tutorials
+
+Contact
+
+Return Policy
+
+Shipping
+
+Warranty
+
+Register Your Warranty
+
+Connect
+
+Terms & Conditions
+
+Privacy & Cookie Policy
+
+Impressum
+
+Cookie settings
+
+Legal
+
+Fairphone B.V. – Van Diemenstraat 200, 1013 CP Amsterdam, The Netherlands | VAT: 851904270B01 | KvK: 55901964 |
+
+Support contact
+
+© Fairphone 2026
+
+×
+
+View Cart

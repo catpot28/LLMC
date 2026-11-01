@@ -1,0 +1,1215 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/create-card
+page path  : /docs/business/create-card
+captured   : 2026-01-15 14:48:38 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_create-card__782deeba.html.gz
+========================================================================
+
+Create a card | Revolut Docs
+
+Create a card | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Introduction
+Retrieve a list of cards
+Create a card
+Retrieve card details
+Update card settings
+Update card contacts
+Update card references
+Terminate a card
+Freeze a card
+Unfreeze a card
+Lock a card
+Unlock a card
+Retrieve sensitive card details
+Card invitations
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Simulations
+Team members
+Transactions
+Transfers
+Webhooks
+Cards
+Create a card
+Create a card
+
+Create a new
+team member card
+,
+company card
+, or
+auto-issued card
+.
+
+When using the API, you can create only virtual cards.
+To create a physical card, use the
+Revolut Business app
+.
+
+Note
+
+This feature is not available in Sandbox.
+
+To use the Cards API, please contact
+Revolut API Support
+.
+
+For more information, see the guides:
+Manage cards
+.
+
+Request
+​
+Card to create
+Request body
+Body
+
+object
+Expand
+request_id
+string
+required
+Possible length:
+
+<= 40 characters
+A unique ID of the request that you provide.
+
+There is no strict requirement on the format of this ID, but we suggest using v4 UUIDs.
+
+Caution
+This ID is used to prevent duplicate card creation requests in case of a lost connection or client error, so make sure you use the same
+request_id
+for requests related to the same card.
+The deduplication is limited to 24 hours counting from the first request using a given ID.
+For more information, see the guides:
+Manage cards - Idempotency
+.
+holder_id
+string(uuid)
+The ID of the team member to assign as the holder of the card.
+
+Tip
+To retrieve a team member's ID, use the
+GET /team-members
+operation
+.
+
+For virtual cards (
+virtual=true
+), this field is optional.
+
+If not provided, the type of the issued card depends on
+contact_ids
+:
+
+contact_ids
+provided →
+company card
+
+contact_ids
+not specified →
+auto-issued card
+
+contact_ids
+array of strings(uuid)
+Possible number of items:
+
+non-empty
+and
+<= 5 items
+The list of
+contacts
+for the card.
+Up to 5 team members sharing the card, much like co-holders.
+Can be
+edited
+.
+
+Allowed only for
+company cards
+(
+virtual=true
+,
+holder_id
+not specified).
+product
+object
+The card product offered by the card provider for this card.
+In other words, the program that the card is issued under.
+
+Provided only for virtual cards with no holder ID (
+virtual=true
+, and
+holder_id
+not specified):
+
+Required
+for
+auto-issued cards
+(
+contact_ids
+not specified)
+
+Optional for
+company cards
+(
+contact_ids
+specified)
+
+Not allowed for
+team member cards
+(
+holder_id
+present).
+
+Note
+This property is only available to travel intermediaries using our travel solution.
+To use it, please contact
+Revolut API Support
+.
+code
+string
+required
+Example:
+
+"MBJ"
+The code of the card product.
+virtual
+boolean
+required
+Possible values:
+[
+true
+]
+Specifies the type of the card.
+Must be set to
+true
+, as with the API, you can create only virtual cards.
+
+Tip
+To create a physical card, use the
+Revolut Business app
+.
+label
+string
+Possible length:
+
+<= 30 characters
+The label for the issued card, displayed in the UI to help distinguish between cards.
+If not specified, no label will be added.
+references
+array of objects
+unique items
+Possible number of items:
+
+non-empty
+and
+<= 5 items
+,
+unique
+
+Example:
+
+[{"name":"PNR","value":"RT12345"},{"name":"Traveller","value":"John Smith"}]
+References for the card.
+Up to 5 name-value pairs assigned to the card for tracking.
+
+Info
+Each time the card is used, the references are recorded in the
+transaction details
+(
+card.references
+), helping track transactions made with this card.
+
+The names must be unique.
+The references can be
+amended
+up to 10 times.
+
+References are only supported for cards owned by the business (i.e.
+company
+or
+auto-issued cards
+).
+They are
+not
+supported for
+team member cards
+(i.e. with
+holder_id
+present).
+
+Note
+The references recorded on a transaction are those assigned to the card at the time the transaction took place.
+If the references are amended, they will only be applied to future transactions.
+Existing transaction are not affected.
+name
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The name of the card reference.
+Must be unique.
+value
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The value for this reference.
+spending_limits
+object
+Example:
+
+{"single":{"amount":200.22,"currency":"GBP"},"week":{"amount":200.44,"currency":"GBP"}}
+All spending limits set for the card.
+
+You can have at most 1 periodic (day/week/month/quarter/all-time) and 1 non-periodic (single transaction) limit at a time.
+If you try to specify 2 periodic limits at a time, it will result in an error.
+single
+object
+The limit for a single transaction.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+day
+object
+The daily limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+week
+object
+The weekly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+month
+object
+The monthly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+quarter
+object
+The quarterly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+year
+object
+The yearly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+all_time
+object
+The all-time limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+spending_period
+object
+The controls for the card's spending period.
+
+They let you set the dates when the card becomes available or unavailable for spending, and define what happens after the end date.
+
+If specified, you must provide at least one of these:
+
+start_date
+
+end_date
+together with
+end_date_action
+
+The dates provided must be in the future.
+start_date
+string(date)
+Example:
+
+"2025-09-26"
+The start date (inclusive) of the spending period, in
+ISO 8601
+format (
+YYYY-MM-DD
+).
+Uses the
+timezone set by the business
+, or defaults to
+Europe/London
+.
+end_date
+string(date)
+Example:
+
+"2030-12-31"
+The end date (inclusive) of the spending period, in
+ISO 8601
+format (
+YYYY-MM-DD
+).
+Uses the
+timezone set by the business
+, or defaults to
+Europe/London
+.
+end_date_action
+string
+Possible values:
+[
+lock
+,
+terminate
+]
+The action to take after the end date of the spending period.
+categories
+array of strings
+Possible values:
+[
+health
+,
+general
+,
+services
+,
+airlines
+,
+transport
+,
+accommodation
+,
+utilities
+,
+shopping
+,
+financial
+,
+furniture
+,
+hardware
+,
+groceries
+,
+fuel
+,
+entertainment
+,
+software
+,
+restaurants
+,
+advertising
+,
+cash
+,
+education
+,
+government
+]
+The list of merchant categories to be available for card spending.
+If not specified, all categories will be allowed.
+
+Note
+The
+categories
+and
+merchant_controls
+parameters have the following restrictions:
+
+If you set
+categories
+, you
+cannot
+set
+merchant_controls.control_type
+to
+allow
+.
+
+You
+can
+set
+merchant_controls.control_type
+to
+block
+.
+
+You may also set
+either
+
+categories
+or
+merchant_controls
+independently, or
+set neither
+.
+
+Both parameters can be used together
+only
+if
+merchant_controls.control_type
+is
+block
+.
+
+merchant_controls
+object
+The merchant-level controls for card spending.
+
+They let you block or allow the card to only transact with specific merchants:
+
+allow
+: permits only the specified merchants (cannot be used if the
+categories
+parameter is set).
+
+block
+: blocks the specified merchants (can be used with or without
+categories
+).
+
+control_type
+string
+required
+Possible values:
+[
+block
+,
+allow
+]
+The type of control to apply.
+merchant_ids
+array of strings(uuid)
+required
+Possible number of items:
+
+non-empty
+and
+<= 20 items
+The list of IDs of merchants to which the control applies.
+
+Tip
+To find merchant IDs, check transaction details (→
+merchant.id
+).
+You can fetch transaction details for a
+specific transaction
+or for
+all transactions
+.
+countries
+array of strings
+Pattern:
+Value must match regular expression
+^[A-Z]{2}$
+
+Example:
+
+"GB"
+Restricts card use to specified countries, provided as 2-letter
+ISO 3166
+codes.
+accounts
+array of strings(uuid)
+The list of accounts to link to the card.
+If not specified, all accounts will be linked.
+To retrieve account IDs, use the
+GET /accounts
+operation
+.
+
+Response
+​
+200
+400
+404
+422
+429
+4xx
+Information about the created card
+Response body
+Body
+
+object
+Expand
+id
+string(uuid)
+required
+The ID of the card.
+holder_id
+string(uuid)
+The ID of the team member who is the holder of the card.
+If the card belongs to the business, this will be empty.
+
+For more information, see the guides:
+Manage Cards - Create a virtual card
+.
+contact_ids
+array of strings(uuid)
+unique items
+Possible number of items:
+
+non-empty
+and
+<= 5 items
+,
+unique
+The list of contacts for a
+company card
+.
+created_at
+string(date-time)
+required
+The date and time the card was created in
+ISO 8601
+format.
+updated_at
+string(date-time)
+required
+The date and time the card was last updated in
+ISO 8601
+format.
+product
+object
+The card product offered by the card provider for this card.
+In other words, the program that the card was issued under.
+
+Note
+This property is only available to travel intermediaries using our travel solution.
+To use it, please contact
+Revolut API Support
+.
+code
+string
+required
+The code of the card product.
+virtual
+boolean
+required
+Specifies whether the card is virtual (
+true
+) or physical (
+false
+).
+last_digits
+string
+required
+Pattern:
+Value must match regular expression
+^[0-9]{4}$
+The last 4 digits of the card's PAN.
+expiry
+string(DD/YYYY)
+required
+Pattern:
+Value must match regular expression
+^[0-9]{2}/[0-9]{4}$
+The card expiration date.
+label
+string
+The label of the card.
+references
+array of objects
+unique items
+Possible number of items:
+
+non-empty
+and
+<= 5 items
+,
+unique
+
+Example:
+
+[{"name":"PNR","value":"RT12345"},{"name":"Traveller","value":"John Smith"}]
+References for the card.
+Up to 5 name-value pairs assigned to the card for tracking.
+
+Info
+Each time the card is used, the references are recorded in the
+transaction details
+(
+card.references
+), helping track transactions made with this card.
+
+The names must be unique.
+The references can be
+amended
+up to 10 times.
+
+References are only supported for cards owned by the business (i.e.
+company
+or
+auto-issued cards
+).
+They are
+not
+supported for
+team member cards
+(i.e. with
+holder_id
+present).
+
+Note
+The references recorded on a transaction are those assigned to the card at the time the transaction took place.
+If the references are amended, they will only be applied to future transactions.
+Existing transaction are not affected.
+name
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The name of the card reference.
+Must be unique.
+value
+string
+required
+Possible length:
+
+non-empty
+and
+<= 30 characters
+The value for this reference.
+state
+string
+required
+Possible values:
+[
+created
+,
+pending
+,
+active
+,
+frozen
+,
+locked
+]
+The state that the card is in.
+
+Possible values:
+
+active
+: The card is available for spending.
+Newly created cards typically go into
+active
+unless subject to certain conditions, for example, spending period starting in the future.
+
+frozen
+: The card has been frozen and is temporarily unavailable for spending.
+
+locked
+: The card is locked, typically due to an
+admin lock
+or spending period settings, i.e. when its
+spending_period.start_date
+is in the future or
+spending_period.end_date
+is in the past.
+A locked card is unavailable for spending until it's
+unlocked
+and active.
+
+Tip
+To see if the card can be unlocked, check the
+can_be_unlocked
+parameter.
+Note that you'll still need the
+necessary scope or permission
+to unlock it.
+
+created
+: The card has been created but is not yet active.
+Used only for a specific type of cards.
+
+pending
+: This status is currently not in use.
+
+can_be_unlocked
+boolean
+Returned for locked cards (
+state=locked
+).
+Indicates whether the card can be
+unlocked
+manually (via API or in-app).
+If
+true
+, you'll still need the
+necessary scope or permission
+to unlock the card.
+
+Info
+Cards can be locked for various reasons.
+For example, a card can be locked by the user, due to spending period settings, or automatically by the system.
+Only certain types of lock can be lifted manually.
+spending_limits
+object
+Example:
+
+{"single":{"amount":200.22,"currency":"GBP"},"week":{"amount":200.44,"currency":"GBP"}}
+All spending limits set for the card.
+single
+object
+The limit for a single transaction.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+day
+object
+The daily limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+week
+object
+The weekly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+month
+object
+The monthly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+quarter
+object
+The quarterly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+year
+object
+The yearly limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+all_time
+object
+The all-time limit for transactions.
+amount
+number(double)
+required
+The value of the spending limit.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+The currency of the spending limit, provided as
+ISO 4217
+code in upper case.
+spending_period
+object
+The controls for the card's spending period.
+
+They specify the dates when the card becomes available or unavailable for spending, and define what happens after the end date.
+start_date
+string(date)
+Example:
+
+"2025-09-26"
+The start date (inclusive) of the spending period, in
+ISO 8601
+format (
+YYYY-MM-DD
+).
+Uses the
+timezone set by the business
+, or defaults to
+Europe/London
+.
+end_date
+string(date)
+Example:
+
+"2030-12-31"
+The end date (inclusive) of the spending period, in
+ISO 8601
+format (
+YYYY-MM-DD
+).
+Uses the
+timezone set by the business
+, or defaults to
+Europe/London
+.
+end_date_action
+string
+Possible values:
+[
+lock
+,
+terminate
+]
+The action to take after the end date of the spending period.
+categories
+array of strings
+Possible values:
+[
+health
+,
+general
+,
+services
+,
+airlines
+,
+transport
+,
+accommodation
+,
+utilities
+,
+shopping
+,
+financial
+,
+furniture
+,
+hardware
+,
+groceries
+,
+fuel
+,
+entertainment
+,
+software
+,
+restaurants
+,
+advertising
+,
+cash
+,
+education
+,
+government
+]
+The list of merchant categories that are available for card spending.
+
+If this parameter is not specified, categories are not restricted.
+merchant_controls
+object
+The merchant-level controls for card spending.
+
+They block or allow the card to only transact with specific merchants:
+
+allow
+: permits only the specified merchants (cannot be used if the
+categories
+parameter is set)
+
+block
+: blocks the specified merchants (can be used with or without
+categories
+)
+
+control_type
+string
+required
+Possible values:
+[
+block
+,
+allow
+]
+The type of control to apply.
+merchant_ids
+array of strings(uuid)
+required
+Possible number of items:
+
+non-empty
+and
+<= 20 items
+The list of IDs of merchants to which the control applies.
+
+Tip
+To find merchant IDs, check transaction details (→
+merchant.id
+).
+You can fetch transaction details for a
+specific transaction
+or for
+all transactions
+.
+countries
+array of strings
+Pattern:
+Value must match regular expression
+^[A-Z]{2}$
+
+Example:
+
+"GB"
+The list of countries where the card can be used, specified as 2-letter
+ISO 3166
+codes.
+accounts
+array of strings(uuid)
+required
+The list of linked accounts.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

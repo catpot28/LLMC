@@ -1,0 +1,346 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/solving-dmarc-mystery-synthesia
+page path  : /post/solving-dmarc-mystery-synthesia
+captured   : 2026-04-22 12:04:00 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/synthesia/www.synthesia.io_post_solving-dmarc-mystery-synthesia__8da403f6.html.gz
+========================================================================
+
+How we solved a DMARC mystery at Synthesia
+
+How we solved a DMARC mystery at Synthesia
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Create account
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Team
+Use Case
+Industry
+Team
+Learning & Development
+Scale skills with multilingual training videos.
+Sales Enablement
+Train your sales reps and help them close more deals.
+Marketing
+Produce branded product videos in minutes.
+Business Operations
+Deliver consistent updates with video templates.
+Knowledge Management
+Turn your knowledge bases into engaging videos.
+IT & Cybersecurity
+Train employees on security and compliance with videos.
+Use case
+Technical Training
+Create engaging technical videos in minutes.
+Compliance Training
+Lower compliance risks with clear training videos.
+Sales Training
+Provide video training tailored to your sales team.
+Employee Development
+Build skills with video training programs.
+SOP
+Turn text-heavy SOPs and documents into videos.
+Product Video
+Create engaging product demos and tutorials in minutes.
+Industry
+Manufacturing
+Turn SOPs and manuals into engaging videos.
+Tech & Software
+Scale internal and customer training with AI.
+Healthcare
+Engage healthcare staff with avatar-led videos.
+Financial services
+Create secure, multilingual compliance training videos.
+Professional Services
+Transform onboarding and policies into quick videos.
+Retail
+Convert PDFs and webinars into mobile videos.
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+AI Ethics
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Blog
+/
+Security
+How we solved a DMARC mystery at Synthesia
+Written by
+Nicolás Barberis
+June 2, 2025
+Create AI videos with 240+ avatars in 160+ languages.
+Try Free AI Video
+Get started for FREE
+In this article
+Text Link
+Security and trust are at the core of what we do at Synthesia. Today, we want to share how this principle is reflected in practice by describing the journey to solve a perplexing issue reported by one of our customers, the root cause of which was both challenging and enlightening.
+The initial report
+A customer reached out to our customer support team with an unusual observation: their DMARC reports showed emails being sent with an envelope from
+synthesia.io
+and a header from
+customer_domain
+. This behavior raised an immediate red flag. They asked if we were inadvertently sending emails through their infrastructure or if a misconfiguration on our side was responsible.
+The customer forwarded to us the AMAZON-SES DMARC report in which it shows how DMARC is failing, as it should. The email is indeed coming from Google and is being authenticated correctly on DKIM and SPF. But when the recipient’s email service evaluates the HEADER_FROM field it detects the inconsistency of
+customer_domain
+and so the failure report.
+The investigation begins
+Our team jumped into action, prioritizing this as a high-severity issue. We began by verifying the integrity of our email setup:
+SPF
+: Checked and validated to ensure authorized senders were properly listed.
+DKIM
+: Confirmed the correct signing of emails.
+DMARC
+: Policies were properly aligned with
+synthesia.io
+settings.
+Everything looked flawless on our side. To add to the mystery, another customer had reported a similar DMARC anomaly before, but we couldn’t replicate the issue in our controlled environment.
+Exhaustive troubleshooting
+Determined to find the root cause, our team left no stone unturned:
+1. Reviewed Settings and Logs:
+No misconfigurations or suspicious patterns.
+We used online tools such as MXToolBox and manually querying the DNS records
+We looked into our Google Workspace logs to try and find any outgoing email that matches that report
+We looked into our CRM stack to check the history of interactions with that user and domain
+Checked our SIEM for alerts or strange patterns
+2. Attempted Spoofing Tests:
+Verified that our infrastructure was not vulnerable to spoofing.
+We created scripts to manually test sending emails specifying different envelope combinations. This was far fetched, but still worth confirming.
+‎
+3. Replicated User Journeys:
+We created accounts, upgraded to paid subscriptions, contacted support via interactive chat, and sent support emails. None of these steps triggered the reported behavior.
+The user journey is how we expect a Synthesia customer to use the platform: landing page, sign in, start using the platform. Then they may contact customer support, create and share videos, create an avatar from a selfie, and way more. In order to replicate that, we signed up with an external email address that is not hosted by Google. For this we used Proton and Zoho-based email addresses: we created an account and contacted support, both with the in-app chat and through email. Everything worked as expected and no email showed the described behavior.
+4. Checked for Open Relays:
+Confirmed that our email systems were securely configured.
+An Open Relay is an email server that would allow a user to send emails specifying a “FROM” field different that a set of specific email domains. In our case our email service only allows for authenticated users to send @sytnehsia.io FROM emails. If it were setup as an Open Relay then it would allow a user to specify the FROM field to another domain, say @
+hotmail.com
+. It should fail on the recipient side assuming that the server settings at
+hotmail.com
+are properly setup and don’t allow our service to send emails for them. But not every email server is properly set up, even in 2025.
+Despite our efforts, the issue remained elusive.
+The breakthrough
+One of our security engineers stumbled upon an article discussing
+Google Groups and DMARC
+. It detailed how Google Groups can forward emails while retaining the original “From” header, causing DMARC checks to fail.
+How Google Groups Handle Email Forwarding and DMARC
+Google Groups manage email forwarding in a unique way, particularly when interacting with DMARC policies. Here’s how the process works:
+Email Delivery to Google Groups:
+Emails sent to a Google Group address are processed through Google’s email infrastructure.
+From Address Rewriting:
+As part of this processing, Google rewrites the “From” address of the incoming email to align with the Google Group’s address. This ensures consistency and avoids potential delivery issues.
+Original Reply-To Address:
+The original sender’s domain is retained in the “Reply-To” header, allowing recipients to easily respond to the original sender if needed.
+SPF and DKIM Authentication:
+Because of the address rewriting, the emails pass Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) authentication checks, ensuring that the forwarded emails are recognized as valid within email authentication protocols.
+This approach enables seamless email delivery and group communication while maintaining authentication compliance for forwarded messages.
+We hypothesized that Google Groups forwarding might be responsible for the anomaly. To test this:
+We wrote a script to analyze all Google Groups within our organization, flagging any groups with external recipients.
+We created a test group with external (non-Google) email addresses.
+When we sent an email to this group, it was forwarded with:
+SPF:
+Valid
+DKIM:
+Valid
+DMARC:
+Failed
+This behavior matched the customer’s report exactly.
+So we knew what’s going on but we still needed to find the actual step or downstream service that is causing this. Lots of other tools do the same, we just confirmed the scenario.
+While identifying the issue was a significant milestone, our investigation wasn’t over. We were now focused on:
+1. Identifying the Downstream System:
+Determining whether tools like Intercom, HubSpot, or other systems interacting with our customers are compounding the problem.
+To do this, we closely looked into the settings and all the email flows related to customer queries and interactions. We found that the original integration of our support email was routed to our support system via a Google Workspace Group, which was creating this DMARC reports.
+After the Google group was identified we changed the integration to use a Google Routing rule instead. This won’t affect email deliverability and the results should be the same from our users’ perspective. Still, we kept an eye to make sure everything was still working as expected.
+And lastly we tested again with our non-google email accounts and found the issue to be correctly fixed.
+2. Auditing Google Groups:
+Ensuring no unnecessary external members are present in our groups.
+Although we keep a close watch on our settings and group configurations, managing Google Workspace groups can be a daunting task. Everything was fine and we didn’t find anything unexpected, but it is always good to double check.
+3. Improving Internal Processes:
+Updating documentation and implementing safeguards to prevent similar issues from recurring.
+Lessons learned
+This incident highlighted several key takeaways:
+Collaboration and persistence are crucial in security investigations.
+Seemingly minor configurations in third-party tools can have significant impact.
+Proactive monitoring and regular audits of email systems can help prevent issues.
+We’re proud of how our team came together to tackle this challenge, and we’re committed to maintaining the highest standards of security for our customers. If you’ve experienced similar issues or have insights to share, we’d love to hear from you!
+Nicolás Barberis
+Nicolás Barberis is an Infosec Trust Operations Manager at Synthesia with experience across tech, telecom, and consulting. He has worked as a consultant, auditor, and project manager, delivering international accreditations.
+Go to author's profile
+Get started
+Make videos with AI avatars in 160+ languages
+Try out our AI Video Generator
+Create a free AI video
+
+No items found.
+
+No items found.
+
+You might also like
+View all posts
+No items found.
+Synthesia
+Synthesia accelerates global expansion as enterprise contracts triple
+Synthesia
+KnowBe4 and Synthesia Transform Cybersecurity Training with AI Video
+Synthesia
+Scaling Avatars adoption responsibly with our new Avatar Governance Framework and Policy Template
+As more companies create avatars of their employees, including of senior executives, there's a gap in the market for policies covering how those likenesses are generated, used, or retired. Today, we are publishing two resources to address this need, which we hope will form the basis for a stronger governance framework for digital replicas.
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Training Videos
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Ethics Guidelines
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+VIDEO TEMPLATE
+VIDEO TITLE
+Create video from template
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create a free AI Video

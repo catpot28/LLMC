@@ -1,0 +1,217 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/introducing-pplx-embed-state-of-the-art-embedding-models-for-web-scale-retrieval/4732
+page path  : /t/introducing-pplx-embed-state-of-the-art-embedding-models-for-web-scale-retrieval/4732
+captured   : 2026-04-12 12:52:21 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_introducing-pplx-embed-state-of-the-art-embedding-models-for-web-scale-retrieval_4732__ffa295e9.html.gz
+========================================================================
+
+Introducing pplx-embed — State-of-the-Art Embedding Models for Web-Scale Retrieval - Announcements - Perplexity API Platform Forum
+
+Introducing pplx-embed — State-of-the-Art Embedding Models for Web-Scale Retrieval - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Introducing pplx-embed — State-of-the-Art Embedding Models for Web-Scale Retrieval
+
+Announcements
+
+Kesku
+
+February 26, 2026, 10:00am
+
+1
+
+We’re releasing two embedding model families today:
+pplx-embed-v1
+and
+pplx-embed-context-v1
+.
+
+These are built specifically for real-world, web-scale retrieval — the same kind of retrieval that powers Perplexity search. Open weights under MIT license on
+Hugging Face
+, and available now via the API.
+
+Models
+
+Model
+
+Dimensions
+
+Price ($/1M tokens)
+
+Best For
+
+pplx-embed-v1-0.6b
+
+1024
+
+$0.004
+
+Cost-efficient semantic search
+
+pplx-embed-v1-4b
+
+2560
+
+$0.030
+
+High-accuracy retrieval
+
+pplx-embed-context-v1-0.6b
+
+1024
+
+$0.008
+
+RAG with passage disambiguation
+
+pplx-embed-context-v1-4b
+
+2560
+
+$0.050
+
+Production RAG pipelines
+
+Standard Embeddings
+
+from perplexity import Perplexity
+
+client = Perplexity()
+response = client.embeddings.create(
+model="pplx-embed-v1-4b",
+input=["Hello world", "Another text"]
+)
+print(response.data[0].embedding)
+
+Contextualized Embeddings (for RAG)
+
+The
+pplx-embed-context
+models disambiguate passages using surrounding document context — meaning chunks that share ambiguous terms get distinct embeddings based on their actual meaning in context.
+
+response = client.embeddings.create(
+model="pplx-embed-context-v1-4b",
+input=[
+["Doc A chunk 1", "Doc A chunk 2"],
+["Doc B chunk 1", "Doc B chunk 2"]
+]
+)
+
+Technical Highlights
+
+Built on diffusion-pretrained Qwen3 architecture with bidirectional attention
+
+No instruction prefix required — just pass your text
+
+MRL dimension reduction, INT8/BINARY quantization supported
+
+32K token context window
+
+81.96% on ConTEB benchmark
+(vs Voyage voyage-context-3 at 79.45%)
+
+Get Started
+
+Embeddings Quickstart
+
+API Reference
+
+Contextualized Embeddings Reference
+
+Research Paper
+
+Open Weights on Hugging Face
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+On-Premise Embedding API Support for Retrieval-Augmented Generation (RAG) Workflows
+
+Feature Requests
+
+sonar
+
+0
+
+190
+
+July 24, 2025
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows
+
+Announcements
+
+0
+
+4
+
+March 11, 2026
+
+OpenClaw now supports the Perplexity Search API natively 🔍
+
+Announcements
+
+search-api
+
+0
+
+21
+
+April 1, 2026
+
+Where can i find the price of perplexity API CHAT models (not online)?
+
+Bug Reports
+
+1
+
+122
+
+May 15, 2025
+
+Introducing the Perplexity Search API 🚀
+
+Announcements
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+,
+
+python-sdk
+
+1
+
+1008
+
+September 25, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

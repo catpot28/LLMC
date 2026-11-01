@@ -1,0 +1,790 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/agent-that-writes-its-own-tools/
+page path  : /blog/agent-that-writes-its-own-tools/
+captured   : 2026-06-10 06:27:32 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_agent-that-writes-its-own-tools__9c4e7b14.html.gz
+========================================================================
+
+Build an agent that writes its own tools | DataRobot Blog
+
+Build an agent that writes its own tools | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Build an agent that writes its own tools
+
+The third post from Build Club, our weekly live build session. The companion GitHub repo can be found
+here
+, docs
+here
+and you can try the agent live in the
+hosted playground
+.
+
+Your agent framework is not the bottleneck. The bottleneck is that every new external system your agent needs to talk to requires another tool wrapper, another MCP server, another item in a registry that is always two steps behind the API it wraps.
+
+The conventional model is “agent plus curated tool registry.” It scales linearly with the number of integrations your agent has to do, and the curation is permanent work. You ship a wrapper. The vendor changes their endpoint. The wrapper drifts. The agent gets stuck. You ship another wrapper.
+
+There is a pattern emerging in production that inverts this approach. The new model is “agent plus secure sandbox plus raw API specs.” The tools are not pre-built. The agent writes them on the fly, using the spec as its only reference, runs them in a boundary you trust, and discards the ones that turn out to be wrong. The framework’s job is not to provide tools. The framework’s job is to make tool-authoring safe.
+
+Luke Shulman, Director of Agent Innovation at DataRobot, walked through this pattern in a recent Build Club session.
+
+The audience picked the problem:
+CODEOWNERS
+hygiene in the DataRobot monorepo. Every monorepo of meaningful age accumulates this kind of drift as teams reorganize, get renamed, or get absorbed. Files end up annotated with aliases that no longer point anywhere. The cleanup is mechanical, tedious, and a good first target for an agent. A member of the platform team surfaced it as the build target: scan the repo, find files owned by teams that no longer exist, propose reassignments, open the PR.
+
+Luke built it live, in an hour, on a modest 35B-parameter model. He did not pre-build a single tool. The agent wrote them.
+
+This post is the recipe.
+
+What an Natural Language agent does
+
+Luke’s NL agent authoring its first tool against the GitHub OpenAPI spec.
+
+Luke calls this pattern a Natural language (NL) agent, also referred to as a
+context-agent
+.
+
+The framing matters because it inverts where your engineering effort goes. In the conventional setup, you spend your time on the tool registry. In an NL agent, you spend your time on the sandbox.
+
+The agent runs in a Deno-based JavaScript VM with a restricted directory, a restricted network allowlist, and a restricted set of environment variables. JavaScript is the right execution surface for this because the entire browser ecosystem is built on running untrusted JavaScript safely. Deno tightens that further with explicit permissions for file, network, and environment access.
+
+The agent gets eight tools to start:
+cat, find, grep, tree, write, search-and-replace, mkdir,
+and
+execute_code
+. Everything else, the agent has to author itself. The
+execute_code
+tool is the unlock. The agent reads a markdown system prompt, reads any reference docs in its directory, and starts writing JavaScript functions to talk to the external system. It tries them. It fixes them when they fail. The functions it keeps get saved as a tools.js file in the working directory. The next time the agent loads, those tools are already there.
+
+The asymmetry is favorable. Setup is short. The infrastructure is small. The agent does the integration work itself against a spec that is, by definition, more complete than any wrapper anyone was going to maintain. You do not have to be ahead of the agent’s needs. The spec already is.
+
+Building a self-building agent
+
+Everything below assumes you have the NL agent runtime (open-sourced at
+github.com/kindofluke/context-agent
+) and a
+DataRobot account
+. If you would rather see the pattern before you build, the
+hosted playground
+runs the agent live in your browser against a sample knowledge base.
+
+Step 1: Set up the directory and sandbox
+
+Create a fresh working directory. This is the only place the agent can read or write. Configure the Deno sandbox to allow only .js and .md file types within that directory. Configure the network allowlist to permit only the domains you want the agent to hit. For this build, that meant api.github.com and nothing else.
+
+This is the load-bearing step. If you give an agent the ability to write code without a safe place to run it, you get either a refusal-prone agent or a security incident. The framework’s value is the sandbox, not the agent loop.
+
+Step 2: Drop in the OpenAPI spec as context
+
+Download the
+GitHub OpenAPI spec
+and put it in the agent’s directory as github-openapi.yaml. Do not write a wrapper. Do not pre-author tools. The spec is all the context the agent needs.
+
+Overview of the agent’s directory and context during the build.
+
+This is the move that gets the most pushback and is the most important. The conventional instinct is to write a thin client around the API and hand the agent the client. The NL pattern is to hand the agent the spec and let it write its own thin client, only for the endpoints it actually ends up needing. Most wrappers cover surface area that never gets used.
+
+Step 3: Generate a fine-grained token as a prefixed env var
+
+Generate a GitHub fine-grained personal access token scoped to
+Contents: read
+and
+Pull requests: write
+for the target repo. Minimum required scope, nothing more.
+
+The NL runtime exposes environment variables to the agent only when they carry a specific prefix (NL_ in Luke’s setup). Anything without the prefix is invisible to the agent. This is how you stop it from accidentally reading credentials it has no business reading. Set
+NL_GITHUB_TOKEN=<your_pat>
+and the agent will pick it up. Anything else in your shell stays out of reach.
+
+Step 4: Give the agent a small, scoped first task
+
+In the chat interface, tell the agent what it has access to and ask it to confirm connectivity. The first thing it will do is author a probe tool, five or ten lines of JavaScript that hits the rate-limit endpoint. When that works, give it the real task: “find every file in the monorepo owned by @datarobot/cloud-operations in the
+DR_CODEOWNERS
+file.”
+
+The agent’s first move was to author a tool it named
+getCodeownersFiles
+. About twenty lines. It walked the repo via the GitHub API, parsed
+CODEOWNERS
+patterns, and returned a list.
+
+It ran the tool, got back the list, and then, without being asked, wrote a second tool to persist the list as a
+cloud-ops-inventory.txt
+file in its directory. The agent figured out on its own that a file makes a perfectly good working memory. The tools-as-emergent-memory pattern fell out of the runtime without anyone designing for it.
+
+Step 5: Add a scope-discipline system prompt
+
+The agent’s default behavior is to do too much. Before you let it propose changes to the repo, give it a system prompt that draws a hard line around what it can modify:
+
+The
+CODEOWNERS
+guidelines only update
+CODEOWNERS
+references. Do not modify real running code. Only open PRs. Be safe.
+
+That sentence stops the agent from “helpfully” refactoring code while it is in the file. Scope discipline matters more than capability when you are handing an agent write access to a production repo. From there, the agent worked through the inventory file by file, proposing reassignments where the git history made the new owner obvious and flagging the rest for human review. The PR-creation step stayed in the loop with a human reviewer, which is the right answer for a first pass.
+
+Step 6: Lock the agent into read-only mode
+
+Once the agent has authored the tools that work, flip the runtime into read-only mode. The agent can still call its existing tools, read files, and execute the JavaScript it already wrote. It cannot write new tools. It cannot rewrite its system prompt. The agent is now an artifact.
+
+The tools.js and the markdown system prompt are the entire deliverable. Drop them into the DataRobot registry and workshop as a custom model, and you have a deployable, governed agent with a fully visible code surface. The exploration phase needs write access. The production phase does not.
+
+What this Build Club session taught us
+
+The session was scheduled as a wild card. It turned into the cleanest internal argument we have had about what an agent platform should ship. Three takeaways.
+
+Context is what you ship.
+A complete, well-structured spec for an external API outperforms a hand-rolled tool wrapped around the same API, because the spec preserves optionality the wrapper has already discarded. The implication is uncomfortable for product teams: the highest-leverage thing you can ship for the agentic era is not a new SDK or a new tool registry. It is excellent, copy-as-markdown documentation. The “copy page as markdown” button some open source projects have started adding is not a UX flourish. It is a deliberate concession to the fact that the reader is, increasingly, an agent. Make your docs loadable. Publish your OpenAPI specs. Keep them current. The agents will take it from there.
+
+The sandbox is the unlock, not the loop.
+Most agent frameworks compete on orchestration, memory, and planning. The thing that decides whether the NL pattern is shippable is none of those. It is whether you can give the agent a place to execute code that you actually trust. Deno’s permission model does most of the work here. Restricted file types, restricted directories, restricted network egress, prefixed env vars. None of it is exotic. All of it has to be in place before the agent loop matters.
+
+Best-in-class context beats best-in-class frameworks.
+The agents that work in production are not the ones with the most elaborate orchestration. They are the ones with the cleanest, most loadable, most agent-friendly documentation around them. Every minute spent on better markdown is worth ten minutes spent on a more sophisticated agent framework. Most teams have the priorities inverted, and the cost shows up as agents that look impressive in demos and fall over in deployment.
+
+The implication for the DataRobot platform is direct. The registry and workshop already host custom models. The natural next step is a custom-model workflow that needs only a tools.js and a markdown system prompt, with the NL runtime providing the sandbox underneath. No environment configuration. The agent assembles what it needs from a spec you point it at, runs it inside a boundary your security team has already signed off on, and ships as a frozen artifact when it works.
+
+Try it yourself
+
+Build Club runs weekly. Each session takes one volunteer driver, one hour, and an idea voted on by the audience. The format is deliberately unrehearsed: we build live, the build breaks live, and we fix it live. If you are building on DataRobot or thinking about enterprise-ready agents and want inspiration, this is the series for it.
+
+Get started
+
+NL agent runtime (open source):
+github.com/kindofluke/context-agent
+
+DataRobot recipe wrapper for deploying it:
+github.com/amberb617/recipe-context-agent
+
+Try the agent live:
+hosted playground
+
+Concept site and further reading:
+agents.earlgreys.tech
+
+DataRobot’s Official GitHub:
+datarobot-oss/datarobot-agent-skills
+
+Part one of this series:
+https://www.datarobot.com/blog/agent-build-club/
+
+Join the conversation in the
+DataRobot Slack community
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to build a digital twin agent (with guardrails)
+
+Read More
+
+June 2, 2026
+
+|
+7 min read
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Authors
+
+by
+
+Amber Bennoui
+
+,
+
+Luke Shulman
+
+June 4, 2026
+
+|
+8 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Practitioners
+
+Industry-standard LLM benchmarks in DataRobot
+
+May 27, 2026
+
+|
+8 min read
+
+Read More
+
+Inside the Product
+
+A practical guide for platform teams managing shared AI deployments
+
+May 22, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to build a digital twin agent (with guardrails)
+
+Read More
+
+June 2, 2026
+
+|
+7 min read
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

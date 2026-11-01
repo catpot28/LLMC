@@ -1,0 +1,152 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/multi-ticker-batching-support-for-financial-research/3604
+page path  : /t/multi-ticker-batching-support-for-financial-research/3604
+captured   : 2026-02-07 06:48:08 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_multi-ticker-batching-support-for-financial-research_3604__ece16880.html.gz
+========================================================================
+
+Multi‑ticker / batching support for financial research - Feature Requests - Perplexity API Platform Forum
+
+Multi‑ticker / batching support for financial research - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Multi‑ticker / batching support for financial research
+
+Feature Requests
+
+sonar
+,
+
+search-api
+
+Anton_8FIGURES
+
+January 20, 2026, 6:20pm
+
+1
+
+Feature Request
+
+Better support for
+batching / multi‑entity
+queries (e.g., multiple financial tickers) in the Perplexity API, so we can efficiently run many similar research tasks without hitting rate limits so quickly.
+
+Problem Statement
+
+Our production system uses the Perplexity (Sonar) API to generate brief research summaries for >1000 stock tickers.
+
+Currently, we have to send one request per ticker (>1000 calls per refresh), which hits rate limits and creates a major performance bottleneck.
+
+Proposed Solution
+
+Provide first‑class support or clear best practices for multi‑entity queries, such as:
+
+A way to pass a list of entities (tickers) and receive clearly segmented per‑ticker results.
+
+Or documented, recommended batch sizes and patterns (e.g., N tickers per request) with examples and structured output (e.g., JSON array of per‑ticker summaries).
+
+API Impact
+
+Affects:
+chat completions
+for web‑search‑enabled models (e.g., Sonar Pro / Deep Research).
+
+May require: Either a new optional parameter for entity lists, or official guidance + examples on how to safely batch multiple entities in a single prompt.
+
+Alternatives Considered
+
+One call per ticker with throttling: hits rate limits and is slow at our scale.
+
+Stuffing many tickers into one prompt: responses become shallow, sometimes truncated, and hard to parse per symbol.
+
+Additional Context
+
+Universe: >1000 tickers; goal is concise, up‑to‑date qualitative summaries, not raw price data.
+
+We’d also appreciate any guidance on appropriate rate‑limit tiers or enterprise options for this kind of workload.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+279
+
+June 1, 2025
+
+Pereplexity Deep Research Report Cut-Off Midway
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+3
+
+114
+
+October 22, 2025
+
+Cost Information Now Included in API Response JSON!
+
+Announcements
+
+0
+
+210
+
+August 1, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+79
+
+November 3, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+67
+
+December 18, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

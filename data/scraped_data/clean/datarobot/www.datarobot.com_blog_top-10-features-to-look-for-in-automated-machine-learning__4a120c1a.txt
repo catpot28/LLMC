@@ -1,0 +1,736 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/top-10-features-to-look-for-in-automated-machine-learning/
+page path  : /blog/top-10-features-to-look-for-in-automated-machine-learning/
+captured   : 2026-05-17 15:19:57 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_top-10-features-to-look-for-in-automated-machine-learning__4a120c1a.html.gz
+========================================================================
+
+Top 10 Features to Look for in Automated Machine Learning | DataRobot Blog
+
+Top 10 Features to Look for in Automated Machine Learning | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Top 10 Features to Look for in Automated Machine Learning
+
+Following best practices when building machine learning models is a time-consuming yet important process. There are so many things to do ranging from: preparing the data, selecting and training algorithms, understanding how the algorithm is making decisions, all the way down to deploying models to production. I like to think of the machine learning design and maintenance process as being comprised of ten steps (see the diagram above).
+
+But, if I want to save time, increase accuracy, and reduce risk, I don’t manually go through the entire machine learning process in order to build my machine learning models. Instead, I turn to automated machine learning, using clever software that knows how to automate the repetitive and mundane steps, and freeing me up to do what humans are best at: communication, applying common sense, and being creative. And, to get the most out of automated machine learning, I want it to automate each and every one of the 10 steps (see diagram above). So, here’s my guide to what to look for in an automated machine learning system.
+
+Step 1: Preprocessing of Data
+
+A data mining technique that involves transforming raw data into an understandable format.
+
+Each algorithm works differently and has different data requirements. For example, some algorithms need numeric features to be normalized, and some do not. Then there’s the complication of text, which needs to be split into words and phrases, and in some languages, such as Japanese, that’s really difficult!
+
+Look for an automated machine learning platform that knows how to best prepare data for each different algorithm, recognizes and prepares text, and follows best practice for data partitioning.
+
+Step 2: Feature Engineering
+
+Feature engineering is the process of altering the data to help machine learning algorithms work better, which is often time-consuming and expensive. While some feature engineering requires domain knowledge of the data and business rules, most feature engineering is generic.
+
+Look for an automated machine learning platform that can automatically engineer new features from existing numeric, categorical, and text features. You will want a system that knows which algorithms benefit from extra feature engineering and which don’t, and only generates features that make sense given the data characteristics.
+
+Step 3: Diverse Algorithms
+
+Every dataset contains unique information that reflects the individual events and characteristics of a business. Due to the variety of situations and conditions, one algorithm cannot successfully solve every possible business problem or dataset. Because of this, we need access to a diverse repository of algorithms to test against our data, in order to find the best one for our particular data.
+
+Look for an automated machine learning platform that has dozens, or even hundreds of algorithms. Ask how often new algorithms are added.
+
+Step 4: Algorithm Selection
+
+Having hundreds of algorithms available at your fingertips is great, but unless you are more patient than I am, you don’t have time to try each and every one of those algorithms on your data. Some algorithms aren’t suited to your data, some are not suited to your data sizes, and some are extremely unlikely to work well on your data.
+
+Look for an automated machine learning platform that knows which algorithms make sense for your data and runs only those. That way you will get better algorithms, faster.
+
+See DataRobot AI Platform in Action
+
+Step 5: Training and Tuning
+
+It’s quite standard for machine learning software to train the algorithm on your data. After all, you wouldn’t want to manually do Newton-Raphson iteration would you? Probably not. But, often there’s still the hyperparameter tuning to worry about. Then you want to do feature selection, to improve both the speed and accuracy of a model.
+
+Look for an automated machine learning platform that uses smart hyperparameter tuning, not just brute force, and knows the most important hyperparameters to tune for each algorithm. Check whether the platform knows which features to include and which to leave out, and which feature selection method works best for different algorithms.
+
+Step 6: Ensembling
+
+In data science jargon, teams of algorithms are called “ensembles” or “blenders.” Each algorithm’s strengths balance out the weaknesses of another. Ensemble models typically outperform individual algorithms because of their diversity.
+
+Look for an automated machine learning platform that finds the optimal algorithms to blend together, includes a diverse range of algorithms, and tunes the weighting of the algorithms within each blender.
+
+Step 7: Head-to-Head Model Competitions
+
+You won’t know in advance which algorithm performs best on your data. So, you need to compare the accuracy and speed of different algorithms on your data, regardless of which programming language or machine learning library they came from. You can think of it as being like a competition amongst the models, where the best model wins!
+
+Look for an automated machine learning platform that builds and trains dozens of algorithms, compares the results, and ranks the best algorithms based on your needs. The platform should compare accuracy, speed, and individual predictions.
+
+Step 8: Human-Friendly Insights
+
+Albert Einstein once said, “
+If you can’t explain it simply, you don’t understand it well enough
+.” Over the past few years machine learning and artificial intelligence have made massive strides forward in predictive power, but at the price of complexity. It is not enough for a machine learning solution to score well on only accuracy and speed. You also have to trust the answers it is giving. In regulated industries, you have to justify the model to the regulator. And in marketing, you need to align the marketing message with the audience the model has chosen.
+
+Look for an automated machine learning platform that explains model decisions in a human-interpretable manner. The platform should show which features are most important for each model and show the patterns fitted for each feature. Ask whether the platform can provide worked examples, including the key reasons why a prediction is either high or low. Check whether the platform automatically writes detailed model documentation, and how well that documentation complies with your regulator’s requirements.
+
+Step 9: Easy Deployment
+
+A
+recent Harvard Business Review article
+described a team of analysts that built an impressive predictive model, using the latest in machine learning algorithms. But, the business lacked the infrastructure needed to directly implement the trained model in a production setting, and the model was “too complex for the IT team to reproduce”.
+
+Look for an automated machine learning platform that offers easy deployment, including one-click deploy, that can be operated by a business person. Ask how many deployment options are available, whether models can be deployed on your standard system hardware, and whether the platform pre-tests exported scoring code to ensure it generates the same answers as in training. Also, check whether the vendor has a large technical support team located all around the world that can provide data science and engineering support 24 hours per day.
+
+Step 10: Model Monitoring and Management
+
+In a constantly changing world, your
+AI applications
+need to keep up to date with the latest trends. Look for an automated machine learning platform that proactively identifies when a model’s performance is deteriorating over time, making it easy to compare predictions to actual results, simplifying the task of training a new model on the latest data.
+
+Demo
+
+Book a demo with our experts
+
+Learn how your team can develop, deliver, and govern AI apps and AI agents with DataRobot.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+Colin Priest
+
+January 25, 2019
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

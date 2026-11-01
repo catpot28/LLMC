@@ -1,0 +1,533 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/build-responsible-genai-applications-with-the-raft-framework
+page path  : /stories/blog/build-responsible-genai-applications-with-the-raft-framework
+captured   : 2026-04-14 06:29:53 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_build-responsible-genai-applications-with-the-raft-framework__a5af777a.html.gz
+========================================================================
+
+Build Responsible GenAI Applications With the RAFT Framework
+
+Build Responsible GenAI Applications With the RAFT Framework
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Build Responsible GenAI Applications With the RAFT Framework
+
+Jul 8, 2025
+
+6 min read
+
+/
+
+Triveni Gandhi
+
+Recent excitement around GenAI (in particular LLMs) means organizations are pushing forward with the use of AI at an unprecedented pace. There has arguably never been a more pivotal time in the history of AI.
+
+At the same time, it’s important to stay grounded. The truth is that flaws within AI systems and the data they are built on can present — and have presented, even before the rise of GenAI — real risks. More than ever before, organizations need to think about building AI systems in a responsible and governed manner.
+
+Here, we dive into those aforementioned risks plus introduce the RAFT (Reliable, Accountable, Fair, and Transparent) framework for responsible AI, showing how it can be applied to both traditional
+and
+GenAI systems.
+
+Understanding Values for Responsible AI
+
+Whether your business is scaling the use of AI across the organization, interested in experimenting with the latest developments in GenAI, or simply looking to make sense of forthcoming regulation, it’s important to have a set of guardrails defined for the use of AI at your organization.
+
+Various standards organizations and governments have proposed frameworks for AI values — see Table 1. These are a good starting point, but in the next section, we’ll take it one step further with a more specific, robust, and tested framework.
+
+Table 1: Mapping of AI RMF Taxonomy to AI Policy Documents
+
+The RAFT Framework for Responsible AI
+
+To support the scale of safe AI, Dataiku offers a number of built-in features for responsible design, deployment, and governance. These features align with a value framework similar to those proposed in Table 1, which any organization can use as a starting point for their own responsible AI programs.
+
+These values make up Dataiku’s baseline approach to responsible AI — we call it RAFT for Reliable, Accountable, Fair, and Transparent. The values outlined in the RAFT framework are crucial for the development of AI and analytics, and they cover both traditional and new methods in GenAI.
+
+To effectively execute on these principles requires understanding the potential risks and impacts of technology. Our understanding of the risks and necessary steps to reduce potential harm from AI is meant as a starting point for organizations looking to build best practices in governed and responsible AI. In addition to building best practices, these guidelines can support organizations in their readiness efforts toward upcoming regulations, such as the EU AI Act.
+
+As the field of AI continuously evolves, so do our approaches to safe and scaled uses of new technology. We encourage readers to take the suggestions and recommendations here and adapt and expand them as needed per industry and regulatory standards.
+
+Risks to Using GenAI in the Enterprise
+
+AI systems are inherently socio-technical, which means
+“they are influenced by societal dynamics and human behavior.”
+Acknowledging the way AI impacts society and vice versa allows us to better anticipate potential negative consequences and proactively reduce or prevent those harms before they occur.
+
+In addition to the socio-technical risks from GenAI, there are also emerging legal considerations around privacy and copyright infringements. Below, we list a number of risks that may arise in the use of GenAI in the enterprise. These risks are common across various types of GenAI technology but will surface in different ways across use cases:
+
+Toxicity: Toxic, obscene, or otherwise inappropriate outputs.
+
+Polarity: Unfair positive or negative attitudes to certain individuals or groups.
+
+Discrimination: Model performance is less robust for certain social groups.
+
+Human-Computer Interactions
+: Over-reliance on the outputs of AI due to perceived sentience or blind trust in an automated system.
+
+Disinformation: Presenting factually incorrect answers or information.
+
+Data Privacy: Input data shared back to 3rd-party model providers and possibly shared as future outputs to non-authorized users.
+
+Model Security: Ability for a user to circumvent security protocols intended to prevent social-technical harms or gain access to unauthorized data.
+
+Copyright Infringements: Redistribution of copyrighted material, presented as original content.
+
+The potential harms listed here are not exclusive to language models, but they are heightened by the use of natural language processing (NLP) techniques to analyze, categorize, or generate text in a variety of business contexts.
+
+Understanding and addressing these risks before implementing an LLM or other GenAI techniques into an AI system is crucial to ensure the responsible and governed use of the latest technology. By thinking through potential harms, designers, developers, and deployers of LLMs can set thresholds for risk and incorporate mitigation strategies in each stage of the AI lifecycle.
+
+Risks of GenAI by Context
+
+Beyond the inherent, high-level risks associated with GenAI technology, businesses should consider the context in which the system will be deployed.
+
+A baseline approach is to assess the use case across two dimensions:
+
+Target of analysis, which focuses on the type of data or documents that the model will make use of to generate output. Corporate or business documents include items as invoices, legal agreements, or system documentation. Individual or personal data can include traditional tabular information about a person’s specific characteristics, as well as call center transcriptions or text written by an end user. Academic or domain-specific texts are typically used in industry research and analysis, such as medical publications, manufacturing research, or legal codes.
+
+Delivery method, which looks at how the output of a model is delivered to end users. In the first instance, the output is shared as a report, recommendation, or suggested actions in response to a single query. This is different from the next category of virtual assistants, chatbots, etc., that respond in a human-like way to end users’ queries. The final category is automated processes, such as sending mass marketing emails or robotic process automation (RPA).
+
+Each category within these two dimensions will carry different risk tradeoffs and strategies to prevent harm to the business, clients, and broader society.
+
+Concerns Based on Expected Audience
+
+One important dimension of GenAI use cases we have not yet covered is the type of audience or expected reach for model outputs. The audience for model outputs are usually business users, consumers, individuals or some combination of both groups.
+
+However, no matter the expected audience for model outputs, there are core criteria that should be met in the deployment of any AI system — these four criteria further the goals of reliability and transparency as detailed in the RAFT principles and support broader trust in AI systems:
+
+Assessing Potential Impacts of AI
+
+Before deploying an AI system — generative or not — it’s important to assess the potential impact on individuals or groups once a solution is in use. While specific impacts or unintended consequences will vary from use case to use case, Dataiku suggests two broad dimensions that can be used to understand impact from a deployed AI system. These impacts and potential risks are based on standards such as the NIST Risk Framework or the EU AI Act and are meant to guide our customers as they implement AI systems.
+
+Depending on the use case, an AI pipeline may have more than one type of model providing output. For example, the
+next best offer
+project uses both a traditional recommendation model
+and
+an LLM to help write the text of an email to a customer.
+
+In such an instance, it is important to assess impact and apply responsible AI principles to
+both
+sets of models in the project. Potential bias or poor performance from a recommendation model will have different impacts than bias or toxicity from a language model.
+
+The risk scoring for unintended consequences is based on two variables:
+
+Whether the risk could materialize as a harm to individuals and groups directly because of the solution’s implementation or indirectly because of some constellation of factors that are difficult to qualify at the time of deployment.
+
+Whether the risk could materialize as a harm immediately or over a longer period of time.
+
+This results in two larger guiding questions about the nature of an AI system:
+
+Q1: Does the output of this project lead to direct impact on individuals or groups?
+
+Q2: Is the impact felt immediately or observed over time?
+
+Putting these two variables together, we qualify the solution’s responsible AI considerations in one of the following categories:
+
+Direct impact on humans, immediately or in the near term. We recommend clients refer to the RAFT framework for guidance and implement continuous monitoring of the solution.
+
+Example:
+Credit Scoring
+
+Direct impact on humans, over time. We recommend clients refer to the RAFT framework for guidance and implement continuous monitoring of the solution.
+
+Example:
+Customer Lifetime Value
+
+Indirect impact on humans, immediately or in the near term. Consider following the RAFT principles, and regularly reassess model impacts to ensure indirect impact on individuals has not become direct.
+
+Example:
+Predictive Maintenance
+
+Indirect impact on humans, over time. No additional responsible AI considerations required.
+
+Example:
+Process Mining
+
+Putting Principles Into Practice
+
+How do we move from defining principles, potential risks, and impacts of AI to implementing best practices and guardrails in the development of AI systems?
+
+Let’s return to the RAFT framework, which provides a baseline set of values for safe AI and that can serve as a starting point for your organization’s own indicators for responsible AI. We encourage the governance, ethics and compliance teams at your organization to adapt the framework to accommodate specific industry requirements, local regulations or additional business values. As with assessing impact, it is necessary to apply the principles from the RAFT framework to all models (both traditional and generative) used in an AI system.
+
+Note: Specific methods to assess and manage the bias of language models or other GenAI are still in development. When building or fine tuning a model, developers should use diverse and representative datasets and check model performance against risks like polarity, toxicity, or other unfair behavior against sensitive groups.
+
+Conclusion: An Evolving World & Ongoing Considerations
+
+It’s only the beginning for GenAI, which means we’re only at the beginning of our understanding of the extent of the opportunity — as well as the risks — it presents.
+
+In addition to the RAFT guidelines for responsible AI,
+Dataiku is proud to offer a comprehensive training on how to implement responsible AI in practice
+. These courses are available for anyone who wishes to gain hands-on experience with measuring bias, building fairer models, and creating compelling reporting on data science pipelines with Dataiku. The training covers core concepts in responsible AI through the lens of classification models, but much of the teachings around bias, explainability and reliability can be applied to GenAI models as well.
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+Agent memory: the missing layer in enterprise AI systems
+
+Context engineering: building AI systems that scale
+
+AI observability: how enterprises control autonomous agents
+
+Agentic workflows guide: definition, patterns, and use cases
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+By the end of 2026, the "AI honeymoon" will be officially concluded. For healthcare and life sciences...
+
+Apr 01, 2026
+
+GenAI & Agents
+
+Agent memory: the missing layer in enterprise AI systems
+
+Ask most people to describe the memory of a large language model and they'll point to the context window, the...
+
+Mar 31, 2026
+
+GenAI & Agents
+
+Context engineering: building AI systems that scale
+
+There's a version of the story where prompt engineering was always just a stepping stone. In 2022 and 2023, a...
+
+Mar 25, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

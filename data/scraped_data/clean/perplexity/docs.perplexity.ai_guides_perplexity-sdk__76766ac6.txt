@@ -1,0 +1,205 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/guides/perplexity-sdk
+page path  : /guides/perplexity-sdk
+captured   : 2026-01-25 03:07:31 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_guides_perplexity-sdk__76766ac6.html.gz
+========================================================================
+
+Quickstart - Perplexity
+
+Quickstart - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Perplexity SDK
+Quickstart
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Getting Started
+Overview
+Pricing
+Perplexity MCP Server
+Perplexity SDK
+Quickstart
+Guides
+Search
+Quickstart
+Best Practices
+Search and Filtering
+Grounded LLM
+Quickstart
+Models
+Pro Search
+Chat Completions SDK
+OpenAI Compatibility
+Prompting & Output Control
+Search & Filtering
+Working with Attachments
+Admin
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Help & Resources
+Changelog
+Get in Touch
+API Roadmap
+Frequently Asked Questions
+System Status
+Privacy & Security
+Perplexity Crawlers
+On this page
+Overview
+Available APIs
+Installation
+Authentication
+Using Environment Variables
+Resources
+Perplexity SDK
+Quickstart
+Copy page
+Learn how to use the official Perplexity SDKs for Python and TypeScript/JavaScript to access the Perplexity APIs with type safety and async support.
+Copy page
+​
+Overview
+
+The official Perplexity SDKs provide convenient access to the Perplexity APIs from Python 3.8+ and Node.js applications. Both SDKs include type definitions for all request parameters and response fields, with both synchronous and asynchronous clients.
+
+​
+Available APIs
+
+Chat Completions
+AI responses with web-grounded knowledge, conversation context, and streaming support.
+Search
+Ranked web search results with filtering, multi-query support, and domain controls.
+
+​
+Installation
+
+Install the SDK for your preferred language:
+
+Python
+TypeScript/JavaScript
+Copy
+Ask AI
+pip
+install
+perplexityai
+
+​
+Authentication
+
+Get your Perplexity API Key
+Navigate to the
+API Keys
+tab in the API Portal and generate a new key.
+Click here
+
+After generating the key, set it as an environment variable in your terminal:
+
+Windows
+
+MacOS/Linux
+Copy
+Ask AI
+setx
+PERPLEXITY_API_KEY
+"your_api_key_here"
+
+Copy
+Ask AI
+export
+PERPLEXITY_API_KEY
+=
+"your_api_key_here"
+
+​
+Using Environment Variables
+
+You can use the environment variable directly:
+
+Python
+TypeScript/JavaScript
+Copy
+Ask AI
+import
+os
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+# Automatically uses PERPLEXITY_API_KEY
+
+Or use
+python-dotenv
+(Python) or
+dotenv
+(Node.js) to load the environment variable from a
+.env
+file:
+
+Python
+TypeScript/JavaScript
+Copy
+Ask AI
+import
+os
+
+from
+dotenv
+import
+load_dotenv
+
+from
+perplexity
+import
+Perplexity
+
+load_dotenv()
+
+client
+=
+Perplexity()
+# Uses PERPLEXITY_API_KEY from .env file
+
+Now you’re ready to start using the Perplexity APIs! Choose your API below for step-by-step usage guides.
+
+Chat Completions
+Get started with AI responses
+Search
+Get started with web search
+
+​
+Resources
+
+Python Package
+Install from PyPI with pip
+Node.js Package
+Install from npm registry
+Was this page helpful?
+Yes
+No
+Perplexity MCP Server
+Previous
+Error Handling
+Next
+⌘
+I
+x
+discord
+website
+Powered by

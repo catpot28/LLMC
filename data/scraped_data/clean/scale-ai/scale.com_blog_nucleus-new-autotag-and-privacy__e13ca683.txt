@@ -1,0 +1,185 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/nucleus-new-autotag-and-privacy
+page path  : /blog/nucleus-new-autotag-and-privacy
+captured   : 2026-04-19 05:13:56 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_nucleus-new-autotag-and-privacy__e13ca683.html.gz
+========================================================================
+
+Nucleus relaunched: making data and model quality even easier. | Scale AI
+
+Nucleus relaunched: making data and model quality even easier. | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Product
+Improving Datasets and Debugging Machine Learning Models with Scale Nucleus, Rebuilt from the Ground Up
+by
+
+The Scale Team
+Published
+September 13, 2021
+Reading Time
+5 min read
+Copy Link
+It’s been an exciting journey since we shipped Scale Nucleus for the first
+time
+just over a year ago
+. We’ve helped over 100 different organizations explore, curate and improve
+their datasets and debug their machine learning (ML) models, across semantic
+segmentation, object detection, and even 3D point clouds. Today, we’re excited
+to share an all-new Nucleus, with powerful new features and a redesigned user
+interface that make it easier than ever to create better models with better
+datasets.
+To improve ML models requires first understanding where they fail. Nucleus
+helps you go beyond aggregate error metrics, and instead quickly discover
+specific patterns of failure across your model predictions and dataset labels.
+Once you’ve identified problems, Nucleus makes them easy to fix. Address bad
+labels through efficient, model-assisted data quality assurance (QA) and
+one-click labeling integration, or improve model predictions through targeted
+data curation of what to label next.
+Scale Nucleus
+is one of the most
+intuitive and efficient ways to select the right data for labeling: random
+sampling shouldn’t be the way you select data to label. Training
+better-performing models requires a focus on edge cases, false positives, and
+the portion of minority classes or edge cases that are relevant to the
+modeling problem you’re trying to solve. And your curation process shouldn’t
+be overly time-intensive or manual.
+As we launched Nucleus, we
+explained
+that
+better ML starts with understanding your data in depth. To improve production
+ML, you need to understand your models’ qualitative failure modes, fix them by
+gathering the right data, and curate diverse scenarios.
+From Similarity Search to Autotag:
+When Scale customers look to improve ML accuracy, they find that their models
+often struggle with minority classes and edge cases, what we refer to as “the
+long tail.” It might be a QA team that highlights challenges with a
+self-driving vehicle, like the relatively rare combination of entering a
+tunnel at nighttime behind a truck. Although this cross-section accounts for
+only a small fraction of driving scenarios, their computer vision models must
+be capable of handling them just as well.
+In the below example, we’ve identified uncertain samples, and using a
+similarity search based on internal models and feature vectors, surfaced
+similar portions of the dataset for labeling or QA. This process culminates in
+our Autotag feature:
+Autotag is an incredibly efficient way to tag similar objects or scenes with
+a new class. Simply select a few similar images of the class you are trying
+to classify or create a tag for, click ‘Autotag,’ and then further refine
+your set of images with positive and negative examples. Scale Nucleus will
+then create an Autotag, an internal classification attached to the subset of
+your dataset that Scale identified as similar. You can then retrieve objects
+in your dataset based on this classification, even if labels for it don’t
+exist in your ground truth.
+The same useful core, with refined usability:
+Nucleus focuses on several main use cases that we’ve developed in
+conjunction with our customers:
+Understand the strengths and weaknesses in your dataset as you identify
+ways to improve quality:
+Using the query bar at top or powerful search options at left , you can
+discover edge cases, debug model failures, and efficiently QA any part or
+your dataset.
+Analyze the long tail of your dataset, with collaborative label edits,
+and granular insights like Intersection over Union (IoU):
+Object view helps you assess all classes, labels, and bounding boxes in your
+dataset and make quick tweaks to a label, approve/reject the object as
+well-labeled, or send the object to be labeled.
+Examine metrics, failure cases, and confusion matrices, all linked to
+your underlying training data.
+The Insights tab provides you with interactive class distributions,
+correlations, and confusion matrices, from which you can access the
+underlying data for each category in one click.
+Scale Nucleus was built with the explicit goal of helping ML teams improve
+their datasets to extract better and better performance out of models
+they’re training on their data. Whether you’re starting out with an
+industry-standard dataset, and then execute transfer learning with the
+addition of proprietary data, or training a model entirely on your own data,
+Nucleus helps you train your model on the data that matters.
+Privacy Mode: using Nucleus without sharing sensitive data
+Several prospective customers asked if they could use Scale Nucleus without
+uploading their training datasets to our cloud. Accordingly, we created
+Privacy Mode in conjunction with our existing API, letting you use Nucleus
+to curate your dataset without sensitive raw data ever leaving your servers
+With Privacy Mode, you can submit URLs to Nucleus that link to raw data
+assets like images or point clouds, instead of transferring that data to
+Scale. These URLs may optionally be protected behind your corporate VPN or
+an IP whitelist. When you load a Nucleus web page, your browser will
+directly fetch the raw data from your servers without it ever being
+accessible to Scale. Privacy Mode even works well with similarity search and
+Autotag, as users can
+create custom model embedding indexes
+for their datasets.
+What customers are saying about Nucleus:
+“KeepTruckin encounters all manners of surprising edge cases in real world
+data collection, so when it comes to knowing we’re labeling the most
+valuable subset of our collected data, we turn to Scale Nucleus. Its
+intuitive visualizations, query engine and Autotag help our teams improve
+both data quality and models, all in the same motion.”
+—Ali Rehan, Engineering Manager AI/Vision Products, KeepTruckin
+Nucleus makes it easy to query data samples based on their metadata, or
+simply bucket images based on “similarity,” specifically along feature
+vectors of a Scale-trained model. For example, if you know your model should
+be detecting police vehicles and it’s not doing so already, you can quickly
+query for a handful of examples, find similar images, and through simple
+positive and negative feedback to Nucleus, identify a subset of your dataset
+to send out for labeling.
+One year in, Scale Nucleus has already come a long way towards building a
+new generation of ML tooling, but we’re just getting started. If you’d like
+to join us in this journey and try Scale Nucleus, sign up
+on our website
+or
+schedule a demo
+.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

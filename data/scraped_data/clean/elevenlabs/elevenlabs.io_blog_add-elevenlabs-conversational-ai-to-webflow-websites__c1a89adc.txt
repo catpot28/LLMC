@@ -1,0 +1,232 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/add-elevenlabs-conversational-ai-to-webflow-websites
+page path  : /blog/add-elevenlabs-conversational-ai-to-webflow-websites
+captured   : 2026-04-15 00:25:31 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_add-elevenlabs-conversational-ai-to-webflow-websites__c1a89adc.html.gz
+========================================================================
+
+Add ElevenLabs Conversational AI to Your Webflow Website
+
+Add ElevenLabs Conversational AI to Your Webflow Website
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Go to app
+Contact sales
+Log in
+Sign up
+Sign up
+Blog
+How to add the ElevenLabs conversational AI widget to your Webflow website
+Last updated
+Apr 7, 2026
+•
+3 minutes reading time
+Add Conversational AI capabilities to your Webflow website.
+On this page
+Introduction
+Before you get started
+Step-by-step guide
+Common issues and troubleshooting
+1. Widget not displaying
+2. Widget misalignment
+3. Errors
+Advanced tips
+Final thoughts
+FAQs
+Learn More
+Contact Sales
+Looking to enhance your customer experience?
+Conversational AI
+can help. By adding ElevenLabs’ Conversational AI to your Webflow website, visitors can have
+natural
+conversations as if they were actually speaking to a member of your team.
+In this guide, we’ll walk you through the process of adding the ElevenLabs Conversational AI widget to your Webflow website, integrating the widget using custom HTML and JavaScript.
+Before you get started
+Before you start, ensure you have the following:
+Webflow account
+: You need an active Core, Growth, Agency, or Freelancer Workspace, or a Site Plan, to access the Embed Element.
+ElevenLabs account
+: Configure your Conversational
+AI voice agent
+in ElevenLabs and copy the provided embed code (which includes < script > and < div > snippets).
+Familiarity with Webflow’s Designer
+: Basic understanding of how to add and edit Embed Elements in Webflow is helpful.
+Step-by-step guide
+Step 1: Prepare your ElevenLabs widget
+Log in to your ElevenLabs account.
+Go to the Conversational AI section.
+Copy the embed code, which includes:
+A < script > snippet for loading the widget’s functionality.
+A < div > snippet to define where the widget will appear on the page.
+Step 2: Add the widget to a Webflow page
+To display the widget on a specific page, use the Embed Element.
+Open your Webflow project in the Designer.
+Navigate to the page where you want the widget to appear.
+From the Elements Panel, drag the Embed Element to your desired location on the page.
+In the Embed Element’s code editor, paste the < div > snippet from the ElevenLabs embed code.
+Click Save & Close to apply the changes.
+Note: The Embed Element acts as a placeholder for your widget in the Designer. The actual widget will only render when the site is published.
+Step 3: Add the script globally
+To ensure the widget functions correctly, you need to include the < script > snippet globally on your site.
+Go to your Webflow Dashboard and open the Project Settings.
+Navigate to the Custom Code tab.
+Paste the < script > snippet into the Footer Code section. This ensures the script is loaded on all pages where the widget is used.
+Click Save Changes.
+Step 4: Publish and test
+Publish your site to Webflow’s staging domain or your custom domain.
+Open your site in a browser to verify the widget appears and functions as expected.
+Important: Custom code does not render in Webflow’s Designer. You must publish your site to see the widget live.
+Common issues and troubleshooting
+Having
+
+trouble setting up the integration? Don't worry—these tips below should help.
+1. Widget not displaying
+Cause
+: Missing or misplaced < script > or < div > snippets.
+Solution
+: Ensure the < script > snippet is in the Footer Code section, and the < div > snippet is correctly placed in an Embed Element.
+2. Widget misalignment
+Cause
+: Incorrect placement or styling of the Embed Element.
+Solution
+: Use Webflow’s Style Panel to adjust the dimensions and alignment of the Embed Element.
+3. Errors
+Cause
+: Conflicts with other scripts or browser restrictions.
+Solution
+: Use the browser’s developer console to identify and fix JavaScript errors.
+Advanced tips
+If you're looking to customize the widget, test on different devices, or reuse the widget on multiple pages, here's what you need to know.
+Customizing the widget
+: Use Webflow’s Style Panel or custom CSS to adjust the widget’s appearance, such as size, alignment, or colors.
+Testing on different devices:
+Use Webflow’s responsive design tools to ensure the widget works seamlessly on desktop, tablet, and mobile devices.
+Reusing the widget
+: Save the Embed Element as a Component if you plan to use the widget on multiple pages. This allows for consistent styling and easier management.
+Final thoughts
+Integrating the ElevenLabs Conversational AI widget into Webflow is straightforward, thanks to the platform’s Embed Element and Custom Code features. Whether you’re looking to enhance engagement on a single page or across your entire site, follow the steps above to get started.
+For further assistance, don’t hesitate to reach out to ElevenLabs
+support
+or explore Webflow’s community forums for additional guidance.
+If you haven’t already,
+sign up
+for ElevenLabs
+AI Agents Platform
+today to kickstart the process.
+FAQs
+Do I need coding experience to add the widget in Webflow?
+No, the process involves copying and pasting the embed code into the appropriate sections of Webflow.
+Why doesn’t the widget appear in the Webflow Designer?
+Custom code does not render in the Designer. Publish your site to view the widget live.
+Can I add multiple widgets to different pages?
+Yes, simply add unique Embed Elements with the appropriate
+snippets for each page.
+Explore articles by the ElevenLabs team
+How to add the ElevenLabs Conversational AI widget to your Framer website
+Date
+Nov 1, 2024
+How to add the ElevenLabs Conversational AI widget to your WordPress website
+Date
+Nov 1, 2024
+Webinar Recap: How AI Is Revolutionizing Learning
+Category
+Product
+Date
+Mar 12, 2026
+Cascaded vs Fused Models: How architecture determines whether your voice agent is enterprise-ready
+Category
+Resources
+Date
+Mar 4, 2026
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+Cookie Settings
+English
+English
+Svenska
+Polski
+Português
+日本語
+한국어
+हिन्दी
+Español
+Français
+Deutsch
+Italiano
+简体中文

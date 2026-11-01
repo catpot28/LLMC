@@ -1,0 +1,138 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/scale-ai-on-image-compression
+page path  : /blog/scale-ai-on-image-compression
+captured   : 2026-04-19 04:38:21 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_scale-ai-on-image-compression__e0d5bbd6.html.gz
+========================================================================
+
+Image Compression: Cloudinary Relies on Scale Technology | Scale AI
+
+Image Compression: Cloudinary Relies on Scale Technology | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Customers
+Guest Post: Cloudinary Uses Scale to Focus on Image Compression
+by
+
+Alexandr Wang
+Published
+August 25, 2017
+Reading Time
+3 min read
+Copy Link
+We recently worked with the team at Cloudinary to help build and evaluate a
+better image compression and quality measurements. The results of Cloudinary’s
+work on Scale were very insightful and we wanted to share it broadly to
+demonstrate how more companies can leverage human judgments to build high
+quality features.
+Without further ado,
+Tal Lev Ami
+, CTO
+of Cloudinary, wanted to write about how they used Scale:
+Here at Cloudinary, we provide a cloud-based tool that enables our users to
+compress images and video for their websites and apps. Our goal is to
+preserve the visual integrity of the content, but deliver the smallest file
+size to any device or browser to ultimately optimize website performance and
+end user satisfaction.
+One of the hallmarks of the Cloudinary solution is the ability to automate
+many functions of image compression, so that developers don’t have to spend
+time tweaking each photo and making multiple copies of different sizes and
+resolutions to fit every possible scenario. Compression algorithms can be
+tricky because they’re trying to make changes that have the smallest visual
+impact, but different images can react differently to compression.
+As we were developing the algorithm for our “q_auto” capabilities — which
+strikes a balance between visual quality and file size — we needed to test
+it to understand how the resulting images compared to the human eye. Enter
+Scale.
+Many image compression formats — like JPEG 2000 and JPEG XR — have been
+tweaked to score well on particular metrics, such as peak signal-to-noise
+ratio (PSNR). But these don’t always correlate with human perception on
+image quality.
+We leveraged Scale to compare pairs of images and give us perspective on
+which image was liked most by humans. With Scale, we did a variety of tests,
+comparing several formats, including WebP, JPEG 2000, JPEG XR (lossy) Lepton
+(MozJPEG, recompressed with Lepton), FLIF, BPG, Daala, and PNG8
+(pngquant+optipng). We also were able to get input on the difference between
+the uncompressed original image vs. a compressed version.
+Scale enabled us to create A/B comparisons that were viewed by human
+observers. We submitted over 4,000 image comparisons to Scale, sending at
+least four independent Scale requests for each pair of image. This resulted
+in at least eight actual human comparisons for each pair of images. The
+outcome of these comparisons were evaluated beside other perceptual metrics
+such as PSNR, Google’s Butteraugli, DSSIM (Structural (Dis)Similarity) and a
+new metric Cloudinary developed called
+SSIMULACRA (Structural SIMilarity Unveiling Local And Compression Related
+Artifacts)
+.
+The results showed that overall, PSNR is “correct” in only 67 percent of the
+cases. Butteraugli gets it right in 80 percent of the cases, and DSSIM in 82
+percent of the cases. Our new metric, SSIMULACRA, agrees with human
+judgments in 87 percent of the cases. Looking just at the high-confidence
+human judgments, we found about 78 percent agreement for PSNR, 91 percent
+for both Butteraugli and DSSIM, and almost 98 percent agreement for
+SSIMULACRA. You can
+read more about SSIMULACRA and these results on the Cloudinary blog
+. Or if you want to give it a try:
+SSIMULACRA is free and open-source software!
+The results of Scale comparisons gave us useful data points to validate our
+metrics and provided more insights into the compression benchmarks we are
+running and the comparison of various image formats. And from these insights
+we were able to improve our visual perception metrics and fine-tune our
+“q_auto” functionality so we know how aggressively we can compress images.
+Through this process we were impressed not only by the useful data points
+derived from the Scale, but also the great support we got from the company
+and the product’s ease-of-use, all which came at a reasonable price.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

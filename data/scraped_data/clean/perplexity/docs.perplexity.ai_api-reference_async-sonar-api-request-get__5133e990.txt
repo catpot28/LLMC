@@ -1,0 +1,747 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/async-sonar-api-request-get
+page path  : /api-reference/async-sonar-api-request-get
+captured   : 2026-04-20 02:51:53 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_async-sonar-api-request-get__5133e990.html.gz
+========================================================================
+
+Get Async Chat Completion - Perplexity
+
+Get Async Chat Completion - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Sonar API
+Get Async Chat Completion
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Get Async Chat Completion
+cURL
+curl
+--request
+GET
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar/{api_request}
+\
+
+--header
+'Authorization: Bearer <token>'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Sonar API
+Get Async Chat Completion
+Copy page
+Retrieve the response for a given asynchronous chat completion request.
+Copy page
+GET
+/
+v1
+/
+async
+/
+sonar
+/
+{api_request}
+Try it
+Get Async Chat Completion
+cURL
+curl
+--request
+GET
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar/{api_request}
+\
+
+--header
+'Authorization: Bearer <token>'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"role"
+:
+"system"
+,
+
+"content"
+:
+"<string>"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Path Parameters
+​
+api_request
+string
+required
+Response
+200
+application/json
+Successful Response
+​
+id
+string
+required
+Unique identifier for the async request
+​
+model
+string
+required
+Model used for the request
+​
+created_at
+integer
+required
+Unix timestamp when the request was created
+​
+status
+enum<string>
+required
+Current processing status of the request
+Available options
+:
+
+CREATED
+,
+
+IN_PROGRESS
+,
+
+COMPLETED
+,
+
+FAILED
+
+​
+started_at
+integer | null
+Unix timestamp when processing started
+​
+completed_at
+integer | null
+Unix timestamp when processing completed
+​
+response
+CompletionResponse · object
+Show
+
+child attributes
+​
+failed_at
+integer | null
+Unix timestamp when the request failed (if applicable)
+​
+error_message
+string | null
+Error message if the request failed
+Was this page helpful?
+Yes
+No
+List Async Chat Completions
+Previous
+Create Embeddings
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

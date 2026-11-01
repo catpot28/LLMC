@@ -1,0 +1,555 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/search-post
+page path  : /api-reference/search-post
+captured   : 2026-06-17 06:20:25 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_search-post__d78d054a.html.gz
+========================================================================
+
+Search the Web - Perplexity
+
+Search the Web - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Search API
+Search the Web
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Analytics API
+GET
+Computer Usage Analytics
+Search the Web
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/search
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"query": "<string>"
+
+}
+
+'
+200
+422
+{
+
+"results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"snippet"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+
+}
+
+],
+
+"id"
+:
+"<string>"
+,
+
+"server_time"
+:
+"<string>"
+
+}
+Search API
+Search the Web
+Copy page
+Search the web and retrieve relevant web page contents.
+Copy page
+POST
+/
+search
+Try it
+Search the Web
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/search
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"query": "<string>"
+
+}
+
+'
+200
+422
+{
+
+"results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"snippet"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+
+}
+
+],
+
+"id"
+:
+"<string>"
+,
+
+"server_time"
+:
+"<string>"
+
+}
+Search API vs. Sonar.
+These are different APIs with different response shapes.
+
+Search API
+— Returns structured JSON
+results[]
+with
+title
+,
+url
+,
+snippet
+,
+date
+, and
+last_updated
+. Call
+https://api.perplexity.ai/search
+directly — no router required.
+
+Sonar
+— Chat completions with built-in web search. Returns a prose answer with citations, not a results array.
+
+Both are first-party Perplexity APIs. Neither routes through OpenRouter.
+
+​
+Response Shape
+
+The Search API returns a ranked
+results[]
+array. Each result includes
+title
+,
+url
+,
+snippet
+, and optional
+date
+and
+last_updated
+fields:
+
+Example Response
+{
+
+"results"
+: [
+
+{
+
+"title"
+:
+"Example Article Title"
+,
+
+"url"
+:
+"https://example.com/article"
+,
+
+"snippet"
+:
+"A short excerpt from the article relevant to the query..."
+,
+
+"date"
+:
+"2025-01-23"
+,
+
+"last_updated"
+:
+"2025-09-25"
+
+},
+
+{
+
+"title"
+:
+"Another Relevant Source"
+,
+
+"url"
+:
+"https://example.org/source"
+,
+
+"snippet"
+:
+"Another excerpt showing the structured result format."
+,
+
+"date"
+:
+"2024-11-15"
+,
+
+"last_updated"
+:
+"2025-08-12"
+
+},
+
+{
+
+"title"
+:
+"Third Result"
+,
+
+"url"
+:
+"https://example.net/page"
+,
+
+"snippet"
+:
+"A third result demonstrating the ranked array structure."
+,
+
+"date"
+:
+"2024-09-10"
+,
+
+"last_updated"
+:
+"2025-07-03"
+
+}
+
+],
+
+"id"
+:
+"e38104d5-6bd7-4d82-bc4e-0a21179d1f77"
+
+}
+
+​
+Direct Call
+
+curl
+-X
+POST
+'https://api.perplexity.ai/search'
+\
+
+-H
+'Authorization: Bearer $PERPLEXITY_API_KEY'
+\
+
+-H
+'Content-Type: application/json'
+\
+
+-d
+'{
+
+"query": "latest AI developments",
+
+"max_results": 3
+
+}'
+|
+jq
+
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+query
+string
+string[]
+string
+string[]
+required
+Search query (required)
+​
+country
+string
+ISO 3166-1 alpha-2 country code
+Required string length:
+2
+​
+max_results
+integer
+default:
+10
+Maximum number of results to return
+Required range
+:
+1 <= x <= 20
+​
+search_context_size
+string
+Controls how much content is extracted from result pages.
+
+low
+— short passages most relevant to the query.
+
+medium
+— a balanced amount of content per document.
+
+high
+(default) — detailed content relevant to the query.
+
+Omit when using
+max_tokens
+or
+max_tokens_per_page
+.
+​
+max_tokens
+integer
+Maximum total webpage content tokens to return across all search results
+Required range
+:
+1 <= x <= 1000000
+​
+max_tokens_per_page
+integer
+Maximum webpage content tokens to extract from each result page
+Required range
+:
+1 <= x <= 1000000
+​
+search_language_filter
+string[]
+ISO 639-1 language codes (2-character max)
+Maximum array length:
+20
+Required string length:
+2
+​
+search_domain_filter
+string[]
+Limit search results to specific domains (max 20)
+Maximum array length:
+20
+Maximum string length:
+253
+​
+last_updated_after_filter
+string
+Return results updated after this date (MM/DD/YYYY)
+​
+last_updated_before_filter
+string
+Return results updated before this date (MM/DD/YYYY)
+​
+search_after_date_filter
+string
+Return results published after this date (MM/DD/YYYY)
+​
+search_before_date_filter
+string
+Return results published before this date (MM/DD/YYYY)
+​
+search_recency_filter
+enum<string>
+Filter by publication recency (hour/day/week/month/year)
+Available options
+:
+
+hour
+,
+
+day
+,
+
+week
+,
+
+month
+,
+
+year
+
+Response
+200
+application/json
+Successful Response
+​
+results
+ApiSearchPage · object[]
+required
+Show
+
+child attributes
+​
+id
+string
+required
+​
+server_time
+string | null
+Was this page helpful?
+Yes
+No
+List Models
+Previous
+Create Chat Completion
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

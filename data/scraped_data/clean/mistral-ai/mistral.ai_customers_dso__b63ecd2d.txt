@@ -1,0 +1,394 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/customers/dso/
+page path  : /customers/dso/
+captured   : 2026-06-11 16:54:16 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_customers_dso__b63ecd2d.html.gz
+========================================================================
+
+DSO National Laboratories and Mistral | Mistral AI
+
+DSO National Laboratories and Mistral | Mistral AI
+
+Contact sales
+
+Menu
+
+Products
+
+Solutions
+
+Models
+
+Developers
+
+Blog
+
+Customers
+
+Company
+
+Contact sales
+
+Start building
+
+Studio
+
+Build, test, and run AI agents and apps.
+
+Forge
+
+Train, align, and evaluate custom AI models.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe for code
+
+Coding agents in the terminal, IDE, and background.
+
+Compute
+
+Frontier-scale infrastructure for training and inference.
+
+Pricing
+
+Plans
+
+API pricing
+
+For enterprises
+
+Services
+
+Delivery methodology
+
+Model customization
+
+Industries
+
+Financial services
+
+Public sector & government
+
+Manufacturing
+
+Use cases
+
+Use case overview
+
+Coding
+
+Document intelligence
+
+Speech
+
+Latest models
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+See all models
+
+Docs
+
+API Reference
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Read all news
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured stories
+
+ASML
+
+CMA CGM
+
+HSBC
+
+BMW
+
+See all
+
+Who we are
+
+About us
+
+Careers
+
+Brand
+
+Connect
+
+Community
+
+Partners
+
+Help center
+
+Products
+Solutions
+Models
+Developers
+Blog
+Customers
+Company
+
+Studio
+
+Build, test, and run AI agents and apps.
+
+Forge
+
+Train, align, and evaluate custom AI models.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe for code
+
+Coding agents in the terminal, IDE, and background.
+
+Compute
+
+Frontier-scale infrastructure for training and inference.
+
+Pricing
+
+Plans
+
+API pricing
+
+For enterprises
+
+Services
+
+Delivery methodology
+
+Model customization
+
+Industries
+
+Financial services
+
+Public sector & government
+
+Manufacturing
+
+Use cases
+
+Use case overview
+
+Coding
+
+Document intelligence
+
+Speech
+
+Latest models
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+See all models
+
+Docs
+
+API Reference
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Read all news
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured stories
+
+ASML
+
+CMA CGM
+
+HSBC
+
+BMW
+
+See all
+
+Who we are
+
+About us
+
+Careers
+
+Brand
+
+Connect
+
+Community
+
+Partners
+
+Help center
+
+Start building
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact sales
+
+Advancing defence AI: How DSO trained a custom MoE model.
+
+Public sector
+
+April 24, 2026
+
+DSO trained a custom MoE model to enhance defense.
+
+Back to Customers
+
+4 min read
+
+Key takeaways:
+Outperformed Llama 3 on Southeast Asian language benchmarks
+Accelerated MoE model development
+Built using Forge, Mistral’s end-to-end system for developing and training custom frontier models
+
+"Partnering with Mistral gave us direct access to frontier expertise in Mixture-of-Experts architecture — helping us accelerate our model development and move from theory to practice far faster than we could have done alone."
+Chieu Hai Leong, Distinguished Member of Technical Staff, DSO National Laboratories
+
+DSO National Laboratories is Singapore's largest defence R&D organisation, employing more than 1,800 engineers and scientists to develop advanced capabilities for the Singapore Armed Forces (SAF). To meet the growing complexity of national security missions, DSO partnered with Mistral to co-develop a Mixture-of-Experts (MoE) large language model optimised for Southeast Asian languages — accelerating DSO's in-house AI capabilities while ensuring secure, on-premise deployment for sensitive defence environments.
+The case for building AI capabilities in-house
+Singapore's defence establishment faces an increasingly complex operational environment where commanders must analyse vast amounts of data under significant time pressure. For DSO's AI research team — led by Chieu Hai Leong, Distinguished Member of Technical Staff heading NLP and LLM research — the goal was clear: build a self-reliant AI capability that could operate independently of any external vendor or supply chain disruption.
+As Chieu Hai explained, "Our strategy has always been to develop the capability to train our own large language models from the ground up. Relying solely on external providers introduces risk — if access to those models is restricted, we need to be in a position to continue our work uninterrupted." DSO's primary user is Singapore's Ministry of Defence, and operational models must be deployable in secure, internet-separated, on-premise environments — a non-negotiable constraint that made building deep in-house expertise not just a priority, but a necessity.
+DSO's team of ~20 scientists had already been building and pre-training their own models, keeping pace with the open-source literature through conferences and research. But mastering the Mixture-of-Experts architecture — the approach DSO believed would define the next generation of LLMs — required working with a team that had already done it at scale.
+Why Mistral — and why Mixture-of-Experts
+Chieu Hai recalled, "We recognised early on that Mixture-of-Experts was where the field was heading. Mistral had already demonstrated real-world success with this architecture, and that track record was exactly what we needed in a collaborator." DSO had begun exploring MoE two years before it became the dominant paradigm across the industry — a reflection of the team's commitment to staying ahead of the curve.
+Under the collaboration, Mistral and DSO co-built a MoE model using Forge. The model was trained on a mixed dataset: Southeast Asian language data sourced via AI Singapore (AISG), combined with Mistral's own training data. Compute was provisioned as GPU-as-a-service from Singtel, with both Mistral's team of four to five engineers and DSO's team of 20 scientists and engineers sharing access to the same infrastructure — enabling close, iterative collaboration without compromising DSO's security requirements.
+Beyond the technical setup, Chieu Hai emphasised that one of the most valuable aspects of the partnership was access to knowledge that simply isn't available in the public domain. "The pace of research in this field means that what gets published often lags behind what actually works in practice," he said. "Collaborating with Mistral gave us a direct line to that knowledge — helping us cut through the noise and focus on approaches that deliver results."
+Results and what comes next
+The collaboration delivered a clear performance outcome: the Mistral-built MoE model outperformed Meta's Llama 3 — the state-of-the-art benchmark at the time — on the Southeast Asian languages most relevant to DSO's mission. The partnership also meaningfully compressed the team's development timeline, with Chieu Hai noting that working with Mistral allowed DSO to solve critical challenges faster than they would have managed independently. As DSTA's Deputy Chief Executive (Information) Ms Gayle Chan noted, the need for this kind of accelerated capability is real: "Effective mission planning requires analysing vast amounts of data — a process that is highly demanding, resource-intensive and constrained by significant time pressure."
+Building on that foundation, DSO and Mistral have since launched a second phase of their partnership. Chieu Hai described the ambition: "Our next challenge is building reasoning models that are not only powerful, but small and efficient enough to run at the edge — on autonomous systems operating in the field. It is an ambitious goal, and one we are confident in pursuing together with Mistral." The work reflects a broader trajectory — from establishing core LLM training capabilities to pushing the boundaries of what AI can do in the most demanding, resource-constrained environments.
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Select language
+
+English
+
+English
+Français
+Italiano

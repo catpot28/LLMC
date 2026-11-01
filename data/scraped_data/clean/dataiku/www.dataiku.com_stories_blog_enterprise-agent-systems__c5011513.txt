@@ -1,0 +1,505 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/enterprise-agent-systems
+page path  : /stories/blog/enterprise-agent-systems
+captured   : 2026-06-12 04:39:41 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_enterprise-agent-systems__c5011513.html.gz
+========================================================================
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+
+Request demo
+
+Start Trial
+
+GenAI & Agents
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+May 29, 2026
+
+10 min read
+
+/
+
+Team Dataiku
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+A single agent is a tool. An enterprise agent system is infrastructure. That distinction determines whether AI scales across the organization or stays trapped in isolated pilots.
+While broad experimentation with AI is already underway, deploying production-grade agent systems is another matter entirely. "Only 15% of IT application leaders said they are currently considering, piloting, or deploying fully autonomous AI agents (goal driven AI tools that do not require human oversight),
+according to a survey by Gartner
+.®"*
+The same survey found that "seventy-five percent of survey respondents said they were piloting, were deploying or had already deployed some form of AI agents into their organization" — meaning the technology is live in most organizations, but true autonomy remains the exception.
+That gap between experimentation and production-grade enterprise agent systems is where most organizations stall. Architecture decisions, governance controls, and deployment sequencing are what determine which agents deliver measurable value and which ones never leave the lab.
+This article provides a full framework for designing, deploying, and governing enterprise agents at scale.
+
+At a glance
+
+Enterprise agent systems coordinate large language models (LLMs), tools, data, and human oversight into governed workflows that execute multi-step business processes.
+
+Architecture must match the task: The AgentArch benchmark, published by ServiceNow researchers in 2025, found that even top models achieve only 35.3% success on complex enterprise tasks, confirming that no single agent template works across all scenarios.
+
+A three-phase deployment roadmap — use case prioritization, data readiness, and controlled rollout — reduces the risk of expanding before agents are ready.
+
+Governance embedded from the start, not bolted on after, is what separates agents that scale from agents that create compliance risk.
+
+What are enterprise agent systems?
+
+Enterprise agent systems are software architectures where
+AI agents
+perceive business contexts, plan sequences of actions, and execute tasks across enterprise data and applications. Unlike standalone AI models that respond to single prompts, these systems maintain persistent memory, use specialized tools, and coordinate with other agents or human operators to complete multi-step business processes.
+
+AI agent vs. AI assistant: key technical and business differences
+
+A financial services chatbot that answers FAQs operates very differently from an agent that monitors portfolio risk, triggers rebalancing workflows, and escalates anomalies to a human analyst. That distinction matters for architecture, governance, and cost decisions before a single line of code is written.
+
+Click on the image above to zoom into full PDF
+
+Choosing between assistants and agents depends on the complexity of the business process, the level of autonomy required, and the governance infrastructure already in place.
+
+What are the four core layers of enterprise agent system architecture?
+
+The
+AgentArch benchmark
+, a 2025 evaluation framework published by ServiceNow researchers, evaluated 18 distinct agentic configurations across enterprise tasks and found that architecture choices produce substantial variation in performance. Even the highest-scoring models achieved only 35.3% success on complex tasks, confirming that one-size-fits-all agent templates underperform across diverse business scenarios.
+Four layers form the foundation of production-grade systems, and a gap in any one of them surfaces as production incidents downstream.
+
+Click on the image above to zoom into full PDF
+
+1. The agent layer: types and capabilities
+
+Production systems typically combine multiple agent types to handle complex business processes. Salesforce AI Research's Enterprise Deep Research (EDR) system, for example, pairs a Master Planning Agent with four specialized search agents (General, Academic, GitHub, and LinkedIn), a Visualization Agent, and a reflection mechanism that detects knowledge gaps and can incorporate human-in-the-loop steering. This pattern reflects a broader finding from AgentArch: Specialized agents outperform generic LLM-only agents on enterprise tasks.
+
+Agent types commonly found in enterprise deployments each serve distinct functions:
+
+Planning agents decompose complex goals into subtasks and sequence them for execution.
+
+Execution agents call APIs, run queries, and trigger downstream workflows.
+
+Evaluation agents assess output quality and flag issues before delivery to human operators.
+
+2. Orchestration and agent communication protocols
+
+Multi-agent systems break down when agents operate in isolation, duplicating work or producing conflicting outputs. Orchestration determines how agents share context, route tasks, and resolve conflicts at runtime, making it an infrastructure concern rather than just an application design choice.
+Emerging Agent Operating System (Agent-OS) blueprints propose a layered substrate that includes a control plane, identity management, telemetry, and policy enforcement. These architectures treat orchestration as infrastructure: a centralized coordination layer that manages agent lifecycles, enforces communication contracts, and maintains low-latency execution.
+At GTC 2026,
+NVIDIA announced BlueField-4 STX
+, a modular reference architecture for accelerated storage designed to address the data access bottlenecks that limit agentic workloads operating across extended sessions and large context windows.
+Dataiku, the Platform for AI Success
+, serves as an orchestration layer that connects ML models, GenAI applications, agents, and business rules across any infrastructure, letting teams coordinate agent workflows alongside existing data pipelines without depending on a single cloud provider.
+
+3. Knowledge and data foundations for enterprise agents
+
+Agents are only as reliable as the data grounding their decisions. Enterprise memory design proposals from 2025 argue for a policy-aware, provenance-first multi-tier memory stack: fast short-term working memory paired with a provenance-indexed long-term store. This design supports long-horizon agents and full auditability across reasoning steps.
+Getting the data layer right also means ensuring proper access controls and lineage tracking before agents touch production data. The AgentArch benchmark confirms that tool integration and memory architecture choices materially affect agent performance across enterprise tasks. Organizations that skip data readiness find their agents producing unreliable outputs, eroding the trust that production deployment requires.
+
+4. The governance and observability layer
+
+Governance architectures that synthesize zero-trust principles, policy-as-code, and telemetry allow organizations to control agent behaviors and score agent risk in production. The NIST (National Institute of Standards and Technology) AI Risk Management Framework provides the foundational U.S. standards reference for structuring these risk-based controls.
+Telemetry and observability determine whether you can answer a simple question: Is this agent doing its job?
+Dataiku Agent Management
+is a standalone product — it does not require the Dataiku platform — that gives teams cross-platform visibility into agent performance. It connects to agents built on any platform, including Microsoft Copilot, AWS Bedrock, Snowflake Cortex, LangChain, ServiceNow, and n8n and evaluates them against business key performance indicators (KPIs) rather than uptime alone.
+
+How to design an enterprise agentic AI system: a three-step framework
+
+Understanding how to design an agentic AI system starts with connecting agent capabilities to measurable business outcomes. The AgentArch benchmark confirms that one-size-fits-all agent templates perform poorly across diverse enterprise tasks, so a structured approach prevents wasted effort and misallocated infrastructure investment.
+
+Step 1: Align agent objectives and KPIs to business outcomes
+
+Define what success looks like before selecting any technology. Map each agent's purpose to a specific business metric: cycle time reduction, error rate, throughput, or cost savings. Agents without clear KPIs become expensive experiments that are difficult to justify when scrutiny increases.
+
+Step 2: Select agent patterns and frameworks
+
+Match orchestration strategy and memory architecture to the task. The choice of agent pattern matters as much as the choice of model.
+Reflex agents follow predefined condition-action rules and suit high-volume, predictable processes where speed and consistency matter more than contextual reasoning. Goal-based agents reason toward an objective and select actions dynamically, making them well-suited for open-ended research, document analysis, and multi-step decision workflows. Utility-based agents optimize for a defined outcome across trade-offs such as cost, latency, and quality, and are commonly used in supply chain and pricing applications.
+When selecting a framework, evaluate options across the criteria in the table below. No single platform fits every enterprise pattern.
+
+Click on the image above to zoom into full PDF
+
+Step 3: Prototype, test, and iterate
+
+Start with a contained pilot. Most organizations require human review steps for agent-generated outputs, particularly in regulated or customer-facing contexts. Build evaluation loops that measure task completion accuracy, latency, and cost per action before expanding scope.
+
+The following checklist covers the minimum viable gates before a pilot expands to production:
+
+Define success criteria for the pilot in measurable terms before the build begins.
+
+Test agents in a sandboxed environment against a representative sample of real inputs.
+
+Run red-team exercises to identify edge cases, prompt injection risks, and failure modes.
+
+Validate that output quality meets the threshold set in Step 1 across at least 100 representative tasks.
+
+Confirm that human-in-the-loop escalation paths are functional and tested end-to-end.
+
+Review cost per action against the business case before approving broader rollout.
+
+Read our
+agentic workflows playbook
+for step-by-step guidance.
+
+Enterprise agent system deployment roadmap: from pilot to scale
+
+According to
+Bain's Technology Report 2025
+, most companies are not yet ready for agentic AI at scale, and capturing full value requires rethinking systems, data, and governance to support scalable, safe agent deployment. A phased deployment roadmap closes the gap between pilot success and production impact.
+
+Phase 1: Use case prioritization
+
+Rank candidate use cases by business value, data readiness, and governance complexity. High-impact, well-scoped processes with clean data pipelines make the best first targets because they offer the fastest path to a credible proof point that earns continued investment.
+Prioritization criteria to apply before committing resources:
+
+Volume:
+Is this process high-frequency enough that automation delivers measurable time savings?
+
+Data quality:
+Is the data feeding this use case clean, governed, and accessible through proper APIs?
+
+Quick return on investment (ROI):
+Can success be measured within two to three months of deployment?
+
+Governance complexity:
+Are the compliance and escalation requirements well-understood before the build begins?
+
+Phase 2: Secure data readiness
+
+Validate that the data feeding your agents is accurate, governed, and accessible through proper APIs before any agent touches production data. Organizations that skip this phase typically discover the gap during rollout, at far higher cost.
+
+Data readiness checklist:
+
+Audit all data sources the agent will access for completeness, accuracy, and freshness.
+
+Establish access controls and role-based permissions at the data layer, not just the application layer.
+
+Set up provenance tracking so every agent decision can be traced to its source data.
+
+Configure retrieval-augmented generation (RAG) pipelines for any unstructured knowledge sources the agent needs.
+
+Validate that data pipelines are monitored and alerting is in place for quality degradation.
+
+Document data lineage for compliance readiness before deployment begins.
+
+Phase 3: Controlled rollout and monitoring
+
+Deploy agents with human-in-the-loop review, telemetry dashboards, and automated alerts. Expand scope only after agents demonstrate consistent performance against defined KPIs. Organizations that attempt a broad rollout without a controlled initial phase routinely find that behavioral drift and data quality issues compound faster than governance can catch up.
+
+Scaling triggers to confirm before expanding:
+
+Task completion accuracy meets the threshold set in the pilot evaluation.
+
+Cost per action is within the range approved in the business case.
+
+Behavioral drift monitoring is active with alert thresholds defined.
+
+Human-in-the-loop escalation volume is within expected bounds.
+
+At least one full audit trail review has been completed by a compliance stakeholder.
+
+Governance, security, and ethics for enterprise agent systems
+
+Scaling enterprise agent systems introduces security risks that traditional IT models were not designed to handle. Identity and continuous authentication represent an emergent risk vector for agents operating autonomously across systems, with credentials that may lack proper scoping or expiration.
+According to Bain's Technology Report 2025, observability, security, governance, and controls must be defined and embedded from the start, not bolted on later, for agentic AI to scale safely across the enterprise.
+The following 10-point governance checklist covers the controls that must be in place before any enterprise agent system reaches production.
+Governance checklist: 10 controls before production
+
+1.
+Risk scoring:
+Assign each agent a risk tier based on autonomy level, data sensitivity, and potential business impact, and apply governance controls proportional to that tier.
+
+2.
+Bias audits:
+Test agent outputs for demographic, linguistic, and domain-specific bias before deployment, particularly for any agent interacting with customers or influencing decisions about people.
+
+3.
+Prompt injection defense:
+Implement input validation and guardrails to prevent malicious inputs from redirecting agent behavior or extracting sensitive data.
+
+4.
+Human-in-the-loop checkpoints:
+Define explicit escalation points where agents must pause and route to a human reviewer before taking irreversible actions.
+
+5.
+Service level agreements (SLAs):
+Set and monitor latency, accuracy, and availability targets for each agent, with automated alerts when thresholds are breached.
+
+6.
+Versioning:
+Version all agent logic, prompts, and tool configurations so changes can be tracked, reviewed, and rolled back.
+
+7.
+Role-based access controls (RBAC):
+Scope agent credentials to the minimum data access required for each task, and review scoping at least quarterly.
+
+8.
+Logging:
+Capture every agent action, tool call, input, and output in immutable logs with sufficient detail to support audit and incident investigation.
+
+9.
+Incident response:
+Define escalation paths, rollback procedures, and communication protocols for agent failures before deployment, not after.
+
+10.
+Compliance alignment:
+Map each agent to the regulatory frameworks that govern its domain (EU AI Act, NIST AI RMF, industry-specific standards) and document compliance evidence.
+
+Dataiku Govern
+provides the registry, monitoring, lineage, cost controls, guardrails, signoffs, and evaluations that make this operationally achievable. Governance in Dataiku is not a compliance module applied at audit time — it is embedded in how things get built, so every agent deployment carries lineage, every action is traceable, and every escalation path is defined before an agent reaches production.
+
+Enterprise agent system use cases and agentic AI tool comparisons
+
+Across financial services, supply chain, and healthcare, agents are handling document processing, demand forecasting, compliance monitoring, and multi-step research tasks. The three domains below represent the highest-volume enterprise deployments today.
+
+Customer service
+
+Agents triage incoming tickets, retrieve account history, resolve routine requests end-to-end, and escalate complex cases to human agents with full context pre-populated. The primary outcome is resolution time reduction and deflection rate improvement. Salesforce Agentforce is the most prominent purpose-built platform in this domain.
+
+Supply chain
+
+Agents monitor inventory levels and supplier signals, flag anomalies against demand forecasts, and trigger reorder or rerouting workflows within defined parameters. The primary outcome is stockout reduction and procurement cycle time compression.
+
+IT operations
+
+Agents monitor infrastructure, correlate alerts across systems, execute remediation scripts for known failure patterns, and generate incident reports with root cause analysis. The primary outcome is mean time to resolution (MTTR) reduction and on-call workload reduction.
+The table below maps these use cases to architecture layers and relevant tool considerations.
+
+Click on the image above to zoom into full PDF
+
+Dataiku Agent Management, launching September 2026
+with early access available now, provides the cross-platform governance layer that the above domains share: visibility into whether agents are delivering business results, not just running without errors. Technical monitoring tells you agents are running. It does not tell you they are doing their jobs.
+For industry-specific examples, see
+5 AI agent use cases to kickstart your team's transformation
+.
+
+Enterprise agent system challenges and mitigation checklist
+
+Every organization deploying agents at scale encounters recurring friction points. A
+Cloudera survey
+of nearly 1,500 enterprise IT leaders found that 96% have plans to expand their use of AI agents in the next 12 months.
+That pace of adoption frequently outstrips readiness, and the challenges below are where that gap shows up most visibly.
+
+Click on the image above to zoom into full PDF
+
+Treating these challenges as deployment prerequisites, rather than afterthoughts, keeps agents on track for production.
+
+What it takes to move from pilot to production
+
+The organizations pulling ahead on agentic AI are not necessarily the ones moving fastest. They are the ones who built the right foundations — clean data, governed deployments, and architecture matched to the work before scaling. That combination is what turns agent investments into compounding institutional capability rather than a growing list of pilots waiting for production approval.
+Most of what separates production-grade systems from stalled experiments comes down to three decisions made early: choosing an architecture that fits the task rather than defaulting to a generic template, deploying in controlled phases with human review and telemetry in place, and embedding governance before the first agent goes live rather than retrofitting it after the fact.
+Dataiku gives teams a single platform to build, deploy, and govern agents alongside ML, GenAI, and analytics. Dataiku Agent Management adds cross-platform visibility to confirm agents are delivering against business KPIs, not just running.
+
+Get started with Dataiku enterprise agent systems
+
+Explore Dataiku Agent Management
+
+FAQs about enterprise agent systems
+
+What does it cost to build an enterprise agent system?
+
+Costs vary based on infrastructure, model licensing, data preparation, and governance requirements. Organizations should budget for compute resources, orchestration tooling, agent monitoring, and cross-functional team time during pilot and rollout phases.
+
+How long does it take to deploy enterprise agent systems at scale?
+
+Most organizations begin with contained pilots lasting three to six months, then expand through phased rollouts. Full-scale deployment timelines depend on data readiness, governance maturity, and the complexity of target business processes.
+
+How do agentic AI systems ensure data privacy and security for organizations?
+
+Production-grade systems use agent-specific scoped credentials, continuous authorization, and zero-trust principles. Policy-as-code enforces data access rules automatically, and telemetry captures every agent action for audit purposes.
+
+How can enterprise AI agents integrate with legacy infrastructure?
+
+API abstraction layers and middleware bridge the gap between modern agent architectures and legacy systems. Agents interact with standardized interfaces while underlying systems remain unchanged, reducing migration risk and preserving existing investments.
+
+How do enterprises measure return on investment (ROI) on agentic AI systems?
+
+Map each agent to specific business KPIs: cycle time reduction, error rate improvements, throughput gains, or cost savings. Compare pre-deployment baselines against post-deployment performance over defined evaluation periods to quantify impact.
+
+*
+Gartner Press Release, Gartner Survey Finds Just 15% of IT Application Leaders Are Considering, Piloting, or Deploying Fully Autonomous AI Agents, September 30, 2025. GARTNER is a trademark of Gartner, Inc. and its affiliates.
+
+Tags
+
+GenAI & Agents
+
+Share
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Enterprise AI transformation: how leading organizations are redesigning operations around AI
+
+I have Snowflake, why do I need Dataiku?
+
+AI decision automation: how enterprises use AI to make faster, more consistent decisions
+
+3 ways Dataiku makes AI agents on Databricks production-ready
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+Enterprise AI transformation: how leading organizations are redesigning operations around AI
+
+Most enterprises have run AI pilots. But few have transformed their operations with AI at scale. What...
+
+Jun 10, 2026
+
+GenAI & Agents
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+A single agent is a tool. An enterprise agent system is infrastructure. That distinction determines whether AI...
+
+May 29, 2026
+
+GenAI & Agents
+
+I have Snowflake, why do I need Dataiku?
+
+Snowflake is an exceptional AI data foundation. It centralizes enterprise data, scales compute elastically,...
+
+May 28, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Blog
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Dataiku Customers
+
+Analyst Recognition
+
+Events Calendar
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Dataiku Partners
+
+Partner with Dataiku
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

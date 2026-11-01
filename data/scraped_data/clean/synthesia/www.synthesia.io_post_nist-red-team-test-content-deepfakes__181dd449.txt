@@ -1,0 +1,332 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/nist-red-team-test-content-deepfakes
+page path  : /post/nist-red-team-test-content-deepfakes
+captured   : 2026-03-08 10:09:55 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/synthesia/www.synthesia.io_post_nist-red-team-test-content-deepfakes__181dd449.html.gz
+========================================================================
+
+Synthesia’s content moderation systems withstand rigorous NIST, Humane Intelligence red team test
+
+Synthesia’s content moderation systems withstand rigorous NIST, Humane Intelligence red team test
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+160+ Languages
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Team
+Use Case
+Industry
+Team
+Learning & Development
+Scale skills with multilingual training videos.
+Sales Enablement
+Train your sales reps and help them close more deals.
+Marketing
+Produce branded product videos in minutes.
+Business Operations
+Deliver consistent updates with video templates.
+Knowledge Management
+Turn your knowledge bases into engaging videos.
+IT & Cybersecurity
+Train employees on security and compliance with videos.
+Use case
+Technical Training
+Create engaging technical videos in minutes.
+Compliance Training
+Lower compliance risks with clear training videos.
+Sales Training
+Provide video training tailored to your sales team.
+Employee Development
+Build skills with video training programs.
+SOP
+Turn text-heavy SOPs and documents into videos.
+Product Video
+Create engaging product demos and tutorials in minutes.
+Industry
+Manufacturing
+Turn SOPs and manuals into engaging videos.
+Tech & Software
+Scale internal and customer training with AI.
+Healthcare
+Engage healthcare staff with avatar-led videos.
+Financial services
+Create secure, multilingual compliance training videos.
+Professional Services
+Transform onboarding and policies into quick videos.
+Retail
+Convert PDFs and webinars into mobile videos.
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+AI Ethics
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Create account
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+Blog
+/
+Synthesia
+Synthesia’s content moderation systems withstand rigorous NIST, Humane Intelligence red team test
+Written by
+Martin Tschammer
+November 28, 2024
+Create AI videos with 240+ avatars in 160+ languages.
+Try Free AI Video
+Get started for FREE
+Text Link
+As Head of Security at Synthesia, I recently traveled to Arlington, Virginia to attend
+CAMLIS
+, a global AI conference focused on information security. But attending the conference was not the only reason for me to be there.
+After months of preparation, I finally got a chance to participate in Synthesia’s first public and in-depth red team test conducted by the
+National Institute of Standards and Technology
+(NIST) in collaboration with Humane Intelligence. During the test, 30 expert security testers challenged and assessed Synthesia’s content moderation capabilities, focusing specifically on preventing the creation of non-consensual deepfakes and harmful content on our platform.
+The red team test was designed in compliance with
+NIST’s AI-600-1 risk management framework
+, a detailed document which defines risks associated with the use of generative AI, and describes actions that organizations can take to measure and manage these risks.
+Humane Intelligence
+, an organization led by
+Dr. Rumman Chowdhury
+, is a tech nonprofit building a community of practice around algorithmic evaluations. The organization is building a no-code, open access evaluation platform open to the public.Humane-intelligence.org is a platform for organizations and individuals to align, create community, share best practices, and have a one-stop shop for creating technical evaluations that help drive benchmarks, standards, and more. They are actively engaged in the development of hands-on, measurable methods of real-time assessments of societal impact of AI model.
+For this event, Humane Intelligence selected the 30 testers through
+a rigorous application process
+, from a pool of approximately 500 phase 1 red teaming participants. Humane Intelligence then
+partnered with four AI model owners
+(Meta, Synthesia, Cisco’s Robust Intelligence, and Anote) to create the testing environment, and developed the methodology to measure and evaluate qualitative findings from this exercise.
+I am pleased to report that Synthesia's platform was very resilient to the red team attacks, underscoring the resilience and effectiveness of our guardrails. Here’s what happened in outside Washington, DC in late October:
+The test scope and methodology
+The Synthesia-specific test was divided into two primary sections, each corresponding to a separate NIST category from the risk management framework mentioned above.
+First, the testers were encouraged to create
+Personal Avatars
+on our platform and test whether they could create non-consensual deepfakes during the avatar creation process. This section of the red team test was mapped to NIST’s
+Human-AI configuration category
+which describes how AI system use can involve varying risks of misconfigurations and poor interactions between a system and a human who is interacting with it.
+The goal was to assess whether Synthesia’s system can accurately differentiate between legitimate requests for Personal Avatars and attempts to create avatars without consent.
+Each tester relied on a number of dedicated accounts to attempt creating avatars. They first followed the standard procedure to create avatars of themselves using their laptop’s webcam, ensuring the platform accepted their legitimate requests. Next, they tested if the system could prevent unauthorized avatar creation (non-consensual deepfakes) using another person’s likeness.
+In total, testers made over 40 attempts to create avatars and our systems were able to detect and block all attempts to create non-consensual avatars, with feedback mechanisms in place to alert users of policy violations.
+For example, some testers tried to create non-consensual clones of celebrities or politicians while others worked together, with one person supplying the face and another the voice for the clone. I also saw examples of people trying to tamper with the webcam feed, trying to trick our systems with stock footage of other people instead of a live recording of themselves.
+In the case below, a tester submitted a video of Dr. Fei-Fei Li scraped from YouTube, with harmful text placed on top of it. We correctly identified this as a non-consensual deepfake attempt and prevented the avatar from being created:
+In the second part of the test, the testers created scripts that tried to break
+our content policies
+. This was in line with NIST’s Information Integrity category which outlines how AI systems can ease the deliberate production or dissemination of false or misleading information at scale, where an actor has the explicit intent to deceive or cause harm to others.
+Synthesia has
+the world’s most advanced AI avatars
+that are able to closely replicate human likeness and voice, and mimic human emotions. As a result, it’s important that this technology is used for its intended purpose (instructional videos for business communications), and not for creating harmful or misleading content.
+The goal was therefore to evaluate whether our platform could flag and block generated video content that violated six of Synthesia's content policies:
+Graphic violence, incitement and threatening content
+Identity-based hate
+Illegal goods and activities
+Political content
+Banking scams or fraud
+Medical advice and information
+
+Once logged in to Synthesia, testers were asked to create scripts specifically targeting the policies above and upload them in our video editor, attempting to use both stock avatars and any Personal Avatars created earlier in the test.
+There were over 75 attempts to create harmful content. Our moderation processes consistently held up, with our automated systems and human-in-the-loop moderation teams ensuring that no violating content could reach the final stage of publishing. With one exception, every single attempt was blocked across all categories and avatars; we were able to apply our moderation rules consistently and also triggered appropriate bans for repeat offenses.
+Here are some examples of scripts that were moderated by our platform, together with the corresponding policies.
+We rejected the video above as it violated our policy on
+Suicide & Self Harm: Suicidal Ideation and Intent.
+Notice that our detection systems were sophisticated enough to determine that the user was talking about suicide without actually mentioning the term specifically.
+We rejected the video above for violating our
+Deceptive Information & Other Restricted Content
+policy as it encourages direct exposure to dry ice which can cause severe skin damage:
+We rejected the video above for breaking our
+Promotional Activity and Other Restricted Practices: Age Restricted Products or Services
+policy. We do not allow users to create content advertising age-restricted services such as OnlyFans:
+We rejected the video above for breaking our
+Promotional Activity and Other Restricted Practices: Gambling
+policy. We do not allow advertising or promotional content related to gambling with a stock avatar.
+The one video we should’ve moderated but missed provided potentially confusing information relating sunlight to cancer. Our policies prohibit the creation of unverified or unauthorized information about medical terms. We’ve flagged this video to our content moderation and engineering teams so we can improve our detection systems in the future.
+Interestingly the script for the video was created with ChatGPT, with the user prompting the chatbot to generate a short authoritative response to a skeptical person on how a human’s cellular response to sunlight can be used to diagnose cancer - proving that today’s language models still struggle with hallucinations:
+Our commitment to trustworthy AI
+While this test is a testament to Synthesia’s commitment to trustworthy AI, we also recognize the value of continuous improvement. Data and insights from this exercise will further strengthen our moderation capabilities, ensuring we stay at the forefront of responsible AI and security standards.
+In partnership with industry leaders like Humane Intelligence and government agencies such as NIST, Synthesia remains dedicated to building a safer, more secure AI platform for all users. Humane Intelligence plans to continue organizing red teaming events globally.
+About the author
+Martin Tschammer
+Martin Tschammer
+Martin Tschammer is the Head of Security at Synthesia.
+Go to author's profile
+Get started
+Make videos with AI avatars in 160+ languages
+Try out our AI Video Generator
+Create a free AI video
+
+Navigating the complexities of content moderation
+We are sharing the results of a recent red teaming effort of our content moderation systems in the hope of create an open environment where industry peers, policymakers, and the public can engage with us in these crucial conversations. Together, we can harness the power of AI while safeguarding the values that make our digital spaces creative and trustworthy.
+Learn more
+What Is Video Moderation And Why You Need It
+Discover the importance of video moderation and how it safeguards your brand and user experience. Learn more about video moderation techniques and tools.
+Learn more
+AI Ethics: How to Innovate the Safe and Responsible Way
+Let’s explore how we can contribute to a more transparent and ethical AI world, what ethical challenges to expect, and how to overcome them.
+Learn more
+
+No items found.
+
+You might also like
+View all posts
+No items found.
+L&D & Training
+How to Measure Training ROI
+Proving ROI is frustrating when every program is held to the same standard. This post helps you choose the right measurement approach, then create a clear summary leaders can review — what changed, what you spent, and what assumptions you used.
+L&D & Training
+Conversational Agents Won’t Replace Training — They’ll Make It Work
+L&D & Training
+How to Speed Up L&D Content Production and Maintain Quality
+AI can make drafts fast. Quality still takes intent. This guide shows how L&D teams speed up content production by using AI for first passes, then reinvesting time into better design, review, and scale.
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+250+ Video Templates
+Custom Avatars
+Studio Avatars
+Free AI Video Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Training Videos
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Ethics Guidelines
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+VIDEO TEMPLATE
+VIDEO TITLE
+Edit video template
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create a free AI Video

@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.analysis-rebuild-*/
+.test-workspace-*/
+/outputs/
+.DS_Store
+._*
+
+# Reproducible preprocessing intermediates remain local; scraped data is included.
+# Keep data/preprocessed/final/ for offline frozen-input verification.
+/data/preprocessed/intermediate/
+/data/preprocessed/selected_pages/
+
+# Previous presentations and execution bookkeeping are retained locally.
+/data/analysis_history/
+/data/figure_history/
+/data/experiments/*/execution_context.json
+/data/analysis/three_v2_run_report.md

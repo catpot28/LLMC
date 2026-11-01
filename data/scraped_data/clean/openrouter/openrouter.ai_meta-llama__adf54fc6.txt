@@ -1,0 +1,517 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/meta-llama
+page path  : /meta-llama
+captured   : 2026-04-17 08:49:24 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_meta-llama__adf54fc6.html.gz
+========================================================================
+
+Meta Llama Models on OpenRouter
+
+Meta Llama Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Meta Llama
+Access 26 Meta Llama models on OpenRouter including Llama 3.3 8B Instruct, Llama Guard 4 12B, and Llama Guard 4 12B (free). Compare pricing, context windows, and capabilities.
+Meta Llama
+tokens processed on OpenRouter
+Meta: Llama 3.3 8B Instruct
+Llama 3.3 8B Instruct
+A lightweight and ultra-fast variant of Llama 3.3 70B, for use when quick response times are needed most.
+by
+
+meta-llama
+May 14, 2025
+128K
+context
+Meta: Llama Guard 4 12B
+Llama Guard 4 12B
+1.57B
+tokens
+Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification) and in LLM responses (response classification). It acts as an LLM—generating text in its output that indicates whether a given prompt or response is safe or unsafe, and if unsafe, it also lists the content categories violated. Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation for English and multiple supported languages, along with enhanced capabilities to handle mixed text-and-image prompts, including multiple images. Additionally, Llama Guard 4 is integrated into the Llama Moderations API, extending robust safety classification to text and images.
+by
+
+meta-llama
+Apr 30, 2025
+164K
+context
+$
+0.18
+/M input
+tokens
+$
+0.18
+/M output
+tokens
+Meta: Llama Guard 4 12B (free)
+Llama Guard 4 12B (free)
+15.3M
+tokens
+Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification) and in LLM responses (response classification). It acts as an LLM—generating text in its output that indicates whether a given prompt or response is safe or unsafe, and if unsafe, it also lists the content categories violated. Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation for English and multiple supported languages, along with enhanced capabilities to handle mixed text-and-image prompts, including multiple images. Additionally, Llama Guard 4 is integrated into the Llama Moderations API, extending robust safety classification to text and images.
+by
+
+meta-llama
+Apr 30, 2025
+164K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Meta: Llama 4 Maverick
+Llama 4 Maverick
+28.1B
+tokens
+Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward pass (400B total). It supports multilingual text and image input, and produces multilingual text and code output across 12 supported languages. Optimized for vision-language tasks, Maverick is instruction-tuned for assistant-like behavior, image reasoning, and general-purpose multimodal interaction. Maverick features early fusion for native multimodality and a 1 million token context window. It was trained on a curated mixture of public, licensed, and Meta-platform data, covering ~22 trillion tokens, with a knowledge cutoff in August 2024. Released on April 5, 2025 under the Llama 4 Community License, Maverick is suited for research and commercial applications requiring advanced multimodal understanding and high model throughput.
+by
+
+meta-llama
+Apr 5, 2025
+1.05M
+context
+$
+0.15
+/M input
+tokens
+$
+0.60
+/M output
+tokens
+Meta: Llama 4 Scout
+Llama 4 Scout
+15.5B
+tokens
+Llama 4 Scout 17B Instruct (16E) is a mixture-of-experts (MoE) language model developed by Meta, activating 17 billion parameters out of a total of 109B. It supports native multimodal input (text and image) and multilingual output (text and code) across 12 supported languages. Designed for assistant-style interaction and visual reasoning, Scout uses 16 experts per forward pass and features a context length of 10 million tokens, with a training corpus of ~40 trillion tokens. Built for high efficiency and local or commercial deployment, Llama 4 Scout incorporates early fusion for seamless modality integration. It is instruction-tuned for use in multilingual chat, captioning, and image understanding tasks. Released under the Llama 4 Community License, it was last trained on data up to August 2024 and launched publicly on April 5, 2025.
+by
+
+meta-llama
+Apr 5, 2025
+328K
+context
+$
+0.08
+/M input
+tokens
+$
+0.30
+/M output
+tokens
+Llama Guard 3 8B
+Llama Guard 3 8B
+32.9M
+tokens
+Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification) and in LLM responses (response classification). It acts as an LLM – it generates text in its output that indicates whether a given prompt or response is safe or unsafe, and if unsafe, it also lists the content categories violated. Llama Guard 3 was aligned to safeguard against the MLCommons standardized hazards taxonomy and designed to support Llama 3.1 capabilities. Specifically, it provides content moderation in 8 languages, and was optimized to support safety and security for search and code interpreter tool calls.
+by
+
+meta-llama
+Feb 12, 2025
+131K
+context
+$
+0.48
+/M input
+tokens
+$
+0.03
+/M output
+tokens
+Meta: Llama 3.3 70B Instruct
+Llama 3.3 70B Instruct
+30.8B
+tokens
+The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks. Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
+Model Card
+by
+
+meta-llama
+Dec 6, 2024
+131K
+context
+$
+0.10
+/M input
+tokens
+$
+0.32
+/M output
+tokens
+Meta: Llama 3.3 70B Instruct (free)
+Llama 3.3 70B Instruct (free)
+830M
+tokens
+The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks. Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
+Model Card
+by
+
+meta-llama
+Dec 6, 2024
+66K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Meta: Llama 3.2 90B Vision Instruct
+Llama 3.2 90B Vision Instruct
+The Llama 90B Vision model is a top-tier, 90-billion-parameter multimodal model designed for the most challenging visual reasoning and language tasks. It offers unparalleled accuracy in image captioning, visual question answering, and advanced image-text comprehension. Pre-trained on vast multimodal datasets and fine-tuned with human feedback, the Llama 90B Vision is engineered to handle the most demanding image-based AI tasks. This model is perfect for industries requiring cutting-edge multimodal AI capabilities, particularly those dealing with complex, real-time visual and textual analysis. Click here for the
+original model card
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Sep 25, 2024
+131K
+context
+Meta: Llama 3.2 1B Instruct
+Llama 3.2 1B Instruct
+122M
+tokens
+Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance. Supporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models. Click here for the
+original model card
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Sep 25, 2024
+60K
+context
+$
+0.027
+/M input
+tokens
+$
+0.20
+/M output
+tokens
+Meta: Llama 3.2 11B Vision Instruct
+Llama 3.2 11B Vision Instruct
+677M
+tokens
+Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and visual question answering, bridging the gap between language generation and visual reasoning. Pre-trained on a massive dataset of image-text pairs, it performs well in complex, high-accuracy image analysis. Its ability to integrate visual understanding with language processing makes it an ideal solution for industries requiring comprehensive visual-linguistic AI applications, such as content creation, AI-driven customer service, and research. Click here for the
+original model card
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Sep 25, 2024
+131K
+context
+$
+0.245
+/M input
+tokens
+$
+0.245
+/M output
+tokens
+Meta: Llama 3.2 3B Instruct
+Llama 3.2 3B Instruct
+708M
+tokens
+Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages. Trained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes it ideal for applications needing accuracy and efficiency in text generation across multilingual settings. Click here for the
+original model card
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Sep 25, 2024
+80K
+context
+$
+0.051
+/M input
+tokens
+$
+0.34
+/M output
+tokens
+Meta: Llama 3.2 3B Instruct (free)
+Llama 3.2 3B Instruct (free)
+67.5M
+tokens
+Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages. Trained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes it ideal for applications needing accuracy and efficiency in text generation across multilingual settings. Click here for the
+original model card
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Sep 25, 2024
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Meta: Llama 3.1 405B (base)
+Llama 3.1 405B (base)
+Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This is the base 405B pre-trained version. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Aug 2, 2024
+131K
+context
+Meta: Llama 3.1 8B Instruct
+Llama 3.1 8B Instruct
+75.2B
+tokens
+Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Jul 23, 2024
+16K
+context
+$
+0.02
+/M input
+tokens
+$
+0.05
+/M output
+tokens
+Meta: Llama 3.1 405B Instruct
+Llama 3.1 405B Instruct
+The highly anticipated 400B class of Llama3 is here! Clocking in at 128k context with impressive eval scores, the Meta AI team continues to push the frontier of open-source LLMs. Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 405B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong performance compared to leading closed-source models including GPT-4o and Claude 3.5 Sonnet in evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Jul 23, 2024
+131K
+context
+Meta: Llama 3.1 70B Instruct
+Llama 3.1 70B Instruct
+11.9B
+tokens
+Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Jul 23, 2024
+131K
+context
+$
+0.40
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+Meta: Llama 3 8B (Base)
+Llama 3 8B (Base)
+Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This is the base 8B pre-trained version. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+May 13, 2024
+8K
+context
+Meta: Llama 3 70B (Base)
+Llama 3 70B (Base)
+Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This is the base 70B pre-trained version. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+May 13, 2024
+8K
+context
+Meta: LlamaGuard 2 8B
+LlamaGuard 2 8B
+This safeguard model has 8B parameters and is based on the Llama 3 family. Just like is predecessor,
+LlamaGuard 1
+, it can do both prompt and response classification. LlamaGuard 2 acts as a normal LLM would, generating text that indicates whether the given input/output is safe/unsafe. If deemed unsafe, it will also share the content categories violated. For best results, please use raw prompt input or the
+/completions
+endpoint, instead of the chat API. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+May 13, 2024
+8K
+context
+Meta: Llama 3 8B Instruct
+Llama 3 8B Instruct
+1.35B
+tokens
+Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Apr 18, 2024
+8K
+context
+$
+0.03
+/M input
+tokens
+$
+0.04
+/M output
+tokens
+Meta: Llama 3 70B Instruct
+Llama 3 70B Instruct
+170M
+tokens
+Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong performance compared to leading closed-source models in human evaluations. To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+by
+
+meta-llama
+Apr 18, 2024
+8K
+context
+$
+0.51
+/M input
+tokens
+$
+0.74
+/M output
+tokens
+Meta: CodeLlama 70B Instruct
+CodeLlama 70B Instruct
+Code Llama is a family of large language models for code. This one is based on
+Llama 2 70B
+and provides zero-shot instruction-following ability for programming tasks.
+by
+
+meta-llama
+Jan 30, 2024
+2K
+context
+Meta: CodeLlama 34B Instruct
+CodeLlama 34B Instruct
+Code Llama is built upon Llama 2 and excels at filling in code, handling extensive input contexts, and following programming instructions without prior training for various programming tasks.
+by
+
+meta-llama
+Aug 20, 2023
+8K
+context
+Meta: Llama 2 13B Chat
+Llama 2 13B Chat
+A 13 billion parameter language model from Meta, fine tuned for chat completions
+by
+
+meta-llama
+Jun 20, 2023
+4K
+context
+Meta: Llama 2 70B Chat
+Llama 2 70B Chat
+The flagship, 70 billion parameter language model from Meta, fine tuned for chat completions. Llama 2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align to human preferences for helpfulness and safety.
+by
+
+meta-llama
+Jun 20, 2023
+4K
+context

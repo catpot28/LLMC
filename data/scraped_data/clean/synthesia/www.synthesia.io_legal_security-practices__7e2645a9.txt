@@ -1,0 +1,625 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/legal/security-practices
+page path  : /legal/security-practices
+captured   : 2026-06-08 22:47:13 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/synthesia/www.synthesia.io_legal_security-practices__7e2645a9.html.gz
+========================================================================
+
+Security Practices I Synthesia
+
+Security Practices I Synthesia
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Teams
+Learning & Development
+Sales Enablement
+Human Resources
+Marketing
+IT & Cybersecurity
+Knowledge Management
+Use cases
+Technical Training
+Compliance Training
+Sales Training
+Employee Development
+SOP
+Product Video
+Industries
+Manufacturing
+Tech & Software
+Healthcare
+Financial services
+Professional Services
+Retail
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+Responsible AI
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Security Practices
+Synthesia Legal Hub
+Security
+Security Practices
+Last Updated: February 3, 2026
+Security is integral to Synthesia’s core principles of
+Control, Consent, and Collaboration
+and so we take it seriously. This Security Practices page describes the organizational, technical, and physical controls applicable to Synthesia, including our Services, as more specifically described in your governing agreement with Synthesia. For real-time monitoring of key controls, access to important security documents such as our SOC2 report, and answers to frequently asked security questions, please visit
+https://security.synthesia.io
+.
+These policies and practices may change as the Services and industry evolve, so please check back regularly for updates. Capitalized terms used below but not defined in this policy have the meaning set forth in the governing agreement.
+Synthesia Platform Controls
+Architecture and Data Segregation
+Synthesia operates a multi-tenant software-as-a-service system, using a shared infrastructure for all users. We have implemented measures designed to ensure the logical separation of Customer Data, as more specifically defined in your governing agreement with Synthesia covering the use of the Services. These measures include the use of access lists and association of Customer Data with unique customer IDs.
+Public Cloud Infrastructure
+Synthesia utilizes Amazon Web Services (AWS) for its public cloud infrastructure. The services provided by AWS include web hosting, user management, backend API, compute, database, monitoring, and automation. Synthesia does not use a private or hybrid cloud.
+Audits
+Synthesia has a robust audit system in place designed to continuously monitor for vulnerabilities, instances of non-compliance, and misconfigurations. Auditing is performed by internal parties as well as respected and accredited external firms. Synthesia undergoes a periodic ISO 42001, ISO 27001, and SOC2 Type II audit. The report is available
+here
+.
+Security Controls
+Synthesia has established a comprehensive security control framework aligned to our defined security policies, risk management program, and industry-leading best practices and standards. This rigorous approach is designed to safeguard the confidentiality, integrity, and availability of any Customer Data that is processed, transmitted, or stored by Synthesia.
+The security controls that we have put in place encompass a wide range of measures, including:
+Access Management:
+Synthesia uses a centralized system for managing identities, governing access to all key systems and physical access to sensitive office locations. Administrators and incident responders can use this to easily terminate and disable all authenticated sessions. All access is granted based on approved requests and we conduct quarterly reviews of access to any sensitive system.
+Company-wide multi-factor authentication:
+To protect Synthesia staff identities, we employ industry leading security practices, such as requiring all staff members to use a FIDO2 compliant authentication factor, such as a physical security key or WebAuthn.
+Audit Logging:
+We meticulously log every access and action taken by Synthesia staff, as well as all customer authentication-related events. This includes recording details such as the type of device used, IP addresses, and any registered abnormalities such as impossible travel.
+Host Management:
+We enforce stringent security requirements such as screen lockouts, full disk encryption, installed anti-malware and endpoint detection and response software, remote wiping & locking capabilities, and the use of up-to-date software.
+Network Protection:
+We employ network abnormality detection software, multi-factor authentication based access to servers and databases in the production environment (with a requirement to use a FIDO2 compliant authentication factor), firewalls configured according to best practices, and encrypted communications channels utilizing Transport Layer Security 1.2+ (TLS 1.2+) at a minimum.
+Cloud Security Posture Management:
+We continuously monitor our cloud infrastructure for misconfigurations, as well as exposure, vulnerability, and patch management issues.
+Application Security:
+We have implemented a secure software development lifecycle policy. New features and significant changes undergo a threat modeling and review process. We also utilize continuous static and dynamic code scanning and software composition analysis to detect and mitigate any potential vulnerabilities in our applications as early as possible. In addition, we run a private bug bounty program in collaboration with HackerOne, enabling security researchers around the world to help us identify and rectify potential security flaws and contract with security services vendors to perform annual penetration testing.
+Change Management:
+All application code changes go through our change management process, which is designed to track changes in the system to help ensure that modifications are necessary, safe, and improve the system's functioning. Further, code changes are peer reviewed prior to being deployed to production.
+It's important to note that the protection of Customer Data is a shared responsibility. Customers have responsibility and control over various measures, including:
+Data sharing:
+Customers have control over the nature of content they submit to the Services and the sharing of videos, templates, avatars, voices, and assets.
+Content generation:
+Customers can enable or disable the use of AI-assisted generation of content.
+Single Sign-On:
+Customers have control over how Single Sign-On (SSO) is governed on their end.
+‍
+Workspace access:
+Customers can manage access to their workspace by inviting other users or guests.
+Intrusion Detection
+Synthesia employs a robust intrusion detection system around its infrastructure. Synthesia partners with 24/7 managed detection and response providers that specialize in identifying and addressing security threats across endpoints, cloud infrastructure, and identities. This proactive approach underpins our commitment to robust system security and data protection.
+Security Logs
+Security-relevant events originating from Synthesia infrastructure, including events related to authentication and actions taken by staff, are logged and audited. These logs are stored for up to 4 years and are protected from unauthorized access. Logs cannot be deleted or modified, even by an administrator.
+Incident Management
+Synthesia has a well-established and documented incident response plan for managing incidents. This plan is reviewed at least annually and is communicated to all relevant parties. We also have an incident response team that quantifies and monitors incidents involving security, availability, processing integrity, and confidentiality.
+All incidents are documented in Synthesia's security incident register, and all actions taken during an incident are documented and reviewed once the emergency is over. Synthesia notifies impacted customers without undue delay of any unauthorized disclosure of their respective Customer Data by Synthesia or its agents of which Synthesia becomes aware, to the extent permitted by law.
+Data Encryption
+Synthesia employs robust encryption mechanisms designed to protect Customer Data. All stored Customer Data is encrypted using the 256-bit Advanced Encryption Standard (AES-256). The encryption keys are stored and managed within the Amazon Key Management Service (KMS) and are rotated periodically. Amazon KMS uses hardware security modules (HSMs) that have been validated under the Federal Information Processing Standard 140-2 (FIPS 140-2). Amazon KMS is designed so that no one, including AWS employees, can retrieve the plaintext KMS keys from the service.
+All communication is encrypted in transit using TLS 1.2+. We have a cryptography policy in place, which outlines encryption and key management policies and procedures.
+Reliability, Backup, and Business Continuity
+Synthesia has a robust system in place designed to improve reliability, backup, and business continuity.
+Our infrastructure uses AWS services, which offer resilience against natural disasters in multiple availability zones. The target for full system recovery is set at 72 hours with a recovery point objective of 24 hours. We perform daily backups of the production databases for point-in-time recovery and daily snapshots, retaining these backups for at least three months. Backups are stored securely using AWS services, encrypted, and access-controlled, following the principle of least privilege. The backup recovery and deployment protocols are tested at least annually.
+Redundant architecture exists such that resources are distributed across geographically dispersed data centers to help support continuous availability, as described in the data residency section below.
+Additionally, our business continuity and disaster recovery plans are tested at least annually.
+Data Residency
+Storage and processing is performed within the cloud infrastructure provided by Amazon Web Services (AWS). Customer Data is currently stored within the European Union (EU), in data centers based in Ireland. Operational backups are also stored in Ireland and secondary backups are stored in the AWS Frankfurt region. Storage facilities use multiple availability zones, each with redundant power and networking, and physically separated by a number of miles. The transfer of data from the EU to the USA within AWS services is safeguarded by EU approved Standard Contractual Clauses (SCCs) contained in the AWS’ Data Processing Addendum. Data processing within the USA has the same level of protection as within the European Economic Area (EEA). Synthesia has performed a transfer impact assessment regarding this transfer, which customers may access at
+https://security.synthesia.io/documents
+.
+Return of Customer Data
+During the term of a customer’s subscription, the customer is able to export generated videos from the Services via download onto an MP4 format. After the termination of a customer’s governing agreement with Synthesia, we are able to assist them in retrieving any generated videos in MP4 format for up to 90 days following the end of the relationship.
+Deletion of Customer Data
+Customers manage the content they create using the Services and may request that Synthesia delete such content from the platform. Following a deletion request, Customer Data will be deleted within up to 90 days. Where a deletion request is made upon termination of an account, Synthesia will delete all Customer Data and provide confirmation of deletion. If no deletion request is made after account termination, Customer Data will be automatically deleted within 90 days. Residual copies of Customer Data may remain in backups for a limited period until they are overwritten or purged in accordance with Synthesia's regular backup retention and lifecycle processes. Synthesia uses AWS services for data erasure and relies on AWS for physical security controls, including secure media handling and disposal.
+Personnel Practices
+Synthesia has robust personnel practices in place to help Synthesia exercise appropriate control and supervision over its personnel, including strict hiring policies with background checks and scrutiny based on job function and location. All employees are trained on information security and privacy policies as part of the onboarding process, with ongoing periodic security training provided at least annually. Employees must agree to our security policies.
+All employees are bound to our internal policies, including:
+Role-based access limitations designed around the principle of least privilege with a monitored approval process
+Execution of a Non Disclosure Agreement or similar confidentiality agreements
+Comprehensive privacy and security trainings
+Immediate termination of access upon conclusion of employment
+Physical access restrictions, such as key cards and video monitoring
+Full audit logging of all access to our backend infrastructure, including actions taken
+Proactive threat intelligence management, such as dark web monitoring
+Use of FIDO2 compliant biometric or security keys, strong password complexity, default multi-factor authentication, and a password manager
+Infrastructure
+Subprocessors
+Synthesia uses third party entities (each, a “Subprocessor”) to process Customer Data on behalf of our Customers. You can read more information about specific Subprocessors and how they interact with our Services at
+https://www.synthesia.io/legal/subprocessors
+.
+We carry out compliance reviews of our Subprocessors, and where required by applicable law, Synthesia conducts Transfer Impact Assessments covering cross-border transfers of Customer Data. You may find these reports at
+https://security.synthesia.io/
+.
+Synthesia additionally imposes obligations on its Subprocessors to implement appropriate technical and organizational measures around the sub-processing of Customer Data, in accordance with the standards required by applicable data protection laws.
+Open Source Software
+Certain components of the Services may contain open source software governed by licensing agreements. Synthesia has implemented a vulnerability management program designed to detect and remediate vulnerabilities in our codebase and infrastructure.
+
+Licence
+
+Dependencies
+
+ISC
+
+@auth/prisma-adapter@1.6.0
+
+next-auth@4.24.7
+
+eslint-plugin-typescript-sort-keys@3.1.0
+
+glob@10.3.10
+
+glob@7.1.7
+
+glob@7.2.3
+
+glob@8.1.0
+
+glob@9.3.5
+
+lru-cache@10.4.3
+
+lru-cache@11.0.2
+
+lru-cache@5.1.1
+
+lru-cache@6.0.0
+
+lru-cache@7.18.3
+
+mui-image@1.0.7
+
+rimraf@2.7.1
+
+semver@6.3.0
+
+semver@6.3.1
+
+semver@7.5.3
+
+semver@7.6.2
+
+semver@7.6.3
+
+eslint-import-resolver-typescript@3.6.1
+
+eslint-plugin-typescript-sort-keys@3.2.0
+
+lucide-react@0.483.0
+
+esrun@3.2.26
+
+deep-entries@4.0.2
+
+nyc@15.1.0
+
+semver@7.5.4
+
+tar@6.2.1
+
+unix-dgram@2.0.6
+
+minimatch@9.0.5
+
+yaml@2.5.0
+
+Apache-2.0
+
+@aws-sdk/client-s3@3.596.0
+
+@aws-sdk/credential-provider-node@3.474.0
+
+@aws-sdk/util-retry@3.577.0
+
+@aws-sdk/util-stream@3.604.0
+
+@aws-sdk/util-uri-escape@3.591.0
+
+@aws-sdk/util-user-agent-node@3.606.0
+
+@aws-sdk/util-user-agent-browser@3.500.0
+
+@aws-sdk/util-user-agent-browser@3.507.0
+
+@aws-crypto/sha256-js@2.0.0
+
+@aws-sdk/channel-http@3.594.0
+
+@aws-sdk/chunked-blob-builder@3.595.0
+
+@aws-sdk/protocol-http@3.597.0
+
+@aws-sdk/protocol-rest@3.597.0
+
+@aws-sdk/smithy-client@3.595.0
+
+@aws-sdk/smithy-endpoint@3.593.0
+
+@aws-crt@1.2.0
+
+@aws-sdk/types@3.595.0
+
+@aws-sdk/util-body-length-browser@3.594.0
+
+@aws-sdk/util-cryptography@3.607.0
+
+@aws-sdk/util-defaults-mode-middleware@3.593.0
+
+@aws-sdk/util-error-browser@3.594.0
+
+@aws-sdk/util-case-insensitive@3.500.0
+
+@aws-sdk/util-endpoints@3.593.0
+
+@aws-sdk/util-eventstream@3.607.0
+
+@aws-sdk/util-hex-encoding@3.602.0
+
+@aws-sdk/util-hash-base@3.590.0
+
+@aws-sdk/util-midstream@3.604.0
+
+@aws-sdk/util-uri-escape-universal@3.600.0
+
+@aws-sdk/util-user-agent-browser@3.501.0
+
+@aws-sdk/util-user-agent-node@3.598.0
+
+@aws-sdk/util-utf8@3.597.0
+
+@aws-sdk/util-utf8-browser@3.600.0
+
+fast-deep-equal@3.1.3
+
+throttle-debounce@3.0.1
+
+uuid@9.0.2
+
+xmlbuilder2@4.0.2
+
+xmlbuilder@15.1.1
+
+xml2js@0.4.23
+
+MIT
+
+@headlessui/react@2.0.4
+
+@heroicons/react@2.1.3
+
+@t3-oss/eslint-config@1.0.0-alpha.126
+
+@types/bullmq@1.57.6
+
+@types/express@4.17.21
+
+@types/next@13.5.7
+
+@types/react-dom@18.2.12
+
+@types/react@18.2.12
+
+@types/semantic-release@19.0.7
+
+@types/shelljs@0.8.10
+
+@types/swagger-ui-dist@4.16.4
+
+@types/tempy@0.8.1
+
+@types/yup@0.32.15
+
+axios@1.6.5
+
+chalk@5.3.1
+
+color@4.2.4
+
+concurrently@8.2.0
+
+cookie@0.6.2
+
+country-list@2.2.0
+
+cross-fetch@4.0.11
+
+csstype@3.2.3
+
+fast-xml-parser@4.0.10
+
+ky@1.10.0
+
+minimatch@3.1.3
+
+next@13.5.6
+
+next-cloudinary@2.1.0
+
+next-mdx-remote@4.1.0
+
+node-fetch@3.3.2
+
+pnpm@8.4.5
+
+prettier@2.8.8
+
+prism-react-renderer@1.3.5
+
+prisma@4.18.0
+
+rate-limit-redis@2.4.9
+
+react-markdown@9.0.0
+
+react-syntax-highlighter@16.3.0
+
+rehype-autolink-headings@6.1.1
+
+rehype-prism-plus@1.2.1
+
+rehype-slug@6.1.1
+
+remark-gfm@3.0.1
+
+remark-parse@10.0.1
+
+remark-rehype@10.1.0
+
+semver@7.3.7
+
+ts-morph@18.2.5
+
+ts-node@10.9.1
+
+typescript@5.3.1
+
+ws@8.13.0
+
+yaml@2.5.0
+
+zod@3.23.0
+
+OFL-1.0
+
+geist@1.3.0
+
+BSD-2-Clause
+
+@typescript-eslint/parser@7.2.0
+
+dotenv-expand@9.0.3
+
+eslint@8.48.0
+
+eslint-config-next@14.0.6
+
+eslint-import-resolver-typescript@5.6.1
+
+eslint-plugin-astro@7.6.0
+
+eslint-plugin-unused-imports@3.1.0
+
+lightgallery@2.8.4
+
+nanoid@4.0.2
+
+pretty-bytes@6.1.7
+
+qrcode.react@3.4.0
+
+react-hot-toast@2.4.0
+
+rollup@3.25.0
+
+sharp@0.32.4
+
+swr@2.2.3
+
+BSD-3-Clause
+
+babel-plugin-transform-import-meta@2.2.0
+
+js-base64@3.7.5
+
+nodemailer@6.9.4
+
+ts-node@10.9.1
+
+typescript@5.3.1
+
+zod@3.23.0
+
+Unlicense
+
+react-use@17.5.1
+
+GPL-3.0-or-later
+
+jszip@3.10.1
+
+0BSD
+
+tslib@2.6.2
+
+WTFPL
+
+chai-as-promised@7.1.1
+
+sinon-chai@3.7.0
+
+MPL-2.0
+
+pem-jwk@2.0.0
+
+‍
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+HIGHLIGHTED VIDEO
+
+Recommended videos
+Need more help?
+If you need assistance with Synthesia or have a question about our products or services, please contact our customer support team.
+
+Get in touch
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+Book demo
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Responsible AI
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create free AI Video

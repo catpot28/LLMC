@@ -1,0 +1,436 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/fr/news/ministraux/
+page path  : /fr/news/ministraux/
+captured   : 2026-06-09 08:03:47 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_fr_news_ministraux__fb350e97.html.gz
+========================================================================
+
+Un Ministral, des Ministraux | Mistral AI
+
+Un Ministral, des Ministraux | Mistral AI
+
+Contact
+
+Menu
+
+Produits
+
+Solutions
+
+Modèles
+
+Développeurs
+
+Blog
+
+Clients
+
+Entreprise
+
+Contact
+
+Commencez
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Produits
+Solutions
+Modèles
+Développeurs
+Blog
+Clients
+Entreprise
+
+Studio
+
+Concevez, testez et déployez des agents et applications IA.
+
+Forge
+
+Entraînez, alignez et évaluez des modèles IA sur mesure.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe pour le code
+
+Agents de code dans le terminal, l’IDE et en arrière-plan.
+
+Compute
+
+Infrastructure de pointe pour l’entraînement et l’inférence.
+
+Tarification
+
+Plans
+
+API
+
+Pour les entreprises
+
+Services
+
+Méthodologie
+
+Modèles sur mesure
+
+Secteurs
+
+Services financiers
+
+Secteur public et gouvernement
+
+Industrie
+
+Cas d’usage
+
+Découvrir
+
+Code
+
+Intelligence sur document
+
+Reconnaissance vocale
+
+Derniers modèles
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+Tous les modèles
+
+Documentation
+
+Référence d'API
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Lire toutes les actualités
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured
+
+ASML
+
+CMA CGM
+
+HSBC
+
+HTX
+
+Tous nos clients
+
+A propos
+
+Qui sommes-nous
+
+Carrière
+
+Marque
+
+Contact
+
+Communauté
+
+Partenaires
+
+Centre d'aide
+
+Commencez
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contact
+
+Recherche
+
+Un Ministral, des Ministraux
+
+October 16, 2024
+
+Mistral AI team
+
+Retour au blog
+
+3 min read
+
+Partager cet article
+
+Copied!
+
+Introducing the world’s best edge models
+On the first anniversary of the release of Mistral 7B, the model that revolutionized independent frontier AI innovation for millions, we are proud to introduce two new state-of-the-art models for on-device computing and at-the-edge use cases. We call them les Ministraux: Ministral 3B and Ministral 8B.
+These models set a new frontier in knowledge, commonsense, reasoning, function-calling, and efficiency in the sub-10B category, and can be used or tuned to a variety of uses, from orchestrating agentic workflows to creating specialist task workers. Both models support up to 128k context length (currently 32k on vLLM) and Ministral 8B has a special interleaved sliding-window attention pattern for faster and memory-efficient inference.
+Use cases
+Our most innovative customers and partners have increasingly been asking for local, privacy-first inference for critical applications such as on-device translation, internet-less smart assistants, local analytics, and autonomous robotics. Les Ministraux were built to provide a compute-efficient and low-latency solution for these scenarios. From independent hobbyists to global manufacturing teams, les Ministraux deliver for a wide variety of use cases.
+Used in conjunction with larger language models such as Mistral Large, les Ministraux are also efficient intermediaries for function-calling in multi-step agentic workflows. They can be tuned to handle input parsing, task routing, and calling APIs based on user intent across multiple contexts at extremely low latency and cost.
+Benchmarks
+We demonstrate the performance of les Ministraux across multiple tasks where they consistently outperform their peers. We re-evaluated all models with our internal framework for fair comparison.
+Pretrained Models
+
+Table 1:
+Ministral 3B and 8B models compared to Gemma 2 2B, Llama 3.2 3B, Llama 3.1 8B and Mistral 7B on multiple categories
+
+Figure 1:
+Ministral 3B and 8B base models compared to Gemma 2 2B, Llama 3.2 3B, Llama 3.1 8B and Mistral 7B
+
+Instruct Models
+
+Table 2:
+Ministral 3B and 8B Instruct models compared to Gemma 2 2B, Llama 3.2 3B, Llama 3.1 8B, Gemma 2 9B and Mistral 7B on different evaluation categories.
+
+Figure 2:
+A comparison of the 3B family of Instruct models - Gemma 2 2B, Llama 3.2 3B and Ministral 3B. The figure showcases the improvements of Ministral 3B over the much larger Mistral 7B.
+
+Figure 3:
+A comparison of the 8B family of Instruct models - Gemma 2 9B, Llama 3.1 8B, Mistral 7B and Ministral 8B.
+
+Availability and pricing
+Both models are available starting today.
+
+Model
+API
+Pricing on la Plateforme
+License
+
+Ministral 8B
+ministral-8b-latest
+$0.1 / M tokens (input and output)
+Mistral Commercial License
+Mistral Research License
+
+Ministral 3B
+ministral-3b-latest
+$0.04 / M tokens (input and output)
+Mistral Commercial License
+
+For self-deployed use,
+please reach out to us
+for commercial licenses. We will also assist you in lossless quantization of the models for your specific use-cases to derive maximum performance.
+The model weights for
+Ministral 8B Instruct
+are available for research use. Both models will be available from our
+cloud partners
+shortly.
+More to come
+At Mistral AI, we continue pushing the state-of-the-art for frontier models. It’s been only a year since the release of Mistral 7B, and yet our smallest model today (Ministral 3B) already outperforms it on most benchmarks. We can’t wait for you to try out les Ministraux and give us feedback.
+
+0%
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Sélectionner la langue
+
+Français
+
+English
+Français
+Italiano

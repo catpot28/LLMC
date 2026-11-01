@@ -1,0 +1,195 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/from-genai-to-agentic-ai-in-customer-experience
+page path  : /blogs/from-genai-to-agentic-ai-in-customer-experience
+captured   : 2026-03-08 21:37:53 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/sap/www.sap.com_blogs_from-genai-to-agentic-ai-in-customer-experience__e4ec58d8.html.gz
+========================================================================
+
+Moving from GenAI to agentic AI in the customer experience
+
+Moving from GenAI to agentic AI in the customer experience
+
+media-blend
+
+text-black
+
+Moving from GenAI to agentic AI in the customer experience
+
+As customer experience leaders prepare for agentic AI, a good first step is to assess what they’ve learned from GenAI so far.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+No business area, it seems, will be untouched by generative AI. And of all the places where generative AI has been deployed to date, customer experience is among the top.
+In a 2025 survey
+, Gartner found that 85% of customer service leaders said they will explore or pilot a customer-facing conversational GenAI solution this year.
+
+It’s easy to see the attraction. In many companies, GenAI is either fully automating some aspects of customer support or helping service reps perform an array of repetitive tasks. This can range from chatbots answering basic customer questions to copilots summarizing customer inquiries and quickly gathering relevant information to resolve complex issues. The quest is to cost-effectively improve the customer experience and service rep productivity.
+
+Now agentic AI has entered the scene, promising ever greater returns. Unlike copilots and GenAI assistants, which can quickly generate responses to natural-language prompts, agentic AI systems and models can act autonomously to reach complex goals without constant human guidance.
+According to a
+Harvard Business Review
+article, “agentic customer service agents can quickly grasp customer intents and emotions and take independent steps to resolve queries and problems.”
+
+For example, an agentic system could spot a customer delivery that will be late, let the customer know about the delay, and offer a discount to hedge against disappointment—all without involving a person.
+
+“Agentic AI takes generative AI to the next level, adding more planning, reasoning, and carrying out [of] actions,” says Tom Taulli, author of a forthcoming book about agentic AI,
+Building AI Agents
+. “Let’s say I call my call center, and I want to add a name to my insurance policy. It’ll not only know who I am as a customer, but it’ll actually change the name for me. The idea with agentic AI is that it will handle everything without any human intervention.”
+
+As the business world gears up to advance from generative AI to agentic AI (
+that
+didn’t take long), it will pay to glean some lessons from those who pioneered GenAI in the customer experience realm. Here are four key lessons that will help guide businesses into the agentic AI era.
+
+Agentic AI takes generative AI to the next level, adding more planning, reasoning, and carrying out [of] actions.
+
+Tom Taulli, author of Building AI Agents
+
+Lesson 1: GenAI copilots and conversational assistants may take you only so far in realizing productivity gains.
+
+GenAI-driven copilots can undeniably improve productivity for customer service reps. However, depending on the use case, these gains may be incremental and could max out quickly.
+
+For instance,
+according to a 2024 report by McKinsey & Co.
+, off-the-shelf GenAI systems that translate customer communications or summarize customer interactions are relatively easy to integrate into existing service processes—making them relatively low-risk investments. However, McKinsey says, these types of use cases “are limited, and the value that can be captured is modest—the total value at stake is only 3% to 5% of the whole customer operation.”
+
+A well-known study
+by researchers at Stanford University and the Massachusetts Institute of Technology further demonstrates these limitations. In the study, customer service reps using a conversational AI assistant saw overall productivity gains of 14%. The gains were much more pronounced among new or junior employees, who saw a 34% productivity improvement, and were minimal for experienced and highly skilled workers.
+
+The AI system tested in the study was trained on both the best customer service and poorest customer service so that it could “implicitly learn what specific behaviors and characteristics set high-performing workers apart from their less effective counterparts,” the authors write. These models appear to be capable of capturing the skills that distinguish top agents, the authors add. So in a contact center with high rates of turnover and lots of new employees, an AI assistant could be effective, but it may have less effect on more tenured service reps.
+
+At the same time, according to Simon Bamberger, managing director and partner at Boston Consulting Group, some customer service centers have reduced their time to issue resolution by 50% when using a GenAI assistant to resolve issues requiring access to product or diagnostic solutions or to individual customer information.
+
+“For these use cases,” he says, “the expected benefit is the same, independent of an agent’s tenure, because they don’t benefit from a person’s general knowledge of a problem but require the specific knowledge about the state of a product or of an individual customer.”
+
+To achieve even greater results, customer service leaders are contemplating the move to agentic AI. Beyond acting as a copilot or assistant to address a customer billing dispute, for instance, autonomous AI agents could take meaningful, independent action. They could route the issue to a cash collection AI agent, which by its own action would kick off a dispute resolution workflow. With cross-functional AI agents working together, the dispute could be quickly resolved, increasing process efficiency and boosting customer satisfaction.
+
+Ensuring data quality is even more formidable when it comes to agentic AI. Since the AI in this case is taking autonomous action, the data has to be right.
+
+Lesson 2: To achieve greater productivity gains, the data has to be right.
+
+GenAI outputs are only as good as the data they use. This poses a particular problem in customer service, which needs to pull insights from a wide variety of unstructured and structured data sources. This makes data quality one of the top challenges for implementing GenAI in customer service, according to McKinsey—especially when businesses want to surface context-relevant responses, which requires formatting internal data and incorporating it into the large language model (LLM).
+
+Overcoming data quality challenges is essential to boosting GenAI value; McKinsey cites a machinery company’s technical help desk whose GenAI assistant processed more than 13,000 knowledge base resources and equipment manuals so that it could diagnose issues and make recommendations. By getting the data right, the contact center increased first-time resolution by 10% and reduced task completion from 15 minutes to 1 minute.
+
+Ensuring data quality is even more formidable when it comes to agentic AI. Since the AI in this case is taking autonomous action, the data has to be right.
+
+The trouble is that many companies are carrying a data debt in the form of inconsistent, incorrect, outdated, or incomplete data across systems. Enterprise resource planning and customer relationship management systems are often cobbled together over the years. Customer service reps, especially experienced ones, are adept at handling these data discrepancies. They know, for instance, that one data source might be more reliable than another, or they might easily recognize when the data seems inaccurate and take measures to validate it.
+
+Such is not the case with an autonomous AI agent. Because the agent is unable to make that distinction, it’s even more important to make sure the data quality is high.
+
+Beyond acting as a copilot or assistant to address a customer billing dispute, autonomous AI agents could take meaningful, independent action. They could route the issue to a cash collection AI agent, which by its own action would kick off a dispute resolution workflow.
+
+Another issue is data silos. Imagine a customer needing support on a piece of industrial equipment. The accuracy of the product information, such as serial number and resident firmware, is important to enabling the AI agent to return relevant results. If there are two systems—one holding the installation information for the equipment and the other containing its service history—that could encumber the AI agent’s ability to complete the task on its own.
+
+Ensuring data quality includes reducing data inconsistencies between systems and integrating data so that the AI can deliver the experience the customer needs.
+
+What really goes into data preparation?
+
+Boosting data quality involves a range of tasks, including:
+
+Data collection and access.
+Gathering data from various sources, including databases, cloud storage, and external files, to ensure comprehensive data availability.
+
+Data cleansing and transformation.
+Identifying and correcting errors, outliers, and missing values in datasets to improve data quality. This process often involves standardizing formats and transforming data into usable structures.
+
+Data integration and blending.
+Combining data from multiple sources to create a unified dataset, facilitating comprehensive analysis and reporting.
+
+Data profiling and quality assessment.
+Analyzing data to understand its structure, content, and quality, enabling the identification of potential issues before analysis.
+
+Automation of data workflows.
+Implementing automated processes for repetitive data preparation tasks, enhancing efficiency, and reducing the likelihood of human error.
+
+Self-service data preparation tools.
+Providing platforms that allow business users to prepare and manage data without extensive technical expertise, promoting agility and faster decision-making.
+
+style
+
+additional-reading
+
+Lesson 3: Address new information security threat vectors.
+
+We’ve all seen the
+headline
+: “Prankster tricks a GM chatbot into agreeing to sell him a $76,000 Chevy Tahoe for $1.” The message is clear—hackers and pranksters are testing the security of GenAI systems themselves.
+
+When it comes to hardening these new threat vectors, technology executives understand the assignment.
+According to Deloitte
+, the top areas where early adopters of GenAI are increasing IT investment are data management (75%) and cybersecurity (73%). Despite these investments, however, 58% are highly concerned about using sensitive data in models and managing data security. And only 23% say they’re highly prepared for managing GenAI risk and governance.
+
+Early GenAI adopters have learned that they need to do their own adversarial tests of their GenAI systems while also limiting liability for hallucinations (like that $1 Tahoe).
+
+GenAI threat vectors, according to Taulli, are increasing. “We tend to think about the threats in terms of text content, but now it’s starting to encompass voice and video content,” he says. In 2024, for instance, cybercriminals used an AI deepfake to convince a finance department employee at a Hong Kong company to
+transmit wire transfers
+valued at $25.6 million. The employee believed he was interacting with the company’s UK-based CFO on a video call, but it turned out to be AI-generated images and audio.
+
+Security has an even more important role in agentic AI, where the stakes are much higher. Organizations evaluating the use of autonomous AI agents need to consider and protect against scenarios in which the agents interface with outside contacts (for example, through a traditional chatbot) and can be duped into completing actions beyond their intended use. They will also need to fully test current security controls to ensure that they work with the agentic AI technology.
+
+As companies identify strong guardrails that protect agentic AI, its use and adoption will grow and mature. Despite the attraction of fully automated transactions and workflows for customers, humans must have an oversight role, ensuring that the system is working as planned and not leaving room for breaches.
+
+“With agentic AI, organizations are probably going to need more training and different processes to mitigate some of these threat factors. This technology is becoming so human-like [that] it creates a lot of potential problems,” says Taulli.
+
+Lesson 4: Service reps will need to learn a new way of working.
+
+When incorporating GenAI into a customer service center, training is essential for ensuring that service reps know how to work productively with the technology. The need for effective collaboration between humans and AI is made clear
+in a recent study
+. Researchers conducted a head-to-head showdown on performing the fastest, most accurate diagnostics; competitors were physicians using ChatGPT Plus and the GPT-4 LLM, physicians using conventional resources, and the LLM on its own.
+
+The study found no significant difference in accuracy or speed among the ChatGPT-enabled physicians and those without LLM assistance. The best performance was from the LLM working independently.
+
+According to the study authors, this does not in any way indicate that LLMs should be used to provide diagnoses without clinical oversight. The healthcare industry is intent on using these tools as complements to, not replacements for, physician expertise in the clinical decision-making process.
+
+According to the authors, the findings do indicate the vital need for physicians to become more adept at their collaboration with GenAI by undergoing structured training in effective, prompt strategy and design. As the authors say, “This study suggests there is much work to be done in terms of optimizing our partnership with AI in the clinical environment.”
+
+The same is true for customer service: Reps need to understand how to work with the AI to perform at their best. According to Boston Consulting Group’s Bamberger, GenAI implementations involve a heavy dose of change management.
+
+“We tell our clients that 10% of the success is around the algorithm, 20% is around the data and the technology, and 70% is around the operational transformation,” he says. The bulk of the work consists of operational tasks such as change management, people management, process reengineering, and orchestration of a cross-functional team.
+
+The need for AI training and change management will increase with agentic AI. In addition to prompt training, service reps will need to learn new ways of working as process flows change to map with these systems’ autonomous behaviors. As Deloitte says
+in a recent report
+on the emergence of agentic AI, processes will need to be redesigned to remove unnecessary steps. While autonomous agents can help each other navigate their environments, “cluttered and suboptimized processes could deliver disappointing results.”
+
+The need for AI training and change management will increase with agentic AI. In addition to prompt training, service reps will need to learn new ways of working as process flows change to map with these systems’ autonomous behaviors.
+
+Applying lessons from GenAI to agentic AI
+
+If you’ve spent the last year or two working on pilot projects or even a full deployment of GenAI in customer service, have no fear. The work you’ve done so far will be put to good use as the industry shifts to offering agentic customer experiences—if you pay attention to the GenAI lessons learned to date.
+
+AI: The new CX superpower
+
+Discover how AI enhances chatbots, sales automation, and more.
+
+Read the report
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+location
+
+document-footer
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

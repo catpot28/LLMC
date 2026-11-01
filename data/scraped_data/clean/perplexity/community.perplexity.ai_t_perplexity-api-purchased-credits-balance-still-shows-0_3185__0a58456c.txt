@@ -1,0 +1,160 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/perplexity-api-purchased-credits-balance-still-shows-0/3185
+page path  : /t/perplexity-api-purchased-credits-balance-still-shows-0/3185
+captured   : 2026-01-21 22:01:04 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_perplexity-api-purchased-credits-balance-still-shows-0_3185__0a58456c.html.gz
+========================================================================
+
+Perplexity API: Purchased credits, balance still shows "$0" - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API: Purchased credits, balance still shows "$0" - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Perplexity API: Purchased credits, balance still shows "$0"
+
+Bug Reports
+
+sonar-pro
+,
+
+search-api
+
+Neeraj_M
+
+December 20, 2025, 5:26pm
+
+1
+
+Describe the Bug
+
+I purchased API credits twice, but my credit balance never updated and continues to show
+$0
+, making my account unusable.
+
+I initially purchased
+$26 in API credits
+. After waiting several minutes, my balance still showed $0. Assuming this might be a transient issue, I made a second purchase of
+$25
+, but the balance still did not update.
+
+At this point, the account cannot be used despite successful payments, which appears to be a billing or credit application bug.
+
+Expected Behavior
+
+After a successful purchase, the API credit balance should update immediately (or within a reasonable processing window) and allow API usage.
+
+Actual Behavior
+
+Payments were successfully processed. (See screenshot)
+
+API credit balance remains at
+$0
+(See screenshot)
+
+Account is unusable and cannot consume API credits (See screenshot)
+
+Also note that credits were purchased on 13th December, but no credits are available to use the API since 12th December
+
+Steps to Reproduce
+
+Log in to the Perplexity API dashboard
+
+Purchase $26 in API credits via
+https://www.perplexity.ai/account/api/billing
+
+Wait several minutes and refresh the dashboard
+
+Observe that the credit balance remains $0
+
+Purchase an additional $25 in API credits
+
+Refresh the dashboard again
+
+Observe that the credit balance still remains $0 and API usage is blocked
+
+Logs or Screenshots (if applicable)
+
+Screenshot 2025-12-20 at 9.25.20 AM
+1114×1194 134 KB
+
+Additional Context
+
+Add any other context about the problem here.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Possible overcharge on our account
+
+General
+
+3
+
+129
+
+June 12, 2025
+
+API token usage reports and billing
+
+General
+
+1
+
+158
+
+May 15, 2025
+
+Perplexity Pro Bonus for the API is set to zero
+
+General
+
+1
+
+124
+
+May 15, 2025
+
+Lack of transparency on usage/pricing + ghosting from customer support
+
+General
+
+chat-completions
+
+0
+
+93
+
+July 3, 2025
+
+API billing logic
+
+Bug Reports
+
+0
+
+84
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

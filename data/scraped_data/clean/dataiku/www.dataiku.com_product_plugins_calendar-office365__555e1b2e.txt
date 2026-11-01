@@ -1,0 +1,420 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/calendar-office365/
+page path  : /product/plugins/calendar-office365/
+captured   : 2026-01-24 23:30:20 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_calendar-office365__555e1b2e.html.gz
+========================================================================
+
+Plugin: Microsoft Outlook Calendar | Dataiku
+
+Plugin: Microsoft Outlook Calendar | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Microsoft Outlook Calendar
+
+Microsoft Outlook Calendar
+
+Retrieve all the events from your Google Calendar, or from any resources you have read access to
+
+Plugin information
+
+Version
+
+0.0.2
+
+Author
+
+Dataiku (Vincent Breton)
+
+Released
+
+2021-06
+
+Last updated
+
+2025-08
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to retrieve events from your Microsoft Outlook Calendar account
+
+How to set up
+
+From the Azure Portal, go to
+Azure Active Directory > App registrations create a new App (New registration)
+. Set a name and a redirect URI pointing back to your DSS instance. It should follow this structure:
+https://<<your DSS instance domain>>:<<your DSS instance port>>/dip/api/oauth2-callback
+. Unless your DSS instance is on a localhost, the URI has to point to a https secured server.
+
+Register an application
+
+Click on the newly created app. Copy the Application ID. Then go to the
+Certificates & secrets > New client secret
+tab. Set a description, choose an expiration date, and copy the value of the created secret.
+
+Then navigate to the API permissions tab and add the following permissions:
+offline_access
+,
+Calendars.ReadWrite
+.
+
+How to use
+
+Before the plugin can be used for a given DSS user, it has to be enabled with its own profile. To do so, the user has to go to the
+DSS profile page > Credentials
+, and click on the edit icon corresponding to the calendar-office365 preset. This will redirect the user to the Microsoft Authentication page where they can allow DSS to access the data from their Calendar account.
+
+This plugin has two components: a custom dataset and a recipe.
+
+In a DSS flow, you can add a dataset by clicking on
++Dataset > Calendar office365
+. Then, select the authentication preset created and activated in the previous steps. Specify the id of the calendar you want to consult. By default, it will be empty, which will retrieve the user’s personal calendar. You need to narrow your Calendar Events search by adding a start and/or end date (mandatory).
+
+In some instances, you may want to retrieve the calendar of several resources, several time ranges, or a combination of both. To do so, create a dataset containing the combinations you want to retrieve, say a list of calendar ids of several resources.
+
+Create a dataset containing the calendar ids and/or dates to retrieve
+
+Then use it as an input to the Calendar office365 recipe: in your DSS flow, click
++Recipe > Calendar office365
+.
+
+Flow retrieving Calendar events based on your list of calendars
+
+Use the list of calendar id as input and create an output dataset. Pick a column name corresponding to each condition you want to search (any combination of
+calendar ids
+,
+from dates
+and
+end dates
+).
+
+Next, run the recipe and the calendars corresponding to each line of the input dataset will be retrieved in the output dataset.
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Office365 Calendar.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,761 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/build-deploy-agentic-ai-nvidia/
+page path  : /blog/build-deploy-agentic-ai-nvidia/
+captured   : 2026-06-10 05:35:34 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_build-deploy-agentic-ai-nvidia__94bcf219.html.gz
+========================================================================
+
+Deploy agentic AI faster with DataRobot and NVIDIA
+
+Deploy agentic AI faster with DataRobot and NVIDIA
+
+Skip to content
+
+Location
+
+us
+
+jp
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Location
+
+us
+
+jp
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+DataRobot with NVIDIA: The fastest path to production-ready AI apps and agents
+
+Organizations are eager to move into the era of agentic AI, but moving AI projects from development to production remains a challenge. Deploying agentic AI apps often requires complex configurations and integrations, delaying time to value.
+
+Barriers to deploying agentic AI:
+
+Knowing where to start:
+Without a structured framework, connecting tools and configuring systems is time-consuming.
+
+Scaling effectively
+: Performance, reliability, and cost management become resource drains without a scalable infrastructure.
+
+Ensuring security and compliance
+: Many solutions rely on uncontrolled data and models instead of permissioned, tested ones
+
+Governance and observability:
+AI infrastructure and deployments need clear documentation and traceability.
+
+Monitoring and maintenance:
+Ensuring performance, updates, and system compatibility is complex and difficult without robust monitoring.
+
+Now, DataRobot comes with NVIDIA AI Enterprise embedded — offering the fastest way to develop and deliver agentic AI.
+
+With a fully validated AI stack, organizations can reduce the risks of open-source tools and DIY AI while deploying where it makes sense, without added complexity.
+
+This enables AI solutions to be custom-tailored for business problems and optimized in ways that would otherwise be impossible.
+
+In this blog post, we’ll explore how AI practitioners can rapidly develop agentic AI applications using DataRobot and NVIDIA AI Enterprise, compared to assembling solutions from scratch. We’ll also walk through how to build an AI-powered dashboard that enables real-time decision-making for warehouse managers.
+
+Use Case: Real-time warehouse optimization
+
+Imagine that you’re a warehouse manager trying to decide whether to hold shipments upstream. If the warehouse is full, you need to reorganize your inventory efficiently. If it’s empty, you don’t want to waste resources; your team has other priorities
+
+But manually tracking warehouse capacity is time-consuming, and a simple API won’t cut it. You need an intuitive solution that fits into your workflow without required coding.
+
+Rather than piecing together an AI app manually, AI teams can rapidly develop a solution using DataRobot and NVIDIA AI Enterprise. Here’s how:
+
+AI-powered video analysis
+: Uses the NVIDIA AI Blueprint for video search and summarization as an embedded agent to identify open spaces or empty warehouse shelves in real time.
+
+Predictive inventory forecasting:
+Leverages DataRobot Predictive AI to forecast income inventory volume.
+
+Real-time insights and conversational AI:
+Displays live insights on a dashboard with a conversational AI interface.
+
+Simplified AI management:
+Provides simplified model management with NVIDIA NIM and DataRobot monitoring.
+
+This is just one example of how AI teams can build agentic AI apps faster with DataRobot and NVIDIA.
+
+Solving the toughest roadblocks in building and deploying agentic AI
+
+Building agentic AI applications is an iterative process that requires balancing integration, performance, and adaptability. Success depends on seamlessly connecting — LLMs, retrieval systems, tools, and hardware — while ensuring they work together efficiently.
+
+However, the complexity of agentic AI can lead to prolonged debugging, optimization cycles, and deployment delays.
+
+The challenge is delivering AI projects at scale without getting stuck in endless iteration.
+
+How NVIDIA AI Enterprise and DataRobot simplify agentic AI development
+
+Flexible starting points with NVIDIA AI Blueprints and DataRobot AI Apps
+
+Choose between NVIDIA AI Blueprints or DataRobot AI Apps to jumpstart AI application development. These pre-built reference architectures lower the entry barrier by providing a structured framework to build from, significantly reducing setup time.
+
+To integrate NVIDIA AI Blueprint for video search and summarization, simply import the blueprint from the NVIDIA NGC gallery into your DataRobot environment, eliminating the need for manual setup.
+
+Accelerating predictive AI with RAPIDS and DataRobot
+
+To build the forecast, teams can leverage RAPIDS data science libraries along with DataRobot’s full suite of predictive AI capabilities to automate key steps in model training, testing, and comparison.
+
+This enables teams to efficiently identify the highest-performing model for their specific use case.
+
+Optimizing RAG workflows with NVIDIA NIM and DataRobot’s LLM Playground
+
+Using the LLM playground in DataRobot, teams can enhance RAG workflows by testing different models like the NVIDIA NeMo Retriever text reranking NIM or the NVIDIA NeMo Retriever text embedding NIM, and then compare different configurations side by side. This evaluation can be done using an NVIDIA LLM NIM as a judge, and if desired, augment the evaluations with human input.
+
+This approach helps teams identify the optimal combination of prompting, embedding, and other strategies to find the best-performing configuration for the specific use case, business context, and end-user preferences.
+
+Ensuring operational readiness
+
+Deploying AI isn’t the finish line — it’s just the start. Once live, agentic AI must adapt to real-world inputs while staying consistent. Continuous monitoring helps catch drift, bugs, and slowdowns, making strong observability tools essential. Scaling adds complexity, requiring efficient infrastructure and optimized inference.
+
+AI teams can quickly become overwhelmed with balancing development of new solutions and simply keeping existing ones.
+
+For our agentic AI app, DataRobot and NVIDIA simplify management while ensuring high performance and security:
+
+DataRobot monitoring and NVIDIA NIM optimize performance and minimize risk, even as the number of users grows from 100 to 10K to 10M.
+
+DataRobot Guardrails, including NeMo Guardrails, provide automated checks for data quality, bias detection, model explainability, and deployment frameworks, ensuring trustworthy AI.
+
+Automated compliance tools and complete end-to-end observability help teams stay ahead of evolving regulations.
+
+Deploy where it’s needed
+
+Managing agentic AI applications over time requires maintaining compliance, performance, and efficiency without constant intervention.
+
+Continuous monitoring helps detect drift, regulatory risks, and performance drops, while automated evaluations ensure reliability. Scalable infrastructure and optimized pipelines reduce downtime, enabling seamless updates and fine-tuning without disrupting operations.
+
+The goal is to balance adaptability with stability, ensuring the AI remains effective while minimizing manual oversight.
+
+DataRobot, accelerated by NVIDIA AI Enterprise, delivers hyperscaler-grade ease of use without vendor lock-in across diverse environments, including self-managed on-premises, DataRobot-managed cloud, and even hybrid deployments.
+
+With this seamless integration, any deployed models get the same consistent support and services regardless of your deployment choice — eliminating the need to manually set up, tune, or manage AI infrastructure.
+
+The new era of agentic AI
+
+DataRobot with NVIDIA embedded accelerates development and deployment of AI apps and agents through simplifying the process at the model, app, and enterprise level. This enables AI teams to rapidly develop and deliver agentic AI apps that solve complex, multistep use cases and transform how end users work with AI.
+
+To learn more,
+request a custom demo
+of DataRobot with NVIDIA.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+Build an agent that writes its own tools
+
+Read More
+
+June 4, 2026
+
+|
+8 min read
+
+Blog
+
+How to build a digital twin agent (with guardrails)
+
+Read More
+
+June 2, 2026
+
+|
+7 min read
+
+Authors
+
+by
+
+Chris deMontmollin
+
+,
+
+Kumar Venkateswar
+
+,
+
+Dr. Ramyanshu (Romi) Datta
+
+March 18, 2025
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Practitioners
+
+Industry-standard LLM benchmarks in DataRobot
+
+May 27, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+Build an agent that writes its own tools
+
+Read More
+
+June 4, 2026
+
+|
+8 min read
+
+Blog
+
+How to build a digital twin agent (with guardrails)
+
+Read More
+
+June 2, 2026
+
+|
+7 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

@@ -1,0 +1,74 @@
+=== SOURCE =============================================================
+company    : Adobe (adobe)
+url        : https://www.adobe.com/accessibility/pdf.html
+page path  : /accessibility/pdf.html
+captured   : 2026-06-12 12:07:26 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/adobe/www.adobe.com_accessibility_pdf.html__2ba602f4.html.gz
+========================================================================
+
+PDF specification
+
+PDF specification
+
+PDF Specifications
+
+PDF is one of the most popular file formats in use today. PDF files specify the appearance of pages in a document in a reliable and device-independent manner, which is highly desirable to authors looking to deliver a predictable experience for readers of their documents.
+
+PDF History
+
+PDF was initially defined and made available as a specification in 1993. At this time, page content was represented as an image and there was no mechanism for users with disabilities to access the page content unless they could see it visually.
+
+Version 1.3 of the PDF specification in 2000 introduced features that enabled an underlying logical structure to exist for a PDF document. In version 1.4 (2001) the concept of “tagged PDF” was added to the specification, which enabled users of assistive technologies such as Window-Eyes and JAWS to present document content to users without vision. Tagged PDF also enabled other accessibility features in PDF viewers including text reflowing to allow users to increase text size without needing to scroll horizontally. Subsequent versions of the PDF specification included additional features such as the addition of form controls, and included support for accessibility as the features were introduced.
+
+With version 1.7, Adobe released control of the PDF specification to ISO, and in July 2008 ISO 32000-1:2008 was released as an International Standard.
+
+Is PDF Accessible?
+
+Support for PDF accessibility dates back to 2001.
+
+The PDF specification provides robust support for accessibility. The accessibility of any individual PDF file depends upon how well the author prepared the file for accessibility, and the accessibility of the experience for the end user depends on how well the PDF viewer application supports the accessibility features in the specification.
+
+Adobe Reader takes advantage of all attributes of PDF files that have been properly prepared for accessibility. Familiar accessibility features found in formats like HTML such as alternative text for images, semantic elements to convey relationships and structure, labels for form controls, headings for tabular data, and a meaningful and logical content sequence are all fully supported by the PDF specification. Users of popular assistive technologies such as NVDA, JAWS, VoiceOver, ZoomText, SuperNova, MAGic, and more are able to use their tool of choice and access information contained in PDF files.
+
+In addition to support by assistive technologies, Adobe Reader also provides support for critical accessibility features such as text enlargement, text reflow, high-contrast viewing, as well as providing rich support for keyboard-only access for users who are unable to use a mouse.
+
+An
+Overview of PDF Accessibility
+is available which provides general information about features of PDF which support accessibility.
+
+Are all PDF files accessible?
+
+PDF files can be created in many ways, and not all ways produce accessible files. Many PDF documents are created with scanners and cannot be regarded as accessible without substantial work. Other files may be created with lower-quality tools which do not provide support for PDF tags necessary for proper accessibility support.
+
+Files created with many common tools, including Microsoft Word, OpenOffice Writer, Adobe InDesign, and Adobe Acrobat (to name just a few) do support accessibility well. Even these tools require that the author create the document with accessibility as a goal – information such as image equivalents and logical structure types needed to properly represent the content of the document must be added by the author and verified to be appropriate.
+
+Authors who use tools that support the accessibility features of the PDF format and who follow best practices for authoring accessible PDF documents make highly accessible documents.
+
+PDF Standards
+
+ISO 32000-1:2008, the International Standard for PDF. Since 2008, PDF is an open standard, not controlled by any single organization.
+
+Document Management – Portable Document Format – Part 1: PDF 1.7, First Edition
+
+Adobe-hosted version of the original ISO 320000 specification
+, available free of charge.
+
+PDF/UA – PDF/Universal Accessibility is the common name for ISO 14289-1. PDF/UA provides requirements for PDF documents, viewers, and assistive technologies to ensure that accessibility is properly supported.
+
+Document management applications -- Electronic document file format enhancement for accessibility -- Part 1: Use of ISO 32000-1 (PDF/UA-1)
+
+WCAG 2.0 (ISO 40500:2012) – WCAG 2.0 is the
+W3C’s Web Content Accessibility Guidelines version 2.0
+, also an ISO standard. WCAG 2.0 is implemented into legal policies around the world, including in Europe, Australia, Canada, the United State, and more. PDF documents can meet WCAG 2.0 to the Priority AA level, and the WCAG Working Group provides a
+set of techniques which are helpful to authors looking to create accessible PDF
+that conforms to this standard.
+
+WCAG 2.0 Techniques for PDF
+
+Section 508 – The Rehabilitation Act of 1973 includes the Section 508 amendments which are the technical standards that apply to US Government procurement and development. The current Section 508 rules are based on WCAG 1.0, and well-authored PDF documents can meet these technical standards. Section 508 is currently being refreshed and it is expected that the next version of the technical standards will be based on WCAG 2.0.
+
+Section 508 Standards Guide
+
+Home
+
+Adobe Accessibility

@@ -1,0 +1,677 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/onnx-exporter/
+page path  : /product/plugins/onnx-exporter/
+captured   : 2026-02-14 01:13:38 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_onnx-exporter__85b93b37.html.gz
+========================================================================
+
+Plugin: ONNX Exporter | Dataiku
+
+Plugin: ONNX Exporter | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+ONNX Exporter
+
+ONNX Exporter
+
+The ONNX exporter plugin allows to export Visual Deep Learning and Keras .h5 models to ONNX format.
+
+Plugin information
+
+Version
+
+1.2.1
+
+Author
+
+Dataiku (Arnaud d’Esquerre, Nicolas Dalsass)
+
+Released
+
+2020-07-15
+
+Last updated
+
+2025-06-09
+
+License
+
+Apache 2.0
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+What is ONNX?
+
+ONNX is an open format built to represent machine learning models for scoring (inference) purposes. ONNX defines a common set of operators – the building blocks of machine learning and deep learning models – and a common file format to enable AI developers to use models with a variety of frameworks, tools, runtimes, and compilers.
+More info here
+
+Description
+
+This plugin aims at offering an easy way to deploy deep learning models to various systems with the ONNX runtime.
+
+You can learn more about the languages, architectures and hardware accelerations supported by ONNX runtime
+here
+.
+
+It offers the conversion of two kinds of models:
+
+Visual Deep Learning models trained with DSS
+
+Keras
+.h5 models
+.
+
+Note that for Visual Deep Learning models, the plugin will export the model itself but not the
+features handling
+defined in DSS.
+
+This plugin contains one recipe and one macro for each conversion type.
+
+Visual Deep Learning models trained with DSS:
+
+Convert saved model to ONNX macro
+
+Convert saved model to ONNX recipe
+
+Keras
+.h5 models
+:
+
+Convert Keras .h5 model to ONNX macro
+
+Convert Keras .h5 model to ONNX recipe
+
+Installation Notes
+
+The plugin can be installed from the Plugin Store or via the zip download (see installation panel on the right).
+
+How to use the Macros ?
+
+Convert saved model to ONNX macro
+
+(If you don’t already have one) create a DSS python3 code environment
+
+with the following packages (i.e. packages needed for Visual Deep Learning with Tensorflow>=2.8.0):
+
+tensorflow>=2.8.0,<3.0
+
+scikit-learn>=0.20,<0.21
+
+scipy>=1.2,<1.3
+
+statsmodels==0.12.2
+
+Jinja2>=2.11,<2.12
+
+MarkupSafe<2.1.0
+
+itsdangerous<2.1.0
+
+flask>=1.0,<1.1
+
+pillow==8.4.0
+
+cloudpickle>=1.3,<1.6
+
+h5py==3.1.0
+
+Train a Visual Deep learning model in DSS with this code environment (
+here
+is a tutorial to help you get started)
+
+Install this plugin
+
+Go the flow
+
+Click on the saved model
+
+In the right panel in the
+other actions section
+, click on
+Export to ONNX
+
+Fill in the parameters (details below)
+
+Click on
+RUN MACRO
+
+Click on
+Download ONNX model
+to trigger the download. The model has also been added to the output folder
+
+Available parameters
+
+Saved model
+(DSS saved model): Visual Deep Learning model trained in DSS to convert
+
+Output folder
+(DSS managed folder): Folder where the ONNX model will be added
+
+Output model path
+(String): Path where the ONNX model will be stored
+
+Overwrite if exists
+(boolean): Whether the model should overwrite the existing file at same path (if it already exists)
+
+Fixed batch size
+(boolean): Some runtimes do not support dynamic batch size and thereefore the size should be specified during export.
+
+Batch size
+(int) [optional]: Batch size of the model’s input
+
+Force input/output to Float (32 bits)
+(boolean): Some runtimes do not support
+Double
+. Uncheck if your runtime supports
+Double
+
+Convert Keras .h5 model to ONNX macro
+
+Put a .h5 model file obtained through Keras’s model.save() method into a DSS Managed Folder
+
+Go to flow
+
+Click on the folder
+
+In the right panel in the
+other actions section
+, click on
+Export .h5 to ONNX
+
+Fill in the parameters (details below)
+
+Click on
+RUN MACRO
+
+Click on
+Download onnx model
+to trigger the download. The model has also been added to the output folder
+
+Available parameters
+
+Input folder
+(DSS managed folder): Folder where the .h5 model is
+
+Model path
+(String): Path to the .h5 model to convert
+
+Output folder
+(DSS managed folder) [optional]: Folder where the ONNX model will be added.
+
+If
+Output folder
+is left empty the model is added to the input folder.
+
+Output model path
+(String): Path where the ONNX model will be stored
+
+Overwrite if exists
+(boolean): Whether the model should overwrite the existing file at same path (if it already exists)
+
+Fixed batch size
+(boolean): Some runtimes do not support dynamic batch size and thereefore the size should be specified during export.
+
+Batch size
+(int) [optional]: Batch size of the model’s input
+
+Force input/output to Float (32 bits)
+(boolean): Some runtimes do not support
+Double
+. Uncheck if your runtime supports
+Double
+
+The macros are also available in the
+Macro
+menu of a project.
+
+How to use the Recipes ?
+
+Convert saved model to ONNX recipe
+
+Create (if you don’t already have one) a DSS python3 code env
+
+with the following packages (i.e. packages needed for Visual Deep Learning with Tensorflow>=2.8.0):
+
+tensorflow>=2.8.0,<3.0
+
+scikit-learn>=0.20,<0.21
+
+scipy>=1.2,<1.3
+
+statsmodels==0.12.2
+
+Jinja2>=2.11,<2.12
+
+MarkupSafe<2.1.0
+
+itsdangerous<2.1.0
+
+flask>=1.0,<1.1
+
+pillow==8.4.0
+
+cloudpickle>=1.3,<1.6
+
+h5py==3.1.0
+
+Train a Visual Deep learning model in DSS with this code env
+
+Create a managed folder by clicking on
++ DATASET > Folder
+
+Install this plugin
+
+Go the flow
+
+Click on the
++ RECIPE > ONNX exporter
+button
+
+Click on the
+Convert saved model
+option in the modal
+
+Choose the saved model you just trained as input and the folder you created as output
+
+Fill in the parameters on the recipe page (details below)
+
+Available parameters
+
+Output model path
+(String): Path where the ONNX model will be stored
+
+Overwrite if exists
+(boolean): Whether the model should overwrite the existing file at same path (if it already exists)
+
+Fixed batch size
+(boolean): Some runtimes do not support dynamic batch size and thereefore the size should be specified during export.
+
+Batch size
+(int) [optional]: Batch size of the model’s input
+
+Force input/output to Float (32 bits)
+(boolean): Some runtimes do not support
+Double
+. Uncheck if your runtime supports
+Double
+
+Convert Keras .h5 model to onnx recipe
+
+Put a .h5 model file obtained through Keras’s model.save() method into a DSS Managed Folder
+
+Go to flow
+
+Click on the folder
+
+In the right panel in the Plugin recipes section, click on
+ONNX exporter
+
+Click on the
+Convert Keras .h5 model
+option in the modal
+
+Fill in the parameters (details below)
+
+Available parameters
+
+Model path
+(String): Path to the .h5 model to convert
+
+Output folder
+(DSS managed folder) [optional]: Folder where the ONNX model will be added.
+
+If
+Output folder
+is left empty the model is added to the input folder.
+
+Output model path
+(String): Path where the ONNX model will be stored
+
+Overwrite if exists
+(boolean): Whether the model should overwrite the existing file at same path (if it already exists)
+
+Fixed batch size
+(boolean): Some runtimes do not support dynamic batch size and thereefore the size should be specified during export.
+
+Batch size
+(int) [optional]: Batch size of the model’s input
+
+Force input/output to Float (32 bits)
+(boolean): Some runtimes do not support
+Double
+. Uncheck if your runtime supports
+Double
+
+Install in DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for ONNX exporter.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

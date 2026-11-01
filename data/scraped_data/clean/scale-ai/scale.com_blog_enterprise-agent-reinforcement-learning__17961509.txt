@@ -1,0 +1,90 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/enterprise-agent-reinforcement-learning
+page path  : /blog/enterprise-agent-reinforcement-learning
+captured   : 2026-06-14 23:17:13 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_enterprise-agent-reinforcement-learning__17961509.html.gz
+========================================================================
+
+Enterprise Reinforcement Learning Research for Agents | Scale AI
+
+Enterprise Reinforcement Learning Research for Agents | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Enterprise
+Training the Next Generation of Enterprise Agents: Scale's Research in Reinforcement Learning
+By
+
+Penn Jenks
+&
+Sam Denton
+·
+August 13, 2025
+·
+3 min read
+Copy Link
+Language models provide impressive general capabilities off the shelf, but because they were not trained on private enterprise data they fall short of delivering the specialized performance enterprises need for their unique workflows, internal systems, and proprietary data. At Scale, our Safety, Evaluations and Alignment Lab (SEAL) recently published
+foundational reinforcement learning research
+, and our enterprise team is pioneering new approaches to solve this challenge through cutting-edge reinforcement learning research focused on training AI agents specifically for enterprise environments.
+Beyond AI Workflow Automation: A Scalable Agent Training Framework
+Traditional enterprise AI implementations rely on workflow-based agents that require engineers to hand-craft specialized logic for each customer problem. This approach is inherently unscalable as it's time-intensive, brittle, and demands specialized resources like applied AI engineers for every new use case. Additionally, prompt engineering can only take agent performance so far — simply adding context via prompting can never replace letting agents “
+learn continually from their own experience
+”. Scale's research takes a more general and scalable approach: instead of engineering solutions, we train agents to learn the decision-making required to solve each task through reinforcement learning with verifiable rewards and tool integration.
+RL vs. Supervised Fine-Tuning: 31% Accuracy Improvement
+Our technique lies in training agents that can autonomously decide which tools to use and how to use them, whether that's analyzing proprietary documents, conducting web searches, or executing complex coding tasks. We go beyond the capabilities available in commercial LLM APIs by leveraging reinforcement learning with enterprise-specific tools in the training loop. We're creating agents that learn to solve problems and make correct decisions using the specific responses from tools (traditionally known as observations in RL), rather than following pre-programmed workflows.
+We build on
+research
+conducted by SEAL showing that we can also leverage rubrics for problems that are not easily verifiable—i.e., they lack an unambiguous ground truth. Early results demonstrate that our reinforcement learning approach with tools and verifiable rewards significantly outperforms traditional supervised fine-tuning methods, leading to absolute accuracy boosts as high as 31% with RL vs. 12% with SFT on an internal tool-required benchmark.
+Delivering Enterprise-Specific Performance at Scale
+We're actively implementing these capabilities with enterprise data across multiple domains: document analysis for specialized fields, determining outcomes for critical legal reasoning, web search agents, and complex mathematical and coding reasoning tasks. Our training methodology teaches agents to implicitly learn tool usage patterns, requiring only prompts and verifiable outcomes.
+Our experienced MLEs work with our customer's subject matter experts to design the best implementation of reinforcement learning for each specific task, implement 'reward crafting' including deep rubric-building expertise for specialized domains, create novel environments for agent training on enterprise-specific tasks, and build infrastructure for long-running asynchronous agents.
+While other companies focus on general-purpose models, Scale is developing multi-agent training capabilities and working with state-of-the-art open-weight models to achieve state of the art domain-specific performance by leveraging the agent-specific data captured by
+Scale GenAI Platform (SGP)
+. Our future research workstreams include scaling to more complex enterprise problems and multi-agent training.
+The implications for enterprise customers are transformative: enabling performance for enterprise-specific agents that is simply not possible with other solutions. With Scale's Enterprise work in reinforcement learning, our customers are deploying agents that learn and adapt to their specific processes, delivering superior performance while dramatically reducing implementation time. Scale's Enterprise team is pushing the boundaries of reinforcement learning research to train superior enterprise agents.
+To learn more about how Scale can help you implement reinforcement learning for agents to improve on your complex workflows, book a meeting below.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

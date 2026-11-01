@@ -1,0 +1,431 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/geoadmin/
+page path  : /product/plugins/geoadmin/
+captured   : 2026-01-25 00:16:42 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_geoadmin__e8526e96.html.gz
+========================================================================
+
+Plugin: Reverse Geocoding / Admin maps | Dataiku
+
+Plugin: Reverse Geocoding / Admin maps | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Reverse Geocoding / Admin maps
+
+Reverse Geocoding / Admin maps
+
+This plugin provides a processor for reverse geocoding (from geopoints to administrative entities) and activates administrative map visualizations
+
+Analyzing the price of gas in French counties.
+
+Plugin Information
+
+Version
+
+2.2.1
+
+Author
+
+Dataiku
+
+Released
+
+2014/12/24
+
+Last updated
+
+2022/04/06
+
+License
+
+Proprietary
+
+One of the challenges for successful Geospatial analytics with DSS is being able to aggregate from individual geolocalized data points to meaningful aggregates, like per-region revenue. This plugin provides tools to aggregate geopoints to administrative levels (country, region, city …) both for data processing and data visualisation.
+
+This plugin provides two types of component:
+
+A visual preparation processor for reverse geocoding (extracting city name, country, etc. for each geopoint);
+
+Support for the ‘Administrative map’ charts (aggregated visualisation of geopoints on administrative levels)
+
+Detailed documentation
+
+How to set up
+
+How to use
+
+Reverse geocoding processor
+
+Administrative maps
+
+How to set up
+
+To get help on how to install a plugin, please refer to
+the following documentation
+.
+
+How To Use
+
+The plugin has two types of components:
+
+a Reverse Geocoding processor (in the Prepare visual recipe)
+
+Administrative maps
+
+The plugin has been built based on the Open Street Map data.
+
+Reverse geocoding processor
+
+The reverse
+geocoding
+processor takes geographic coordinates as input and extracts the different levels of administrative boundary to which it belongs (country, region, city …).
+
+The input should be a GeoPoint or a Geometry column.
+
+The processor will create two columns per administrative level for which you provide a column name: one with the local name of the administrative entity and one with the English name.
+
+The administrative boundaries we use are the ones defined in Open Street Map. The type of administrative boundary for each level depends on the country. For more information about the administrative boundaries and the meaning of each level per country, please refer to the
+Open Street Map documentation.
+
+Administrative maps
+
+This plugin is a pre-requisite for using Administrative maps.
+
+The Administrative maps display information from GeoGoints aggregated at an administrative level (either Country, Region/State, Department/County, Metropolis or City). There are two types of maps:
+
+Bubbles maps
+: the administrative entities on which data are aggregated are represented with bubbles
+
+Filled maps
+: the administrative entities on which data are aggregated are represented with their polygons
+
+For more information, see
+our reference documentation
+.
+
+Both the charts and the preparation processor operate on columns with
+Geometry
+or
+Geopoint
+meaning in DSS
+
+Image by Mariorido – CC SA 3.0
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Reverse Geocoding / Admin maps.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

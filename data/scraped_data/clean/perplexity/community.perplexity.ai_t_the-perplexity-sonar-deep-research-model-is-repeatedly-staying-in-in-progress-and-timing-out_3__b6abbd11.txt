@@ -1,0 +1,127 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/the-perplexity-sonar-deep-research-model-is-repeatedly-staying-in-in-progress-and-timing-out/3663
+page path  : /t/the-perplexity-sonar-deep-research-model-is-repeatedly-staying-in-in-progress-and-timing-out/3663
+captured   : 2026-02-07 08:13:37 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_the-perplexity-sonar-deep-research-model-is-repeatedly-staying-in-in-progress-and-timing-out_3__b6abbd11.html.gz
+========================================================================
+
+The Perplexity sonar-deep-research model is repeatedly staying in IN_PROGRESS and timing out - Bug Reports - Perplexity API Platform Forum
+
+The Perplexity sonar-deep-research model is repeatedly staying in IN_PROGRESS and timing out - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+The Perplexity sonar-deep-research model is repeatedly staying in IN_PROGRESS and timing out
+
+Bug Reports
+
+sonar-deep-research
+
+ashvini
+
+January 24, 2026, 2:58am
+
+1
+
+Hi everyone,
+
+I’m facing an issue with the
+sonar-deep-research
+model when using async chat completions.
+
+Whenever I submit a job, it stays in
+IN_PROGRESS
+status across multiple polling attempts and eventually triggers a
+TIME_OUT
+error. This has been happening continuously since yesterday and is still occurring today.
+
+What’s happening:
+
+Jobs never transition to a final completed state when checked via the polling endpoint.
+
+After many attempts, the request ultimately times out without returning a result.
+
+I wanted to check if there’s any update regarding this issue or a recommended workaround? Has anyone else seen similar behavior?
+
+Thanks in advance!
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+7
+
+128
+
+February 5, 2026
+
+# Perplexity Sonar Deep Research Model Timeout Issue - Seeking Solution
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+255
+
+October 25, 2025
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully
+
+Bug Reports
+
+sonar-deep-research
+
+2
+
+30
+
+February 3, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+279
+
+June 1, 2025
+
+After updating: Network timeout at: https://api.perplexity.ai/chat/completions
+
+Bug Reports
+
+4
+
+272
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

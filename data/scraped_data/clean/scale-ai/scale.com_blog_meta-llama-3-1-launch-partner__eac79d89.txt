@@ -1,0 +1,126 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/meta-llama-3-1-launch-partner
+page path  : /blog/meta-llama-3-1-launch-partner
+captured   : 2026-06-14 23:19:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_meta-llama-3-1-launch-partner__eac79d89.html.gz
+========================================================================
+
+Meta and Scale Partner on Enterprise Adoption of Llama 3.1 | Scale AI
+
+Meta and Scale Partner on Enterprise Adoption of Llama 3.1 | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Partnerships
+Meta and Scale Partner to Drive Enterprise Adoption of Llama 3.1 405B Using Scale GenAI Platform
+By
+
+The Scale Team
+·
+July 23, 2024
+·
+8 min read
+Copy Link
+Scale is proud to be a
+Llama 3.1 Launch Partner
+! Llama 3.1 405B is the largest openly available foundation model with capabilities that rival the best closed-source models.
+Scale Data Engine
+provided a large amount of data for supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF) to help make Llama 3.1 the leading open-source LLM. Now, Meta and Scale also partnered to help businesses customize, evaluate, and deploy Llama 3.1 405B for enterprise use cases using
+Scale GenAI Platform
+.
+Only 10% of enterprises have GenAI in production, caused by a lack of trust in the performance and reliability of models. For enterprises to bridge this trust gap, they need to systematically
+evaluate, improve, and monitor GenAI systems
+for performance, safety, and reliability. Unbiased evaluations of LLMs for enterprise tasks are difficult, as there are no widely accepted benchmarks. So, we have built a private set of evaluations using Scale GenAI Platform to analyze the performance of Llama 3.1 on these enterprise use cases. These evaluations include enterprise-style chatbot prompts for financial services, legal, and edTech.
+In addition to unbiased benchmarks, enterprises also need a platform to manage evaluations of LLMs. Scale GenAI Platform is the perfect enterprise testing ground for closed- and open-source models as it has built-in evaluation capabilities that enable users to easily compare results across different models, along with application development and deployment functionality.
+The Setup
+We evaluated the performance of Llama 3.1 405B across thousands of prompts and compared its performance to the best closed and open-source models across several enterprise domains:
+Enterprise-style chatbot prompts covering legal, edTech, and financial services use cases. We grouped prompts into two different categories: short (1 - 2 sentences) and complex (3 - 5 sentences).
+Synthesis from content including legal, financial services, biology, and history domains
+Datasets
+To start, we developed custom knowledge bases comprised of finance and legal textbooks, as well as other source materials that were relevant to each domain, such as legal codes. These datasets consisted of what would be considered general knowledge for each domain.
+These knowledge bases were then imported into Scale GenAI Platform to generate evaluation datasets for each of the domains. For each domain, we generated chatbot-style datasets that simulated lawyer queries to a legal chatbot, financial services employee queries to a finance chatbot, and student queries to an edTech chatbot. Each model was also provided relevant context (chunks of text) from a data source on which it should ground its answer.
+For real-world enterprise engagements, we use proprietary source documents and relevant industry data to generate custom evaluation datasets. For enterprise engagements, we would often include a gold standard “expected output” for each query which would then be used to evaluate model accuracy. For the purposes of our evaluations of Llama 3.1, we focused on head-to-head model comparisons only.
+Performing the Evaluations
+We then relied on human experts to evaluate models head-to-head in Scale GenAI Platform and created a weighted average score across multiple factors, such as which model provided the most complete, accurate, or relevant answer. The table below summarizes this rubric and the criteria used to determine a superior response.
+Completeness
+Does the response fully answer all explicit aspects of the prompt? Does the response omit any essential information?
+Accuracy
+Which response contains the most accurate and reliable information, and which aligns with established facts or evidence? Established facts can be from common knowledge or verified using the provided context.
+Depth
+Which response provides a higher level of detail, insight, and nuance?
+Relevance
+Which response provides the most useful supporting information and claims in answering the main question or prompt? The supporting information logically defends or clearly illustrates the key points and the central claims made in the response.
+Clarity
+Which response is more clearly worded and understandable?
+Formatting
+Which response organizes the information in a way that supports the key points with clarity and brevity?
+We leveraged Scale GenAI Platform to perform these evaluations with human experts across thousands of examples to measure model performance using our enterpise rubrics. Expert evaluators were presented with the prompts and the response from two models and were asked to identify which model performed better in the different categories of the evaluation rubric.
+Evaluation interface in Scale GenAI Platform
+In addition to the prompt and individual model responses, human raters had access to the context used to generate the query. This context is useful for determining the accuracy of model responses and maps closely to how these models will perform at summarizing source material as part of a retrieval augmented generation (RAG) workflow.
+Example of the context provided for each evaluation within Scale GenAI Platform
+The Results
+Our evaluation datasets included thousands of queries for domains including financial services, legal, and edTech. After completing the evaluations, we aggregated the responses and generated a weighted average score across the rubric criteria and ranked models for performance in each query and, more broadly, for each evaluation dataset. We implemented controls for
+inter-rater reliability
+along with audits to ensure that we had reliable scores for each task and evaluation set.
+From our evaluations, Llama 3.1 rivals the performance of many closed-source models and outperforms all other open-source models. Llama 3.1 performs particularly well in the categories of completeness, accuracy, and depth. Demonstrated common knowledge from the model is not as extensive as leading closed-source models but is quite close. That being said, Llama 3.1 is very good at summarizing content from the provided context, which is especially useful for enterprise workflows that rely on retrieval augmented generation (RAG).
+Let’s now examine a couple of detailed evaluation examples to demonstrate how Llama 3.1 405B stacks up.
+Llama 3.1 405B vs. Leading Closed-Source Models
+In the example below, there is a legal domain question (“User Prompt”) followed by the model responses from Llama 3.1 405B on the left and a leading closed-source model on the right. Llama 3.1 performs favorably in accuracy and completeness compared to the closed-source model, as noted by the human preference rankings of “neutral” (meaning there is an equal preference for the responses from each model) for the categories of accuracy, completeness, and depth.
+Qualitatively, Llama 3.1 405B is able to provide a clear, well-structured, and thorough response to the query. The model accesses the context (“Reference Material”) and synthesizes its answers in reference to the most relevant portions. For example, the model response cites the specific rule 4.10.3: “This regime is based on Listing Rule 4.10.3, which makes it a requirement for listed entities to comply with the recommendations or provide an explanation for non-compliance.” Other instances of these references are highlighted in the image. Because the closed source model also references this context well, the evaluation earned a neutral rating from human raters.
+The ability to reference context and provide clear and succinct summaries is critical for not just legal use cases, but many enterprise use cases in any industry. Retrieval Augmented Generation (RAG) workflows rely on completion models like Llama 3.1 405B to be able to reliably summarize the relevant context with accuracy.
+Llama 3.1 405B vs. Leading Open-Source Models
+In the finance example below, we evaluate responses from Llama 3.1 405B on the left and Llama 3 70B on the right. Llama 3.1 405B outperforms Llama 3 70B (as well as all other open-source models) in accuracy, completeness, and depth per our human evaluators.
+Llama 3 70B is already quite good at many tasks, especially for a smaller model (see rankings on the
+SEAL Leaderboard
+, where this model outperforms many larger closed-source models). However, Llama 3.1 405B’s responses stand out in a few ways. The response is more complete and robust, often including additional steps that Llama 3 70B does not. It also is more useful, for example by breaking down the cost-of-capital calculation and separating it into bullets, while Llama 3 70B only includes some of these details tucked away in a paragraph. Better formatting and more complete explanations make it much easier for users to quickly understand core concepts.
+Conclusion
+These are just a couple of examples out of the thousands of responses that we evaluated where Llama 3.1 stood out as the clear leader of open-source models for enterprise applications and having comparable performance to leading closed-source models.
+While we focused on legal, financial services, and edTech in our evaluations, similar performance can be expected across a wide range of other enterprise domains including telecommunications, insurance, customer service, and more. As Llama 3.1 is open-source, it can be customized and leveraged for enterprise tasks for a lower cost of entry compared to most closed-source models.
+With the evaluation capabilities in Scale GenAI Platform, your enterprise can get an unbiased sense of how leading LLMs such as Llama 3.1 perform for your specific use case. You can further customize the model via retrieval augmented generation (RAG) and fine-tuning, and deploy these models to production, including in your own virtual private cloud (VPC).To see how well Llama 3.1 performs for your unique enterprise use case using
+Scale GenAI Platform
+, book a demo below today.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

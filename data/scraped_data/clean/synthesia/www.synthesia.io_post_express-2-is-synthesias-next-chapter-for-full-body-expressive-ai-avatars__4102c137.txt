@@ -1,0 +1,287 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars
+page path  : /post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars
+captured   : 2026-05-20 07:07:23 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/synthesia/www.synthesia.io_post_express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars__4102c137.html.gz
+========================================================================
+
+Express-2 is Synthesia’s next chapter for full-body, expressive AI avatars
+
+Express-2 is Synthesia’s next chapter for full-body, expressive AI avatars
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Create account
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Team
+Learning & Development
+Sales Enablement
+Marketing
+Business Operations
+Knowledge Management
+IT & Cybersecurity
+Use case
+Technical Training
+Compliance Training
+Sales Training
+Employee Development
+SOP
+Product Video
+Industry
+Manufacturing
+Tech & Software
+Healthcare
+Financial services
+Professional Services
+Retail
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+AI Ethics
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Blog
+/
+Synthesia
+Express-2 is Synthesia’s next chapter for full-body, expressive AI avatars
+Written by
+Peter Hill
+September 4, 2025
+Create AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+In this article
+Text Link
+Today, we’re diving deeper into Express-2, our new video and voice engine for
+AI avatars
+that pairs state-of-the-art voice cloning with a diffusion transformer (DiT) model designed to create full-body avatars that gesture like professional speakers. Thanks to Express-2, our new avatars combine facial expressions and lip sync with natural hand and body gestures, which makes it easier for viewers to understand and follow the context of the video.
+Express-2 has been optimized for realism, control, and reliability at scale, generating 1080p, 30fps avatar videos of arbitrary length; the engine is built from two tightly-connected parts:
+Express-Voice
+: our proprietary in-context learning sub-system that instantly clones a voice, preserving identity, accent, and expressiveness without any fine-tuning. In blind tests with 100 native English-speaking evaluators across 17 diverse accents, Express-Voice was rated highest for matching the original speaker’s identity, rhythm and accent.
+Express-Video
+: an avatar animation and rendering sub-system architected on a video stack that translates speech into natural gestures, facial dynamics, and photorealistic frames through three coordinated models:
+Express-Animate
+(co-speech motion generation),
+Express-Eval
+(audio-motion alignment), and
+Express-Render
+(30fps video generation at 1080p).
+{lite-youtube videoid="2KDuI4_RH0U" style="background-image:url('https://img.youtube.com/vi/2KDuI4_RH0U/maxresdefault.jpg');" }
+A quick peek inside Express-2
+Here’s how Express-2 works:
+Express-Voice: produces an audio readout of a given script. Express-Animate then uses the audio track to generate anatomically accurate, temporally coherent gestures driven purely by audio, decoupling motion from appearance so each can be improved independently.
+Express-Eval: A CLIP-like model trained on paired audio-motion data, scores alignment to pick the best motion candidate at inference.
+Express-Render: Synthesizes photorealistic frames, including fine facial movements, with robust identity consistency for long sequences.
+{lite-youtube videoid="ee8Q1JGZFqw" style="background-image:url('https://img.youtube.com/vi/ee8Q1JGZFqw/maxresdefault.jpg');" }
+To meet production needs, we distilled Express-Render to two diffusion steps, enabling practical generation speeds, with a faster Express-Render-Turbo on the way.
+For creators, Express-2 also adds control levers: you can vary the seed for different takes, adjust temporal diversity for more/less movement, and tune performance intensity. You can also switch camera framings without changing the audio.
+Instant, accented voice cloning
+Express-Voice preserves the nuances and speech patterns of any voice, from regional accent to delivery, instantly and without adaptation steps.
+Under the hood, a two-stage transformer (autoregressive + non-autoregressive, ~800M parameters each) operates directly on graphemes and is conditioned on reference audio (no fixed speaker embedding).
+{lite-youtube videoid="YTUHy0OsJSE" style="background-image:url('https://img.youtube.com/vi/YTUHy0OsJSE/maxresdefault.jpg');" }
+We’ve used Descript’s residual vector-quantized tokenizer, curated training data to cover a wide range of accents (including open corpora like YODAS and LibriLight), and evaluated with objective metrics such as WavLM (speaker similarity) and emotion2vec (emotional similarity).
+Most importantly for customers, Express-Voice is now our default text-to-speech sub-system that drives the avatar’s performance, as we’ve unified voice, lipsync, and body language into one video and voice engine built entirely by Synthesia.Unlike other generative AI tools that have length limitations, Express-2 offers unprecedented quality without compromise: you get 1080p at 30fps video as an output, with consistent identity and natural co-speech gestures. With no limit on video duration, Express-2 delivers human-like performances that are highly engaging, leading to long-form videos with AI avatars that deliver information in an instructional and entertaining way. While
+Express-1 avatars
+brought expressiveness to the content made on our platform, Express-2 will make content more engaging to watch.
+Studies
+and
+real-world case studies
+have shown that higher engagement rates are drive understanding, making Express-2 especially valuable for skill development in large organizations.
+Why this matters for enterprises
+Unlike other generative AI tools that have length limitations, Express-2 offers unprecedented quality without compromise: you get 1080p at 30fps video as an output, with consistent identity and natural co-speech gestures. With no limit on video duration, Express-2 delivers human-like performances that are highly engaging, leading to long-form videos with AI avatars that deliver information in an instructional and entertaining way.
+While
+Express-1 avatars
+brought expressiveness to the content made on our platform, Express-2 will make content more engaging to watch.
+Studies
+and
+real-world case studies
+have shown that higher engagement rates are drive understanding, making Express-2 especially valuable for skill development in large organizations.
+{lite-youtube videoid="IhQgCvyAjVs" style="background-image:url('https://img.youtube.com/vi/IhQgCvyAjVs/maxresdefault.jpg');" }
+Express-2 also introduces new creative controls, allowing you the ability to and pick camera angles to create more dynamic and engaging, YouTube-style videos. On the audio side, you can pick between several styles of the same voice, allowing you to manually adjust the voiceover to the performance you want to get. For example, you can pick the Excited option for marketing videos or choose Neutral for customer support scenarios.
+Lastly, the progress we’ve made with distilled rendering means we can maintain a similar throughput in video generation despite the significant increase in quality, with further acceleration in the pipeline. In real terms, you should see similar generation times even though your videos will get more sophisticated and feature-rich.
+Built on responsible AI Governance principles from day one
+Synthesia is used by over 80% of the Fortune 100. We’re continuously adding features that allow enterprise companies to create and share videos safely and securely at scale, and we’re keeping our promise to
+build with a people-first approach
+. For example, we make it impossible to clone a real person without their consent - enforced with controls and verification.
+We also moderate content at creation under robust policies, continuously red-team our systems, and make our approach transparent via our AI Governance portal. These safeguards carry through Express-2 and will continue to be updated as we introduce new features.
+If you’re a paying Synthesia customer and want to bring human-quality performance to your videos at the speed your business moves, we’d love you to try out Express-2 today.
+Peter Hill
+Peter Hill is CTO at Synthesia and a veteran tech and product leader. Formerly CEO and CPO at Wildlife Studios, he spent nearly 25 years at Amazon and AWS, leading teams behind Kindle, Fire, Alexa, and services like Amazon Connect and WorkSpaces.
+Go to author's profile
+Get started
+Create AI videos with 240+ avatars in 160+ languages.
+
+No items found.
+
+No items found.
+
+You might also like
+View all posts
+No items found.
+Synthesia
+Automating code security reviews with Claude: Mythos-level capabilities at lower cost
+Coding agents are now involved in the majority of the code shipped at Synthesia. The volume of code changes has gone up but the time humans spend reading those changes has not. The practice of doing code security reviews is especially exposed to this pressure because it depends on careful analysis. To solve this, we’ve built an agent skill that approaches Mythos-levels of performance in uncovering complex security issues at a fraction of the cost of running such a model.
+Synthesia
+Why the AI era demands a barbell approach to product development
+AI is reshaping product development at Synthesia. Discover the barbell framework, where exploration and craftsmanship replace engineering constraints, and taste becomes the new competitive advantage.
+Synthesia
+Synthesia accelerates global expansion as enterprise contracts triple
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Ethics Guidelines
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+VIDEO TEMPLATE
+VIDEO TITLE
+Create video from template
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create a free AI Video

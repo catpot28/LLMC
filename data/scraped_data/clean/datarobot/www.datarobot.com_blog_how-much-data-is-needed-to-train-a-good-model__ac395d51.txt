@@ -1,0 +1,650 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/how-much-data-is-needed-to-train-a-good-model/
+page path  : /blog/how-much-data-is-needed-to-train-a-good-model/
+captured   : 2026-03-14 09:06:45 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/datarobot/www.datarobot.com_blog_how-much-data-is-needed-to-train-a-good-model__ac395d51.html.gz
+========================================================================
+
+How Much Data is Needed to Train a (Good) Model? | DataRobot Blog
+
+How Much Data is Needed to Train a (Good) Model? | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+How Much Data is Needed to Train a (Good) Model?
+
+We’ve gotten some questions recently about how much data is needed to train a good model. While there is no “one-size-fits-all” approach, there are some general best practices to follow and questions to ask about your data beforehand. Ryan elaborates.
+
+How much data do you need to train a model? Arguably, only a single data point. Is this model likely to make accurate predictions? Probably not. So how much data is necessary to train a decent model that will generalize well, i.e. make accurate predictions?
+
+How much data?
+
+Short answer is: it depends. It depends on the type of machine learning problem you want to solve:
+
+A typical image classification problem could require tens of thousands of images or more in order to create a classifier.
+
+Sentiment analysis or document classification problems can require thousands of examples due to the sheer number of words and phrases, i.e. n-grams.
+
+For many regression problems, it’s suggested that you have 10x as many observations as you do features. A more general rule of thumb is that the number of observations should be proportional to 1/d^p where p = # of features and d = the maximum spacing between consecutive or neighboring data points after each feature is scaled to the range 0-1.
+
+For time series problems, you should always have more observations than parameters (we elaborate more on this type of machine learning problem below).
+
+In time series forecasting there is a general rule of thumb that a decent model should always have more observations than parameters in the time series. For most time series applications, this means that the submitted data should have as many observations as the period of the maximum expected seasonality.
+
+In time series forecasting, there is a general rule of thumb that a decent model should always have more observations than parameters in the time series. For most time series applications, this means that the submitted data should have as many observations as the period of the maximum expected seasonality.
+
+Give your data the Enterprise AI treatment
+
+Start using DataRobot now
+
+For example, if you have daily sales data and you expect that it exhibits annual seasonality, you should have more than 365 data points to train a successful model. If you have hourly data and you expect your data exhibits weekly seasonality, you should have more than 7*24 = 168 observations to train a model. However, these are the bare minimum number of points needed to train these types of models – more data is required if you want to effectively test how accurately your model performs at making predictions. Your test set should be about 25% the size of your training set. So with a dataset that is expected to exhibit annual seasonality, the minimum number of points required to train and test multiple models is 365 + 365/4 ~ 456 observations.
+
+There’s still no “Golden Rule”
+
+Of course, these are rough generalizations not intended to be taken as golden rules to follow for every problem. Depending on how correlated different variables are, you may require more or less data. However, to refrain from making some fatal mistakes you should ask a few questions about your data before jumping in and building a forecasting model.
+
+What’s the granularity of my data, e.g., seconds, hours, years? A year’s worth of data can imply 365 data points, 52 data points, 12 data points, or even a single data point depending on how the data was recorded, and all are equally valid.
+
+What are my underlying assumptions about my data? If you expect your data is annually seasonal, make sure you have at least 365 days, 52 weeks, or 12 months of data plus some additional data points for testing- note how important the granularity of data is in this scenario.
+
+How far out am I trying to predict? If you’re trying to predict 12 months into the future, you should have at least 12 months worth (a data point for every month) to train on before you can expect to have trustworthy results.
+
+Trial
+
+Give your data the Enterprise AI treatment
+
+Start using DataRobot now
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+Self-managed observability: Running agentic AI inside your boundary
+
+Read More
+
+March 2, 2026
+
+|
+11 min read
+
+Blog
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+Read More
+
+February 27, 2026
+
+|
+13 min read
+
+Authors
+
+by
+
+Ryan Sevey
+
+August 4, 2017
+
+|
+3 min read
+
+Share this resource
+
+Latest Posts
+
+Build enterprise-ready Agentic AI with DataRobot using NVIDIA Nemotron 3 Super
+
+March 12, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Practitioners
+
+Self-managed observability: Running agentic AI inside your boundary
+
+March 2, 2026
+
+|
+11 min read
+
+Read More
+
+AI for Practitioners
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+February 27, 2026
+
+|
+13 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+Self-managed observability: Running agentic AI inside your boundary
+
+Read More
+
+March 2, 2026
+
+|
+11 min read
+
+Blog
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+Read More
+
+February 27, 2026
+
+|
+13 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Don’t just hear about agents. See them live.
+
+NVIDIA GTC
+
+March 16–19
+
+Meet us at GTC

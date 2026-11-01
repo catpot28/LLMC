@@ -1,0 +1,148 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/aup-compliance-check-health-education-app-using-sonar-api/4258
+page path  : /t/aup-compliance-check-health-education-app-using-sonar-api/4258
+captured   : 2026-04-12 12:28:40 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_aup-compliance-check-health-education-app-using-sonar-api_4258__25d42d35.html.gz
+========================================================================
+
+AUP compliance check — health education app using Sonar API - General - Perplexity API Platform Forum
+
+AUP compliance check — health education app using Sonar API - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+AUP compliance check — health education app using Sonar API
+
+General
+
+sonar
+,
+
+search-api
+
+aminbenarieb
+
+March 21, 2026, 1:02pm
+
+1
+
+Hi everyone,
+
+I’m building an iOS app that records doctor-patient conversations, transcribes them, extracts medical claims (prescriptions, factual statements, recommendations), and provides evidence context from medical literature.
+
+Planning to use the Sonar API for the evidence lookup step — essentially searching for relevant studies/guidelines and presenting users with a summary + sources.
+
+Key points:
+
+• Not a medical device, no diagnosis or treatment recommendations
+
+• Positioned as health education / informational tool
+
+• All results include “For educational purposes only” disclaimer
+
+• Users see cited sources and are told to discuss with their doctor
+
+• AI use is clearly disclosed
+
+Wanting to verify: is this aligns with the AUP clause on “medical services that would typically require specialized credentials.”?
+
+Happy to provide more details or hop on a quick call if helpful.
+
+Kesku
+
+April 7, 2026, 2:40pm
+
+2
+
+Hey
+@aminbenarieb
+! From a general standpoint, your use case sounds like it falls within acceptable territory — you are using Sonar for evidence lookup and educational context, not for diagnosis or treatment recommendations, and you are clearly disclaiming the output as educational. That is a meaningful distinction.
+
+That said, for formal clearance on AUP compliance, please reach out to
+api@perplexity.ai
+— the community forum is not the right channel for binding policy interpretations
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Brand New Sonar API Documentation is now Live!
+
+Announcements
+
+0
+
+298
+
+July 18, 2025
+
+Are you planning to add a Pro Search API?
+
+Feature Requests
+
+sonar
+
+2
+
+130
+
+September 5, 2025
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+73
+
+September 24, 2025
+
+Cost Information Now Included in API Response JSON!
+
+Announcements
+
+0
+
+223
+
+August 1, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+110
+
+November 3, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

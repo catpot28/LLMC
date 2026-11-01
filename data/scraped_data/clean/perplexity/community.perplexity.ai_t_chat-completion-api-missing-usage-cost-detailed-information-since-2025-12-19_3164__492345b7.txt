@@ -1,0 +1,335 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/chat-completion-api-missing-usage-cost-detailed-information-since-2025-12-19/3164
+page path  : /t/chat-completion-api-missing-usage-cost-detailed-information-since-2025-12-19/3164
+captured   : 2026-01-21 22:40:54 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_chat-completion-api-missing-usage-cost-detailed-information-since-2025-12-19_3164__492345b7.html.gz
+========================================================================
+
+Chat Completion API missing usage cost detailed information (Since 2025-12-19) - Bug Reports - Perplexity API Platform Forum
+
+Chat Completion API missing usage cost detailed information (Since 2025-12-19) - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Chat Completion API missing usage cost detailed information (Since 2025-12-19)
+
+Bug Reports
+
+sonar-pro
+,
+
+chat-completions
+
+Rony_Marjieh
+
+December 19, 2025, 8:21am
+
+1
+
+Describe the Bug
+
+Since
+2025-12-18
+, Perplexity Chat Completions responses no longer include
+usage cost–related fields
+(e.g., token counts and cost breakdown).
+
+This information previously appeared consistently in the API response and was relied upon for
+billing validation, cost monitoring, and internal usage tracking
+.
+
+The change occurred
+without any announced API update, deprecation notice, or changelog entry
+.
+
+Expected Behavior
+
+The Chat Completions API response should include usage-related metadata, such as:
+
+Prompt tokens
+
+Completion tokens
+
+Total tokens
+
+Cost or pricing-related usage fields (as previously returned)
+
+Actual Behavior
+
+As of
+2025-12-18
+, Chat Completions responses
+no longer include usage or cost details
+.
+
+The response otherwise completes successfully
+
+No warning, error, or deprecation notice is returned
+
+The missing data breaks existing cost-tracking logic
+
+Steps to Reproduce
+
+Call the Perplexity Chat Completions API using any supported model. (I use sonar-pro)
+
+Inspect the response payload.
+
+Observe that usage / cost-related fields are missing
+
+API Request & Response (if applicable)
+
+Endpoint called:
+
+https://api.perplexity.ai/chat/completions
+
+Request:
+
+{
+"model": "sonar",
+"language_preference": "English",
+"messages": [
+{"role": "user", "content": "Give me a traditional tartiflette recipes"}
+],
+"search_mode": "web",
+"safe_search": "True",
+"enable_search_classifier": "False",
+"search_domain_filter": [],
+"web_search_options": {
+"search_context_size": "high"
+}
+}
+
+Response:
+
+{
+"id": "221089af-239b-43a6-8951-85cb48e47194",
+"model": "sonar",
+"created": 1766132339,
+"usage": {
+"prompt_tokens": 8,
+"completion_tokens": 1043,
+"total_tokens": 1051,
+"search_context_size": "high"
+},
+"citations": [
+"https://french-barn.com/blog/food-wine/classics/tartiflette",
+"https://www.france-montagnes.com/en/experiences/tartiflette-la-recette-originale/",
+"https://www.lecreuset.ca/en_CA/classic-reblochon-tartiflette/LCRCA-0455.html",
+"https://chefjeanpierre.com/potato-recipes/tartiflette-recipe/",
+"https://lacuisineparis.com/blog/recipe-tartiflette-au-reblochon",
+"https://entertainingwithbeth.com/easy-tartiflette-recipe/",
+"https://www.davidlebovitz.com/tartiflette-recipe-potato-cheese-reblochon-bacon/",
+"https://www.tasteatlas.com/tartiflette/recipe",
+"https://www.lavenderandlovage.com/2015/02/ski-chalet-supper-tartiflette-savoyarde-with-reblochon-cheese.html"
+],
+"search_results": [
+{
+"title": "Tartiflette",
+"url": "https://french-barn.com/blog/food-wine/classics/tartiflette",
+"date": "2017-09-26",
+"last_updated": "2025-12-11",
+"snippet": "Tartiflette · 2 pounds new potatoes · 1/4 cup + 1/4 cup unsalted better · 1 clove of garlic, minced · 1 large onion, thinly sliced · 1/2 pound bacon ...Read more",
+"source": "web"
+},
+{
+"title": "Tartiflette (the original recipe) - The Mountains of France",
+"url": "https://www.france-montagnes.com/en/experiences/tartiflette-la-recette-originale/",
+"date": "2025-02-18",
+"last_updated": "2025-03-16",
+"snippet": "Ingredients (serves 4) · 1kg firm-fleshed potatoes (roseval) · 1 packet of bacon (smoked or not) · 200g onions · 1 Savoy reblochon cheese (ideally bought from a ...Read more",
+"source": "web"
+},
+{
+"title": "Classic Reblochon Tartiflette",
+"url": "https://www.lecreuset.ca/en_CA/classic-reblochon-tartiflette/LCRCA-0455.html",
+"date": "2024-01-01",
+"last_updated": "2025-08-18",
+"snippet": "INGREDIENTS · 4 lb Yukon Gold potatoes, peeled and cut into rounds ¼ inch thick · 3 garlic cloves, peeled and smashed · 4 thick slices bacon, cut crosswise into ...Read more",
+"source": "web"
+},
+{
+"title": "Ultimate Tartiflette Recipe: Elegant French Comfort Food",
+"url": "https://chefjeanpierre.com/potato-recipes/tartiflette-recipe/",
+"date": "2024-05-13",
+"last_updated": "2025-07-25",
+"snippet": "This Tartiflette recipe is a true mélange of delicious potatoes, rich cheese, savory bacon, and caramelized onions.Read more",
+"source": "web"
+},
+{
+"title": "Recipe: Tartiflette au Reblochon",
+"url": "https://lacuisineparis.com/blog/recipe-tartiflette-au-reblochon",
+"date": "2018-11-29",
+"last_updated": "2025-12-17",
+"snippet": "This gratin dish is made with sliced potatoes, onions, a healthy gulg of white wine, and lardons, then topped with an entire round of Reblochon cheese.Read more",
+"source": "web"
+},
+{
+"title": "Beth's Easy Tartiflette Recipe",
+"url": "https://entertainingwithbeth.com/easy-tartiflette-recipe/",
+"date": "2018-11-10",
+"last_updated": "2025-12-11",
+"snippet": "Ingredients · 3.5 lbs (1580g) Yukon Gold Potatoes, peeled · 7 slices, thick center cut bacon, sliced into 1 inch strips · 1 ½ cup (350 ml) Gruyere ...Read more",
+"source": "web"
+},
+{
+"title": "Tartiflette",
+"url": "https://www.davidlebovitz.com/tartiflette-recipe-potato-cheese-reblochon-bacon/",
+"date": "2020-12-23",
+"last_updated": "2025-12-14",
+"snippet": "A traditional French dish with potatoes, bacon and melted cheese. This easy gratin recipe is delicious and a perfect winter dinner!",
+"source": "web"
+},
+{
+"title": "Authentic Tartiflette recipe Savoie, France",
+"url": "https://www.tasteatlas.com/tartiflette/recipe",
+"last_updated": "2025-05-14",
+"snippet": "Mountain ham, smoked salmon, cream, butter, olive oil and duck fat are among the ingredients one can add to tartiflette to alternate its taste. For the ones ...Read more",
+"source": "web"
+},
+{
+"title": "Ski Chalet Supper: Tartiflette Savoyarde with Reblochon ...",
+"url": "https://www.lavenderandlovage.com/2015/02/ski-chalet-supper-tartiflette-savoyarde-with-reblochon-cheese.html",
+"date": "2015-02-26",
+"last_updated": "2025-09-30",
+"snippet": "Tartiflette Savoyarde, a baked gratin of potatoes, onions (or shallots), lardons (bacon), wine, cream and cheese, a staple of all ski lodge or chalet suppers.Read more",
+"source": "web"
+}
+],
+"object": "chat.completion",
+"choices": [
+{
+"index": 0,
+"message": {
+"role": "assistant",
+"content": "A classic tartiflette is a warm, creamy Savoyard potato gratin made with boiled potatoes, onions, lardons (or bacon), white wine (optional), cream (some purists omit it) and a whole wheel of Reblochon cheese; below is a traditional recipe (serves 4) with clear steps and timing based on regional sources.[2][7]\n\nIngredients\n- 1 kg firm, waxy potatoes (e.g., Yukon Gold or Roseval) peeled or scrubbed if you prefer skin on[2][7]. \n- 200–350 g lardons or thick-cut bacon, cut into batons (about one packet or 8–12 oz depending on taste)[2][7]. \n- 200 g onions (about 1 large or 2 medium), thinly sliced[2][7]. \n- 1 wheel Reblochon cheese (about 450–500 g), whole[2][7]. \n- 100 ml dry white wine or vermouth (optional but traditional)[2][7]. \n- 100 ml heavy cream or crème fraîche (optional — traditional recipes vary)[2][2]. \n- 2–3 tbsp butter or a little oil for sautéing[2][3]. \n- Salt and freshly ground black pepper to taste (season lightly; cheese and bacon add salt)[7].\n\nTiming\n- Prep about 20–30 minutes; oven 25–30 minutes; total ~60–75 minutes including cooling and assembly[2][7].\n\nMethod\n1. Parboil potatoes: Place whole (or peeled and halved) potatoes in cold salted water, bring to a simmer and cook until just tender when pierced (about 12–15 minutes depending on size). Drain and let cool enough to slice without falling apart[7][3]. \n2. Cook lardons/bacon: Put lardons in a cold skillet, bring to medium heat and cook until browned and some fat is rendered. Remove and drain on paper towel, leaving a few teaspoons of fat in the pan[7]. \n3. Sauté onions (and garlic if using): In the remaining fat, add butter if needed and gently cook the sliced onions until soft and translucent or lightly caramelized (about 6–10 minutes). Add minced garlic briefly if you like, then deglaze with the white wine and reduce until mostly evaporated[7][2][3]. \n4. Combine: Return the lardons to the onion pan, stir in the cream (if using), taste and adjust pepper (be cautious with salt)[7][2]. Slice the cooled potatoes into 1/2–3/4 inch (1.5–2 cm) rounds. \n5. Assemble in a buttered gratin or casserole dish: Layer half the potato slices in a single layer, season very lightly, spread half the onion–lardon mixture, then repeat with the remaining potatoes and onion mixture[7][2]. Pour any remaining cream or pan juices over the top. \n6. Top with Reblochon: Wipe (or lightly scrape) the rind if it’s dusty, cut the wheel in half horizontally (so you have two rounds), then place the two halves rind-side up, flesh against the potatoes, to cover the surface; alternatively cut into slices or wedges and arrange so the rind faces up[2][5][7]. \n7. Bake: Place the dish in a preheated oven at about 200 °C / 400 °F (some recipes use 190 °C / 375 °F) and bake 20–30 minutes until the cheese is melted, bubbling and lightly golden[2][3][7]. Let rest 5–10 minutes before serving. \n\nTo serve\n- Serve hot, straight from the oven, with a simple green salad and a crunchy baguette or cornichons if desired[5][9]. \n\nNotes and tips\n- Reblochon is the authentic cheese and gives tartiflette its characteristic flavor; if unavailable, use a runny, washed-rind cheese (or strong triple-cream Brie or Camembert as a substitute), but the taste will differ from the Savoie original[2][5]. \n- Some traditionalists omit cream and rely only on the cheese’s creaminess; others add a modest amount (≈100 ml) for extra sauciness[2][7]. \n- Use waxy potatoes so slices hold their shape; avoid starchy varieties that fall apart[6]. \n- The dish was popularized in the late 20th century in Savoie to promote Reblochon but is based on earlier regional potato dishes (Péla)[7][2].\n\nIf you’d like, I can convert the ingredient weights to cups/ounces for an exact serving count, give a smaller or larger scaling, or provide a vegetarian adaptation (mushrooms or smoked tofu instead of lardons) and wine-pairing suggestions."
+},
+"delta": {
+"role": "assistant",
+"content": ""
+},
+"finish_reason": "stop"
+}
+]
+}
+
+Environment
+
+API model used:
+sonar-pro
+
+SDK (if applicable):
+perplexityai = 0.17.0
+
+Operating System:
+[e.g., MacOS, Linux]
+
+moonzlo
+
+December 19, 2025, 4:02pm
+
+2
+
+I also encountered this today, and it seems that the company has decided to change its pricing policy.
+
+Kesku
+
+December 19, 2025, 4:46pm
+
+3
+
+Thanks for reporting this — the issue has now been resolved and the Chat Completions API should again return usage / cost information as expected.
+
+If you’re still seeing missing fields, please try again and let us know.
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Cost Information Now Included in API Response JSON!
+
+Announcements
+
+0
+
+202
+
+August 1, 2025
+
+I need an api key please
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+2
+
+201
+
+September 26, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+76
+
+November 3, 2025
+
+How to get UI like response(correct) from Perplexity API?
+
+Bug Reports
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+103
+
+September 19, 2025
+
+PerplexityPro response vs SonarPro response
+
+Bug Reports
+
+sonar-pro
+
+0
+
+126
+
+September 19, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

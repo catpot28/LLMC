@@ -1,0 +1,353 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/hitl-ep-18
+page path  : /blog/hitl-ep-18
+captured   : 2026-06-15 11:51:12 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_hitl-ep-18__44a3e9fe.html.gz
+========================================================================
+
+How do you make fundamentally nondeterministic agents trustable? | Scale AI
+
+How do you make fundamentally nondeterministic agents trustable? | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Enterprise
+How do you make fundamentally nondeterministic agents trustable? | Human in the Loop: Episode 18
+By
+
+Monica Mishra
+·
+March 17, 2026
+·
+23 min read
+Copy Link
+Welcome to Human in the Loop.
+Scale is the humanity-first AI company. We believe the most powerful and responsible AI systems are built with humans in the loop. And now, it’s also the inspiration behind our video podcast series
+Human in the Loop:
+your guide to understanding what it takes to build and deploy real-world enterprise AI systems.
+We share our learnings from working with the largest enterprises, foundation model builders, and government.
+About the Episode
+In this episode, customer forward deploy team, Tanay Tiwary, Joyce Chen, and Kendall Ernst to discuss what it really takes to deploy AI agents in enterprise environments. The conversation explores the practical challenges of turning non-deterministic AI systems into reliable tools people can trust and use in their daily workflows.
+They cover the friction between executive buyers and end users, why trust and transparency are critical for adoption, and how much enterprise AI success depends on capturing the tribal knowledge that lives inside organizations. The group also shares lessons from real deployments—how to scope the right use cases, build guardrails and governance, and design systems that keep humans in the loop.
+Key recommendations:
+Start with real workflows and data: Ground AI projects in clear use cases and the data that powers them.
+Build for trust: Use transparency, citations, and validation tools to help users confidently verify AI outputs.
+Capture tribal knowledge: Extract the institutional expertise agents need to operate effectively.
+Design for production: Reliable AI systems require guardrails, monitoring, and clear launch criteria
+Watch the full episode or read the transcript of their conversation below.
+Human in the Loop Episode 18
+HITL Episode 5 - Full Episode
+Tanay Tiwari (
+00:00
+):
+Welcome to Human in the Loop. Today, we're here to talk about something that I know is top of mind for so many of you, which is how do you take fundamentally non-deterministic agents and deploy them in enterprise grade settings? So ladies, we've been in the trenches for so long, I figured it was time to have a conversation on camera for once and talk about what we've been seeing out there in the industry and what some of these pitfalls are with taking these agents to production and how we've been mitigating for them.
+(
+00:35
+)The first one I wanted to start off with is this friction between personas. There is a different persona, usually C-suite that signs these deals versus what's actually helpful for the user on the ground for whom we build. So I was wondering, Joyce, maybe to start, you lead the product. How do you view this friction?
+Joyce Chen (
+00:55
+):
+I think it's a great question. I think typically you see the buyer, which is a C-suite, and then you see the user, and value gets flowed in different ways. Where the C-suite is trying to capture that value, but the users are actually the ones using the product. There's also another thing I want to bring in too, which is where the future is going and how do we build for a future with AI. So there's almost three points to this triangle and you're trying to build in somewhere in that region and that nexus. And you have to index maybe in one way or the other, depending on the situation of if you're optimizing more for adoption or for gaining C-suite trust, you want to basically index a little bit more on one of the three points.
+Kendall Ernst (
+01:38
+):
+I think from what I've seen at scale, there tends to be this dynamic where if you over index on what the user is telling you, you kind of run the risk of replicating a really bad process to begin with. So you kind of like don't take it far enough. Then I think on the flip side, if you just go by what you're hearing from the C-suite, sometimes they may not be that in the weeds on what the kind of end user needs. So it's always tough to kind of find that perfect point in the middle where you're satisfying both.
+Tanay Tiwari (
+02:12
+):
+It's also been interesting. I've only worked in the enterprise BU at scale for the last couple of years. So we've come a long way when it comes to understanding this dissonance and not over indexing on either of those two groups. I feel like even with the work that we've been doing right now, a lot of it is discovery, but then we're also being imaginative at the beginning of these engagements, because that is really the only time you can be as imaginative as you want to be. To your point around being AI native and thinking about where this space is going. Then of course, as you start speaking to people, it's like, "Well, this part isn't really something where we need AI or conducive to it." So then we're like, "Okay, we can start narrowing the funnel." So yeah, that's super interesting.
+(
+02:59
+)Another piece that I was thinking about is user trust. I feel like we're hearing a lot of instances where obviously there's this top down effort to get people to adopt AI, but not enough is done in terms of change management or making sure people can actually trust what a vendor like Scale, for example, is selling. So how do we think about traceability or validation for what the AI is actually generating?
+Kendall Ernst (
+03:30
+):
+I think for me, the biggest piece of this is, we have to acknowledge that people don't always trust this and we have to kind of meet the user where they are. So people are going to be hesitant to hop in a self-driving car if they don't have some kind of understanding of how it works and some kind of understanding of what guardrails there are to make sure that they're safe. And I think in the enterprise AI space, we end up with a lot of the same concerns, usually lower stakes than the car, but it's the same kind of playing field.
+Joyce Chen (
+04:07
+):
+And how we've been thinking about product is using this trust framework too, which is transparent, reliable, understandable, steerable, and tolerant. So if we build our products in those ways, we can show citations. For example, we can use a chatbot, we can kind of have different verification features and tools that we build into the product so people understand what the chain of thought of the agent looks like. If there's reasoning involved, they can look at the reasoning and say, "Hey, I agree with this. I disagree with this." But it's almost like asking people to work in a different way, you are reacting to information instead of necessarily producing the information yourself. So if we can give them the right tools to react very confidently, that's kind of how you have change in the AI spaces.
+Tanay Tiwari (
+04:58
+):
+I feel like that's also what our product design philosophy is. I feel like so much of the work that we do on the front ends and the UX is, how do we surface information for the user to feel confident about the output that they're actually seeing. And if they want to double click on something, they can actually go back and do it. The other interesting piece is, of course, the change management aspect, which is something you feel like you're working in tech, so is something you maybe don't need to be doing. But I feel like so much of our time is actually spent with users on the ground, seeing what they do, understanding their workflows. So Joyce, maybe you can share a little bit about what you've gleaned from just sitting with people at our client's offices.
+Joyce Chen (
+05:43
+):
+A lot of the clients that we work with, they're Fortune 500 companies, their users are very different than maybe us. I don't know. I remember I was in grad school when ChatGPT dropped, and I was finishing this NLP and finance class, and I was like, "Oh man, I could have used this tool to get through this class instead of feeling anxious and doing all these P-sets every single week." And I think we kind of grew up in this new environment. But a lot of these clients that we work with and a lot of the users, maybe they're in their 40s, 50s, they've kind of been at the company for a very long time, they're used to a certain type of workflow, and it's hard to get them to shift and think about this in a more AI native way. So I think actually these user discovery sessions are super critical, not only for building the right product and to help with the right workflows, but actually enabling trust.
+(
+06:44
+)I sometimes will fly to client sites and sit side by side with them and ask them these questions. And I think it brings a human face to what the tool they're using. We can actually kind of dig deeper in understanding their workflow. They trust me. They feel like they're part of this product building journey. And that actually helps a lot at the backend when we actually ship the product, they're like, "Oh, I built this with Tanay, Kendall and Joyce. I have an input and I get to kind of co-create with them."
+Tanay Tiwari (
+07:14
+):
+A hundred percent. I feel like that's really bringing it back to the philosophy, which is we're building these solutions for humans, not for agents, as much as everyone in the Bay Area would like to tell you where [inaudible 00:07:27] agentic future guys. We're not quite yet. So I feel like that should be the North Star, which is you can't just force-feed something that you've built down people's throats. They may use it for a little bit, but then eventually the adoption numbers don't lie. So I think indexing for human trust is essential.
+Kendall Ernst (
+07:48
+):
+I think it also ties into how we think about building this in the first place. Because I think it's kind of fun to think about this problem from the perspective of, let's say you had a brand new hire join your company and they are a superstar. They will go research with all the tools that you give them. They have unlimited time. They can do multiple things at once. But at the end of the day, they still don't understand your way of doing things at the company. They still don't understand the culture. It's probably not a good idea to give them access to write to your database on day one.
+Tanay Tiwari (
+08:31
+):
+The Amazon news story where they had an AI bot that basically brought down everything because it didn't have the right context.
+Kendall Ernst (
+08:40
+):
+But I think that's the thing is, AI seem like, to a lot of people, this very advanced concept, totally unfamiliar. But it's really, humans are basically non-deterministic agents in a lot of ways too. So we can learn a lot about how do we teach effectively.
+Tanay Tiwari (
+09:01
+):
+That brings us to another important pitfall, which is how do you effectively extract that tribal knowledge?
+Joyce Chen (
+09:09
+):
+Oh man.
+Tanay Tiwari (
+09:09
+):
+So much of the work is context engineering.
+Kendall Ernst (
+09:12
+):
+Yes.
+Tanay Tiwari (
+09:14
+):
+So I wonder if you folks have something to share around that piece?
+Joyce Chen (
+09:20
+):
+It's so hard. That's like the crux of the problem. This is my personal hot take, so I don't want to hold y'all liable to it too, or Scale liable to it. I'm not actually worried about the technical implementation of a lot of our projects. Our FDEs are awesome, our MLEs are awesome. I have full faith that the model companies will have breakthroughs. What I am most, not concerned, but I think where we should be kind of expending more of our calories on, is the human relationship piece. People like you, Tanay, where we actually form the relationship with the client, we go in, we almost have like our own posse of people that try to charm the pants off them and be like, "Where actually is your data? How does the data connect with one another?" It's my job to understand that and to get that context to the agent so that we can actually have a product.
+(
+10:16
+)I remember flying to a client's office and I would sit with their subject matter expert and I would ask them, "How do you typically answer this question?" And they would say, "I go to 5.3A, look for these three words. And if one of them appears, I go to 7.2B and then 11.3C," all this crazy stuff. And I was like, "The agent's not really going to know that off the bat."
+Tanay Tiwari (
+10:41
+):
+It also really helped, I feel like that particular instance with our ROI story, because when you go in, the expectation is reduce this from a number of days to minutes. But when you sit with, for example, an associate, you figure out that, yes, they're working on a document, but then they get an email and they totally go do that, then come back to it. So it's not realistic to expect them to finish it in two minutes just because the AI generated the first draft for them to review.
+Joyce Chen (
+11:08
+):
+It's just really hard to take tribal knowledge and distill that into a certain set of prompts to feed to the agent. That is like the hard part. And that's kind of where I see a lot of engagements go awry is we haven't, one, built the trust to get the right data, but we haven't distilled the data down to something that is able to be digested by the agent.
+Kendall Ernst (
+11:29
+):
+I think it's really interesting even just working with Claude Code or whatever myself, seeing the evolution of where things have gone in the last year or two years. It really is at a point where it used to be that you would feed an agent a bunch of data and it may make mistakes with the data that you gave it. So things it should have known but didn't get right anyway. Now I feel like we're getting to a point where the hard part is really the 10% of knowledge that only lives inside someone's head and we have to find a way to basically codify that so that an agent can learn it.
+Tanay Tiwari (
+12:10
+):
+I actually wonder if that is why it is so much more helpful for engineering as a discipline because the context exists in the code, versus for all of the other stuff that you build on top of the code, which is these workflows. It's so hard to actually extract that context and you can't just do it off the bat. That's probably why adoption for coding is so much higher than for any of the other hard stuff that we've been trying to build.
+Joyce Chen (
+12:38
+):
+Something else that you mentioned too, Kendall, I think this unwritten language of tribal knowledge. To the extent that we can, going back to our original point, Tanay, around reliability, I want to make sure that... I think look up tables are not in Vogue anymore. I'm down for that, right? It's like if this, then that. If we can put those rules into the product, I want to make sure that we use the LLMs for actual things that they actually are needed. If we have a set of rules of saying, "Hey, if this happens and that happens," I'd rather just put that into the code base, it's fine. That gives me more security in our product than letting LLMs go loose on everything.
+Kendall Ernst (
+13:25
+):
+Totally. Because I think it's like, you can have an agent do just about anything at this point, but should you, is a different question. And I think that's why things like skills and tools are so popular, is because there are some things that are frankly just better to be left to standard code. I think we've definitely seen a lot of that with the clients we've worked with. I also think what you said about the sources and the transparency is so important. Because if you put yourself in the shoes of the user who's logging in and just seeing a bunch of data there, it's very hard to get comfortable with the idea that that data is correct. So it really does take building out those features in the UI that show them, "Hey, this is exactly where we got this number," that help them build the trust over time.
+Tanay Tiwari (
+14:25
+):
+To your point, you can identify the workflow however much you want, but at the end of the day, there is someone who's signing off on whatever is the product. We were in a scoping conversation just yesterday for something around financial reporting. And it's like, you work with a Fortune 100 firm, they report these numbers publicly, quarterly, annually. So if the CFO is not comfortable on the province of these numbers, it doesn't really matter how much of it is by an agent.
+(
+14:55
+)It also brings me to an interesting point around how you scope these problems and what is a good use case for generative AI? Because we're obviously in a hype cycle, people are very excited to use AI. They kind of want to use it for everything. So I wonder if you have any interesting tidbits from scoping conversations you've been in where you've sort of walked the client back from a cliff and been like, "Well, actually, this is maybe not where you want to be using stuff."
+Joyce Chen (
+15:25
+):
+Oh my gosh, this is maybe embarrassing. We use Granola and I think one of the taglines for me was, how do you politely disrupt AI fantasies or something, or it was most likely to whatever. I think for me it's like, what type of data you have.
+Tanay Tiwari (
+15:46
+):
+Yes.
+Joyce Chen (
+15:47
+):
+We can't quite make up data to give to the agent. So what is your core data set? What are the workflows that you want to optimize? How can we connect what you have to where you want to go? I think AI sometimes is touted as a magic wand. We need to start somewhere, which is the data that you have, looking at that, starting from that, and then working backward to, how do I manipulate this data into like this particular workflow or agent I want to create?
+Tanay Tiwari (
+16:23
+):
+Oh, it's hard not to get swept up into the fantasy. Have you seen the billboards on the way from the airport into the city? It's insane.
+Joyce Chen (
+16:30
+):
+It's like every single billboard.
+Tanay Tiwari (
+16:31
+):
+Yeah. It's funny because a lot of it is our stack as well, which was funny. I was like, "Wait, oh, I see all of these things." But to your point, I feel it's also important to ground these customer conversations in starting small, putting wins on the board. I feel like we worked with some customers, like Howard Hughes for example, where they've been very prudent about how to bring in AI into their workflows and start with wins on the board, start with something small and then gradually build that up. And I wonder if you guys see that motion across other parts of the org as well?
+Kendall Ernst (
+17:07
+):
+I think it really is about finding the right use case where AI is certain to have value. I think what I've seen even internally is, there are pitfalls when you become over reliant in a way where you're not thinking critically about it anymore. So examples of that just from internal work is, I've seen PRDs that are dozens and dozens of pages long and it's like, "Oh, we kind of lost the point here that someone needs to be able to digest and understand this."
+Joyce Chen (
+17:45
+):
+Not my PRD.
+Tanay Tiwari (
+17:45
+):
+No.
+Joyce Chen (
+17:45
+):
+Of course not.
+Tanay Tiwari (
+17:47
+):
+You wouldn't be at the table.
+Kendall Ernst (
+17:53
+):
+Never. But I think that's what we have to be cognizant of is, there's a reason that the human is in the loop. No pun intended. But at this stage, I think what we're really trying to do is shift people away from really boring work where they're scanning through massive documents to find a few numbers, but shift them more to the mindset of being validators. And that not only is hopefully a better experience for them, but also then in turn gives us the feedback we need to keep improving.
+Joyce Chen (
+18:27
+):
+I've actually seen a huge shift in both the internal work I do and also the external work that we see our clients trending toward. It's very much like AI will help you generate some sort of first stab in context, like a V1, if you will.
+Tanay Tiwari (
+18:41
+):
+Yes.
+Joyce Chen (
+18:41
+):
+And you are the one, kind of the captain of the ship saying, "Actually, I really like that. How do I expound on that?" Or like, "That's not great. Let me cut that out." And it's a different way of working now, where you have someone to bring something to react to. Versus in a previous era, it's just managers who their associates have a first stab and then you kind of give feedback. But now we are all those mini managers of our AI agents. And it's an interesting shift because you're not just sitting down from scratch anymore. I think one person, one of our teammates said that this is ape coding, is when you just start from scratch now. I guess there's different terminology that comes and goes, but it's never just, "How do I start from zero? I have something to react to first."
+Tanay Tiwari (
+19:34
+):
+It's also this framing of AI as more of a companion or copilot more than this doomer narrative that's also out there where it's like, "Oh, all white collar jobs are going to go out." It's like, "Well, that's not really how economics works." There's just so much more productive value to be had as the value from AI continues to exponentially increase.
+(
+20:00
+)Another one that I was thinking about is, great, you've written the PRD, you ship P1, you ship the final product, but what does it actually take to get it into deployment and for people to start using it? Because I feel like we just went through that cycle and maybe Kendall, you want to start here?
+Kendall Ernst (
+20:19
+):
+I think there's a lot of things. One, I would say is making sure that you're using the tools that we now have effectively and in ways that can help continue to build that trust with the customer and give them confidence that you're not going to deploy something into their billing system that then goes haywire.
+Tanay Tiwari (
+20:42
+):
+Yes.
+Kendall Ernst (
+20:42
+):
+I think for us, a few things that we did around that, were one, just being really crystal clear about what guardrails we have. It's really easy to generate really professional, good-looking docs. So making sure that you are taking the extra productivity that you have with AI tools and using that to be the most ideal version of a teammate that you can be. Maybe in the past I would have had to make trade-offs of, is it worth building this stock site if I have 10 other things that I need to do that are potentially more valuable. And now I think it's really about agents have unlimited times, so how are we making sure we go in with a plan that's going to make us as unimpeachable as we can be?
+Joyce Chen (
+21:38
+):
+I think it's a really great question today, because we see a lot of hype around like, "Oh, it's so easy for me to vibe code something in an afternoon or even an hour, honestly." The whole point of Scale's mission is to build reliable AI systems for the world's most important decisions, so that reliability is super key. I think when we think about what it takes to get post-production is, there's classic product and software engineering pieces. So you need to have our back, you need to have logging, you need to have post deployment metrics. These are what you need to have for a big boy, big girl application, and a real enterprise that works and that is trustable.
+(
+22:18
+)But there's also stuff that is unique to agents too, which I think is super fascinating. As these systems become more agentic and you task them with more autonomous tasks, how do you maybe have rollbacks or guardrails too, kind of to what Kendall was talking about?
+Tanay Tiwari (
+22:34
+):
+Yes.
+Joyce Chen (
+22:35
+):
+Because right now we see a lot of like, "oh, it's like a copilot for me. It aids me." Which is helpful. But to get true economic value out of these agents, you need to just have them make decisions. We see that with the coding agents too, that they're making more and more decisions. So in production, how do we actually have the right switches in place to roll back something if they will also erroneously like, "They'll just do this." They'll make mistakes, right? So how do we safeguard that in the future too?
+Kendall Ernst (
+23:08
+):
+I think another thing I was thinking about was taking it back to your point about how important change management is.
+Tanay Tiwari (
+23:14
+):
+Yes.
+Kendall Ernst (
+23:15
+):
+I think one thing that we ran into with customers is, you can get into these cycles where you're continuously improving, but there's no benchmark for when we're done or what we would need to do to actually launch this. So I think it's really important to actually have that be the stated goal from the beginning is, we need to spell out exactly what it means to be ready and then track ourselves against those metrics or goals.
+Joyce Chen (
+23:44
+):
+Snaps. Snaps for that, honestly.
+Kendall Ernst (
+23:46
+):
+I did good.
+Joyce Chen (
+23:47
+):
+Yes. The bane of my existence sometimes.
+Kendall Ernst (
+23:50
+):
+I've been learning from Joyce.
+Tanay Tiwari (
+23:54
+):
+The other thing or the final thing I'll say is, don't forget the fact that you need to document everything you're doing. There is a governance and risk council compliance, all of these things that you need to go through. And I feel like a lot of peers actually forget about it. They're like, "We deployed and let's celebrate." I'm like, "Whoa."
+Joyce Chen (
+24:14
+):
+It's not sexy, but it's super necessary.
+Tanay Tiwari (
+24:17
+):
+Otherwise, what is the point? It's like your metrics are zero users, zero documents [inaudible 00:24:22], like, "Okay." You built something beautiful. I think these were some amazing themes to touch on. I'm sure if we come back and when we come back in three to four months, we'll have more to say about all of these and where this space has gone.
+Joyce Chen (
+24:38
+):
+We'll have more hot takes. Just you wait.
+Tanay Tiwari (
+24:43
+):
+Yes, yes, yes. A separate episode full of hot takes.
+Joyce Chen (
+24:44
+):
+Yes.
+Tanay Tiwari (
+24:44
+):
+Thank you.
+Joyce Chen (
+24:44
+):
+Well, thank you for a great conversation. And thank you guys for joining us on the pod. See you guys next time.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

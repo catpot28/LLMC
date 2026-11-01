@@ -1,0 +1,236 @@
+=== SOURCE =============================================================
+company    : Hugging Face (hugging-face)
+url        : https://huggingface.co/AiForTheChurch
+page path  : /AiForTheChurch
+captured   : 2026-02-13 13:50:39 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/hugging-face/huggingface.co_AiForTheChurch__e55038fe.html.gz
+========================================================================
+
+AiForTheChurch (AI for the Church)
+
+AiForTheChurch (AI for the Church)
+
+Hugging Face
+
+Models
+
+Datasets
+
+Spaces
+
+Community
+
+Docs
+
+Enterprise
+
+Pricing
+
+Log In
+
+Sign Up
+
+AI for the Church
+
+community
+
+https://aiforthechurch.org
+
+andrewrogers
+
+trialan/aiforthechurch
+
+Activity Feed
+
+Request to join this org
+
+Follow
+
+23
+
+AI & ML interests
+
+LLM alignment, fine-tuning.
+
+Team members
+
+3
+
+Organization Card
+
+Community
+
+About org cards
+
+Modern LLMs are rooted in secular value systems that are often misaligned with christian organisations. AI for the Church allows anyone to align and deploying doctrinally correct LLMs based on Llama2. Effectively, we are aligning models to a set of values.
+This HF page is for storing models rooted in christian doctrine, that can be trusted to give christian answers (a few denominations already available).
+
+The corresponding PyPI package is made available to train and deploy the models.
+
+pip install aiforthechurch
+
+from
+aiforthechurch
+import
+align_llama2
+doctrinal_dataset =
+"/path/to/csv"
+
+align_llama2(doctrinal_dataset)
+
+aiforthechurch
+is integrated with HuggingFace shuch that the aligned model will be automatically pushed to your HuggingFace repo of choice at the end of the training.
+
+At
+aiforthechurch.org
+we provide tools for generating doctrinal datasets, a few of which are made available here, and further instructions.
+
+Model details
+
+The family of models presented here are derived from Llama-2-chat-7B, a seven billion parameter model trained by Meta for chat applications.
+The base ChristianGPT model was then trained on 30000 question-answer pairs obtained from
+biblechat.ai
+user data, which was first
+filtered for high quality and to remove any personal identifiable information (PII). These were generated with a prompted GPT-3.5 model. This is
+currently the standard for AI applications, but can prove un-reliable on important doctrinal issues. These were filtered out from the dataset.
+Denomination specific models like ChristianGPT-catholic are based on ChristianGPT and fine-tuned on denomination specific datasets.
+
+Training requirements:
+
+GPU with over 16GB of memory (we trained on NVIDIA Tesla V100 32GB and NVIDIA Ampere A6000 45GB)
+
+30GB of RAM (the raw model weights are about 29GB, our models are cast to 8bit to use less memory)
+
+References
+
+We leaned heavily on open-source libraries like
+transformers
+,
+peft
+, and
+bitsandbytes
+for this project.
+
+Dettmers, Tim, Mike Lewis, Younes Belkada, and Luke Zettlemoyer. 2022. "
+LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
+."
+arXiv preprint arXiv:2208.07339
+.
+
+Hu, Edward J., Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. 2021. "
+LoRA: Low-Rank Adaptation of Large Language Models
+."
+arXiv preprint arXiv:2106.09685
+.
+
+models
+
+3
+
+Sort:
+Recently updated
+
+AiForTheChurch/ChristianGPT-base-8bit
+
+Text Generation
+
+•
+
+Updated
+
+Oct 8, 2023
+
+AiForTheChurch/ChristianGPT-catholic-8bit
+
+Text Generation
+
+•
+
+Updated
+
+Oct 8, 2023
+
+AiForTheChurch/ChristianGPT-base-full-precision
+
+Text Generation
+
+•
+
+Updated
+
+Oct 8, 2023
+
+•
+
+6
+
+datasets
+
+2
+
+Sort:
+Recently updated
+
+AiForTheChurch/catholic_denomination_300
+
+Viewer
+
+•
+
+Updated
+
+Oct 8, 2023
+
+•
+
+300
+
+•
+
+3
+
+AiForTheChurch/30000_christian_non_denominational_dataset
+
+Viewer
+
+•
+
+Updated
+
+Oct 8, 2023
+
+•
+
+29.6k
+
+•
+
+1
+
+•
+
+4
+
+System theme
+
+Company
+
+TOS
+
+Privacy
+
+About
+
+Careers
+
+Website
+
+Models
+
+Datasets
+
+Spaces
+
+Pricing
+
+Docs

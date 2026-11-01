@@ -1,0 +1,1870 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/agent-api/model-fallback
+page path  : /docs/agent-api/model-fallback
+captured   : 2026-06-17 07:48:26 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_agent-api_model-fallback__4a8ccb4e.html.gz
+========================================================================
+
+Model Fallback - Perplexity
+
+Model Fallback - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Models & Configuration
+Model Fallback
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Models
+Presets
+Model Fallback
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Agent SDKs
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Computer Analytics API
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+How It Works
+Basic Example
+Cross-Provider Fallback
+Pricing
+Next Steps
+Models & Configuration
+Model Fallback
+Copy page
+Specify multiple models in a fallback chain for higher availability and automatic failover.
+Copy page
+​
+Overview
+
+Model fallback enables specifying multiple models in a
+models
+array. The API tries each model in order until one succeeds, providing automatic failover when a model is unavailable.
+
+​
+How It Works
+
+Provide a
+models
+array containing up to 5 models:
+
+The API tries the first model in the array
+
+If it fails or is unavailable, the next model is tried
+
+This continues until one succeeds or all models are exhausted
+
+The
+models
+array takes precedence over the single
+model
+field when both are provided.
+
+Benefits:
+
+Higher availability
+: Automatic failover when primary model is unavailable
+
+Provider redundancy
+: Use models from different providers for maximum reliability
+
+Seamless operation
+: No code refactoring needed, fallback is handled automatically by the API
+
+​
+Basic Example
+
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+models
+=
+[
+"openai/gpt-5.5"
+,
+"openai/gpt-5.4"
+,
+"openai/gpt-5-mini"
+],
+
+input
+=
+"Explain the original Transformer architecture from 'Attention Is All You Need' (Vaswani et al. 2017): encoder-decoder structure, multi-head self-attention, and positional encodings."
+,
+
+instructions
+=
+"You have access to a web_search tool. Use it for questions about current events."
+,
+
+)
+
+print
+(
+f
+"Model used:
+{
+response.model
+}
+"
+)
+
+Response
+{
+
+"id"
+:
+"resp_157b10b1-4685-4f11-b372-382b8a04e4dd"
+,
+
+"created_at"
+:
+1779391718
+,
+
+"model"
+:
+"openai/gpt-5.1"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"results"
+: [
+
+{
+
+"id"
+:
+1
+,
+
+"snippet": "To the best of our knowledge, however, the Transformer is the first transduction model relying\n...\nThe Transformer follows this overall architecture using stacked self-attention and point-wise, fully\nconnected layers for both the encoder and decoder, shown in the left and right halves of Figure 1,\nrespectively.\n...\nThe encoder is composed of a stack of N = 6 identical layers.\nEach layer has two\nsub-layers.\nThe first is a multi-head self-attention mechanism, and the second is a simple, position-\n...\nand the memory keys and values come from the output of the encoder.\n...\n• The encoder contains self-attention layers.\nIn a self-attention layer all of the keys, values\nand queries come from the same place, in this case, the output of the previous layer in the\nencoder.\nEach position in the encoder can attend to all positions in the previous layer of the\nencoder.\n• Similarly, self-attention layers in the decoder allow each position in the decoder to attend to\nall positions in the decoder up to and including that position.\n...\npositional encodings in both the encoder and decoder stacks.\n...\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on\nattention, replacing the recurrent layers most commonly used in encoder-decoder architectures with\nmulti-headed self-attention.",
+
+"title"
+:
+"[PDF] Attention is All you Need - NIPS"
+,
+
+"url"
+:
+"https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-20"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+2
+,
+
+"snippet"
+:
+"We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely."
+,
+
+"title"
+:
+"[1706.03762] Attention Is All You Need - arXiv"
+,
+
+"url"
+:
+"https://arxiv.org/abs/1706.03762"
+,
+
+"date"
+:
+"2017-06-12"
+,
+
+"last_updated"
+:
+"2026-05-19"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+3
+,
+
+"snippet": "{ts:907} encoder which is the positional encoding so what is positional encoding what we want is that each word should\n…\n{ts:963} have this partial information given by our eyes but the model cannot see this so we need to give some information to\n{ts:969} the model about how the words are specially distributed inside of the sentence\n{ts:975} and we want the positional encoding to represent a pattern that the model can learn and we will see how\n{ts:984} imagine we have our original sentence your cat is a lovely cat what we do is we first convert into embeddings using\n{ts:993} the previous layer so the input embeddings and these are embeddings of size 512 then we create some special\n{ts:1000} vectors called the positional encoding vectors that we add to these embeddings so this Vector we see here in red\n…\n...\n{ts:1159} model will see during inference or training so we only compute the positional encoding once\n...\n{ts:1224} so what is self-attention self attention is a mechanism that existed before they introduced the Transformer the Alters of\n{ts:1233} the Transformer just changed it into a multi-head attention so how did the self-attention work\n{ts:1240} the self-attention allows the model to relate words to each other okay so we had the input embeddings that\n{ts:1249} capture the meaning of the word then we have the positional encoding that give the information about the position of\n{ts:1257} the word inside of the sentence now we want this self-attention to relate words to each other",
+
+"title"
+:
+"Attention is all you need (Transformer) - YouTube"
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=bCz4OMemCcA"
+,
+
+"date"
+:
+"2023-05-28"
+,
+
+"last_updated"
+:
+"2026-03-31"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+4
+,
+
+"snippet": "\"**Attention Is All You Need**\" is a 2017 research paper in machine learning authored by eight scientists and engineers working at Google.\nThe paper introduced a new deep learning architecture known as the transformer, based on the attention mechanism proposed in 2014 by Bahdanau *et al.* The transformer approach it describes has become the main architecture of a wide variety of artificial intelligence, including large language models.\n...\nThe paper is best known for introducing the Transformer architecture, which underlies most modern large language models (LLMs).\n...\nSince the model relies on Query (*Q*), Key (*K*), and Value (*V*) matrices that come from the same source (i.e., the input sequence or context window), this eliminates the need for RNNs, completely ensuring parallelizability for the architecture.\n...\nIn the self-attention mechanism, queries (Q), keys (K), and values (V) are dynamically generated for each input sequence (typically limited by the size of the context window), allowing the model to focus on different parts of the input sequence at different steps.\nMulti-head attention enhances this process by introducing multiple parallel attention heads.\nEach attention head learns different linear projections of the Q, K, and V matrices.\nThis allows the model to capture different aspects of the relationships between words in the sequence simultaneously, rather than focusing on a single aspect.\nBy doing this, multi-head attention ensures that the input embeddings are updated from a more varied and diverse set of perspectives.\nAfter the attention outputs from all heads are calculated, they are concatenated and passed through a final linear transformation to generate the output.\n...\nSince the Transformer does not rely on recurrence or convolution of the text in order to perform encoding and decoding, the paper relied on the use of sine and cosine wave functions to encode the position of the token into the embedding.\nThe methods introduced in the paper are discussed below:\n\\( PE_{({\\rm {pos}},2i)}=\\sin({\\rm {pos}}/{10000}^{2i/d_{\\rm {model}}}) \\)\n...\nOn 2017-06-12, the original (100M-parameter) encoder–decoder transformer model was published in the \"Attention is all you need\" paper.",
+
+"title"
+:
+"Attention Is All You Need - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Attention_Is_All_You_Need"
+,
+
+"date"
+:
+"2023-12-04"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+5
+,
+
+"snippet": "●Presents a new neural architecture named the Transformer\n●Based solely on the attention mechanism widely used in SEQ2SEQ models\n...\nTransformer uses only self-attention \nwhich is attention onto the same \nsentence\n●\n...\non how its meaning is influenced by \n...\nHigh Level\n●\nInput embedding is first added with \nPositional Encoding\n●\n3 components in each \nencoder/decoder: (Masked) Multi-Head \nAttention, Addition & Normalization, \nFeed Forward Network\n...\nMulti-Head Attention\n●\nApply attention to different versions of \nQ, K, V \n●\nExpands model’s ability to focus on \ndifferent positions\n●\nGenerates a multiple “representation \nsubspaces” in order to give the model \nbetter representation of the input\n●\nUses 8 attention heads which are \nconcatenated and fed into a linear layer \nat the end\n...\n• In encoder, all queries, keys, and values come from the same place\n• In encoder-decoder attention layer, queries come from the previous decoder \nlayer and keys and values come from the output of the encoder\n• This mimics the typical encoder-decoder attention mechanism\n• In decoder to ensure auto-regressive property, the model masks everything \nright to the current token being attended\nModel Architecture\nPositional Encoding\n• Since attention mechanism in the \nTransformer does not attend each word \nauto-regressively (no recurrence nor \nconvolution), model needs something to \nlet it know the relative position of tokens \nin the sentence\n• Positional Encoding is the combination \nof sine and cosine functions of different \nfrequencies\n• Advantages include distance between \ntokens being symmetrical and being \neasier to calculate distance between \ntokens",
+
+"title"
+:
+"[PDF] Attention Is All You Need"
+,
+
+"url"
+:
+"https://ysu1989.github.io/courses/au20/cse5539/Transformer.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+6
+,
+
+"snippet": "The Transformer is a neural network architecture, introduced by Vasami *et al.* (2017).\n...\nThe Transformer follows the classic**encoder–decoder ** design for sequence-to-sequence translation.\nThe encoder processes the entire English source sentence, and the decoder generates the French target sentence one token at a time.\nUnlike an RNN-based translator, the Transformer processes sequences in parallel through **self-attention**, enabling it to capture **long-range word dependencies** and context efficiently .\n...\nThe encoder takes an input sentence,(e.g. In English), converts each word to an embedding vector and adds a positional encoding to help determine the order of words in the sentence.\nThis consists of stacked layers each containing :-\n- **Multiple-head self-attention**, where each word attends to all other i.e. in parallel which helps the transformer model to decide different types of relationship between words.\n- **Feed-forward networks** applied to each position\n...\n- **Masked attention**, preventing a token from seeing future outputs, basically the model cannot “peek” at future words.\n- **Encoder-decoder attention** allowing the decoder to attend to the source i.e. the decoder’s queries attend to the encoder’s output key/value, hence making sure that the tokens are in relevant context from source sentence.\n...\nThe encoder is the part of the Transformer that processes the input sentence in this case, “**The cat sat on the mat**.”\nEach word is first turned into a word embedding (a vector representing its meaning) and combined with a **positional encoding** (Vaswani et al., 2017) to preserve word order.\n...\nSince Transformers do not process input sequentially like RNNs, positional encodings are added to embeddings to inform the model about word positions.\nThese encodings **use sine and cosine ** functions at varying frequencies, allowing the model to learn relative and absolute positions in the sequence .\n...\nThe **self-attention** mechanism enables each word in the sentence to “attend” to every other word and determine how important they are in context.\n...\nNow, instead of applying self-attention just once, **multi-head attention ** allows the model to attend to different types of relationships in **parallel** . Each head learns different patterns:\n- One might detect grammatical structure (e.g., connecting “the” to “cat”),\n- Another might track verb-subject relations (e.g., “cat” to “sat”),\n- Another may focus on positional or contextual clues (Vaswani et al., 2017).\nThe outputs from all heads are combined, giving the model a deeper, more comprehensive understanding of the input.",
+
+"title"
+:
+"Review of “Attention Is All You Need (Vaswani et al., 2017)”"
+,
+
+"url"
+:
+"https://harbisingh.wordpress.com/2025/08/12/review-of-attention-is-all-you-need-vaswani-et-al-2017/"
+,
+
+"date"
+:
+"2025-08-12"
+,
+
+"last_updated"
+:
+"2026-04-05"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+7
+,
+
+"snippet": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n...\nIn this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output.\n...\nTo the best of our knowledge, however, the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution.\n...\nThe Transformer follows this overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder and decoder, shown in the left and right halves of Figure 1, respectively.\n...\nThe encoder is composed of a stack of N=6 identical layers.\nEach layer has two sub-layers.\nThe first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network.\n...\nThe decoder is also composed of a stack of N=6 identical layers.\nIn addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack.\n...\nWe also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions.\nThis masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.\n...\nMulti-head attention allows the model to jointly attend to information from different representation subspaces at different positions.\n...\nIn \"encoder-decoder attention\" layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder.\nThis allows every position in the decoder to attend over all positions in the input sequence.\n...\nThe encoder contains self-attention layers.\nIn a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder.\nEach position in the encoder can attend to all positions in the previous layer of the encoder.\n...\nSimilarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position.\n...\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.",
+
+"title"
+:
+"Attention Is All You Need - arXiv"
+,
+
+"url"
+:
+"https://arxiv.org/html/1706.03762v7"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-18"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+8
+,
+
+"snippet": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n...\nIn this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output.\n...\nTo the best of our knowledge, however, the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution.\n...\nThe Transformer follows this overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder and decoder, shown in the left and right halves of Figure 1, respectively.\n...\nThe encoder is composed of a stack of N=6 identical layers.\nEach layer has two sub-layers.\nThe first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network.\n...\nThe decoder is also composed of a stack of N=6 identical layers.\nIn addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack.\n...\nWe also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions.\nThis masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.\n...\nIn \"encoder-decoder attention\" layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder.\nThis allows every position in the decoder to attend over all positions in the input sequence.\n...\nThe encoder contains self-attention layers.\nIn a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder.\nEach position in the encoder can attend to all positions in the previous layer of the encoder.\n...\nSimilarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position.\n...\nIn addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically.\n...\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.",
+
+"title"
+:
+"Attention Is All You Need"
+,
+
+"url"
+:
+"https://arxiv.org/html/1706.03762?_immersive_translate_auto_translate=1"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-03-23"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+9
+,
+
+"snippet": "To the best of our knowledge, however, the Transformer is the first transduction model relying\nentirely on self-attention to compute representations of its input and output without using sequence-\naligned RNNs or convolution.\n...\nThe Transformer follows this overall architecture using stacked self-attention and point-wise, fully\nconnected layers for both the encoder and decoder, shown in the left and right halves of Figure 1,\nrespectively.\n...\nEncoder:\nThe encoder is composed of a stack of N = 6 identical layers.\nEach layer has two\nsub-layers.\nThe first is a multi-head self-attention mechanism, and the second is a simple, position-\n...\nDecoder:\nThe decoder is also composed of a stack of N = 6 identical layers.\nIn addition to the two\nsub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head\nattention over the output of the encoder stack.\n...\nWe also modify the self-attention\nsub-layer in the decoder stack to prevent positions from attending to subsequent positions.\n...\nThe Transformer uses multi-head attention in three different ways:\n• In \"encoder-decoder attention\" layers, the queries come from the previous decoder layer,\nand the memory keys and values come from the output of the encoder.\nThis allows every\nposition in the decoder to attend over all positions in the input sequence.\nThis mimics the\ntypical encoder-decoder attention mechanisms in sequence-to-sequence models such as\n[31, 2, 8].\n• The encoder contains self-attention layers.\nIn a self-attention layer all of the keys, values\nand queries come from the same place, in this case, the output of the previous layer in the\nencoder.\nEach position in the encoder can attend to all positions in the previous layer of the\nencoder.\n• Similarly, self-attention layers in the decoder allow each position in the decoder to attend to\nall positions in the decoder up to and including that position.\n...\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on\nattention, replacing the recurrent layers most commonly used in encoder-decoder architectures with\nmulti-headed self-attention.",
+
+"title"
+:
+"[PDF] Attention is All you Need - NIPS"
+,
+
+"url"
+:
+"https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2026-05-20"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+10
+,
+
+"snippet": "In this work we propose the Transformer, a model architecture eschewing recurrence and instead\nrelying entirely on an attention mechanism to draw global dependencies between input and output.\n...\nTo the best of our knowledge, however, the Transformer is the first transduction model relying\nentirely on self-attention to compute representations of its input and output without using sequence-\naligned RNNs or convolution.\n...\nThe Transformer follows this overall architecture using stacked self-attention and point-wise, fully\nconnected layers for both the encoder and decoder, shown in the left and right halves of Figure 1,\nrespectively.\n...\nThe encoder is composed of a stack of N = 6 identical layers.\nEach layer has two\nsub-layers.\nThe first is a multi-head self-attention mechanism, and the second is a simple, position-\n...\nThe decoder is also composed of a stack of N = 6 identical layers.\nIn addition to the two\nsub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head\nattention over the output of the encoder stack.\n...\nIn this work we employ h = 8 parallel attention layers, or heads.\n...\nThe Transformer uses multi-head attention in three different ways:\n• In \"encoder-decoder attention\" layers, the queries come from the previous decoder layer,\nand the memory keys and values come from the output of the encoder.\nThis allows every\nposition in the decoder to attend over all positions in the input sequence.\nThis mimics the\ntypical encoder-decoder attention mechanisms in sequence-to-sequence models such as\n[31, 2, 8].\n• The encoder contains self-attention layers.\nIn a self-attention layer all of the keys, values\nand queries come from the same place, in this case, the output of the previous layer in the\nencoder.\nEach position in the encoder can attend to all positions in the previous layer of the\nencoder.\n• Similarly, self-attention layers in the decoder allow each position in the decoder to attend to\nall positions in the decoder up to and including that position.\nWe need to prevent leftward",
+
+"title"
+:
+"Attention is All you Need"
+,
+
+"url"
+:
+"https://papers.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf"
+,
+
+"date"
+:
+null
+,
+
+"last_updated"
+:
+"2025-02-04"
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"type"
+:
+"search_results"
+,
+
+"queries"
+: [
+
+"Attention is All You Need Vaswani 2017 transformer architecture encoder decoder multi-head self-attention positional encoding"
+
+]
+
+},
+
+{
+
+"id"
+:
+"msg_14924dfc-980f-4339-9b39-d0f6eb987f87"
+,
+
+"content"
+: [
+
+{
+
+"text": "The original Transformer is a stacked encoder–decoder sequence model that replaces recurrence with multi‑head self‑attention plus position‑wise feed‑forward layers, with sinusoidal positional encodings added to token embeddings to supply order information. [web:7][web:9] Multi‑head attention computes several parallel scaled dot‑product attentions using different learned projections of queries, keys, and values, then concatenates and linearly mixes them. [web:7][web:9]\n\n## Encoder–decoder structure\n\nThe Transformer is an encoder–decoder architecture for sequence transduction (e.g., machine translation), built entirely from attention and feed‑forward layers, without RNNs or convolutions. [web:7][web:9] The base model in the paper uses 6 encoder layers and 6 decoder layers, each operating on vectors of dimension \\(d_{\\text{model}} = 512\\). [web:7][web:9]\n\n- **Encoder** layers:\n - Each encoder layer has:\n - A multi‑head self‑attention sublayer.\n - A position‑wise fully connected feed‑forward network. [web:7][web:9]\n - Each sublayer is wrapped with residual connection and layer normalization (input + sublayer output, then LayerNorm). [web:7][web:9]\n\n- Decoder layers:\n - Each decoder layer has three sublayers:\n - Masked multi‑head self‑attention over the decoder’s own previous outputs.\n - Multi‑head encoder–decoder attention, where queries come from the decoder and keys/values from the encoder outputs.\n - A position‑wise feed‑forward network. [web:7][web:9]\n - The self‑attention in the decoder is masked so position \\(i\\) cannot attend to positions \\(> i\\), preserving the autoregressive property. [web:7][web:9]\n\n## Scaled dot‑product attention\n\nThe core building block is scaled dot‑product attention, which maps queries \\(Q\\), keys \\(K\\), and values \\(V\\) to an output: \n\\[\n\\text{Attention}(Q,K,V) = \\text{softmax}\\left(\\frac{QK^\\top}{\\sqrt{d_k}}\\right)V.\n\\] \n[web:7][web:9]\n\n- **Queries, keys, values** are all learned linear projections of the input representations in that layer. [web:7][web:9]\n- The dot products \\(QK^\\top\\) produce attention scores, scaled by \\(1/\\sqrt{d_k}\\) to prevent large magnitudes from pushing softmax into very small gradients. [web:7][web:9]\n- The softmax over each query’s scores gives attention weights over positions; these weights form a weighted sum of the value vectors. [web:7][web:9]\n\nIn self‑attention, \\(Q\\), \\(K\\), and \\(V\\) all come from the same sequence representations; in encoder–decoder attention, \\(Q\\) comes from the decoder and \\(K,V\\) from the encoder. [web:7][web:9]\n\n## Multi‑head self‑attention\n\nMulti‑head attention repeats scaled dot‑product attention in parallel with different learned projections, letting the model focus on different relation patterns and positions simultaneously. [web:7][web:9]\n\n- For each of \\(h\\) heads (the paper uses \\(h = 8\\)):\n - Project inputs linearly to per‑head \\(Q_i, K_i, V_i \\in \\mathbb{R}^{d_k}, \\mathbb{R}^{d_k}, \\mathbb{R}^{d_v}\\) with separate weight matrices. [web:7][web:9]\n - Compute attention head \\(i\\) as \\(\\text{head}_i = \\text{Attention}(Q_i, K_i, V_i)\\). [web:7][web:9]\n- Concatenate all heads and apply a final linear projection:\n \\[\n \\text{MultiHead}(Q,K,V) = \\text{Concat}(\\text{head}_1,\\dots,\\text{head}_h)W^O.\n \\] \n [web:7][web:9]\n\nKey uses:\n\n- Encoder self‑attention: Each position can attend to all positions in the encoder’s previous layer. [web:7][web:9]\n- Decoder masked self‑attention: Each position attends only to positions up to itself, using a mask that sets scores to \\(-\\infty\\) for future positions before softmax. [web:7][web:9]\n- Encoder–decoder attention: Decoder queries attend over all encoder outputs, with keys and values from the encoder and queries from the decoder. [web:7][web:9]\n\nThis design increases the **expressive** power since different heads can specialize to, for example, syntactic dependencies, coreference, or positional patterns. [web:4][web:5]\n\n## Positional encodings\n\nBecause the Transformer has no recurrence or convolution, it adds positional encodings to input (and output) token embeddings so the model can use order information. [web:7][web:4]\n\n- The paper uses **fixed sinusoidal** positional encodings:\n - For position \\(\\text{pos}\\) and even dimension \\(2i\\):\n \\[\n PE_{\\text{pos}, 2i} = \\sin\\left(\\frac{\\text{pos}}{10000^{2i/d_{\\text{model}}}}\\right),\n \\quad\n PE_{\\text{pos}, 2i+1} = \\cos\\left(\\frac{\\text{pos}}{10000^{2i/d_{\\text{model}}}}\\right).\n \\]\n [web:4][web:7]\n - Different dimensions use different frequencies, so relative positions correspond to phase shifts, which allows the model to learn relative as well as absolute distance patterns. [web:4]\n\n- Usage:\n - For each token, the model sums its learned embedding with the positional encoding vector for its index before feeding into the first encoder or decoder layer. [web:7][web:5]\n - The same scheme is applied to both source and target sequences. [web:7]\n\nThese fixed encodings avoid extra parameters and support sequences longer than seen in training, while providing smooth, distance‑aware position signals to self‑attention. [web:4][web:7]\n\n## Position‑wise feed‑forward networks\n\nEach layer’s attention sublayer is followed by a position‑wise feed‑forward network applied independently to each sequence position. [web:7][web:9]\n\n- The FFN has the form:\n \\[\n \\text{FFN}(x) = \\max(0, xW_1 + b_1)W_2 + b_2,\n \\]\n with an inner dimension \\(d_{\\text{ff}} = 2048\\) in the base model. [web:7][web:9]\n- The same FFN parameters are shared across positions but differ between layers. [web:7]\n\nTogether, multi‑head attention, sinusoidal positional encodings, and position‑wise feed‑forward layers form the original Transformer encoder–decoder architecture introduced by Vaswani et al. in 2017. [web:7][web:9]",
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [],
+
+"logprobs"
+: []
+
+}
+
+],
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+:
+null
+,
+
+"usage"
+: {
+
+"input_tokens"
+:
+8687
+,
+
+"output_tokens"
+:
+1599
+,
+
+"total_tokens"
+:
+10286
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+0.00638
+,
+
+"output_cost"
+:
+0.01599
+,
+
+"total_cost"
+:
+0.02782
+,
+
+"cache_creation_cost"
+:
+null
+,
+
+"cache_read_cost"
+:
+0.00045
+,
+
+"tool_calls_cost"
+:
+0.005
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+0
+,
+
+"cache_read_input_tokens"
+:
+3584
+,
+
+"cached_tokens"
+:
+3584
+
+},
+
+"tool_calls_details"
+: {
+
+"search_web"
+: {
+
+"invocation"
+:
+1
+
+}
+
+},
+
+"output_tokens_details"
+: {
+
+"reasoning_tokens"
+:
+0
+
+}
+
+},
+
+"background"
+:
+false
+,
+
+"completed_at"
+:
+1779391718
+,
+
+"frequency_penalty"
+:
+0
+,
+
+"incomplete_details"
+:
+null
+,
+
+"instructions": "## Abstract\n<role>\nYou are an AI assistant developed by Perplexity AI. Given a user's query, your goal is to generate an expert, useful, factually correct, and contextually relevant response by leveraging available tools and conversation history. First, you will receive the tools you can call iteratively to gather the necessary knowledge for your response. You need to use these tools rather than using internal knowledge. Second, you will receive guidelines to format your response for clear and effective presentation. Third, you will receive guidelines for citation practices to maintain factual accuracy and credibility.\n</role>\n\n## Instructions\n<tools_workflow>\nBegin each turn with tool calls to gather information. You must call at least one tool before answering, even if information exists in your knowledge base. Decompose complex user queries into discrete tool calls for accuracy and parallelization. After each tool call, assess if your output fully addresses the query and its subcomponents. Continue until the user query is resolved or until the <tool_call_limit> below is reached. End your turn with a comprehensive response. Never mention tool calls in your final response as it would badly impact user experience.\n\n<tool_call_limit> Make at most three tool calls before concluding.</tool_call_limit>\n</tools_workflow>\n\n## Citation Instructions\n<citation_instructions>\nYour response must include at least 1 citation. Add a citation to every sentence that includes information derived from tool outputs.\nTool results are provided using `id` in the format `type:index`. `type` is the data source or context. `index` is the unique identifier per citation.\n<common_source_types> are included below.\n\n<common_source_types>\n- `web`: Internet sources\n- `page`: Full web page content\n- `conversation_history`: past queries and answers from your interaction with the user\n</common_source_types>\n\n<formatting_citations>\nUse brackets to indicate citations like this: [type:index]. Commas, dashes, or alternate formats are not valid citation formats. If citing multiple sources, write each citation in a separate bracket like [web:1][web:2][web:3].\n\nCorrect: \"The Eiffel Tower is in Paris [web:3].\"\nIncorrect: \"The Eiffel Tower is in Paris [web-3].\"\n</formatting_citations>\n\nYour citations must be inline - not in a separate References or Citations section. Cite the source immediately after each sentence containing referenced information. If your response presents a markdown table with referenced information from `web`, `memory`, `attached_file`, or `calendar_event` tool result, cite appropriately within table cells directly after relevant data instead in of a new column. Do not cite `generated_image` or `generated_video` inside table cells.\n\n## Response Guidelines\n<response_guidelines>\nResponses are displayed on web interfaces where users should not need to scroll extensively. Limit responses to 5 sections maximum. Users can ask follow-up questions if they need additional detail. Prioritize the most relevant information for the initial query.\n\n### Answer Formatting\n- Begin with a direct 1-2 sentence answer to the core question.\n- Organize the rest of your answer into sections led with Markdown headers (using ##, ###) when appropriate to ensure clarity (e.g. entity definitions, biographies, and wikis).\n- Your answer should be at least 3 sentences long.\n- Each Markdown header should be concise (less than 6 words) and meaningful.\n- Markdown headers should be plain text, not numbered.\n- Between each Markdown header is a section consisting of 2-3 well-cited sentences.\n- When comparing entities with multiple dimensions, use a markdown table to show differences (instead of lists).\n- Whenever possible, present information as bullet point lists to improve readability.\n- You are allowed to bold at most one word (**example**) per paragraph. You can't bold consecutive words.\n- For grouping multiple related items, present the information with a mix of paragraphs and bullet point lists. Do not nest lists within other lists.\n\n### Tone\n<tone>\nExplain clearly using plain language. Use active voice and vary sentence structure to sound natural. Ensure smooth transitions between sentences. Avoid personal pronouns like \"I\". Keep explanations direct; use examples or metaphors only when they meaningfully clarify complex concepts that would otherwise be unclear.\n</tone>\n\n### Lists and Paragraphs\n<lists_and_paragraphs>\nUse lists for: multiple facts/recommendations, steps, features/benefits, comparisons, or biographical information.\n\nAvoid repeating content in both intro paragraphs and list items. Keep intros minimal. Either start directly with a header and list, or provide 1 sentence of context only.\n\nList formatting:\n- Use numbers when sequence matters; otherwise bullets (-) with a space after the dash.\n- Use numbers when sequence matters; otherwise bullets (-).\n- No whitespace before bullets (i.e. no indenting), one item per line.\n- Sentence capitalization; periods only for complete sentences.\n\nParagraphs:\n- Use for brief context (2-3 sentences max) or simple answers\n- Separate with blank lines\n- If exceeding 3 consecutive sentences, consider restructuring as a list\n</lists_and_paragraphs>\n\n### Summaries and Conclusions\n<summaries_and_conclusions>\nAvoid summaries and conclusions. They are not needed and are repetitive. Markdown tables are not for summaries. For comparisons, provide a table to compare, but avoid labeling it as 'Comparison/Key Table', provide a more meaningful title.\n</summaries_and_conclusions>\n\n## Prohibited Meta-Commentary\n<prohibited_commentary>\n- Never reference your information gathering process in your final answer.\n- Do not use phrases such as:\n- \"Based on my search results...\"\n- \"Now I have gathered comprehensive information...\"\n- \"According to my research...\"\n- \"My search revealed...\"\n- \"I found information about...\"\n- \"Let me provide a detailed answer...\"\n- \"Let me compile this information...\"\n- \"Short Answer: ...\"\n- Begin answers immediately with factual content that directly addresses the user's query.\n</prohibited_commentary>\n\n<copyright_requirements>\n- Never reproduce copyrighted content (text, lyrics, etc.)\n- You may share public domain content (expired copyrights, traditional works)\n- When copyright status is uncertain, treat as copyrighted\n- Keep summaries brief (under 30 words) and original — don't reconstruct sources\n- Brief factual statements (names, dates, facts) are always acceptable\n</copyright_requirements>\n\nCurrent date: Thursday, May 21, 2026\n\n",
+
+"max_output_tokens"
+:
+8192
+,
+
+"max_tool_calls"
+:
+null
+,
+
+"metadata"
+: {},
+
+"parallel_tool_calls"
+:
+true
+,
+
+"presence_penalty"
+:
+0
+,
+
+"previous_response_id"
+:
+null
+,
+
+"prompt_cache_key"
+:
+null
+,
+
+"reasoning"
+:
+null
+,
+
+"safety_identifier"
+:
+null
+,
+
+"service_tier"
+:
+"default"
+,
+
+"store"
+:
+true
+,
+
+"temperature"
+:
+1
+,
+
+"text"
+: {
+
+"format"
+: {
+
+"type"
+:
+"text"
+
+}
+
+},
+
+"tool_choice"
+:
+"auto"
+,
+
+"tools"
+: [
+
+{
+
+"type"
+:
+"web_search"
+
+},
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+"top_logprobs"
+:
+0
+,
+
+"top_p"
+:
+1
+,
+
+"truncation"
+:
+"disabled"
+,
+
+"user"
+:
+null
+
+}
+
+​
+Cross-Provider Fallback
+
+For maximum reliability, use models from different providers:
+
+Python
+Typescript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+models
+=
+[
+
+"openai/gpt-5.5"
+,
+
+"anthropic/claude-sonnet-4-6"
+,
+
+"google/gemini-3-flash-preview"
+
+],
+
+input
+=
+"What did the SEC v. Sam Bankman-Fried complaint (December 2022) allege about FTX, and what was the outcome of his 2023 criminal trial?"
+,
+
+)
+
+Response
+{
+
+"id"
+:
+"resp_e012062c-3b30-474e-82a9-3f8116442e6f"
+,
+
+"created_at"
+:
+1779391825
+,
+
+"model"
+:
+"openai/gpt-5.1"
+,
+
+"object"
+:
+"response"
+,
+
+"output"
+: [
+
+{
+
+"results"
+: [
+
+{
+
+"id"
+:
+1
+,
+
+"snippet": "The Securities and Exchange Commission today charged Samuel Bankman-Fried with orchestrating a scheme to defraud equity investors in FTX Trading Ltd.\n(FTX), the crypto trading platform of which he was the CEO and co-founder.\n...\nAccording to the SEC’s complaint, since at least May 2019, FTX, based in The Bahamas, raised more than $1.8 billion from equity investors, including approximately $1.1 billion from approximately 90 U.S.-based investors.\n...\nThe complaint alleges that, in reality, Bankman-Fried orchestrated a years-long fraud to conceal from FTX’s investors (1) the undisclosed diversion of FTX customers’ funds to Alameda Research LLC, his privately-held crypto hedge fund; (2) the undisclosed special treatment afforded to Alameda on the FTX platform, including providing Alameda with a virtually unlimited “line of credit” funded by the platform’s customers and exempting Alameda from certain key FTX risk mitigation measures;\nand (3) undisclosed risk stemming from FTX’s exposure to Alameda’s significant holdings of overvalued, illiquid assets such as FTX-affiliated tokens.\nThe complaint further alleges that Bankman-Fried used commingled FTX customers’ funds at Alameda to make undisclosed venture investments, lavish real estate purchases, and large political donations.\n...\nWhile we continue to investigate FTX and other entities and individuals for potential violations of the federal securities laws, as alleged in our complaint, today we are holding Mr. Bankman-Fried responsible for fraudulently raising billions of dollars from investors in FTX and misusing funds belonging to FTX’s trading customers.\"\nThe SEC’s complaint charges Bankman-Fried with violating the anti-fraud provisions of the Securities Act of 1933 and the Securities Exchange Act of 1934.",
+
+"title"
+:
+"SEC Charges Samuel Bankman-Fried with Defrauding Investors in ..."
+,
+
+"url"
+:
+"https://www.sec.gov/newsroom/press-releases/2022-219"
+,
+
+"date"
+:
+"2022-12-13"
+,
+
+"last_updated"
+:
+"2025-10-23"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+2
+,
+
+"snippet": "The SEC’s Complaint alleges that SBF defrauded investors in FTX by concealing (1) that FTX directed billions of dollars of FTX customer assets to Alameda,[2] (2) that FTX provided special privileges to Alameda, including an exemption from risk mitigation measures and an essentially unlimited line of credit,[3] and (3) FTX’s exposure to Alameda, which was collateralized by largely overvalued and illiquid assets, including FTT, an FTX-affiliated token.[\n4] The SEC alleges that SBF used the funds appropriated to Alameda to make undisclosed investments, lavish real estate purchases, large political donations, and personal “loans” to himself and other executives, as well as to pay Alameda’s lenders following a crash in crypto asset prices in Spring 2022.[5]\nThe Complaint alleges that SBF made many omissions and misstatements of material fact to further the fraud scheme.\nFor example, the Complaint alleges that SBF and Caroline Ellison, the ex-CEO of Alameda and SBF’s personal friend, misrepresented that FTX and Alameda were two separate entities, operating at arm’s length and without any preferential treatment, when in fact, FTX maintained a special relationship with Alameda that permitted Alameda to leverage FTX’s customers’ assets and expose FTX to a high degree of risk.[\n6] In addition, an FTX document published on its website and provided to potential investors misleadingly claimed that FTX segregated customer assets from its own assets and maintained sufficient liquid assets for customer withdrawals.[7] SBF also made material misstatements indicating that FTX did not invest customer assets, and inaccurately reflected FTX’s level of exposure to FTT.[8] On many occasions, SBF made misleading public statements that touted FTX’s controls and risk management measures.[9]\nThe SEC complaint charges SBF with fraud in the offer or sale of securities, in violation of Section 17(a) of the Security Act and fraud in connection with the purchase or sale of securities, in violation of Section 10(b) of the Exchange Act and Rule 10b-5 thereunder.[10]",
+
+"title"
+:
+"An Overview of the SEC, SDNY and CFTC Cases Against Sam ..."
+,
+
+"url"
+:
+"https://www.pbwt.com/securities-enforcement-litigation-insider/an-overview-of-the-sec-sdny-and-cftc-cases-against-sam-bankman-fried"
+,
+
+"date"
+:
+"2022-12-21"
+,
+
+"last_updated"
+:
+"2026-05-16"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+3
+,
+
+"snippet"
+:
+"On December 12, 2022, Bankman-Fried was arrested in the Bahamas and extradited to the United States, where he was indicted on seven criminal charges, including wire fraud, commodities fraud, securities fraud, money laundering, and campaign finance law violations."
+,
+
+"title"
+:
+"Sam Bankman-Fried - Wikipedia"
+,
+
+"url"
+:
+"https://en.wikipedia.org/wiki/Sam_Bankman-Fried"
+,
+
+"date"
+:
+"2021-04-17"
+,
+
+"last_updated"
+:
+"2026-05-17"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+4
+,
+
+"snippet": "The complaint charges all three defendants with fraud and material misrepresentations in connection with the sale of digital commodities in interstate commerce.\nFurther, the complaint asserts that defendants’ actions caused the loss of over $8 billion in FTX customer deposits.\n...\nThe complaint alleges that from at least May 2019 through November 11, 2022, Bankman-Fried controlled both FTX.com, a centralized digital asset derivative platform, and Alameda, a digital asset trading firm that operated as a primary market maker on FTX.\nAs charged, FTX held itself out as “the safest and easiest way to buy and sell crypto” and represented that customers’ assets, including both fiat and digital assets including bitcoin and ether, were held in “custody” by FTX and segregated from FTX’s own assets.\nTo the contrary, FTX customer assets were routinely accepted and held by Alameda and commingled with Alameda’s funds.\nAlameda, Bankman-Fried, and others also appropriated customer funds for their own operations and activities, including luxury real estate purchases, political contributions, and high-risk, illiquid digital asset industry investments.\nThe complaint further alleges that, at Bankman-Fried’s direction, FTX employees created features in the FTX code that favored Alameda and allowed it to execute transactions even when it did not have sufficient funds available, including an “allow negative flag” and effectively limitless line of credit that allowed Alameda to withdraw billions of dollars in customer assets from FTX.\nThese features were not disclosed to the public.\n...\nIn a parallel, separate action, on December 13, 2022, the United States Attorney for the Southern District of New York unsealed an indictment charging Bankman-Fried with wire fraud, commodities fraud, securities fraud, and money laundering.\nAlso, on December 13, 2022, the Securities and Exchange Commission charged Bankman-Fried with securities fraud.",
+
+"title"
+:
+"CFTC Charges Sam Bankman-Fried, FTX Trading and Alameda with ..."
+,
+
+"url"
+:
+"https://www.cftc.gov/PressRoom/PressReleases/8638-22"
+,
+
+"date"
+:
+"2022-12-13"
+,
+
+"last_updated"
+:
+"2026-05-21"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+5
+,
+
+"snippet": "According to the allegations contained in the Indictment, the evidence offered at trial, and matters included in public filings:\nBANKMAN-FRIED was the founder and chief executive officer of FTX, an international cryptocurrency exchange.\nFrom 2019 to 2022, BANKMAN-FRIED was the leader and mastermind of a scheme to defraud customers of FTX by misappropriating billions of dollars of those customers’ funds.\nBANKMAN-FRIED took FTX customer funds for his personal use, to make investments and millions of dollars of political contributions to candidates from both parties, and to repay billions of dollars in loans owed by Alameda Research, a cryptocurrency trading fund that BANKMAN-FRIED also founded.\nBANKMAN-FRIED also defrauded lenders to Alameda and equity investors in FTX by providing them false and misleading financial information that concealed his misuse of customer deposits.\nBANKMAN-FRIED repeatedly told his customers, his investors, and the public that customer deposits into FTX were kept safe and were held in custody for the customers, that customer deposits were kept separate from company assets, and that customer deposits would not be used by FTX.\nHe also repeatedly claimed that his trading company, Alameda, did not have any privileged access to FTX and did not receive special treatment from FTX.\nThose statements were false, and BANKMAN-FRIED in fact channeled billions of dollars in customer deposits from FTX to Alameda, and then used those funds to make investments for his own benefit, to make political contributions, and to spend on real estate, among other expenditures.\nHe employed a variety of fraudulent means to perpetrate this fraud.\nFor instance, BANKMAN-FRIED directed co-conspirators to alter FTX’s computer code to allow Alameda to withdraw effectively unlimited amounts of cryptocurrency from the exchange and made false statements to financial institutions to conceal his misuse of customer dollar deposits.\nHe also directed the creation of false financial statements for Alameda’s lenders, inflated FTX’s revenues and profits in numbers provided to investors, and backdated contracts and other documents to conceal his fraudulent conduct.",
+
+"title"
+:
+"Samuel Bankman-Fried Sentenced To 25 Years In Prison"
+,
+
+"url"
+:
+"https://www.justice.gov/usao-sdny/pr/samuel-bankman-fried-sentenced-25-years-prison"
+,
+
+"date"
+:
+"2024-03-28"
+,
+
+"last_updated"
+:
+"2026-03-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+6
+,
+
+"snippet"
+:
+"Prosecutors said Bankman-Fried had cost customers, investors and lenders over $10 billion by misappropriating billions of dollars to fuel his quest for influence and dominance in the new industry, and had illegally used money from FTX depositors to cover his expenses, which included purchasing luxury properties in the Caribbean, alleged bribes to Chinese officials and private planes."
+,
+
+"title"
+:
+"FTX founder Sam Bankman-Fried sentenced to 25 years in prison"
+,
+
+"url"
+:
+"https://www.marketplace.org/story/2024/03/28/sam-bankman-fried-sentenced-to-25-years-in-prison"
+,
+
+"date"
+:
+"2024-03-28"
+,
+
+"last_updated"
+:
+"2026-03-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+7
+,
+
+"snippet"
+:
+"The SEC complaint that applied from May 2019 through November 2022 described activities at FTX
+\n
+and Alameda that were never disclosed to investors or customers.
+\n
+The SEC complaint90 included the
+\n
+following:
+\n
+Undisclosed diversion of FTX customers’ funds to Alameda Research LLC.
+\n
+FTX customers
+\n
+deposited billions of dollars into Alameda-owned bank accounts, some which didn’t have the name
+\n
+Alameda (e.g., North Dimension, which was an Alameda subsidiary).
+\n
+Singh helped write the code that
+\n
+…
+\n
+...
+\n
+SBF propped up Alameda by illegally transferring at least $4 billion in
+\n
+FTX customer funds to Alameda, secured by assets including FTT and shares in Robinhood.94
+\n
+Undisclosed risk stemming from FTX’s exposure to Alameda’s significant holdings of overvalued
+\n
+illiquid assets such as FTX-affiliated tokens.
+\n
+Alameda’s collateral on deposit consisted of enormous"
+,
+
+"title"
+:
+"[PDF] Sam Bankman-Fried's FTX | MIT Sloan"
+,
+
+"url"
+:
+"https://mitsloan.mit.edu/sites/default/files/2024-06/Sam%20Bankman-Fried's%20FTX.pdf"
+,
+
+"date"
+:
+"2024-01-17"
+,
+
+"last_updated"
+:
+"2026-05-16"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+8
+,
+
+"snippet"
+:
+"The defendant is “charged with a wide-ranging scheme to misappropriate billions of dollars of customer funds deposited with FTX and mislead investors and lenders to FTX and to Alameda Research,” a release from the U.S. attorney’s office at the Southern District of New York stated.
+\n
+...
+\n
+The DOJ’s December 2022 indictment stated Bankman-Fried knowingly defrauded FTX customers by misusing their deposits to invest in other companies and pay off lenders and expenses."
+,
+
+"title"
+:
+"Sam Bankman-Fried found guilty on all seven counts - TechCrunch"
+,
+
+"url"
+:
+"https://techcrunch.com/2023/11/02/sam-bankman-fried-found-guilty-on-all-seven-counts/"
+,
+
+"date"
+:
+"2023-11-02"
+,
+
+"last_updated"
+:
+"2026-04-15"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+9
+,
+
+"snippet"
+:
+"The charges broadly covered two categories: stealing the money of customers who put their money into FTX accounts and lying to investors and creditors."
+,
+
+"title"
+:
+"Sam Bankman-Fried sentenced to 25 years in prison for his FTX ..."
+,
+
+"url"
+:
+"https://www.opb.org/article/2024/03/28/sam-bankman-fried-sentenced-to-25-years-in-prison-for-his-ftx-crimes/"
+,
+
+"date"
+:
+"2024-03-28"
+,
+
+"last_updated"
+:
+"2026-05-16"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+10
+,
+
+"snippet"
+:
+"{ts:49} Bankman-Fried and his co-conspirators stole billions of dollars from FTX customers.
+\n
+The indictment accuses Bankman-Fried of misappropriating FTX.com customers' deposits and using those to pay expenses and debts of
+\n
+{ts:62} Alameda Research, his crypto hedge fund.
+\n
+...
+\n
+{ts:86} Also on December 13th, the Securities and Exchange Commission alleged in a civil lawsuit that Bankman-Fried diverted customer funds from the start of FTX to support Alameda.
+\n
+The SEC says that while he spent lavishly on office space and condominiums in the
+\n
+{ts:101} Bahamas and sank billions of dollars of customer funds into speculative venture investments, Bankman-Fried's house of cards began to crumble.
+\n
+...
+\n
+The Commodity Futures Trading Commission, another U.S. markets regulator, filed a separate lawsuit on the same day linking his alleged fraudulent
+\n
+{ts:136} conduct at Alameda and FTX to markets that the CFTC regulates."
+,
+
+"title"
+:
+"Sam Bankman-Fried Faces Fraud Charges, Lawsuits Tied to FTX ..."
+,
+
+"url"
+:
+"https://www.youtube.com/watch?v=oALv48BicV0"
+,
+
+"date"
+:
+"2022-12-13"
+,
+
+"last_updated"
+:
+"2026-01-25"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+11
+,
+
+"snippet"
+:
+"Bankman-Fried, the 31-year old son of two Stanford legal scholars and graduate of Massachusetts Institute of Technology, had pleaded not guilty to charges including wire fraud, securities fraud and money laundering tied to the collapse late last year of crypto exchange FTX and sister hedge fund Alameda Research."
+,
+
+"title"
+:
+"Sam Bankman-Fried found guilty on all seven criminal fraud counts"
+,
+
+"url"
+:
+"https://web.archive.org/web/20231102235813/https:/www.cnbc.com/2023/11/02/sam-bankman-fried-found-guilty-on-all-seven-criminal-fraud-counts.html"
+,
+
+"date"
+:
+"2023-11-02"
+,
+
+"last_updated"
+:
+"2024-09-14"
+,
+
+"source"
+:
+"web"
+
+},
+
+{
+
+"id"
+:
+12
+,
+
+"snippet"
+:
+"He was accused of using customer deposits on the cryptocurrency trading platform FTX, the company he founded, to cover losses at his hedge fund, pay off loans and buy lavish real estate, among other personal expenses."
+,
+
+"title"
+:
+"Disgraced former FTX CEO Sam Bankman-Fried sentenced to 25 ..."
+,
+
+"url"
+:
+"https://abcnews.go.com/US/sam-bankman-fried-sentenced-thursday-financial-fraud/story?id=108554809"
+,
+
+"date"
+:
+"2024-03-28"
+,
+
+"last_updated"
+:
+"2026-02-10"
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"type"
+:
+"search_results"
+,
+
+"queries"
+: [
+
+"SEC v. Sam Bankman-Fried complaint December 2022 allegations FTX"
+,
+
+"Sam Bankman-Fried criminal trial verdict November 2023 counts outcome"
+,
+
+"Sam Bankman-Fried sentencing March 2024 length of sentence forfeiture"
+
+]
+
+},
+
+{
+
+"id"
+:
+"msg_fb282ebe-48cc-4585-b6f3-ce4607ee2df7"
+,
+
+"content"
+: [
+
+{
+
+"text": "The December 2022 SEC civil complaint alleged that Sam Bankman‑Fried ran a years‑long scheme to defraud FTX equity investors by secretly diverting billions of dollars of customer funds to Alameda Research, granting Alameda undisclosed special privileges on the FTX platform, and hiding the resulting risks and misuse of funds while publicly touting FTX as safe and well‑controlled.[web:1][web:2] In his 2023 federal criminal trial in New York, a jury found him guilty on all seven counts related to defrauding FTX customers, Alameda lenders, and FTX investors, and in March 2024 he was sentenced to 25 years in prison plus multi‑billion‑dollar forfeiture and restitution orders.[web:5][web:8][web:11]\n\n## SEC complaint allegations\n\nThe SEC’s December 13, 2022 complaint charged Bankman‑Fried with securities fraud under the antifraud provisions of the Securities Act of 1933 and the Securities Exchange Act of 1934.[web:1][web:2] It alleged that since at least May 2019, FTX raised over $1.8 billion from equity investors (about $1.1 billion from roughly 90 U.S. investors) based on false and misleading statements about how customer assets were handled and the risk profile of the business.[web:1]\n\nKey allegations about **FTX** and Alameda in the SEC complaint included:[web:1][web:2][web:7] \n- Undisclosed diversion of FTX customer funds to Alameda Research, including having customers deposit billions into bank accounts controlled by Alameda or its subsidiaries. \n- Special treatment for Alameda on the FTX platform, such as an effectively unlimited “line of credit,” exemptions from key risk controls, and code changes (like an “allow negative” balance flag) that let Alameda withdraw customer assets even when it lacked collateral. \n- Concealment of FTX’s concentrated exposure to Alameda and to overvalued, illiquid assets such as the FTT token, while publicly claiming customer assets were segregated, safe, and not used for FTX’s own investments. \n- Use of commingled customer funds for venture investments, luxury real estate in the Bahamas, large political donations, and “loans” to insiders, none of which were disclosed to investors.[web:1][web:2]\n\n## 2023 criminal trial verdict\n\nBankman‑Fried was indicted in the Southern District of New York on multiple fraud and conspiracy charges tied to the collapse of FTX and Alameda Research.[web:3][web:8] In November 2023, after a month‑long trial, a federal jury found him guilty on all seven counts, including wire fraud and conspiracy to commit wire fraud on FTX customers and Alameda lenders, as well as securities fraud and commodities fraud conspiracies and money‑laundering conspiracy.[web:8][web:11]\n\nProsecutors argued he orchestrated a “wide‑ranging scheme” to misappropriate billions in FTX customer deposits, using them to cover Alameda losses, repay lenders, make investments, and fund political spending, while lying to investors and lenders about FTX’s financial condition and Alameda’s special access to customer funds.[web:5][web:8][web:9] Evidence described altering FTX code to give Alameda effectively unlimited withdrawals, producing false financial statements for lenders and investors, and making public assurances that customer deposits were safe and segregated when they were not.[web:5][web:8]\n\n## Sentencing outcome\n\nOn March 28, 2024, the judge sentenced Bankman‑Fried to 25 years in federal prison.[web:5][web:6][web:12] The court also ordered forfeiture and financial penalties tied to what prosecutors said were losses exceeding $8–10 billion to customers, investors, and lenders, reflecting the scope of misappropriated funds and the scale of the fraud.[web:5][web:6][web:9]",
+
+"type"
+:
+"output_text"
+,
+
+"annotations"
+: [],
+
+"logprobs"
+: []
+
+}
+
+],
+
+"role"
+:
+"assistant"
+,
+
+"status"
+:
+"completed"
+,
+
+"type"
+:
+"message"
+
+}
+
+],
+
+"status"
+:
+"completed"
+,
+
+"error"
+:
+null
+,
+
+"usage"
+: {
+
+"input_tokens"
+:
+7356
+,
+
+"output_tokens"
+:
+909
+,
+
+"total_tokens"
+:
+8265
+,
+
+"cost"
+: {
+
+"currency"
+:
+"USD"
+,
+
+"input_cost"
+:
+0.00472
+,
+
+"output_cost"
+:
+0.00909
+,
+
+"total_cost"
+:
+0.01926
+,
+
+"cache_creation_cost"
+:
+null
+,
+
+"cache_read_cost"
+:
+0.00045
+,
+
+"tool_calls_cost"
+:
+0.005
+
+},
+
+"input_tokens_details"
+: {
+
+"cache_creation_input_tokens"
+:
+0
+,
+
+"cache_read_input_tokens"
+:
+3584
+,
+
+"cached_tokens"
+:
+3584
+
+},
+
+"tool_calls_details"
+: {
+
+"search_web"
+: {
+
+"invocation"
+:
+1
+
+}
+
+},
+
+"output_tokens_details"
+: {
+
+"reasoning_tokens"
+:
+0
+
+}
+
+},
+
+"background"
+:
+false
+,
+
+"completed_at"
+:
+1779391825
+,
+
+"frequency_penalty"
+:
+0
+,
+
+"incomplete_details"
+:
+null
+,
+
+"instructions": "## Abstract\n<role>\nYou are an AI assistant developed by Perplexity AI. Given a user's query, your goal is to generate an expert, useful, factually correct, and contextually relevant response by leveraging available tools and conversation history. First, you will receive the tools you can call iteratively to gather the necessary knowledge for your response. You need to use these tools rather than using internal knowledge. Second, you will receive guidelines to format your response for clear and effective presentation. Third, you will receive guidelines for citation practices to maintain factual accuracy and credibility.\n</role>\n\n## Instructions\n<tools_workflow>\nBegin each turn with tool calls to gather information. You must call at least one tool before answering, even if information exists in your knowledge base. Decompose complex user queries into discrete tool calls for accuracy and parallelization. After each tool call, assess if your output fully addresses the query and its subcomponents. Continue until the user query is resolved or until the <tool_call_limit> below is reached. End your turn with a comprehensive response. Never mention tool calls in your final response as it would badly impact user experience.\n\n<tool_call_limit> Make at most three tool calls before concluding.</tool_call_limit>\n</tools_workflow>\n\n## Citation Instructions\n<citation_instructions>\nYour response must include at least 1 citation. Add a citation to every sentence that includes information derived from tool outputs.\nTool results are provided using `id` in the format `type:index`. `type` is the data source or context. `index` is the unique identifier per citation.\n<common_source_types> are included below.\n\n<common_source_types>\n- `web`: Internet sources\n- `page`: Full web page content\n- `conversation_history`: past queries and answers from your interaction with the user\n</common_source_types>\n\n<formatting_citations>\nUse brackets to indicate citations like this: [type:index]. Commas, dashes, or alternate formats are not valid citation formats. If citing multiple sources, write each citation in a separate bracket like [web:1][web:2][web:3].\n\nCorrect: \"The Eiffel Tower is in Paris [web:3].\"\nIncorrect: \"The Eiffel Tower is in Paris [web-3].\"\n</formatting_citations>\n\nYour citations must be inline - not in a separate References or Citations section. Cite the source immediately after each sentence containing referenced information. If your response presents a markdown table with referenced information from `web`, `memory`, `attached_file`, or `calendar_event` tool result, cite appropriately within table cells directly after relevant data instead in of a new column. Do not cite `generated_image` or `generated_video` inside table cells.\n\n## Response Guidelines\n<response_guidelines>\nResponses are displayed on web interfaces where users should not need to scroll extensively. Limit responses to 5 sections maximum. Users can ask follow-up questions if they need additional detail. Prioritize the most relevant information for the initial query.\n\n### Answer Formatting\n- Begin with a direct 1-2 sentence answer to the core question.\n- Organize the rest of your answer into sections led with Markdown headers (using ##, ###) when appropriate to ensure clarity (e.g. entity definitions, biographies, and wikis).\n- Your answer should be at least 3 sentences long.\n- Each Markdown header should be concise (less than 6 words) and meaningful.\n- Markdown headers should be plain text, not numbered.\n- Between each Markdown header is a section consisting of 2-3 well-cited sentences.\n- When comparing entities with multiple dimensions, use a markdown table to show differences (instead of lists).\n- Whenever possible, present information as bullet point lists to improve readability.\n- You are allowed to bold at most one word (**example**) per paragraph. You can't bold consecutive words.\n- For grouping multiple related items, present the information with a mix of paragraphs and bullet point lists. Do not nest lists within other lists.\n\n### Tone\n<tone>\nExplain clearly using plain language. Use active voice and vary sentence structure to sound natural. Ensure smooth transitions between sentences. Avoid personal pronouns like \"I\". Keep explanations direct; use examples or metaphors only when they meaningfully clarify complex concepts that would otherwise be unclear.\n</tone>\n\n### Lists and Paragraphs\n<lists_and_paragraphs>\nUse lists for: multiple facts/recommendations, steps, features/benefits, comparisons, or biographical information.\n\nAvoid repeating content in both intro paragraphs and list items. Keep intros minimal. Either start directly with a header and list, or provide 1 sentence of context only.\n\nList formatting:\n- Use numbers when sequence matters; otherwise bullets (-) with a space after the dash.\n- Use numbers when sequence matters; otherwise bullets (-).\n- No whitespace before bullets (i.e. no indenting), one item per line.\n- Sentence capitalization; periods only for complete sentences.\n\nParagraphs:\n- Use for brief context (2-3 sentences max) or simple answers\n- Separate with blank lines\n- If exceeding 3 consecutive sentences, consider restructuring as a list\n</lists_and_paragraphs>\n\n### Summaries and Conclusions\n<summaries_and_conclusions>\nAvoid summaries and conclusions. They are not needed and are repetitive. Markdown tables are not for summaries. For comparisons, provide a table to compare, but avoid labeling it as 'Comparison/Key Table', provide a more meaningful title.\n</summaries_and_conclusions>\n\n## Prohibited Meta-Commentary\n<prohibited_commentary>\n- Never reference your information gathering process in your final answer.\n- Do not use phrases such as:\n- \"Based on my search results...\"\n- \"Now I have gathered comprehensive information...\"\n- \"According to my research...\"\n- \"My search revealed...\"\n- \"I found information about...\"\n- \"Let me provide a detailed answer...\"\n- \"Let me compile this information...\"\n- \"Short Answer: ...\"\n- Begin answers immediately with factual content that directly addresses the user's query.\n</prohibited_commentary>\n\n<copyright_requirements>\n- Never reproduce copyrighted content (text, lyrics, etc.)\n- You may share public domain content (expired copyrights, traditional works)\n- When copyright status is uncertain, treat as copyrighted\n- Keep summaries brief (under 30 words) and original — don't reconstruct sources\n- Brief factual statements (names, dates, facts) are always acceptable\n</copyright_requirements>\n\nCurrent date: Thursday, May 21, 2026\n\n",
+
+"max_output_tokens"
+:
+8192
+,
+
+"max_tool_calls"
+:
+null
+,
+
+"metadata"
+: {},
+
+"parallel_tool_calls"
+:
+true
+,
+
+"presence_penalty"
+:
+0
+,
+
+"previous_response_id"
+:
+null
+,
+
+"prompt_cache_key"
+:
+null
+,
+
+"reasoning"
+:
+null
+,
+
+"safety_identifier"
+:
+null
+,
+
+"service_tier"
+:
+"default"
+,
+
+"store"
+:
+true
+,
+
+"temperature"
+:
+1
+,
+
+"text"
+: {
+
+"format"
+: {
+
+"type"
+:
+"text"
+
+}
+
+},
+
+"tool_choice"
+:
+"auto"
+,
+
+"tools"
+: [
+
+{
+
+"type"
+:
+"web_search"
+
+},
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+"top_logprobs"
+:
+0
+,
+
+"top_p"
+:
+1
+,
+
+"truncation"
+:
+"disabled"
+,
+
+"user"
+:
+null
+
+}
+
+​
+Pricing
+
+Billing is based on the model that serves the request, not all models in the fallback chain.
+
+The
+model
+field in the response indicates which model was used, and the
+usage
+field shows the token counts for that model.
+
+Example
+Request:
+{
+
+"models"
+: [
+"openai/gpt-5.5"
+,
+"openai/gpt-5.4"
+],
+
+"input"
+:
+"..."
+
+}
+
+Response
+(if first model failed):
+{
+
+"model"
+:
+"openai/gpt-5.5"
+,
+
+"usage"
+: {
+
+"input_tokens"
+:
+150
+,
+
+"output_tokens"
+:
+320
+,
+
+"total_tokens"
+:
+470
+
+}
+
+}
+
+In this case, billing is based on
+gpt-5.1
+pricing for 470 tokens.
+
+Place preferred models first in the array. Consider pricing differences when ordering the fallback chain.
+
+​
+Next Steps
+
+Agent API Models
+Explore available models and their pricing.
+Presets
+Explore available presets and their configurations.
+Agent API Quickstart
+Get started with your first Agent API call.
+API Reference
+View complete endpoint documentation.
+Was this page helpful?
+Yes
+No
+Presets
+Previous
+Web Search
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

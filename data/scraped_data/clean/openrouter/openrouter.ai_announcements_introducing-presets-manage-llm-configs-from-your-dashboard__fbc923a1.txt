@@ -1,0 +1,92 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/announcements/introducing-presets-manage-llm-configs-from-your-dashboard
+page path  : /announcements/introducing-presets-manage-llm-configs-from-your-dashboard
+captured   : 2026-05-10 23:51:13 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_announcements_introducing-presets-manage-llm-configs-from-your-dashboard__fbc923a1.html.gz
+========================================================================
+
+Introducing Presets: Manage LLM Configs from Your Dashboard!
+
+Introducing Presets: Manage LLM Configs from Your Dashboard!
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Posts
+6/26/2025
+by
+
+OpenRouter
+Introducing Presets: Manage LLM Configs from Your Dashboard!
+We’re excited to launch
+Presets
+, a powerful new feature that lets you separate your LLM configuration from your code!
+
+Create, manage, and update model settings, system prompts, and routing rules directly from your OpenRouter dashboard.
+
+🚀 Why Use Presets?
+
+Define model selection, provider routing, system prompts, and generation parameters all in one place.
+
+Easily A/B test models or parameters, or update prompts on the fly without code changes.
+
+Focus your codebase on product logic while offloading config complexity to your presets.
+
+🛠️ How to Use Presets in API Calls
+
+You can reference presets in a few flexible ways:
+
+Directly as a model:
+model: @preset/your-preset-slug
+
+With model override:
+model: google/gemini-2.0-flash-001@preset/your-preset-slug
+
+Using the new dedicated field:
+preset: your-preset-slug
+
+📘 Docs & Details
+
+https://openrouter.ai/docs/features/presets
+(opens in new tab)
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube

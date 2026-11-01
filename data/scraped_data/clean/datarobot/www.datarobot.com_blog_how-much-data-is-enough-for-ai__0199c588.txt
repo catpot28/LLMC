@@ -1,0 +1,672 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/how-much-data-is-enough-for-ai/
+page path  : /blog/how-much-data-is-enough-for-ai/
+captured   : 2026-03-08 13:13:34 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/datarobot/www.datarobot.com_blog_how-much-data-is-enough-for-ai__0199c588.html.gz
+========================================================================
+
+How Much Data Is Enough for AI? | DataRobot Blog
+
+How Much Data Is Enough for AI? | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Apps & Agents
+
+Apps & Agents
+
+Our apps and agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Apps & Agents
+
+Apps & Agents
+
+Our apps and agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+How Much Data Is Enough for AI?
+
+The recent advancements in large language models (LLMs) are fascinating. We’ve already seen LLMs taking exams from law
+1
+, medical
+2
+and business schools
+3
+, as well as writing scientific articles, blog posts, finding bugs in code, and composing poems. For some, especially for those who do not closely watch the field, it might seem like magic. However, what’s really magical is how these technologies are able to excite and inspire people with wonder and curiosity about the future.
+
+One of the most important contributions to these advances is the availability of large amounts of data together with technologies for storing and processing it. This enables companies to leverage these technologies to perform complex analytics, use the data for model training, and deliver a real competitive advantage over the startups and companies entering their field.
+
+However, even with the clear benefits, big data technologies bring challenges that aren’t always obvious when you set off on your journey to extract value from the data using AI.
+
+Data storage is comparatively cheap these days. Competition between cloud providers has driven the cost of data storage down while making data more accessible to distributed computing systems. But the technologies to store the ever increasing amounts of data have not reduced the workload required to maintain and improve data quality. According to research, 96% of companies encounter data quality problems, 33% of failed projects stall due to problems in the data, while only 4% of companies haven’t experienced any training data problems, and the situation is unlikely to change much in the near future.
+4
+
+Scaling Down Datasets to Scale Down the Problem
+
+In real-world applications, full datasets are rarely used in their entirety. In some cases, the amount of processed data for an application is smaller than the total data size, because it’s only the very recent data that matters; in others, data needs to be aggregated before processing and raw data is not needed anymore.
+
+When DataRobot was helping HHS with COVID-19 vaccine trials during the pandemic by providing forecasts of socioeconomic parameters, we collected more than 200 datasets with a total volume of over 10TB, but daily predictions required just a fraction of this. Instead, smaller dataset sizes allowed us to use faster data analysis, where turnaround time was critical for decision-making. This let us avoid distributed systems that would have been costly to use and require more resources to maintain.
+
+The visualization of the COVID project’s data warehouse. A vertex is a dataset, an edge is a column. The relative size of a vertex corresponds to a dataset size. Color corresponds to a column data type. The average working dataset size is approx ~10 MB. Simpler tools enabled us to start collecting and maintaining data faster.
+
+The visualization of the COVID project’s data warehouse. A vertex is a dataset, an edge is a column. The relative size of a vertex corresponds to a dataset size. Color corresponds to a column data type. The average working dataset size is approx ~10 MB. Simpler tools enabled us to start collecting and maintaining data faster.
+
+Downsampling is also an effective technique that helps to reduce data size without losing accuracy in many cases, especially for complex analysis that cannot easily be pushed down to the data source. Sometimes (especially when a dataset is not materialized) it is just wasteful to run detection on an entire column of data, and it makes sense to intelligently sample a column and run a detection algorithm on a sample. Part of our goal at DataRobot is to enable best practices that not only get the best results but also do it in the most efficient way. Not all sampling is the same, however.
+DataRobot AI Platform
+allows you to do smart sampling, which helps to automatically retain rare samples and enable the most representative sample possible. With smart sampling, DataRobot intentionally changes the proportion of different classes. This is done to balance classes, like in case of classification problems, or to remove frequently repeated values, like in the case of zero-inflated regression.
+
+We should not forget about the progress of hardware in recent years. A single machine today is able to process more data faster thanks to improvements in RAM, CPUs, and SSDs that reduce the need for distributed systems for data processing. It leads to lower complexity and lower maintenance costs and a simpler and more accessible software stack that allows us to iterate and get value faster. Our COVID-19 decision intelligence platform was built without using established big data approaches, despite having sufficiently large data sizes, and not using them allowed our data scientists to use familiar tools and get results quicker.
+
+Additionally, collecting and storing customer data may be seen as a liability from a legal perspective. There are regulations in place (GDPR et al), and risks of breaches and data leaks. Some companies even choose not to store raw data, but use techniques such as differential privacy
+5
+and store aggregated data only. In this case, there’s a guarantee that individual contributions to aggregates are protected and further processing downstream does not significantly affect accuracy. We at DataRobot use this approach in cases when we need to aggregate potentially sensitive data before ingestion on the customer side and also for anonymizing search index while building a recommendation system internally.
+
+Size Doesn’t Always Matter
+
+While having large datasets and a mature infrastructure to process and leverage them can be a major benefit, it’s not always required to unlock value with AI. In fact, large datasets can slow down the AI lifecycle and are not required if proven ML techniques, in combination with the right hardware, are applied in the process. In this context, it’s important that organizations understand the qualitative parameters of the data that they possess, since a modern AI stack can handle the lack of quantity but is never going to be equipped to handle the lack of quality in that data.
+
+Demo
+
+Get a Personalized Demonstration of the DataRobot AI Platform
+
+1
+Illinois Institute of Technology, GPT-4 Passes the Bar Exam
+
+2
+MedPage Today, AI Passes U.S. Medical Licensing Exam
+
+3
+CNN, ChatGPT Passes Exams from Law and Business Schools
+
+4
+Dimensional Research, Artificial Intelligence and Machine Learning Projects Are Obstructed by Data Issues
+
+5
+Wikipedia, Differential Privacy
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+Self-managed observability: Running agentic AI inside your boundary
+
+Read More
+
+March 2, 2026
+
+|
+11 min read
+
+Blog
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+Read More
+
+February 27, 2026
+
+|
+13 min read
+
+Authors
+
+by
+
+Nick Volynets
+
+May 4, 2023
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Self-managed observability: Running agentic AI inside your boundary
+
+March 2, 2026
+
+|
+11 min read
+
+Read More
+
+AI for Practitioners
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+February 27, 2026
+
+|
+13 min read
+
+Read More
+
+AI for Leaders
+
+How to build resilient agentic AI pipelines in a world of change
+
+February 23, 2026
+
+|
+11 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+Self-managed observability: Running agentic AI inside your boundary
+
+Read More
+
+March 2, 2026
+
+|
+11 min read
+
+Blog
+
+Running agentic AI in production: what enterprise leaders need to get right
+
+Read More
+
+February 27, 2026
+
+|
+13 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Apps & Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Don’t just hear about agents. See them live.
+
+NVIDIA GTC
+
+March 16–19
+
+Meet us at GTC

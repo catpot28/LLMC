@@ -1,0 +1,796 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/product/agentic-ai/
+page path  : /product/agentic-ai/
+captured   : 2026-06-14 00:16:41 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_product_agentic-ai__cff8bdbc.html.gz
+========================================================================
+
+Agentic AI | DataRobot
+
+Agentic AI | DataRobot
+
+Skip to content
+
+Location
+
+us
+
+jp
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Location
+
+us
+
+jp
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Enterprise AI Suite / AI Platform
+
+Agentic AI
+
+Develop, deliver, and govern agentic AI apps with a production-grade sandbox, library of tool accelerators, and comprehensive platform
+
+Try for free
+
+The DataRobot difference
+
+Develop multi-agent workflows by connecting, building, and managing AI tools
+
+Leverage LLMs, generative workflows, vector databases, predictive models, and multimodal data using a flexible unified platform or pre-built components.
+
+Deploy complex agentic pipelines anywhere
+
+Optimize cost, latency, and availability by managing multiple AI tool deployments across clouds or on premise on leading GPUs without specialized infrastructure skills.
+
+Ensure safety with enterprise-grade security, monitoring, and governance
+
+Trace and monitor every workflow, input, and output — down to the underlying data — to ensure production quality and meet enterprise compliance standards.
+
+Suite of development tools
+
+AI tool calling.
+Call AI tools and components without friction.
+
+Open architecture
+
+Call any LLM or AI tool deployed in DataRobot with authentication from any dev environment.
+
+Data registry
+
+Give agents seamless access to datasets, and prepare or transform them as needed.
+
+Tool registry
+
+Easily manage and version control all of your AI tools by storing them in a single team accessible repository.
+
+Vector store
+
+Power RAG workflows with vector databases, embedding models, and re-rankers.
+
+Code-first agent workflow development tools.
+Build agentic AI workflows anywhere and with greater velocity, then seamlessly prepare them for deployment within DataRobot.
+
+def load_model(code_dir):
+credentials, graph_config = load_config(code_dir)
+client = ChatOpenAI(**credentials)
+graph = create_react_agent(client, **graph_config)
+return graph
+
+def chat(params, graph):
+prompt = get_prompt(params)
+response = get_response(graph, prompt)
+return format_chat_completion(response, params)
+
+Accelerate agentic workflow prototyping with prebuilt templates from CrewAI, LangChain and LlamaIndex along with generic templates for any framework.
+
+Prepare agentic workflows for production by seamlessly ingesting code from your local environment using an out-of-the-box CLI.
+
+Ensure quality by detecting errors at a granular level and quickly debug with instant code reruns.
+
+Evaluate and compare workflows side by side with LLM-as-a-judge comparison and a flexible playground experience.
+
+AI tool creation platform.
+Deliver a bespoke array of AI tools for your agentic apps with end-to-end experimentation and development tools.
+
+Find the best generative AI models
+
+Compare LLMs side by side, test vector databases and embedding models, and streamline ground truth and compliance testing.
+
+Explore predictive models at scale
+
+Rapidly test hundreds of predictive models and fine-tune them based on the performance metrics that matter most to your use case.
+
+Prepare datasets as AI tools
+
+Transform messy, raw data into clean, structured training datasets and ready-to-use tabular assets.
+
+Experiment with VBDs
+
+Use chunking strategies, embedding methods, context awareness features, and indexing techniques to build fast, context-aware vector databases tailored to your use case.
+
+Pre-built pluggable agentic components
+
+Library of pre-built agentic AI tools.
+Enhance your agentic applications with AI tools that can be built, customized, and deployed with a single line of code.
+
+Chat securely with data sources
+
+Empower data decision makers to query and analyze data across data sources, tables, or data warehouses in a self-service way.
+
+Incorporate high fidelity forecasts
+
+Incorporate time series predictions into your agentic AI apps with automatically generated summaries.
+
+Generate personalized content
+
+Give your agents the ability to turn outputs or predictions into usable emails or personalized customer-facing content.
+
+Natively access a library of NVIDIA NIM and NEMO microservices.
+Enhance agentic AI applications with pre-built AI components that can process text, images, and PDFs that can be integrated in minutes not hours, with enterprise-ready governance and observability.
+
+Build reliable retrieval pipelines
+
+Ingest and extract insights from multimodal data sources like text, images, and PDF documents.
+
+Search and summarize video data
+
+Turn live or recorded videos into structured summaries ready for use in conversational AI applications.
+
+Route LLM workflows
+
+Intelligently direct prompts to the most appropriate model, ensuring optimal balance between reasoning depth and computational efficiency.
+
+Streamline research
+
+Create multimodal AI agents to generate high-quality research reports in minutes.
+
+Agentic AI pipeline deployment
+
+Effortlessly utilize NVIDIA GPUs & NVIDIA Enterprise Al products.
+Optimize cost latency and availability by running NVIDIA GPUs on any cloud, on-premise, and hybrid cloud without advanced infrastructure knowledge — removing complex setup, tuning, and troubleshooting.
+
+prediction_environment = datarobot.PredictionEnvironment(
+resource_name="my serverless environment",
+platform="datarobotServerless",
+)
+
+TEXTGEN_REGISTERED_MODEL_ID = "your-model-id-here"
+
+# Retrieve registered model
+registered_model = datarobot.RegisteredModel.get(
+resource_name="Registered NIM Model",
+id=TEXTGEN_REGISTERED_MODEL_ID,
+)
+
+# Create the deployment
+deployment = datarobot.Deployment(
+resource_name="NIM - Llama 3.3 70B",
+registered_model_version_id=registered_model.version_id,
+prediction_environment_id=prediction_environment.id,
+label="NIM - Llama 3.3 70B",
+use_case_ids=[use_case.id],
+)
+
+Flexible infrastructure support
+
+Deploy on any cloud, on-premises, or hybrid environment using NVIDIA GPUs, optimizing for latency and cost.
+
+Simplified deployment
+
+Use NVIDIA resources and NVAIE to deploy pre-built agentic workflows with minimal configuration.
+
+Streamlined operations
+
+Automatically manage containers and NVIDIA GPUs with NIM, reducing deployment friction.
+
+Built in security
+
+Protect models from misuse and threats with NeMo Guardrails fully integrated for safe deployment.
+
+Single-click deployment.
+Quickly deploy agentic applications with consistent quality, independent of IT administrators. Maximize experimentation and agility by seamlessly hot swapping and updating AI tools without breaking pipelines or cross-functional assistance.
+
+Fully managed infrastructure.
+Focus on building impactful agentic applications not managing resources.
+
+Serverless
+
+Build without having to manage, provision, or scale infrastructure yourself.
+
+Orchestration via managed Airflow
+
+Keep predictive and generative models up to date with automated, production-grade pipelines.
+
+GPU accessibility
+
+Access powerful generative AI resources on demand—purchase GPUs directly within the platform when you need them.
+
+Batch and real-time jobs
+
+Generate predictions for any supervised learning use-case with a simple API call.
+
+Agentic AI governance and observability
+
+Bolt-on governance.
+Enable DataRobot to track and govern any AI app built anywhere with just a few lines of code.
+
+base_url = "https://app.datarobot.com/api/v2/deployments/6733dfefc06c302cfa/"
+api_key = os.getenv("DATAROBOT_API_KEY")
+model_name = "datarobot-deployed-llm"
+
+client = OpenAI(base_url=base_url, api_key=api_key)
+
+completion = client.chat.completions.create(
+model=f"{model_name}",
+messages=[
+{"role": "system", "content": "you are a helpful assistant."},
+{"role": "user", "content": "where is Datarobot HQ'ed"},
+],
+)
+
+AI agent and AI tool governance.
+Ensure every AI tool and component is safe, secure, and compliant.
+
+Secure agent tools
+
+Detect and mitigate misuse, threats, and hallucinations in real time using a library of pre-built guard models.
+
+Automated compliance
+
+Test LLMs and generate audit-ready reports—no manual documentation required.
+
+Vector database monitoring and updating
+
+Trace how AI responses align with your vector database to identify issues and improve accuracy.
+
+Approval workflows
+
+Set up custom approval agentic workflows to govern team decisions and ensure smooth operations.
+
+End-to-end monitoring for agents and tools.
+Monitor every agent and tool in production with detailed metrics tailored to your business’ goals.
+
+Custom metrics
+
+Track what matters most — like GPU costs or PII risks — by defining your own monitoring metrics.
+
+Full tracing and lineage
+
+Trace every output back to its inputs, tools, and decisions for complete auditability while being compatible with open telemetry.
+
+Service health and data drift
+
+Monitor for performance degradation and uncover text or location-based data drift in production.
+
+Automated reporting
+
+Generate detailed health reports automatically to meet stakeholder and compliance requirements.
+
+“We are proud to work with DataRobot and NVIDIA to create innovative solutions that push the boundaries of what is possible in telecom. This partnership allows us to provide agentic AI applications to our customers, driving innovation and operational efficiencies.”
+
+Hazem Gebili
+
+SVP of Enterprise Services Solutions
+- Etisalat UAE
+
+Tour the product
+
+Explore how DataRobot helps you create agentic AI applications your business will use everyday.
+
+Take a tour
+
+Frequently asked questions
+
+How does agentic AI enhance enterprise workflows?
+
+Agentic AI creates a workforce of specialized AI agents that collaborate to automate complex, end-to-end workflows, connecting diverse tools and data to drive smarter business outcomes.
+
+How does DataRobot ensure agentic workflows are production-ready?
+
+DataRobot provides a sandbox for testing, end-to-end tracing for observability, and guardrails to mitigate risks like prompt injections and hallucinations.
+
+Can DataRobot's Agentic AI integrate with existing data sources and tools?
+
+Yes, DataRobot’s open architecture and pre-built connectors allow seamless integration with your existing data sources, LLMs, and a wide range of enterprise AI tools.
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

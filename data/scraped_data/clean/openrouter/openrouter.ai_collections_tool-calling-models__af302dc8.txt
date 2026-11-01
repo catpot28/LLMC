@@ -1,0 +1,737 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/tool-calling-models
+page path  : /collections/tool-calling-models
+captured   : 2026-05-09 20:18:54 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_collections_tool-calling-models__af302dc8.html.gz
+========================================================================
+
+AI Models with Tool Calling | OpenRouter
+
+AI Models with Tool Calling | OpenRouter
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Tool Calling
+AI Models with Tool Calling
+Model rankings updated May 2026 based on real usage data.
+Tool calls (also known as function calls) give LLMs access to external tools. The LLM suggests which tool to call upon, and your system then executes the tool and provides the results back to the LLM, which formats the response into an answer to the original question. This pattern enables building AI agents, automated workflows, and intelligent systems that can query databases, call external APIs, and take action in the real world. OpenRouter standardizes the tool calling interface across models and providers, making it easy to integrate external tools with any supported model. These LLMs are the most popular models on OpenRouter with tool calling capabilities.
+Browse All Models
+Compare Models
+Top Tool Calling Models on OpenRouter
+Based on top weekly usage data from millions of users accessing AI models for tool calling through OpenRouter.
+MoonshotAI: Kimi K2.6
+1.86T
+tokens
+Academia
+(#10)
+Finance
+(#13)
+Health
+(#30)
+Marketing
+(#24)
+SEO
+(#30)
++
+6
+categories
+Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
+Show more
+by
+
+moonshotai
+262K
+context
+$
+0.75
+/M input
+tokens
+$
+3.50
+/M output
+tokens
+Anthropic: Claude Sonnet 4.6
+1.56T
+tokens
+Academia
+(#11)
+Finance
+(#2)
+Health
+(#7)
+Legal
+(#8)
+Marketing
+(#8)
++
+7
+categories
+Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.
+Show more
+by
+
+anthropic
+1M
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+Anthropic: Claude Opus 4.7
+1.3T
+tokens
+Academia
+(#24)
+Finance
+(#3)
+Health
+(#36)
+Legal
+(#44)
+Marketing
+(#29)
++
+5
+categories
+Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on complex, multi-step tasks and more reliable agentic execution across extended workflows. It is especially effective for asynchronous agent pipelines where tasks unfold over time - large codebases, multi-stage debugging, and end-to-end project orchestration.
+
+Beyond coding, Opus 4.7 brings improved knowledge work capabilities - from drafting documents and building presentations to analyzing data. It maintains coherence across very long outputs and extended sessions, making it a strong default for tasks that require persistence, judgment, and follow-through.
+
+For users upgrading from earlier Opus versions, see our
+official migration guide here
+Show more
+by
+
+anthropic
+1M
+context
+$
+5
+/M input
+tokens
+$
+25
+/M output
+tokens
+Google: Gemini 3 Flash Preview
+1.17T
+tokens
+Academia
+(#1)
+Finance
+(#6)
+Health
+(#1)
+Legal
+(#2)
+Marketing
+(#5)
++
+7
+categories
+Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool use performance with substantially lower latency than larger Gemini variants, making it well suited for interactive development, long running agent loops, and collaborative coding tasks. Compared to Gemini 2.5 Flash, it provides broad quality improvements across reasoning, multimodal understanding, and reliability.
+
+The model supports a 1M token context window and multimodal inputs including text, images, audio, video, and PDFs, with text output. It includes configurable reasoning via thinking levels (minimal, low, medium, high), structured output, tool use, and automatic context caching. Gemini 3 Flash Preview is optimized for users who want strong reasoning and agentic behavior without the cost or latency of full scale frontier models.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.50
+/M input
+tokens
+$
+3
+/M output
+tokens
+$
+1
+/M audio tokens
+DeepSeek: DeepSeek V4 Flash
+1.13T
+tokens
+Academia
+(#2)
+Finance
+(#9)
+Health
+(#6)
+Legal
+(#9)
+Marketing
+(#10)
++
+7
+categories
+DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
+
+The model includes hybrid attention for efficient long-context processing. Reasoning efforts
+high
+and
+xhigh
+are supported;
+xhigh
+maps to max reasoning. It is well suited for applications such as coding assistants, chat systems, and agent workflows where responsiveness and cost efficiency are important.
+Show more
+by
+
+deepseek
+1.05M
+context
+$
+0.14
+/M input
+tokens
+$
+0.28
+/M output
+tokens
+DeepSeek: DeepSeek V3.2
+953B
+tokens
+Academia
+(#8)
+Finance
+(#21)
+Health
+(#2)
+Legal
+(#14)
+Marketing
+(#20)
++
+7
+categories
+DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.
+
+Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+Show more
+by
+
+deepseek
+131K
+context
+$
+0.252
+/M input
+tokens
+$
+0.378
+/M output
+tokens
+DeepSeek: DeepSeek V4 Pro
+859B
+tokens
+Academia
+(#16)
+Finance
+(#14)
+Health
+(#18)
+Legal
+(#31)
+Marketing
+(#47)
++
+6
+categories
+DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
+
+Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid attention system for efficient long-context processing. Reasoning efforts
+high
+and
+xhigh
+are supported;
+xhigh
+maps to max reasoning. It is well suited for complex workloads such as full-codebase analysis, multi-step automation, and large-scale information synthesis, where both capability and efficiency are critical.
+Show more
+by
+
+deepseek
+1.05M
+context
+$
+0.435
+/M input
+tokens
+$
+0.87
+/M output
+tokens
+MiniMax: MiniMax M2.7
+847B
+tokens
+Academia
+(#17)
+Finance
+(#11)
+Health
+(#42)
+Legal
+(#35)
+Marketing
+(#17)
++
+7
+categories
+MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.
+
+Trained for production-grade performance, M2.7 handles workflows such as live debugging, root cause analysis, financial modeling, and full document generation across Word, Excel, and PowerPoint. It delivers strong results on benchmarks including 56.2% on SWE-Pro and 57.0% on Terminal Bench 2, while achieving a 1495 ELO on GDPval-AA, setting a new standard for multi-agent systems operating in real-world digital workflows.
+Show more
+by
+
+minimax
+197K
+context
+$
+0.299
+/M input
+tokens
+$
+1.20
+/M output
+tokens
+xAI: Grok 4.1 Fast
+785B
+tokens
+Academia
+(#21)
+Finance
+(#7)
+Health
+(#8)
+Legal
+(#1)
+Marketing
+(#7)
++
+7
+categories
+Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window.
+
+Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+Show more
+by
+
+x-ai
+2M
+context
+$
+0.20
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+Google: Gemini 2.5 Flash Lite
+715B
+tokens
+Academia
+(#5)
+Finance
+(#12)
+Health
+(#4)
+Legal
+(#6)
+Marketing
+(#6)
++
+7
+categories
+Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance across common benchmarks compared to earlier Flash models. By default, "thinking" (i.e. multi-pass reasoning) is disabled to prioritize speed, but developers can enable it via the
+Reasoning API parameter
+to selectively trade off cost for intelligence.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.10
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+$
+0.30
+/M audio tokens
+Google: Gemini 2.5 Flash
+644B
+tokens
+Academia
+(#3)
+Finance
+(#8)
+Health
+(#5)
+Legal
+(#4)
+Marketing
+(#2)
++
+7
+categories
+Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in "thinking" capabilities, enabling it to provide responses with greater accuracy and nuanced context handling.
+
+Additionally, Gemini 2.5 Flash is configurable through the "max tokens for reasoning" parameter, as described in the documentation (
+https://openrouter.ai/docs/use-cases/reasoning-tokens#max-tokens-for-reasoning
+).
+Show more
+by
+
+google
+1.05M
+context
+$
+0.30
+/M input
+tokens
+$
+2.50
+/M output
+tokens
+$
+1
+/M audio tokens
+StepFun: Step 3.5 Flash
+616B
+tokens
+Finance
+(#29)
+Programming
+(#3)
+Roleplay
+(#49)
+Science
+(#5)
+Technology
+(#37)
+Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts.
+Show more
+by
+
+stepfun
+262K
+context
+$
+0.10
+/M input
+tokens
+$
+0.30
+/M output
+tokens
+Anthropic: Claude Opus 4.6
+593B
+tokens
+Academia
+(#18)
+Finance
+(#10)
+Health
+(#28)
+Legal
+(#24)
+Marketing
+(#34)
++
+6
+categories
+Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective for large codebases, complex refactors, and multi-step debugging that unfolds over time. The model shows deeper contextual understanding, stronger problem decomposition, and greater reliability on hard engineering tasks than prior generations.
+
+Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-production-ready documents, plans, and analyses in a single pass, and maintains coherence across very long outputs and extended sessions. This makes it a strong default for tasks that require persistence, judgment, and follow-through, such as technical design, migration planning, and end-to-end project execution.
+
+For users upgrading from earlier Opus versions, see our
+official migration guide here
+Show more
+by
+
+anthropic
+1M
+context
+$
+5
+/M input
+tokens
+$
+25
+/M output
+tokens
+NVIDIA: Nemotron 3 Super (free)
+592B
+tokens
+Academia
+(#36)
+Finance
+(#25)
+SEO
+(#49)
+Programming
+(#8)
+Roleplay
+(#40)
++
+3
+categories
+NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.
+
+The model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.
+
+Fully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere — from workstation to cloud.
+Show more
+by
+
+nvidia
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+OpenAI: gpt-oss-120b
+439B
+tokens
+Academia
+(#9)
+Finance
+(#15)
+Health
+(#9)
+Legal
+(#5)
+Marketing
+(#1)
++
+7
+categories
+gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.
+Show more
+by
+
+openai
+131K
+context
+$
+0.039
+/M input
+tokens
+$
+0.18
+/M output
+tokens
+Tencent: Hy3 preview
+434B
+tokens
+Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to balance speed and depth depending on the task, while delivering strong code generation and reliable performance across multi-step, real-world workflows.
+Show more
+by
+
+tencent
+262K
+context
+$
+0.066
+/M input
+tokens
+$
+0.26
+/M output
+tokens
+Z.ai: GLM 5.1
+396B
+tokens
+Academia
+(#30)
+Finance
+(#19)
+Health
+(#13)
+Marketing
+(#30)
+Programming
+(#12)
++
+3
+categories
+GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.
+Show more
+by
+
+z-ai
+203K
+context
+$
+1.05
+/M input
+tokens
+$
+3.50
+/M output
+tokens
+OpenAI: GPT-5.5
+382B
+tokens
+Academia
+(#38)
+Finance
+(#37)
+Health
+(#26)
+SEO
+(#34)
+Programming
+(#14)
++
+3
+categories
+GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling large-scale reasoning, coding, and multimodal workflows within a single system.
+Show more
+by
+
+openai
+1.05M
+context
+$
+5
+/M input
+tokens
+$
+30
+/M output
+tokens
+Google: Gemini 3.1 Flash Lite Preview
+357B
+tokens
+Academia
+(#6)
+Finance
+(#22)
+Health
+(#12)
+Legal
+(#12)
+Marketing
+(#15)
++
+7
+categories
+Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases. It outperforms Gemini 2.5 Flash Lite on overall quality and approaches Gemini 2.5 Flash performance across key capabilities. Improvements span audio input/ASR, RAG snippet ranking, translation, data extraction, and code completion. Supports full thinking levels (minimal, low, medium, high) for fine-grained cost/performance trade-offs. Priced at half the cost of Gemini 3 Flash.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.25
+/M input
+tokens
+$
+1.50
+/M output
+tokens
+$
+0.50
+/M audio tokens
+Owl Alpha
+354B
+tokens
+Academia
+(#29)
+Finance
+(#18)
+Legal
+(#10)
+Marketing
+(#4)
+SEO
+(#47)
++
+5
+categories
+Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution. Compatible with Claude Code, OpenClaw, and other mainstream productivity tools.
+
+Note: Prompts and completions may be logged by the provider and used to improve the model.
+Show more
+by
+
+openrouter
+1.05M
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens

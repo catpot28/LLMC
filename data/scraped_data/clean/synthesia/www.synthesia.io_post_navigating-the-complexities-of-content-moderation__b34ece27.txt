@@ -1,0 +1,321 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/navigating-the-complexities-of-content-moderation
+page path  : /post/navigating-the-complexities-of-content-moderation
+captured   : 2026-05-08 08:47:15 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/synthesia/www.synthesia.io_post_navigating-the-complexities-of-content-moderation__b34ece27.html.gz
+========================================================================
+
+Navigating the complexities of content moderation: four lessons learned from our recent red teaming exercise
+
+Navigating the complexities of content moderation: four lessons learned from our recent red teaming exercise
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Create account
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Team
+Use Case
+Industry
+Team
+Learning & Development
+Scale skills with multilingual training videos.
+Sales enablement
+Train your sales reps and help them close more deals.
+Marketing
+Produce branded product videos in minutes.
+Business Operations
+Deliver consistent updates with video templates.
+Knowledge Management
+Turn your knowledge bases into engaging videos.
+IT & Cybersecurity
+Train employees on security and compliance with videos.
+Use case
+Technical Training
+Create engaging technical videos in minutes.
+Compliance Training
+Lower compliance risks with clear training videos.
+Sales Training
+Provide video training tailored to your sales team.
+Employee Development
+Build skills with video training programs.
+SOP
+Turn text-heavy SOPs and documents into videos.
+Product Video
+Create engaging product demos and tutorials in minutes.
+Industry
+Manufacturing
+Turn SOPs and manuals into engaging videos.
+Tech & Software
+Scale internal and customer training with AI.
+Healthcare
+Engage healthcare staff with avatar-led videos.
+Financial services
+Create secure, multilingual compliance training videos.
+Professional Services
+Transform onboarding and policies into quick videos.
+Retail
+Convert PDFs and webinars into mobile videos.
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+AI Ethics
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Blog
+/
+Synthesia
+Navigating the complexities of content moderation
+Written by
+Alexandru Voica
+August 23, 2024
+Create AI videos with 240+ avatars in 160+ languages.
+Try Free AI Video
+Get started for FREE
+In this article
+Text Link
+Generative AI is a transformative technology that is helping people create synthetic media on par with images, audio or video produced with traditional means. However, without robust content moderation implemented at the point of creation, these powerful tools could become double-edged swords, leading to harmful content being created more easily than before and then distributed at scale.
+Our approach to content moderation
+When Synthesia started in 2017, its founders recognized that generative AI is a powerful technology that, when placed in the hands of people with bad intentions, will be misused. So they made three important decisions on day one.
+First, we will never create a clone of someone without their consent. Non-consensual deepfakes are the biggest source of harmful synthetic media. Therefore, by introducing consent in the process of creating an AI avatar, we create an effective barrier against attempts of misuse for our platform.
+Secondly, we will implement content moderation at the point of creation and define robust content policies that would limit the spread of misinformation, fraud, violent extremism, and other forms of abusive AI-generated content. By placing videos into our content moderation workflow before they’re created, we keep the platform safe for everyone to create videos that adhere to the highest possible standards of ethics and professionalism.
+Finally, while we cannot claim to be perfect, we believe in the importance of collaboration and therefore we will work with our peers in the industry, policymakers and other organizations to learn from each other, share our efforts and lessons learned, and evolve our responsible AI practices to adjust to new threats. As a result, we’ve participated in
+the Deepfake Rapid Response Force established by WITNESS
+, collaborated with
+Partnership on AI on best practices for synthetic media
+, and contributed to
+the Content Authenticity Initiative
+set up by Adobe, Microsoft, Nvidia, Reuters and other media industry leaders. We also
+advocated for legislation
+in the UK, Europe and beyond to protect people from the dangers of non-consensual deepfakes such as the creation and distribution of sexually explicit videos and images or fraud.
+Supporting the Responsible AI framework from RIL
+More recently, we’ve signed up as supporters of
+the Responsible AI framework
+developed by
+Responsible Innovation Labs
+(RIL). The framework includes checklists, tools and how-to guides distilled from industry, civil society, and the public sector to create actionable commitments backed by real-world examples. The framework also recognizes the different needs and capabilities of startups, and therefore helps them evolve their approach to responsible innovation from the early stages of seed funding through to achieving product market fit and growing into a scaleup.
+One of the recommendations included in the RIL’s framework is to audit and test products against misuse which is why Synthesia just completed a comprehensive red team exercise to test our content moderation capabilities. The results were both enlightening and encouraging, underscoring the critical need for oversight in the age of AI-generated content.
+While we’ve run internal red team exercises in the past, this has been the first test where we worked with an external partner that specializes in threat intelligence and content moderation.
+Red teaming our content moderation systems
+Two experts from
+Risky Business Solutions LLC
+spent a month probing our AI systems for vulnerabilities. Using their combined 20 years of experience — one as an
+NSA
+analyst and the other in influence operations for the United States Air Force — as well as their work as investigators for companies like Meta, Gap, and StubHub, they attempted to generate harmful, biased, or misleading content using a variety of techniques, from subtle prompts to more overt attempts at circumventing our safeguards.
+Additionally, they produced a threat intelligence report that analyzed the dark web, mainstream and niche social media platforms, cybercrime forums, and search engines to detect how bad faith actors are thinking about misusing generative AI. This report produced valuable insights for our security team, including the most common types of attacks and harmful content that bad faith actors engage in with generative AI such as financially-motivated scams, automated clickbait and spam campaigns.
+Here are four lessons we’ve learned from their red team test, which wrapped up last month.
+Nuanced challenges
+: While there are certain content categories such as terrorism, graphic content and child endangerment that everyone can agree are harmful, Risky Business Solutions tried to test whether our systems can effectively catch less obvious attempts to generate abusive content. For instance, the team generated videos which contained attempts to influence their political views with polarizing news-like content, or convince them to invest in dubious cryptocurrencies.
+Thankfully, our content moderation systems caught every attempt to generate such content and the videos were never created.
+Tackling worst offenders
+: Risky Business Solutions observed instances where other generative AI platforms incentivize bad behavior by not banning accounts for extreme violations and even refunding bad faith actors their money when they would attempt to create harmful content.
+In contrast, Synthesia banned accounts when they attempted to create bullying and harassment-type content and never refunded the money when harmful content was found to break our policies. By introducing these strict rules, we create a powerful financial deterrent that makes bad faith actors avoid using our platform because they’d start experiencing significant monetary losses.
+Scale and speed
+: The sheer volume and speed of content generation possible with AI presents unique challenges. While other companies employ no content moderation or just use a basic keywords-based approach, Synthesia uses a combination of sophisticated automated systems and an in-house moderation team that can withstand high-volume attempts.
+However, despite our best efforts, our systems are never going to be perfect. There was one instance where slight changes to a COVID-19 misinformation test video evaded our detection. We investigated the particular case and found the video passed our human review process because of an error made by a content moderator, even though our automated systems flagged the video to be in breach of our content policies. To ensure this was a one-off enforcement error, we asked the Risky Business Solutions team to stress test this area further and no additional harmful videos slipped through.
+While attempting to generate dozens of variations of a violating video would be significantly costly and time consuming on Synthesia, it does highlight the importance of creating more sophisticated defense mechanisms that can cope with DDoS-type attempts which could overwhelm the content moderation system.
+Separating genuine mistakes from harmful intentions
+: Our systems perform well in detecting overt attempts to create harmful content, but they also need to account for situations when people make genuine mistakes, particularly for more complex or nuanced videos. For example, is someone making a video educating their audience about blockchain technology or are they trying to engage in a pump-and-dump crypto scheme? Are they educating people about a particular medical condition or attempting to sell miracle drugs?
+In two instances, the report found that the way in which we provided the justification for why a video could not be generated could be confusing to people who are not well versed in our content policies and simply made a mistake. We refused to generate a video which included current affairs-like content, citing our misinformation policy. Even though the content of the video was factually accurate, our misinformation policy contains a clause stating that non-news organizations cannot use stock avatars on our platform for media reporting. Furthermore, we ban the creation of opinion-type political content with stock avatars. We’ve made this decision to prevent the generation of mis- and disinformation but it’s a policy based on a combination of behaviors and content which should’ve been more clearly explained in the rejection message.
+The results from this test are a direct result of our investments in content moderation over the years as well as recent initiatives to build up our defenses, including:
+Scalable infrastructure and updated policies
+: We've invested in more powerful technology to handle high-volume content moderation without compromising on accuracy or speed. In response to findings from Graphika and
+reported by the New York Times
+, we’ve also updated our content policies to prevent the creation of political content with stock avatars or news-like content from non-enterprise accounts.
+Treating safety as a product, not just as an operational concept
+: We've dedicated 10% of the company’s headcount to trust and safety work so we can handle more complex cases and
+continually improve our systems
+. Rather than assigning this work to just one operational team which sits isolated from product development, we’ve extended AI safety and security responsibilities to our product and engineering teams to ensure that the features they’re building are designed with safety in mind.
+Transparency and accountability
+: We're committed to
+regular public audits
+of our systems and outcomes and to adopting the highest international standards for AI safety. For example, we’ve started the process of ISO-42001 certification which should complete over the next few months. ISO 42001 is an international standard that is designed to ensure the responsible development and use of AI systems within organizations.
+Providing a channel for user feedback
+: We’ve recently introduced an appeals process through which users can ask for a second review of our content moderation decisions to account for situations where we’ve made a genuine mistake. We also give people the ability to
+report any concerns
+they might have about our use of AI, including misuse of our platform or content that violates our policies.
+As AI-generated content becomes more prevalent, companies developing or using generative AI platforms need to think more seriously about trust and safety. Those that don’t will not only have to deal with the legal issues that result from their inaction but will also risk damages to their brand and put the integrity of the information ecosystem at risk.
+Synthesia's founders have always seen AI safety as a core part of building a responsible and reliable platform for video communications and knowledge sharing. Treating AI governance as integral to our product development process gives our customers confidence they can leverage our cutting-edge AI capabilities while upholding their ethical and legal obligations.
+We’ve been transparent about the capabilities and limitations of our platform so by sharing the results of this red teaming effort, we hope to create an open environment where industry peers, policymakers, and the public can engage with us in these crucial conversations.
+Together, we can harness the power of AI while safeguarding the values that make our digital spaces creative and trustworthy.
+Alexandru Voica
+Alexandru Voica is Head of Corporate Affairs and Policy at Synthesia. He has experience across tech, social media, gaming, and retail, and an engineering background with a degree in Virtual Reality from Sant’Anna School.
+Go to author's profile
+Get started
+Make videos with AI avatars in 160+ languages
+Try out our AI Video Generator
+Create a free AI video
+
+No items found.
+
+No items found.
+
+You might also like
+View all posts
+No items found.
+Synthesia
+Synthesia accelerates global expansion as enterprise contracts triple
+Synthesia
+KnowBe4 and Synthesia Transform Cybersecurity Training with AI Video
+Synthesia
+Scaling Avatars adoption responsibly with our new Avatar Governance Framework and Policy Template
+As more companies create avatars of their employees, including of senior executives, there's a gap in the market for policies covering how those likenesses are generated, used, or retired. Today, we are publishing two resources to address this need, which we hope will form the basis for a stronger governance framework for digital replicas.
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Ethics Guidelines
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+VIDEO TEMPLATE
+VIDEO TITLE
+Create video from template
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create a free AI Video

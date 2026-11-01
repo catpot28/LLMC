@@ -1,0 +1,295 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/401-authorization-required-response-in-api/2591
+page path  : /t/401-authorization-required-response-in-api/2591
+captured   : 2026-04-12 11:39:37 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_401-authorization-required-response-in-api_2591__28cba939.html.gz
+========================================================================
+
+401 Authorization Required Response in API - Bug Reports - Perplexity API Platform Forum
+
+401 Authorization Required Response in API - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+401 Authorization Required Response in API
+
+Bug Reports
+
+sonar-pro
+
+AlecFurrier
+
+November 12, 2025, 4:24pm
+
+1
+
+My credits are burning but im getting 401s… why?
+
+Here’s a fresh, first-hand capture of what happens when this backend calls Perplexity right now:
+
+REQUEST:
+
+{
+
+"model": "sonar",
+
+"messages": [
+
+{
+
+"role": "system",
+
+"content": "You are a concise news analyst. Always reply with raw JSON."
+
+},
+
+{
+
+"role": "user",
+
+"content": "Return a minimal JSON object with a hello message."
+
+}
+
+],
+
+"temperature": 0.2,
+
+"max_tokens": 200
+
+}
+
+RESPONSE STATUS: 401
+
+HEADERS:
+
+date: Wed, 12 Nov 2025 16:14:25 GMT
+
+content-type: text/html
+
+transfer-encoding: chunked
+
+connection: keep-alive
+
+cf-ray: 99d7527ecdf5e677-DEN
+
+cf-cache-status: DYNAMIC
+
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+
+server: cloudflare
+
+BODY (first 400 chars):
+
+<html>
+
+<head><title>401 Authorization Required</title></head>
+
+<body>
+
+<center><h1>401 Authorization Required</h1></center>
+
+<hr><center>openresty/1.27.4</center>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow document ...
+
+So every request—including this simple test payload—gets intercepted by Cloudflare (note the cf-ray header and the HTML body). Perplexity counts the call as soon as it hits their edge, which is why credits go down even though the actual API never returns JSON.
+
+This confirms the issue isn’t in our prompt or payload; the token is being blocked before it reaches the service. You’ll need to work with Perplexity to allow this key/IP (or rotate to a key with server-side access). Until then, any automated refresh will yield the same 401 HTML page while still consuming credits.
+
+3 Likes
+
+Noa_Minter
+
+December 13, 2025, 8:04pm
+
+2
+
+Having the same issue…
+
+When you say you have to work with perplexity to resolve can you explain specifically what you mean?
+
+I’m getting this through openrouter chat, every perplexity model
+
+Gary_Poduska
+
+December 16, 2025, 4:48pm
+
+3
+
+I am having the same issue. Any api call yields this error now!
+
+1 Like
+
+August_Dua
+
+December 17, 2025, 3:37pm
+
+4
+
+Same issue with sonar-deep-research
+
+tobs-fbx
+
+February 2, 2026, 2:30pm
+
+5
+
+I guess I have the same problem accessing the API from Claude Code. See bug report below:
+
+I’m unable to connect to the Perplexity API through the official MCP server (
+@perplexity-ai/mcp-server
+), receiving a 401 Unauthorized error with a Cloudflare challenge response.
+
+Environment:
+
+OS: Windows 11
+
+Client: Claude Code (VS Code extension)
+
+MCP Package:
+@perplexity-ai/mcp-server
+(also tested community
+perplexity-mcp
+)
+
+API Key:
+pplx-p3fj9hmT...
+(regenerated fresh key, confirmed valid)
+
+Configuration (.mcp.json):
+
+{
+"perplexity": {
+"command": "npx",
+"args": ["-y", "@perplexity-ai/mcp-server"],
+"env": {
+"PERPLEXITY_API_KEY": "..."
+}
+}
+}
+
+Symptoms:
+
+All MCP calls return 401 with Cloudflare HTML challenge page (not a standard API error)
+
+Error contains:
+openresty/1.27.4
+and Cloudflare challenge script
+
+Troubleshooting completed:
+
+Verified API key works via direct curl:
+
+curl "https://api.perplexity.ai/chat/completions" -H "Authorization: Bearer pplx-..." -H "Content-Type: application/json" -d "{...}"
+
+→ Returns valid JSON response
+
+Regenerated API key - same issue
+
+Cleared npm cache (
+npx clear-npx-cache
+)
+
+Tested both official and community MCP packages - same result
+
+Other MCP servers (Exa, Firecrawl) work correctly in same environment
+
+Conclusion:
+
+The API key and network can reach Perplexity (curl works), but requests from Node.js/npx environment are being blocked by Cloudflare bot protection.
+
+Request:
+
+Please advise on how to resolve the Cloudflare blocking for MCP server connections.
+
+Thank you.
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Perplexity in openrouter chat
+
+General
+
+sonar-pro
+
+2
+
+150
+
+February 20, 2026
+
+Subject: Urgent: Repeated ClientResponseError 400 Bad Request on Perplexity API
+
+Bug Reports
+
+sonar-reasoning
+
+3
+
+446
+
+July 5, 2025
+
+Bare minimum example on website is wrong
+
+General
+
+2
+
+245
+
+May 15, 2025
+
+For some reason getting "400" bad request
+
+Bug Reports
+
+sonar-pro
+
+1
+
+130
+
+April 7, 2026
+
+I working on n8n , but perplexity node can't accept API, even I have correct API. somebody help me
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+0
+
+47
+
+September 27, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,285 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-deep-research-taking-longer-than-expected/3599
+page path  : /t/sonar-deep-research-taking-longer-than-expected/3599
+captured   : 2026-02-07 07:56:13 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-deep-research-taking-longer-than-expected_3599__49877169.html.gz
+========================================================================
+
+Sonar-deep-research taking longer than expected - Bug Reports - Perplexity API Platform Forum
+
+Sonar-deep-research taking longer than expected - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+sselepahs
+
+January 20, 2026, 2:39pm
+
+1
+
+Describe the Bug
+
+When asking for a sonar-deep-research using the async API, I poll to check for the status of the deep research for about 30-40 minutes I get a status of IN_PROGRESS. When it eventually completes the payload returns to me as only took about 2 minutes.
+
+"created_at": 1768872046,
+"started_at": 1768872046,
+"completed_at": 1768872180,
+
+Expected Behavior
+
+After 2 minutes or the completed_at time the poll endpoint should return the research as completed.
+
+Actual Behavior
+
+Takes 40+ minutes for the retrieve result api to send back as completed, and the completed time says it only took 2 minutes
+
+Steps to Reproduce
+
+Call the API with the following request:
+
+curl --location ‘
+https://api.perplexity.ai/async/chat/completions’
+
+–header ‘Authorization: Bearer ’
+
+–header ‘Content-Type: application/json’
+
+–data ‘{
+
+“request”: {
+
+“model”: “sonar-deep-research”,
+
+“messages”: [
+
+{
+
+“role”: “user”,
+
+“content”: “Provide an in-depth analysis of the impact of AI on global job markets over the next decade.”
+
+}
+
+]
+
+}
+
+}’ | jq
+
+Take the id and call the polling endpoint
+
+curl --location ‘
+https://api.perplexity.ai/async/chat/completions/{REPLACE_WITH_REQUEST_ID}’
+
+–header “Authorization: Bearer ”
+
+API Request & Response (if applicable)
+
+Environment
+
+API Version:
+sonar-deep-research
+
+SDK (if applicable):
+ai-sdk v6
+
+Operating System:
+macos
+
+Logs or Screenshots (if applicable)
+
+Add any logs or screenshots that can help debug the issue.
+
+Additional Context
+
+Add any other context about the problem here.
+
+1 Like
+
+ashhh_3
+
+January 23, 2026, 5:29am
+
+2
+
+Hi @
+sselepahs
+, I’m experiencing the same issue for the past 4 days.
+
+When using the async API for
+sonar-deep-research
+, the job appears to complete quickly based on the
+completed_at
+timestamp, but the polling endpoint continues to return
+IN_PROGRESS
+for a long time (around 20–30 minutes). During this time, my system keeps polling the endpoint 70–80 times before it finally returns
+COMPLETED,
+and at last it results with TIMEOUT error instead of successful completion.
+
+This is causing two major issues:
+
+Unnecessary repeated polling (infrastructure overhead)
+
+Tokens continuing to be counted during polling, which directly increases cost
+
+Is there any update or acknowledgment from the Perplexity team on this issue? Are there any recommended workarounds (e.g., backoff strategy, max polling duration, or alternative endpoint) until this is resolved?
+
+1 Like
+
+UEckl
+
+January 23, 2026, 2:21pm
+
+3
+
+Figured out, that this might be an caching issue on perplexity side: When querying the COMPLETE endpoint with a timestamp parameter, it will show you the results. also explains why the completedAt and startedAt time difference does not match the actual time to response.
+
+1 Like
+
+JLAFE
+
+January 23, 2026, 5:26pm
+
+4
+
+Have you guys found a workaround? Would really appreciate some suggestions, if any
+
+Will_Swannell
+
+February 1, 2026, 9:30pm
+
+6
+
+This is a major issue..
+
+also reported in these other threads…
+
+Async endpoints return different status for List vs Get on /completions endpoint
+
+Bug Reports
+
+I need to report a bug I found in the API for Async calls, here is the details: I tested Perplexity’s API directly using curl:
+# Direct curl to Perplexity’s LIST endpoint
+curl “
+https://api.perplexity.ai/async/chat/completions?limit=5
+”
+
+Returns: status: “COMPLETED”, completed_at: 1769385424
+# Direct curl to Perplexity’s GET endpoint
+curl “
+https://api.perplexity.ai/async/chat/completions/
+[id]”
+
+Returns: status: “IN_PROGRESS”, completed_at: null
+Same API key, same job ID, same moment in time - t…
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully
+
+Bug Reports
+
+This is happening to me too.
+It seems to happen if I poll before it completes..
+It’s killing my app in production which is incredibly frustrating to happen from a larger platform like this.. Please can someone look at this! I’m happy to provide specific details.
+
+JLAFE
+
+February 1, 2026, 10:14pm
+
+7
+
+it’s been 2 weeks and not a single response from perplexity. also posted the same thing on discord
+
+Will_Swannell
+
+February 5, 2026, 7:36pm
+
+8
+
+Perplexity, your APIs don’t work. U ok?
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+The Perplexity sonar-deep-research model is repeatedly staying in IN_PROGRESS and timing out
+
+Bug Reports
+
+sonar-deep-research
+
+0
+
+23
+
+January 24, 2026
+
+# Perplexity Sonar Deep Research Model Timeout Issue - Seeking Solution
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+255
+
+October 25, 2025
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+279
+
+June 1, 2025
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully
+
+Bug Reports
+
+sonar-deep-research
+
+2
+
+30
+
+February 3, 2026
+
+<API model mismatch – sonar-deep-research returns sonar-reasoning-pro>
+
+General
+
+1
+
+168
+
+May 16, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

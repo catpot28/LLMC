@@ -1,0 +1,142 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/baidu/cobuddy:free
+page path  : /baidu/cobuddy:free
+captured   : 2026-05-09 16:58:59 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_baidu_cobuddy_free__bd4ff663.html.gz
+========================================================================
+
+CoBuddy (free) - API Pricing & Providers | OpenRouter
+
+CoBuddy (free) - API Pricing & Providers | OpenRouter
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Baidu Qianfan: CoBuddy (free)
+baidu
+/
+cobuddy:free
+Chat
+Compare
+Released
+May 6, 2026
+131,072
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.
+Chat
+Compare
+Overview
+Playground
+Providers
+Performance
+Pricing
+Apps
+Activity
+Uptime
+API
+Performance for CoBuddy (free)
+Compare different providers across OpenRouter
+All locations
+Sorting API Example
+Effective Pricing for CoBuddy (free)
+Actual cost per million tokens across providers over the past hour
+Apps using CoBuddy (free)
+Top public apps this month
+Recent activity on CoBuddy (free)
+Total usage per day on OpenRouter
+Tokens
+Not enough data to display yet.
+Uptime stats for CoBuddy (free)
+Uptime stats for
+CoBuddy (free)
+
+across all providers
+Providers for CoBuddy (free)
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Sample code and API for CoBuddy (free)
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports reasoning-enabled models that can show their step-by-step thinking process. Use the
+reasoning
+parameter in your request to enable reasoning, and access the
+reasoning_details
+array in the response to see the model's internal reasoning before the final answer. When continuing a conversation, preserve the complete
+reasoning_details
+when passing messages back to the model so it can continue reasoning from where it left off.
+
+Learn more about reasoning tokens
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+OpenRouter SDK
+OpenAI SDK
+Raw
+Copy
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

@@ -1,0 +1,6 @@
+# Keep source files portable and frozen data byte-for-byte reproducible.
+* text=auto eol=lf
+data/** -text
+*.csv whitespace=cr-at-eol
+*.png binary
+*.pdf binary

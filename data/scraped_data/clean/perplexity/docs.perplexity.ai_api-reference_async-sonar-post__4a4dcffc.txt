@@ -1,0 +1,793 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/async-sonar-post
+page path  : /api-reference/async-sonar-post
+captured   : 2026-06-17 06:31:25 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_async-sonar-post__4a4dcffc.html.gz
+========================================================================
+
+Create Async Chat Completion - Perplexity
+
+Create Async Chat Completion - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Sonar API
+Create Async Chat Completion
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Analytics API
+GET
+Computer Usage Analytics
+Create Async Chat Completion
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"request": {
+
+"model": "sonar-deep-research",
+
+"messages": [
+
+{
+
+"role": "<string>",
+
+"content": "<string>"
+
+}
+
+]
+
+}
+
+}
+
+'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"content"
+:
+"<string>"
+
+}
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Sonar API
+Create Async Chat Completion
+Copy page
+Submit an asynchronous chat completion request.
+Copy page
+POST
+/
+v1
+/
+async
+/
+sonar
+Try it
+Create Async Chat Completion
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"request": {
+
+"model": "sonar-deep-research",
+
+"messages": [
+
+{
+
+"role": "<string>",
+
+"content": "<string>"
+
+}
+
+]
+
+}
+
+}
+
+'
+200
+422
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"content"
+:
+"<string>"
+
+},
+
+"delta"
+: {
+
+"content"
+:
+"<string>"
+
+}
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_tokens_cost"
+:
+123
+,
+
+"output_tokens_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"reasoning_tokens_cost"
+:
+123
+,
+
+"request_cost"
+:
+123
+,
+
+"citation_tokens_cost"
+:
+123
+,
+
+"search_queries_cost"
+:
+123
+
+},
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"citations"
+: [
+
+"<string>"
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"<string>"
+,
+
+"last_updated"
+:
+"<string>"
+,
+
+"snippet"
+:
+""
+,
+
+"source"
+:
+"web"
+
+}
+
+],
+
+"images"
+: [
+
+{
+
+"image_url"
+:
+"<string>"
+,
+
+"origin_url"
+:
+"<string>"
+,
+
+"title"
+:
+"<string>"
+,
+
+"width"
+:
+123
+,
+
+"height"
+:
+123
+
+}
+
+],
+
+"related_questions"
+: [
+
+"<string>"
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+Request body for creating an asynchronous chat completion
+​
+request
+ApiChatCompletionsRequest · object
+required
+The chat completion request to execute asynchronously
+Show
+
+child attributes
+​
+idempotency_key
+string | null
+Unique key to prevent duplicate requests
+Response
+200
+application/json
+Successful Response
+​
+id
+string
+required
+Unique identifier for the async request
+​
+model
+string
+required
+Model used for the request
+​
+created_at
+integer
+required
+Unix timestamp when the request was created
+​
+status
+enum<string>
+required
+Current processing status of the request
+Available options
+:
+
+CREATED
+,
+
+IN_PROGRESS
+,
+
+COMPLETED
+,
+
+FAILED
+
+​
+started_at
+integer | null
+Unix timestamp when processing started
+​
+completed_at
+integer | null
+Unix timestamp when processing completed
+​
+response
+CompletionResponse · object
+Show
+
+child attributes
+​
+failed_at
+integer | null
+Unix timestamp when the request failed (if applicable)
+​
+error_message
+string | null
+Error message if the request failed
+Was this page helpful?
+Yes
+No
+Create Chat Completion
+Previous
+List Async Chat Completions
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

@@ -1,0 +1,20 @@
+{
+  "architecture": "Single",
+  "experiment_id": "model_test_v2_20260806_gemini-2.5-pro",
+  "inputs": {
+    "path": "data/experiments/combined_20260801_mistral-small-2603_run-1/inputs/companies.jsonl",
+    "records": 49,
+    "sha256": "2e359c968e08e9230efb8d0bc4860b754fc18eac5fdd3ee07b9613e1ee3654ba"
+  },
+  "model": {
+    "id": "google/gemini-2.5-pro",
+    "key": "gemini"
+  },
+  "prompt": {
+    "path": "prompts/single_v2.txt",
+    "sha256": "ed4b3b148737e4b08101b632a4fd4e0192af3551677a51ebc5aadec3212d9237"
+  },
+  "purpose": "controlled Single V2 model comparison: Gemini 2.5 Pro versus Mistral Small 4",
+  "results": "results.jsonl",
+  "run_number": 1
+}

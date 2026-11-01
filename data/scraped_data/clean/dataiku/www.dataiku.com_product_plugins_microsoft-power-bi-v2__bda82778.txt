@@ -1,0 +1,471 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/microsoft-power-bi-v2/
+page path  : /product/plugins/microsoft-power-bi-v2/
+captured   : 2026-01-21 08:52:01 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_microsoft-power-bi-v2__bda82778.html.gz
+========================================================================
+
+Plugin: Microsoft Power BI | Dataiku
+
+Plugin: Microsoft Power BI | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Microsoft Power BI
+
+Microsoft Power BI
+
+This plugin provides a dataset exporter from DSS to Microsoft Power BI Online
+
+Microsoft will retire the capability that DSS is using to publish datasets on PowerBI on October 31st, 2027.
+
+Should you experience any restrictions with the PowerBI API prior to this date, please submit a support ticket through Microsoft’s platform. You can find instructions on how to do so
+here
+.
+
+Further details are available on the
+Microsoft Power BI Blog
+(with Edge/Chrome/Safari and accepted cookies in order to see the comment section) and
+Microsoft Learn
+.
+
+Microsoft Power BI
+is a cloud-based business analytics service that gives you a single view of your most critical business data.
+
+This DSS Plugin offers the ability to export Dataiku DSS data to Power BI, using the regular Export infrastructure.
+
+Microsoft Power BI and Dataiku DSS are 2 complementary solutions. In a typical usage scenario, users will be able to:
+
+build workflows in DSS to create complex data transformation pipelines and build machine learning models, possibly relying on other Microsoft technologies (such as Azure Blob Storage, Azure Data Lake Store, Azure HDInsight or SQL Server)
+
+then push the output of these workflows directly to Power BI to be consumed by end users, using its interactive visualization and dashboarding features.
+
+The Power BI custom Exporters can be used directly from the Export menu of the Dataset, or through an Export Recipe. If the latter is used, it will be usable in a DSS Scenario and the data could be refreshed automatically on scheduled basis.
+
+Export your DSS Datasets to Power BI.
+
+Plugin Information
+
+Version
+
+2.0.5
+
+Author
+
+Dataiku
+
+Released
+
+2018-05-03
+
+Last updated
+
+2025-05-06
+
+License
+
+Apache Software License
+
+Source code
+
+Github repository
+
+Issues
+
+Github repository
+
+Obtaining Valid Power BI Credentials To Use The Plugin
+
+The Plugin uses the
+Power BI REST API
+to interact with Power BI, and requires a valid access token to be able to submit requests. The information required to get an access token are:
+
+the username (email address) of the user authorized to access to Power BI
+
+the associated password
+
+the Client ID of the Power BI client application
+
+the associated Client Secret
+
+You will need to register a client application with the right permissions. The main steps are as follows (Azure interface may differ):
+
+(optional) In your Azure Active Directory, create a “generic” user that will be used as a service account for Power BI
+
+Navigate to
+https://dev.powerbi.com/apps
+and login using this account
+
+Register a new “Server-side Web app”, ticking all Dataset APIs boxes, and write down your application Client ID and Client Secret
+
+Set the server-side Web app’s redirect URI as
+https://<<your DSS host>>/dip/api/oauth2-callback
+
+Go back to the Azure portal
+
+In the Azure Active Directory section, go to “App registrations”
+
+Select the App you created above (you can filter by application ID)
+
+Under Required permissions, select Power BI Service, select all permissions, then click Grant permissions
+
+Please refer to this
+official Azure documentation
+in case of questions, and contact your Power BI administrator.
+
+How to set up
+
+In DSS, go to
+Plugins > Installed > Microsoft Power BI > Settings > Azure Single Sign On > Add preset
+. There, paste the App client ID and secret copied from previous step and save the preset.
+
+Go to
+Profile & settings > Credentials
+for your DSS account. Click the edit button for the Power BI preset you are configuring. This will redirect you to a Microsoft single sign on page. Log in to the account if necessary and click
+Yes
+
+How To Use
+
+The Plugin provides the following components:
+
+A DSS Exporter to export a DSS Dataset to Power BI, using Microsoft Single Sign On (preferred method to get access)
+
+A DSS Exporter to export a DSS Dataset to Power BI, generating a new access token at each build using the user’s Power BI credentials
+
+Exporting a DSS Dataset to Power BI
+
+The Plugin will appear through the regular Export facility of DSS. For one-off export, just click on the Export function of a Dataset, and under “OTHER (CUSTOM)”, you will be able to see the 2 custom Power BI exporters:
+
+One-off export to Power BI
+
+By default, the data will be exported into “My Workspace”. Power BI Pro license holders can export toward any other workspace simply by adding its name into the workspace box.
+
+To automate the Export to Power BI, an
+Export to folder
+recipe can be used (you need to create an empty folder that acts as the output folder of the export recipe). The 2 Exporters will be also available there, but will now be part of the Flow and can then be automated via Scenarios. Here is a screenshot:
+
+Export Recipe to Power BI
+
+Using DSS data in Power BI
+
+Once the export has completed, the data will be available for consumption in Power BI. The table associated with the dataset is called “dss-data” (default value), and the data types will be inferred from the DSS Dataset. Visualizations can be built from there:
+
+Power BI
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Power BI.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

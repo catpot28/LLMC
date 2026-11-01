@@ -1,0 +1,211 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/getting-your-data-right-for-ai
+page path  : /blogs/getting-your-data-right-for-ai
+captured   : 2026-02-12 19:58:51 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_getting-your-data-right-for-ai__021fd637.html.gz
+========================================================================
+
+Getting your data right for AI | SAP
+
+Getting your data right for AI | SAP
+
+media-blend
+
+text-black
+
+Getting your data right for AI
+
+The adage “garbage in, garbage out” has never been more relevant. Here’s how to build a trustworthy AI foundation.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+At biotechnology company Moderna, artificial intelligence (AI) is changing everything—the way it administers clinical trials, the way it handles regulatory inquiries, and eventually, the way it cures diseases. The company announced in April 2024 a
+partnership with OpenAI
+to automate “nearly all” of its business processes, according to
+The Wall Street Journal
+—a move that Moderna says will speed up new product development and give it competitive advantage.
+
+At the heart of this transformation is harnessing the company’s vast troves of data. Moderna wouldn’t be able to do any of this were it not for the hard work the company has put into ensuring it had the right data—and not just the right data generally, but the right data for every single one of its 750 versions of OpenAI’s ChatGPT, each tailored to serve specific tasks and processes.
+
+One version uses years of previous research and medical knowledge to predict the most appropriate dose of a drug for clinical trials—a huge challenge that, if done incorrectly, could lead to a product being discontinued in the clinical trial stage. Another version sifts through volumes of research to come up with answers to questions from regulators. A process that once took weeks can now happen in minutes, according to Moderna CEO Stéphane Bancel in an
+interview
+with
+The Wall Street Journal
+.
+
+The success of these ChatGPT models rests on the data being complete, credible, realistic, and sharable for the business to use, but that’s not the case with most companies today. Data collection and management is expensive and requires a huge commitment.
+
+In an
+AWS survey
+, 93% of chief digital officers agreed that data strategy is crucial to getting value from AI, but just 57% had made changes to their company’s data so far. Nearly half (46%) pointed to data quality and finding the right use cases as the greatest challenges to realizing the full potential of AI.
+
+Companies have been taming their data, sometimes half-heartedly, through structured data governance for decades, but the stakes are a lot higher now with AI.
+
+“To use a poker analogy, instead of playing for nickels and quarters, we’re now putting thousands of dollars on the table,” says Roger Hoerl, professor of statistics at Union College in Schenectady, New York. “It’s gone from fairly small stakes—you can make a small mistake and it’s not that big a deal—to now all this is automated, and people are being denied or given loans, people are being paroled or not paroled, and too often it’s based on faulty data. People are focusing on the algorithm, and they’re just assuming the data must be good because it’s in their system rather than doing the nitty-gritty work to dig in and honestly evaluate the quality of their data.”
+
+No doubt, more can be done with more kinds of data thanks to AI. Is it truly transformative? The potential is certainly there. But as Moderna shows, the data must be well-suited to each problem.
+
+Much work still needs to be done to get a company’s internal data ready for AI. And even then, business leaders who greenlight AI projects must ask the right questions about the data and the AI models to ensure that outcomes will be accurate and unbiased. In order to take a big step forward with AI, most organizations find they have to take a step back and invest in a more solid information foundation.
+
+Fortunately, there have never been more ways to do that.
+
+As the ROI in good data is skyrocketing, new processes make it easier than ever to mix vetted, private data with powerful large language models (LLM) trained on general data.
+
+Before allowing AI to take on a more ambitious role in the business, Hoerl says companies need to first answer two important questions:
+
+Is the data right, meaning accurate?
+
+Do we have the right data for the problem we want to solve?
+
+Here’s a breakdown, along with tips for augmenting the data you need.
+
+Getting the data right
+
+The first step toward having the right data for AI is to take inventory of all the data in the organization. This step seems obvious, but 43% of organizations are not able to identify the location of their critical data, with about 59% outsourcing data storage, according to
+a
+
+report
+by the Institute of Directors and Barclays.
+
+Manually review the data
+
+The adage “garbage in, garbage out” has never been more relevant than in AI projects. Not all data is good, and some numeric data may be wrong or misinterpreted. For example, in sales data, a time-to-complete value might have erroneously been assigned a negative number. Clearly, in reality, time can’t have a negative number. Another example: Older public data sets often represent missing values with the code 999. An algorithm that fails to account for the intended meaning of this number will produce a skewed model.
+
+“If somebody just takes a terabyte of data for analysis, they’re not going to check every cell in a database, and how do they know that 999 means missing value?” Hoerl says. Those numbers must be manually reviewed and verified by the data owner.
+
+Nobody wants to go through data line by line. But they can do some random sampling. “Take 1,000 rows of data and have 10 people look at 100 rows each. Make sure there are logical numbers,” Hoerl says.
+
+Pro tip
+: Complete verification of all your data could take years, so it’s best to choose a small set of data and use cases to be expose to AI—usually the most used or most critical data—and verify data quality for that small section. Only then should that data be used for AI modeling. Create a process for continuing data quality checks as work proceeds.
+
+Classify the data
+
+All data should be classified as confidential, public, highly restricted, or whatever terms are used for the organization’s structure, for regulatory, privacy, and security reasons. Let’s say a company has opened a generic AI system for anybody in the company to ask a question in everyday language. Someone might ask, “What is my colleague’s salary?” using the person’s name. If that data hasn’t been tagged as confidential, the LLM may provide it. “That’s where we have to tag and classify information—making it fit for AI systems,” Hoerl says.
+
+For unstructured data, AI-processing vendors are working on privacy settings that mask or otherwise protect personally identifiable information. Some AI-processing vendors have such privacy features to assist in compliance with laws that govern how people’s personal data is collected, stored, and used, including Europe’s General Data Protection Regulation (GDPR) and the United States’ Health Insurance Portability and Accountability Act (HIPAA).
+
+Pro tip
+: A lot of machine learning models today can scan data, take some samples, and determine whether there is any protected data present, such as health information or payment card information, which can be tagged as such. This tagging process helps to govern the use of these systems.
+
+Explain the data
+
+AI models shouldn’t be a black box. The origins of data must be visible to AI model creators. When a team chooses a chunk of data for AI modeling, the data should include citations describing where the information came from and confirmation that the data is legitimate, clean, time stamped, and relevant. Some organizations allow previous data users to leave comments in data catalogs describing when and how they used the data and any flaws to look for, such as missing values.
+
+If necessary, supplement the data
+
+When internal data is unavailable, unbalanced, or unusable—very often because of privacy regulations—consider augmenting it with synthetic data.
+
+Synthetic data is created by generative AI models trained on real-world data samples. The algorithms first learn the patterns, correlations, and statistical properties of the sample data, and once trained, the generator can create statistically similar synthetic data.
+
+The
+financial sector
+relies heavily on synthetic data for things like fraud detection, risk management, and credit risk assessments. For example, American Express and JPMorgan use synthetic financial data to improve fraud detection. They can use synthetic data sets, such as debit and credit card payments that look and act as typical transaction data, to help train, test, and evaluate fraud detection systems as well as develop new fraud detection methods.
+
+Prepared synthetic financial data sets can even be found on crowdsourced platforms that host predictive modeling and analytics competitions, such as Kaggle.
+
+By 2026,
+75% of businesses
+will use generative AI to create synthetic customer data, up from less than 5% in 2023, according to Gartner.
+
+Update or contextualize the data as needed
+
+Sometimes synthetic data needs a reality check with the business’s real data. The primary method for improving the relevancy of language models is retrieval-augmented generation (RAG). RAG is a workflow that retrieves contextually relevant, domain-specific data and uses it to augment responses to user prompts.
+
+LLMs and all pre-cleaned data models can answer all the questions about what has already happened through historical data. But if something happens in the organization today—for example, if there was a fire in a manufacturing plant today—the model wouldn’t have any information about it. The foundational LLMs are trained with public data but not updated continuously or connected to a live search engine. RAG supplements a model’s training data with relevant business data to answer questions with proper context.
+
+An AI model also has to talk the business’s language. Here’s an example: If someone at a tech company asks an AI model “What is iceberg?” it will likely tell them about ice formations in Antarctica. But internally, the company uses the term “iceberg” for an open-source table for storing unstructured data in data lakes. The company can use RAG so that the AI model will not answer that question with information about Antarctica—it will talk in the language relevant to the user’s context.
+
+“The biggest advantage with RAG is that these internal documents are never used to train your LLM,” says Harish Raju, chief product officer at RightData, which helps companies prep their data for AI use. “It is stored in your internal data infrastructure—and the LLM just inquiries that to answer questions. Internal data is never used to train models” because the model could inadvertently reveal confidential details from the company’s data, such as personally identifiable data of employees or customers, trade secrets, or other sensitive business insights.
+
+Data quality issues that still need to be solved
+
+Ensuring data quality is more challenging for unstructured data—images, texts, PDFs, audio, and video—all of which have become valuable data sources.
+
+At a consumer packaged goods company, a group of engineers could be sharing a computer-aided design for a new product on the virtual whiteboard during a video call. In manufacturing, they might need semi-structured logs from Internet of Things (IoT) sensors to track the performance of factory parts. In marketing, they might need unstructured text summaries of customer conversations, and in healthcare, they might need biomedical research images. That’s valuable data that must be verified, put into a searchable form, stored, and made available for AI natural language queries.
+
+“We need to build up a lot of the same architecture, mechanisms, and tooling that we’ve built up for the structured side on the unstructured side,” says Wayne Eckerson, president of Eckerson Group, a global data analytics research and consulting firm. “It’s just not there yet.”
+
+Take for example a series of text messages pertaining to a contract. First, the data must be parsed and extracted from the source using a data pipeline tool. Then, the tool divides the text into semantic “chunks” and generates “embeddings,” which are numerical representations of the unstructured data that describe the meaning and interrelationships of the chunks. Not surprisingly, it’s difficult to verify the accuracy of this unstructured data with the naked eye.
+
+SAP Product
+
+How AI drives real-world results
+
+Discover how to make every process more efficient, every decision more data-driven, and every employee more capable with SAP Business AI.
+
+Learn more
+
+Getting the right data for the problem
+
+When developers build AI models, they often settle for readily available data sets rather than seeking ones more fit for the problem at hand. And senior business managers, who are ultimately deciding whether and how to use AI models, are less equipped to spot trouble in AI data sets and models. So it’s important for business managers to ask what data is actually needed to solve that problem. They can take several steps to identify that data.
+
+Clarify the problem and match it to the right population
+
+A common example is finance or credit scoring. A financial institution wants to determine the likelihood that applicants for home loans will actually pay them off.
+
+They take 100,000 records from all the loans they’ve given in the last years, and, using data on whether they were paid off or not, they develop an AI model.
+
+What’s not included in the loan data is information on another 50,000 applicants who applied and were denied loans. The financial institution doesn’t have data on those applicants, so the existing data is skewed toward people who already have good credit.
+
+“The problem you really want to solve is for those people in the middle—that’s where you make or lose money. So, you need data on those people in the middle in order to get a good AI model,” Hoerl says.
+
+In this case, Hoerl has advised financial institutions to gather that important data by taking a small percentage of applicants who would normally be declined a loan—say a random 1% to 5% —and give them a loan. “You might lose some money on those loans, yes, but now we’ll have data on loans you would normally have declined, and you can analyze that. Maybe 80% actually pay off the loan,” Hoerl says. The practice can continue for a finite amount of time until a strong sample of high-quality data on those loan applicants in the middle is collected.
+
+“Now you can make a more informed decision because now you have the right data to solve that problem,” he says. “In practice, we should be asking, if this is my problem, what data do we need?”
+
+Check the data’s pedigree
+
+Every piece of data has a story behind it—who generated it, under what circumstances, in what period of time—which makes up the history of the data set. It’s hard to be confident about an AI model without a thorough understanding of where the information used to train it came from. There are no perfect data sets out there, but some are better than others. Having this data history allows a company to demonstrate the AI model’s strength and limitations.
+
+Ensure the data is free from bias
+
+Model data should not include any information that could create bias. For instance, an AI tool analyzing rental history could penalize individuals who live in ZIP codes with high eviction rates, even if the applicant has a perfect credit score.
+
+Be clear on how the data model should and should not be used in the future
+
+This refers to the data that doesn’t exist yet but will be used on the AI model in the future. Often people choose an AI model that relied on training data that was readily available. But when they implement the model, it may be used to assess future cases that are very different from the original cases on which it was trained.
+
+For example, in Amazon’s facial recognition system, the training data came from the local geographical area, while the algorithm was to be applied more broadly. This design led to “poor calibration of the algorithm,” according to
+Amazon
+.
+
+Here’s a hypothetical example. Perhaps a cancer study was done on people with Stage 4 cancer, but someone will use the data on a model for people who show some signs of possibly having cancer but have not been diagnosed. “There’s a huge disconnect between the data that’s being fed into the model (future data) and the training data that was put in the model,” Hoerl says. “There should be disclaimers as to how it should and should not be used in the future.”
+
+Data-matching problems that are still to be solved
+
+Commercial tools that measure the accuracy of language models applied to companies’ own unstructured, domain-specific data haven’t been developed yet—particularly ones that determine whether data is biased or sensitive. “That’s where things get tricky,” says Kevin Petrie, VP of research at BARC US, a data and analytics consulting firm. “Data teams largely need to measure this type of accuracy in a custom fashion, applying their own tools and benchmarks.”
+
+Determining the best way to incorporate AI data for any particular business use case requires lots of informed guesswork followed by trial-and-error testing, especially in a very dynamic environment where the underlying models are constantly changing. In the near term, the majority of real-world AI will be built into existing business processes by existing technology vendors because they have the expertise and resources to invest.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Business in an AI world
+
+Learn how AI is changing business, and what it takes to realize its full potential.
+
+Start the journey
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

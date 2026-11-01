@@ -1,0 +1,104 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/training-data-for-self-driving-cars-with-scale-api
+page path  : /blog/training-data-for-self-driving-cars-with-scale-api
+captured   : 2026-04-19 04:45:15 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_training-data-for-self-driving-cars-with-scale-api__47c87644.html.gz
+========================================================================
+
+Training Data for Self Driving Cars - Computer Vision for SDC | Scale AI
+
+Training Data for Self Driving Cars - Computer Vision for SDC | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Product
+Training Data For Self Driving Cars With Scale
+by
+
+Alexandr Wang
+Published
+January 16, 2017
+Reading Time
+3 min read
+Copy Link
+One of the largest automobile companies in the world uses Scale to help build self-driving cars.
+Self-driving cars (SDCs) are one of the most exciting technologies being developed today. If they become a reality, the benefits that come will significantly impact our lives in several ways:
+Lives will be saved
+Transportation speeds go up → Time is saved.
+People will be freed up to be productive or enjoy entertainment on the road
+One of the big challenges for SDCs is extremely high-stakes computer vision. SDCs need to quickly recognize various road conditions, animals, people, other cars, etc. They need to understand how these things are behaving and how they’re likely to behave in the near future. Computer vision, by way of deep learning, has come a long way recently, but it needs to keep improving to ensure SDCs are safe and reliable.
+SDC companies are using Scale to tag objects by passing images through Scale’s
+Image Recognition API
+. Scalers label cars, people, signs, traffic lights, etc. to help train their models.
+An example call would look something like this:
+import scaleapi
+client = scaleapi.ScaleClient('SCALE_API_KEY')
+client.create_annotation_task(
+instruction='Draw a tight box around each **car** and **pedestrian**.'
+attachment_type='image',
+attachment='https://imagedelivery.net/wLbZE4_NzVVdgHc15St55g/e2bea5ad-8ea7-4726-6f9e-9e99264c0600/public',
+objects_to_annotate=['car', 'pedestrian'],
+with_labels=True,
+callback_url='http://www.example.com/callback'
+)
+At Scale, we deeply believe in investing in our customer experience. It’s great to have customers that push us, particularly in ways that benefit all customers. We worked closely with the automobile company to make sure our quality was up to their standards, while maintaining a reasonable cost. Some examples of specific things we did to deliver for the customer:
+Our Scalers take online tests to determine their skill level at a specific task. We improved the Image Recognition test to ensure that Scalers were bounding objects within a pixel of accuracy on each image. Not every customer needs that accuracy, but it’s nice to have nonetheless!
+We invested in the software tool our Scalers use to annotate images to improve their UX. Improving the performance and layout of the tool made a big difference. We took the cost savings and passed it through to our customers.
+We noticed our Scalers were still taking a bit longer to get through the images than we had expected. When we investigated, we realized they were spending a lot of time waiting for images to load. We spun up pre-fetching of the next image to speed things up. And again, we were able to take the cost savings and pass them through to our customers.
+There are countless more things we did to improve the Scale experience that our now available to all of our customers. And we promise to keep improving it.
+At Scale, we want to make our customers more productive and efficient. AI and self-driving cars are an awesome application of Scale towards that goal. If you need help with training your computer vision for self-driving cars,
+join our Slack
+and ask. We’re confident we can deliver the cost, quality and Scale (pun intended) you need!
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

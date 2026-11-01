@@ -1,0 +1,92 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/thinkers-unmasking-unconscious-bias-in-ai
+page path  : /blogs/thinkers-unmasking-unconscious-bias-in-ai
+captured   : 2026-03-09 18:46:52 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/sap/www.sap.com_blogs_thinkers-unmasking-unconscious-bias-in-ai__624ac9d8.html.gz
+========================================================================
+
+Thinkers: Unmasking Unconscious Bias in AI | SAP
+
+Thinkers: Unmasking Unconscious Bias in AI | SAP
+
+flex-height
+
+text-black
+
+Unmasking unconscious bias in AI
+
+Don’t trust data to be neutral, warns data scientist Cathy O’Neil. Businesses need processes that counter algorithmic bias.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+In the wake of the 2008 banking crisis, Cathy O’Neil, a former Barnard College math professor turned hedge fund data scientist, realized that the algorithms she once believed would solve complex problems with pure logic were instead creating them at great speed and scale. Today, O’Neil runs the popular
+Mathbabe
+blog, has 39,000
+followers
+on Twitter, and heads up an algorithmic auditing
+firm
+to illuminate the dark side of Big Data: mathematical models that operate without transparency, without regulation, and—worst of all—without recourse if they’re wrong. She’s also the founder of the Lede Program for Data Journalism at Columbia University, and her bestselling book,
+Weapons of Math Destruction
+(Crown, 2016), was long-listed for the 2016 National Book Award. We asked O’Neil about creating accountability for mathematical models that businesses use to make critical decisions.
+
+Q: If an algorithm applies rules equally across the board, how can the results be biased?
+
+Cathy O’Neil:
+Algorithms aren’t inherently fair or trustworthy just because they’re mathematical. “Garbage in, garbage out” still holds.
+
+There are many examples. On Wall Street, the mortgage-backed security algorithms failed because they were simply a lie. A program designed to assess teacher performance based only on test results fails because it’s just bad statistics; moreover, there’s much more to learning than testing. A tailored advertising startup I worked for created a system that served ads for things users wanted, but for-profit colleges used that same infrastructure to identify and prey on low-income single mothers who could ill afford useless degrees. Models in the justice system that recommend sentences and predict recidivism tend to be based on terribly biased policing data, particularly arrest records, so their predictions are often racially skewed.
+
+Q: Does bias have to be introduced deliberately for an algorithm to make skewed predictions?
+
+O’Neil:
+No! Imagine that a company with a history of discriminating against women wants to get more women into the management pipeline and chooses to use a machine learning algorithm to select potential hires more objectively. They train that algorithm with historical data about successful hires from the last 20 years, and they define successful hires as people they retained for five years and promoted at least twice.
+
+They have great intentions. They aren’t trying to be biased; they’re trying to mitigate bias. But if they’re training the algorithm with past data from a time when they treated their female hires in ways that made it impossible for them to meet that specific definition of success, the algorithm will learn to filter women out of the current application pool, which is exactly what they didn’t want.
+
+I’m not criticizing the concept of Big Data. I’m simply cautioning everyone to beware of oversized claims about and blind trust in mathematical models.
+
+Q: What safety nets can business leaders set up to counter bias that might be harmful to their business?
+
+O’Neil:
+They need to ask questions about, and support processes for, evaluating the algorithms they plan to deploy. As a start, they should demand evidence that an algorithm works as they want it to, and if that evidence isn’t available, they shouldn’t deploy it. Otherwise they’re just automating their problems.
+
+Once an algorithm is in place, organizations need to test whether their data models look fair in real life. For example, the company I mentioned earlier that wants to hire more women into its management pipeline could look at the proportion of women applying for a job before and after deploying the algorithm. If applications drop from 50% women to 25% women, that simple measurement is a sign that something might be wrong and requires further checking.
+
+Very few organizations build in processes to assess and improve their algorithms. One that does is Amazon: every single step of its checkout experience is optimized, and if it suggests a product that I and people like me don’t like, the algorithm notices and stops showing it. It’s a productive feedback loop because Amazon pays attention to whether customers are actually taking the algorithm’s suggestions.
+
+Q: You repeatedly warn about the dangers of using machine learning to codify past mistakes, essentially, “If you do what you’ve always done, you’ll get what you’ve always gotten.” What is the greatest risk companies take when trusting their decision-making to data models?
+
+O’Neil:
+The greatest risk is trusting the data model itself not to expose you to risk, particularly legally actionable risk. Any time you’re considering using an algorithm under regulated conditions, like hiring, promotion, or surveillance, you absolutely must audit it for legality. This seems completely obvious; if it’s illegal to discriminate against people based on certain criteria, for example, you shouldn’t use an algorithm that does so! And yet companies often use discriminatory algorithms because it doesn’t occur to them to ask about it, or they don’t know the right questions to ask, or the vendor or developer hasn’t provided enough visibility into the algorithm for the question to be easily answered.
+
+Q: What are the ramifications for businesses if they persist in believing that data is neutral?
+
+O’Neil:
+As more evidence comes out that poorly designed algorithms cause problems, I think that people who use them are going to be held accountable for bad outcomes. The era of plausible deniability for the results of using
+Big Data
+—that ability to say they were generated without your knowledge—is coming to an end. Right now, algorithm-based decision-making is a few miles ahead of lawyers and regulations, but I don’t think that’s going to last. Regulators are already taking steps toward auditing algorithms for illegal properties.
+
+Whenever you use an automated system, it generates a history of its use. If you use an algorithm that’s illegally biased, the evidence will be there in the form of an audit trail. This is a permanent record, and we need to think about our responsibility to ensure that it’s working well.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

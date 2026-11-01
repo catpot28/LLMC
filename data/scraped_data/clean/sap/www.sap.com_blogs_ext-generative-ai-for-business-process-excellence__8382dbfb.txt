@@ -1,0 +1,179 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/ext-generative-ai-for-business-process-excellence
+page path  : /blogs/ext-generative-ai-for-business-process-excellence
+captured   : 2026-02-11 07:36:50 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_ext-generative-ai-for-business-process-excellence__8382dbfb.html.gz
+========================================================================
+
+Generative AI for the renaissance of business process excellence | SAP
+
+Generative AI for the renaissance of business process excellence | SAP
+
+flex-height
+
+text-black
+
+Generative AI for the renaissance of business process excellence
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+Looking back before we look forward
+
+In our previous piece, “
+Keys to Ignite the Generative Business Revolution
+,” we explored the capabilities of generative artificial intelligence (AI) and how it is positioning itself as a catalyst for innovation and growth in industries as diverse as design, entertainment, healthcare, and marketing. We shared insights on how this technology stands to augment human capabilities, fuel creativity, enhance productivity, and drive substantial economic value.
+
+We also tackled the challenge of separating hype from reality, addressing common misconceptions surrounding
+generative AI
+. We discussed the current limitations and potential risks, while simultaneously suggesting mitigation strategies that underscore the importance of human-machine collaboration.
+
+In this article, we will delve deeper into a business-centric approach for identifying unique applications of generative AI within enterprise operations, providing practical insights to leverage this technology optimally.
+
+dgl
+
+{"id":"SAP1017315","url":"https://www.sap.com/assetdetail/2023/10/be8b56e5-917e-0010-bca6-c68f7e60039b.html"}
+
+Envision Beyond in 60 Seconds—Generative AI for the Renaissance of Business Process Excellence
+
+Building a heatmap
+
+A company value chain is a great starting point to build a map of where generative AI fits in a business. Business leaders can start by outlining end-to-end processes and highlighting the sub-processes and tasks that meet recurring patterns that can be used as indicators for the application of generative AI to business processes. We see three main patterns.
+
+The first pattern is associated with generative AI’s potential to enhance the digital experience for customers. This is achieved through interactions with software using natural language, automation in customer support, and conversational retrieval of information.
+
+The second pattern relates to the potential benefit generative AI brings by assisting content creation for business processes and knowledge management. This can happen through the generation of process model definitions (e.g., the redesign of the recruitment process), the generation of actual content in the context of a business process (e.g., an automatically created job description), and the elaboration of documents and data (e.g., summarization of customer support interactions).
+
+The third pattern relates to the capability of generative AI to increase speed and effectiveness of both professional and citizen developers. This is achieved with code generation from natural language, code auto-completion, and automated generation of documentation.
+
+A company value chain is a great starting point to build a map of where generative AI makes sense in a business.
+
+For the tasks that are suitable to apply generative AI, the key is to analyze a “day in the life” of the personas involved in the tasks. This makes it possible to understand the minute details of how the task is currently conducted, any gaps and issues, and the broader context. For example, think about analyzing a day in the life of a logistics employee: if their task changes from manually typing delivery notes to simply validating notes processed through AI, delivery note processing times can be accelerated.
+
+Ideating and designing
+
+Next, start ideating. An application scenario should be linked to a clear business goal and organizational scope. Once these are established, the design process can start. But what exactly do you design? We think the core design component is the process workflow. Some steps will be based on regular rule-based business logic, retrieving data from enterprise applications and other sources, and some steps will be tasks that can be replaced by AI capabilities. Besides the process workflow, you need to design a user experience and a way to leverage both existing and potentially new data. For example, you could think of retrieving some data about a job profile from an enterprise system, build with that an input for a generative AI service to generate a proposed job profile description, and then store it in the same system.
+
+The conceptual design of a
+generative AI business scenario
+can be significantly expedited by treating it as a building block game in which you can combine AI capabilities with business logic. These functional building blocks can include capabilities like text summarization, translation, sentiment analysis, questions and answers, image editing, text-to-image generation, etc. For instance, in the context of a customer satisfaction analysis process, you could use a summarization AI capability to review social media posts and other data sources and then apply a sentiment analysis AI capability to produce an output that validates a recorded net promoter score. As you can see, combining AI capabilities and business logic is a powerful mechanism.
+
+The conceptual design of a generative AI business scenario can be significantly expedited by treating it as a building block game in which you can combine AI capabilities with regular business logic.
+
+The resulting business solution can fall into two categories: incremental or transformative. Incremental solutions optimize existing processes or products to enhance profitability, whereas transformative solutions introduce approaches that fundamentally reshape business operations or industries. An example of an incremental solution using generative AI could be in content generation for marketing purposes. Instead of investing hours in creating engaging content for social media, blog posts, or newsletters, companies could use generative AI to quickly draft or suggest content based on specific parameters. This saves time and resources, thereby increasing efficiency and reducing costs. On the other hand, a transformative example would be the development of AI-driven personalized education platforms. Unlike standard curricula, an AI-enabled platform could tailor learning material to each student’s performance and interests, revolutionizing the education sector. Choosing between incremental or transformative solutions is largely dependent on a business’s specific needs, capabilities, and strategic vision.
+
+Sanity checks
+
+Once a scenario is identified, we recommend performing three sanity checks to validate it: task type, compliance, and feasibility.
+
+The first sanity check deals with task type: Are there enough repetitions or items to justify the usage of AI rather than manual execution? Is there tolerance for less than 100% accuracy? Does the task take a long time for humans to execute, but a short time to evaluate the quality of the execution? If the answer is yes to all of these questions, the first check is passed.
+
+The second sanity check deals with compliance: Does the use case comply with data security and privacy regulations? How do we ensure the use case produces fair, unbiased outputs?
+
+The third sanity check deals with feasibility: Does the use case require a new
+large language model
+, or can it be realized using an existing public model (e.g., GPT) and prompting? Is the use case performance critical?
+
+Once you have identified one or more high-value areas of application for generative AI, it is time to prioritize them and evaluate an implementation and deployment path.
+
+Considering challenges and risks
+
+Generative AI-based applications have great potential. However, they also introduce new challenges and risks. This dichotomy arises because AI systems, particularly generative models, learn and mimic patterns from extensive datasets without explicit guidelines or full understanding of context. Therefore, these models, though devoid of human biases, end up mirroring the biases in the training data they consume. The combination of AI’s autonomy, its opaque nature, and its complexity poses challenges in terms of human oversight, security, and dependability. The growing integration of AI into various facets of life necessitates continuous and rigorous scrutiny, ethical standards, and strong regulatory frameworks to ensure that its considerable benefits are not overshadowed by these risks. The myriad challenges and risks associated with generative AI applications can be broadly grouped into five major clusters:
+
+Ethical considerations
+
+This cluster encompasses challenges related to misinformation, deception, and
+AI ethics
+. The capacity of AI to generate deceptive or misleading content can contribute to the spread of false information, while ethical concerns arise from its ability to create content that may be inappropriate, offensive, or misinterpret human complexities.
+
+Security and dependability
+
+This cluster includes concerns over security, lack of human oversight, and the dependable operation of AI. AI systems can be manipulated or hacked, leading to security risks. The black-box nature of AI can also result in decisions that are difficult for humans to interpret or agree with.
+
+Economic impact
+
+This refers to the potential job displacement due to AI taking over tasks that are traditionally performed by humans. As AI improves, more sectors are at risk, and there is a need to plan for workforce transitions and re-skilling.
+
+Regulatory concerns
+
+This encompasses challenges related to the legal and regulatory oversight of AI. Developing an appropriate legal and regulatory framework for AI is difficult due to the rapid pace of technological advancements and the global nature of the technology.
+
+Environmental and social equity
+
+This cluster includes challenges related to the resource-intensive nature of AI and the potential for increased social inequality. Training large-scale models requires substantial computational resources and energy, with significant environmental implications. Additionally, access to, benefits from, and influence over AI are not evenly distributed, which could exacerbate social inequalities.
+
+As generative AI continues to evolve, these five major clusters of challenges and risks represent critical focus areas. When designing and implementing generative AI-based solutions, it is crucial to consider and proactively address these challenges to ensure a balanced development that maximizes benefits while minimizing potential harm.
+
+The interviews that never happened
+
+What if we could use AI to predict famous thinkers have to say about its impact? Browse the interviews below to hear their potential thoughts.
+
+Read the stories
+
+Embrace a methodological approach
+
+Taking a business-driven approach to identify areas to apply generative AI to business processes can yield valuable insights and opportunities for enterprises. By analyzing end-to-end business processes and creating a heatmap of recurring patterns, organizations can determine where generative AI can be effectively leveraged.
+
+The three fundamental patterns we have discussed—improving digital experience, assisting content creation and knowledge management, and increasing speed and effectiveness for developers—provide a solid foundation for exploring the potential benefits of generative AI. To ensure successful implementation, it is essential to analyze tasks, understand challenges, link scenarios to goals, and design workflows, user experience, and data integration with AI capabilities and business logic while also conducting sanity checks to ensure security, privacy compliance, and overall feasibility.
+
+Considering these findings, we urge enterprises to embrace a methodological approach to explore the business potential of generative AI and seize the opportunities it presents. By doing so, they can enhance their operations, drive innovation, and stay ahead in today’s rapidly evolving business landscape.
+
+The profound impact of generative AI on business
+
+In this insightful interview, SAP experts discuss generative AI's transformative potential in the automotive industry and logistics.
+
+Watch the video
+
+About the Intelligent Enterprise Institute
+
+The Intelligent Enterprise Institute helps business leaders understand the transformative potential of different forms of intelligence to inspire and accelerate change in their organizations and lives. By generating new insights and bringing together unheard voices and unique perspectives from global thinkers, the Intelligent Enterprise Institute aims to foster different qualities in enterprises and their stakeholders alike and move them into action.
+
+true
+
+true
+
+Share this article
+
+Explore related content
+
+Read more in this series
+
+Editorial
+
+Accelerating the Transition to Clean Energy
+
+Editorial
+
+Business Networks: The Only Path Forward is Together
+
+Editorial
+
+The Metaverse: A New Space for Business
+
+Editorial
+
+Keys to Ignite the Generative Business Revolution
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

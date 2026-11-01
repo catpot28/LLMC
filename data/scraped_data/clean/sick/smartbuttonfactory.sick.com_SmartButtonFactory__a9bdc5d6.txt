@@ -1,0 +1,218 @@
+=== SOURCE =============================================================
+company    : Sick (sick)
+url        : https://smartbuttonfactory.sick.com/SmartButtonFactory
+page path  : /SmartButtonFactory
+captured   : 2026-01-22 07:26:01 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sick/smartbuttonfactory.sick.com_SmartButtonFactory__a9bdc5d6.html.gz
+========================================================================
+
+SmartButtonFactory - Smart Button Factory
+
+SmartButtonFactory - Smart Button Factory
+
+menu
+
+Was ist Industrie 4.0?
+
+Die Smart Button Factory
+
+Konfigurator
+
+test
+
+Wir verwenden Cookies
+
+Um die SmartButtonFactory für Dich optimal zu gestalten und fortlaufend zu verbessern, verwenden wir Cookies. Durch Bestätigen des Buttons "Akzeptieren" stimmst Du der Verwendung zu. Weitere Informationen erhätst Du in unserern
+Datenschutzbestimmungen
+.
+
+Akzeptieren
+
+Smart Button Factory / Funktionsweise
+
+Über die Webseite
+https://smartbuttonfactory.sick.com/
+kannst Du deinen individuellen Button konfigurieren und in Auftrag geben.
+Daraufhin startet die Anlage und führt den bestellten Druck aus. Die folgenden Schritte werden von dem Roboter durchgeführt, der das zentrale Element der Anlage darstellt: Er nimmt das bedruckte Papier mit einem Sauger auf und führt es zur Stanze. Parallel zum Stanzvorgang legt er die Buttonteile in die Presse ein. Sobald das gestanzte Papier dazukommt, kann der Pressvorgang in zwei Schritten starten: Erst werden Papier, Folie und Button-Oberseite gepresst, danach kommt die Button-Rückseite dazu. Bevor der nun fertige Button in die Ausgabe und dadurch zum Kunden gelangt, wird er in einer Qualitätskontrolle auf seine Richtigkeit überprüft. Diese Vorgänge passieren alle automatisch mit Hilfe verschiedener SICK-Sensorik.
+
+Komponentenübersicht
+
+1. Kamera
+
+An dem Roboter befindet sich ein InspectorP. Die Kamera kann mehrere Aufgaben erfüllen. Zum Einen kann die Position der Bauteile bestimmt werden, zum Anderen dient die Kamera der Qualitätssicherung der gefertigten Buttons.
+
+2. Presseinheit
+
+Dieses Modul setzt die einzelnen Bestandteile des Buttons zusammen.
+Die Presse besteht aus mehreren Teilen, einer ist davon ein Drehteller. Wird zum Beispiel die Aufnahme
+für runde Buttons befüllt, so dreht sich der Teller mit Hilfe eines Getriebemotors in die gewünschte Position.
+Diese Position wird durch einen SICK
+
+Induktivsensor (IQ10)
+bestimmt.
+Im ersten Schritt werden der Deckel, der individuelle Druck und die Folie miteinander verbunden.
+Im zweiten Schritt wird der Deckel mit dem Rückteil gepresst.
+
+3. Stanze
+
+Die Stanzeinheit sorgt dafür, dass der individuelle Druck für den Button passend gestanzt wird.
+Das Papier wird vom Roboter in die Führung eingelegt. Dort erkennt ein
+
+Reflexionslichttaster
+, ob ein Papier eingelegt wurde. Bevor der Stanzprozess startet, wird ein Vakuum erzeugt, welches das gestanzte Teil im Anschluss festhält.
+
+4. Roboter
+
+Der Roboter ist für den Transport des Buttons zuständig und den damit verbundenen einzelnen Komponenten.
+Der Greifer hat einen nach vorne positionierte Vakuum-Sauggreifer, um den Transport der Komponenten zu gewährleisten. Durch die Form kann im Magazinturm der Deckel oder auch die Folie gegriffen werden.
+
+5.1 Magazineinheit Tray
+
+In der erste Magazineinheit werden die Buttonaufsätze (Rückteile) in Trays gelagert. Die Anzahl der Trays
+wird mit Hilfe von
+
+Distanzsensoren (DT35)
+überwacht.
+Sobald ein Tray leer ist, wird das nächste aus dem Magazin ausgeschoben. Das leere Tray fällt in die dafür
+vorgesehene Schublade.
+
+5.2 Magazineinheit Tower
+
+In der zweiten Magazineinheit werden die Vorderteile der Buttons und die Folien gelagert. Hier erfolgt die
+Füllstandsüberwachung mit Hilfe von zwei unterschiedlichen SICK Sensoren. Die Folien werden durch
+
+Ultraschallsensoren
+und die Vorderteile durch
+
+Distanzsensoren
+detektiert.
+
+6. Drucker
+
+Der Drucker erhält den Druckauftrag über die Prozesssteuerung, welche sich den Button von der Webseite herunterlädt. Er wird auf ein A6-Papier gedruckt, welches durch den Roboter zur Stanze gebracht wird. Bei leeren Druckerpatronen oder einem anderen Fehler, erhält die Anlage eine Benachrichtigung.
+
+7. Monitor
+
+An dem Info-Monitor wird das Dashboard für die Besucher angezeigt. Dabei handelt es sich um eine Webseite.
+Es wird dargestellt, wie viele Buttons und in welcher Form (rund oder eckig) diese bestellt wurden.
+Zudem erhält der Besucher die Info, wann sein Button vorraussichtlich fertiggestellt wird.
+
+Das Team
+
+Informatik
+
+Mario Lüttecke
+
+Gabriel Musset
+
+Jacqueline Schillinger
+
+Janis Fix
+
+Onur Bilgin
+
+Tobias Bühler
+
+Toni Einecker
+
+Patrick Volk
+
+Fabian Schmider
+
+Jonathan Adler
+
+Der Bereich Informatik umfasst viele unterschiedliche Aufgaben, eigentlich alle die mit dem Computer zu tun haben.
+Bei der Smart Button Factory waren sie für die Prozessteuerung zuständig, das heißt, dass jede Einheit weiß was ihre Aufgabe ist (zum Beispiel der Drucker, die Stanze, der Roboterarm;) und die Einheiten richtig zusammenarbeiten (zB. Roboterarm legt etwas in die Stanze).
+Gerade da es ein Industrie 4.0 Projekt ist, waren die Informatiker wichtig, sie haben dafür gesorgt, dass Ihr euren Button online per Smartphone bestellen könnt. Sie (programmierten) erstellten die Website und programmierten die Kommunikation von Website zur Maschine.
+
+Mechatronik
+
+Aleyna Altinisik
+
+Andreas Kern
+
+Hannes Rosswog
+
+Jannis Borchert
+
+Marcus Wangler
+
+Simon Schuler
+
+Tobias Zuberer
+
+Vinzenz Wetzel
+
+Simon Opitz
+
+Elias Haberstroh
+
+Die Mechatroniker waren für die Schnittstellen zwischen allen Komponenten
+zuständig und bauten die Anlage zusammen mit den Industriemechaniker auf.
+Außerdem sorgten sie dafür, dass die Ausrichtung und Verdrahtung aller Komponenten, sowie das Zusammenspiel mit dem Roboter stimmt. Sie unterstützten auch die Informatiker bei der Systemsteuerung und führten verschiedene Tests aus, um Fehler an der Anlage zu beheben.
+
+Mechanik
+
+Andreas Gangwisch
+
+Hubertus Herr
+
+Jan Burger
+
+Marc Liebmann
+
+Patrick Fischer
+
+Willi Gergen
+
+Yannick Bierfreund
+
+Yousef Soltani
+
+Die Mechaniker waren für die Fertigung der Einzelteile, der Baugruppen und des Gestells zuständig, die zuvor virtuell entworfen wurden. Außerdem mussten immer wieder Teile verändert und ersetzt werden oder Fehler an Teilen behoben werden.
+
+Technisches Produktdesign
+
+Carina Schätzle
+
+Nicole Kienzler
+
+Sven Beck
+
+Philipp Hug
+
+Damit ein so großes Projekt wie die Smart Button Factory reibungslos umgesetzt werden kann, muss es gut geplant werden. Von den technischen Produktdesignern wurden dafür mit einem speziellen Computerprogramm Pläne der gesamten Anlage und jedes Moduls entworfen. Um Fehler schon vor dem Bau der Anlage zu erkennen und Maße der Module besser abschätzen zu können, wird von ihnen zuerst alles virtuell entwickelt, bevor es in die Produktion geht.
+
+Kaufmännisch
+
+Veronika Köller
+
+Malte Steger
+
+Die Aufgaben für die kaufmännische Abteilung waren sehr unterschiedlich. Die Hauptaufgabe war die Unterstützung der Informatiker bei der Erstellung der Webseite durch Bereitstellen von Texten und Bildern, um die Seite so übersichtlich wie möglich zu machen. Außerdem kümmerten sie sich noch um die Außenwirkung des Projekts, was die Entwicklung des Logos und Flyers, sowie Pressearbeit beinhaltete. Sie waren auch für die Dokumentation des gesamten Projekts zuständig.
+
+SICK auf Social Media
+
+Du möchtest mehr über SICK erfahren? Dann folge uns auf folgenen Kanälen...
+
+Links
+
+über SICK
+
+SICK Ausbildung
+
+Berufsorientierung
+
+Bewerbung
+
+Impressum
+
+|
+
+Datenschutz
+
+|
+
+Login
+
+© 2026 SICK AG

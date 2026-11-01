@@ -1,0 +1,551 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/open-banking/create-account-access-consents
+page path  : /docs/open-banking/create-account-access-consents
+captured   : 2026-01-15 15:47:19 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_open-banking_create-account-access-consents__434dbce7.html.gz
+========================================================================
+
+Create an account access consent | Revolut Docs
+
+Create an account access consent | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Open Banking API
+Introduction
+Accounts
+Introduction
+Create an account access consent
+Retrieve an account access consent
+Delete an account access consent
+Retrieve all accounts
+Retrieve an account
+Retrieve an account balance
+Retrieve all account's beneficiaries
+Transactions
+Payments
+Applications
+Updates
+Accounts
+Create an account access consent
+Create an account access consent
+
+Before you can access any data from a Revolut user, you must create an access consent to read data from the user's profile.
+
+Note
+When you create an account access consent, you must include a specific permission that follows the rules in the table below; otherwise, you get a
+400 Bad request
+error.
+
+Request Permissions
+
+PERMISSIONS
+DEPENDENCIES
+ReadAccountsBasic
+None
+ReadAccountsDetail
+None
+ReadBalances
+None
+ReadBeneficiariesBasic
+None
+ReadBeneficiariesDetail
+None
+ReadDirectDebits
+None
+ReadScheduledPaymentsBasic
+None
+ReadScheduledPaymentsDetail
+None
+ReadStandingOrdersBasic
+None
+ReadStandingOrdersDetail
+None
+ReadTransactionsBasic
+None
+ReadTransactionsCredits
+ReadTransactionsBasic OR ReadTransactionsDetail
+ReadTransactionsDebits
+ReadTransactionsBasic OR ReadTransactionsDetail
+ReadTransactionsDetail
+None
+
+See also
+Tutorials: Get account and transaction information
+.
+
+Request
+​
+Default
+Header parameters
+Header parameters
+Expand
+x-fapi-financial-id
+string
+required
+The unique ID of the
+ASPSP
+that the request is issued to.
+The ID of Revolut is
+001580000103UAvAAM
+.
+x-fapi-customer-last-logged-time
+string
+Pattern:
+Value must match regular expression
+^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4} \d{2}:\d{2}:\d{2} (GMT|UTC)$
+The date and time when the
+PSU
+last logged in with the
+TPP
+.
+
+All dates in the HTTP headers are represented as
+RFC 7231
+Full Dates.
+For example:
+Sun, 10 Sep 2017 19:43:31 UTC
+.
+x-fapi-customer-ip-address
+string
+The IP address of the
+PSU
+if the PSU is logged in with the
+TPP
+.
+x-fapi-interaction-id
+string
+An
+RFC4122
+UUID used as a correlation ID.
+Authorization
+string
+required
+The access token that you've generated.
+For more information, see
+Generate an access token
+.
+x-customer-user-agent
+string
+The user agent that the
+PSU
+is using.
+Request body
+Body
+
+object
+Expand
+Data
+object
+required
+OBReadData1
+Permissions
+array of strings
+required
+Possible values:
+[
+ReadAccountsBasic
+,
+ReadAccountsDetail
+,
+ReadBalances
+,
+ReadBeneficiariesBasic
+,
+ReadBeneficiariesDetail
+,
+ReadDirectDebits
+,
+ReadOffers
+,
+ReadPAN
+,
+ReadParty
+,
+ReadPartyPSU
+,
+ReadProducts
+,
+ReadScheduledPaymentsBasic
+,
+ReadScheduledPaymentsDetail
+,
+ReadStandingOrdersBasic
+,
+ReadStandingOrdersDetail
+,
+ReadStatementsBasic
+,
+ReadStatementsDetail
+,
+ReadTransactionsBasic
+,
+ReadTransactionsCredits
+,
+ReadTransactionsDebits
+,
+ReadTransactionsDetail
+]
+
+Possible number of items:
+
+non-empty
+Specifies the type of data access to the account.
+This is a list of the data clusters being consented by the
+PSU
+, and requested for authorisation with the
+ASPSP
+.
+ExpirationDateTime
+string(date-time)
+Specifies the date and time the permission expires.
+If this is not specified, the permission is open ended.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+TransactionFromDateTime
+string(date-time)
+Specifies the start date and time for the transaction query period.
+If this is not specified, the start date is open ended, and data is returned from the earliest available transaction.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+TransactionToDateTime
+string(date-time)
+Specifies the end date and time for the transaction query period.
+If this is not specified, the end date is open ended, and data is returned to the latest available transaction.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Risk
+object
+required
+The Risk section contains the risk indicators that the initiating party sends to the
+ASPSP
+, which can be used to specify additional details for risk scoring for account information.
+
+Response
+​
+201
+400
+401
+403
+405
+406
+415
+429
+500
+Account Access Consents Created
+HTTP headers
+HTTP headers
+Expand
+x-fapi-interaction-id
+string
+An
+RFC4122
+UUID used as a correlation ID.
+Response body
+Body
+
+object
+Expand
+Data
+object
+required
+ConsentId
+string
+required
+Possible length:
+
+non-empty
+and
+<= 128 characters
+The unique ID that is assigned to identify the account access consent resource.
+CreationDateTime
+string(date-time)
+required
+The date and time when the account access consent was created.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Status
+string
+required
+Possible values:
+[
+Authorised
+,
+AwaitingAuthorisation
+,
+Rejected
+,
+Revoked
+]
+The status of the account access consent.
+StatusUpdateDateTime
+string(date-time)
+required
+The date and time when the account access consent was created.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Permissions
+array of strings
+required
+Possible values:
+[
+ReadAccountsBasic
+,
+ReadAccountsDetail
+,
+ReadBalances
+,
+ReadBeneficiariesBasic
+,
+ReadBeneficiariesDetail
+,
+ReadDirectDebits
+,
+ReadOffers
+,
+ReadPAN
+,
+ReadParty
+,
+ReadPartyPSU
+,
+ReadProducts
+,
+ReadScheduledPaymentsBasic
+,
+ReadScheduledPaymentsDetail
+,
+ReadStandingOrdersBasic
+,
+ReadStandingOrdersDetail
+,
+ReadStatementsBasic
+,
+ReadStatementsDetail
+,
+ReadTransactionsBasic
+,
+ReadTransactionsCredits
+,
+ReadTransactionsDebits
+,
+ReadTransactionsDetail
+]
+
+Possible number of items:
+
+non-empty
+The type of data access to the account.
+ExpirationDateTime
+string(date-time)
+The date and time when the permission expires.
+If this is not specified, the permission is open ended.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+TransactionFromDateTime
+string(date-time)
+The start date and time for the transaction query period.
+If this is not specified, the start date is open ended, and data is returned from the earliest available transaction.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+TransactionToDateTime
+string(date-time)
+The end date and time for the transaction query period.
+If this is not specified, the end date is open ended, and data is returned to the latest available transaction.
+
+All dates in the JSON payloads are represented in
+ISO 8601
+date-time format.
+All date-time fields in responses must include the timezone.
+
+For example:
+2017-04-05T10:43:07+00:00
+.
+Risk
+object
+required
+The Risk section contains the risk indicators that the initiating party sends to the
+ASPSP
+, which can be used to specify additional details for risk scoring for account information.
+Links
+object
+required
+Links relevant to the payload.
+Self
+string(uri)
+required
+The absolute URI to the resource.
+Next
+string(uri)
+The absolute URI to the next pagination resource.
+Prev
+string(uri)
+The absolute URI to the previous pagination resource.
+Meta
+object
+required
+Meta data relevant to the payload.
+TotalPages
+integer(int32)
+Used for pagination. Indicates how many pages of results are available.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

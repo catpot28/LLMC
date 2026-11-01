@@ -1,0 +1,124 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/search-api-filter-by-specific-domains/4740
+page path  : /t/search-api-filter-by-specific-domains/4740
+captured   : 2026-04-12 12:53:43 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_search-api-filter-by-specific-domains_4740__116f1e69.html.gz
+========================================================================
+
+Search API — Filter by Specific Domains - Announcements - Perplexity API Platform Forum
+
+Search API — Filter by Specific Domains - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Search API — Filter by Specific Domains
+
+Announcements
+
+Kesku
+
+October 13, 2025, 5:00pm
+
+1
+
+New in the Perplexity Search API — you can now filter searches by specific domains.
+
+Query only trusted sources to get focused, verifiable results.
+
+img_domain_filter.jpg
+1200×694 54.7 KB
+
+search = client.search.create(
+query="latest climate policy updates",
+search_domain_filter=["science.org", "pnas.org", "cell.com"],
+max_results=10
+)
+
+Use an allowlist to restrict to specific domains, or prefix with
+-
+to exclude domains:
+
+# Exclude noisy sources
+search_domain_filter=["-reddit.com", "-pinterest.com"]
+
+Docs:
+Domain Filter
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Search API — Filter Results by Date Range
+
+Announcements
+
+0
+
+1
+
+October 29, 2025
+
+Modify/Select sources to answer from
+
+Bug Reports
+
+2
+
+139
+
+May 15, 2025
+
+Multi-language search results
+
+General
+
+2
+
+134
+
+June 12, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Basic web search: chat v API
+
+General
+
+search-api
+
+2
+
+28
+
+April 4, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

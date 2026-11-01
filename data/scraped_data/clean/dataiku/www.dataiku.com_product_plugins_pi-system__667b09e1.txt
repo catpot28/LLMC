@@ -1,0 +1,556 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/pi-system/
+page path  : /product/plugins/pi-system/
+captured   : 2026-01-25 00:45:14 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_pi-system__667b09e1.html.gz
+========================================================================
+
+Plugin: OSIsoft PI System | Dataiku
+
+Plugin: OSIsoft PI System | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+OSIsoft PI System
+
+OSIsoft PI System
+
+Import your PI servers data into Dataiku, process them, and export back the results
+
+Plugin information
+
+Version
+
+1.4.0
+
+Author
+
+Dataiku (Alex Bourret)
+
+Released
+
+2022-08-04
+
+Last updated
+
+2025-12-17
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+Description
+
+Import your PI System data into Dataiku, process and export the results. You will be able to:
+
+Explore the elements and attributes present on your PI System server Asset Framework
+
+Retrieve the metrics from your PI server on your Dataiku instance
+
+List event frames and retrieve their aggregated or detailed metrics
+
+Write data to an Asset Framework attribute
+
+More information can be found in the
+reference documentation pages
+.
+
+Disclaimer: most of the features of this plugin require Dataiku 10.0.4 or above.
+
+Flow examples
+
+List attributes first and retrieve their data later
+
+The Attribute search custom dataset offers some flexibility for searching attributes, however, this might not be enough in some cases.
+
+You might want to filter out some attributes from a generic search
+
+You might want to join two series of attributes that can’t be described in one search
+
+You might want to alter some information in the attributes paths
+
+…
+
+For these complex cases, the whole search and retrieve operation can be decomposed into several steps inside your flow, for instance
+
+retrieving the list(s) of attributes
+
+modify the list using a prepare recipe
+
+and finally, download the actual metrics for these attributes
+
+Flow example for an attributes listing/processing/metrics retrieving approach
+
+For the first step, simply create an PI System Attribute search dataset, and perform the attribute search. This time, leave the
+Retrieve data
+option unchecked. This will result in only the list of attributes being downloaded.
+
+Attribute search connector set to only output a list of paths
+
+Next, use any visual recipe (join, prepare…) to perform the necessary modifications to the attribute list. Once this is done, click on the resulting dataset, and in the right panel
+Plugin > PI System > Assets metrics downloader
+. In the download recipe, set the data type and time span details regarding the actual metric download.
+
+Finally, you can run the recipe and retrieve the data.
+
+Parameter used in the Assets metrics downloader recipe
+
+Go from long format to columns of synchronized attributes
+
+Data retrieved from your PI server is either linked to one attribute or contains timelines of several attributes stacked one after another (also called “long format”). For many analyses, it can be necessary to convert from a long format to a timestamp/path array.
+
+Another issue is that timestamps are likely out of sync with one another. So before values of different attributes can be compared, one has first to either:
+
+align all the column with an existing timestamps
+
+or, if it makes sense with the type of data, interpolate their values
+
+This can all be done in one step using the Transpose & Synchronize recipe.
+
+in your flow, select the dataset that needs to be transposed and synchronize, then in the right panel click on
+Plugin recipes > PI System > Transpose & Synchronize
+. Create the output dataset, and
+Create
+.
+
+Fill in each box with the right column box, which is likely to look like on this screenshot:
+
+Value examples for Transpose & Synchronize recipe
+
+In
+Full path to reference attribute
+, set the path to the attribute that will be used as a time reference.
+
+Next, choose how the attributes should be synchronized with the reference. There are 3 choices:
+
+With
+Last value received
+, the selected value for each line will be the last one received for that attribute, at the timestamp of the reference
+
+Interpolation
+will use a linear interpolation based on the last and next value of the attribute and the timestamp of the reference. This method should only be used if it makes sense with the attribute in question. That should be the case if the Step value is set to false.
+
+Mixed (based on step)
+will use the last value received if the attribute is of step type, and will interpolate otherwise. For this option to work you will need to have the step column available in the input dataset, and point this column in the
+Step column
+box.
+
+Run the recipe, et voilà ! Each attribute is now in its own column, all timestamps are all aligned on the reference attribute, and the value is the last one recorded for the given timestamp.
+
+Note that this recipe produces columns named after the full path of the attributes. These can be long, and contains characters that could be incompatible with some databases. To fix this, the column names can be normalized by selecting
+Show advanced parameters
+>
+Columns names normalization
+and the most appropriate method for your use case.
+
+Parameterized paths, to reuse a flow in several contexts
+
+Once your flow is working on one site, you might want to be able to run it on another installation. This means parts of the path might need to be modified.
+
+The whole flow can be made more portable by replacing specifics, such as the name of the server, database, or parts of the paths, with project-wide variables.
+
+This can be done by using the 3 step approach described above. This time, use a prepare recipe between the list building stage and the metric download. In this recipe, add a formula for replacing sections of the path, for example, the server, with a variable such as ${pi_server}.
+
+A formula step inside a prepare recipe is used to replace the path hard-coded server name with a variable
+
+Your flow can now be adapted very quickly to a new environment just by changing the pi_server project variable.
+
+Retrieve metrics continuously (well, almost continuously…)
+
+Retrieving metrics over a long period of time can be problematic in terms of server and network constraints. It is however possible to retrieve data periodically and store it in partitioned datasets. These datasets can be partitioned by date (year, month, day, or hour). For instance, to retrieve data every hour, the following steps can be taken:
+
+In your flow, create an PI System “Attribute search” dataset. Set it so it retrieves the assets’ paths you are interested in. Activate the “Retrieve data” option, and set the time interval between now (*) and one hour ago (*-1h).
+
+Go back to the flow, select the attribute search dataset, click on the Sync visual recipe, and create a new dataset.
+
+In the Sync recipe, click on the name of the newly created destination dataset, then
+Settings > Partitioning > Activate partitioning > Add time dimension
+. Select “Hour” as a period, and click
+Year
+,
+Month
+,
+Day,
+and
+Hour
+to add to the pattern. The pattern should now read
+%Y/%M/%D/%H/.*
+
+Save and go back to
+Parent Recipe
+
+At this stage, clicking run would now retrieve one hour’s worth of data and put them in a Year / Month / Day / Hour partition. This partition can be selected or filtered out using the sampling settings panel of the dataset.
+
+The retrieved metrics are now partitioned by Year-Month-Day-Hour
+
+We now need Dataiku to run the sync for us once every hour.
+
+In the project, click on
+Scenarios > +New scenario
+and create a sequence of steps
+
+Activate the auto trigger, add a Time-based trigger repeating every hour
+
+Go to
+Steps > Add step > Build / Train
+. Add the name of the synced partitioned dataset, and put
+PREVIOUS_HOUR
+in the
+Partitioning: Date
+box.
+
+The following recipes, such as transposition, can also be partitioned in order to process data incrementally. Simply select the same type of partitioning when creating the target dataset, and add the dataset to the scenario build step with
+PREVIOUS_HOUR
+partitioning date.
+
+Example of a partitioned flow
+
+Write data from Dataiku to PI server
+
+Information can be sent back from Dataiku to the PI server, on attributes for which the user account has write access. To do so, prepare the information to be sent back into a dataset containing the following columns:
+
+Timestamp
+: contains the date of the value to be displayed. If this column does not exist, the time for the value point will be the time of the upload.
+
+Value
+: contains the value to be displayed on PI Server
+
+Next, create a custom dataset in the project flow, by clicking
++Dataset > PI System > PIWebAPI toolbox
+. In
+Object path / Tag
+, set the full path to the attributes in which the data points will be written. Set
+Data type
+to
+Value
+. Press Test & Get Schema and Create. Finally, create a Sync recipe from the dataset containing the information to the PI System custom dataset, using the “
+Use existing
+” tab. The data points will be uploaded to PI System each time the sync recipe is run.
+
+Write to a PI attribute by using a sync recipe towards a PiWebAPI Toolbox connector
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for OSIsoft.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

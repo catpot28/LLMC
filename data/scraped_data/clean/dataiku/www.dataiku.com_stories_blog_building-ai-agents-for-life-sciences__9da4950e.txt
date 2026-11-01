@@ -1,0 +1,558 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/building-ai-agents-for-life-sciences
+page path  : /stories/blog/building-ai-agents-for-life-sciences
+captured   : 2026-02-14 01:12:44 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_building-ai-agents-for-life-sciences__9da4950e.html.gz
+========================================================================
+
+Building AI Agents for Life Sciences: From Silos to Synthesis
+
+Building AI Agents for Life Sciences: From Silos to Synthesis
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Life Sciences
+
+Building AI Agents for Life Sciences: From Silos to Synthesis
+
+Sep 9, 2025
+
+5 min read
+
+/
+
+Li-Heng Fu
+
+Table of Contents
+
+Section1
+
+For a clinical operations manager, the race to find the optimal trial sites is a frantic search across a dozen disconnected sources. While competitors are securing the best investigators, their team is stuck manually piecing together data from ClinicalTrials.gov, internal clinical trial management system (CTMS) records, and payment databases. What if you could replace this costly, weeks-long process with a single question?
+
+Instead of having IT and analytics teams manually collect, wrangle, and precompute data for every new request, an agentic system allows business users to directly interact with their data using natural language and receive actionable insights on demand. This isn't just about efficiency; it's about empowering your domain experts to make faster, more informed decisions that can accelerate getting therapies to patients.
+
+The Vision: An Agent-Powered Framework for Clinical Operations Intelligence
+
+At Dataiku, we've developed a powerful framework:
+The Clinical Trial Intelligence Agent
+, a multi-agent system that dynamically queries and synthesizes information from multiple sources to support clinical operations teams.
+
+This guide will walk you through the architecture of this system and provide a blueprint for building your own. Through a simple conversational interface, our framework allows users to:
+
+Search and compare thousands of clinical studies in seconds.
+
+Prioritize clinical sites based on performance, diversity, and other custom criteria.
+
+Identify leading principal investigators and vet their experience.
+
+Generate a competitiveness report for a researcher and draft an outreach email, integrating directly into your workflow.
+
+The Agent in Action: A Clinical Site Planning Scenario
+
+Let's see how it works. Our system, hosted in a Dataiku visual webapp called
+Agent Connect
+, consists of an orchestrator agent that coordinates a network of specialized agents and tools. It can access
+Dataiku Solutions
+(like our
+Clinical Site Intelligence
+and
+Social Determinants of Health
+solutions) as well as query public databases like
+ClinicalTrials.gov
+via live API calls.
+
+Use Case 1: Study Comparison
+
+Goal:
+Understand the competitive landscape for our active study.
+
+User Asks:
+
+"Briefly describe our study NCTxxxxxxxx and find studies similar to it."
+
+What the Agent Does:
+The system performs a semantic search across a knowledge bank of 20,000+ study protocols. It identifies studies with similar designs, populations, and interventions, returning a concise summary of the competitive environment.
+
+Use Case 2: Promote Sites for Diverse Enrollment
+
+Goal:
+Find promising sites and prioritize those in underserved communities to improve trial diversity.
+
+User Asks:
+
+"List the U.S. clinical sites from these similar studies and prioritize them for underserved communities."
+
+What the Agent Does:
+The agent queries historical site performance data, cross-references it with socioeconomic data from the Social Determinants of Health solution, and returns a ranked list that helps teams meet their diversity enrollment goals.
+
+Use Case 3: Identify and Evaluate Key Investigators
+
+Goal:
+Vet a top investigator and prepare for outreach.
+
+User Asks:
+
+"Draft a competitiveness report on Dr. John Snow (NPI: 1234567890) as a Principal Investigator for our study NCTxxxxxxxx."
+
+What the Agent Does:
+The agent queries the CMS OpenPayment database for the PI's research grant history and trial experience. It then synthesizes this information into a report and evaluates their availability for review.
+
+Behind the Scenes: The Multi-Agent Architecture
+
+How does this all work? The system uses a hierarchical architecture, where a high-level orchestrator manages a team of specialized planner agents.
+
+Here are the components shown in the diagram:
+
+The Orchestrator:
+This is the system's "project manager." It receives the user's request and intelligently delegates tasks to the right agent for the job, then synthesizes their responses into a single, coherent answer.
+
+Lead Agent 1: The Study Intelligence Agent.
+A sophisticated planner that handles all data retrieval. It can find similar studies, compare designs, search for sites, and identify investigators.
+
+Lead Agent 2: The Competitiveness Report Agent.
+A specialized planner that takes structured information and generates a specific, actionable output (in this case, a detailed report and an email draft).
+
+Subagents & Tools:
+These are the specialists the lead agents delegate to:
+
+Study Query Subagent:
+Creates dynamic queries against internal datasets.
+
+Study Semantic Search Subagent:
+Searches the knowledge bank of study protocols.
+
+API Call Subagent
+: Queries external public databases for the latest information.
+
+Feature Focus: Agent Connect
+
+The Clinical Trial Intelligence Agent is built within
+Agent Connect
+, a Dataiku visual webapp that provides a no-code environment for constructing a multi-agent system and a chatbot-like interface for users to interact with it. Agent Connect requires a large language model (LLM) to act as the orchestrator and allows you to populate it with multiple agents from different projects. This option to import agents across projects not only encourages reusability but also facilitates the maintenance and governance of your generative AI applications. For each imported agent, you can provide additional metadata to guide the orchestrator’s decisions.
+
+Our Blueprint for Building Your Agent System
+
+Building a robust system like this requires a structured approach. We recommend a process that combines top-down design with bottom-up development.
+
+Step 1: Design the Flow (The Top-Down Plan)
+Before writing a single line of code, map out your agent system in a flowchart. This helps you define each agent's scope, identify the tools they'll need, and clarify the relationships between them. This plan is invaluable for communicating the vision to stakeholders and guiding the development process.
+
+Step 2: Build From the Ground Up (The Bottom-Up Approach)
+Start by developing and testing your Tools first. This bottom-up method allows you to validate each component's functionality in isolation, making it much easier to troubleshoot if an agent fails later. Dataiku’s Agent Tools system allows for instant testing and fast iteration, so you can perfect your query, action, and API call tools before connecting them to an agent.
+
+Feature Focus: Agent Tools
+
+Dataiku’s Agent Tools system allows users to create and maintain Dataiku’s
+Managed Tools
+,
+Inline Code Tools
+, and
+Plugin Tools
+. In general, agent tools can be categorized into three function groups: querying information, making actions, and using another LLM/agent as a tool. Dataiku’s growing managed tools cover the core functionality of all three categories, including dataset query, semantic search, web search, writing to a dataset, sending messages, API calls, LLM/agent calls, and more. The managed tools offer a framework for users to prompt-engineer using natural language to achieve a customized output.
+
+The tool development page supports instant testing, where you can review the tool’s output and trace a given prompt with a single click. This test feature is key to facilitating a fast, iterative development process.
+
+Building in Dataiku: The Recipes That Make It Possible
+
+Dataiku’s unified platform is designed to support everyone from no-code domain experts to advanced AI engineers in building sophisticated multi-agent systems:
+
+Visual Agents
+:
+This is critical because it
+empowers clinical domain experts, not just AI engineers, to build and refine the logic that drives their analytics
+, dramatically speeding up development. Using the RACT (Reasoning, Action, Context, Tools) framework, these agents act as intelligent planners that you can configure with simple prompts.
+
+Code Agents
+& Inline Tools:
+For ultimate flexibility, AI engineers can build fully customized agents and tools in Python to handle unique data sources, complex calculations, or proprietary logic. Our Clinical Trial Intelligence Agent uses a Code Agent to dynamically query the OpenPayment API, ensuring access to the most up-to-date data at its source.
+
+A Unified, Governed Flow:
+Once an agent is created, it and its connections to datasets, knowledge banks, or other agents are visible on the Dataiku Flow, providing clear lineage and governance over your entire generative AI application.
+
+The agents and its relationships to datasets, knowledge banks, and the other agents are visible on the Dataiku Flow.
+
+Feature Focus: Unified Agent Management
+
+Dataiku’s Agents and GenAI models provide a unified platform for creating and managing both Visual and Code Agents. It offers version control and deployment mechanisms similar to those for machine learning models. Agents can be deployed to an Agent Connect Webapp in a separate project, enabling a multi-agent system to access insights from various projects on demand. This eliminates the need to integrate and precompute diverse data sources for each individual use case.
+
+Dataiku’s Visual Agent is a no-code agent framework that supports most major model provider APIs and self-hosted models. Users can define the agent's role, guidelines, and examples through an additional prompt, and then assign agent tools to help it achieve its goals.
+
+The Clinical Trial Intelligence Agent leverages a code agent to query the OpenPayment public API. Its custom tools enable tailored queries and result computation, which are then passed to the leading agent. This design allows the system to perform dynamic queries on the most current data directly at its source, eliminating the need for users to download local copies into their infrastructure.
+
+Leveraging the Entire AI Ecosystem
+
+As an agnostic AI platform, Dataiku allows you to connect to the best tools for the job. With our growing library of plugins, you can integrate models and tools from Google Vertex AI, Microsoft Azure, Snowflake Cortex, Databricks, and more, all within the governed Dataiku environment.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Before AI Agents: The Technology Foundations CIOs Can’t Skip
+
+How ODALC Built a Governed AI Knowledge Agent to Open Architectural Research Access to Masses
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+Roche unified patent research into a scalable AI foundation for patent intelligence, giving attorneys faster,...
+
+Feb 04, 2026
+
+Recommended
+
+Financial Services AI Trends 2026: Closing the Production Value Gap
+
+Between 2023 and 2024, the value of generative & agentic AI in financial services remained mostly theoretical....
+
+Feb 03, 2026
+
+Recommended
+
+Supply Chain AI Trends 2026: Building Resilient Operations
+
+Supply chain disruption is the new normal, and most organizations aren't ready. Industry surveys confirm that...
+
+Feb 02, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,108 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/hil
+page path  : /blog/hil
+captured   : 2026-05-16 02:05:30 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_hil__d4fee663.html.gz
+========================================================================
+
+HiL-Bench: Your Agent is Smart. It Just Won't Ask for Help. | Scale AI
+
+HiL-Bench: Your Agent is Smart. It Just Won't Ask for Help. | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+HiL-Bench: Your Agent is Smart. It Just Won't Ask for Help.
+By
+
+Mohamed Elfeki
+,
+Tu Trinh
+,
+Kelvin Luu
+,
+Guangze Luo
+&
+Matthew Siegel
+·
+April 20, 2026
+·
+3 min read
+Copy Link
+Frontier agents solve up to 89% of complex tasks when given complete information. Remove a few critical details, the kind routinely missing from real-world specs, and performance drops to as low as 4%. The agents don't error out. They don't flag uncertainty. They fill in the blanks with confident assumptions, produce plausible wrong output, and move on. This is a dominant failure mode in production agent deployments, and no benchmark has measured it until now.
+HiL-Bench
+(Human-in-Loop Benchmark) is designed to test one thing: does an agent know when to ask for help? It takes well-defined tasks from established benchmarks (
+SWE-Bench Pro
+for software engineering,
+BIRD
+for text-to-SQL), then introduces realistic information gaps: missing details, ambiguous requirements, contradictory specifications. These gaps aren’t visible from the prompt alone. They surface as the agent explores the codebase, inspects the database, or tries to execute.
+Current benchmarks can’t see this. They supply complete specifications and reward confident execution. An agent that would silently guess past a missing requirement and get lucky can score identically to one that would have asked. But in production, luck runs out. Wrong assumptions compound: a misread requirement becomes a wrong implementation, which becomes a failed deployment. The agent never flags it because it never recognized the gap in the first place.
+The Judgment Gap
+With full information, frontier models solve 75% to 89% of tasks. Give them a tool to ask for clarification but let them decide when to use it, and performance stays low, peaking at 38% on SQL and 12% on SWE. The mechanism to ask exists, but not the judgment to use it. The obvious assumption is that agents simply don't ask. The reality is stranger. We analyzed over 3,600 failure traces and found that each model family breaks in its own way.
+Each Model Fails Differently
+GPT models execute confidently on wrong beliefs. They don't detect the gap, but build on top of it. Claude detects uncertainty but doesn't resolve it. In 45% of its alignment failures, Claude explicitly recognized it was stuck, then submitted an answer anyway. It was the only model to verbalize the problem. Gemini asks more often, but usually too broadly. It identifies gaps but its questions are too vague to extract the right information.
+One model needs to learn to detect uncertainty. Another needs to learn to act on it. The third needs to learn to ask precisely. The help-seeking gap is a training problem, not a capability problem.
+Judgment is Trainable
+Using reinforcement learning, we trained a 32B model to improve its help-seeking behavior. Ask-F1 (our metric for help-seeking quality) improved by 28 percentage points on SQL and 17 on SWE. Task pass rates rose in lockstep.
+The most important finding:
+a model trained exclusively on SQL tasks showed improved help-seeking on software engineering tasks it had never seen.
+The model didn't learn domain-specific patterns for when to ask, but to
+detect unresolvable uncertainty and act on it.
+Selective Escalation is the Goal
+No matter how capable models become, there will always be context locked in someone's head, buried in tribal knowledge, or sitting in decisions that were never documented. No model can infer its way past that. The defining skill of a reliable agent is
+selective escalation
+: knowing when to stop, ask the right question, and keep going. HiL-Bench is the first benchmark designed to measure whether your agent can.
+Resources
+Leaderboard on
+Scale Labs
+Data on
+Hugging Face
+Code & Harness on
+GitHub
+Discussion on our Chain of Thought podcast:
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

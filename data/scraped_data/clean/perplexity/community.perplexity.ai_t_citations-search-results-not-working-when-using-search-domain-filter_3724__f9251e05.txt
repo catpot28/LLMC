@@ -1,0 +1,183 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/citations-search-results-not-working-when-using-search-domain-filter/3724
+page path  : /t/citations-search-results-not-working-when-using-search-domain-filter/3724
+captured   : 2026-02-07 08:24:50 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_citations-search-results-not-working-when-using-search-domain-filter_3724__f9251e05.html.gz
+========================================================================
+
+'citations': [], 'search_results': [] not working when using search_domain_filter - Bug Reports - Perplexity API Platform Forum
+
+'citations': [], 'search_results': [] not working when using search_domain_filter - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+'citations': [], 'search_results': [] not working when using search_domain_filter
+
+Bug Reports
+
+sonar-pro
+,
+
+chat-completions
+,
+
+python-sdk
+
+Ayman_Az
+
+January 28, 2026, 9:26am
+
+1
+
+Describe the Bug
+
+when using search_domain_filter with sonar-pro, citations and searhc results returning empty fields,
+
+example price of tesla action today, even if the response is good, there is no source returned.
+
+Expected Behavior
+
+i excpect to have the sources of the web search
+
+Actual Behavior
+
+empty fields for websearch even if the response is good.
+
+Steps to Reproduce
+
+Call the API with the following request: price of tesla action today
+
+Observe the unexpected behavior.
+
+API Request & Response (if applicable)
+
+Environment
+
+API Version:
+[e.g., sonar-pro]
+
+SDK (if applicable):
+[e.g., Python SDK v0.5]
+
+Operating System:
+[e.g., MacOS, Linux, Windows]
+
+Logs or Screenshots (if applicable)
+
+response: {‘id’: ‘8dc9b1a4-3572-4207-8292-2cc0261783a2’, ‘model’: ‘sonar-pro’, ‘created’: 1769591645, ‘usage’: {‘prompt_tokens’: 79, ‘completion_tokens’: 230, ‘total_tokens’: 309, ‘search_context_size’: ‘high’, ‘cost’: {‘input_t
+
+okens_cost’: 0.0, ‘output_tokens_cost’: 0.003, ‘request_cost’: 0.014, ‘total_cost’: 0.018}}, ‘citations’:
+, ‘search_results’:
+, ‘object’: ‘chat.completion’, ‘choices’: [{‘index’: 0, ‘message’: {‘role’: ‘assistant’, ‘content’
+
+: “
+Prix actuel de l’action Tesla (TSLA) : 428.52 USD
+(clôture du 27 janvier 2026, marché US fermé à 9h UTC).\n\n-
+Ouverture
+: 425.10 USD \n-
+Plus haut
+: 431.20 USD \n-
+Plus bas
+: 423.45 USD \n-
+Variation
+:
+
++2.15% (par rapport à la clôture précédente de 419.50 USD) \n\n
+Note : Les marchés US ouvrent à 14h30 UTC. Ce prix est le dernier disponible en temps réel pré-marché.
+\n\n
+Sources :
+\n- Yahoo Finance (
+finance.yahoo.com/q
+
+uote/TSLA) – Données en temps réel au 28/01/2026 09:00 UTC. \n- Nasdaq (
+Tesla, Inc. (TSLA) Stock Price, Quote, News & History | Nasdaq
+) – Cotation officielle. \n- Google Finance (
+google.com/finance/quote/TSLA:NASDAQ
+) – Confirmation croisée.”}, ‘delta’: {‘role’: ‘assistant’, ‘content’: ‘’}, ‘finish_reason’: ‘stop’}]}
+
+Additional Context
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+4
+
+234
+
+May 15, 2025
+
+Search_domain_filter still not working
+
+Bug Reports
+
+sonar-pro
+
+,
+
+search-api
+
+1
+
+38
+
+December 16, 2025
+
+[SOLVED] Search API suddenly stops returning results when using search_domain_filter=["sec.gov"]
+
+Bug Reports
+
+search-api
+
+1
+
+59
+
+November 8, 2025
+
+Search_domain_filter issues
+
+Bug Reports
+
+1
+
+232
+
+May 15, 2025
+
+API query for news sites in domain filters return no data and no citations
+
+Bug Reports
+
+sonar-pro
+
+5
+
+207
+
+August 12, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

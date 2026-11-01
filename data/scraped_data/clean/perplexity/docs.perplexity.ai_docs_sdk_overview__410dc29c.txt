@@ -1,0 +1,244 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/sdk/overview
+page path  : /docs/sdk/overview
+captured   : 2026-06-17 07:29:47 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_sdk_overview__410dc29c.html.gz
+========================================================================
+
+Quickstart - Perplexity
+
+Quickstart - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Perplexity SDK
+Quickstart
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Agent SDKs
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Computer Analytics API
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Available APIs
+Installation
+Authentication
+Using Environment Variables
+Resources
+Perplexity SDK
+Quickstart
+Copy page
+Learn how to use the official Perplexity SDKs for Python and TypeScript to access the Perplexity APIs with type safety and async support.
+Copy page
+​
+Overview
+
+The official Perplexity SDKs provide convenient access to the Perplexity APIs from Python 3.8+ and Node.js applications. Both SDKs include type definitions for all request parameters and response fields, with both synchronous and asynchronous clients.
+
+Access four APIs:
+Agent API
+for third-party models with web search tools and presets,
+Search
+for ranked web search results,
+Sonar
+for web-grounded AI responses, and
+Embeddings
+for generating text embeddings.
+
+​
+Available APIs
+
+Agent API
+Third-party models from OpenAI, Anthropic, Google, and more with presets and web search tools.
+Search
+Ranked web search results with filtering, multi-query support, and domain controls.
+Sonar
+AI responses with web-grounded knowledge, conversation context, and streaming support.
+Embeddings
+Generate high-quality text embeddings for semantic search and RAG.
+
+​
+Installation
+
+Install the SDK for your preferred language:
+
+Python
+TypeScript
+pip
+install
+perplexityai
+
+​
+Authentication
+
+Get your Perplexity API Key
+Navigate to the
+API Keys
+tab in the API Portal and generate a new key.
+Click here
+
+After generating the key, set it as an environment variable in your terminal:
+
+Windows
+
+MacOS/Linux
+setx
+PERPLEXITY_API_KEY
+"your_api_key_here"
+
+export
+PERPLEXITY_API_KEY
+=
+"your_api_key_here"
+
+​
+Using Environment Variables
+
+You can use the environment variable directly:
+
+Python
+TypeScript
+import
+os
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+# Automatically uses PERPLEXITY_API_KEY
+
+Or use
+python-dotenv
+(Python) or
+dotenv
+(Node.js) to load the environment variable from a
+.env
+file:
+
+Python
+TypeScript
+import
+os
+
+from
+dotenv
+import
+load_dotenv
+
+from
+perplexity
+import
+Perplexity
+
+load_dotenv()
+
+client
+=
+Perplexity()
+# Uses PERPLEXITY_API_KEY from .env file
+
+Now you’re ready to start using the Perplexity APIs! Choose your API below for step-by-step usage guides.
+
+Agent API
+Get started with third-party models
+Search
+Get started with web search
+Sonar
+Get started with AI responses
+Embeddings
+Get started with text embeddings
+
+​
+Resources
+
+Python Package
+Install from PyPI with pip
+Node.js and TypeScript Package
+Install from npm registry
+Was this page helpful?
+Yes
+No
+Contextualized Embeddings
+Previous
+Configuration
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

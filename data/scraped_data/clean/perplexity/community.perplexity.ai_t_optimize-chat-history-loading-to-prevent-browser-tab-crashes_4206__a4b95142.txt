@@ -1,0 +1,147 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/optimize-chat-history-loading-to-prevent-browser-tab-crashes/4206
+page path  : /t/optimize-chat-history-loading-to-prevent-browser-tab-crashes/4206
+captured   : 2026-04-12 12:05:38 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_optimize-chat-history-loading-to-prevent-browser-tab-crashes_4206__a4b95142.html.gz
+========================================================================
+
+Optimize chat history loading to prevent browser tab crashes - Feature Requests - Perplexity API Platform Forum
+
+Optimize chat history loading to prevent browser tab crashes - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Optimize chat history loading to prevent browser tab crashes
+
+Feature Requests
+
+chat-completions
+
+stoicismguy
+
+March 20, 2026, 4:42pm
+
+1
+
+Problem Statement
+
+Currently, opening a long thread in Perplexity fetches and renders the entire chat history at once. This causes massive UI lag and eventually kills or freezes the browser tab due to memory overload.
+
+Proposed Solution
+
+The proposed feature is to implement lazy loading for the chat window. Additionally, when opening an existing chat, it should start at the very bottom (showing the latest message first) and load older messages bottom-to-top as you scroll up, similar to standard chat apps.
+
+API Impact
+
+Which API component is affected?
+[chat history]
+
+Is this related to a specific model?
+[No]
+
+Would this require new API parameters or changes to existing ones? [Mb yes]
+
+Kesku
+
+April 7, 2026, 10:55pm
+
+3
+
+Hey — this forum is specifically for the Perplexity API (Sonar models, Search API, Agent API, SDKs, billing/credits). For issues with the Perplexity consumer product (web app, mobile, Spaces, Library), the best route is the in-app help or support at
+support.perplexity.ai
+.
+
+Closing this thread, but feel free to open a new one if you have an API-related question.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Add “Scroll to Bottom” Button in Chat Threads
+
+Feature Requests
+
+2
+
+180
+
+May 28, 2025
+
+Perplexity History management in Comet browser
+
+Feature Requests
+
+chat-completions
+
+0
+
+34
+
+February 13, 2026
+
+Feature Request: Add 'Chat Mode' Toggle for Natural Conversational Outputs
+
+Feature Requests
+
+sonar-reasoning
+
+,
+
+chat-completions
+
+0
+
+44
+
+September 23, 2025
+
+Updated Future - General Commands
+
+Feature Requests
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search
+
+2
+
+51
+
+October 22, 2025
+
+Conversation Navigation Panel - Side Scrollable Quick Access to Previous Questions
+
+Feature Requests
+
+5
+
+240
+
+October 30, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

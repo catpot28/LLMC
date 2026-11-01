@@ -1,0 +1,242 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/async-sonar-get
+page path  : /api-reference/async-sonar-get
+captured   : 2026-04-20 03:11:05 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_async-sonar-get__63fa3506.html.gz
+========================================================================
+
+List Async Chat Completions - Perplexity
+
+List Async Chat Completions - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Sonar API
+List Async Chat Completions
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+List Async Chat Completions
+cURL
+curl
+--request
+GET
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+200
+422
+{
+
+"requests"
+: [
+
+{
+
+"id"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"model"
+:
+"<string>"
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"failed_at"
+:
+123
+
+}
+
+],
+
+"next_token"
+:
+"<string>"
+
+}
+Sonar API
+List Async Chat Completions
+Copy page
+Retrieve a list of all asynchronous chat completion requests for a given user.
+Copy page
+GET
+/
+v1
+/
+async
+/
+sonar
+Try it
+List Async Chat Completions
+cURL
+curl
+--request
+GET
+\
+
+--url
+https://api.perplexity.ai/v1/async/sonar
+\
+
+--header
+'Authorization: Bearer <token>'
+200
+422
+{
+
+"requests"
+: [
+
+{
+
+"id"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"model"
+:
+"<string>"
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"failed_at"
+:
+123
+
+}
+
+],
+
+"next_token"
+:
+"<string>"
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Response
+200
+application/json
+Successful Response
+​
+requests
+AsyncApiChatCompletionsResponseSummary · object[]
+required
+Show
+
+child attributes
+​
+next_token
+string | null
+Was this page helpful?
+Yes
+No
+Create Async Chat Completion
+Previous
+Get Async Chat Completion
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

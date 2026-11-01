@@ -1,0 +1,207 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/filter-out-opinion-centric-news-from-discover-news-feed-in-app/4081
+page path  : /t/filter-out-opinion-centric-news-from-discover-news-feed-in-app/4081
+captured   : 2026-04-12 11:41:15 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_filter-out-opinion-centric-news-from-discover-news-feed-in-app_4081__6e4d9615.html.gz
+========================================================================
+
+Filter out opinion‑centric news from Discover/News feed in app - Feature Requests - Perplexity API Platform Forum
+
+Filter out opinion‑centric news from Discover/News feed in app - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Filter out opinion‑centric news from Discover/News feed in app
+
+Feature Requests
+
+search-api
+,
+
+search
+
+Pavel
+
+March 8, 2026, 9:55am
+
+1
+
+Feature Request
+
+Add a content filter for opinion‑centric items in the Discover/News feed in the
+Perplexity app
+, allowing users to reduce or hide stories whose main content is “X said Y about Z”.
+
+Problem Statement
+
+In the iOS app (Discover/News feed), a large proportion of items are about what a single person said or thinks (e.g. “Politician X commented on…”, “Elon Musk said that…”).
+
+As a user who primarily seeks evidence‑based information (data, studies, reports, analyses), I’m not interested in consuming quotes and personal commentary — even if they come from Nobel laureates, and especially when they come from politicians or celebrities.
+
+Currently, these opinion‑centric items take up a significant share of the feed, which reduces signal‑to‑noise for users who care more about facts than about who said what.
+
+Proposed Solution
+
+Add a
+content‑type preference
+or filter in Discover/News, for example:
+
+A toggle or slider like:
+
+“Fewer single‑person opinions / More data‑driven content”
+
+Or explicit checkboxes:
+
+Reduce stories whose main focus is “X said Y”
+
+Prioritize reports, summaries, datasets, multi‑source analyses
+
+Intended behaviour (examples):
+
+De‑prioritize or hide items where the headline and body are primarily about a single individual’s opinion, quote, or tweet.
+
+Prioritize items that aggregate multiple sources, show data or empirical findings, or summarize events rather than amplify one person’s statement.
+
+Optionally, allow per‑topic overrides (e.g. still show expert commentary in areas I follow, but reduce political soundbites).
+
+This could be exposed in Settings → Discover / News preferences, or as part of a more granular “Content preferences” panel.
+
+API Impact
+
+From the outside it looks like this primarily concerns
+search / retrieval / ranking filters
+for the feed generation layer, rather than the chat completions API itself.
+
+API component
+: internal ranking / search filters used to build the Discover/News feed.
+
+Model‑specific?
+Potentially relevant to any model used for news ranking or classification (e.g. Sonar Deep Research when curating sources).
+
+Parameters
+: This could correspond to an internal boolean or categorical parameter, e.g.:
+
+content_style: "factual_only" | "mixed" | "opinion_friendly"
+
+or a numeric preference like
+opinion_weight
+in the ranking pipeline.
+
+No changes are needed for external API users unless you want to expose similar controls on the public API later.
+
+Alternatives Considered
+
+Workarounds I’ve tried / considered:
+
+Manually ignoring or scrolling past opinion‑centric items in the feed.
+
+This may slightly adjust personalization over time, but does not reliably remove this type of content.
+
+Using direct chat queries instead of the feed, with prompts like “summarize the facts, ignore quotes and commentary”.
+
+This works for ad‑hoc queries, but does not solve the problem of the
+push / ambient
+Discover/News experience, which is where I’d like better signal.
+
+Relying on topic preferences only.
+
+Topic filters (e.g. tech, science) still surface many “X said Y” headlines within those domains.
+
+These workarounds are partial and time‑consuming; they don’t give the user a clear, controllable way to say “I care about facts and multi‑source context, not isolated opinions”.
+
+Additional Context
+
+Use case: I’m an academic / researcher‑type user who uses Perplexity to stay up to date via the Discover/News feed, but wants to maximize
+fact‑rich, multi‑source content
+and minimize “soundbite journalism” centered on single individuals.
+
+UX suggestion: even a simple first version — a single toggle like “Reduce opinion‑centric stories” — would already be very helpful. Over time, this could evolve into a more general content‑preference system (facts vs opinions, primary sources vs commentary, etc.).
+
+Thank you for considering this request — I think it would make the Discover experience significantly more useful for users who prioritize evidence‑based information over individual commentary.
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Feature Request: Continuous Audio Playback for All Discover News
+
+Feature Requests
+
+search-api
+
+0
+
+21
+
+November 15, 2025
+
+Option for the Discover section to change the section languague
+
+Feature Requests
+
+chat-completions
+
+0
+
+42
+
+October 28, 2025
+
+Search API — Filter by Specific Domains
+
+Announcements
+
+0
+
+0
+
+October 13, 2025
+
+Truthfulness Color Indicator Toggle for Comet Add-In/Perplexity Sources
+
+Feature Requests
+
+chat-completions
+
+,
+
+search-api
+
+0
+
+18
+
+March 2, 2026
+
+Multi-language search results
+
+General
+
+2
+
+134
+
+June 12, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,773 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/async-chat-completions-post
+page path  : /api-reference/async-chat-completions-post
+captured   : 2026-01-25 02:15:41 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_async-chat-completions-post__d56f1384.html.gz
+========================================================================
+
+Create Async Chat Completion - Perplexity
+
+Create Async Chat Completion - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Sonar Chat Completions API
+Create Async Chat Completion
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Search API
+POST
+Search
+Sonar Chat Completions API
+POST
+Chat Completions
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion Response
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Create Async Chat Completion
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/async/chat/completions
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"request": {
+
+"model": "sonar-deep-research",
+
+"messages": [
+
+{
+
+"role": "system",
+
+"content": "Be precise and concise."
+
+},
+
+{
+
+"role": "user",
+
+"content": "How many stars are there in our galaxy?"
+
+}
+
+],
+
+"search_mode": "web",
+
+"reasoning_effort": "low",
+
+"max_tokens": 123,
+
+"temperature": 0.2,
+
+"top_p": 0.9,
+
+"language_preference": "<string>",
+
+"search_domain_filter": "<array>",
+
+"return_images": false,
+
+"return_related_questions": false,
+
+"search_recency_filter": "<string>",
+
+"search_after_date_filter": "<string>",
+
+"search_before_date_filter": "<string>",
+
+"last_updated_after_filter": "<string>",
+
+"last_updated_before_filter": "<string>",
+
+"top_k": 0,
+
+"stream": false,
+
+"presence_penalty": 0,
+
+"frequency_penalty": 0,
+
+"response_format": {},
+
+"disable_search": false,
+
+"enable_search_classifier": false,
+
+"web_search_options": {
+
+"search_context_size": "high"
+
+},
+
+"media_response": {
+
+"overrides": {
+
+"return_videos": true,
+
+"return_images": true
+
+}
+
+}
+
+}
+
+}
+
+'
+200
+Copy
+Ask AI
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"content"
+:
+"<string>"
+,
+
+"role"
+:
+"system"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"2023-12-25"
+
+}
+
+],
+
+"videos"
+: [
+
+{
+
+"url"
+:
+"<string>"
+,
+
+"thumbnail_url"
+:
+"<string>"
+,
+
+"thumbnail_width"
+:
+123
+,
+
+"thumbnail_height"
+:
+123
+,
+
+"duration"
+:
+123
+
+}
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Sonar Chat Completions API
+Create Async Chat Completion
+Copy page
+Creates an asynchronous chat completion job.
+Copy page
+POST
+/
+async
+/
+chat
+/
+completions
+Try it
+Create Async Chat Completion
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/async/chat/completions
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"request": {
+
+"model": "sonar-deep-research",
+
+"messages": [
+
+{
+
+"role": "system",
+
+"content": "Be precise and concise."
+
+},
+
+{
+
+"role": "user",
+
+"content": "How many stars are there in our galaxy?"
+
+}
+
+],
+
+"search_mode": "web",
+
+"reasoning_effort": "low",
+
+"max_tokens": 123,
+
+"temperature": 0.2,
+
+"top_p": 0.9,
+
+"language_preference": "<string>",
+
+"search_domain_filter": "<array>",
+
+"return_images": false,
+
+"return_related_questions": false,
+
+"search_recency_filter": "<string>",
+
+"search_after_date_filter": "<string>",
+
+"search_before_date_filter": "<string>",
+
+"last_updated_after_filter": "<string>",
+
+"last_updated_before_filter": "<string>",
+
+"top_k": 0,
+
+"stream": false,
+
+"presence_penalty": 0,
+
+"frequency_penalty": 0,
+
+"response_format": {},
+
+"disable_search": false,
+
+"enable_search_classifier": false,
+
+"web_search_options": {
+
+"search_context_size": "high"
+
+},
+
+"media_response": {
+
+"overrides": {
+
+"return_videos": true,
+
+"return_images": true
+
+}
+
+}
+
+}
+
+}
+
+'
+200
+Copy
+Ask AI
+{
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created_at"
+:
+123
+,
+
+"status"
+:
+"CREATED"
+,
+
+"started_at"
+:
+123
+,
+
+"completed_at"
+:
+123
+,
+
+"response"
+: {
+
+"id"
+:
+"<string>"
+,
+
+"model"
+:
+"<string>"
+,
+
+"created"
+:
+123
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"completion_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"search_context_size"
+:
+"<string>"
+,
+
+"citation_tokens"
+:
+123
+,
+
+"num_search_queries"
+:
+123
+,
+
+"reasoning_tokens"
+:
+123
+
+},
+
+"object"
+:
+"chat.completion"
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+123
+,
+
+"message"
+: {
+
+"content"
+:
+"<string>"
+,
+
+"role"
+:
+"system"
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"search_results"
+: [
+
+{
+
+"title"
+:
+"<string>"
+,
+
+"url"
+:
+"<string>"
+,
+
+"date"
+:
+"2023-12-25"
+
+}
+
+],
+
+"videos"
+: [
+
+{
+
+"url"
+:
+"<string>"
+,
+
+"thumbnail_url"
+:
+"<string>"
+,
+
+"thumbnail_width"
+:
+123
+,
+
+"thumbnail_height"
+:
+123
+,
+
+"duration"
+:
+123
+
+}
+
+]
+
+},
+
+"failed_at"
+:
+123
+,
+
+"error_message"
+:
+"<string>"
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+request
+ChatCompletionsRequest · object
+required
+Show
+
+child attributes
+Response
+200 - application/json
+Successfully created async chat completion job.
+​
+id
+string
+required
+Unique identifier for the asynchronous job.
+​
+model
+string
+required
+The model used for the request.
+​
+created_at
+integer<int64>
+required
+Unix timestamp of when the job was created.
+​
+status
+enum<string>
+required
+The status of an asynchronous processing job.
+Available options
+:
+
+CREATED
+,
+
+IN_PROGRESS
+,
+
+COMPLETED
+,
+
+FAILED
+
+​
+started_at
+integer<int64> | null
+Unix timestamp of when processing started.
+​
+completed_at
+integer<int64> | null
+Unix timestamp of when processing completed.
+​
+response
+ChatCompletionsResponseJson · object
+The actual chat completion response, available when status is COMPLETED.
+Show
+
+child attributes
+​
+failed_at
+integer<int64> | null
+Unix timestamp of when processing failed.
+​
+error_message
+string | null
+Error message if the job failed.
+Was this page helpful?
+Yes
+No
+Chat Completions
+Previous
+List Async Chat Completions
+Next
+⌘
+I
+x
+discord
+website
+Powered by

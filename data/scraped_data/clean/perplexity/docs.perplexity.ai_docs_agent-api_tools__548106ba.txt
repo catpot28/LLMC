@@ -1,0 +1,673 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/agent-api/tools
+page path  : /docs/agent-api/tools
+captured   : 2026-03-10 18:45:37 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_agent-api_tools__548106ba.html.gz
+========================================================================
+
+Tools - Perplexity
+
+Tools - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Features
+Tools
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Tools & Integrations
+Perplexity SDK
+Quickstart
+Guides
+Agent API
+Quickstart
+Models & Configuration
+Features
+Tools
+Output Control
+Search Filters
+Image Attachments
+Prompt Guide
+OpenAI Compatibility
+Search API
+Quickstart
+Filters
+Best Practices
+Sonar API
+Quickstart
+Models
+Features
+Embeddings API
+Quickstart
+Standard Embeddings
+Contextualized Embeddings
+Best Practices
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Resources
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Web Search Tool
+Example
+Key Parameters
+Fetch URL Tool
+Example
+When to Use
+Function Calling
+How It Works
+Example
+Key Properties
+Next Steps
+Features
+Tools
+Copy page
+Web search, URL fetching, and function calling tools for the Agent API
+Copy page
+​
+Overview
+
+The Agent API provides tools that extend model capabilities beyond their training data. Tools must be explicitly configured in your API request—once enabled, models autonomously decide when to use them based on your instructions.
+
+Type
+Tools
+Use Case
+Built-in
+web_search
+,
+fetch_url
+Real-time web information retrieval
+Custom
+Your functions
+Connect to databases, APIs, business logic
+
+Enable tools by adding them to the
+tools
+array in your request:
+
+Python
+TypeScript
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.2"
+,
+
+input
+=
+"What are the latest AI developments?"
+,
+
+tools
+=
+[
+
+{
+"type"
+:
+"web_search"
+},
+
+{
+"type"
+:
+"fetch_url"
+}
+
+],
+
+instructions
+=
+"Use web_search for current information. Use fetch_url when you need full article content."
+
+)
+
+print
+(response.output_text)
+
+​
+Web Search Tool
+
+The
+web_search
+tool allows models to perform web searches with advanced filtering capabilities. Use it when you need current information, news, or data beyond the model’s training cutoff.
+
+Pricing:
+$5.00 per 1,000 search calls ($0.005 per search), plus token costs.
+
+​
+Example
+
+Python
+TypeScript
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.2"
+,
+
+input
+=
+"What are recent academic findings on renewable energy?"
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"web_search"
+,
+
+"filters"
+: {
+
+"search_domain_filter"
+: [
+"nature.com"
+,
+"science.org"
+,
+".edu"
+],
+
+"search_recency_filter"
+:
+"month"
+
+}
+
+}
+
+],
+
+instructions
+=
+"Search for recent English-language academic publications."
+
+)
+
+print
+(response.output_text)
+
+​
+Key Parameters
+
+Filter
+Type
+Description
+Limit
+search_domain_filter
+Array of strings
+Filter by specific domains (allowlist or denylist with
+-
+prefix)
+Max 20 domains
+search_recency_filter
+String
+Filter by time period:
+"day"
+,
+"week"
+,
+"month"
+,
+"year"
+-
+search_after_date
+String
+Filter results published after this date (format:
+"M/D/YYYY"
+)
+-
+search_before_date
+String
+Filter results published before this date (format:
+"M/D/YYYY"
+)
+-
+max_tokens_per_page
+Integer
+Control the amount of content retrieved per search result
+-
+
+Use
+-
+prefix to exclude domains:
+"-reddit.com"
+excludes Reddit from results. Lower
+max_tokens_per_page
+to reduce context token costs.
+
+​
+Fetch URL Tool
+
+The
+fetch_url
+tool fetches and extracts content from specific URLs. Use it when you need the full content of a particular web page, article, or document rather than search results.
+
+Pricing:
+$0.50 per 1,000 requests ($0.0005 per fetch), plus token costs.
+
+​
+Example
+
+Python
+TypeScript
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.2"
+,
+
+input
+=
+"Summarize the content at https://example.com/article"
+,
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"fetch_url"
+
+}
+
+],
+
+instructions
+=
+"Use fetch_url to retrieve and summarize the article."
+
+)
+
+print
+(response.output_text)
+
+​
+When to Use
+
+Use
+fetch_url
+when…
+Use
+web_search
+when…
+You have a specific URL
+You need to find relevant pages
+You need full page content
+You need snippets from multiple sources
+Analyzing a particular document
+Researching a broad topic
+Verifying specific claims
+Finding current news or events
+
+Combine
+web_search
+and
+fetch_url
+for comprehensive research: search to find relevant pages, then fetch full content from the most relevant results.
+
+​
+Function Calling
+
+Function calling allows you to define custom functions that models can invoke during a conversation. Unlike built-in tools, custom functions let you connect the model to your own systems—databases, APIs, business logic, or any external service.
+
+Pricing:
+No additional cost (standard token pricing applies).
+
+​
+How It Works
+
+Function calling follows a multi-turn conversation pattern:
+
+Define functions with names, descriptions, and parameter schemas
+
+Send your prompt with function definitions
+
+Model returns a
+function_call
+item if it needs to call a function
+
+Execute the function in your code
+
+Return results as a
+function_call_output
+item
+
+Model uses the results to generate its final response
+
+​
+Example
+
+Python
+TypeScript
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+import
+json
+
+client
+=
+Perplexity()
+
+# Define your function tools
+
+tools
+=
+[
+
+{
+
+"type"
+:
+"function"
+,
+
+"name"
+:
+"get_horoscope"
+,
+
+"description"
+:
+"Get today's horoscope for an astrological sign."
+,
+
+"parameters"
+: {
+
+"type"
+:
+"object"
+,
+
+"properties"
+: {
+
+"sign"
+: {
+
+"type"
+:
+"string"
+,
+
+"description"
+:
+"An astrological sign like Taurus or Aquarius"
+
+}
+
+},
+
+"required"
+: [
+"sign"
+]
+
+}
+
+}
+
+]
+
+# Your actual function implementation
+
+def
+get_horoscope
+(
+sign
+:
+str
+) ->
+str
+:
+
+return
+f
+"
+{
+sign
+}
+: Today brings new opportunities for growth."
+
+# Send initial request with tools
+
+response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.2"
+,
+
+tools
+=
+tools,
+
+input
+=
+"What is my horoscope? I am an Aquarius."
+
+)
+
+# Process the response and handle function calls
+
+next_input
+=
+[item.model_dump()
+for
+item
+in
+response.output]
+
+for
+item
+in
+response.output:
+
+if
+item.type
+==
+"function_call"
+:
+
+# Execute the function
+
+args
+=
+json.loads(item.arguments)
+
+result
+=
+get_horoscope(args[
+"sign"
+])
+
+# Add the function result to the input
+
+next_input.append({
+
+"type"
+:
+"function_call_output"
+,
+
+"call_id"
+: item.call_id,
+
+"output"
+: json.dumps({
+"horoscope"
+: result})
+
+})
+
+# Send the function results back to get the final response
+
+final_response
+=
+client.responses.create(
+
+model
+=
+"openai/gpt-5.2"
+,
+
+input
+=
+next_input
+
+)
+
+print
+(final_response.output_text)
+
+​
+Key Properties
+
+Property
+Type
+Required
+Description
+type
+string
+Yes
+Must be
+"function"
+name
+string
+Yes
+Function name the model will use to call it
+description
+string
+Yes
+Clear description of what the function does and when to use it
+parameters
+object
+Yes
+JSON Schema defining the function’s parameters
+strict
+boolean
+No
+Enable strict schema validation
+
+The
+arguments
+field in function calls is a JSON string, not a parsed object. Always use
+json.loads()
+(Python) or
+JSON.parse()
+(JavaScript) to parse it.
+
+Write clear, specific function descriptions. The model uses these to decide when to call each function. Include details about what the function returns and any constraints.
+
+​
+Next Steps
+
+Agent API Quickstart
+Get started with the Agent API.
+Models
+Explore direct model selection and third-party models.
+API Reference
+View complete endpoint documentation.
+Output Control
+Configure streaming responses and structured outputs with JSON schema.
+Was this page helpful?
+Yes
+No
+Model Fallback
+Previous
+Output Control
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

@@ -1,0 +1,102 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/swe-atlas
+page path  : /blog/swe-atlas
+captured   : 2026-06-15 10:38:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_swe-atlas__1568559c.html.gz
+========================================================================
+
+SWE Atlas: Evaluating AI Coding Agents in Real Codebases | Scale AI
+
+SWE Atlas: Evaluating AI Coding Agents in Real Codebases | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Can Coding Agents Become Engineers? We’re Finding Out.
+By
+
+The Scale Research Team
+&
+Matthew Siegel
+·
+March 4, 2026
+·
+4 min read
+Copy Link
+Executives at major tech companies have claimed that top software engineers are no longer writing code. As LLMs and coding agents take on that work, evaluation must evolve to view them more like junior engineers: by how they investigate a system, gather evidence, and explain what they’re observing.
+Today, we’re launching
+SWE Atlas
+, the first evaluation suite of its kind, to do just that.
+SWE Atlas is composed of three separate evaluations with leaderboards that assess how agents understand, validate, and improve real software systems inside real repositories. The evaluations include:
+Codebase QnA
+- Understand complex codebases through runtime analysis and multi-file reasoning
+Test Writing
+- Write meaningful tests that exercise real functionality to increase code coverage
+Refactoring
+- Restructure code to improve readability & maintainability while preserving behavior
+Of these evaluations, Codebase QnA is available today, with Test Writing and Refactoring available soon.
+Complementing SWE-Bench Pro
+SWE Atlas builds on the foundation of Scale’s SWE-Bench Pro (recommended by
+OpenAI
+for frontier releases), drawing from the same production repos and environments while expanding evaluation to investigative and maintenance workflows.
+SWE Atlas extends evaluation beyond change correctness to the investigative and maintenance workflows that surround real software development.
+Evaluating Agents Inside Real Systems
+SWE Atlas runs agents inside reproducible environments built from real software repos. Agents can inspect code, run commands, and execute the system, allowing evaluation to focus on how they investigate behavior, validate assumptions, and produce explanations grounded in runtime evidence. This approach pushes measurement toward interaction with a working codebase rather than evaluation based solely on final outputs.
+What Codebase QnA Tasks Look Like
+Codebase QnA tasks reflect the kinds of questions engineers ask when investigating real systems. For example, an onboarding QnA task looks like a question a new engineer would ask while onboarding onto a codebase: “When I run kitten @ ls from another terminal, how does that command reach the running kitty instance and get processed?” Answering that requires tracing Unix socket communication, IPC framing, and command dispatch across both C and Python, then validating behavior by running the system.
+QnA tasks span multiple investigation types, including architecture and system design, root-cause analysis, onboarding, security reasoning, and API or library integration, for example: explaining unexpected runtime behavior, understanding unfamiliar systems, or tracing security boundaries.
+The dataset is designed to mirror real engineering conditions: net-new tasks authored by professional engineers and technical experts inside open-source repositories drawn from the same production codebases used in SWE-Bench Pro, including systems like terminal emulators, mail servers, and object storage platforms, spanning multiple architectures and languages (Go, Python, C, TypeScript). Tasks pass through multi-stage review and are evaluated with structured rubrics that score whether an agent’s explanation reflects how the system actually works.
+Codebase QnA is the first released benchmark, with test writing and refactoring expanding the evaluation surface over time.
+How We Measure
+SWE Atlas runs agents inside reproducible, sandboxed environments where they can use standard developer tools to inspect code, run commands, and execute the system itself, using the SWE-Agent scaffold to standardize interaction and evaluation. We also evaluated some models with Claude Code Harness and Codex CLI using the model’s native scaffolds. Scoring combines programmatic checks with expert-defined rubrics and focuses on how agents interact with the running system. The primary metric is Task Resolve Rate: the share of tasks where every rubric item is satisfied.
+Full results and ongoing updates are available on the
+leaderboard
+.
+From Investigation to Collaboration
+The next phase of AI coding reflects that reality: agents that can modify software while reasoning about complex environments. SWE Atlas begins to map the investigative, validation, and maintenance workflows that define real software engineering. As the benchmark expands and the ecosystem participates, the definition of a capable coding agent will move from code generator to system collaborator.
+Keep an eye on the Scale blog for updates on our next two SWE Atlas benchmarks: Test Writing and Refactoring.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

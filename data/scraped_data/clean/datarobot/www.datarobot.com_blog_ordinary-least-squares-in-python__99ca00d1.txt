@@ -1,0 +1,1141 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/ordinary-least-squares-in-python/
+page path  : /blog/ordinary-least-squares-in-python/
+captured   : 2026-05-16 18:20:46 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_ordinary-least-squares-in-python__99ca00d1.html.gz
+========================================================================
+
+Ordinary Least Squares Regression in Python | DataRobot Blog
+
+Ordinary Least Squares Regression in Python | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Ordinary Least Squares Regression in Python
+
+Linear regression, also called Ordinary Least-Squares (OLS) Regression, is probably the most commonly used technique in Statistical Learning. It is also the oldest, dating back to the eighteenth century and the work of Carl Friedrich Gauss and Adrien-Marie Legendre. It is also one of the easier and more intuitive techniques to understand, and it provides a good basis for learning more advanced concepts and techniques. This post explains how to perform linear regression using the
+statsmodels
+Python package. We will discuss the single variable case and defer multiple regression to a future post.
+
+This is part of a series of blog posts to show how to do common statistical learning techniques in Python. We provide only a small amount of background on the concepts and techniques we cover, so if you’d like a more thorough explanation check out Introduction to Statistical Learning or sign up for the
+free online course
+by the authors here. If you are just here to learn how to do it in Python skip directly to the examples below.
+
+Statsmodels
+
+Statsmodel is a Python library designed for more statistically-oriented approaches to data analysis, with an emphasis on econometric analyses. It integrates well with the
+pandas
+and
+numpy
+libraries we covered in a previous post. It also has built in support for many of the statistical tests to check the quality of the fit and a dedicated set of plotting functions to visualize and diagnose the fit.
+Scikit-learn
+also has support for linear regression, including many forms of regularized regression lacking in statsmodels, but it lacks the rich set of statistical tests and diagnostics that have been developed for linear models.
+
+Linear Regression and Ordinary Least Squares
+
+Linear regression is one of the simplest and most commonly used modeling techniques. It makes very strong assumptions about the relationship between the predictor variables (the X) and the response (the Y). It assumes that this relationship takes the form:
+
+(y = beta_0 + beta_1 * x)
+
+Ordinary Least Squares is the simplest and most common estimator in which the two (beta)s are chosen to minimize the square of the distance between the predicted values and the actual values. Even though this model is quite rigid and often does not reflect the true relationship, this still remains a popular approach for several reasons. For one, it is computationally cheap to calculate the coefficients. It is also easier to interpret than more sophisticated models, and in situations where the goal is understanding a simple model in detail, rather than estimating the response well, they can provide insight into what the model captures. Finally, in situations where there is a lot of noise, it may be hard to find the true functional form, so a constrained model can perform quite well compared to a complex model which is more affected by noise.
+
+The resulting model is represented as follows:
+
+(hat{y} = hat{beta}_0 + hat{beta}_1 * x)
+
+Here, the hats on the variables represent the fact that they are estimated from the data we have available. The (beta)s are termed the parameters of the model or the coefficients. (beta_0) is called the constant term or the intercept.
+
+Ordinary Least Squares Using Statsmodels
+
+The statsmodels package provides several different classes that provide different options for linear regression. Getting started with linear regression is quite straightforward with the OLS module.
+
+To start with we load the
+Longley dataset
+of US macroeconomic data from the
+Rdatasets
+website.
+
+In [1]:
+
+# load numpy and pandas for data manipulation
+import numpy as np
+import pandas as pd
+# load statsmodels as alias ``sm``import statsmodels.api as sm
+# load the longley dataset into a pandas data frame - first column (year) used as row labels
+df = pd.read_csv('https://vincentarelbundock.github.io/Rdatasets/csv/datasets/longley.csv', index_col=0)
+df.head()
+
+Out[1]:
+
+GNP.deflator
+GNP
+Unemployed
+Armed.Forces
+Population
+Year
+Employed
+1947
+83.0
+234.289
+235.6
+159.0
+107.608
+1947
+60.323
+1948
+88.5
+259.426
+232.5
+145.6
+108.632
+1948
+61.122
+1949
+88.2
+258.054
+368.2
+161.6
+109.773
+1949
+60.171
+1950
+89.5
+284.599
+335.1
+165.0
+110.929
+1950
+61.187
+1951
+96.2
+328.975
+209.9
+309.9
+112.075
+1951
+63.221
+
+We will use the variable Total Derived Employment (
+'Employed'
+) as our response
+y
+and Gross National Product (
+'GNP'
+) as our predictor
+X
+.
+
+We take the single response variable and store it separately. We also add a constant term so that we fit the intercept of our linear model.
+
+In [2]:
+
+y = df.Employed # response
+X = df.GNP # predictor
+X = sm.add_constant(X) # Adds a constant term to the predictor
+X.head()
+
+Out[2]:
+
+const
+GNP
+1947
+1
+234.289
+1948
+1
+259.426
+1949
+1
+258.054
+1950
+1
+284.599
+1951
+1
+328.975
+
+Now we perform the regression of the predictor on the response, using the
+sm.OLS
+class and and its initialization
+OLS(y, X)
+method. This method takes as an input two array-like objects:
+X
+and
+y
+. In general,
+X
+will either be a numpy array or a pandas data frame with shape
+(n, p)
+where
+n
+is the number of data points and
+p
+is the number of predictors.
+y
+is either a one-dimensional numpy array or a pandas series of length
+n
+.
+
+In [3]:
+
+est=sm.OLS(y, X)
+
+We then need to fit the model by calling the OLS object’s
+fit()
+method. Ignore the warning about the kurtosis test if it appears, we have only 16 examples in our dataset and the test of the kurtosis is valid only if there are more than 20 examples.
+
+In [4]:
+
+est = est.fit()
+est.summary()
+
+/usr/local/lib/python2.7/dist-packages/scipy/stats/stats.py:1276: UserWarning: kurtosistest only valid for n>=20 ... continuing anyway, n=16 int(n))
+
+Out[4]:
+
+Dep. Variable:
+Employed
+R-squared:
+0.967
+Model:
+OLS
+Adj. R-squared:
+0.965
+Method:
+Least Squares
+F-statistic:
+415.1
+Date:
+Sat, 08 Feb 2014
+Prob (F-statistic):
+8.36e-12
+Time:
+01:28:29
+Log-Likelihood:
+-14.904
+No. Observations:
+16
+AIC:
+33.81
+Df Residuals:
+14
+BIC:
+35.35
+Df Model:
+1
+
+coef
+std err
+t
+P>|t|
+[95.0% Conf. Int.]
+const
+51.8436
+0.681
+76.087
+0.000
+50.382 53.305
+GNP
+0.0348
+0.002
+20.374
+0.000
+0.031 0.038
+
+Omnibus:
+1.925
+Durbin-Watson:
+1.619
+Prob(Omnibus):
+0.382
+Jarque-Bera (JB):
+1.215
+Skew:
+0.664
+Prob(JB):
+0.545
+Kurtosis:
+2.759
+Cond. No.
+1.66e+03
+
+After visualizing the relationship we will explain the summary. First, we need the coefficients of the fit.
+
+In [5]:
+
+est.params
+
+Out[5]:
+
+const 51.843590
+GNP 0.034752
+dtype: float64
+
+In [6]:
+
+# Make sure that graphics appear inline in the iPython notebook
+%pylab inline
+# We pick 100 hundred points equally spaced from the min to the max
+X_prime = np.linspace(X.GNP.min(), X.GNP.max(), 100)[:, np.newaxis]
+X_prime = sm.add_constant(X_prime)
+# add constant as we did before
+# Now we calculate the predicted values
+y_hat = est.predict(X_prime)
+plt.scatter(X.GNP, y, alpha=0.3)
+# Plot the raw data
+plt.xlabel("Gross National Product")
+plt.ylabel("Total Employment")
+plt.plot(X_prime[:, 1], y_hat, 'r', alpha=0.9)
+# Add the regression line, colored in red Populating the interactive namespace from numpy and matplotlib
+
+Out[6]:
+
+[<matplotlib.lines.Line2D at 0x4444350>]
+
+Statsmodels also provides a formulaic interface that will be familiar to users of R. Note that this requires the use of a different api to statsmodels, and the class is now called
+ols
+rather than
+OLS
+. The argument
+formula
+allows you to specify the response and the predictors using the column names of the input data frame
+data
+.
+
+In [7]:
+
+# import formula api as alias smf import statsmodels.formula.api as smf
+# formula: response ~ predictors
+est = smf.ols(formula='Employed ~ GNP', data=df).fit()
+est.summary()
+
+Out[7]:
+
+Dep. Variable:
+Employed
+R-squared:
+0.967
+Model:
+OLS
+Adj. R-squared:
+0.965
+Method:
+Least Squares
+F-statistic:
+415.1
+Date:
+Sat, 08 Feb 2014
+Prob (F-statistic):
+8.36e-12
+Time:
+01:28:29
+Log-Likelihood:
+-14.904
+No. Observations:
+16
+AIC:
+33.81
+Df Residuals:
+14
+BIC:
+35.35
+Df Model:
+1
+
+coef
+std err
+t
+P>|t|
+[95.0% Conf. Int.]
+Intercept
+51.8436
+0.681
+76.087
+0.000
+50.382 53.305
+GNP
+0.0348
+0.002
+20.374
+0.000
+0.031 0.038
+
+Omnibus:
+1.925
+Durbin-Watson:
+1.619
+Prob(Omnibus):
+0.382
+Jarque-Bera (JB):
+1.215
+Skew:
+0.664
+Prob(JB):
+0.545
+Kurtosis:
+2.759
+Cond. No.
+1.66e+03
+
+This summary provides quite a lot of information about the fit. The parts of the table we think are the most important are bolded in the description below.
+
+The left part of the first table provides basic information about the model fit:
+
+Element
+Description
+Dep. Variable
+Which variable is the response in the model
+Model
+What model you are using in the fit
+Method
+How the parameters of the model were calculated
+No. Observations
+The number of observations (examples)
+DF Residuals
+Degrees of freedom of the residuals. Number of observations – number of parameters
+DF Model
+Number of parameters in the model (not including the constant term if present)
+
+The right part of the first table shows the goodness of fit
+
+Element
+Description
+R-squared
+The coefficient of determination. A statistical measure of how well the regression line approximates the real data points
+Adj. R-squared
+The above value adjusted based on the number of observations and the degrees-of-freedom of the residuals
+F-statistic
+A measure how significant the fit is. The mean squared error of the model divided by the mean squared error of the residuals
+Prob (F-statistic)
+The probability that you would get the above statistic, given the null hypothesis that they are unrelated
+Log-likelihood
+The log of the likelihood function.
+AIC
+The Akaike Information Criterion. Adjusts the log-likelihood based on the number of observations and the complexity of the model.
+BIC
+The Bayesian Information Criterion. Similar to the AIC, but has a higher penalty for models with more parameters.
+
+The second table reports for each of the coefficients
+
+Description
+
+The name of the term in the model
+coef
+The estimated value of the coefficient
+std err
+The basic standard error of the estimate of the coefficient. More sophisticated errors are also available.
+t
+The t-statistic value. This is a measure of how statistically significant the coefficient is.
+P > |t|
+P-value that the null-hypothesis that the coefficient = 0 is true. If it is less than the confidence level, often 0.05, it indicates that there is a statistically significant relationship between the term and the response.
+[95.0% Conf. Interval]
+The lower and upper values of the 95% confidence interval
+
+Finally, there are several statistical tests to assess the distribution of the residuals
+
+Element
+Description
+Skewness
+A measure of the symmetry of the data about the mean. Normally-distributed errors should be symmetrically distributed about the mean (equal amounts above and below the line).
+Kurtosis
+A measure of the shape of the distribution. Compares the amount of data close to the mean with those far away from the mean (in the tails).
+Omnibus
+D’Angostino’s test. It provides a combined statistical test for the presence of skewness and kurtosis.
+Prob(Omnibus)
+The above statistic turned into a probability
+Jarque-Bera
+A different test of the skewness and kurtosis
+Prob (JB)
+The above statistic turned into a probability
+Durbin-Watson
+A test for the presence of autocorrelation (that the errors are not independent.) Often important in time-series analysis
+Cond. No
+A test for multicollinearity (if in a fit with multiple parameters, the parameters are related with each other).
+
+As a final note, if you don’t want to include a constant term in your model, you can exclude it using the minus operator.
+
+In [8]:
+
+# Fit the no-intercept model
+est_no_int = smf.ols(formula='Employed ~ GNP - 1', data=df).fit()
+# We pick 100 hundred points equally spaced from the min to the max
+X_prime_1 = pd.DataFrame({'GNP': np.linspace(X.GNP.min(), X.GNP.max(), 100)}) X_prime_1 = sm.add_constant(X_prime_1)
+# add constant as we did before
+y_hat_int = est.predict(X_prime_1)
+y_hat_no_int = est_no_int.predict(X_prime_1)
+fig = plt.figure(figsize=(8,4))
+splt = plt.subplot(121)
+splt.scatter(X.GNP, y, alpha=0.3) # Plot the raw data plt.ylim(30, 100)
+# Set the y-axis to be the same
+plt.xlabel("Gross National Product")
+plt.ylabel("Total Employment")
+plt.title("With intercept")
+splt.plot(X_prime[:, 1], y_hat_int, 'r', alpha=0.9) # Add the regression line, colored in red
+splt = plt.subplot(122)
+splt.scatter(X.GNP, y, alpha=0.3)
+# Plot the raw data
+plt.xlabel("Gross National Product")
+plt.title("Without intercept")
+splt.plot(X_prime[:, 1], y_hat_no_int, 'r', alpha=0.9) # Add the regression line, colored in red
+
+Out[8]:
+
+[<matplotlib.lines.Line2D at 0x47eab50>]
+
+But notice that this may not be the best idea… :)
+
+Correlation and Causation
+
+Clearly there is a relationship or correlation between GNP and total employment. So does that mean a change in GNP cause a change in total employment? Or does a change in total employment cause a change in GNP? This is a subject we will explore in the next post.
+
+Download Notebook
+
+View on NBViewer
+
+Trial
+
+Try Now for Free: Create No-Code ML Projects
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+DataRobot
+
+February 8, 2014
+
+|
+8 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

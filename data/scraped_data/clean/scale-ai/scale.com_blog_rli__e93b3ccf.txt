@@ -1,0 +1,95 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/rli
+page path  : /blog/rli
+captured   : 2026-05-16 02:39:09 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_rli__e93b3ccf.html.gz
+========================================================================
+
+The Remote Labor Index: Measuring the Automation of Work | Scale AI
+
+The Remote Labor Index: Measuring the Automation of Work | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+The Remote Labor Index: Measuring the Automation of Work
+By
+
+The Scale Research Team
+&
+Matthew Siegel
+·
+October 29, 2025
+·
+4 min read
+Copy Link
+Can AI actually automate jobs? To answer this important question and to help people track AI’s impact on jobs, Scale and the Center for AI Safety (CAIS) are introducing
+the Remote Labor Index (RLI)
+. This is the first benchmark and public leaderboard to test AI agents on how well they can complete paid freelance work from fields like software development, design, architecture, and data analysis. We chose freelance work because it gives us the clearest possible view of what AI agents can actually do on their own.
+When it comes to freelance work, each project represents a true distribution of complete, self-contained, economically valuable tasks, requiring a median of around 11.5 hours for a human professional to complete with a median value of $200. With a clear brief, price, and deliverable, the RLI evaluates if the AI can be the freelancer and complete the entire, complex, paid project from start to finish, rather than if an AI can be a helpful assistant for parts of a project.
+Our research shows that the best-performing AI agents can successfully automate 2.5% of these real-world, paid freelance projects. Across 240 real-world projects spanning 23 domains, the human freelancers who originally completed this work earned a combined $143,991. In contrast, the top-performing agent, Manus, earned $1,720. This 2.5% success rate gives us a crucial starting point for tracking AI's trajectory and grounding public discussion in data.
+Performance of current AI agents on the RLI. All models tested automate less than 3% of complex, end-to-end freelance projects, with the highest-scoring agent achieving a 2.5% automation rate.
+Where Agents Fail
+To understand the high failure rate, our team conducted an analysis of the hundreds of failed submissions. We found that agent failures are not random but cluster into several key patterns, revealing why they are not ready for complex, professional work.
+We found that:
+45.6%
+of failed submissions had quality issues where the work was simply not at a professional standard a client would accept.
+35.7%
+included incomplete or malformed deliverables, with agents submitting truncated videos, missing source files, or empty directories.
+17.6%
+had technical and file integrity issues, producing corrupt, unusable, or empty files.
+14.8%
+contained inconsistencies, failing to maintain visual or logical consistency across different files in the same project.
+A single failed project often exhibited several of these patterns at once. For instance, in a jewelry design project, an agent was instructed to modify a provided ring image to change the diamond's cut. Instead, it ignored the provided file and submitted two entirely new, AI-generated images. This single failure demonstrates a quality issue (the images were amateurish), a failure to follow the brief (it ignored the input file), and inconsistency (the two new rings failed to match each other).
+Where Agents Succeed
+The projects that were successfully completed were not random. They were predominantly creative projects involving audio and image generation (like creating sound effects or logos) and some data or writing projects (like report generation). This reveals a clear pattern: agents excel at creating from scratch from a simple prompt, but fail at complex editing or following a precise, multi-step brief. Their generative skill is high, but their ability to act as a reliable, detail-oriented professional is low.
+Measuring the Progress of Agents
+The RLI’s findings provide a clear, data-driven answer to the question we started with. The fear of imminent, widespread automation is not supported by the data; the 97.5% failure rate shows that AI is not yet capable of autonomously performing complex, professional work. Our analysis reveals a critical gap between AI's skill on isolated tasks and the end-to-end reliability required to fulfill a real-world client brief.
+The 2.5% success, however, is just as telling. It shows that AI is already at a professional level for some generative tasks (creating images, audio, or code from scratch). The failure comes when the job requires complex editing, tool use, and following precise, multi-step specifications. This suggests the immediate impact isn't mass automation, but augmentation.
+The next great challenge is about capability, reliability, and scale, building agents that can move from simple prompts to complex project execution. The Remote Labor Index provides the economically-grounded tool to guide and measure this next phase, grounding the public discussion in data, not speculation.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

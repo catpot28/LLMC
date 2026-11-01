@@ -1,0 +1,210 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/billing-auto-recharge-form-errors/4584
+page path  : /t/billing-auto-recharge-form-errors/4584
+captured   : 2026-04-12 13:18:05 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_billing-auto-recharge-form-errors_4584__517a2ed0.html.gz
+========================================================================
+
+Billing auto recharge form errors - Bug Reports - Perplexity API Platform Forum
+
+Billing auto recharge form errors - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Billing auto recharge form errors
+
+Bug Reports
+
+sonar-pro
+
+Matt_McFedries
+
+April 3, 2026, 8:33pm
+
+1
+
+Describe the Bug
+
+When I update the auto recharge, it requires a minimum of $50 now. Used to accept $5.
+
+Now when I switch auto to off, then click Save, it cannot save, always shows and error and the form setting is not updated.
+
+https://console.perplexity.ai/group/xxxxxxx/billing
+
+Seems like three issues:
+
+Minimum recharge for me is now $50
+
+Cannot switch auto recharge off (error on save, settings not updated)
+
+Auto recharged another $50 when my balance dropped by a tiny amount ~S0.50
+
+Expected Behavior
+
+I can set minimum balance of $5 before recharge
+
+I can switch off auto recharge
+
+Actual Behavior
+
+Error on save when set auto recharge to off
+
+Error message when enter $2 or $5 as minimum recharge “
+Amount too low. Please enter an amount of at least $50.”
+
+Steps to Reproduce
+
+Login to
+https://console.perplexity.ai/
+
+Click on Billing, then
+
+Click “Change preferences”, then
+
+Update preferences per above, then
+
+Click Save,
+
+Error message displayed top right of screen “Error. Please try again.”
+
+API Request & Response (if applicable)
+
+Environment
+
+API Version:
+[e.g., sonar-3.1]
+
+SDK (if applicable):
+[e.g., Python SDK v0.5]
+
+Operating System:
+[e.g., MacOS, Linux, Windows]
+
+Logs or Screenshots (if applicable)
+
+Add any logs or screenshots that can help debug the issue.
+
+Additional Context
+
+Add any other context about the problem here.
+
+2 Likes
+
+Kesku
+
+April 7, 2026, 2:40pm
+
+2
+
+Hey
+@Matt_McFedries
+— the $50 minimum recharge amount is a recent change to the billing system, so that part is working as intended.
+
+However, the issues with not being able to
+disable
+auto-recharge (save error) and the unexpected recharge trigger on a ~$0.50 balance drop are worth looking into. Please email
+api@perplexity.ai
+with your account details and reference this thread — the billing team can help sort out both of those issues directly.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+API Credit Balance Issue After Automatic Payment
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+node-sdk
+
+,
+
+python-sdk
+
+0
+
+27
+
+February 17, 2026
+
+Perplexity API: Purchased credits, balance still shows "$0"
+
+Bug Reports
+
+sonar-pro
+
+,
+
+search-api
+
+0
+
+61
+
+December 20, 2025
+
+Possible overcharge on our account
+
+General
+
+3
+
+150
+
+June 12, 2025
+
+Unexpected API key usage
+
+Bug Reports
+
+sonar-pro
+
+1
+
+122
+
+April 7, 2026
+
+Monthly Spending Limit
+
+Feature Requests
+
+search-api
+
+0
+
+72
+
+February 3, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,106 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/tutorbench
+page path  : /blog/tutorbench
+captured   : 2026-06-14 22:37:30 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_tutorbench__2aade99d.html.gz
+========================================================================
+
+TutorBench: Grading the Next Generation of AI Tutors | Scale AI
+
+TutorBench: Grading the Next Generation of AI Tutors | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+TutorBench: Grading the Next Generation of AI Tutors
+By
+
+Matthew Siegel
+&
+The Scale Research Team
+·
+September 12, 2025
+·
+7 min read
+Copy Link
+If you want to get a sense of what the future might look like, it is always a good idea to take a look at what the students are doing. Today, even the most cursory glance at education suggests that AI is about to take on a much larger role in all of our lives. Most studies on this topic suggest a wide majority of both high school students and undergraduates use LLMs in some capacity, with many using them daily. In other words, the AI train has left the station.
+But what about accuracy? What about the ability of LLMs to explain, guide, and adapt to student needs? These questions are at the heart of
+TutorBench
+, a new benchmark from researchers at Scale.
+What Makes TutorBench:
+Overall, TutorBench consists of 1,500 student-tutor conversations that cover six high school and Advanced Placement (AP) STEM subjects. To mirror how students actually work, the benchmark is heavily multimodal; over half the examples (56%) combine text with images of student work, like handwritten notes or diagrams.
+TutorBench focuses on three tutoring use cases: adaptive explanation generation, feedback assessment, and active learning support. Initial questions were written by human subject-matter experts. Subsequent student and tutor follow-ups were drafted with LLM assistance and edited by human experts. The rubrics used to evaluate the models were also created by human experts, who first wrote ideal tutoring responses and then crafted the criteria for evaluation.
+What Makes a Good Tutor?
+Anyone who has ever sat with a tutor (or been one) knows that a solid tutor needs to know more than just the material at hand, but also understand how to explain complex topics simply, guide students through problems, examine problem areas, and provide helpful feedback that is perceptive to student needs. The three general categories that cover these skills are:
+Adaptive Explanation Generation: Assesses the LLM's ability to provide personalized instruction, adapting their explanations to a student's current understanding and knowledge gaps. This use case evaluates whether an LLM can recognize the specific context implied by a student's follow-up question and generate a helpful, pedagogically sound response that promotes learning.
+Feedback and Assessment: Students frequently use LLMs to self-assess their work and get instant feedback. This use case tests the model's ability to analyze a student's solution, identify mistakes, and provide a clear, instructive explanation. Many of these examples include images of handwritten student work, requiring the model to interpret both text and visual inputs.
+Active Learning Support: Measures the model's ability to promote engagement and guide students without giving away the final answer, guiding students through hints, analogies, or intermediate steps. This use case presents LLMs with partially correct or incorrect student responses and asks them to provide hints that allow the student to take the next step. This task also includes multimodal examples, simulating how students often share their work in visual formats.
+Beyond Correct and Incorrect
+TutorBench uses a rubric-based evaluation system to get a nuanced view of a model performance, with 15,220 rubric criteria across all examples. The criteria are designed to be self-contained and mutually exclusive for consistency. Each response receives a pass/fail rating on each criterion, and these ratings are used to calculate an overall score. The most critical rubrics receive a weight of 5 and others a weight of 1. Undesirable behaviors like giving away a final answer when only a hint is requested, can receive a negative weight of -5 to penalize the response.
+Evaluation Dimensions
+Each criterion is also tagged with an "evaluation dimension" to provide high-level insights into model performance on factors important to humans. These dimensions include:
+Instruction Following: Measures how accurately the model adheres to the specific directions and constraints provided in the prompt.
+Style and Tone: Evaluates whether the model's language, voice, and presentation are appropriate for the given context, capturing qualities like politeness and professionalism.
+Truthfulness: Assesses the factual accuracy and reliability of the model's response.
+Visual Perception: Measures the accuracy of the model's description of visual elements and their attributes, such as correctly identifying text and numbers from an image.
+Visual Reasoning: Tests the model's ability to interpret and logically analyze visual inputs, such as understanding the steps in a handwritten math problem, rather than just reading them.
+Emotional Component: Measures the model's ability to recognize and appropriately respond to emotional cues from the student, such as confusion or frustration, emphasizing empathy and encouragement.
+Student Level Calibration: Evaluates if the response is tailored to the student's age, background knowledge, and skill level.
+Conciseness & Relevance: Determines if the response is direct and focused on the question without including extraneous information.
+To grade model responses against the rubric criteria, TutorBench relies on an LLM-judge, Claude-4-Sonnet, which showed a strong alignment with human ratings. In tests, the LLM-judge achieved an average agreement rate of 0.78 with human experts, a figure notably comparable to, and even slightly exceeding, the 0.75 average agreement rate between the human experts themselves.
+When measured against a majority vote on critical criteria, the LLM-judge achieved a strong F1-score of 0.82. For context, the highest F1-score achieved by a single human expert was 0.91. These results demonstrate that the LLM-judge is a highly effective and scalable alternative to manual evaluation, performing near the level of human experts.
+To get an even more granular view, TutorBench also evaluates models on eight specific tutoring skills. The analysis moves beyond general categories to assess critical, on-the-ground pedagogical actions, such as a model's ability to:
+Identify the core difficulty or misconception in a student's approach.
+Provide helpful examples, analogies, or alternative solutions.
+Ask guiding questions to promote active learning instead of just giving answers.
+This detailed skill analysis helps pinpoint exactly where different models excel or fall short as tutors.
+Key Findings
+In this study, 15 frontier models were tested, including models from OpenAI, Google, Anthropic, Meta, and DeepSeek, ensuring a broad evaluation of the AI landscape. We found that while their skills were impressive, no model has yet mastered the complexities of tutoring. TutorBench was, of course, designed to be challenging. To ensure the benchmark remains difficult and unsaturated, conversations were only selected if at least three out of five frontier LLMs scored below 50% on them. The best model, GPT-5, achieved an overall score of only 55.65% , followed closely by Gemini 2.5 Pro at 55.33%. and o3 pro at 54.62%. Though Claude models did not beat out GPT-5, o3, or Gemini 2.5 Pro, they showed a more balanced performance across use cases.
+While most models perform best on active learning support, their performance on adaptive explanation generation is significantly worse, suggesting they struggle to generate personalized tutoring responses. It also turns out that different models possess different strengths. For instance, Gemini-2.5-Pro excelled in recognizing student emotions and at generating responses with the right tone and style, but its performance on active learning support was significantly lower.
+A Glimpse at the Future of Learning
+LLMs have a long way to go before they can truly replicate a great human tutor, but that won’t stop students from continuing to rely on them. But by providing a comprehensive, multimodal framework that evaluates the nuanced skills of tutoring, we aim to help researchers accelerate progress and help students everywhere. The release of this dataset and a public leaderboard is an invitation to help build the next generation of AI tutors that can meet students where they are.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

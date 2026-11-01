@@ -1,0 +1,685 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/amazon-comprehend-nlp/
+page path  : /product/plugins/amazon-comprehend-nlp/
+captured   : 2026-01-21 09:18:08 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_amazon-comprehend-nlp__dbdfb18e.html.gz
+========================================================================
+
+Plugin: Amazon Comprehend | Dataiku
+
+Plugin: Amazon Comprehend | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Amazon Comprehend
+
+Amazon Comprehend
+
+This plugin provides recipes to call the Amazon Comprehend APIs
+
+Plugin information
+
+Version
+
+1.1.0
+
+Author
+
+Dataiku (Alex COMBESSIE, Joachim ZENTICI)
+
+Released
+
+2020-05
+
+Last updated
+
+2023-04
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to:
+
+Detect the dominant language of a text (recommended first step)
+
+Analyze the sentiment polarity (positive, negative, neutral, mixed) of a text
+
+Recognize “real-world objects” (people names, dates, places, etc.) in a text
+
+Extract key phrases (1-4 words each) in a text to identify the main points
+
+Note that the Amazon Comprehend API is a paid service. You can consult the
+API pricing page
+to evaluate the future cost.
+
+How to set up
+
+If you are a Dataiku and AWS admin user, follow these configuration steps right after you install the plugin. If you are not an admin, you can forward this to your admin and scroll down to the
+How to use
+section.
+
+1. Create an IAM user with the Amazon Comprehend policy – in AWS
+
+Let’s assume that your AWS account has already been created and that you have full admin access. If not, please follow this
+guide
+.
+
+Start by creating a dedicated IAM user to centralize access to the Comprehend API, or select an existing one. Next, you will need to attach a policy to this user following this
+documentation
+. We recommend using the
+“ComprehendFullAccess”
+managed policy, as shown below:
+
+IAM policy for Amazon Comprehend
+
+Alternatively, you can create a custom IAM policy to allow
+“comprehend:*”
+actions. After completing this step, you will be able to retrieve the user Access key ID and Secret access key.
+
+Completed IAM User Creation
+
+2. Create an API configuration preset – in Dataiku DSS
+
+In Dataiku DSS, navigate to the Plugin page > Settings > API configuration and create your first preset.
+
+API Configuration Preset Creation
+
+3. Configure the preset – in Dataiku DSS
+
+Completed API Configuration Preset
+
+Fill the AUTHENTIFICATION settings.
+
+Copy-paste your Access key ID and Secret access key from
+Step 1
+in the corresponding fields.
+
+The
+AWS region
+parameter needs to be specified within this
+list
+.
+
+Alternatively, you may leave the fields empty so that the credentials are ascertained from the server environment. If you choose this option, please follow
+this documentation
+on the server hosting DSS.
+
+(Optional) Review the API QUOTA and PARALLELIZATION settings.
+
+The default API Quota settings ensure that one recipe calling the API will be throttled at 25 requests (
+Rate limit
+parameter) per second (
+Period
+parameter). In other words, after sending 25 requests, it will wait for 1 second, then send another 25, etc.
+
+By default, each request to the API contains a batch of 10 documents (
+Batch size
+parameter). Combined with the previous settings, it means that it will send 25 * 10 = 250 rows to the API every second.
+
+This default quota is defined by Amazon. You can request a quota increase, as documented on this
+page.
+
+You may need to decrease the
+Rate limit
+parameter if you envision that multiple recipes will run concurrently to call the API. For instance, if you want to allow 5 concurrent DSS activities, you can set this parameter at 25/5 = 5 requests per second.
+
+The default
+Concurrency
+parameter means that 4
+threads
+will call the API in parallel. This parallelization operates within the API Quota settings defined above. We do not recommend to change this default parameter unless your server has a much higher number of
+CPU cores
+.
+
+Set the Permissions of your preset.
+
+You can declare yourself as Owner of this preset and make it available to everybody, or to a specific group of users.
+
+Any user belonging to one of these groups on your Dataiku DSS instance will be able to see and use this preset.
+
+Voilà! Your preset is ready to be used.
+
+Later, you (or another Dataiku admin) will be able to add more presets. This can be useful to segment plugin usage by user group. For instance, you can create a “Default” preset for everyone and a “High performance” one for your Marketing team, with separate billing for each team.
+
+How to use
+
+Let’s assume that you have a Dataiku DSS project with a dataset containing text data. This text data must be stored in a dataset, inside a text column, with one row for each document.
+
+As an example, we will use the
+Amazon Review dataset for instant videos
+. You can follow the same steps with your own data.
+
+To create your first recipe, navigate to the Flow, click on the
++ RECIPE
+button and access the
+Natural Language Processing
+menu. If your dataset is selected, you can directly find the plugin on the right panel.
+
+Plugin Recipe Creation
+
+Language Detection
+
+Input
+
+Dataset with a text column
+
+Output
+
+Dataset with 5 additional columns
+
+Language code from the API in ISO 639 format
+
+Confidence score of the API from 0 to 1
+
+Raw response from the API in JSON format
+
+Error message from the API if any
+
+Error type (module and class name) if any
+
+Language Detection Output Dataset
+
+Settings
+
+Language Detection Recipe Settings
+
+Fill INPUT PARAMETERS
+
+Specify the
+Text column
+parameter for your column containing text data.
+
+Review CONFIGURATION parameters
+
+The
+API configuration preset
+parameter is automatically filled by the default one made available by your Dataiku admin.
+
+You may select another one if multiple presets have been created.
+
+(Optional) Review ADVANCED parameters
+
+You can activate the
+Expert mode
+to access advanced parameters.
+
+The
+Error handling
+parameter determines how the recipe will behave if the API returns an error.
+
+In “Log” error handling, this error will be logged to the output but it will not cause the recipe to fail.
+
+We do not recommend to change this parameter to “Fail” mode unless this is the desired behaviour.
+
+Sentiment Analysis
+
+Input
+
+Dataset with a text column
+
+Output
+
+Dataset with 8 additional columns
+
+Sentiment prediction from the API (POSITIVE/NEUTRAL/NEGATIVE/MIXED)
+
+Confidence score in the POSITIVE prediction from 0 to 1
+
+Confidence score in the NEUTRAL prediction from 0 to 1
+
+Confidence score in the NEGATIVE prediction from 0 to 1
+
+Confidence score in the MIXED prediction from 0 to 1
+
+Raw response from the API in JSON format
+
+Error message from the API if any
+
+Error type (module and class name) if any
+
+Sentiment Analysis Output Dataset
+
+Settings
+
+Sentiment Analysis Recipe Settings
+
+The parameters are almost exactly the same as the Language Detection recipe (see above).
+
+The only change is the addition of
+Language
+parameters. By default, we assume the
+Text column
+is in English. You can change it to any of the supported languages listed
+here
+or choose “Detected language column” if you have multiple languages. In this case, you will need to reuse the language code column computed by the Language Detection recipe.
+
+Named Entity Recognition
+
+Input
+
+Dataset with a text column
+
+Output
+
+Dataset with additional columns
+
+One column for each selected entity type, with a list of entities
+
+Raw response from the API in JSON format
+
+Error message from the API if any
+
+Error type (module and class name) if any
+
+Named Entity Recognition Output Dataset
+
+Settings
+
+Named Entity Recognition Recipe Settings
+
+The parameters under
+INPUT PARAMETERS
+and
+CONFIGURATION
+are almost the same as the Sentiment Analysis recipe (see above). The one addition is:
+
+Entity types:
+select multiple among this
+list
+
+Under
+ADVANCED
+with
+Expert mode
+activated, you have access to an additional parameter:
+
+Minimum score:
+increase from 0 to 1 to filter results which are not relevant. Default is 0 so that no filtering is applied.
+
+Key Phrase Extraction
+
+Input
+
+Dataset with a text column
+
+Output
+
+Dataset with additional columns
+
+Two columns for each key phrase ordered by confidence (see
+Number of key phrases
+parameter)
+
+Key phrase (1-4 words from the input text)
+
+Confidence score in the key phrase
+
+Raw response from the API in JSON format
+
+Error message from the API if any
+
+Error type (module and class name) if any
+
+Key Phrase Extraction Output Dataset
+
+Settings
+
+Key Phrase Extraction Recipe Settings
+
+The parameters under
+INPUT PARAMETERS
+and
+CONFIGURATION
+are almost the same as the Sentiment Analysis recipe (see above). The one addition is:
+
+Number of key phrases
+parameter: how many key phrases to extract by decreasing order of confidence score. The default value extracts the Top 3 key phrases.
+
+Putting It All Together: Visualization
+
+Thanks to the output datasets produced by the plugin, you can create
+charts
+to analyze results from the API. For instance, you can:
+
+filter documents to focus on one language
+
+analyze the distribution of sentiment scores
+
+identify which entities are mentioned
+
+understand what are the key phrases used by reviewers
+
+After crafting these charts, you can share them with business users in a
+dashboard
+such as the one below:
+
+Example Dashboard Analyzing Amazon product reviews with the Amazon Comprehend API
+
+Happy natural language processing!
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Amazon Comprehend NLP.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,271 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/starplex
+page path  : /cookbook/showcase/starplex
+captured   : 2026-01-25 03:50:42 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_starplex__2f8bb1d4.html.gz
+========================================================================
+
+StarPlex | AI-Powered Startup Intelligence Platform - Perplexity
+
+StarPlex | AI-Powered Startup Intelligence Platform - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+StarPlex | AI-Powered Startup Intelligence Platform
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+Features
+Prerequisites
+Installation
+Configuration
+Usage
+How StarPlex Uses Perplexity Sonar API
+Code Explanation
+Links
+Community Showcase
+StarPlex | AI-Powered Startup Intelligence Platform
+Copy page
+An AI-powered startup intelligence platform that helps entrepreneurs validate their business ideas and find the right resources to succeed
+Copy page
+StarPlex
+is an AI-powered startup intelligence platform that helps entrepreneurs validate their business ideas and connect with the resources they need to succeed. Powered primarily by
+Perplexity Sonar Pro
+, it features an interactive
+3D globe interface
+as its main UI. Simply enter your startup idea, and watch as the AI engine analyzes and visualizes insights directly on the globe—mapping out competitors, markets, demographics, VCs, and potential co-founders across the world in real-time.
+
+​
+Features
+
+Market Validation Analysis
+with AI-proof scoring, market cap estimation, and growth trend analysis
+
+Interactive 3D Globe Interface
+for visualizing global startup intelligence data
+
+Competitor Research
+with threat scoring and competitive landscape mapping
+
+VC & Investor Matching
+based on investment thesis and portfolio alignment
+
+Co-founder Discovery
+with compatibility scoring and expertise matching
+
+Demographic Research
+with heatmap visualization of target audience locations
+
+AI Pitch Deck Generation
+creating investor-ready presentations
+
+Context-Aware Chatbot
+with RAG integration across all research data
+
+​
+Prerequisites
+
+Node.js 18+ and npm
+
+Python 3.8+ and pip
+
+Perplexity API key (Sonar Pro)
+
+Mapbox token and SERP API key
+
+​
+Installation
+
+Copy
+Ask AI
+# Clone the repository
+
+git
+clone
+https://github.com/JerryWu0430/StarPlex.git
+
+cd
+StarPlex
+
+# Backend setup
+
+cd
+backend
+
+pip
+install
+-r
+requirements.txt
+
+# Frontend setup
+
+cd
+../frontend
+
+npm
+install
+
+​
+Configuration
+
+Create
+.env
+file in the backend directory:
+
+Copy
+Ask AI
+PERPLEXITY_API_KEY
+=your_perplexity_api_key
+
+MAPBOX_TOKEN
+=your_mapbox_token
+
+SERPAPI_KEY
+=your_serpapi_key
+
+​
+Usage
+
+Start Backend
+:
+
+Copy
+Ask AI
+cd
+backend
+
+python
+main.py
+
+Start Frontend
+:
+
+Copy
+Ask AI
+cd
+frontend
+
+npm
+run
+dev
+
+Access Application
+: Open
+http://localhost:3000
+and enter your startup idea
+
+Explore Intelligence
+: Use the 3D globe to visualize competitors, VCs, demographics, and co-founders
+
+Generate Assets
+: Create pitch decks and chat with the AI assistant about your analysis
+
+​
+How StarPlex Uses Perplexity Sonar API
+
+StarPlex leverages Perplexity’s Sonar API through a
+multi-module intelligence architecture
+:
+
+Market Analysis Engine
+
+Uses Sonar Pro for comprehensive market validation, combining Google Trends data with AI analysis to generate market cap estimates, AI-disruption scores, and growth projections with structured JSON outputs.
+
+Competitor Intelligence
+
+Employs multiple concurrent Sonar queries to identify competing companies, funding status, and threat levels. Each competitor receives a 1-10 threat score with detailed competitive positioning analysis.
+
+VC & Co-founder Matching
+
+Leverages Sonar’s real-time web knowledge to find relevant investors and potential co-founders, scoring matches based on investment thesis alignment, expertise fit, and geographic proximity.
+
+Context-Aware Business Assistant
+
+Implements RAG (Retrieval-Augmented Generation) by feeding all research data into Sonar conversations, creating a knowledgeable startup advisor that can answer questions about market positioning, competitive threats, and strategic decisions.
+
+Geographic Intelligence
+
+Combines Sonar’s demographic insights with Mapbox geocoding to create interactive heatmaps showing where target audiences are concentrated globally.
+
+​
+Code Explanation
+
+Backend
+: Python FastAPI with AsyncIO for concurrent Perplexity API calls across multiple analysis modules
+
+Frontend
+: Next.js with React 19, featuring Cobe for 3D globe visualization and Mapbox GL for interactive mapping
+
+AI Integration
+: Multi-model Perplexity strategy using Sonar Pro for complex analysis and Sonar for faster queries
+
+Data Pipeline
+: Intelligent caching, structured JSON responses, and real-time streaming for immediate user feedback
+
+Visualization
+: Dynamic data binding between Perplexity insights and interactive globe/map interfaces
+
+​
+Links
+
+GitHub Repository
+
+Live Demo
+
+Devpost Submission
+
+Was this page helpful?
+Yes
+No
+TruthTracer | AI-Powered Misinformation Detection Platform
+Previous
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Next
+⌘
+I
+x
+discord
+website
+Powered by

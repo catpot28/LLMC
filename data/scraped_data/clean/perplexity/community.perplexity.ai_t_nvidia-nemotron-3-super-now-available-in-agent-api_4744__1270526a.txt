@@ -1,0 +1,156 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/nvidia-nemotron-3-super-now-available-in-agent-api/4744
+page path  : /t/nvidia-nemotron-3-super-now-available-in-agent-api/4744
+captured   : 2026-04-12 11:46:25 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_nvidia-nemotron-3-super-now-available-in-agent-api_4744__1270526a.html.gz
+========================================================================
+
+NVIDIA Nemotron 3 Super Now Available in Agent API - Announcements - Perplexity API Platform Forum
+
+NVIDIA Nemotron 3 Super Now Available in Agent API - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+NVIDIA Nemotron 3 Super Now Available in Agent API
+
+Announcements
+
+Kesku
+
+March 13, 2026, 11:15am
+
+1
+
+NVIDIA’s Nemotron 3 Super is now available in Perplexity, Agent API, and Computer.
+
+img_nemotron.jpg
+1200×801 45.5 KB
+
+from perplexity import Perplexity
+
+client = Perplexity()
+response = client.responses.create(
+model="nvidia/nemotron-3-super-120b-a12b",
+input="Explain the tradeoffs of sparse vs dense retrieval."
+)
+print(response.output_text)
+
+Available via the Agent API alongside Sonar, GPT-5.4, Gemini 3.1 Pro, Claude Sonnet 4.6, Claude Opus 4.6, and Grok 4.20.
+
+Docs:
+Agent API Models
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+135
+
+April 7, 2026
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+134
+
+April 7, 2026
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+110
+
+November 3, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Perplexity Search API on Vercel AI Gateway
+
+Announcements
+
+0
+
+2
+
+January 15, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

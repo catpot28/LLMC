@@ -1,0 +1,331 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/deep-research-api-response-content-is-cut-off-unexpectedly-while-having-finish-reason-stop/468
+page path  : /t/deep-research-api-response-content-is-cut-off-unexpectedly-while-having-finish-reason-stop/468
+captured   : 2026-01-21 23:05:53 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_deep-research-api-response-content-is-cut-off-unexpectedly-while-having-finish-reason-stop_468__34ce4e75.html.gz
+========================================================================
+
+Deep Research API response content is cut off unexpectedly while having finish reason "stop" - Bug Reports - Perplexity API Platform Forum
+
+Deep Research API response content is cut off unexpectedly while having finish reason "stop" - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Deep Research API response content is cut off unexpectedly while having finish reason "stop"
+
+Bug Reports
+
+yigiterol
+
+June 6, 2025, 11:41am
+
+1
+
+Describe the Bug
+
+I’m testing deep research model and realised the response content is cut off. Finish reason is “stop” and max_tokens is set to 10000, in the response, total_tokens is just 2230, yet the output text is cut in half. I’ve attached the log containing both request and the response payloads.
+
+Note: This is a request/response type fetch call, I can’t use stream.
+
+Expected Behavior
+
+Response content to be in full.
+
+Actual Behavior
+
+Response content is cut off.
+
+Steps to Reproduce
+
+Call the API with the following request:
+
+Observe the unexpected behavior.
+
+API Request & Response (if applicable)
+
+Logs attached
+
+Environment
+
+Using
+https://api.perplexity.ai/chat/completions
+endpoint and sonar-deep-research model
+
+Logs or Screenshots (if applicable)
+
+{
+"requestPayload.max_tokens": 10000,
+"requestPayload.messages": "[{\"role\":\"system\",\"content\":\"Provide your answer in 10000 tokens or less. Be precise and concise.\"},{\"role\":\"user\",\"content\":\"You are a McKinsey research expert. Generate a detailed strategic intelligence report focused on the following scanning themes for the last 12 months, tailored to Fidsy AI & Data Orchestration https://fidsy.com that is a Private Limited Company (Ltd) business, Fidsy is an AI & Data Orchestration platform, operating in the Information primarily, as well as Finance and Insurance, Health Care and Social Assistance, Other Information Services, Professional, Scientific, and Technical Services, Telecommunications sector(s). The purpose is to inform Strategy, Product, Operations, Marketing, Technology of key external developments with relevance to the company's strategy of Privacy-First AI Deployment\\nNo-Code AI Workflow Automation\\nModel-Agnostic Flexibility\\nConversational Business Intelligence\\nScalable Deployment Options\\nIntegration with Existing Tools\\nContinuous Learning and Adaptation and specified goals/ OKRs of Accelerate Customer Adoption of the Platform\\nEnsure Scalable, Privacy-First AI Integrations\\nDeliver Model-Agnostic AI Workflows Seamlessly\\nDrive Product-Led Growth via No-Code Capabilities\\nBuild Strong Ecosystem Integrations.\\r\\n\\r\\nScanning Themes:\\r\\n- The report should cover competition, trending skills, labor market, regulation, market insights, opportunities.\\r\\n- Focus on these regions United Kingdom, United States, European Union, Turkiye.\\r\\n\\r\\nConclude with detailed 3-5 actionable and expert recommendations on how Fidsy AI & Data Orchestration with strategy of Privacy-First AI Deployment\\nNo-Code AI Workflow Automation\\nModel-Agnostic Flexibility\\nConversational Business Intelligence\\nScalable Deployment Options\\nIntegration with Existing Tools\\nContinuous Learning and Adaptation and specified goals/ OKRs of Accelerate Customer Adoption of the Platform\\nEnsure Scalable, Privacy-First AI Integrations\\nDeliver Model-Agnostic AI Workflows Seamlessly\\nDrive Product-Led Growth via No-Code Capabilities\\nBuild Strong Ecosystem Integrations should respond to these findings, as it specifically relates to Strategy, Product, Operations, Marketing, Technology.\\r\\n\\r\\nFormat of Output:\\r\\n\\r\\nTitle: Strategic Insights Report for Fidsy AI & Data Orchestration\\r\\nDate Range Covered: last 12 months\\r\\nSummary Overview:\\r\\n\\t- 5-10 detailed bullet points covering the most important trends or shifts in each theme\\r\\n\\t- Detailed actionable expert recommendations as instructed\\r\\nSectioned Insights by competition, trending skills, labor market, regulation, market insights, opportunities: Each section should include:\\r\\n\\t- 2 to 3 detailed bullet-point insights\\r\\n\\t- Source links (if available)\\r\\n\\t- Suggested implications or “watch points” for the business with an impact rating of High, Medium or Low\"}]",
+"requestPayload.model": "sonar-deep-research",
+"requestPayload.web_search_options.search_context_size": "high",
+"response.choices": "[{\"index\":0,\"finish_reason\":\"stop\",\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay, I need to create a strategic insights report for Fidsy AI & Data Orchestration based on the user's query. Let me start by understanding the requirements. \\n\\nFirst, the user wants a report covering the last 12 months, focusing on competition, trending skills, labor market, regulation, market insights, and opportunities in the UK, US, EU, and Turkey. The company operates in sectors like Finance, Healthcare, Professional Services, etc., and their strategy includes Privacy-First AI, No-Code Automation, Model-Agnostic Flexibility, Conversational BI, Scalable Deployment, Integration, and Continuous Learning. Their goals are accelerating customer adoption, ensuring scalable privacy integrations, delivering model-agnostic workflows, driving product-led growth with no-code, and building ecosystem integrations.\\n\\nI need to structure the report into sections: competition, trending skills, labor market, regulation, market insights, opportunities. Each section should have 2-3 bullet points with sources and implications. Then, provide actionable recommendations for Strategy, Product, Operations, Marketing, Technology.\\n\\nLooking at the search results provided, let me extract relevant information. \\n\\nCompetition: The AI orchestration market is growing rapidly (19.28% CAGR)[9][10]. Tools like Kubeflow, Metaflow, Prefect, Azure Data Factory, SAP Data Intelligence are competitors[1][2]. Also, no-code platforms like H2O.ai, Akkio are rising[3][6]. Implications for Fidsy: Need to differentiate with privacy-first and model-agnostic features.\\n\\nTrending skills: Data orchestration skills are critical for effective data management[7]. The AI skills gap is significant, with only 14% of leaders having the right talent[16]. Implications: Fidsy should invest in training and partnerships.\\n\\nLabor market: High demand for AI skills, especially in the UK and US. Job postings mention no-code AI roles[8]. Shortages in data science and infrastructure management[16]. Implications: Talent acquisition and upskilling are crucial.\\n\\nRegulation: EU AI Act in force since August 2024, categorizing AI risks[13]. UK's proposed AI Bill creating a central AI Authority[14]. Turkey's draft AI law requiring risk assessments[15]. Implications: Compliance is key, especially for privacy-first deployments.\\n\\nMarket insights: No-code AI market expected to reach $4.05B by 2025[3]. Conversational BI adoption rising with NLP integration[4]. AI adoption in Europe growing rapidly, 42% of firms using AI[12]. Implications: Leverage no-code and conversational BI trends.\\n\\nOpportunities: SMEs adopting no-code AI for cost efficiency[3][6]. Privacy-preserving techniques like differential privacy are in demand[17]. Model-agnostic platforms gaining traction for flexibility[18]. Implications: Target SMEs, enhance privacy features, promote model-agnostic strengths.\\n\\nNow, for recommendations. Strategy: Emphasize privacy-first and model-agnostic in marketing. Product: Develop pre-built templates for SMEs and enhance conversational BI. Operations: Establish a compliance hub for regulations. Marketing: Create case studies showcasing compliance and ease of use. Technology: Invest in privacy-preserving tech and expand integrations.\\n\\nI need to ensure all sections are covered, with implications rated high/medium/low. Sources are cited using the provided indices. Avoid lists, use paragraphs. Follow the structure strictly. Make sure recommendations are actionable and tied to the company's OKRs.\\n</think>\\n\\n# Strategic Insights Report for Fidsy AI & Data Orchestration \\n**Date Range Covered:** June 2024 – June 2025 \\n\\n---\\n\\n## Summary Overview \\n1. **AI Orchestration Market Growth**: The global AI orchestration market is projected to grow at 19.28% CAGR, reaching $42.3B by 2033, driven by demand for scalable ML workflows and hybrid cloud solutions[9][10]. \\n2. **Regulatory Acceleration**: The EU AI Act (effective August 2024) and UK’s proposed AI Bill mandate strict compliance for high-risk AI systems, elevating privacy-first deployment from differentiator to necessity[13][14]. \\n3. **No-Code Dominance**: SMEs now account for 47% of no-code AI platform adoption, prioritizing cost-effective workflow automation[3][6]. \\n4. **Skills Crisis**: 61% of enterprises report shortages in AI infrastructure management talent, delaying deployments despite increased budgets[16]. \\n5. **Conversational BI Surge**: 68% of enterprises now piloting NLP-driven analytics tools to democratize data access, with Azure Synapse and Salesforce leading integrations[4][17]. \\n\\n---\\n\\n## Sectioned Insights \\n\\n### **Competition** \\n1. **Vertical-Specific Orchestration Tools**: Competitors like Vue.ai (retail AI workflows) and SynapseML (Azure-integrated big data pipelines) are capturing niche markets, reducing Fidsy’s addressable audience in healthcare and finance[1][20]. \\n - *Implication (High)*: Develop industry-specific workflow templates to counter verticalization. \\n\\n2. **Open-Source Threat**: Apache Airflow dominates 2.2% of the data integration market, with 44% adoption by medium-sized enterprises—direct competition for Fidsy’s orchestration layer[11][20]. \\n - *Implication (Medium)*: Highlight Fidsy’s privacy compliance and model-agnostic advantages vs. Airflow’s code-heavy approach. \\n\\n---\\n\\n### **Trending Skills** \\n1. **Orchestration Engineering Demand**: 53% of UK AI job postings now require Kubeflow/Airflow expertise, with hybrid cloud deployment skills growing at 22% YoY[8][16]. \\n - *Implication (High)*: Partner with AWS/Azure to certify Fidsy-specific training programs. \\n\\n2. **Compliance Literacy Gap**: Only 18% of data engineers demonstrate proficiency in EU AI Act Article 5 risk classifications, creating implementation bottlenecks[13][14]. \\n - *Implication (Medium)*: Launch Fidsy Academy with GDPR/AI Act certification tracks. \\n\\n---\\n\\n### **Labor Market** \\n1. **Turkey’s Talent Pipeline**: Istanbul’s AI developer pool grew 31% in 2024, with 63% fluency in Python-based orchestration tools—a cost-effective hub for Fidsy’s EMEA expansion[15][16]. \\n - *Implication (Low)*: Explore Turkish R&D partnerships to offset UK/US salary costs. \\n\\n2. **Mid-Career Reskilling**: 41% of laid-off FAANG engineers now seeking roles in privacy-preserving AI, aligning with Fidsy’s core tech stack[16][17]. \\n - *Implication (High)*: Target LinkedIn campaigns toward this cohort with “AI Compliance Engineer” roles. \\n\\n---\\n\\n### **Regulation** \\n1. **EU’s Extra-Territorial Reach**: The AI Act applies to non-EU providers if outputs target EU users, requiring Fidsy to implement geofenced data handling by Q1 2026[13][14]. \\n - *Implication (High)*: Preconfigure regional compliance presets in Fidsy’s deployment console. \\n\\n2. **UK’s Ethics Mandates**: The draft AI Bill requires documented impact assessments for public-sector AI contracts—a key growth area for Fidsy’s government clients[14]. \\n - *Implication (Medium)*: Embed automated audit trails into workflow runs. \\n\\n---\\n\\n### **Market Insights** \\n1. **Healthcare’s AI Spend Boom**: 29% of US hospital systems now allocate >15% of IT budgets to no-code clinical workflow tools, prioritizing HIPAA-compliant vendors[3][17]. \\n - *Implication (High)*: Fast-track HITRUST certification for Fidsy’s healthcare module. \\n\\n2. **Generative AI Burnout**: 44% of enterprises scaled back LL\"},\"delta\":{\"role\":\"assistant\",\"content\":\"\"}}]",
+"response.citations": "[\"https://akka.io/blog/ai-orchestration-tools\",\"https://rivery.io/data-learning-center/best-data-orchestration-tools/\",\"https://www.mordorintelligence.com/industry-reports/no-code-ai-platform-market\",\"https://66degrees.com/conversational-bi-transforming-business-intelligence/\",\"https://slashdot.org/software/account-based-orchestration/in-uk/\",\"https://graphite-note.com/top-10-no-code-ai-platforms/\",\"https://www.alooba.com/skills/concepts/data-management/data-orchestration/\",\"https://uk.indeed.com/q-no-code-ai-jobs.html\",\"https://www.imarcgroup.com/ai-orchestration-market\",\"https://scoop.market.us/ai-orchestration-platforms-market-news/\",\"https://enlyft.com/tech/products/apache-airflow\",\"https://www.aboutamazon.eu/news/innovation/ai-adoption-outpaces-early-mobile-phone-uptake\",\"https://en.wikipedia.org/wiki/Artificial_Intelligence_Act\",\"https://kennedyslaw.com/en/thought-leadership/article/2025/the-artificial-intelligence-regulation-bill-closing-the-uks-ai-regulation-gap/\",\"https://www.mofo.com/artificial-intelligence/turkey\",\"https://www.flexential.com/resources/report/2025-state-ai-infrastructure\",\"https://www.cloverinfotech.com/can-genai-be-trusted-why-privacy-first-ai-is-the-key-to-responsible-innovation/\",\"https://calypsoai.com/insights/the-power-of-a-model-agnostic-approach-in-ai-deployment/\",\"https://learn.microsoft.com/en-us/training/modules/continuous-deployment-for-machine-learning/\",\"https://lakefs.io/blog/data-orchestration-tools-2023/\"]",
+"response.created": 1749206401,
+"response.id": "40a708d5-233d-40cf-8c2d-48ae7c338ff8",
+"response.model": "sonar-deep-research",
+"response.object": "chat.completion",
+"response.search_results": "[{\"title\":\"What is AI Orchestration? 21+ Tools to Consider in 2025 - Akka\",\"url\":\"https://akka.io/blog/ai-orchestration-tools\",\"date\":null},{\"title\":\"15 Best Data Orchestration Tools 2025 Compared | Rivery\",\"url\":\"https://rivery.io/data-learning-center/best-data-orchestration-tools/\",\"date\":null},{\"title\":\"No Code AI Platform Market Size & Share Analysis - Growth Trends\",\"url\":\"https://www.mordorintelligence.com/industry-reports/no-code-ai-platform-market\",\"date\":null},{\"title\":\"Conversational BI: Transforming Business Intelligence - 66degrees\",\"url\":\"https://66degrees.com/conversational-bi-transforming-business-intelligence/\",\"date\":null},{\"title\":\"Best Account-Based Orchestration Platforms in the UK - Slashdot\",\"url\":\"https://slashdot.org/software/account-based-orchestration/in-uk/\",\"date\":null},{\"title\":\"Top 10 No-Code AI Platforms in 2025 - Graphite Note\",\"url\":\"https://graphite-note.com/top-10-no-code-ai-platforms/\",\"date\":null},{\"title\":\"Data Orchestration: Everything You Need to Know When Assessing ...\",\"url\":\"https://www.alooba.com/skills/concepts/data-management/data-orchestration/\",\"date\":null},{\"title\":\"No Code Ai Work, jobs (with Salaries) | Indeed United Kingdom\",\"url\":\"https://uk.indeed.com/q-no-code-ai-jobs.html\",\"date\":null},{\"title\":\"AI Orchestration Market Size, Industry Analysis by 2033\",\"url\":\"https://www.imarcgroup.com/ai-orchestration-market\",\"date\":null},{\"title\":\"AI Orchestration Platform Market Experiencing Growth at 23.7%\",\"url\":\"https://scoop.market.us/ai-orchestration-platforms-market-news/\",\"date\":null},{\"title\":\"Companies using Apache Airflow and its marketshare - Enlyft\",\"url\":\"https://enlyft.com/tech/products/apache-airflow\",\"date\":null},{\"title\":\"AI adoption outpaces early mobile phone uptake - Amazon Europe\",\"url\":\"https://www.aboutamazon.eu/news/innovation/ai-adoption-outpaces-early-mobile-phone-uptake\",\"date\":null},{\"title\":\"Artificial Intelligence Act - Wikipedia\",\"url\":\"https://en.wikipedia.org/wiki/Artificial_Intelligence_Act\",\"date\":null},{\"title\":\"The Artificial Intelligence (Regulation) Bill: Closing the UK's AI ...\",\"url\":\"https://kennedyslaw.com/en/thought-leadership/article/2025/the-artificial-intelligence-regulation-bill-closing-the-uks-ai-regulation-gap/\",\"date\":null},{\"title\":\"AI Library Turkey | Morrison Foerster\",\"url\":\"https://www.mofo.com/artificial-intelligence/turkey\",\"date\":null},{\"title\":\"2025 State of AI Infrastructure Report - Flexential\",\"url\":\"https://www.flexential.com/resources/report/2025-state-ai-infrastructure\",\"date\":null},{\"title\":\"Can GenAI Be Trusted? Why Privacy-First AI is the Key to ...\",\"url\":\"https://www.cloverinfotech.com/can-genai-be-trusted-why-privacy-first-ai-is-the-key-to-responsible-innovation/\",\"date\":null},{\"title\":\"The Power of a Model-Agnostic Approach in AI Deployment\",\"url\":\"https://calypsoai.com/insights/the-power-of-a-model-agnostic-approach-in-ai-deployment/\",\"date\":null},{\"title\":\"Continuous deployment for machine learning - Training\",\"url\":\"https://learn.microsoft.com/en-us/training/modules/continuous-deployment-for-machine-learning/\",\"date\":null},{\"title\":\"Top 17 Data Orchestration Tools for 2025: Ultimate Review - lakeFS\",\"url\":\"https://lakefs.io/blog/data-orchestration-tools-2023/\",\"date\":null}]",
+"response.usage.citation_tokens": 8405,
+"response.usage.completion_tokens": 1649,
+"response.usage.num_search_queries": 59,
+"response.usage.prompt_tokens": 581,
+"response.usage.reasoning_tokens": 136270,
+"response.usage.total_tokens": 2230,
+"usage.citation_tokens": 8405,
+"usage.completion_tokens": 1649,
+"usage.num_search_queries": 59,
+"usage.prompt_tokens": 581,
+"usage.reasoning_tokens": 136270,
+"usage.total_tokens": 2230
+}
+
+Additional Context
+
+jamesliounis
+
+June 8, 2025, 8:26pm
+
+2
+
+Thanks for sharing this. I wasn’t able to reproduce in this case, it seems like it may have been an isolated issue. However, I would really recommend you simplify your prompt, it seems to be overly complex. And also you seem to be demanding a specific structure so I would also recommend you use our built-in response format filter as opposed to trying to rely on the prompt to do so.
+
+And also you should probably remove the prompt tokens requirement from the system prompt, this may just confuse the model.
+
+--header 'accept: application/json' \
+--header 'content-type: application/json' \
+--header 'Authorization: Bearer pplx-' \
+--data '{
+"model": "sonar-deep-research",
+"messages": [
+{
+"role": "user",
+"content": "You are a McKinsey research expert. Generate a detailed strategic intelligence report focused on the following scanning themes for the last 12 months, tailored to Fidsy AI & Data Orchestration https://fidsy.com that is a Private Limited Company (Ltd) business, Fidsy is an AI & Data Orchestration platform, operating in the Information primarily, as well as Finance and Insurance, Health Care and Social Assistance, Other Information Services, Professional, Scientific, and Technical Services, Telecommunications sector(s). The purpose is to inform Strategy, Product, Operations, Marketing, Technology of key external developments with relevance to the companys strategy of Privacy-First AI Deployment\nNo-Code AI Workflow Automation\nModel-Agnostic Flexibility\nConversational Business Intelligence\nScalable Deployment Options\nIntegration with Existing Tools\nContinuous Learning and Adaptation and specified goals/ OKRs of Accelerate Customer Adoption of the Platform\nEnsure Scalable, Privacy-First AI Integrations\nDeliver Model-Agnostic AI Workflows Seamlessly\nDrive Product-Led Growth via No-Code Capabilities\nBuild Strong Ecosystem Integrations.\r\n\r\nScanning Themes:\r\n- The report should cover competition, trending skills, labor market, regulation, market insights, opportunities.\r\n- Focus on these regions United Kingdom, United States, European Union, Turkiye.\r\n\r\nConclude with detailed 3-5 actionable and expert recommendations on how Fidsy AI & Data Orchestration with strategy of Privacy-First AI Deployment\nNo-Code AI Workflow Automation\nModel-Agnostic Flexibility\nConversational Business Intelligence\nScalable Deployment Options\nIntegration with Existing Tools\nContinuous Learning and Adaptation and specified goals/ OKRs of Accelerate Customer Adoption of the Platform\nEnsure Scalable, Privacy-First AI Integrations\nDeliver Model-Agnostic AI Workflows Seamlessly\nDrive Product-Led Growth via No-Code Capabilities\nBuild Strong Ecosystem Integrations should respond to these findings, as it specifically relates to Strategy, Product, Operations, Marketing, Technology.\r\n\r\nFormat of Output:\r\n\r\nTitle: Strategic Insights Report for Fidsy AI & Data Orchestration\r\nDate Range Covered: last 12 months\r\nSummary Overview:\r\n\t- 5-10 detailed bullet points covering the most important trends or shifts in each theme\r\n\t- Detailed actionable expert recommendations as instructed\r\nSectioned Insights by competition, trending skills, labor market, regulation, market insights, opportunities: Each section should include:\r\n\t- 2 to 3 detailed bullet-point insights\r\n\t- Source links (if available)\r\n\t- Suggested implications or \"watch points\" for the business with an impact rating of High, Medium or Low"
+}
+]
+}'
+
+Justin
+
+August 13, 2025, 3:19am
+
+3
+
+I’m repeatedly running into the same issue… I’ve tried every combination of parameters I can think of and have repeatedly simplified (and elaborated) my prompt. It gets cut off about 1/4 times.
+
+Sample request and response:
+
+https://mew-io-tmp.s3.amazonaws.com/perplexity/2025-08-13T02-50-19-410Z_async-job-create_sonar-deep-research_deep-research-guide-to-grad-school-recommendation-letters-section-3.json
+
+https://mew-io-tmp.s3.amazonaws.com/perplexity/2025-08-13T02-52-07-342Z_deep-research-structured-completed_sonar-deep-research_deep-research-guide-to-grad-school-recommendation-letters-section-3.json
+
+vikvang
+
+August 14, 2025, 10:38pm
+
+4
+
+Hey Justin! It seems like you didn’t set the
+max_tokens
+parameter in your previous request. Do you mind trying again?
+
+I would also consider using the
+`search_domain_filter`
+instead of directly passing in sites to allow/disallow in the user prompt. See this guide here:
+Search Domain Filter Guide - Perplexity
+
+1 Like
+
+Justin
+
+August 14, 2025, 10:56pm
+
+5
+
+@vikvang
+Thank you for the reply!
+
+I did try using
+max_tokens
+, but I couldn’t get the right length response. It would either be cut off too short, or it would end up excessively long with duplicate information.
+
+The param
+search_domain_filter
+seems helpful, but I have more than 10 domains to exclude. Adding it to the prompt doesn’t filter out everything, but it had pretty good success.
+
+I’ve made progress by making individual queries for each subpoint in my outline and stitching them together manually. The final output is reasonable, but the deep research model seems to go a little further, and I would love to use it if possible.
+
+I appreciate the tips! Let me know if you have any other thoughts~
+
+vikvang
+
+August 14, 2025, 10:58pm
+
+6
+
+Do you mind sharing the exact queries that you have been using? Will attempt to reproduce on my end and debug anything that may come up!
+
+Justin
+
+August 14, 2025, 11:18pm
+
+7
+
+I have unfortunately deleted my logs when I switched my approach. I’m against a deadline so I don’t have much more time for exploration now, but if I return to this I am happy to share more.
+
+SuitToSweats
+
+October 14, 2025, 6:04am
+
+8
+
+Did anyone resolve this? It’s definitely an issue on the Perplexity API end.
+
+Does the max_tokens relate to the total tokens including sources processing etc? Or just the final response. But more importantly - max_tokens being 150k in my setting still cuts the report off midway after 7,084 words, 50,442 characters and about 10.2k tokens.
+
+IMG_8483
+1920×2560 485 KB
+
+Mikhail_Shunin
+
+October 18, 2025, 10:16am
+
+9
+
+I have the same issue. Do you resolve this?
+
+SuitToSweats
+
+October 18, 2025, 10:50am
+
+10
+
+Going back and forth with the team over email. Will revert once they’ve resolved it / given an update. But apparently the API engineering team are working on a fix.
+
+3 Likes
+
+Mikhail_Shunin
+
+October 18, 2025, 3:11pm
+
+11
+
+thanks! can you reply me again when problem will be fixed?
+
+Adam.d.developer
+
+October 23, 2025, 7:03pm
+
+12
+
+Same issue here and does seem to occur around 1/4 times
+
+Shiva_Shiva
+
+October 24, 2025, 12:42pm
+
+13
+
+mr_robot
+
+October 30, 2025, 4:15pm
+
+14
+
+Same issue here. Happens almost every second request.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+When calling the sonar-deep-research model, the output report is always truncated and cannot be used normally.
+
+General
+
+sonar-deep-research
+
+,
+
+search-api
+
+2
+
+120
+
+October 22, 2025
+
+Pereplexity Deep Research Report Cut-Off Midway
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+3
+
+98
+
+October 22, 2025
+
+What is the max output length for each model type?
+
+General
+
+sonar-reasoning
+
+0
+
+33
+
+November 16, 2025
+
+Deep Research API - Inconsistent Output Formatting (50% Success Rate)
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+89
+
+November 6, 2025
+
+Sonar-deep-search do not completes the answers to the questions and truncates the output
+
+General
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+0
+
+54
+
+November 11, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

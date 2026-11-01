@@ -1,0 +1,209 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/urls-with-reserved-characters-throws-error-in-search-domain-filter/3498
+page path  : /t/urls-with-reserved-characters-throws-error-in-search-domain-filter/3498
+captured   : 2026-02-07 08:04:43 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_urls-with-reserved-characters-throws-error-in-search-domain-filter_3498__f34163ec.html.gz
+========================================================================
+
+URLs with reserved characters throws error in search_domain_filter - Bug Reports - Perplexity API Platform Forum
+
+URLs with reserved characters throws error in search_domain_filter - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+URLs with reserved characters throws error in search_domain_filter
+
+Bug Reports
+
+sonar
+
+mulvad
+
+January 13, 2026, 5:47pm
+
+1
+
+Describe the Bug
+
+If I pass this URL in search_domain_filter:
+https://seinfeld.fandom.com/wiki/The_Seinfeld_Chronicles
+the
+https://api.perplexity.ai/chat/completions
+works fine. If I instead use this URL:
+https://en.wikipedia.org/wiki/The_Stake_Out_(Seinfeld)
+I get this error: {“error”:{“message”:“Validation error: search_domain_filters must be a valid domain name, but got
+https://en.wikipedia.org/wiki/The_Stake_Out\_%2528Seinfeld%2529",“type”:“invalid_search_domain_filter”,"code
+”:400}}
+
+Expected Behavior
+
+The URL would work as other URLs work
+
+Actual Behavior
+
+The error as described above.
+
+Steps to Reproduce
+
+Call the API with the following request: As described above
+
+Observe the unexpected behavior.
+
+mulvad
+
+January 22, 2026, 11:44pm
+
+3
+
+Here is an example of two similar Perplexity API queries: one that works successfully and one that fails due to a validation error in the
+search_domain_filter
+field.
+
+Working Query
+
+The following query executes successfully:
+
+curl --location 'https://api.perplexity.ai/chat/completions' \
+--header 'accept: application/json' \
+--header 'content-type: application/json' \
+--header "Authorization: Bearer $SONAR_API_KEY" \
+--data '{
+"model": "sonar",
+"messages": [
+{
+"role": "user",
+"content": "Give a short summary of Seinfeld episode 1 season 1"
+}
+],
+"search_domain_filter": [
+"https://en.wikipedia.org/wiki/The_Seinfeld_Chronicles",
+"https://www.imdb.com/title/tt0098286/"
+]
+}' | jq
+
+Result:
+
+The query works as expected.
+
+Failing Query
+
+The following query uses a similar structure but fails:
+
+curl --location 'https://api.perplexity.ai/chat/completions' \
+--header 'accept: application/json' \
+--header 'content-type: application/json' \
+--header "Authorization: Bearer $SONAR_API_KEY" \
+--data '{
+"model": "sonar",
+"messages": [
+{
+"role": "user",
+"content": "Give a short summary of Seinfeld episode 2 season 1"
+}
+],
+"search_domain_filter": [
+"https://en.wikipedia.org/wiki/The_Stake_Out_(Seinfeld)",
+"https://www.imdb.com/title/tt0697784/"
+]
+}' | jq
+
+Error Response
+
+The failing query returns the following error:
+
+{
+"error": {
+"message": "Validation error: search_domain_filters must be a valid domain name, but got https://en.wikipedia.org/wiki/The_Stake_Out_(Seinfeld)",
+"type": "invalid_search_domain_filter",
+"code": 400
+}
+}
+
+Note
+
+The failing URL includes parentheses, which may trigger stricter validation.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Search_domain_filter still not working
+
+Bug Reports
+
+sonar-pro
+
+,
+
+search-api
+
+1
+
+38
+
+December 16, 2025
+
+Search_domain_filter issues
+
+Bug Reports
+
+1
+
+232
+
+May 15, 2025
+
+Search_domain_filter not working, getting citations outside my domain list
+
+Bug Reports
+
+4
+
+234
+
+May 15, 2025
+
+[SOLVED] Search API suddenly stops returning results when using search_domain_filter=["sec.gov"]
+
+Bug Reports
+
+search-api
+
+1
+
+59
+
+November 8, 2025
+
+Search_domain_filter unable to crawl sap.com or help.sap.com
+
+Bug Reports
+
+sonar
+
+3
+
+247
+
+August 7, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

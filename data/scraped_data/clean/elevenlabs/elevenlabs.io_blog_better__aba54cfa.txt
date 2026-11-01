@@ -1,0 +1,178 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/better
+page path  : /blog/better
+captured   : 2026-03-15 12:12:25 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_better__aba54cfa.html.gz
+========================================================================
+
+Better leverages ElevenAgents to make AI assisted loans accessible
+
+Better leverages ElevenAgents to make AI assisted loans accessible
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Go to app
+Sign up
+Sign up
+Blog
+ElevenAgents Stories
+Better leverages ElevenAgents to build Betsy and make AI assisted loans accessible
+Last updated
+Mar 14, 2026
+•
+7 minutes reading time
+Authors
+Lauren Rothwell
+, Growth
+Doubling lead-to-lock conversion rate and reducing origination costs by 41%.
+On this page
+Introduction
+Mortgage origination is time-intensive and requires licensed advisors
+Who is Betsy?
+Why ElevenLabs
+How financial institutions can benefit from the Tinman AI and ElevenLabs stack
+Impact and results
+What’s next
+Learn More
+Contact Sales
+Better is an AI-native mortgage lender that has funded over $110 billion in loan volume powered by its proprietary mortgage and home equity platform, Tinman. Its operation runs the Tinman AI Platform, Better’s full stack mortgage platform that stores all loan application facts in one comprehensive data structure. In June 2025, Better adopted ElevenAgents to extend Tinman’s digital mortgage workflows through Betsy, the first voice-based AI loan assistant built for the mortgage industry. Betsy uses a professionally licensed, consented cloned voice so every interaction stays on brand.
+Unmute
+Mortgage origination is time-intensive and requires licensed advisors
+Mortgage origination requires state-licensed consultants whose time is scarce and costly. Much of that time is consumed by repetitive qualification calls, outbound dialing, and follow-ups. Those servicing costs must be recovered in the economics of origination and ultimately influence the mortgage rates that can be offered.
+For most financial institutions, the biggest obstacle is fragmented systems: eligibility, pricing, and servicing data sit across multiple LOS, CRM, and internal tools. Because their data is scattered across multiple point solutions, they often struggle to deploy AI in a meaningful way across their mortgage operations. Tinman was built to solve this fragmentation issue: the platform acts as a unified system connecting these tools through a governed context graph.
+Who is Betsy?
+Betsy is the generative AI component layered on top of Tinman and is able to access its proprietary loan engine. Originally, Betsy was only able to tap into a full mortgage application and answer mortgage application inquiries through a chat function.
+Using ElevenAgents, Better has programmed Betsy to verbally communicate with borrowers and streamline the mortgage application process through a voice agent. Credit pulls, pricing, and rate locks can be initiated by voice through ElevenLabs, with Tinman executing each step and returning the results. Controls are explicit: pricing and eligibility are computed by Tinman and communicated by the agent, with no unsanctioned decisions. Regulated steps - including credit pulls, locking, authentication, and transfers to humans - require consent and follow state licensing requirements.
+Orchestration runs inside Better’s environment via an MCP-based multi-agent system connected to Tinman tools. Calls reach a single public ElevenAgents endpoint, while internal agent switching and tool execution happen within Better’s stack. The design keeps determinations in Tinman and uses ElevenLabs Agents as the controlled voice interface.
+On the consumer side, Better uses Tinman and ElevenAgents to run an AI voice-based loan assistant that completes eligibility checks, pricing, and rate locks over the phone. By shifting repetitive servicing work from licensed consultants to the agent, Better lowers its cost to originate and passes that efficiency into more competitive rates for borrowers. Tinman’s scenario math helps increase approval rates by exploring options that human loan officers would not have time to compute, while the cloned “Betsy” voice delivers a consistent, natural experience across every conversation.
+ElevenAgents has helped us to build the first AI voice-based loan assistant of its kind for the mortgage industry. By layering Betsy's voice on top of the Tinman platform, we’ve been able to 2x our lead-to-lock conversion over the last year. Betsy allows us to approve more borrowers, and move them through the mortgage experience while maintaining consistency with Better’s brand.
+- Vishal Garg, CEO, Better
+Listen to the experience
+(snippet of simulated call, no real customer data):
+00:00
+/
+00:00
+Why ElevenLabs
+Better initially launched its voice offering using a Speech to Speech model, but chose to move to a pipeline stack combining Speech to Text, an LLM, and Text to Speech with ElevenAgents to achieve a more natural, lower latency experience with better control and reliability.
+Another key aspect of Better’s decision to choose ElevenLabs as its conversational agent partner was the platform’s stability under high tool-call volume, with each customer conversation potentially triggering dozens of Tinman tool calls. For financial services, where each interaction spans multiple systems and regulatory steps, this level of stability is a prerequisite, not a nice to have.
+ElevenLabs gives us the control and reliability we need to handle over 100,000 monthly mortgage conversations, each triggering dozens of Tinman tasks. We needed a platform built for stability at enterprise scale.
+- Cory Hayden, AI Product Manager, Better
+Better and its Tinman AI partners also needed unique brand voices for their agents. ElevenLabs voice cloning technology enabled professionally licensed, consented clones of contracted voice actors to serve as the agents’ voices so every interaction felt natural and reflected each lender’s brand as intended.
+How financial institutions can benefit from the Tinman AI and ElevenLabs stack
+Beyond Better’s consumer offering, the same Tinman and ElevenAgents stack is available to mortgage lenders, banks, credit unions, and fintechs that leverage Tinman’s SaaS platform. Mortgages are traditionally a broken process - often made up of eight different systems and 28 different people involved in a single journey. Tinman centralizes the knowledge base, rules, pricing, and workflows in one place so partners can launch branded voice agents that originate more mortgages end to end without the need to build their own agent orchestration or integrations into mortgage systems.
+Tinman AI runs the same balance-sheet optimization logic Better uses internally so partners can offer highly competitive rates, consolidate existing debt, and win competitors’ customers by paying off other loans into a single, better-structured mortgage.
+When our partners plug into Tinman AI and ElevenAgents, they can increase their origination volume and approve more borrowers while maintaining their current headcount. When there’s no need to increase operational overhead, they win against other lenders in the space by creating a competitive advantage: offering the most optimized rates to their borrowers.
+- Vishal Garg, CEO, Better
+Impact and results
+ElevenAgents powers nearly
+100,000 monthly calls
+for Better,
+automating 35.5% of mortgage inquiries end to end
+. In 2025, Betsy placed 1.89 million outbound and inbound phone calls
+saving our loan officers over 1,666 hours of human time each month
+.
+These time savings have compounded across multiple teams, and reduced the number of calls Better’s loan officers must make to follow-up with borrowers to complete rote tasks. Instead, Better loan officers can now dedicate their time to building trust, solving complex cases, and helping borrowers make meaningful financial decisions.
+For Better.com’s consumer business, automation has:
+Reduced average cost to originate by 41%
+Increased lead-to-lock conversion by 100% in 2025
+Enabled more competitive borrower rates by passing operational efficiency into pricing.
+By shifting routine conversations and outreach to voice automation, licensed consultants and bank staff focus on higher-value advisory work, while borrowers and partners benefit from faster decisions and better economics.
+What’s next
+Better will expand agent-led outbound coverage across new states and acquisition sources, trigger reactivation when market rates change, and route qualified interest to state-licensed consultants. In addition, Better plans expand the AI voice-based agents capabilities to include operational assistance that will help borrowers beyond rate lock. By giving agents the ability to help assist borrowers complete tasks required to fund their loan and making outbound calls to assist borrowers in hitting key timelines to finish their loan, they’ll begin to play a role in the mortgage experience from rate lock to funding. The objective is to keep shifting routine mortgage work to agents, compressing servicing costs to provide more competitive pricing for borrowers.
+On the SaaS platform side, Better plans to extend Tinman AI-powered voice agents to more partners, enabling them to launch branded voice loan officers of their own without rebuilding mortgage orchestration to achieve the same operational and cost-savings efficiencies that Better has been able to actualize in their operations.
+Disclaimer: All regulated actions are performed with borrower consent and in compliance with state licensing and federal mortgage regulations, with licensed advisors engaged where required. Results described are based on internal analyses and may vary depending on borrower profile, market conditions, and loan characteristics.
+Explore articles by the ElevenLabs team
+ElevenAgents Stories
+ElevenAgents Stories
+Revolut selects ElevenLabs Agents to bolster customer support
+Reducing time to ticket resolution by 8x with multilingual conversational agents.
+ElevenAgents Stories
+ElevenAgents Stories
+Deliveroo partners with ElevenLabs to enhance rider and restaurant experience
+Enhancing rider onboarding and providing restaurants with richer operational insights.
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+ElevenAgents
+Voice Agents
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Cookie Settings
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+English
+English
+Svenska
+Polski
+Português
+日本語
+한국어
+हिन्दी
+Español
+Français
+Deutsch
+Italiano
+简体中文

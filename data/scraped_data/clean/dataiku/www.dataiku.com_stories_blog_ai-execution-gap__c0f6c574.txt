@@ -1,0 +1,292 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/ai-execution-gap
+page path  : /stories/blog/ai-execution-gap
+captured   : 2026-06-12 05:09:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_ai-execution-gap__c0f6c574.html.gz
+========================================================================
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+
+Request demo
+
+Start Trial
+
+AI Governance & Architecture
+
+Reports & Guides
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+May 27, 2026
+
+4 min read
+
+/
+
+Julia Berman
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+CEOs have made a big bet. According to Dataiku's
+"Global AI confessions report: CEO edition 2026,
+" based on a new Dataiku/Harris Poll survey of 900 enterprise CEOs worldwide, 80% of CEOs say their role will be at risk if their company fails to deliver measurable business gains from AI by the end of 2026. In fact, 87% say they would stake their job on delivering measurable results from their AI program.
+
+That is conviction at the highest level. It’s also a commitment to outcomes that depend on infrastructure most enterprises have yet to build.
+
+In the same report, over three quarters (76%) believe their organization is overly exposed to operational or strategic risk due to reliance on too few AI vendors. Nearly two-thirds (65%) say they worry more about over-investing in AI amid intense vendor competition and no clear market leader. When asked what matters most for AI success, CEOs rank
+governance
+(39%) ahead of people (34%) and
+orchestration
+(28%) — a clear signal that control, versus capability, is now the limiting factor.
+
+This is the third installment in our series on the CEO confessions report. The first piece looked at the
+accountability gap
+between CEOs who own AI strategy and the CIOs making most of the decisions. The second examined the
+trust paradox
+between the AI CEOs are willing to credit and the AI they actually let act. This piece focuses on the gap between them: the execution layer, where strategy either becomes outcomes or quietly stalls.
+
+Speed is no longer the constraint
+
+For two years, the dominant question in enterprise AI was how fast can we move. In 2026, that question evolves.
+
+AI investments are directly tied to valuation: 80% of CEOs say their company's AI strategy and execution is very important to investors. Revenue growth has emerged as a leading measure of AI success, rising from 16% in 2025 to over a quarter (28%) in 2026.
+
+But scaling AI faster is no longer the problem CEOs are trying to solve. Eighty-three percent of CEOs say they are confident their organization will deploy AI agents in full production in 2026. CEOs report AI influencing or informing, at some level, up to an average of 40 business decisions per year. That means adoption is happening.
+
+What's missing is the operating layer underneath it. Pricing models remain opaque. Consumption patterns are unpredictable. Plus, as the report notes, organizations are scaling AI faster than they can standardize it. That is the execution gap.
+
+Read the full "Global AI confessions report: CEO edition 2026"
+
+Explore all the data
+
+Vendor exposure is structural
+
+The 76% over-exposure figure points to something deeper than concentration risk.
+
+When AI is delivered through a small number of model providers, infrastructure platforms, and application vendors, every decision flowing through those systems inherits their constraints. Pricing changes flow through. Capability changes flow through. Outages flow through. The CEO who has tied their tenure to AI outcomes is now also tied to the roadmaps and economics of a handful of external companies.
+
+CEOs feel this directly. Even though 89% of CEOs say they could keep core functions running if key AI systems were disrupted, the simultaneous over-exposure concern suggests that confidence is more aspirational than tested. The deeper AI becomes embedded in operations, the harder it becomes to absorb a failure in any one part of the stack.
+
+This is why vendor selection has stopped being a technical decision. Two-thirds (67%) of CEOs say they have questioned or challenged AI vendor or platform decisions made by their CIO or other team members in the past year, including nearly a quarter who have done so multiple times. CEOs are stepping in because the stakes of vendor choice now reach the executive layer directly.
+
+The answer is not to pick a single vendor more carefully. It's to build an operating model that’s independent of any single vendor being the right one.
+
+Orchestration is the layer that makes the bet defensible
+
+Orchestration is one of the three priorities CEOs rank for AI success, alongside governance and people. It’s also the one most likely to be misunderstood.
+
+Orchestration here means the coordination layer that sits above models, platforms, and infrastructure providers, enabling teams to build, deploy, and manage AI across a multi-vendor environment with consistent oversight. It’s what allows an enterprise to swap a model, redirect a workload, or apply a new governance policy without rebuilding the systems that depend on it.
+
+In a market with no clear leader, this matters more than vendor selection itself. Those 65% of CEOs worried about over-investing are right to be cautious. No one knows which model providers, which agent frameworks, or which infrastructure choices will look correct in three years. Locking in early is the risk. Building an architecture that can absorb that uncertainty is the response.
+
+Orchestration is also what allows governance and people to function at scale. Governance only works if it can be applied consistently across whatever models and tools the enterprise is using. Without orchestration, both governance and enablement fragment as adoption spreads.
+
+The decision surface is widening
+
+Nearly all CEOs (94%) say low- or no-code tools are critical to scaling AI creation across the workforce. That expands the number of people making AI decisions every day.
+
+Shadow AI is already pervasive. Ninety-six percent of CEOs believe employees are using generative AI tools without approval, and 42% estimate that more than half of their workforce is doing so. That tracks with Dataiku's earlier research: 91% of data leaders suspect employees are using generative AI tools without notice or permission and over half of CIOs (54%) report they discovered employees using unsanctioned AI tools, apps, or platforms to do work tasks or projects.
+
+When that many people are making AI choices, governance cannot live in a policy document. It has to live in the systems people actually use. That’s what orchestration delivers in practice: a layer where access controls, model selection, data lineage, and approval workflows are part of how work gets done, not something tacked on after the fact.
+
+What CEOs are betting on, and what they need to make it hold
+
+The report describes 2026 as the year AI moved from innovation story to performance mandate. Seventy-seven percent of CEOs believe it is likely that a CEO will be ousted in 2026 due to a failed AI strategy or an AI-driven crisis.
+
+That’s the environment in which the 80% who say their job depends on AI ROI are operating. It explains why the over-exposure figure goes beyond a procurement concern. The two numbers describe the same problem from different angles: CEOs have committed to outcomes that depend on systems they do not yet fully control.
+
+Closing that gap is not about adopting AI more aggressively. Fifty-one percent of CEOs say they have delayed AI initiatives due to regulatory uncertainty, a sharp increase from the prior year (37%). More than half (51%) keep humans in the loop when it comes to making business-critical decisions. Nearly eight in ten (79%) express at least some level of concern that AI agents could expose their organization to legal risk, including 46% who say they are very or extremely concerned. All in all, the work ahead is structural.
+
+The companies that succeed in this next phase will not be the ones that scaled AI the fastest. They will be the ones who built the operating layer that lets AI scale without scaling the risk alongside it.
+
+Download the 2026 CEO confessions survey report
+
+Tags
+
+AI Governance & Architecture
+
+Reports & Guides
+
+Share
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Decision 7 of 7: when AI budgets require measurable proof
+
+Decision 6 of 7: when AI sprawl becomes enterprise risk
+
+The CEO trust paradox: AI confidence vs. control
+
+The AI accountability gap: CEOs own strategy, CIOs carry decisions
+
+You May Also Like
+
+Explore the Blog
+
+AI Governance & Architecture
+
+The AI execution gap: Why orchestration matters more than adoption speed
+
+CEOs have made a big bet. According to Dataiku's "Global AI confessions report: CEO edition 2026," based on a...
+
+May 27, 2026
+
+AI Governance & Architecture
+
+Decision 7 of 7: when AI budgets require measurable proof
+
+This is the seventh installment in our seven-part breakdown of insights from the report, "7 career-making AI...
+
+May 21, 2026
+
+AI Governance & Architecture
+
+Decision 6 of 7: when AI sprawl becomes enterprise risk
+
+This is the sixth installment in our seven-part breakdown of insights from the report, "7 career-making AI...
+
+May 21, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Blog
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Dataiku Customers
+
+Analyst Recognition
+
+Events Calendar
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Dataiku Partners
+
+Partner with Dataiku
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

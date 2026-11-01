@@ -1,0 +1,99 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/multinrc
+page path  : /blog/multinrc
+captured   : 2026-06-07 17:29:50 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_multinrc__0143e719.html.gz
+========================================================================
+
+The Future is Multilingual: A New Evaluation Benchmark | Scale AI
+
+The Future is Multilingual: A New Evaluation Benchmark | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+The Future is Multilingual: Scale's New Evaluation Benchmark
+By
+
+Matthew Siegel
+&
+The Scale Research Team
+·
+July 23, 2025
+·
+5 min read
+Copy Link
+With roughly half the internet in English and major AI labs concentrated in English-speaking countries, LLMs naturally inherit Anglo-centric frameworks and biases. Yes, today's models can converse in dozens of languages, but a critical question remains: Are they truly reasoning within unique cultural contexts, or simply translating concepts? This distinction matters. True multilingual AI should understand and serve diverse cultural contexts authentically, not just translate concepts through a single cultural lens.
+AI’s promise is to provide useful tools that provide opportunities for learning and growth regardless of linguistic or cultural background. To help AI understand and reason with authentic local nuance, researchers at Scale have developed the
+Multilingual Native Reasoning Challenge
+. MultiNRC is the first benchmark of its kind to be constructed natively by speakers of multiple languages, representing a fundamental shift away from the common practice of simply translating existing English problems.
+A Benchmark Built for Native Reasoning
+MultiNRC is built on the premise that true multilingual evaluation requires the deep cultural and linguistic understanding that comes from people expressing concepts in their mother-tongue. It is designed to assess LLMs on more than 1,000 native, linguistic, and culturally grounded reasoning questions written by native speakers of French, Spanish, and Chinese, focusing on four categories that are often missing from other evaluations:
+Language-specific Linguistic Reasoning challenges models to navigate grammatical rules and conventions that simply don't exist in English.
+For example, one French question requires knowing that the word délice (delight) is masculine in the singular and feminine in the plural, a linguistic nuance that cannot be directly translated.
+Wordplay & Riddles tap into the clever and ambiguous use of language unique to a culture, often involving puns or homophones.
+A Chinese question might require answering a riddle with a four-character Chengyu (idiom) , while another French riddle plays on the fact that "mon chien Michel" sounds identical to the landmark "Mont Saint-Michel."
+Cultural/Tradition Reasoning requires models to reason through timelines and behaviors based on local customs, holidays, and ceremonies. This goes beyond simple fact-checking.
+For instance, a Spanish question asks a user to plan travel dates that accommodate both two full weekends and the local holiday Día de la Candelaria.
+Math Reasoning with Cultural Relevance combines calculation with knowledge of cultural systems, currencies, or historical events.
+A question might require applying knowledge of the French 'viager' real estate system and knowing the historical date of the Cannes Film Festival to solve a math problem.
+To ensure MultiNRC truly tests the limits of current AI, the researchers set a high bar: only questions that at least three out of five state-of-the-art models failed to answer correctly made it into the final benchmark. This aim is to both test what models can do and reveal what they cannot.
+Methodology
+First, to ensure MultiNRC presents a genuine challenge to modern AI, the team only included questions that at least three out of five leading LLMs failed to answer correctly. The benchmark was then tested against 14 leading LLMs from all major labs to get a comprehensive view of the current state of multilingual reasoning. To score the results the team used an automated LLM-as-a-judge for evaluation that was validated against human reviewers and found to have an over 95% agreement rate.
+Results
+The results reveal a substantial gap between current multilingual capabilities and true cultural reasoning. Even today's most advanced models struggle significantly, with no model scoring above 50% accuracy, with even the top-performing model (an o3-pro variant) achieving only 49%. Math reasoning with cultural relevance proved to be the most challenging category overall, with models achieving an average accuracy of just 23.3%. Across the three languages tested, Spanish stood out as the most difficult for the models, particularly in the math and wordplay categories.
+However, the benchmark also reveals that performance is not uniform, and different models exhibit unique strengths. For instance, while Gemini-2.5-Pro ranked third overall, it was the top performer on the difficult culturally relevant math problems. In contrast, an o3-pro model demonstrated exceptional capability in the wordplay category, especially on French wordplay questions. This highlights how granular, culturally-aware benchmarks can provide a more informative view of model capabilities.
+The "Translation Paradox"
+To better understand whether language itself is the primary barrier for these reasoning tasks, the researchers conducted a key experiment. They had native speakers create high-quality English translations for the math and cultural reasoning questions to directly compare model performance on the same problem in two different languages. For math problems with cultural relevance, model performance improved substantially when presented with the English translation. In contrast, this improvement vanished for the complex cultural reasoning questions. For these tasks, the performance difference was negligible on average, showing no significant benefit from the English translation.
+The Path to Truly Multilingual AI
+The results from MultiNRC show that to build capable models that are truly multilingual, we need fresh evaluation methods. To accelerate this important work, the full MultiNRC dataset has been made publicly available for all to use on
+Hugging Face
+. The path to building more equitable and intelligent AI requires testing models against the real linguistic and cultural diversity of the world, and MultiNRC is a crucial step in that direction.
+Read the full paper
+here
+.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

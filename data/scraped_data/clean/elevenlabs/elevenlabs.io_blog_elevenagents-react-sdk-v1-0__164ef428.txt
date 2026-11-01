@@ -1,0 +1,541 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/elevenagents-react-sdk-v1-0
+page path  : /blog/elevenagents-react-sdk-v1-0
+captured   : 2026-05-10 02:03:19 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_elevenagents-react-sdk-v1-0__164ef428.html.gz
+========================================================================
+
+ElevenAgents React SDK v1.0 with granular context hooks!
+
+ElevenAgents React SDK v1.0 with granular context hooks!
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Sign up
+Sign up
+Blog
+Product
+ElevenAgents React SDK v1.0
+Last updated
+Mar 27, 2026
+•
+9 minutes reading time
+Authors
+Kræn Hansen
+, Developer Experience Engineer
+ElevenAgents React SDK v1.0: a re-architecture of the JavaScript and React SDK with granular hooks, a unified API across web and React Native, and a stable public API.
+On this page
+Introduction
+Why a new major version
+Different APIs on web and React Native
+Poor render performance
+Fragile upgrades
+What's new
+One API across platforms
+Granular hooks for render performance
+useConversation is still there
+Dynamic client tools
+Stable API surface
+Controlled state
+Smart connection type inference
+Upgrading
+Automated migration with your coding agent
+Updated documentation
+Getting started
+Feedback
+Read the docs
+View on GitHub
+Version 1.0.0 of the ElevenAgents JavaScript and React SDK is now available. This release is a ground-up re-architecture of the
+@elevenlabs/client
+,
+@elevenlabs/react
+, and
+@elevenlabs/react-native
+packages, focused on render performance, a unified API across web and React Native, and a stable public API. It is a breaking change, but the familiar
+useConversation
+hook is preserved, and a coding agent skill is available to automate the upgrade.
+Why a new major version
+Three problems drove this release.
+Different APIs on web and React Native
+React and React Native had different APIs, different feature sets, and different configuration options. Code and knowledge didn't transfer between platforms, and AI coding tools frequently suggested APIs that only existed on one platform. React Native also lacked WebSocket connection mode entirely.
+Internally, this happened because the React Native SDK wrapped a third-party React Native SDK instead of building on
+@elevenlabs/client
+. Features and fixes had to ship twice, and the two platforms drifted further apart with each release.
+Poor render performance
+Any state change (status, mode, mute, volume) re-rendered every component that consumed conversation state. There was no way to subscribe to just the slice you needed. If your component only cared about connection status, it still re-rendered when the mute state changed.
+This was because the SDK used a single context provider spanning all conversation state, with only coarse hooks and callbacks passed through options objects.
+Fragile upgrades
+Upgrading the SDK risked breaking your code. Internal classes like
+Input
+,
+Output
+, and
+Connection
+were part of the public API, and developers relied on raw browser primitives like
+conversation.output.gain.gain.value
+for volume and
+conversation.input.analyser
+for audio visualization. Any internal change could break these access patterns.
+On our side, an inheritance-based class hierarchy made it difficult to fix this incrementally, so a clean break was needed.
+What's new
+One API across platforms
+@elevenlabs/react-native
+now re-exports
+@elevenlabs/react
+with a thin platform strategy layer: around 40 lines of code, down from over a thousand. The same
+ConversationProvider
+, the same hooks, the same methods. Code written for the web works on React Native with only an import path change, knowledge transfers directly between platforms, and AI coding tools no longer hallucinate platform-specific APIs.
+// On React Native, change this import to '@elevenlabs/react-native'.
+
+import
+{
+ConversationProvider,
+useConversationControls,
+useConversationStatus,
+}
+from
+'@elevenlabs/react'
+;
+
+function
+App() {
+
+return
+(
+<ConversationProvider>
+<Agent />
+</ConversationProvider>
+);
+}
+
+function
+Agent() {
+
+const
+{
+startSession
+,
+endSession
+} = useConversationControls();
+
+const
+{
+status
+} = useConversationStatus();
+
+if
+(status ===
+'connected'
+) {
+
+return
+<button onClick={
+endSession
+}>End</button>;
+}
+
+return
+(
+<button onClick={() => startSession({
+agentId
+:
+'agent_7101k5zvyjhmfg983brhmhkd98n6'
+})}>
+
+Start
+
+</button>
+);
+}
+Granular hooks for render performance
+Six new hooks each subscribe to an individual slice of conversation state. Components only re-render when the data they consume changes.
+Hook
+Returns
+Re-renders on
+useConversationControls
+Action methods (startSession, endSession, sendUserMessage, ...)
+Never (stable references)
+useConversationStatus
+status, message
+Connection status changes
+useConversationInput
+isMuted, setMuted
+Mute state changes
+useConversationMode
+mode, isSpeaking, isListening
+Mode changes
+useConversationFeedback
+canSendFeedback, sendFeedback
+Feedback availability changes
+useConversationClientTool
+(registers a tool handler)
+Never
+A status indicator that previously re-rendered on every state change now only re-renders when the connection status itself changes:
+import
+{ useConversationStatus }
+from
+'@elevenlabs/react'
+;
+
+function
+StatusBadge() {
+
+const
+{
+status
+} = useConversationStatus();
+
+return
+<span>{status}</span>;
+}
+useConversation
+is still there
+The familiar
+useConversation
+hook still exists and returns the same shape of data: status, mode, mute state, and all control methods. It is a convenience wrapper over the granular hooks described above. Existing users can migrate to
+ConversationProvider
++
+useConversation
+as a first step, then adopt granular hooks incrementally where render performance matters.
+import
+{ useConversation }
+from
+'@elevenlabs/react'
+;
+
+function
+Agent() {
+
+const
+{
+status
+,
+isSpeaking
+,
+isMuted
+,
+setMuted
+,
+startSession
+,
+endSession
+} = useConversation();
+
+// Same API shape as before, just requires a ConversationProvider ancestor.
+
+}
+Dynamic client tools
+useConversationClientTool
+lets React components register tools that the agent can invoke. Tools are tied to component lifecycle: they register on mount, unregister on unmount, and always use the latest closure value.
+import
+{ useConversationClientTool }
+from
+'@elevenlabs/react'
+;
+
+import
+{ useState }
+from
+'react'
+;
+
+function
+MapComponent() {
+
+const
+[
+location
+,
+setLocation
+] = useState({
+lat: 0
+,
+lng: 0
+});
+
+useConversationClientTool(
+'getLocation'
+, ()
+=>
+{
+
+return
+`${
+location
+.
+lat
+},${
+location
+.
+lng
+}`
+;
+});
+
+useConversationClientTool(
+'setLocation'
+, (
+params
+: {
+lat
+:
+number
+;
+lng
+:
+number
+})
+=>
+{
+setLocation(params);
+
+return
+'Location updated'
+;
+});
+
+return
+<Map center={
+location
+} />;
+}
+This is useful when a tool's handler needs access to component state or props that aren't available at the provider level.
+Stable API surface
+Internal classes (
+Input
+,
+Output
+, wake lock) are now private. The public API exposes documented methods instead of raw browser primitives:
+setVolume({ volume })
+replaces
+conversation.output.gain.gain.value = v
+getInputByteFrequencyData()
+replaces
+conversation.input.analyser.getByteFrequencyData()
+setMicMuted(true)
+replaces
+conversation.input.setMuted(true)
+This means the underlying audio implementation can be replaced (for example, swapping transport layers) without breaking user code.
+Controlled state
+ConversationProvider
+accepts
+isMuted
+and
+onMutedChange
+props for external state management. This is useful for persisting mute state across sessions or synchronizing it with application-level state.
+import
+{ ConversationProvider }
+from
+'@elevenlabs/react'
+;
+
+import
+{ useState }
+from
+'react'
+;
+
+function
+App() {
+
+const
+[
+muted
+,
+setMuted
+] = useState(
+false
+);
+
+return
+(
+<ConversationProvider isMuted={muted} onMutedChange={setMuted}>
+<YourComponents />
+</ConversationProvider>
+);
+}
+When these props are omitted, mute state is managed internally as before.
+Smart connection type inference
+Voice conversations now default to WebRTC and text-only conversations default to WebSocket. There is no need to set
+connectionType
+manually in most cases. If you need a specific connection type, you can still pass it explicitly.
+Upgrading
+This is a breaking change that requires updates to existing integrations. The key changes at a glance:
+Conversation
+is now a namespace object and type alias, not a class.
+instanceof
+checks and subclassing no longer work.
+useConversation
+requires a
+ConversationProvider
+ancestor.
+Input
+and
+Output
+classes are replaced by documented methods on the conversation instance.
+On React Native,
+ElevenLabsProvider
+is replaced by
+ConversationProvider
+from
+@elevenlabs/react-native
+.
+For the full list of breaking changes, see the
+changelog
+.
+Automated migration with your coding agent
+A dedicated skill is available to automate the upgrade. The skill reads your existing integration, applies the necessary API changes, and updates imports. It handles the mechanical work of migrating to
+ConversationProvider
+, replacing removed class references, and updating method calls.
+The skill is particularly useful for larger codebases where the migration touches multiple files.
+npx skills add elevenlabs/packages
+Updated documentation
+The SDK documentation has been updated to reflect the new API:
+JavaScript SDK
+React SDK
+React Native SDK
+Getting started
+Install the package for your platform:
+# React (web)
+
+npm install @elevenlabs/react
+
+# React Native (Expo)
+
+npx expo install @elevenlabs/react-native @livekit/react-native @livekit/react-native-webrtc
+
+# Vanilla JavaScript
+
+npm install @elevenlabs/client
+@elevenlabs/react
+re-exports everything from
+@elevenlabs/client
+, so you do not need to install both.
+Wrap your app in a
+ConversationProvider
+, use the hooks to start a session, and refer to the
+SDK documentation
+for the full API reference.
+And as we mentioned in the intro, a coding agent skill is available to automate the upgrade:
+npx skills add elevenlabs/packages
+Feedback
+If you encounter issues or have suggestions, open an issue on
+GitHub
+. The SDK is actively maintained and we review every report.
+Explore articles by the ElevenLabs team
+Introducing the ElevenLabs Reader App
+Category
+Product
+Date
+Jun 25, 2024
+AI generated sound effects are here
+Category
+Product
+Date
+May 31, 2024
+ElevenLabs Audio Native
+Category
+Product
+Date
+May 16, 2024
+Introducing Voice Actor Payouts
+Category
+Product
+Date
+Feb 13, 2024
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+X - Developers
+LinkedIn
+GitHub
+YouTube
+YouTube - Developers
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+EU Digital Services Act (DSA)
+ElevenLabs Summit
+Terms
+Privacy
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+English
+English
+Svenska
+Polski
+Português
+日本語
+한국어
+हिन्दी
+Español
+Français
+Deutsch
+Italiano
+简体中文

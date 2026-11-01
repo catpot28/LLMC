@@ -1,0 +1,106 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/physical-ai
+page path  : /blog/physical-ai
+captured   : 2026-06-14 22:27:29 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_physical-ai__10b39f4f.html.gz
+========================================================================
+
+Expanding Our Data Engine for Physical AI | Scale AI
+
+Expanding Our Data Engine for Physical AI | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Robotics
+Expanding Our Data Engine for Physical AI
+By
+
+Ben Levin
+·
+September 24, 2025
+·
+4 min read
+Copy Link
+Authored by Ben Levin, General Manager, Physical AI at Scale.
+Data is the foundation of AI progress. At Scale, we spent nearly a decade building the foundation, from pioneering large-scale data operations for autonomous vehicles to processing millions of hours of sensor data for industry leaders. Now, as AI continues to move beyond screens into the physical world, the stakes for high-quality data are even higher. That’s why today, we’re sharing an update on the progress we’ve made delivering our flagship Data Engine to Physical AI and robotics companies.
+Scale’s Data Engine for Physical AI
+is a comprehensive data collection and annotation solution that provides the massive, high-quality datasets robotics companies need to train foundation models. What started as our work on autonomous vehicles, is now expanding rapidly to robotics. With more than 100,000 production hours completed at our prototyping laboratory in San Francisco and with the help of contributors globally, Scale is already providing and enriching data for leading Physical AI companies, including Physical Intelligence, Generalist AI, Cobot, and others.
+“Scale has been a trusted partner in making abundant, high-quality, custom data. We’re excited to be working with them on the future of Physical AI.”
+–
+Pete Florence, CEO and co-founder of Generalist AI
+“At Cobot, our mission is to deploy physical AI at scale through our robot, Proxie. I feel fortunate to have worked with the Scale team in the past and know first-hand that Scale is unique in its ability to quickly adapt to the needs of their partners. We’re excited by the work Scale has already done in building this data set and look forward to partnering to push the data frontier in physical AI.”
+–
+Brad Porter, CEO & founder, Cobot
+The Robotics Data Gap
+Language models train on trillions of tokens from the internet. Vision models learn from billions of images. However, for robotics, there is no preexisting repository of physical interactions to reference. Unlike text or images, robotic manipulation data can't be scraped from the web. It must be collected, one interaction at a time, in the real world.
+Today's relevant open-source datasets, including DROID and Open X-Embodiment, offer only about 5,000 hours of interaction data combined – far too little for Physical AI to handle real-world complexity. Scaling laws indicate that true robotics foundation models will need datasets on the scale of those used for language and vision.
+Until now, progress has been held back by this persistent bottleneck, one that Scale is positioned to solve. We know from experience that collecting a large corpus of data isn't enough – it must be
+abundant
+,
+diverse
+, and
+enriched
+to capture the full complexity of the physical world.
+Abundant
+: We've built infrastructure to collect data at scale, both from dedicated data collection robots and from human demonstrations specifically designed to improve robotic capabilities. Scale’s global operations provide the volume and consistency needed for massive datasets.
+Diverse
+: Real-world robotics must handle infinite variations in objects, environments, and tasks. We enforce diversity across our data collection to ensure models can generalize beyond narrow scenarios.
+Enriched
+: Raw trajectories alone aren’t sufficient. Our datasets are annotated with the same precision we pioneered in computer vision, extending that expertise into robotics. Beyond capturing motion, we layer semantic detail that encodes intent, task structure, and failure modes. We continuously validate annotations by fine-tuning state-of-the-art models with them to confirm they genuinely improve performance. Every piece of data undergoes multiple validation steps, ensuring it's clean, correctly labeled, and valuable for training.
+Building for Tomorrow's Breakthroughs
+Scale’s foundational robotics data is designed not just to improve today’s systems, but to unlock the next generation of Physical AI.
+For researchers and builders, we offer:
+Custom collection
+from a wide range of embodiments, working closely with partners to specify tasks, objects, and environments in both lab and field settings to meet real-world needs.
+Data annotation
+using machine learning models and heuristics, leveraging the 3D capabilities of the Scale Data Engine.
+Data streams
+with a growing library of pre-built datasets.
+The transformative potential of Physical AI – from industrial to commercial to the home – depends on solving the data challenge. By making high-quality robotics data abundant and accessible, we're accelerating the timeline for reliable AI systems in the physical world.
+Today represents day one. As Physical AI models grow more capable, data requirements will grow exponentially. We're ready to scale with them.
+If you're building Physical AI systems and want to learn more about how Scale can accelerate your development, get in touch via physical-ai@scale.com.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

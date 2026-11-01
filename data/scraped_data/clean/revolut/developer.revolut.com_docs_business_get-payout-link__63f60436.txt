@@ -1,0 +1,392 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/get-payout-link
+page path  : /docs/business/get-payout-link
+captured   : 2026-01-15 15:33:08 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_get-payout-link__63f60436.html.gz
+========================================================================
+
+Retrieve a payout link | Revolut Docs
+
+Retrieve a payout link | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Card invitations
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Introduction
+Retrieve a list of payout links
+Retrieve a payout link
+Create a payout link
+Cancel a payout link
+Get transfer reasons
+Simulations
+Team members
+Transactions
+Transfers
+Webhooks
+Payout links
+Retrieve a payout link
+Retrieve a payout link
+
+Get the information about a specific link by its ID.
+
+Note
+This feature is available in the UK, the EEA, AU, and SG.
+
+For more information, see the guides:
+Send money via payout link
+.
+
+Request
+​
+Path parameters
+Path parameters
+Expand
+payout_link_id
+string(uuid)
+required
+The ID of the link to retrieve.
+
+Response
+​
+200
+403
+404
+4xx
+The information about a specific link
+Response body
+Body
+
+any
+Expand
+id
+string(uuid)
+required
+The ID of the payout link.
+state
+string
+required
+Possible values:
+[
+created
+,
+failed
+,
+awaiting
+,
+active
+,
+expired
+,
+cancelled
+,
+processing
+,
+processed
+]
+The state that the payout link is in. Possible states are:
+
+created
+: The payout link has been created, but the amount has not yet been
+blocked
+.
+
+failed
+: The payout link couldn't be generated due to a failure during transaction booking.
+
+awaiting
+: The payout link is awaiting approval.
+
+active
+: The payout link can be redeemed.
+
+expired
+: The payout link cannot be redeemed because it wasn't claimed before its expiry date.
+
+cancelled
+: The payout link cannot be redeemed because it was cancelled.
+
+processing
+: The payout link has been redeemed and is being processed.
+
+processed
+: The payout link has been redeemed and the money has been transferred to the recipient.
+
+created_at
+string(date-time)
+required
+The date and time the payout link was created in
+ISO 8601 format
+.
+updated_at
+string(date-time)
+required
+The date and time the payout link was last updated in
+ISO 8601 format
+.
+counterparty_name
+string
+required
+Example:
+
+"John Smith"
+The name of the counterparty provided by the sender.
+save_counterparty
+boolean
+required
+Default value:
+
+false
+Indicates whether you chose to save the recipient as your counterparty upon link claim.
+If
+false
+then the counterparty will not show up on your counterparties list, for example, when you
+retrieve your counterparties
+.
+However, you can still
+retrieve this counterparty by its ID
+.
+
+If you didn't choose to save the counterparty on link creation, you can still do it from your transactions list in the Business app.
+request_id
+string
+required
+Example:
+
+"5a7fcb46-4be4-47d4-a56f-27a2e5b78dd1"
+The ID of the request, provided by the sender.
+expiry_date
+string(date-time)
+Possible values:
+
+>= now + 1 day
+and
+<= now + 7 days
+
+Example:
+
+"2023‐07‐20T15:09:24Z"
+Default value:
+
+now + 7 days
+The date and time after which the payout link expires in
+ISO 8601 format
+.
+If the recipient doesn't claim the money before then, the payout link expires and is no longer available.
+
+The default and maximum value is the date and time of creating the link + 7 days.
+payout_methods
+array of strings
+required
+Possible values:
+[
+revolut
+,
+bank_account
+,
+card
+]
+
+Example:
+
+["revolut","bank_account","card"]
+The list of payout methods that the recipient can use to claim the payout, where:
+
+revolut
+: Revolut peer-to-peer (P2P) transfer
+
+bank_account
+: External bank transfer
+
+card
+: Card transfer
+
+account_id
+string(uuid)
+required
+Example:
+
+"85f515e4-588f-4496-a6a5-a7615a193e6b"
+The ID of the sender's account.
+amount
+number(double)
+required
+Example:
+
+105.6
+The amount of money to be transferred.
+
+Note
+The amount must be between £1 and £2,500, or equivalent in the selected currency.
+currency
+string
+required
+Pattern:
+Value must match regular expression
+^[A-Z]{3}$
+ISO 4217
+currency code in upper case.
+url
+string(uri)
+The URL of the payout link. Returned only for active payout links.
+reference
+string
+required
+Example:
+
+"Rent"
+The reference for the payout transaction, provided by the sender.
+transfer_reason_code
+string
+Example:
+
+"property_rental"
+The reason code for the transaction. Transactions to certain countries and currencies might require you to provide a transfer reason.
+You can check available reason codes with the
+GET /transfer-reasons
+operation
+.
+
+If a transfer reason is not required for the given currency and country, this field is ignored.
+counterparty_id
+string(uuid)
+The ID of the counterparty created based on the recipient's details.
+
+Note
+By default, the newly created counterparty is hidden from your counterparties list.
+To automatically save it when the link is claimed, pass the
+save_counterparty
+parameter set to
+true
+.
+Alternatively, you can add the recipient to your counterparties later from the list of transactions in the Business app.
+transaction_id
+string(uuid)
+The ID of the created transaction. Returned only if the payout has been claimed.
+cancellation_reason
+any
+Possible values:
+[
+too_many_name_check_attempts
+]
+The reason for which the payout link was cancelled.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

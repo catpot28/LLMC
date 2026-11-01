@@ -1,0 +1,161 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/introducing-the-perplexity-search-api/4738
+page path  : /t/introducing-the-perplexity-search-api/4738
+captured   : 2026-04-12 13:04:59 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_introducing-the-perplexity-search-api_4738__c34c0596.html.gz
+========================================================================
+
+Introducing the Perplexity Search API - Announcements - Perplexity API Platform Forum
+
+Introducing the Perplexity Search API - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Introducing the Perplexity Search API
+
+Announcements
+
+Kesku
+
+September 25, 2025, 5:00pm
+
+1
+
+We’ve built a search index of billions of webpages to provide real-time, quality information from the web. Now developers have access to the full power of our index, providing the most accurate results in milliseconds.
+
+The Search API (
+POST /search
+) returns raw, ranked web results — titles, URLs, snippets, and dates — without LLM processing. Plug these directly into your own models, RAG pipelines, or applications.
+
+from perplexity import Perplexity
+
+client = Perplexity()
+search = client.search.create(
+query="latest AI developments",
+max_results=5,
+max_tokens_per_page=2048
+)
+
+for result in search.results:
+print(result.title, result.url)
+
+Key features
+
+Raw ranked results
+— titles, URLs, snippets, dates, and extracted content
+
+Domain filtering
+— allowlist or denylist specific domains
+
+Language filtering
+— ISO 639-1 language codes
+
+Date filtering
+— recency filter or precise date ranges
+
+Multi-query
+— pass up to 5 queries in a single request
+
+$5 per 1,000 requests
+— no token-based costs
+
+Docs:
+Search API Quickstart
+|
+API Reference
+
+Blog:
+Introducing the Perplexity Search API
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Introducing the Perplexity Search API 🚀
+
+Announcements
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+,
+
+python-sdk
+
+1
+
+1008
+
+September 25, 2025
+
+Date Range Filtering Capability for Search API
+
+Feature Requests
+
+search-api
+
+2
+
+100
+
+October 22, 2025
+
+Search API — Filter Results by Date Range
+
+Announcements
+
+0
+
+1
+
+October 29, 2025
+
+Perplexity Search API on Vercel AI Gateway
+
+Announcements
+
+0
+
+2
+
+January 15, 2026
+
+OpenClaw now supports the Perplexity Search API natively 🔍
+
+Announcements
+
+search-api
+
+0
+
+21
+
+April 1, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

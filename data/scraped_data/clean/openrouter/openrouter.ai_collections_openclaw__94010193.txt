@@ -1,0 +1,473 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/openclaw
+page path  : /collections/openclaw
+captured   : 2026-04-12 10:03:50 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_collections_openclaw__94010193.html.gz
+========================================================================
+
+Top AI Models Used by OpenClaw | OpenRouter
+
+Top AI Models Used by OpenClaw | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+OpenClaw
+Top AI Models Used by OpenClaw
+Model rankings updated April 2026 based on real usage data.
+OpenClaw
+is a popular open-source autonomous AI agent that runs locally on your computer, acting as a proactive personal assistant. It automates tasks by connecting to apps like WhatsApp, Discord, and Slack, managing files, browsing the web, and executing shell commands. With features like persistent memory, customizable skills, and 24/7 operation, OpenClaw handles everything from daily briefings and email workflows to web research and code deployment.
+
+Below are the top AI models used by OpenClaw over the past month, ranked by token usage on OpenRouter. These rankings reflect real-world usage patterns and can help you choose the best LLMs for your OpenClaw setup.
+View OpenClaw on OpenRouter
+Browse All Models
+Compare Models
+Top Models Used by OpenClaw
+StepFun: Step 3.5 Flash
+3.25T
+tokens
+Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts.
+Show more
+by
+
+stepfun
+262K
+context
+$
+0.10
+/M input
+tokens
+$
+0.30
+/M output
+tokens
+Z.ai: GLM 5 Turbo
+2.78T
+tokens
+GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows involving long execution chains, with improved complex instruction decomposition, tool use, scheduled and persistent execution, and overall stability across extended tasks.
+Show more
+by
+
+z-ai
+203K
+context
+$
+1.20
+/M input
+tokens
+$
+4
+/M output
+tokens
+Xiaomi: MiMo-V2-Pro
+2.7T
+tokens
+MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios. It is highly adaptable to general agent frameworks like OpenClaw. It ranks among the global top tier in the standard PinchBench and ClawBench benchmarks, with perceived performance approaching that of Opus 4.6. MiMo-V2-Pro is designed to serve as the brain of agent systems, orchestrating complex workflows, driving production engineering tasks, and delivering results reliably.
+Show more
+by
+
+xiaomi
+1.05M
+context
+$
+1
+/M input
+tokens
+$
+3
+/M output
+tokens
+MiniMax: MiniMax M2.7
+1.19T
+tokens
+MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.
+
+Trained for production-grade performance, M2.7 handles workflows such as live debugging, root cause analysis, financial modeling, and full document generation across Word, Excel, and PowerPoint. It delivers strong results on benchmarks including 56.2% on SWE-Pro and 57.0% on Terminal Bench 2, while achieving a 1495 ELO on GDPval-AA, setting a new standard for multi-agent systems operating in real-world digital workflows.
+Show more
+by
+
+minimax
+205K
+context
+$
+0.30
+/M input
+tokens
+$
+1.20
+/M output
+tokens
+Anthropic: Claude Sonnet 4.6
+1.07T
+tokens
+Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.
+Show more
+by
+
+anthropic
+1M
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+Qwen: Qwen3.6 Plus
+907B
+tokens
+Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers major gains in agentic coding, front-end development, and overall reasoning, with a significantly improved “vibe coding” experience. The model excels at complex tasks such as 3D scenes, games, and repository-level problem solving, achieving a 78.8 score on SWE-bench Verified. It represents a substantial leap in both pure-text and multimodal capabilities, performing at the level of leading state-of-the-art models.
+Show more
+by
+
+qwen
+1M
+context
+$
+0.325
+/M input
+tokens
+$
+1.95
+/M output
+tokens
+Hunter Alpha
+Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.
+
+Note:
+All prompts and completions for this model are logged by the provider and may be used to improve the model.
+Show more
+by
+
+openrouter
+1.05M
+context
+MiniMax: MiniMax M2.5 (free)
+737B
+tokens
+MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.
+Show more
+by
+
+minimax
+197K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Anthropic: Claude Opus 4.6
+733B
+tokens
+Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective for large codebases, complex refactors, and multi-step debugging that unfolds over time. The model shows deeper contextual understanding, stronger problem decomposition, and greater reliability on hard engineering tasks than prior generations.
+
+Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-production-ready documents, plans, and analyses in a single pass, and maintains coherence across very long outputs and extended sessions. This makes it a strong default for tasks that require persistence, judgment, and follow-through, such as technical design, migration planning, and end-to-end project execution.
+
+For users upgrading from earlier Opus versions, see our
+official migration guide here
+Show more
+by
+
+anthropic
+1M
+context
+$
+5
+/M input
+tokens
+$
+25
+/M output
+tokens
+NVIDIA: Nemotron 3 Super (free)
+634B
+tokens
+NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.
+
+The model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.
+
+Fully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere — from workstation to cloud.
+Show more
+by
+
+nvidia
+262K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Google: Gemini 3 Flash Preview
+468B
+tokens
+Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool use performance with substantially lower latency than larger Gemini variants, making it well suited for interactive development, long running agent loops, and collaborative coding tasks. Compared to Gemini 2.5 Flash, it provides broad quality improvements across reasoning, multimodal understanding, and reliability.
+
+The model supports a 1M token context window and multimodal inputs including text, images, audio, video, and PDFs, with text output. It includes configurable reasoning via thinking levels (minimal, low, medium, high), structured output, tool use, and automatic context caching. Gemini 3 Flash Preview is optimized for users who want strong reasoning and agentic behavior without the cost or latency of full scale frontier models.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.50
+/M input
+tokens
+$
+3
+/M output
+tokens
+$
+1
+/M audio tokens
+Arcee AI: Trinity Large Preview (free)
+449B
+tokens
+Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing.
+
+It excels in creative writing, storytelling, role-play, chat scenarios, and real-time voice assistance, better than your average reasoning model usually can. But we’re also introducing some of our newer agentic performance. It was trained to navigate well in agent harnesses like OpenCode, Cline, and Kilo Code, and to handle complex toolchains and long, constraint-filled prompts.
+
+The architecture natively supports very long context windows up to 512k tokens, with the Preview API currently served at 128k context using 8-bit quantization for practical deployment. Trinity-Large-Preview reflects Arcee’s efficiency-first design philosophy, offering a production-oriented frontier model with open weights and permissive licensing suitable for real-world applications and experimentation.
+Show more
+by
+
+arcee-ai
+131K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+MoonshotAI: Kimi K2.5
+441B
+tokens
+Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling.
+Show more
+by
+
+moonshotai
+262K
+context
+$
+0.3827
+/M input
+tokens
+$
+1.72
+/M output
+tokens
+Xiaomi: MiMo-V2-Omni
+400B
+tokens
+MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities, 256K context window.
+Show more
+by
+
+xiaomi
+262K
+context
+$
+0.40
+/M input
+tokens
+$
+2
+/M output
+tokens
+DeepSeek: DeepSeek V3.2
+327B
+tokens
+DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.
+
+Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+Show more
+by
+
+deepseek
+164K
+context
+$
+0.26
+/M input
+tokens
+$
+0.38
+/M output
+tokens
+Google: Gemini 2.5 Flash Lite
+327B
+tokens
+Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance across common benchmarks compared to earlier Flash models. By default, "thinking" (i.e. multi-pass reasoning) is disabled to prioritize speed, but developers can enable it via the
+Reasoning API parameter
+to selectively trade off cost for intelligence.
+Show more
+by
+
+google
+1.05M
+context
+$
+0.10
+/M input
+tokens
+$
+0.40
+/M output
+tokens
+$
+0.30
+/M audio tokens
+Xiaomi: MiMo-V2-Flash
+203B
+tokens
+MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi. It is a Mixture-of-Experts model with 309B total parameters and 15B active parameters, adopting hybrid attention architecture. MiMo-V2-Flash supports a hybrid-thinking toggle and a 256K context window, and excels at reasoning, coding, and agent scenarios. On SWE-bench Verified and SWE-bench Multilingual, MiMo-V2-Flash ranks as the top #1 open-source model globally, delivering performance comparable to Claude Sonnet 4.5 while costing only about 3.5% as much.
+
+Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+.
+Show more
+by
+
+xiaomi
+262K
+context
+$
+0.09
+/M input
+tokens
+$
+0.29
+/M output
+tokens
+OpenAI: GPT-5.4
+202B
+tokens
+GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling high-context reasoning, coding, and multimodal analysis within the same workflow.
+
+The model delivers improved performance in coding, document understanding, tool use, and instruction following. It is designed as a strong default for both general-purpose tasks and software engineering, capable of generating production-quality code, synthesizing information across multiple sources, and executing complex multi-step workflows with fewer iterations and greater token efficiency.
+Show more
+by
+
+openai
+1.05M
+context
+$
+2.50
+/M input
+tokens
+$
+15
+/M output
+tokens
+Google: Gemini 2.5 Flash
+199B
+tokens
+Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in "thinking" capabilities, enabling it to provide responses with greater accuracy and nuanced context handling.
+
+Additionally, Gemini 2.5 Flash is configurable through the "max tokens for reasoning" parameter, as described in the documentation (
+https://openrouter.ai/docs/use-cases/reasoning-tokens#max-tokens-for-reasoning
+).
+Show more
+by
+
+google
+1.05M
+context
+$
+0.30
+/M input
+tokens
+$
+2.50
+/M output
+tokens
+$
+1
+/M audio tokens
+Healer Alpha
+Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.
+
+Note:
+All prompts and completions for this model are logged by the provider and may be used to improve the model.
+Show more
+by
+
+openrouter
+262K
+context

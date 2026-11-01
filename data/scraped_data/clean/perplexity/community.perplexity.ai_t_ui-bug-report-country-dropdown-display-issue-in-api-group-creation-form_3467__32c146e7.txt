@@ -1,0 +1,162 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/ui-bug-report-country-dropdown-display-issue-in-api-group-creation-form/3467
+page path  : /t/ui-bug-report-country-dropdown-display-issue-in-api-group-creation-form/3467
+captured   : 2026-02-07 06:43:49 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_ui-bug-report-country-dropdown-display-issue-in-api-group-creation-form_3467__32c146e7.html.gz
+========================================================================
+
+UI Bug Report: Country Dropdown Display Issue in API Group Creation Form - Bug Reports - Perplexity API Platform Forum
+
+UI Bug Report: Country Dropdown Display Issue in API Group Creation Form - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+UI Bug Report: Country Dropdown Display Issue in API Group Creation Form
+
+Bug Reports
+
+search-api
+
+Abhishek_Maurya
+
+January 11, 2026, 5:10pm
+
+1
+
+Describe the Bug
+
+The country dropdown menu in the API Group creation form displays with a light/white background that clashes with the dark theme, causing poor text readability and contrast issues.
+
+Expected Behavior
+
+The country dropdown should maintain the dark theme consistent with the rest of the API Group creation interface, ensuring proper text contrast and visibility of country names like “Tunisia” and “United States.”
+
+Actual Behavior
+
+The dropdown renders with a bright light background while the surrounding form fields (API Group Name, Description, Address Line 1, City, Zip) remain dark-themed, making selected countries barely readable against the white backdrop.Screenshot-2026-01-10-221850.jpg​
+
+Steps to Reproduce
+
+Navigate to the API Groups section in Perplexity dashboard
+
+Click “Create new group”
+
+Fill in basic fields (API Group Name, Description)
+
+Click on the Country field dropdown (located below City and Zip fields)
+
+Observe the dropdown menu appearing with light theme while rest of form stays dark
+
+API Request & Response (if applicable)
+
+N/A - This is a UI rendering issue in the web dashboard form, not during API calls.
+
+Environment
+
+API Version: N/A (dashboard UI issue)
+
+SDK (if applicable): N/A
+
+Operating System: Windows (inferred from screenshot styling)
+
+Browser: Chrome (latest version)
+
+Date: January 10, 2026
+
+Logs or Screenshots (if applicable)
+
+Screenshot 2026-01-10 221850
+1856×902 73.3 KB
+
+Additional Context
+
+This theming inconsistency affects usability during API Group creation, particularly when selecting countries. The issue appears specific to the dropdown component CSS not inheriting the dark theme properly. No console errors observed.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+500 error when creating a new API group
+
+Bug Reports
+
+3
+
+231
+
+August 31, 2025
+
+Request to add custom topics to the profile personalization option
+
+General
+
+1
+
+70
+
+May 19, 2025
+
+Python SDK - search API - country filter
+
+Bug Reports
+
+search-api
+
+,
+
+python-sdk
+
+0
+
+43
+
+October 31, 2025
+
+Request with country code:"PR" fails in Chat Completions API
+
+Bug Reports
+
+sonar
+
+,
+
+chat-completions
+
+1
+
+65
+
+July 1, 2025
+
+Support run-around
+
+General
+
+sonar-pro
+
+0
+
+13
+
+December 31, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

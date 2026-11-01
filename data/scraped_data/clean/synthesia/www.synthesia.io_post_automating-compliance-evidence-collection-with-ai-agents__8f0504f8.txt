@@ -1,0 +1,376 @@
+=== SOURCE =============================================================
+company    : Synthesia (synthesia)
+url        : https://www.synthesia.io/post/automating-compliance-evidence-collection-with-ai-agents
+page path  : /post/automating-compliance-evidence-collection-with-ai-agents
+captured   : 2026-06-10 12:55:20 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/synthesia/www.synthesia.io_post_automating-compliance-evidence-collection-with-ai-agents__8f0504f8.html.gz
+========================================================================
+
+Automating compliance evidence collection with AI agents
+
+Automating compliance evidence collection with AI agents
+
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 230+ avatars in 140+ languages.
+Get started for free
+Book demo
+Ready to try?
+Create a Free AI video
+Personal Avatars allow you to create custom Al avatars with a natural background in minutes
+Learn more
+
+Platform
+Create
+240+ AI Avatars
+Personal Avatars
+1000+ AI voices
+AI Screen Recorder
+AI Video Generator
+Localize
+AI Dubbing
+New
+Video Translator
+Multilingual Player
+Captions
+Manage
+Brand Kit
+Live Collaboration
+Organization
+Publish
+Version Control
+Analytics
+Public Video Page
+SSO Video Page
+Engage
+Interactivity
+New
+Video Agents
+Soon
+AI Safety & Security
+SOC 2 Type II compliant
+ISO 42001 compliant
+GDPR compliant
+All features
+A secure environment for businesses.
+Create free AI video
+Book demo
+Get started
+Solutions
+Teams
+Learning & Development
+Sales Enablement
+Human Resources
+Marketing
+IT & Cybersecurity
+Knowledge Management
+Use cases
+Technical Training
+Compliance Training
+Sales Training
+Employee Development
+SOP
+Product Video
+Industries
+Manufacturing
+Tech & Software
+Healthcare
+Financial services
+Professional Services
+Retail
+Create free AI video
+Book demo
+Get started
+Resources
+Resources
+Video Templates
+Synthesia Blog
+Case Studies
+Customer Reviews
+Learn
+Synthesia Academy
+Live sessions
+Help Center
+Company
+Careers
+Responsible AI
+AI Research
+case study
+How Heineken embraces video transformation
+Create free AI video
+Book demo
+Get started
+Pricing
+Enterprise
+Log in
+Book demo
+Get started
+Book demo
+Get started
+Blog
+Security
+June 1, 2026
+Automating compliance evidence collection with AI agents
+By
+Nicolás Barberis
+Trust Operations Manager
+at Synthesia
+Create AI videos with 240+ avatars in 160+ languages
+Get started for FREE
+At Synthesia, we hold ISO 27001, ISO 27701, ISO 42001, and SOC 2 Type II certifications. These are industry-standard frameworks audited by accredited third parties. They exist so that customers don't have to audit us themselves — much like you show your driver's license so that you don't have to prove you know how to drive at each stop, or when renting a car. Someone already did that for you.
+Sometimes, a customer audits us anyway. This is the story of how one such request — received during a renewal, under time pressure, at considerable scale — led us to build an AI agent that now handles compliance evidence collection across all our audit and customer assurance efforts.
+The request
+A customer sent us a security questionnaire as part of their renewal process. This is not unusual. What was unusual was the scope: 70 top-level questions, each with between three and seven sub-items asking for specific evidence. Screenshots of configurations. Proof of policy enforcement. System outputs demonstrating that controls are active. In total, somewhere north of 300 individual evidence items, that ended up being over 900 files.
+The questionnaire covered ground that our certifications already address: access control, encryption, monitoring, incident response, vulnerability management, endpoint protection, device management, audit functions. Several questions asked us to prove that we have an internal audit function — a requirement that is, by definition, satisfied by holding ISO 27001 certification, since the standard mandates it.
+We understand why customers do this. They have their own compliance obligations. Their risk teams need to document due diligence. And not every vendor with a certification logo on their website actually has the operational maturity behind it. We get it. We also evaluate our vendors very thoroughly.
+But understanding the rationale doesn't change the operational reality: 300+ requested evidence items, a renewal deadline approaching fast, and a TrustOps team that was simultaneously running an internal audit cycle.
+Turning a problem into infrastructure
+The first instinct was to power through it manually. Open each system, take multiple screenshots, export reports, write an explanation, upload it to our GRC platform. Repeat over 70 times. This is what most teams do, and it's why evidence collection is one of the most time-consuming parts of any compliance program.
+Instead, we decided to invest the time differently. We uploaded the customer's questionnaire into Vanta as a custom framework, then mapped each question to our existing controls, documents, and automated tests. This gave us a structured view of what was already covered (most of it) and what gaps needed manual evidence.
+Then we built an agent to close those gaps.
+The evidence collection agent
+The tool is a Claude agent skill — a set of instructions and scripts that an AI coding agent follows autonomously. When invoked, it runs a pipeline:
+1. Query Vanta for pending evidence.
+The agent connects to the Vanta API and retrieves all controls with missing or outdated evidence for the custom framework we created. It presents a triage view: what's pending, what's due, what already has evidence.
+2. Understand the ask.
+For each pending item, the agent reads the document description — what the auditor or customer is actually asking for.
+3. Research how we actually do it.
+Before capturing anything, the agent queries our internal knowledge base in Notion: "How does Synthesia handle access reviews?" or "Which systems enforce encryption at rest?" This is what turns a screenshot-taking bot into something useful. The agent learns the real story — which systems are involved, who owns them, what processes are in place, when they run — and uses that to build a strategy for what evidence to collect and where to find it.
+4. Navigate and capture.
+This is where it gets interesting. The agent controls a Chrome browser through the Chrome DevTools Protocol, reusing the operator's existing authenticated sessions. It navigates to the relevant system — through Okta SSO if needed — and captures full-page screenshots of the authenticated dashboards. This happens in front of the human analyst, enabling real-time Human In The Loop (HITL) review.
+This was a deliberate design choice. Security tools like CrowdStrike, Hunters, Semgrep, and Jamf require authenticated access to show meaningful data. By connecting to a browser with active SSO sessions, the agent captures what the auditor actually needs to see: real dashboards with real data, not login pages or marketing sites.
+5. Detect access issues.
+If the agent hits a login wall, an MFA prompt, or a permission boundary, it doesn't guess or fail silently. It returns a structured signal — "I need you to log in to CrowdStrike in this browser window" — and waits. The human handles the authentication, confirms, and the agent resumes. This happens rarely once the SSO session is established, but when it does, the pause-and-ask pattern keeps the process clean.
+6. Generate an explainer document.
+For each evidence item, the agent produces a PDF that answers the auditor's question directly: what was requested, what is provided, and a factual explanation of how the captured evidence satisfies the control requirement. These are auditor-facing documents — no jargon, no internal references, just a clear link between the question and the proof.
+7. Upload to Vanta.
+The agent uploads the screenshots and explainer PDF to the correct Vanta document via the API. Evidence lands in draft state. It does not submit.
+That last point is important: the agent collects and organizes, but a human reviews and approves. We are not yet comfortable with fully autonomous compliance submissions.
+How it works in practice
+A typical run looks like this:
+/get-vanta-evidence soc2
+
+→ Checking prerequisites... credentials OK, Chrome CDP OK
+
+→ Verifying SSO session at hub.synthesia.io... authenticated
+
+→ Found
+61
+pending documents
+for
+SOC
+2
+
+# Title Status
+
+1
+Application User Listings Needs doc
+
+2
+Confidential File Access Permissions Needs doc
+
+3
+Data
+in
+Transit Encryption Settings Needs doc
+
+...
+
+→ Processing: Application User Listings
+
+→ Auditor asks:
+"Provide user access lists for critical applications"
+
+→ Navigating to Okta admin
+console
+...
+
+→ Capturing: 01_okta_user_directory.png ✓
+
+→ Capturing: 02_okta_group_memberships.png ✓
+
+→ Generating explainer PDF...
+
+→ Uploading to Vanta (draft)... ✓
+
+→ Processing: Data
+in
+Transit Encryption Settings
+
+→ Navigating to AWS Certificate Manager...
+
+→ Auth wall detected:
+"Please log in to AWS Console"
+
+→ [User handles login, confirms]
+
+→ Capturing: 01_aws_acm_certificates.png ✓
+
+→ Capturing: 02_aws_alb_tls_policy.png ✓
+
+→ Uploading to Vanta (draft)... ✓
+
+Summary
+:
+
+✓
+48
+items completed (uploaded
+as
+draft)
+
+⚠
+13
+items need manual attention
+
+Review uploaded evidence
+in
+Vanta before submitting.
+The agent handles the parts which would otherwise have to be carried out by the human Analyst — navigating between systems, waiting for pages to load, dismissing cookie banners, capturing screenshots, formatting PDFs, complaining about the weather, uploading the results to Vanta. The human, in turn, handles the parts that require judgment — verifying that the right page was captured, reviewing the explainer text, deciding what to submit. We are actually adding more and better judgement (by the human) which allows us to actually improve, shifting the focus from the mechanical 'collect screenshots' to evaluating and ensuring the quality.
+The architecture
+The skill consists of four components:
+A Vanta API client
+that handles OAuth authentication, queries documents and tests with status filters, uploads evidence files, and auto-paginates through results. Credentials are read from a local file; tokens are cached and auto-refreshed.
+A screenshot capture script
+built on Playwright that connects to Chrome via the DevTools Protocol. It copies the user's Chrome profile (cookies, local storage, session data) into a separate directory and launches a CDP-enabled Chrome instance. This gives the agent full access to authenticated sessions without interfering with the user's normal browser. The script includes an expanded set of cookie-banner selectors and detects login walls by checking for password fields, SSO redirect domains, and page titles containing authentication keywords.
+An evidence report generator
+that produces clean, professional PDFs using ReportLab. Each report includes the auditor's original question, the captured screenshots embedded at full width, and an agent-written explanation of what the evidence demonstrates. The tone is factual and auditor-facing.
+A SKILL.md file
+that orchestrates the entire pipeline. This is the instruction set that tells the agent what to do, in what order, and how to handle each failure mode. It's structured as a step-by-step playbook: check prerequisites, establish SSO, query Vanta, triage pending items, capture evidence, generate reports, upload, summarize.
+What we learned
+Custom frameworks in Vanta are underrated.
+Uploading the customer questionnaire as a custom framework let us map their questions to our existing controls and tests. Most of the 300+ items were already covered by our SOC 2 and ISO evidence. The framework view made that visible instantly, and what remained was a manageable set of gaps.
+SSO is the unlock for automated evidence collection.
+The reason most evidence collection is manual is that every security tool requires authentication. By routing through Okta SSO tiles, a single authenticated session propagates to dozens of downstream systems. The agent navigates to the Okta tile URL, the SSO flow completes automatically, and the agent lands on an authenticated dashboard ready to screenshot. This turned what would have been 50 separate login flows into one.
+Human-in-the-loop is not a limitation, it's a feature.
+The agent uploads everything as draft. A human reviews the screenshots, reads the explainer, and decides whether to submit. This is not a compromise — it's the correct design for compliance work. Automated collection with manual approval gives you speed without sacrificing accountability.
+The 70-question questionnaire was a gift.
+It forced us to build tooling that now serves every audit cycle, every customer security review, and every framework renewal. What started as a time-pressured response to a single customer request became permanent infrastructure. The next customer questionnaire will take hours instead of weeks.
+What's next
+We're extending the agent in several directions:
+Notion and Linear integration
+for evidence that lives in documentation rather than dashboards — policy documents, process descriptions, org charts.
+Scheduled evidence refresh
+to keep time-sensitive documents current without manual intervention.
+Multi-framework deduplication
+so evidence captured for SOC 2 automatically maps to ISO Standards and customer questionnaires that ask for the same thing.
+If you run a compliance program and spend too much of your time taking screenshots and writing explanations, the approach is replicable. The key ingredients are a GRC platform with an API (we use Vanta), a browser automation tool that can reuse authenticated sessions (we use Playwright over CDP), and an AI agent that can reason about what an auditor is asking for and where to find the answer.
+Through audits, Vanta, and certifications, we surface the enormous amount of work that is actually happening behind the scenes every day. For us, certifications are not a destination — they're a baseline. They allow us to showcase how we consistently operate beyond what the standards require. The question is whether making that work visible has to be a manual effort in itself.
+Nicolás Barberis
+Nicolás Barberis is an Infosec Trust Operations Manager at Synthesia with experience across tech, telecom, and consulting. He has worked as a consultant, auditor, and project manager, delivering international accreditations.
+Go to author's profile
+Table of contents
+Text link
+
+Book demo
+Get a personalized demo tailored to your use case
+You might also like
+View all posts
+Security
+Automating code security reviews with Claude: Mythos-level capabilities at lower cost
+Coding agents are now involved in the majority of the code shipped at Synthesia. The volume of code changes has gone up but the time humans spend reading those changes has not. The practice of doing code security reviews is especially exposed to this pressure because it depends on careful analysis. To solve this, we’ve built an agent skill that approaches Mythos-levels of performance in uncovering complex security issues at a fraction of the cost of running such a model.
+Gianluca Brindisi
+May 14, 2026
+Security
+Scaling Vulnerability Management with AI: What Actually Worked
+How Synthesia built an AI-powered vulnerability management program to scale InfoSec: automating triage, validation, and fixes across SAST and SCA to reduce backlog and ship faster.
+Gianluca Brindisi
+March 9, 2026
+Security
+Synthesia is now ISO 27001 certified, here’s why that matters
+At Synthesia, security isn’t a box we tick, it’s one of the core pillars of our enterprise platform. That’s why I’m proud to announce that we’re now ISO/IEC 27001:2022 certified, the internationally recognized standard for information security management.
+Nicolás Barberis
+September 10, 2025
+Video template title
+Video template
+Create video from template
+Ready to try our AI video platform?
+Join over 1M+ users today and start making AI videos with 240+ avatars in 160+ languages.
+Get started for FREE
+en
+fr
+de
+es
+pt-BR
+en
+English
+fr
+Français
+de
+Deutsch
+es
+Español
+pt-BR
+Português (Brasil)
+Synthesia is a #1 AI Video Platform for Business. Our
+AI Video Generator
+enables anyone to create professional videos without mics, cameras, actors, or studios.
+Using AI, we’re radically changing the process of video content creation, making it scalable and affordable while maintaining high quality.
+Synthesia Ltd, 20 Triton Street, Regent's Place, 3rd Floor, London NW1 3BF, United Kingdom.
+Features
+All Features
+AI Avatar Generator
+160+ Languages
+PowerPoint to Video
+Custom Avatars
+Free AI Video Generator
+Free AI Image Generator
+AI Video Editor
+AI Voice Generator
+AI Voice Cloning
+AI Screen Recorder
+AI Text to Video
+Script to Video
+Synthesia Tools
+AI Script Generator
+Video Translator
+Use Cases
+Learning & Development
+Sales Enablement
+Information Technology
+Customer Service
+Marketing
+Educational Videos
+Employee Training Videos
+Instructional Videos
+Video Production
+Resources
+Pricing
+Enterprise
+Case Studies
+Video Templates
+Academy
+Live sessions
+Help Center
+API Documentation
+Product Updates
+Synthesia Alternatives
+Integrations
+Blog
+AI in L&D Report
+AI Tools
+Service providers
+Synthesia Community
+Company
+About Us
+Responsible AI
+AI Governance
+AI Research
+Jobs
+Hiring
+Newsroom
+Security
+Legal
+Contact Sales
+Affiliates
+Partners
+Sitemap
+© 2026 Synthesia Limited. All rights reserved.
+
+Create free AI video
+Trusted by 50,000+ teams.
+
+Try Synthesia with a
+free video
+.
+Simply type in text and get a free video with an AI avatar in a few clicks. No signup or credit card required.
+Create a free AI Video

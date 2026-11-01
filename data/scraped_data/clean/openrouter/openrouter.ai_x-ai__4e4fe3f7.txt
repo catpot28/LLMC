@@ -1,0 +1,372 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/x-ai
+page path  : /x-ai
+captured   : 2026-04-12 22:54:46 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_x-ai__4e4fe3f7.html.gz
+========================================================================
+
+xAI Models on OpenRouter
+
+xAI Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+xAI
+Access 18 xAI models on OpenRouter including Grok 4.20 Multi-Agent, Grok 4.20, and Grok 4.20 Multi-Agent Beta. Compare pricing, context windows, and capabilities.
+xAI
+tokens processed on OpenRouter
+xAI: Grok 4.20 Multi-Agent
+Grok 4.20 Multi-Agent
+9.4B
+tokens
+Grok 4.20 Multi-Agent is a variant of xAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks. Reasoning effort behavior: - low / medium: 4 agents - high / xhigh: 16 agents
+by
+
+x-ai
+Mar 31, 2026
+2M
+context
+$
+2
+/M input
+tokens
+$
+6
+/M output
+tokens
+xAI: Grok 4.20
+Grok 4.20
+42.1B
+tokens
+Grok 4.20 is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses. Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+by
+
+x-ai
+Mar 31, 2026
+2M
+context
+$
+2
+/M input
+tokens
+$
+6
+/M output
+tokens
+xAI: Grok 4.20 Multi-Agent Beta
+Grok 4.20 Multi-Agent Beta
+Grok 4.20 Multi-Agent Beta is a variant of xAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks. Reasoning effort behavior: - low / medium: 4 agents - high / xhigh: 16 agents
+by
+
+x-ai
+Mar 12, 2026
+2M
+context
+xAI: Grok 4.20 Beta
+Grok 4.20 Beta
+Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses. Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+by
+
+x-ai
+Mar 12, 2026
+2M
+context
+xAI: Grok 4.1 Fast
+Grok 4.1 Fast
+560B
+tokens
+Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+by
+
+x-ai
+Nov 19, 2025
+2M
+context
+$
+0.20
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+xAI: Grok 4 Fast
+Grok 4 Fast
+147B
+tokens
+Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model on xAI's
+news post
+. Reasoning can be enabled/disabled using the
+reasoning
+
+enabled
+parameter in the API.
+Learn more in our docs
+by
+
+x-ai
+Sep 19, 2025
+2M
+context
+$
+0.20
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+xAI: Grok Code Fast 1
+Grok Code Fast 1
+10.1B
+tokens
+Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality work flows.
+by
+
+x-ai
+Aug 26, 2025
+256K
+context
+$
+0.20
+/M input
+tokens
+$
+1.50
+/M output
+tokens
+xAI: Grok 4
+Grok 4
+7.59B
+tokens
+Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not exposed, reasoning cannot be disabled, and the reasoning effort cannot be specified. Pricing increases once the total tokens in a given request is greater than 128k tokens. See more details on the
+xAI docs
+by
+
+x-ai
+Jul 9, 2025
+256K
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+xAI: Grok 3 Mini
+Grok 3 Mini
+4.08B
+tokens
+A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
+by
+
+x-ai
+Jun 10, 2025
+131K
+context
+$
+0.30
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+xAI: Grok 3
+Grok 3
+4B
+tokens
+Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in finance, healthcare, law, and science.
+by
+
+x-ai
+Jun 10, 2025
+131K
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+xAI: Grok 3 Mini Beta
+Grok 3 Mini Beta
+5K
+tokens
+Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional models that generate answers immediately, Grok 3 Mini thinks before responding. It’s ideal for reasoning-heavy tasks that don’t demand extensive domain knowledge, and shines in math-specific and quantitative use cases, such as solving challenging puzzles or math problems. Transparent "thinking" traces accessible. Defaults to low reasoning, can boost with setting
+reasoning: { effort: "high" }
+Note: That there are two xAI endpoints for this model. By default when using this model we will always route you to the base endpoint. If you want the fast endpoint you can add
+provider: { sort: throughput}
+, to sort by throughput instead.
+by
+
+x-ai
+Apr 9, 2025
+131K
+context
+$
+0.30
+/M input
+tokens
+$
+0.50
+/M output
+tokens
+xAI: Grok 3 Beta
+Grok 3 Beta
+27
+tokens
+Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in finance, healthcare, law, and science. Excels in structured tasks and benchmarks like GPQA, LCB, and MMLU-Pro where it outperforms Grok 3 Mini even on high thinking. Note: That there are two xAI endpoints for this model. By default when using this model we will always route you to the base endpoint. If you want the fast endpoint you can add
+provider: { sort: throughput}
+, to sort by throughput instead.
+by
+
+x-ai
+Apr 9, 2025
+131K
+context
+$
+3
+/M input
+tokens
+$
+15
+/M output
+tokens
+xAI: Grok 2 Vision 1212
+Grok 2 Vision 1212
+Grok 2 Vision 1212 advances image-based AI with stronger visual comprehension, refined instruction-following, and multilingual support. From object recognition to style analysis, it empowers developers to build more intuitive, visually aware applications. Its enhanced steerability and reasoning establish a robust foundation for next-generation image solutions. To read more about this model, check out
+xAI's announcement
+.
+by
+
+x-ai
+Dec 15, 2024
+33K
+context
+xAI: Grok 2 1212
+Grok 2 1212
+Grok 2 1212 introduces significant enhancements to accuracy, instruction adherence, and multilingual support, making it a powerful and flexible choice for developers seeking a highly steerable, intelligent model.
+by
+
+x-ai
+Dec 15, 2024
+131K
+context
+xAI: Grok Vision Beta
+Grok Vision Beta
+Grok Vision Beta is xAI's experimental language model with vision capability.
+by
+
+x-ai
+Nov 19, 2024
+8K
+context
+xAI: Grok Beta
+Grok Beta
+Grok Beta is xAI's experimental language model with state-of-the-art reasoning capabilities, best for complex and multi-step use cases. It is the successor of
+Grok 2
+with enhanced context length.
+by
+
+x-ai
+Oct 20, 2024
+131K
+context
+xAI: Grok 2
+Grok 2
+Grok 2 is xAI's frontier language model with state-of-the-art reasoning capabilities, best for complex and multi-step use cases. To use a faster version, see
+Grok 2 Mini
+. For more information, see the
+launch announcement
+.
+by
+
+x-ai
+Oct 12, 2024
+33K
+context
+xAI: Grok 2 mini
+Grok 2 mini
+Grok 2 Mini is xAI's fast, lightweight language model that offers a balance between speed and answer quality. To use the stronger model, see
+Grok Beta
+. For more information, see the
+launch announcement
+.
+by
+
+x-ai
+Oct 12, 2024
+33K
+context

@@ -1,0 +1,834 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/agent-workforce-platform/
+page path  : /blog/agent-workforce-platform/
+captured   : 2026-05-16 18:10:39 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_agent-workforce-platform__75905f27.html.gz
+========================================================================
+
+Are your AI agents still stuck in POC? Let’s fix that.
+
+Are your AI agents still stuck in POC? Let’s fix that.
+
+Skip to content
+
+Location
+
+us
+
+jp
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Location
+
+us
+
+jp
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Are your AI agents still stuck in PoC? Let’s fix that.
+
+Most AI teams can build a demo agent in days. Turning that demo into something production-ready that meets enterprise expectations is where progress stalls.
+
+Weeks of iteration become months of integration, and suddenly the project is stuck in PoC purgatory while the business waits.
+
+Turning prototypes into production-ready agents isn’t just hard. It’s a maze of tools, frameworks, and security steps that slow teams down and increase risk.
+
+In this post, you’ll learn step by step how to build, deploy, and govern
+AI agents
+using the
+Agent Workforce Platform
+from DataRobot, built with
+NVIDIA AI Enterprise natively embedded
+.
+
+Why teams struggle to get agents into production
+
+Two factors keep most teams stuck in PoC purgatory:
+
+1. Complex builds
+Translating business requirements into a reliable
+agent workflow isn’t simple
+. It requires evaluating countless combinations of LLMs, smaller models, embedding strategies, and guardrails while balancing strict quality, latency, and cost objectives. The iteration alone can take weeks.
+
+2. Operational drag
+Even after the workflow works, deploying it in production is a marathon. Teams spend months managing infrastructure, applying security guardrails, setting up monitoring, and enforcing governance to reduce compliance and operational risks.
+
+Today’s options don’t make this easier:
+
+Many tools may speed up parts of the build process but often lack integrated
+governance
+,
+observability
+, and control. They also lock users into their ecosystem, limit flexibility with model selection and GPU resources, and provide minimal support for evaluation, debugging, or ongoing monitoring.
+
+Bring-your-own stacks offer more flexibility but require heavy lifting to configure, secure, and connect multiple systems. Teams must handle infrastructure, authentication, and compliance on their own — turning what should be weeks into months.
+
+The result? Most teams never make it past proof of concept to a production-ready agent.
+
+A unified approach to the agent lifecycle
+
+Instead of juggling multiple tools for build, evaluation, deployment, and governance, the Agent Workforce Platform brings these stages into one workflow while supporting deployments across cloud, on-premises, hybrid, and air-gapped environments.
+
+Build anywhere
+: Develop in Codespaces, VSCode, Cursor, or any notebook using OSS frameworks like LangChain, CrewAI, or LlamaIndex, then upload with a single command.
+
+Evaluate and compare workflows
+: Use built-in operational and behavioral metrics, LLM-as-a-judge, and human-in-the-loop reviews for side-by-side comparisons.
+
+Trace and debug issues quickly
+: Visualize execution at every step, then edit code in-platform and re-run evaluations to resolve errors faster.
+
+Deploy with one click or command
+: Move agents to production without manual infrastructure setup, whether on DataRobot or your own environment.
+
+Monitor with built-in and custom metrics
+: Track functional and operational metrics in the DataRobot dashboard or export your own preferred observability tool using OTel-compliant data.
+
+Govern from day one
+: Apply real-time guardrails and automated compliance reporting to enforce security, manage risk, and maintain audit readiness without extra tools.
+
+Enterprise-grade capabilities include:
+
+Native integration of
+NVIDIA NIM
+for optimized inference across cloud, hybrid, and on-premises environments.
+
+Managed RAG workflows with your choice of vector databases like Pinecone and Elastic for retrieval-augmented generation.
+
+Elastic compute for hybrid environments, scaling to meet high-performance workloads without compromising compliance or security.
+
+“Batteries included” LLM access to OSS and proprietary models (Anthropic, OpenAI, Azure, Bedrock, and more) with a single set of credentials — eliminating API key management overhead.
+
+OAuth 2.0-compliant authentication and role-based access control (RBAC) for secure agent execution and data governance.
+
+From prototype to production: step by step
+
+Every team’s path to production looks different. The steps below represent common jobs to be done when managing the agent lifecycle — from building and debugging to deploying, monitoring, and governing.
+
+Use the steps that fit your workflow or follow the full sequence for an end-to-end process.
+
+1. Build your agent
+
+Start with the frameworks you know. Use agent templates for LangGraph, CrewAI, and LlamaIndex from DataRobot’s public GitHub repo, and the CLI for quick setup.
+
+Clone the repo locally, edit the agent.py file, and push your prototype with a single command to prepare it for production and deeper evaluation. The Agent Workforce Platform handles dependencies, Docker containers, and integrations for tracing and authentication.
+
+2. Evaluate and compare workflows
+
+After uploading your agent, configure evaluation metrics to measure performance across agents, sub-agents, and tools.
+
+Choose from built-in options such as PII and toxicity checks, NeMo guardrails, LLM-as-a-judge, and agent-specific metrics like tool call accuracy and goal adherence.
+
+Then, use the agent playground to prompt your agent and compare responses with evaluation scores. For deeper testing, generate synthetic data or add human-in-the-loop reviews.
+
+3. Trace and debug
+
+Use the agent playground to view execution traces directly in the UI. Drill into each task to see inputs, outputs, metadata, evaluation details, and context for every step in the pipeline.
+
+Traces cover the top-level agent as well as sub-components, guard models, and evaluation metrics. Use this visibility to quickly identify which component is causing errors and pinpoint issues in your code.
+
+4. Edit and re-test your agent
+
+If evaluation metrics or traces reveal issues, open a code space in the UI to update the agent logic. Save your changes and re-run the agent without leaving the platform. Updates are stored in the registry, ensuring a single source of truth as you iterate.
+
+This is not only useful when you are first testing your agent, but also over time as new models, tools, and data need to be incorporated to upgrade it.
+
+5. Deploy your agent
+
+Deploy your agent to production with a single click or command. The platform manages hardware setup and configuration across cloud, on-premises, or hybrid environments and registers the deployment in the platform for centralized tracking.
+
+6. Monitor and trace deployed agents
+
+Track agent performance and behavior in real time with built-in monitoring and tracing. View key metrics such as cost, latency, task adherence, goal accuracy, and safety indicators like PII exposure, toxicity, and prompt injection risks.
+
+OpenTelemetry (OTel)-compliant traces provide visibility into every step of execution, including tool inputs, outputs, and performance at both the component and workflow levels.
+
+Set alerts to catch issues early and modularize components so you can upgrade tools, models, or vector databases independently while tracking their impact.
+
+7. Apply governance by design
+
+Manage security, compliance, and risk as part of the workflow, not as an add-on. The registry within the Agent Workforce Platform provides a centralized source of truth for all agents and models, with access control, lineage, and traceability.
+
+Real-time guardrails monitor for PII leakage, jailbreak attempts, toxicity, hallucinations, policy violations, and operational anomalies. Automated compliance reporting supports multiple regulatory frameworks, reducing audit effort and manual work.
+
+What makes the Agent Workforce Platform different
+
+These are the capabilities that cut months of work down to days, without sacrificing security, flexibility, or oversight.
+
+One platform, full lifecycle
+: Manage the entire agent lifecycle across on premises, multi-cloud, air-gapped, and hybrid environments without stitching together separate tools.
+
+Evaluation, debugging, and observability built in
+: Perform comprehensive evaluation, trace execution, debug issues, and monitor real-time performance without leaving the platform. Get detailed metrics and alerting, even for mission-critical projects.
+
+Integrated governance and compliance
+: A central AI registry versions and tracks lineage for every asset, from agents and data to models and applications. Real-time guardrails and automated reporting eliminate manual compliance work and simplify audits.
+
+Flexibility without trade-offs
+: Use any open source, proprietary framework, or model on a platform built for enterprise-grade security and scalability.
+
+From prototype to production and beyond
+
+Building enterprise-ready agents is just the first step. As your use cases grow, this guide gives you a foundation for moving faster while maintaining governance and control.
+
+Ready to build?
+Start your free trial
+.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+Dr. Ramyanshu (Romi) Datta
+
+,
+
+Prajakta Damle
+
+,
+
+Nivetha Purusothaman
+
+,
+
+Nathaniel Daly
+
+,
+
+Kateryna Bozhenko
+
+August 7, 2025
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

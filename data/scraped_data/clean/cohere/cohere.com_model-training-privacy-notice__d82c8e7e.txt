@@ -1,0 +1,316 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/model-training-privacy-notice
+page path  : /model-training-privacy-notice
+captured   : 2026-06-07 10:24:10 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/cohere/cohere.com_model-training-privacy-notice__d82c8e7e.html.gz
+========================================================================
+
+Model Training Privacy Notice | Cohere
+
+Model Training Privacy Notice | Cohere
+Command A+. Our fastest, most powerful language model yet - available open-source.
+Learn more
+Products
+Products
+
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+NEW
+High-performance models for agentic, multimodal, multilingual AI
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Models Overview
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+Global MMLU
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Merch Store
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+NEW
+High-performance models for agentic, multimodal, multilingual AI
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Models Overview
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+Global MMLU
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Merch Store
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+Last Update: May 1, 2026
+Cohere Model Training Privacy Notice
+We have prepared this notice (“
+Notice
+”) to explain how our foundation models (“
+Models
+”) are trained and how they work. In this Notice, we also explain how personal information of individuals who do not use our products may incidentally be processed as part of the training process of our Models.
+For information about the personal information we handle in connection with our products, website, or other interactions with our customers, or for additional details not provided in this Notice (including regarding international transfers and data subject rights), please see our
+Privacy Policy
+. You can also contact us at
+privacy@cohere.com
+.
+Cohere Models and Who They are Made For
+Cohere develops two types of Models to serve its customers:
+Generative models, like our Command model family, used to generate human-like text in response to user inputs containing text or images.
+Search and retrieval models, like our Embed and Rerank model families, used to represent the meaning of text or image inputs as a list of numbers and to index documents based on relevance to a user query. Common use-cases include semantic search, clustering and classification. These models cannot generate human-like text as an output.
+Cohere develops its Models to excel at enterprise tasks, like retrieving information from internal data sources in response to a complex, multi-step research question. Potential applications include an internal knowledge agent that can respond to an employee requesting information about company policies, or an agent to analyze historical financial data and provide forecast trends about expected revenues and operating expenses.
+Cohere Models are not for direct use by consumers or for personal or household purposes. This means Cohere’s customers use our Models and products within their own corporate environments to improve their workflows or products.
+How Cohere Models are Trained
+Our Models are developed in two key phases often called pre-training and post-training:
+Pre-training provides a base layer of foundational capabilities. It involves the analysis of a high volume of varied content. Before the analysis process, content is converted into tokens, which are short chunks of text or formatting characters of different lengths. The model processes the tokens and learns general patterns, syntax, and semantics across multiple languages.
+Post-training refines and improves specific capabilities. It involves training on smaller, focused datasets relevant to the specific types of tasks or capabilities that we want to improve. Human feedback as well as AI tools are often used during this phase to develop datasets or evaluate a model’s performance on a specific task. Cohere’s post-training process is focused on capabilities, like tool use, coding, safety, math, and multilingual capabilities, that optimize its Models for enterprise use.
+We use the words ‘learning’ and ‘training’ to describe how Models are developed. But Models do not memorize or store training data. They identify statistical patterns in content that has been transformed into tokens for the purpose of model development. Models do not have access to or ‘pull’ from data used during the training process once they are trained. They are trained to recognize words, concepts, basic facts about the world, and patterns that tend to appear together. For instance, a bank can mean a riverbank or a financial institution; a house can mean a home or a house of political representatives. The training process enables models like Cohere’s to pick up on context cues based on statistical patterns.
+For more information about how our Models are trained and how they are built, see our model cards available at
+docs.cohere.com
+.
+Collection of Personal Information
+Cohere’s Models are trained on a proprietary mix of datasets from various sources including publicly available information, datasets developed by Cohere with human annotation or generated automatically with AI (i.e. synthetic data), and datasets sourced from specialised data vendors.
+Cohere
+does not intentionally collect any personal information for the purpose of model training
+. Personal information is not particularly useful for the enterprise capabilities we train our Models for, and we take steps to minimise the possibility of any personal information being included in the mix of datasets we use for training. However, it is possible we may receive personal information in the following cases:
+Publicly available information on the web
+: Because the internet includes information about people, it is possible we may receive personal information when we use third party datasets that contain publicly available information. We take steps to remove any personal information we may have incidentally collected in this way before using content in training, like filtering out domains that are likely to contain high volumes of information about people (e.g. social media domains). If we collect information from the web directly ourselves, we take steps to ensure crawlers we use respect strict policies, like not accessing password-protected pages or content behind paywalls.
+Datasets sourced from third party vendors:
+We take steps to ensure our vendors do not include personal information in datasets provided to us, or where that is not possible, we take steps to de-identify the information before any use for training purposes.
+Data from our Products:
+In most cases, Cohere customers use Cohere Products in their own environments or in third party environments, meaning Cohere has no access to inputs submitted to its Models and other products. Where a user has given Cohere permission to use inputs and outputs for model training, we take steps to de-identify and strip personal information that may appear in inputs or outputs prior to use in model training. See our Privacy Policy for information about how we handle personal information on our Cohere API SaaS Platform. The types of datasets described above may be used in both the pre-training and post-training.
+During the pre-training phase, larger volumes of content are needed and so publicly available information is more commonly used during this stage. During post-training, smaller focused datasets are used to maximize a model’s performance over different capability areas and domains. Datasets sourced from third parties and datasets created by Cohere with human annotation or through automated means are more commonly used. The possibility of personal data being included in this stage is therefore lower.
+Privacy and Security Safeguards for Model Training
+We implement measures throughout the AI development lifecycle to mitigate the risks of this process, including privacy and security risks. These measures include:
+Adherence to and implementation of ISO-certified controls for information security and AI management through our ISO 27001 and ISO 42001 certifications;
+Safety mitigations and evaluations to identify, assess, and mitigate risks of harms to individuals or society;
+Access controls to limit access to training data to only those personnel who require access to perform their functions;
+Supply chain controls for any third parties such as data vendors;
+Designing and testing our Models to perform well on real-word enterprise tasks, like providing accurate outputs in response to a user query.
+See our Trust Center for more information about
+our approach to AI Governance
+and other risk management controls.
+Your Rights and Choices
+Subject to applicable law, you may have the right to access, update, correct, or delete your personal information in our control. You can submit your request at
+privacy@cohere.com
+. We will review inquiries and requests in accordance with applicable privacy laws. These rights are usually not absolute so we may decline a request if we have lawful grounds to do so. You may have the right to appeal our decision. Consult our
+Privacy Policy
+for more information on your rights and choices.
+Additional Information for Residents of EU/UK
+Cohere's legal basis for processing data that may incidentally include personal information to train its AI Models is grounded in
+legitimate interests
+. Under EU/UK data protection laws, the legitimate interest legal basis requires organizations to consider the impact of the processing of personal information on individuals, and determine whether individuals’ interests and rights outweigh the processing organization’s interests.
+The purposes of the processing and Cohere’s legitimate interests are to develop its Models to have the capabilities described above, like recognizing general language patterns; carry out scientific research; and improve its Models and products over time. These Models also offer benefits for the wider public and for Cohere customers, like improved productivity, increased efficiency of public services, and increased accessibility of high quality and performant LLMs in languages other than English. Cohere’s activities also support a research lab focused on advancing state of the art AI research and promoting safe and responsible AI development. We do not intentionally process any special categories of personal data for model training purposes but will respond to data subject requests in accordance with applicable law if an individual identifies special category data in the output of a Cohere Model. Cohere implements the measures and safeguards described above to mitigate any impact of its information processing on individuals.
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Customer Stories
+Developers
+Events
+On-Demand Events
+Merch Store
+LLM University
+Documentation
+Release Notes
+Models Overview
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Customer Stories
+Developers
+Events
+On-Demand Events
+Merch Store
+LLM University
+Documentation
+Release Notes
+Models Overview
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Cohere ©
+2026
+Privacy
+Terms of Use
+Manage Cookies
+English

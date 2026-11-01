@@ -1,0 +1,174 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/moonshotai
+page path  : /moonshotai
+captured   : 2026-04-19 23:54:32 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_moonshotai__2fc2b277.html.gz
+========================================================================
+
+moonshotai Models on OpenRouter
+
+moonshotai Models on OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+moonshotai
+Access 7 moonshotai models on OpenRouter including Kimi K2.5, Kimi K2 Thinking, and Kimi K2 0905. Compare pricing, context windows, and capabilities.
+moonshotai
+tokens processed on OpenRouter
+MoonshotAI: Kimi K2.5
+Kimi K2.5
+444B
+tokens
+Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling.
+by
+
+moonshotai
+Jan 27, 2026
+262K
+context
+$
+0.3827
+/M input
+tokens
+$
+1.72
+/M output
+tokens
+MoonshotAI: Kimi K2 Thinking
+Kimi K2 Thinking
+13.5B
+tokens
+Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in Kimi K2, it activates 32 billion parameters per forward pass and supports 256 k-token context windows. The model is optimized for persistent step-by-step thought, dynamic tool invocation, and complex reasoning workflows that span hundreds of turns. It interleaves step-by-step reasoning with tool use, enabling autonomous research, coding, and writing that can persist for hundreds of sequential actions without drift. It sets new open-source benchmarks on HLE, BrowseComp, SWE-Multilingual, and LiveCodeBench, while maintaining stable multi-agent behavior through 200–300 tool calls. Built on a large-scale MoE architecture with MuonClip optimization, it combines strong reasoning depth with high inference efficiency for demanding agentic and analytical tasks.
+by
+
+moonshotai
+Nov 6, 2025
+262K
+context
+$
+0.60
+/M input
+tokens
+$
+2.50
+/M output
+tokens
+MoonshotAI: Kimi K2 0905
+Kimi K2 0905
+18.1B
+tokens
+Kimi K2 0905 is the September update of
+Kimi K2 0711
+. It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It supports long-context inference up to 256k tokens, extended from the previous 128k. This update improves agentic coding with higher accuracy and better generalization across scaffolds, and enhances frontend coding with more aesthetic and functional outputs for web, 3D, and related tasks. Kimi K2 is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. It excels across coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) benchmarks. The model is trained with a novel stack incorporating the MuonClip optimizer for stable large-scale MoE training.
+by
+
+moonshotai
+Sep 4, 2025
+262K
+context
+$
+0.40
+/M input
+tokens
+$
+2
+/M output
+tokens
+MoonshotAI: Kimi K2 0711
+Kimi K2 0711
+5.01B
+tokens
+Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training.
+by
+
+moonshotai
+Jul 11, 2025
+131K
+context
+$
+0.57
+/M input
+tokens
+$
+2.30
+/M output
+tokens
+MoonshotAI: Kimi Dev 72B
+Kimi Dev 72B
+Kimi-Dev-72B is an open-source large language model fine-tuned for software engineering and issue resolution tasks. Based on Qwen2.5-72B, it is optimized using large-scale reinforcement learning that applies code patches in real repositories and validates them via full test suite execution—rewarding only correct, robust completions. The model achieves 60.4% on SWE-bench Verified, setting a new benchmark among open-source models for software bug fixing and code reasoning.
+by
+
+moonshotai
+Jun 16, 2025
+131K
+context
+MoonshotAI: Kimi VL A3B Thinking
+Kimi VL A3B Thinking
+Kimi-VL is a lightweight Mixture-of-Experts vision-language model that activates only 2.8B parameters per step while delivering strong performance on multimodal reasoning and long-context tasks. The Kimi-VL-A3B-Thinking variant, fine-tuned with chain-of-thought and reinforcement learning, excels in math and visual reasoning benchmarks like MathVision, MMMU, and MathVista, rivaling much larger models such as Qwen2.5-VL-7B and Gemma-3-12B. It supports 128K context and high-resolution input via its MoonViT encoder.
+by
+
+moonshotai
+Apr 10, 2025
+131K
+context
+MoonshotAI: Moonlight 16B A3B Instruct
+Moonlight 16B A3B Instruct
+Moonlight-16B-A3B-Instruct is a 16B-parameter Mixture-of-Experts (MoE) language model developed by Moonshot AI. It is optimized for instruction-following tasks with 3B activated parameters per inference. The model advances the Pareto frontier in performance per FLOP across English, coding, math, and Chinese benchmarks. It outperforms comparable models like Llama3-3B and Deepseek-v2-Lite while maintaining efficient deployment capabilities through Hugging Face integration and compatibility with popular inference engines like vLLM12.
+by
+
+moonshotai
+Feb 28, 2025
+8K
+context

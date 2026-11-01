@@ -1,0 +1,128 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/black-forest-labs/flux.2-max
+page path  : /black-forest-labs/flux.2-max
+captured   : 2026-01-16 14:59:42 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/openrouter/openrouter.ai_black-forest-labs_flux.2-max__1e3071f4.html.gz
+========================================================================
+
+FLUX.2 Max - API, Providers, Stats | OpenRouter
+
+FLUX.2 Max - API, Providers, Stats | OpenRouter
+Skip to content
+OpenRouter
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Models
+Providers
+Pricing
+Enterprise
+Company
+About
+Announcements
+Careers
+Hiring
+Partners
+Privacy
+Terms of Service
+Support
+State of AI
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Black Forest Labs: FLUX.2 Max
+black-forest-labs
+/
+flux.2-max
+Chat
+Compare
+Created
+Dec 16, 2025
+46,864
+context
+$
+7.32
+/M input tokens
+$
+7.32
+/M output tokens
+FLUX.2 [max] is the new top-tier image model from Black Forest Labs, pushing image quality, prompt understanding, and editing consistency to the highest level yet.
+
+Pricing is as follows,
+per the docs
+:
+Input: We charge $0.03 for each megapixel on the input (i.e. reference images for editing)
+Output: The first generated megapixel is charged $0.07. Each subsequent megapixel is charged $0.03.
+Chat
+Compare
+Overview
+Providers
+Performance
+Apps
+Activity
+Uptime
+Quickstart
+Providers for FLUX.2 Max
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for FLUX.2 Max
+Compare different providers across OpenRouter
+Sorting API Example
+Apps using FLUX.2 Max
+Top public apps this month
+Recent activity on FLUX.2 Max
+Total usage per day on OpenRouter
+Prompt
+891K
+Completion
+0
+Reasoning
+0
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for FLUX.2 Max
+Uptime stats for
+FLUX.2 Max
+
+across all providers
+Sample code and API for FLUX.2 Max
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports image generation through models that have
+image
+in their output modalities. These models can create images from text prompts when you specify
+modalities: ["image", "text"]
+in your request. The generated images are returned as base64-encoded data URLs in the assistant message.
+
+Learn more about image generation
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

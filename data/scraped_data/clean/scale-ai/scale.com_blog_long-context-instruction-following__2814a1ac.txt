@@ -1,0 +1,248 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/long-context-instruction-following
+page path  : /blog/long-context-instruction-following
+captured   : 2026-06-07 17:56:02 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_long-context-instruction-following__2814a1ac.html.gz
+========================================================================
+
+A Guide to Improving Long Context Instruction Following | Scale AI
+
+A Guide to Improving Long Context Instruction Following | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+A Guide to Improving Long Context Instruction Following on Open Source Models
+By
+
+Priya Khandelwal
+,
+Jacob Phillips
+&
+Sean Hendryx
+·
+September 26, 2024
+·
+19 min read
+Copy Link
+In the world of large language models, the ability to handle extensive inputs—anything greater than 4K tokens—presents both an opportunity and a challenge. As task sizes continue to grow, how do models keep up? When answering detailed questions about research papers, synthesizing meeting records, or handling large blocks of code, can LLMs effectively track key details buried in the middle of vast data streams? While methods such as Retrieval-Augmented Generation (RAG) and compression have long been the standard approach for tackling long context tasks, a new generation of long context models is beginning to shift the landscape.
+Do these newer long context models deliver on their promise? And more importantly, how do we make the most of them? Our machine learning team at Scale explored the strengths and limitations of long context models, uncovering key insights on when to lean on them over other methods like RAG, and what it takes to truly unlock their potential.
+Overall, we found that:
+Long context models are outperforming traditional methods
+: The latest long context models show clear advantages over approaches like RAG and compression in complex tasks.
+Effective fine-tuning hinges on diverse, high-quality data
+: The success of long context fine-tuning is heavily reliant on the variety and quality of training data, with well-curated datasets being key to unlocking full model potential.
+Extending context windows requires more than just scaling
+: Simply extending a model's context length isn’t enough—comprehensive fine-tuning on long-context data is essential for maximizing performance.
+When Should I Use A Long Context Model?
+One of the major benefits–and proposed advantages–of using long context models is that more text can be packed into the generation model's context, in theory increasing the likelihood that relevant information is included for answering a query effectively. But to date, methods like Retrieval Augmented Generation, or RAG, and smart compression, still tend to be the go-to choice for driving good performance on long context problems.
+Studies on long context models repeatedly highlight two key challenges with long context LLMs:
+The “Lost in the Middle Problem”
+: As context length increases, models often struggle to retain and utilize information from the middle sections of text, which can lead to a drop in performance, especially on retrieval and reasoning tasks.
+Effective Context Length
+: Many open and closed source models claim to have context window lengths of up to 1M tokens, but their effective lengths whittle down to 4K-32K tokens when expected to maintain performance as sequence length increases (
+Hsieh et al
+). Even at these “smaller” long context lengths, performance is sometimes suboptimal.
+But with a new generation of long context models pushing the known limits of LLMs, the question arises:
+Is it better to spend time crafting an optimal scaffolding, or should you lean on the long context capabilities of newer LLMs?
+Long Context Models vs Retrieval-Augmented Generation (RAG)
+To explore one part of this, we designed simple experiments to probe at the strengths and weaknesses of the long context window of Llama-3.1-8B-Instruct and RAG workflows paired with Llama-3.1-8B-Instruct. In future work, we plan to evaluate the recently released Llama-3.2
+Experiment Setups
+The design specifications of the RAG workflow matter–the “better” the RAG setup, the better the performance. To abstract away the quality of RAG setup as a factor, we created two RAG setups: a naive one using a basic FAISS index with all-MiniLM-L6-v2 embeddings, and an advanced LLM-based setup utilizing OpenAI embeddings paired with a GPT-4 re-ranker. Both approaches were tested on LongBench, a benchmark comprising 20+ public datasets. The task types span key long-context application scenarios like single-document QA, multi-document QA, summarization, few-shot learning, synthetic tasks, and code completion, with some tasks reaching a size of 35k tokens. More details on specific task types are available in the Appendix.
+For each input, we break down the text into smaller pieces, or "chunks," with each chunk being 200 characters long, and encode these chunks into the retriever. Depending on the input size, we ended up with anywhere between 100 to 700 chunks. For each task, we retrieved different numbers of chunks—starting from just 5 and going up to 500—to see how much information the model could process effectively.
+We treat the base long context model, Llama-3.1-8B-Instruct, as the equivalent of doing a Naive RAG of all chunks, or 700. We normalize the average performance over all datasets of both the naive and advanced RAG methods against the long context model’s average performance over all datasets:
+Performance: RAG Naive and RAG Advanced vs Llama-3.1-8B-Instruct (Normalized Against Llama-3.1-8B-Instruct)
+We observe that at no point does either RAG overall performance overtake the long context model’s overall performance. Diving deeper into the best performing RAG setup:
+When Long Context Wins
+Across the board, our experiments showed that increasing the number of retrieved chunks generally boosts performance—more chunks seem to help models capture and synthesize information better. This pattern held even for more complex reasoning tasks with multihop queries or implicit queries, like those in hotpotqa and 2wikimqa, both passage-based question answering tasks, as well as passage_count, a duplication detection task.
+Surprisingly, the long context model on its own outperformed RAG setups on passage_retrieval, in both English and Chinese, a task traditionally seen as RAG’s strength. This suggests that
+the latest long context models have significantly improved their ability to comprehend and process large passages
+.
+It’s also worth noting that on tasks where performance is comparable, RAG expends $0.01 per query for the reranker, whereas Llama is free of charge.
+Where RAG Still Shines
+However, RAG isn't obsolete just yet. The best performing RAG workflow–Advanced (k = 500)–excelled at triviaqa and multifieldqa_en, both passage-based question answering tasks, the former requiring an understanding of few-shot examples and the latter requiring reading comprehension. One potential explanation for RAG’s superior performance on these tasks can actually be attributed to the prompt design of these tasks, which coax a short response from the model by pushing it or modeling for it how to look for only relevant information.
+When paired with mindful prompting, RAG can mitigate the need for massive amounts of context
+.
+When we ran experiments with a Llama-3-8B model, we found that the relationship between chunk size and performance wasn't as clear–more isn’t necessarily better. In some cases, retrieving 250 chunks yielded better results than 500. This variability hints that RAG performance can be highly sensitive to factors like dataset and the model. We have also found internally at Scale that comparing long context and RAG for GPT-4 reaffirmed that changing the number of chunks can lead to stark variations depending on the task type.
+For older-generation models, RAG workflows remain advantageous, especially when handling text inputs exceeding a model's effective context window
+. When the input exceeds 64k+ tokens, for instance, the "lost in the middle" problem resurfaces, making RAG a more reliable solution. In these scenarios, leveraging chain-of-thought prompting and more advanced retrievers or re-rankers can significantly boost performance.
+The Verdict: Long Context Challenges RAG in 2024
+As newer models emerge, long context LLMs are becoming increasingly viable, outperforming RAG in many long-text scenarios.
+A new study from Deepmind
+found the performance gap between direct long context and RAG to be more significant for the more recent models (GPT-4O and Gemini-1.5-Pro) compared to GPT-3.5-Turbo. While RAG used to be the go-to for handling large inputs, the balance has shifted with recent fine-tuning advancements in LLMs.
+For long context inputs that comfortably fit within the model’s window, it’s often more beneficial to focus on maximizing the model’s inherent capabilities, rather than defaulting to a RAG setup
+.
+There are some types of tasks that both approaches still fail on–both struggled to generate a meaningful score on lsht, a Chinese classification task for categorizing news, and trec, a classification task for categorizing questions. Text classification can be challenging when dealing with unstructured data, and while it's unfortunate that newer LLMs’ long context capabilities can’t surpass this shortcoming yet, perhaps additional finetuning or prompting could paint a better picture on how long context and RAG really compare on categorization tasks.
+While RAG is still a useful tool—especially for legacy models or extremely massive input sizes—fine-tuned long context models are carving out a new role in the space of complex, long-text tasks.
+Smart Compression–Not So Smart
+The "lost in the middle" problem remains a core challenge for long context models. This isn’t just a limitation of instruction fine-tuning; base models, too, suffer from the same issue (Liu et al.).
+The transformer architecture in current LLMs has an inherent limitation in handling long sequences, as attention mechanisms struggle to prioritize and retain information from the middle of extended contexts. This results in important details being "lost" as context length increases, contributing to performance degradation on tasks requiring deep reasoning and retrieval across long inputs.
+Without a major architectural shift, even models promising better long context comprehension will struggle with middle blindness.
+At first glance, it seems logical to combat this by employing smart compression techniques to remove non-essential tokens, especially from the middle of long texts, in order to maximize a model's effective context window. We tested this using Microsoft’s LLMLingua2, a leading compression tool trained with data distilled from GPT-4, which is designed for efficient, task-agnostic compression, on LLama-3-8B.
+However, after finding an optimal compression rate of 30%, our experiments on the LongBench-E subset (focusing on tasks exceeding typical context lengths) revealed a surprising outcome: when the context length became too large, simply truncating tokens from the middle—without any intelligent compression—actually outperformed LLMLingua2’s carefully compressed inputs.
+Performance of Lllama-3-8B on tasks from LongBench-E when truncating tokens from the middle, compressing context with LLMLingua2, and truncating tokens from the end. Middle truncation outperforms smart compression on most tasks.
+On retrieval-heavy tasks, the compressed versions introduced by LLMLingua2 did not show significant improvements from the baseline and sometimes even underperformed compared to the base, truncation from the end.
+So why might this happen? Smart compression often tries to preserve key tokens, sometimes at the expense of simplifying or altering the structure of the original text. In contrast, truncating large portions from the middle keeps the overall context intact and can be less disruptive to the model’s inherent understanding of the task. By leaving both the beginning and end of the input untouched—two areas where key information often resides—blind truncation preserves the natural flow of the document, which may explain its unexpected success. More experiments should be done to potentially explain this phenomenon.
+The only scenarios where truncating from the middle (and de facto, any sort of smart compression as well) hurt performance from the baseline were the lcc and repobench-p datasets, both code generation tasks
+. Removing parts from the middle of the code makes predicting the next line almost random, while truncating from the end allows the model to grasp the intent of the code and potentially generate a line that compensates for the missing sections.
+But for the time being, while smart compression tools like LLMLingua2 promise optimization, our findings suggest that when it comes to very long inputs,
+simpler methods like middle truncation delivers improvements without the added complexity
+. The benefits of a different technique are marginal, and investing time into more advanced compression methods may not provide the gains one would expect.
+Maximizing Performance with Long Context Models: The Case for Fine-Tuning
+So, if you’ve now decided to leverage the model’s whole context window for your long context task without additional scaffolding, how do you ensure that you’re getting the best performance? At Scale, we collaborate with enterprise clients from various industries to develop tailored Generative AI solutions for their specific use cases–for most of these applications, we fine-tune a base model to achieve the required accuracy for the given business challenges. But finetuning long context models requires a more thoughtful approach than typical finetuning.
+In particular, increasing models' exposure to tasks with 4k+ tokens is a low-hanging fruit for improving model performance on long context inputs
+.
+We now discuss different ways to maximize the impact of finetuning on long context instruction following and common degradation pain points.
+Data Quality and Diversity: A Cornerstone for Effective Long Context Finetuning
+High-quality, diverse training data is foundational to fine-tuning long context models. To build a model capable of excelling across different tasks, you need a range of input data that includes both long and short contexts.
+Task variety is key—combining tasks like summarization, multi-hop reasoning, information retrieval, and more ensures your model doesn’t just handle long context, but excels at extracting the most relevant information from it
+. Task length matters too–the more variety, the more the model retains its performance on short context tasks as well
+When constructing datasets for long context training, pulling data from sources like books, encyclopedias, research papers, and code ensures a robust variety of instruction following tasks. In our experiments, we use the
+LongAlign-10K dataset
+, as it pulls from sources likely to have been unseen during model training.
+After training long context models (with Flash Attention) on 3 epochs of this data and grid searching hyperparameters,
+we observe overall improved performance as well as improved performance on over half of the complex, multihop reasoning tasks and all code completion tasks (lcc, repobench-p)
+, both for LLama-3-Instruct and Llama-3.1-Instruct.
+Finetuning also enabled the models to start producing sensible predictions for tasks where scores were otherwise zero (e.g. trec)
+.
+Performance of Lllama-3.1-8B, Llama-3-8B, and Mistral-7B-Chat on tasks from LongBench-E after instruction fine-tuning on LongAlign-10K. On most tasks, finetuning boosts performance, especially on complex multihop reasoning and code completion.
+While there is significant performance degradation on passage retrieval and question-answering tasks in hotpot_qa and 2wikimqa after fine tuning compared to the base models, we attribute the loss to the fine-tuning process focusing heavily on long context reasoning tasks, which may have caused a shift in the models' ability to perform retrieval optimally–on manual inspection, the failed responses on question answering tasks also appear to hallucinate information not present in the text.
+This trade-off probably arises because the models are being optimized to handle extensive context reasoning rather than fine-tuning for retrieval-specific tasks. Additionally, the degradation could be linked to the selection of datasets in LongAlign-10K, which prioritized complex reasoning over the retrieval-based objectives, and were not necessarily designed to excel on our chosen benchmark, LongBench-E. To mitigate this, future iterations could explore integrating retrieval-focused tasks alongside complex instruction-following tasks in training data to better balance performance on both.
+The Funky Case of Mistral
+In most fine-tuning experiments, training Mistral-7B-Chat on the LongAlign-10k dataset seemed to negatively impact the performance, with the new weights ultimately degrading the model. While the training logs showed no clear sign of overfitting, some experiments had very noisy training curves. The LongAlign-10k dataset was also tokenized and formatted appropriately as per the chat template.
+At this stage, it’s difficult to diagnose whether a suboptimal choice of hyperparameters were the root cause for the observed decline, and further exploration is warranted. For now, finetuning appears to yield more promising results on Llama models.
+Training Challenges
+To sidestep challenges with memory and utilization on H100 GPUs, we also attempted experiments with post-training quantization (aka lower precision inference with no finetuning) and quantized finetuning with LORA to see if they could compare to FP16 or FP32 models. Unfortunately, these attempts were ineffective on LLama-3.1B-Instruct.
+There was severe accuracy collapse on almost all task types when doing inference at 4 bits, and we also observed that low-rank fine-tuning could not compensate for the errors introduced by quantization
+.
+Other researchers
+have also observed this phenomenon with Llama-3B on MMLU data (shorter context).
+We also attempted packing the data with loss weighting for Llama-3.1-8B-Instruct, as per the promising results from the LongAlign paper on older generation models. We leveraged the transformers package to try a greedy packing strategy, but even with the 8B model size, we encountered OOM issues when attempting to max out the context window during training. We also faced difficulties processing back-to-back 100k+ token requests. It’s possible that architectural changes to Llama-3.1 lead to higher memory usage or different memory allocation strategies, making it more sensitive to memory-intensive techniques, like packing, than older models.
+While this is not a sign that these methods cannot be effective in the future or potentially offer performance gains elegantly,
+this study cannot provide an accurate signal of the benefit of setting up such pipelines, and it warrants further exploration of their potential impact
+.
+Long Context Model Evaluation: Best Practices
+Evaluating long context models demands careful attention to both
+task relevance
+and
+context length
+. While common benchmarks test a model’s performance on tasks like summarization and retrieval, it’s important to use a dataset explicitly designed for long contexts.
+LongBench-E, for example, offers a comprehensive evaluation set covering multiple task categories with extensive context lengths
+.
+At this point, the case for long context models is pretty clear.
+While fine-tuning does risk degradation, choosing good training and evaluation data positions models to achieve better performance
+.
+But let’s say you have a short context model that’s already finetuned, and you want to extend it to handle long context. How does performance fare? Is more fine-tuning necessary?
+The Limits of Simply Extending Context: Fine-Tuning is Essential
+One of the most common strategies for extending the context window of large language models (LLMs) is through RoPE scaling (Rotary Positional Embedding). RoPE scaling works by encoding positional information in a rotating sinusoidal pattern, which allows a model to capture relative position relationships and extend its ability to handle longer input sequences. By adjusting how positional information is encoded, RoPE scaling allows a model to handle significantly longer inputs than it was originally trained for.
+Linear vs. Dynamic Scaling
+When it comes to RoPE scaling, there are two main approaches: linear and dynamic scaling.
+Linear scaling
+extends the positional embedding range uniformly, maintaining the same pattern throughout the entire input sequence. This method is easy to implement but can lead to degradation in performance when handling extremely long inputs. The model may have difficulty distinguishing between subtle positional differences in lengthy texts.
+Dynamic scaling
+introduces a more flexible approach by adjusting the rate of positional encoding across the input sequence, allowing for better adaptation to varying input lengths. While this technique offers improved precision for longer contexts, it adds complexity to the model and requires more sophisticated tuning to ensure stability.
+We apply both linear and RoPE scaling to a Llama-3-8B-Instruct 4k model to observe its performance on tasks with 8k or more token lengths:
+Performance of Lllama-3-8B on tasks from LongBench-E after being RoPE-scaled to 16k tokens using both a linear and dynamic approach.
+For shorter range long context tasks of 8k tokens, linear scaling seems to be more effective on reasoning and question answering tasks than dynamic scaling, which aligns with what we would expect. But what if we add fine-tuning to the mix?
+We finetune Llama-3-8B with both linear RoPE scaling and LongAlign-10k data. We evaluate the base model, RoPE inference, and finetuned model on the LongBench-Chat benchmark, a composition of 50 tasks reaching 100k token task lengths. We use two different GPT-4 based judges that compare outputs to human ground truth responses to judge model performance and ensure agreement.
+For the most part, the two different judges agree that finetuning improves performance by almost 30% on the linear RoPE scaled model, especially at the 10k-20k context length range. RoPE scaling (or similar techniques) can extend a model's context window, but fine-tuning is essential for maximizing the potential of long context models, even if a short context version of the model has already been fine-tuned.
+To ensure good performance on downstream long context tasks from base LLMs, sufficient long context post-training should be viewed as non-negotiable
+.
+Takeaways
+The latest long context models offer a multitude of non-negligible advantages over traditional long context methods like RAG and compression, particularly in handling complex tasks and reasoning-based instruction following. Their success hinges not only on the ability to handle extended contexts but also on effective fine-tuning, which requires diverse, high-quality long context data.
+Simply scaling context windows for shorter context models without comprehensive fine-tuning limits the potential of these models. Additional plots comparing compression, finetuning, and RoPE scaling with closed-source models can be found in the Appendix.
+As we look ahead, even newer models in the closed source space like OpenAI’s O1 that integrate advanced features such as private chains of thought offer a glimpse into the future of long context processing for LLMs. These models are paving the way for more sophisticated interactions with large datasets, where the ability to reason privately over extended sequences will become a key differentiator. With continued innovation in this space, we can expect to see open source models potentially follow suit by not only increasing their token limits but also becoming more adept at balancing internal processing with external output in ways that significantly enhance task performance.
+For teams aiming to maximize performance in long-context applications, investing in the latest long context models, alongside well-curated datasets and tailored fine-tuning, is the way forward
+. If you’re interested in evaluating the latest models like Llama-3.2 or learning more about how Scale’s long context strategies can enhance your business use case, contact our sales team.
+Appendix:
+LongBench(E)
+The LongBench benchmark covers a variety of task types. We run evaluations on the following datasets, with a subset used for evaluations on LongBench-E:
+HotpotQA
+Answer related questions based on multiple given documents
+2WikiMultihopQA
+Answer related questions based on multiple given documents
+Musique
+Answer related questions based on multiple given documents
+DuReader
+Answer related Chinese questions based on multiple retrieved documents
+MultiFieldQA-en
+Answer English questions based on a long article, which comes from a relatively diverse field
+MultiFieldQA-zh
+Answer Chinese questions based on a long article, which comes from a relatively diverse field
+NarrativeQA
+Ask questions based on stories or scripts, including understanding of important elements such as characters, plots, themes, etc.
+Qasper
+Ask questions based on a NLP research paper, questions proposed and answered by NLP practitioners
+GovReport
+A summarization task that requires summarizing government work reports
+QMSum
+A summarization task that requires summarizing meeting records based on user queries
+VCSUM
+A summarization task that requires summarizing Chinese meeting records
+TriviaQA
+Single document question answering task, providing several few-shot examples
+NQ
+Single document question answering task, providing several few-shot examples
+TREC
+A classification task that requires categorizing questions, includes 50 categories in total
+LSHT
+A Chinese classification task that requires categorizing news, includes 24 categories in total
+PassageRetrieval-en
+Given 30 English Wikipedia paragraphs, determine which paragraph the given summary corresponds to
+PassageCount
+Determine the total number of different paragraphs in a given repetitive article
+PassageRetrieval-zh
+Given several Chinese paragraphs from the C4 data set, determine which paragraph the given abstract corresponds to
+LCC
+Given a long piece of code, predict the next line of code
+RepoBench-P
+Given code in multiple files within a GitHub repository (including cross-file dependencies), predict the next line of code
+More details on the task construction of the benchmark are available on
+Hugging Face
+.
+More Plots For Reference Against Closed-Source
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

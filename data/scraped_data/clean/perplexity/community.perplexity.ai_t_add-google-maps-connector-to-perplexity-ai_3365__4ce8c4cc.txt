@@ -1,0 +1,175 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/add-google-maps-connector-to-perplexity-ai/3365
+page path  : /t/add-google-maps-connector-to-perplexity-ai/3365
+captured   : 2026-01-21 21:28:15 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_add-google-maps-connector-to-perplexity-ai_3365__4ce8c4cc.html.gz
+========================================================================
+
+Add Google Maps Connector to Perplexity AI - Feature Requests - Perplexity API Platform Forum
+
+Add Google Maps Connector to Perplexity AI - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Add Google Maps Connector to Perplexity AI
+
+Feature Requests
+
+search-api
+
+Chowdeswar_Reddy
+
+January 4, 2026, 10:25am
+
+1
+
+Feature Request
+
+Add Google Maps Connector to Perplexity AI
+
+Problem Statement
+
+Perplexity AI currently lacks direct access to Google Maps data, which limits its ability to provide accurate, real-time, and location-aware answers for queries involving places, routes, distances, opening hours, reviews, and local businesses. Users must manually cross-check results with Google Maps, breaking workflow efficiency and increasing friction.
+
+Proposed Solution
+
+Introduce a
+Google Maps connector
+that allows Perplexity AI to query Maps data when relevant.
+
+The connector should enable Perplexity to:
+
+Retrieve place details (addresses, hours, ratings, reviews)
+
+Answer location-based questions (e.g., “best cafés near me”)
+
+Estimate distances and travel times
+
+Support route and proximity-based reasoning
+
+Example use case:
+
+A user asks,
+“Find a highly rated Italian restaurant within 10 minutes walking distance from Times Square that’s open now.”
+
+With the Google Maps connector, Perplexity could return an accurate, up-to-date answer grounded in real Maps data.
+
+API Impact
+
+Affected API component:
+Search / Retrieval
+
+Related to a specific model:
+Potentially useful for advanced reasoning models (e.g., Deep Research)
+
+API changes required:
+
+New external connector integration
+
+Optional parameters for location context (latitude/longitude, radius, travel mode)
+
+Permission-based access to Maps data where applicable
+
+Alternatives Considered
+
+Manual copy-pasting from Google Maps
+
+Using generic web search results for location data
+
+These approaches are insufficient because they are slower, less accurate, and do not support real-time or proximity-based reasoning.
+
+Additional Context
+
+Google Maps is the most widely used and trusted source for location data
+
+A native connector would significantly improve Perplexity’s usefulness for travel, local discovery, logistics, and business research
+
+Similar integrations already exist in other AI tools, indicating strong user demand
+
+For direct inquiries, please reach out to
+api@perplexity.ai
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+59
+
+December 18, 2025
+
+Pro Search API
+
+Bug Reports
+
+0
+
+83
+
+May 15, 2025
+
+Query Length restriction in Search API
+
+General
+
+search-api
+
+0
+
+45
+
+October 9, 2025
+
+PKM Features? Web capture to add Personal Context
+
+Feature Requests
+
+chat-completions
+
+0
+
+52
+
+August 8, 2025
+
+Provide a calendar date to be associated with each search
+
+Feature Requests
+
+sonar-pro
+
+1
+
+70
+
+August 25, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

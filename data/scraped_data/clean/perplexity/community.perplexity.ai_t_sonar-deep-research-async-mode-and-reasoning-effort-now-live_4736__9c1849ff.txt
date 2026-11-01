@@ -1,0 +1,158 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-deep-research-async-mode-and-reasoning-effort-now-live/4736
+page path  : /t/sonar-deep-research-async-mode-and-reasoning-effort-now-live/4736
+captured   : 2026-04-12 12:23:32 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-deep-research-async-mode-and-reasoning-effort-now-live_4736__9c1849ff.html.gz
+========================================================================
+
+Sonar Deep Research — Async Mode and Reasoning Effort Now Live - Announcements - Perplexity API Platform Forum
+
+Sonar Deep Research — Async Mode and Reasoning Effort Now Live - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Sonar Deep Research — Async Mode and Reasoning Effort Now Live
+
+Announcements
+
+Kesku
+
+June 5, 2025, 6:00pm
+
+1
+
+Sonar deep research just got a big upgrade:
+
+Async mode
+is now live — submit long-running deep research requests via
+POST /v1/async/sonar
+and poll for results, no more connection timeouts
+
+Reasoning effort
+control — tune how much thinking the model does with the
+reasoning_effort
+parameter (
+minimal
+,
+low
+,
+medium
+,
+high
+)
+
+Academic mode on all models
+— use
+search_mode: "academic"
+to prioritize scholarly sources
+
+Richer citations
+— every citation now includes title, URL, and date
+
+# Submit async deep research
+curl -X POST https://api.perplexity.ai/v1/async/sonar \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"model": "sonar-deep-research", "messages": [{"role": "user", "content": "Your research query"}]}'
+
+Docs:
+Async Deep Research
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+317
+
+June 1, 2025
+
+Deep Research API
+
+General
+
+sonar-deep-research
+
+0
+
+39
+
+January 9, 2026
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+110
+
+November 3, 2025
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+134
+
+April 7, 2026
+
+Not having internal COT <Think> in output of reasoning models
+
+General
+
+sonar-reasoning-pro
+
+1
+
+105
+
+November 3, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

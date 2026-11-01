@@ -1,0 +1,1236 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/blog/mixture-of-experts-models-get-more-from-speculative-decoding
+page path  : /blog/mixture-of-experts-models-get-more-from-speculative-decoding
+captured   : 2026-05-16 14:27:33 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/cohere/cohere.com_blog_mixture-of-experts-models-get-more-from-speculative-decoding__e1d89728.html.gz
+========================================================================
+
+Why MoE models get more from speculative decoding
+
+Why MoE models get more from speculative decoding
+Products
+Products
+
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+Apr 21, 2026
+9 minute read
+Why MoE models get more from speculative decoding
+Blog
+Written By
+Ekagra Ranjan
+Member of Technical Staff, Foundations
+Tags
+Developers
+Technology
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Background
+Large Language Models generate text one token at a time. Each token requires a full forward pass through the model, making generation inherently slow. Speculative decoding (SD) attacks this bottleneck: a small, fast “draft” model guesses the next tokens, and the full “target” model verifies all
+K
++
+1
+K+1
+K
++
+1
+of them in a single forward pass. When the guesses are right, you get multiple tokens for nearly the cost of one.
+Mixture-of-Experts (MoE) models add an interesting twist. Each token only activates a small subset of the model’s parameters — called “experts” — making individual tokens cheap. But during verification,
+K
++
+1
+K+1
+K
++
+1
+tokens may each route to different experts, potentially loading far more weights from memory than a single-token decode would. Does this extra loading erase the speedup that speculative decoding is supposed to deliver?
+Recent work by
+MoESD
+predicts that the answer is nuanced: MoE’s low arithmetic intensity creates a non-monotonic speedup curve, where gains first
+increase
+with batch size before declining.
+In this post, we validate this prediction on our production MoE models and extend the analysis in two directions. First, we examine temporal correlation in expert routing — a structural property of MoE models documented in
+prior work
+— and quantify its impact on SD verification cost. Second, we uncover a distinct mechanism behind the surprisingly high speedup at BS=1, where fixed-overhead amortization plays a role that routing analysis alone cannot explain. Finally, we also draw out concrete design implications for co-optimizing model sparsity and speculative decoding.
+Observing the non-monotonic speedup curve
+In LLM inference, the inference system batches multiple concurrent requests so that their decode steps execute together in a single forward pass — the number of requests processed in parallel is the
+batch size
+(BS). Because LLM decode is memory-bandwidth-bound at small BS and becomes compute-bound at large BS, the batch size fundamentally shapes how much benefit speculative decoding can deliver. Using vLLM, we benchmarked SD speedup across batch sizes for both a dense and a MoE model.
+Dense baseline (
+Command A
+, 111B).
+Speedup vs. batch size shows monotonic decrease — gains are highest at low BS where the model is bandwidth-bound.
+Figure 1: Command A speedup
+Cohere MoE + SD
+
+K
+=
+3
+K=3
+K
+=
+3
+.
+Speedup first increases then declines — the non-monotonic shape predicted by
+MoESD
+. The gain at BS=1 is unusually high; we revisit this anomaly in a later section.
+Figure 2: Cohere MoE speedup
+The contrast is striking: where the dense model’s SD gains monotonically decay, the MoE model exhibits a sweet spot at moderate batch sizes. What creates this sweet spot, and why does BS=1 stand out?
+Why MoE creates a sweet spot: arithmetic intensity
+The key to the non-monotonic curve lies in arithmetic intensity. For a MoE layer with N total experts, where each token selects
+k
+k
+k
+of them (top-k routing), processing
+T
+T
+T
+tokens with
+S
+S
+S
+shared experts gives an arithmetic intensity of:
+A
+I
+=
+T
+(
+k
++
+S
+)
+N
++
+S
+AI = \frac{T(k+S)}{N+S}
+A
+I
+=
+N
++
+S
+T
+(
+k
++
+S
+)
+​
+When
+S
+=
+0
+:
+A
+I
+=
+T
+k
+/
+N
+S=0: AI=Tk/N
+S
+=
+0
+:
+A
+I
+=
+T
+k
+/
+N
+. Sparsity (low
+k
+/
+N
+k/N
+k
+/
+N
+) keeps
+A
+I
+AI
+A
+I
+low, pushing the layer deeper into the bandwidth-bound regime at any given
+T
+T
+T
+.
+This creates three batch-size regimes for SD, as analyzed in
+MoESD
+:
+Low BS — partial expert loading.
+The model is memory-bandwidth-bound, but decode doesn’t yet load all experts. Verification adds extra expert weight loading on top of decode cost, limiting SD gains.
+Moderate BS — the sweet spot.
+Both decode and verification load nearly all experts anyway — verification adds almost no extra weight loading. Because
+A
+I
+AI
+A
+I
+remains low (thanks to sparsity), the model stays bandwidth-bound, making verification tokens nearly free. SD gains peak here.
+High BS — compute-bound.
+Arithmetic intensity exceeds the machine’s ops-to-byte ratio. Every extra verification token costs proportional compute, and SD gains vanish.
+Sparser models
+(lower
+k
+/
+N
+k/N
+k
+/
+N
+) stay bandwidth-bound longer, pushing the sweet spot to higher batch sizes.
+Connecting to SD speedup
+Following
+MagicDec
+and
+MoESD
+, the SD speedup is dominated by the verification cost ratio
+T
+t
+(
+K
++
+1
+)
+/
+T
+t
+(
+1
+)
+T_t(K + 1)/T_t(1)
+T
+t
+​
+(
+K
++
+1
+)
+/
+T
+t
+​
+(
+1
+)
+. Draft overhead is typically negligible. For
+K
+=
+3
+K=3
+K
+=
+3
+, the key metric is:
+T
+t
+(
+1
+)
+T
+t
+(
+4
+)
+∈
+(
+0
+,
+1
+]
+\frac{T_t(1)}{T_t(4)} \in (0,1]
+T
+t
+​
+(
+4
+)
+T
+t
+​
+(
+1
+)
+​
+∈
+(
+0
+,
+1
+]
+As this approaches 1 (verification ≈ free), speedup approaches the theoretical maximum of
+A
+L
+AL
+A
+L
+(acceptance length). The remaining sections measure and model this ratio via expert overlap analysis and
+Amdahl’s Law
+.
+Co-designing model sparsity and speculation
+The three-regime analysis yields a concrete design principle: for a given target batch size, the sparsity ratio
+k
+/
+N
+k/N
+k
+/
+N
+determines whether the model operates in the bandwidth-bound sweet spot or crosses into compute-bound territory where SD gains vanish.
+Sparser models (lower
+k
+/
+N
+k/N
+k
+/
+N
+) stay bandwidth-bound to higher batch sizes, widening the sweet spot. Denser models hit the compute-bound regime earlier. This means sparsity is not just a parameter-efficiency knob — it directly controls how much benefit speculative decoding can deliver at a given target BS load.
+The shared-to-routed expert ratio adds a second lever: shared experts reduce verification cost at low BS (by lowering the fraction of forward-pass time spent on routed expert weight loading), but raise the effective
+k
+/
+N
+k/N
+k
+/
+N
+, pushing the compute-bound transition earlier. In the limit, a model that shares all experts is equivalent to a dense model, with no sweet spot at all.
+For systems where the target BS is known at design time, these two knobs can be set accordingly:
+High target BS
+— maximize SD benefit by:
+Lowering
+k
+/
+N
+k/N
+k
+/
+N
+: fewer active experts per token keeps arithmetic intensity low and the model bandwidth-bound even at large batch sizes.
+Increasing the routed-to-shared expert ratio
+: more routed (fewer shared) experts keep the effective
+k
+/
+N
+k/N
+k
+/
+N
+low, preserving the bandwidth-bound regime.
+Low target BS
+— the calculus shifts: shared experts are beneficial because they reduce the fraction of forward-pass time spent on routed weight loading, making verification cheaper. The model stays bandwidth-bound regardless due to the small batch size.
+Expert routing and verification cost
+The arithmetic intensity framework explains the
+shape
+of the speedup curve, but predicting the actual verification cost requires understanding how experts are shared across tokens. If consecutive tokens during verification route to the same experts, fewer unique weights need to be loaded from memory.
+Temporal correlation in expert routing — the tendency for adjacent tokens to activate overlapping sets of experts —
+has been documented
+as a structural property of MoE models. Here we study this phenomenon in the SD verification setting, quantifying its effect on verification cost using a modified version of
+enable_return_routed_experts
+API in vLLM to capture per-token expert routing decisions on the MT-Bench dataset.
+Notation and baselines
+N
+N
+N
+represents number of experts per MoE layer
+k
+k
+k
+represents experts selected per token (top-k)
+L
+L
+L
+represents number of MoE layers
+e
+x
+p
+e
+r
+t
+s
+(
+t
+)
+experts(t)
+e
+x
+p
+er
+t
+s
+(
+t
+)
+represents set of
+k
+k
+k
+expert indices chosen for token
+t
+t
+t
+p
+e
+p_e
+p
+e
+​
+represents
+P(expert
+e
+selected for a random token)
+\text{P(expert } e \text{ selected for a random token)}
+P(expert
+e
+selected for a random token)
+, estimated from data
+In a MoE layer, a learned router selects
+k
+k
+k
+experts (out of
+N
+N
+N
+) per token. Only the selected experts’ weights are loaded from HBM to SRAM and applied. For SD verification, the key question is: how many
+unique
+experts must be loaded for all
+K
++
+1
+K+1
+K
++
+1
+tokens?
+Since each token selects exactly
+k
+k
+k
+experts:
+∑
+e
+p
+e
+=
+k
+.
+\sum_e p_e = k.
+e
+∑
+​
+p
+e
+​
+=
+k
+.
+We compare routing statistics under three assumptions:
+Uniform baseline
+— all experts equally likely
+p
+e
+=
+k
+/
+N
+p_e = k/N
+p
+e
+​
+=
+k
+/
+N
+, tokens independent.
+Expected overlap ratio
+=
+k
+N
+\text{Expected overlap ratio}= \frac{k}{N}
+Expected overlap ratio
+=
+N
+k
+​
+Expected unique experts for B tokens
+=
+N
+[
+1
+−
+(
+1
+−
+k
+N
+)
+B
+]
+\text{Expected unique experts for B tokens} = N\left[1 - \left(1 - \frac{k}{N}\right)^B\right]
+Expected unique experts for B tokens
+=
+N
+[
+1
+−
+(
+1
+−
+N
+k
+​
+)
+B
+]
+2. Independence baseline
+— empirical
+p
+e
+p_e
+p
+e
+​
+from data, but tokens are still independent. Captures non-uniform popularity but no temporal correlation.
+Expected overlap ratio
+=
+1
+k
+∑
+e
+p
+e
+2
+\text{Expected overlap ratio}= \frac{1}{k}\sum_e p_e^2
+Expected overlap ratio
+=
+k
+1
+​
+e
+∑
+​
+p
+e
+2
+​
+Expected unique experts for B tokens
+=
+∑
+e
+[
+1
+−
+(
+1
+−
+p
+e
+)
+B
+]
+\text{Expected unique experts for B tokens} = \sum_e\left[1 - (1 - p_e)^B\right]
+Expected unique experts for B tokens
+=
+e
+∑
+​
+[
+1
+−
+(
+1
+−
+p
+e
+​
+)
+B
+]
+3. Empirical
+— measured directly from consecutive tokens, preserving temporal correlation between adjacent tokens.
+The gap between the independence baseline and the empirical measurement isolates the effect of temporal correlation — the mechanism that makes SD verification cheaper than the baselines predict.
+Baseline
+What it captures
+Overlap source
+Uniform
+Chance-level
+None
+Independence
+Expert popularity skew
+Non-uniform p(sub e) only
+Empirical
+Full routing behavior
+Popularity + temporal correlation
+Figure 3: Random vs. correlated expert routing for four verification tokens
+Expert selection probabilities
+Our model selects
+k
+=
+8
+k=8
+k
+=
+8
+from
+N
+=
+128
+N=128
+N
+=
+128
+experts per token. Individual layers have clear favorites — the most popular expert in a layer can be up to
+10
+×
+10\times
+10
+×
+the uniform baseline
+(
+p
+uniform
+=
+k
+/
+N
+=
+0.0625
+)
+(p_{\text{uniform}} = k/N = 0.0625)
+(
+p
+uniform
+​
+=
+k
+/
+N
+=
+0.0625
+)
+. This skewness means expert activation
+saturates faster
+with batch size, benefiting SD by reducing the unique expert count during verification.
+Expected active experts vs. batch size
+BS
+Empirical
+Uniform
+Ratio
+1
+8.0
+8.0
+1.00
+2
+14.7
+15.5
+0.95
+4
+25.4
+29.1
+0.87
+8
+40.6
+51.6
+0.79
+16
+59.3
+82.4
+0.72
+32
+78.8
+111.8
+0.71
+64
+96.1
+125.9
+0.76
+128
+109.1
+128.0
+0.85
+For SD with
+K
+=
+3
+K=3
+K
+=
+3
+, the key row is
+BS=4
+: 25.4 empirical vs. 29.1 uniform. Real routing concentrates experts. The ratio of Empirical/Uniform decreases and then recovers as BS increases — a curve that mirrors the SD gain profile for MoE.
+Figure 4: Empirical / theoretical expected active experts
+Expert overlap between adjacent tokens
+Step (j)
+Cohere MoE
+1
+0.381
+2
+0.329
+3
+0.301
+4
+0.299
+Independence baseline
+0.118
+Uniform baseline
+0.0625
+At step 1, 38% overlap (3.0 of 8 experts shared) is well above the independence baseline (11.8%) and uniform floor (6.3%). Correlation decays with distance but remains 2–4× above the independence prediction at step 4. This level of temporal correlation is consistent with the routing consistency patterns
+observed in this paper
+and has direct implications for SD: the more experts are shared between consecutive verification tokens, the fewer unique weights must be loaded.
+Per-layer variation (step 1):
+Mid-network layers show the strongest overlap (~0.50), while early layers (~0.32) and final layers (~0.25) show less. Early layers haven’t developed strong semantic routing; final layers show reduced correlation as the model converges on the output distribution.
+Verification cost: unique experts for
+K
+=
+3
+K=3
+K
+=
+3
+Metric
+Cohere MoE
+Empirical (correlated)
+20.36
+Independence baseline
+25.4
+Uniform baseline
+29.1
+Temporal correlation reduces unique experts by 20–31% vs. the independence baseline. Verifying four tokens activates ~2.5× top-k (not the 3.2–3.6× the baselines predict).
+Generalization across data domains
+We
+validated
+13 Spec-Bench categories and seven languages from
+Aya Human Annotated
+. Expert overlap ratio at step 1:
+Data axis
+Range
+MTBench reference
+13 Spec-Bench categories
+0.377–0.385
+0.381
+Seven world languages (eng, tur, arb, por, tel, yor, zho)
+0.378–0.386
+0.381
+Expert overlap is a structural property of MoE routing on natural text, not a property of the input distribution. The sub-linear verification scaling holds for any realistic workload.
+Demystifying the high speedup at BS=1
+Our target-side measurements reveal a puzzle:
+T
+t
+(
+1
+)
+/
+T
+t
+(
+4
+)
+=
+0.80
+T_t(1)/T_t(4) = 0.80
+T
+t
+​
+(
+1
+)
+/
+T
+t
+​
+(
+4
+)
+=
+0.80
+at BS=1, but this drops to 0.65 at BS=2. Expert routing doesn’t explain the gap — expert concentration is actually slightly
+better
+at BS=2. This effect is not addressed by prior analyses of MoE speculative decoding.
+The explanation lies outside the MoE layers entirely. At very low batch sizes, non-expert operations (attention, norms, communication, kernel launches) are overhead-dominated. At BS=1, verifying 4 tokens in one pass amortizes these fixed overheads unusually well. At BS=2, we verify 8 tokens, and this low-batch overhead bonus shrinks.
+Amdahl’s Law decomposition
+To quantify this, we decompose the target forward pass into two components:
+Routed expert weight loading
+(fraction
+f
+f
+f
+): scales with the number of unique experts loaded.
+Everything else
+(fraction
+1
+−
+f
+1-f
+1
+−
+f
+): approximately fixed cost at small BS.
+This gives the verification cost ratio:
+T
+t
+(
+K
++
+1
+)
+T
+t
+(
+1
+)
+=
+f
+⋅
+unique
+(
+K
++
+1
+)
+k
++
+(
+1
+−
+f
+)
+\frac{T_t(K+1)}{T_t(1)} = f \cdot \frac{\text{unique}(K+1)}{k} + (1 - f)
+T
+t
+​
+(
+1
+)
+T
+t
+​
+(
+K
++
+1
+)
+​
+=
+f
+⋅
+k
+unique
+(
+K
++
+1
+)
+​
++
+(
+1
+−
+f
+)
+For our model with shared experts
+(
+f
+=
+0.30
+,
+u
+n
+i
+q
+u
+e
+(
+4
+)
+/
+k
+=
+2.55
+)
+:
+(f=0.30, unique(4)/k=2.55):
+(
+f
+=
+0.30
+,
+u
+ni
+q
+u
+e
+(
+4
+)
+/
+k
+=
+2.55
+)
+:
+
+T
+t
+(
+4
+)
+T
+t
+(
+1
+)
+≈
+0.30
+×
+2.55
++
+0.70
+=
+1.46
+\frac{T_t(4)}{T_t(1)} \approx 0.30 \times 2.55 + 0.70 = 1.46
+T
+t
+​
+(
+1
+)
+T
+t
+​
+(
+4
+)
+​
+≈
+0.30
+×
+2.55
++
+0.70
+=
+1.46
+Metric
+Amdahl
+Empirical
+T(4)/T(1)
+1.46×
+1.25×
+Implied speedup (AL/[T(4)/T(1)])
+1.87×
+2.18×
+Observed speedup at BS=1
+—
+1.95×
+(
+A
+L
+=
+2.73
+AL=2.73
+A
+L
+=
+2.73
+; implied speedup ignores draft cost to isolate the target-side effect.)
+The Amdahl estimate overestimates the verification ratio by ~17% (1.46× vs 1.25×), but the resulting speedup gap is smaller: 1.87× vs 2.18×. This is because the routed expert fraction
+f
+f
+f
+is only 0.30–0.55 (lower with shared experts), so most of the forward pass is fixed-cost compute unaffected by the verification scaling error.
+Why does the model overestimate? Two effects it ignores:
+Any non-expert GPU kernels are launch-overhead-dominated at BS=1 (2–10μs where 2–3μs is just launch), so batching 4 tokens amortizes this nearly for free
+Expert GEMMs with four tokens get better compute-read overlap and amortize per-expert kernel launch overhead.
+Lower
+f
+f
+f
+helps — so shared experts reduce verification cost at low BS — but with a tradeoff: they raise the effective
+k
+/
+N
+k/N
+k
+/
+N
+, pushing the model toward compute-bound earlier. In the limit, all shared experts = a dense model with no bandwidth-bound sweet spot.
+Plugging the measured values into the SD formula confirms the draft model costs ~15% of one target decode step (three draft tokens at ~5% each), matching our profiling measurement of 14.3%.
+Conclusion
+MoE’s sparsity, often seen as a complication for batched verification, actually helps speculative decoding in several reinforcing ways.
+First, MoE’s low arithmetic intensity (
+k
+/
+N
+k/N
+k
+/
+N
+) keeps the model bandwidth-bound to much higher batch sizes than dense models, creating a non-monotonic speedup curve with a sweet spot at moderate BS where verification is nearly free.
+Second, temporal correlation in expert routing significantly reduces the number of unique experts loaded during verification, from the naïve
+(
+K
++
+1
+)
+(K+1)
+(
+K
++
+1
+)
+x worst case to just 1.25–1.42× at BS=1. This locality holds across 13 task categories and seven languages, and is not an artifact of any particular workload.
+Third, at very low batch sizes, fixed-overhead amortization provides an additional boost beyond what expert routing analysis predicts — a mechanism we identify through Amdahl’s Law decomposition of the target forward pass.
+For system design, the implication is actionable: given a target batch size, sparsity and the shared-to-routed expert ratio can be co-optimized to stay in the bandwidth-bound regime where SD delivers the best returns.
+Acknowledgments
+On the Cohere side, thank you to Acyr Locatelli and and Bharat Venkitesh for providing technical support throughout this work.
+Ready to build your next project? Login or create an account on
+Cohere Dashboard
+. If you're looking for a new technical role at our leading enterprise AI startup,
+view job openings
+.
+Blog
+Written By
+Ekagra Ranjan
+Member of Technical Staff, Foundations
+Tags
+Developers
+Technology
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Legal Center
+Cohere ©
+2026
+Privacy
+Terms of Use
+Manage Cookies
+English

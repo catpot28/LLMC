@@ -1,0 +1,156 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/hitl-ep1-agent-landscape
+page path  : /blog/hitl-ep1-agent-landscape
+captured   : 2026-04-19 05:57:21 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_hitl-ep1-agent-landscape__a56dac98.html.gz
+========================================================================
+
+The Agent Landscape and What’s Useful for Enterprises: | Scale AI
+
+The Agent Landscape and What’s Useful for Enterprises: | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+General
+Human in the Loop: Episode 1 | The Agent Landscape and What’s Useful for Enterprises
+by
+
+Monica Mishra
+Published
+April 24, 2025
+Reading Time
+15 min read
+Copy Link
+Welcome to Human in the Loop.
+Scale is the humanity-first AI company. We believe the most powerful and responsible AI systems are built with humans in the loop. And now, it’s also the inspiration behind our new video podcast series
+Human in the Loop:
+your guide to understanding what it takes to build and deploy real-world enterprise AI systems.
+We share our learnings from working with the largest enterprises, foundation model builders, and governments to equip you with the insights you need to build practical, powerful AI systems in your organization.
+We're kicking off with Scale's Head of Product for Enterprise Solutions, Ben Scharfstein, and Head of Engineering for Enterprise AI, Felix Su. They dive into the current AI agent landscape and cover what’s important for enterprises to move beyond demos to real, reliable agentic systems.
+Watch the full episode or read the transcript of their conversation below.
+The Agent Landscape and What’s Useful for Enterprises
+Ben: Hi, I am Ben Scharfstein. I lead product for our enterprise team at Scale, and today I'm joined by my colleague Felix Su. Felix, you wanna introduce yourself?
+Felix: Hey, I am Felix. I lead the engineering team here on the enterprise AI team.
+Defining Agents and Their Capabilities
+Ben: Nice. Let’s get started. Today we're gonna be talking about the agent landscape, some recent developments, how it's relevant for enterprises who are building agents.
+Ben: To start off, Felix, I think agents are a buzzword and we use them very freely to describe things that maybe technically aren't agents. How would you describe an agent? How would you define it?
+Four Components of Agents
+Felix: Agents, the way we define it here is they do four things. They do reasoning, which is the ability to navigate a complex task. They do planning, which is the ability to choose what steps to take.
+They also have memory and state so they can remember what's done and all the different things that it's working on. And then it can also execute tasks. So these are the four things. And the way I like to think about it is how an agent is our modeling of human behavior. Allowing an agent to make those steps and take those decisions.
+How would you define agents or what are different things that you think are compelling that people have been building in the industry today that are agentic?
+Ben: Yeah, I think you're right. And the analogy I think for the agent is imagine you have a Dune buggy that you can drive anywhere. It can go anywhere. It can take information from the environment and it can just react and make decisions. And then critically, I think, execute tasks.
+Consumer Side Developments
+Ben: Some of the cool stuff I think that people are doing with agents is bringing them into the real world.
+We saw Manus got a bunch of steam and a bunch of attention on X a couple of weeks ago for blowing people's minds. Obviously there's Operator and computer use from OpenAI and Anthropic respectively. There's lots of cool things where I think when we see the demos of people using agents, they blow people's minds.
+I think in production, we're still at the demo phase, so I'm not sure that I've seen super exciting things on the consumer side that I'm like, this agent is blowing my mind.
+Builder Side Developments
+Ben: But I think on the builder side, as we think about what's going viral on Twitter, definitely on the framework side, there's a ton on the demo side.
+Maybe talk about some of those frameworks. We hear about MCP, Google’s Agent2Agent, LangGraph. What are all these things? How can we explain them?
+Felix: Yeah. Yeah. I think the builder space, the way that I see this industry panning out is I see it as a funnel.
+There's the builder space, and then there's people who are getting a little more serious and thinking about, okay, I need tracing and observability of all of my different things, and then I need to evaluate the production quality of something before I release it, and then I need to guardrail it, and then I need humans in the loop.
+And so you see this really, really big funnel where you're distilling down things. And this funnel we care about in enterprise. But the internet and everyone is in the top bubble. It's the builder space. How can I build a million things really, really quickly?
+And so you get things like you said, MCP, Agent2Agent, LangGraph, and the purpose of all these things is just to make it easier to do things. So, MCP is a way for me to interact with the world. We talk about task execution for agents. MCP suddenly makes it really easy for me to say, okay, here's a defined way to interact with an environment.
+Whether it's a VM, whether it's your file system, whether it's Slack, whether it's Google Drive, and I can really quickly latch an LLM on top and be like, now you are not just smart, but you have capabilities. And that's really, really powerful.
+Shifting Enterprise Focus from Capabilities to Control
+Felix: But like I said, this is in this enterprise space. It's not just about capabilities, but it's about control.
+And this is something we're gonna talk about in future episodes, about capturing data, understanding every single step of the way what compounding errors you can have and allowing us to build very, very precise systems that allow us to prevent compounding errors. And this is why Scale has a business, because this is what we're good at.
+Agents are Good at Implementing Decisions
+Felix: What's your opinion on these different aspects and how it affects us and how we build things?
+Ben: I think agents today at least, are good at implementing decisions that have been made.
+And so if you give it a very specked out design document, this is exactly how I want it to work. And it doesn't even need to be pseudo code. It can just be telling it the trade-offs that you wanna make. Then it can be very good at implementing those things. And I think as we see reasoning models, it's getting better and better and better.
+Because what reasoning models do, and I think o3 just dropped today, is that they can break down the task into smaller and smaller sub components and really understand what are the decisions that need to be made versus just the implementations that need to be done.
+Where Enterprise Agents Fail
+Ben: I think the reason that probably you're not having complete success where we just describe a problem and then get an answer, is that there is a lot of preference and there's a lot of external context that goes into designing a system and there's so many different nuances.
+That it would be impossible for a coding agent to know those nuances. And I think this is, there's two important outcomes of this. One is that you can't just trust agents to go and act on your behalf because fundamentally, they're working, at least today, in a low context environment, a low information environment, despite the fact that you might give access to your entire code base, we know that a code base is not nearly enough information.
+To understand the requirements of the system. If it were, we could just completely distribute jobs, have no need for meetings. And we could just hire people all around the world that never need to talk to each other and have access to Slack. But obviously that's not what happens.
+There's a reason that we communicate outside of just pull requests. And I think that's really important. It's like you can't just trust these things. What that means is that you need to have ways of understanding what's going on, and you need to have guardrails around different pause points or break points where you say, Hey, actually this is a really critical decision.
+I wanna make sure that I am leveling up and going back to the user and asking what's going on.
+From Agent Black Box to Surgical Precision
+Ben: But even more abstractly, I think as we're developing agents, it's really important to have surgical precision as to what's going on at every step. And I know this is a really big focus for the Scale Gen AI platform, is how do we give that observability and the monitoring into agent systems?
+So it's not just reasoning agent and the ability to write code and everything else is just code at the other end. But what are all the steps in between? What's the skeleton that needs to be built to give it the right guardrails? Maybe that skeleton is reducing over time. We need to have fewer and fewer areas where we're directing it, but at the same time, we still need just as much observability and monitoring and how does SGP or the Scale Gen AI platform help with that?
+And then I have a second point that I'll make after you answer that one.
+Felix: Yeah, like you said, I think surgical precision is the word of the day there. You have these systems that are doing some work, but like I said from before, they have compounding issues.
+Enterprise Customer Example
+Felix: Just this morning I was emailing back and forth with one of our clients at a financial firm, and he was talking about some papers or some blog posts that Anthropic released about how chain of thought reasoning can still be fundamentally stochastic, and that causes these agents to have unpredictable behavior.
+How Enterprises Use Agents to Capture Their Unique Business Value
+Felix: You need to police these things. And I latched onto something you said earlier on in your response, which was fundamentally, you can't let these agents run completely amuck because a lot of these decisions are preferential.
+So if you think about it, there's actually this fundamental issue with model builders where they're capturing the world, the state of the world, but fundamentally within an enterprise. You're not an average of all the things in the world. You're, you've built an opinionated way to do something.
+That's what makes you a business. That's fundamentally how businesses are made. You build an opinionated moat as to how you do stuff, and then you can become a business. And so this is why the Gen AI platform is critical. You have to take a model that's fundamentally made as some sort of average across the world with maybe some tuning and stuff like that.
+But you can generalize it to say it's an average of the world's information and you're trying to apply it to a specific thing and forcing it down a certain set of behaviors. So when you want surgical precision, you need to be able to capture all the data inside of people's heads.
+You need to download that information. You need to review the way that they use the agent. You need to capture all the clicks that they make, all the things that they do, all the tools that they would use in that specific situation. And you need to conform the AI system to that behavior. And it's really important to think of these things as AI systems, because.
+You can control it in different ways. You could fine tune a model. You can do in-context learning. You can do memory, you can put things in vector DBs and dynamically retrieve them based on past up votes and down votes. There are so many ways, and this is why it's really important for our team to do this custom work for enterprises, because fundamentally, you start with a foundation of a model and you need to build an AI system on top of it, connect it to your data, and then model it after the humans that you have trained. And that's what the Gen AI platform is useful for.
+You need to have all that data captured somewhere in order for us to do something with it. So for enterprises, it's actually super critical for this to happen.
+Build AI Systems Not Just an Agent
+Felix: You said you had a follow up actually.
+Ben: Yeah. That actually leads perfectly into the second point that I wanted to make, which is that your AI system is not just an agent, but it's an agent that works in the context of an application.
+And the application is trying to help someone accomplish a task. And that application could be an entirely backend application, but it has to hook into other things. And oftentimes it's a full stack application.
+You can think of the intermediate, that's level three, level four agents on the path to autonomy as co-pilots that are augmenting human workflows and doing the parts that don't require decision making or preferences. I think we talked about this, you were talking about they're the average, I would say it slightly differently, which is they're not the average of quality, but they're unopinionated on trade-offs.
+Yeah. Yeah. And I think that's the key thing is that two very smart people can make different trade-offs. An LLM doesn't have a prior on which one to make. And so you have to give it that information of what are the trade-offs that you want to make. And I think this is really where it's super important not just to build high-quality AI, but also to build really strong human computer interfaces and applications that allow you to control and interact with the agent in the right way.
+And I think this is the thing that Cursor really got right very early on. Which is that they thought of this as a full system and application and not just we're trying to build a coding agent that does your job. We're building a coding agent that has feedback. It's something that you can touch and feel, you can see what's going on, and it asks clarifying questions, and that is the type of design that people are starting to build and that we really focus on and building into agentic systems, which is, it's not about just the agent being really good on evals, it's about the system being really good at accomplishing the task with the human in the loop, and eventually becoming autonomous or becoming less and less reliant on the human, but still coming back to them for preferences and decisions.
+It's Not Just an AI Problem, It's a Product Problem
+Felix: Yeah. Yeah. And something that you mentioned, I think, I was talking to a connection the other day about AI controls.
+How do you control their behavior? And I said something that I'm gonna repeat here, which is building really, really good AI is not just an AI problem, but it's a product problem.
+Ben, I'm curious about your take: you're leading some of this product for our customers, how do you think about the handoff between, oh, this is an AI problem and this is a product problem?
+Ben: This really comes down to getting with people that do the job today and understanding how do you do this? What's the information that you use to make your decision? Not listening to their feature requests, but listening to their problems and listening to their thought process, and then modeling that as much as you can as agents.
+And then understanding, okay, where are the areas where three smart people might not agree? Where there's not a deterministic way to do this, but what we're trying to do is capture what the best people do—the thing that differentiates that company. We need to capture those people's decision making, and we can only capture the human decision.
+We can't capture the agent's, and then we can move it into agents. But I think that it's a moving target for sure. But it's something that, this is what I spend all my time thinking about is how do we build solutions that solve problems, not just agents that solve problems, but full solutions that incorporate agent workflows and solve problems.
+Human Interactions Reset Compounding Errors with Agents
+Felix: I think something that's super important is these human interactions are a reset point. We talked about compounding errors where if I let Cursor run for two hours, I guarantee I'm gonna be upset with it when I come back.
+But resetting at these checkpoints allows me to go from, okay, if every decision is 50% accurate, I'm gonna have a very bad time if I let 10 decisions go through unchecked. But if I reset that 50% decision back to a hundred percent because I checked my work there, then we can continue that chain of 50% and not compound the error.
+And so that's definitely something that's really important when, as these agents get more and more complex.
+Ben: We say quality is fractal. This is one of our mottos at Scale. And so when you can reset, it really will improve the quality of the entire system.
+Next on the Human in the Loop
+Ben: Alright, that's all we have for the discussion today on the current landscape of agents and what matters for enterprises. Next week we'll get more into the technical discussion about challenges of building agents and the enterprise that Felix and I discussed. Subscribe so you don't miss it.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

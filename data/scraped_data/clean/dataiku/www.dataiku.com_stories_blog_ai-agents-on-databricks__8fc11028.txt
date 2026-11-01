@@ -1,0 +1,317 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/ai-agents-on-databricks
+page path  : /stories/blog/ai-agents-on-databricks
+captured   : 2026-06-12 04:43:28 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_ai-agents-on-databricks__8fc11028.html.gz
+========================================================================
+
+3 ways Dataiku makes AI agents on Databricks production-ready
+
+3 ways Dataiku makes AI agents on Databricks production-ready
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+
+Request demo
+
+Start Trial
+
+GenAI & Agents
+
+Partner
+
+3 ways Dataiku makes AI agents on Databricks production-ready
+
+May 25, 2026
+
+5 min read
+
+/
+
+Dmitri Ryssev
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+Databricks gives enterprises a powerful foundation for AI, with centralized data, scalable compute, and a modern lakehouse architecture that supports analytics, machine learning, and AI at scale. For organizations building
+AI agents
+, that foundation creates real momentum.
+
+The next step is turning that momentum into production-ready outcomes. That means helping teams move quickly from idea to implementation, connect structured and unstructured data, orchestrate multi-step workflows, and apply the governance needed to scale with confidence.
+
+Most enterprises already have AI capabilities. What they lack is a reliable way to orchestrate agents, data, models, and human expertise into governed production systems. AI capabilities are often scattered across platforms, teams, and workflows, creating friction between experimentation and operational value.
+
+As the Platform for AI Success, Dataiku is the orchestration layer where enterprises build, deploy, and govern analytics, models, and agents across any data and AI infrastructure, like Databricks. Rather than replacing the lakehouse, Dataiku helps teams operationalize it: enabling broader collaboration, faster development, stronger orchestration, and enterprise-grade governance for AI agents.
+
+Here are three ways Dataiku helps Databricks teams bring AI agents into production.
+
+1. Speed up agent development without creating more silos
+
+One of the biggest barriers to production AI is not model quality — it’s delivery friction.
+
+Agent projects often span multiple teams: data scientists, data engineers, IT, business stakeholders, and platform owners. In many environments, that work gets fragmented across notebooks, custom scripts, prompt experiments, manual reviews, and handoffs between specialists. The result is slower iteration, more rework, and a longer path from concept to deployment. Dataiku helps reduce that friction.
+
+With Dataiku on Databricks, teams can build and iterate on agentic workflows in a shared environment that supports both visual and code-first work. That means technical users still have flexibility, while less technical contributors can participate in data preparation, workflow design, testing, and review.
+
+In practice, this helps teams:
+
+Prepare and transform data through visual workflows.
+
+Accelerate common data tasks with assisted and natural language experiences.
+
+Prototype agentic use cases faster across business and technical teams.
+
+Standardize how projects move from exploration to deployment.
+
+Avoid turning every use case into a bespoke engineering effort.
+
+That matters because enterprise AI is not built by one role alone. A useful agent usually depends on business context, trusted data inputs, technical implementation, and operational oversight. If only one team can contribute effectively, production slows down.
+
+This is the
+expert-to-agent
+gap many enterprises face: The people who understand the business problem best are often unable to translate that expertise into production AI without relying on specialized engineering teams. Dataiku helps close that gap by enabling domain experts, analysts, and technical teams to collaborate in building governed AI systems directly on enterprise data.
+
+For Databricks customers, this is especially valuable because the core data foundation is already in place. Dataiku helps teams capitalize on that investment by shortening the path from data access to working agent applications. The key point: Production success often comes down less to inventing a novel model and more to making development faster, more collaborative, and more repeatable.
+
+2. Orchestrate agents across structured data, documents, and business workflows
+
+Most enterprise agents need more than a single retrieval step. A real production agent may need to query transaction data, retrieve policy language from a PDF, use semantic search across internal knowledge, apply business logic, and then respond through a user-facing channel such as Slack, Teams, or an internal application.
+
+That’s not a single model call. It’s a workflow.
+Enterprise AI workflows rarely operate within a single system or model provider.
+Dataiku helps organizations design and operationalize these agentic workflows on top of Databricks by bringing together access to structured data, extraction from unstructured content, vector-based retrieval, natural language querying such as text-to-SQL, multi-step reasoning, and deployment into real user environments.
+
+This is an important distinction. Many teams can build an impressive demo agent that answers questions from one source. Fewer can operationalize an agent that works reliably across data types, systems, and business processes.
+
+That’s where Dataiku’s agentic orchestration capabilities come in. Dataiku enables teams to build agents as governed, composable systems by
+connecting data, models, agents, business rules, and human-defined decision logic into operational enterprise workflows rather than isolated chatbot experiences.
+
+Teams can define how agents retrieve context, interact with tools, trigger downstream actions, and fit into broader workflows. That makes it easier to move from isolated experimentation to business-ready applications.
+
+Consider a support agent that combines account data from Databricks tables with policy content from PDFs before responding to an employee. Or an operations assistant that retrieves KPIs from warehouse data, checks exceptions in documentation, and recommends next steps. The same pattern applies in finance or procurement, where an agent may need to ground responses in both transactional records and contract language rather than relying on one source alone.
+
+For Databricks users, capabilities such as vector search and text-to-SQL provide powerful building blocks. Dataiku complements those capabilities by providing the layer to orchestrate, govern, and operationalize them in a complete enterprise workflow. That’s the difference between building an agent and deploying one people can rely on.
+
+3. Govern and improve agents so they can scale safely
+
+The first deployment is only the beginning. Once an AI agent starts interacting with employees, customers, or internal systems, it becomes part of the operating environment. At that point, teams need more than access and deployment. They need oversight.
+
+This is where many organizations run into the next production bottleneck: Even if they can launch an agent, they lack a consistent way to evaluate quality, review outputs, manage change, and improve performance over time. Dataiku helps teams address that gap with the governance and lifecycle capabilities needed for enterprise AI.
+
+On top of Databricks, Dataiku gives organizations a more practical framework to:
+
+Evaluate agent outputs against defined criteria.
+
+Review responses and behaviors in a structured way.
+
+Identify failure patterns and quality issues.
+
+Monitor changes over time.
+
+Manage iteration as prompts, tools, data, and workflows evolve.
+
+Apply governance across the AI lifecycle, not just at deployment.
+
+This matters because agents are dynamic systems. Data changes. User questions change. Business logic changes. An agent that performs well in an early pilot can quickly drift if there is no process for review and improvement.
+
+A production-ready agent should be observable, testable, and manageable. Teams should be able to answer basic but essential questions: Is this agent producing acceptable outputs? Where is it failing? What changed? Is quality improving or degrading over time? And can this pattern be scaled safely to other use cases?
+
+Dataiku helps make those questions operational. It also helps organizations balance accessibility with control. Enterprise agents need to be available where people work, but they also need the guardrails, oversight, and lifecycle management required for responsible AI at scale. That balance is hard to achieve with ad hoc tooling alone.
+
+Governance in enterprise AI cannot be bolted on after deployment. Organizations need visibility into how agents behave, how decisions are made, what changed, and whether systems continue performing against business expectations over time. Dataiku embeds governance throughout the lifecycle so teams can scale AI with accountability built in from the start.
+
+This is what helps turn early agent experiments into scalable enterprise systems. Infrastructure may get a project off the ground, but governance is what makes innovation and production possible.
+
+Why this matters for Databricks customers
+
+If your data foundation is already on Databricks, you are well positioned for enterprise AI success. But infrastructure alone does not create production-ready outcomes. To make AI agents useful in the enterprise, organizations need a way to build faster across technical and business teams, connect structured and unstructured data in one workflow, orchestrate agentic systems beyond a simple chat interface, and apply governance, evaluation, and lifecycle controls from the start.
+
+That is the role Dataiku plays. Dataiku helps Databricks customers turn a strong AI foundation into repeatable, production-ready agent deployments. It brings together people, orchestration, and governance so teams can move from prototype to operational value with more speed and less friction. Databricks provides the lakehouse foundation. Dataiku helps enterprises build and scale AI agents on top of it — successfully.
+
+Want to see how this all works in practice?
+
+Watch the full Dataiku x Databricks webinar
+
+Tags
+
+GenAI & Agents
+
+Partner
+
+Share
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+I have Snowflake, why do I need Dataiku?
+
+AI decision automation: how enterprises use AI to make faster, more consistent decisions
+
+Agent orchestration explained: how enterprises manage multi-agent AI workflows
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+A single agent is a tool. An enterprise agent system is infrastructure. That distinction determines whether AI...
+
+May 29, 2026
+
+GenAI & Agents
+
+I have Snowflake, why do I need Dataiku?
+
+Snowflake is an exceptional AI data foundation. It centralizes enterprise data, scales compute elastically,...
+
+May 28, 2026
+
+GenAI & Agents
+
+AI decision automation: how enterprises use AI to make faster, more consistent decisions
+
+The bottleneck in most enterprise AI programs is not model accuracy, and it is not the quality of GenAI...
+
+May 26, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Blog
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Dataiku Customers
+
+Analyst Recognition
+
+Events Calendar
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Dataiku Partners
+
+Partner with Dataiku
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,199 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/expose-patent-beta-capabilities-to-sonar-api-for-programmatic-lookup/3302
+page path  : /t/expose-patent-beta-capabilities-to-sonar-api-for-programmatic-lookup/3302
+captured   : 2026-01-21 21:33:36 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_expose-patent-beta-capabilities-to-sonar-api-for-programmatic-lookup_3302__b0063895.html.gz
+========================================================================
+
+Expose Patent Beta Capabilities to Sonar API for Programmatic Lookup - Feature Requests - Perplexity API Platform Forum
+
+Expose Patent Beta Capabilities to Sonar API for Programmatic Lookup - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Expose Patent Beta Capabilities to Sonar API for Programmatic Lookup
+
+Feature Requests
+
+sonar-pro
+,
+
+chat-completions
+
+Ronan_Morgan
+
+December 29, 2025, 4:00pm
+
+1
+
+Feature Request
+
+A clear and concise description of the feature or improvement you’d like to see.
+
+In the UI, Patent Beta gives me full details for “US20140104323A1” (title, abstract, claims, inventors, dates, classifications).
+
+However using sonar-pro via API, I only get a PDF URL - everything else is empty.
+
+Tested across 5+ patents (US10670914B2, US9336750B2, US10416495B2, US20150364111A1, US20140104323A1) and get the same sparse results every time.
+
+Problem Statement
+
+What problem or limitation does this feature aim to solve? Please describe the issue you’re facing and how this feature would help.
+
+Feature would allow Perplexity Patent Beta to be usable within Sonar-pro. Its currently only available within the Perplexity UI.
+
+Proposed Solution
+
+Describe how this feature should work. If possible, provide an example or use case demonstrating how it would be used.
+
+I’d love any of these options:
+
+Dedicated endpoint like /patents/{number} returning structured JSON
+
+Sonar model/agent selection (model: ‘patents-sonar’ or agent: ‘patents’)
+
+Parameter to force Patent Beta lookup in chat/completions
+
+Something like this would be perfect:
+
+{
+
+“model”: “sonar-pro”,
+
+“agent”: “patents”,
+
+“messages”: [{“role”: “user”, “content”: “US20140104323A1”}]
+
+}
+
+API Impact
+
+Which API component is affected?
+[e.g., chat completions, retrieval, search filters]
+
+Is this related to a specific model?
+[e.g., Sonar Deep Research]
+
+Would this require new API parameters or changes to existing ones?
+
+Would affect Sonar-pro or chat completions API.
+
+Something like this would be perfect:
+
+{
+
+“model”: “sonar-pro”,
+
+“agent”: “patents”,
+
+“messages”: [{“role”: “user”, “content”: “US20140104323A1”}]
+
+}
+
+Alternatives Considered
+
+Have you explored any workarounds? If so, what were they, and why are they insufficient?
+
+I know l can use patent database specific APIs like USPTO,
+Lens.org
+etc. But l want to be able to use the LLM to return the result with the data that l wish to display. It can do it on the UI. So it could easily be made available to the sonar-pro api.
+
+Additional Context
+
+Add any other relevant information, links, or screenshots that can help us better understand your request.
+
+I sent an email to the API and Support teams. Happy to discuss further in greater detail.
+
+For direct inquiries, please reach out to
+api@perplexity.ai
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Patent search via API
+
+General
+
+sonar
+
+,
+
+search-api
+
+8
+
+480
+
+January 11, 2026
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+61
+
+September 24, 2025
+
+PDF Upload with Sonar API Questions
+
+General
+
+chat-completions
+
+0
+
+87
+
+August 29, 2025
+
+Document analysis
+
+General
+
+sonar-deep-research
+
+2
+
+160
+
+August 5, 2025
+
+Cost Information Now Included in API Response JSON!
+
+Announcements
+
+0
+
+202
+
+August 1, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

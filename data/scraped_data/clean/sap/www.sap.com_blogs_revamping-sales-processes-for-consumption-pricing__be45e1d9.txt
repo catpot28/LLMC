@@ -1,0 +1,171 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/revamping-sales-processes-for-consumption-pricing
+page path  : /blogs/revamping-sales-processes-for-consumption-pricing
+captured   : 2026-02-08 13:43:35 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_revamping-sales-processes-for-consumption-pricing__be45e1d9.html.gz
+========================================================================
+
+Revamping sales processes for consumption pricing I SAP
+
+Revamping sales processes for consumption pricing I SAP
+
+flex-height
+
+text-black
+
+Revamping sales processes for consumption pricing
+
+A consumption-based sales model requires looking at the entire business with a new lens.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+Consumption-based pricing (CBP), also known as usage-based pricing (UBP), seems straightforward at first blush. Instead of paying a set price up front for a software or service subscription, customers only pay for what they consume, a.k.a. pay-as-you-go. And rather than earn commissions when deals close, sales reps earn compensation that typically
+is tied to how much the customer actually consumes
+.
+
+But when a company rushes into this enticing model too quickly, chaos can ensue.
+
+Case in point: a company that sells software as a service (SaaS) to energy businesses was tired of losing deals to the same competitor. As many SaaS businesses do, the company licensed its software based on subscriptions, but the competitor offered a CBP model, with its software at a quarter of the normal up-front costs and with more flexible pricing. The energy company was being pushed into the CBP pool—and seeing the potential for more wins, it jumped right in.
+
+The company came up with new product usage prices and software packaging options, and tweaked the underlying data pipeline to make sure it could accurately meter customers’ usage for billing purposes. This created an option for customers to prepay for their expected software use. Otherwise, though, customers still had the option to stick with purchasing the software at an annual subscription rate.
+
+The company soon learned this wasn’t enough to consistently win competitive deals.
+
+The pricing change was clearly a step in the right direction, providing customers with better flexibility in the products they used and when, over the course of the contract. But in the following months, the company still struggled to beat the competitor, which offered much more flexibility in committed contract size for a highly commitment-phobic customer base.
+
+Without changing the sales team’s key performance indicators (KPIs) to reorient from up-front commitments toward CBP, nothing changed in how the sales team structured its proposed contracts. Salespeople continued to press customers for maximum commitment amounts, while offering aggressive discounts to counteract concerns about accurately forecasting future demand. They continued to lose deals as a result.
+
+The company realized it needed to embrace the strategy it had put on its pricing page—and take a closer look at how this strategy should affect the entire sales process.
+
+It’s a familiar dilemma for many organizations beginning their CBP journeys: there’s more to it than just changing the pricing terms.
+
+The
+consumption-based pricing model
+is a no-brainer for consumers because they know their bills match their actual use of the products. Software vendors like CBP because it brings new customers in the door faster—due to little or no up-front commitment—while opening the door wider for long-term potential growth, since they can continue to up-sell new features or encourage more usage over time.
+
+Sounds like a win-win—but creating a new pricing option is just the tip of the iceberg. A consumption-based sales model requires looking at the entire business with a new lens. It’s no longer a sales process but an end-to-end business process, from sale through data collection all the way to payment. Every piece of the business has to support that consumption-based economy. With that said, the underlying sales processes that are needed to maintain a CBP model are still in a state of flux. A lot of companies are still trying to figure it out, and no single solution fits all organizations.
+
+Navigating the right path could mean the difference between success and failure. Answering three critical questions will help you find that path.
+
+What new data will we need to collect?
+
+Determining customers’ rate of “consumption” may involve transforming data you already have but it also may require collecting new data entirely.
+
+“It’s hard to offer a consumption product if you don’t have a metering system. It’s foundational,” says Chris Semain, principal and tech practice leader at Alexander Group. It’s similar to a meter in a cab; you pay depending on how far you go. Metering solutions ensure that both customers and software vendors have near-real-time information on how much they’re using the product.
+
+But there’s a lot of company-by-company uniqueness to data collection because there are many forms of consumption or usage, Semain says. “The unit of measurement for consumption is a variety of types of measurements. Some companies have tokens, like popping in a quarter into a video machine, where you can pay for 100 tokens to use the product. In other cases, usage is based on defining the number of ‘workloads,’ or it might be the number of software modules you’re using,” he adds.
+
+As the SaaS provider, of course, you’ll want the customer’s cost for each unit to accurately reflect how your own infrastructure costs increase as your users require more computation, storage, or seat management.
+
+XaaS and subscription business models
+
+Subscription-based business models are helping many companies increase profits.
+
+Find out how
+
+Many organizations don’t yet track and report granular product usage data or trends to help inform and prioritize their sales teams’ activities. But the high-tech, insurance, and telco industries are among the best-positioned for data use tracking and consumption-based sales models.
+
+Telcos are well positioned for usage-based sales models because they have long monitored minutes spent on phone calls and specific apps as well as amounts of data used with streaming, downloads, backhauling data, and related services.
+
+Examples in the insurance industry show how this idea is expanding. Insurance companies collect data through GPS to offer a type of CBP. For instance, U.S.-based insurer Progressive offers Snapshot, a consumption-based model that measures not just how much customers drive but how well they drive. It monitors driver behavior through GPS and its mobile app; presumably, the customer gets a better insurance rate for being a safe driver. The data is tracking the driver’s actual exposure to risk in order to determine the rate.
+
+Health insurance companies are also trying to use GPS for data collection. In India, for example, some offer customers
+discounts on insurance if they exercise
+a certain number of days per month. To validate this, at least one company tracks customers by GPS to fitness clubs (with permission), although they don’t know if the customer is actually working out, Semain says.
+
+Organizations that can collect vital usage data and track customer behavior have the foundation for a consumption-based sales model; they will be able to compensate sales reps, come up with innovative sales models, and better forecast usage and revenue.
+
+The pipelines that deliver the collected data throughout an organization will need considerable reengineering too. You’ll see why this is necessary in the next question.
+
+How will we measure and forecast future revenue?
+
+Revenue predictability is the biggest challenge for any sales organization. Companies take different approaches to the extra uncertainty that comes with fewer up-front commitments, but it’s going to affect everything from data pipeline engineering to how salespeople are compensated.
+
+Historically, SaaS models were architected around the “deal” or the opportunity. Deals being closed were the singular catalyst for change in recognized revenue—the natural unit of measurement for tracking and planning revenue growth.
+
+In usage-based models, revenue growth could happen before, during, and after a deal cycle. Customers can buy more up front to get a better price—but, for example, if they anticipate just a one-time spike in their usage needs, they might be inclined to risk paying a premium for any overruns rather than overcommitting up front.
+
+A 2022 study by consulting firm Bain shows that more than 90% of users who prefer subscription models to consumption models
+cite a lack of predictability
+as the main downside of the latter. So the challenge becomes rethinking and rearchitecting how to predict the flow of future revenue.
+
+At Datadog, a SaaS-based monitoring and analytics software provider, UBP has been a part of the business since its inception and has led to much of the company’s success, according to former VP of finance Scott Buxton. Its infrastructure monitoring product is still sold on a “price per host monitored” basis, and this model also accounts for discounts based on annual commitment, volume, and tier. But Buxton acknowledges in an OpenView Partners
+blog post
+that sales predictability was a lot more challenging with UBP.
+
+Datadog implemented a drawdown model option that allowed a customer to adapt their usage pace according to the needs of their business. This helped balance the business’s need for predictability with the customer’s need for flexibility.
+
+With this drawdown model, “Customers can commit a certain sum, say $1 million, pick a term, and draw down on their sum over that time period. They could use zero dollars in the first six months of their three-year term to account for business delays… and as soon as they’re up and ready, they can go as fast as they want,” Buxton writes.
+
+Having commitment built into the pricing model can certainly mitigate some of these concerns about predictability, but it’s far from perfect, Buxton says. “First of all, not all customers elect this type of plan. Second, relying exclusively on monthly commitments in your calculations will lead to pretty inaccurate numbers.”
+
+The energy company found other ways to tackle its predictability challenges.
+
+First, the company ditched overage fees. In the original pricing model, it had maintained overage charges when customers finished their commitments (at the “rack rate” or standard pricing). Terms like “overage” turned off customers, so the company moved to a utility-based charge on par with the unit-based prices that customers were paying on their committed contracts.
+
+Next, they redefined core business KPIs. They devised different ways to define revenue events and architect sales plans around them.
+
+Establishing what those KPIs should be is all about priorities, says Ben Chambers, a consultant specializing in consumption-based sales models. Some companies want to solve for simplicity and choose the path that’s most comfortable to veteran sales reps: subscriptions. Others opt for more nuanced, usage-based measures of incremental sales performance. If product usage is seasonal (such as in the retail industry) or erratic and spiky (as with project-intense organizations), that likely influences the design of the KPI. For instance, it might make sense for a non-seasonal type of business to create a usage-based annual recurring revenue (ARR) metric that takes recent usage from the last one to three months and annualizes it to come up with ARR. However, that type of KPI would present more challenges and issues for companies with erratic or seasonal usage patterns.
+
+The energy company also chose to define revenue events in a fairly straightforward way—total billable usage, regardless of whether or not it’s precommitted. Every quantity of product usage was translated into a dollar amount and attributed back to the user.
+
+Once the core KPIs were defined, the energy company began architecting the data pipeline for this new KPI usage value—translating product usage into a dollar amount and thinking about all the legacy contracts that would be affected before it rolled out pricing changes. The company also attributed every dollar of usage to the responsible salesperson to determine their quota.
+
+The new data pipeline requires not only new data but determining where it goes and how it’s combined and transformed. When switching from subscription to CBP models involved only a pricing and packaging change, the in-product and customer-facing billing systems needed this usage data pipeline, while the internal business and go-to-market systems simply continued to manage the business around contracted ARR. In this case, a standard customer relationship management (CRM) system is generally well equipped to manage a fixed-subscription business model.
+
+But when flipping to a dedicated usage-based model, many more internal parties need their systems, processes, and reporting on the product usage data, as this is now the direct basis for revenue recognition, quota crediting, and commissions, Chambers says. CRM tends not to be the most logical or natural source of truth for tracking and reporting daily updates to product usage, he adds.
+
+Chambers has seen a shift toward the enterprise data warehouse developing into the source of truth for internal reporting. Product usage data from product and billing systems could be integrated with sales territory and attribution data or contract specifics from CRM and fed into business intelligence dashboards for field-facing reporting, revenue forecasting systems, and commission calculations.
+
+With usage now taking precedence over revenue commitment, a company’s primary metric becomes
+how much
+the accounts in a territory are using the product, not what they’re committed to. Usage-based KPIs can keep customers from being oversold or underutilized, and the KPI becomes the primary measure for how organizations define territories.
+
+With the data collection and data pipeline in place, the energy company is now building a compensation plan for sales and customer success teams. This process has its own complexities and decision points, which we previously discussed in
+Compensating Sales for Consumption-Based Pricing
+.
+
+How will revenue generators (sales) and revenue enhancers (service, support, and customer success teams) work together?
+
+CBP requires more cooperation between sales and customer success managers, and rethinking how you want sales spending their time is a top priority. The good news: CBP presents a huge opportunity for customer success functions to own a metric that more naturally reflects the impact of their efforts than booking-oriented metrics.
+
+In traditional go-to-market models in the software sales world, teams adhere to swim lanes. The sales team, or revenue generator, is accountable for leading new business acquisition and growth. The customer success team or another account management function, the revenue enhancer, is responsible for client retention.
+
+Those roles will remain, but they’ll need to collaborate when engaging with the client after the sale—including onboarding, monitoring usage, and scrutinizing consumption patterns at the end of a term commitment so they can forecast more accurately at renewal time, Semain says. The day-to-day activities of these roles need to focus on improving the adoption and value realization stages of the customer journey.
+
+“Your customer success managers and sales reps need to stay on clients, because if they don’t and the client isn’t consuming, they’ll probably cancel,” Semain says. “There need to be resources holding their hands to make sure they’re getting value from the products.”
+
+But how much time should a salesperson spend on building customers’ usage? On the one hand, organizations could determine what tools and dashboards are needed to best improve how they spend their time to maximize product usage. “That may be a little different from a traditional fixed-subscription model where their activities were around identifying potential opportunities and swooping in on a new account to generate a commercial transaction,” he says.
+
+Sales reps could spend 40 hours a week trying to identify where their customers are going to use more software, but is that the best use of their time? “Probably not,” Chambers says. “Primarily, they should be using their skill sets to unlock demand and identify and win new business—things that take persuasion and selling skills.”
+
+Many organizations, including the energy company, are still figuring this out. Sales compensation models still haven’t caught up with UBP in most organizations, so they’re sticking with more familiar models, Semain says.
+
+When it comes to compensating those teams, he says, “A lot of companies want to compensate their customer success managers and potentially their sales reps on usage, adoption, and/or value realization. But because of the difficulty with tracking usage or defining the right metric, they’ve decided just to compensate customer success managers and reps on renewals because they haven’t quite figured out what ‘good’ usage is.”
+
+While the consumption-based sales process is still in nascent stages, CFOs are warming to the idea that it is essentially the future. “It may be choppier waters than subscription-based models, but it's a better path to revenue growth, especially in competitive environments where core competitors are also offering usage-based pricing arrangements,” Chambers says.
+
+“Companies are getting pushed into the pool. If they don’t start swimming, they won’t be able to win against the competitor that designs and delivers a lower-friction sales cycle requiring far less money up front.”
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

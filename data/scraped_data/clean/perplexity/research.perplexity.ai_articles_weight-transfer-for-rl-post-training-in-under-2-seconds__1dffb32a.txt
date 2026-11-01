@@ -1,0 +1,265 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://research.perplexity.ai/articles/weight-transfer-for-rl-post-training-in-under-2-seconds
+page path  : /articles/weight-transfer-for-rl-post-training-in-under-2-seconds
+captured   : 2026-06-17 20:13:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/research.perplexity.ai_articles_weight-transfer-for-rl-post-training-in-under-2-seconds__1dffb32a.html.gz
+========================================================================
+
+Weight Transfer for RL Post-Training in under 2 seconds
+
+Weight Transfer for RL Post-Training in under 2 seconds
+
+We're Hiring
+We're Hiring
+We're Hiring
+systems
+Sep 24, 2025
+Weight Transfer for RL Post-Training in under 2 seconds
+Ultra-fast cross-GPU model sync
+We recently achieved
+1.3-second
+cross-machine parameter updates for Kimi-K2 (1T parameters), transferring weights from 256 training GPUs (BF16) to 128 inference GPUs (FP8).
+In asynchronous reinforcement learning fine-tuning, training and inference run on separate GPUs. After each training step, new weights must be pushed to inference nodes. Many existing frameworks take several seconds—or even minutes—for trillion-parameter models.
+By leveraging
+RDMA point-to-point communication
+, we are able to make the weight transfer blazing fast, without changing inference engine, and make the code easier to write and maintain.
+RDMA WRITE: one-sided transfers
+Our solution is built on RDMA WRITE, a one-sided primitive where the source directly writes into the destination’s GPU memory.
+def
+
+rdma_write
+(
+src_ptr
+,
+
+dst_ptr
+,
+
+size
+,
+
+src_mr
+,
+
+dst_mr
+)
+:
+
+# Write from local [src_ptr, src_ptr+size) to remote [dst_ptr, dst_ptr+size).
+
+# src_mr and dst_mr contains Memory Region metadata of both sides.
+
+...
+def
+
+rdma_write
+(
+src_ptr
+,
+
+dst_ptr
+,
+
+size
+,
+
+src_mr
+,
+
+dst_mr
+)
+:
+
+# Write from local [src_ptr, src_ptr+size) to remote [dst_ptr, dst_ptr+size).
+
+# src_mr and dst_mr contains Memory Region metadata of both sides.
+
+...
+def
+
+rdma_write
+(
+src_ptr
+,
+
+dst_ptr
+,
+
+size
+,
+
+src_mr
+,
+
+dst_mr
+)
+:
+
+# Write from local [src_ptr, src_ptr+size) to remote [dst_ptr, dst_ptr+size).
+
+# src_mr and dst_mr contains Memory Region metadata of both sides.
+
+...
+The destination side won’t even get notified for the transfer. This gives us low-latency, high-throughput, zero-copy transfers driven by the training nodes without any control logic on the inference nodes.
+High-level workflow
+Metadata collection
+– Controller gathers parameter metadata from all training and inference GPUs.
+Schedule computation
+– Controller computes a static weight transfer schedule, mapping which training GPU sends which parameter to which inference GPU, and in what order.
+Schedule distribution
+– Controller sends the schedule to all training GPUs.
+Execution
+– After each training step, the controller signals training GPUs to start transfers.
+Weight transfer execution
+With the high-level workflow defined, the key challenge is how to execute weight transfers efficiently at trillion-parameter scale. Here we describe the details of the execution path.
+DeviceMesh and Mesh Groups
+Parameters in training are distributed according to FSDP placements. Using
+full_tensor()
+, all GPUs in a
+DeviceMesh
+can reconstruct the full parameter, hence all can serve as a source for weight transfer.
+Multiple disjoint DeviceMeshes form a
+mesh group
+. Because DeviceMeshes in the same group are disjoint, their transfers don’t interfere and can run fully in parallel. Between mesh groups, we insert a global barrier to enforce ordering.
+Task pipeline
+We treat the transfer of each parameter tensor as a task. The weight transfer process utilizes multiple types of hardware sources, hence we split a weight transfer task into different pipeline stages which overlap in time:
+Host to device memcpy
+— If FSDP offloads weight to CPU
+Parameter preparation
+— Reconstruct full weight with
+full_tensor()
+, apply projection fusion, quantize if needed.
+RDMA transfer
+— Zero-copy write to remote inference GPU memory
+Global barrier
+— After all
+full_tensor()
+calls are done, synchronize across mesh groups using GLOO via Ethernet.
+In implementation, we maintain a FIFO queue of tasks for each pipeline stage. Whenever the head of queue task completes the stage, it is moved to the tail of the next stage queue.
+GPU memory usage control
+full_tensor()
+and other GPU operations introduces extra GPU memory usage. To avoid out of memory error, we start the execution of a task only if the current on-the-fly tasks occupies less temporary GPU memory than a configurable watermark.
+Why it’s fast and simple
+Several design choices make our system significantly faster to run and easier to maintain than common open-source solutions.
+Point-to-point communication
+A common pattern is to funnel all parameters through rank-0 GPUs: gather on training rank-0, send to inference rank-0, then scatter again. This quickly becomes a choke point, limited by a single GPU’s PCIe bandwidth and NIC (e.g., 400 Gbps ≈ 50 GB/s).
+In contrast, our point-to-point setup allows every training GPU to send directly to every inference GPU, saturating the full network fabric rather than a single link.
+One-sided data transfer
+Some systems rely on calling into the inference engine’s
+update_weight()
+method for each tensor. That means intrusive changes to the inference code, plus overhead from RPCs, serialization, and control-plane coordination.
+With RDMA WRITE primitive, we update weights silently on inference GPU memory, without extra copies. No control plane message and no CPU control logic is involved. No modification to inference engine is required.
+Pipelining
+The weight transfer process can leverage four types of hardware resources: (1) Host-device data movement (2) GPU computation for projection fusion and quantization (3) RDMA network for data plane (4) Ethernet for control plane.
+Our design split weight transfer tasks into pipeline stages, allowing easy overlapping across different hardware resources.
+Static Schedule
+Some implementations recompute a transfer schedule at every training step, repeatedly collecting metadata and distributing instructions. This adds unnecessary control-plane latency.
+Our schedule is computed once at initialization. Each training iteration simply replays the plan: the controller issues a “go” signal, and GPUs follow their pre-assigned routes. Execution is predictable and lightweight.
+Clean separation
+It’s tempting to entangle the whole weight update process in one monolithic function: collect metadata, name matching, intra-node gathering, projection fusion, quantization, subslicing communication world, inter-node network transfer. It’s hard to program correctly, and even harder to optimize.
+In our engineering, we separate these steps as individual components. Each components can be unit tested, reasoned about, and optimized in isolation.
+Conclusion
+Fast, reliable weight transfer is a critical building block for large-scale RL fine-tuning. By combining the
+RDMA WRITE primitive
+, a
+static transfer schedule
+, and
+pipelined execution
+, we reduced trillion-parameter updates to just
+1.3 seconds
+on Kimi-K2. The approach is simple to reason about, easy to maintain, and avoids the bottlenecks of traditional designs.
+Company
+Perplexity Enterprise
+Brand Guidelines
+Careers
+Inquiries
+Privacy Policy
+Supply Store
+Security
+Terms & Conditions
+Product
+Comet Browser
+Desktop App
+iPhone App
+Android App
+Resources
+Getting Started
+Help Center
+Changelog
+Give Feedback
+API Platform
+API Overview
+API Models
+API Documentation
+API FAQs
+API Terms of Service
+Follow Us
+X (Twitter)
+Discord
+Instagram
+Threads
+Linkedin
+YouTube
+© Copyright 2026 Perplexity
+Company
+Perplexity Enterprise
+Brand Guidelines
+Careers
+Inquiries
+Privacy Policy
+Supply Store
+Security
+Terms & Conditions
+Resources
+Getting Started
+Help Center
+Changelog
+Give Feedback
+API Platform
+API Overview
+API Models
+API Documentation
+API FAQs
+API Terms of Service
+Follow Us
+X (Twitter)
+Discord
+Instagram
+Threads
+Linkedin
+YouTube
+© Copyright 2026 Perplexity
+Company
+Perplexity Enterprise
+Brand Guidelines
+Careers
+Inquiries
+Privacy Policy
+Supply Store
+Security
+Terms & Conditions
+Product
+Comet Browser
+Desktop App
+iPhone App
+Android App
+Resources
+Getting Started
+Help Center
+Changelog
+Give Feedback
+API Platform
+API Overview
+API Models
+API Documentation
+API FAQs
+API Terms of Service
+Follow Us
+X (Twitter)
+Discord
+Instagram
+Threads
+Linkedin
+YouTube
+© Copyright 2026 Perplexity

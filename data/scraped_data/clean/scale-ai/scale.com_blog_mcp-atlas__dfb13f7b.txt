@@ -1,0 +1,134 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/mcp-atlas
+page path  : /blog/mcp-atlas
+captured   : 2026-05-16 02:55:50 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_mcp-atlas__dfb13f7b.html.gz
+========================================================================
+
+MCP-Atlas Raises the Bar for Agentic Evaluation | Scale AI
+
+MCP-Atlas Raises the Bar for Agentic Evaluation | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Actions, Not Words: MCP-Atlas Raises the Bar for Agentic Evaluation
+By
+
+The Scale Research Team
+·
+September 19, 2025
+·
+5 min read
+Copy Link
+LLMs can write poetry, explain quantum physics, and debug code. But ask them to book a hotel, analyze a spreadsheet, and compute the total cost with tax? Many fail at the basics: picking the right tool, calling it correctly, and combining results into a useful answer.
+As organizations deploy AI agents for real work, including customer support, data analysis and various forms of workflow automation, tool use competency is the difference between a helpful assistant and an expensive disappointment.
+However, existing evaluations do not reflect realistic and multi-step workflows. We introduce
+MCP-Atlas
+, an agentic leaderboard evaluating models on their ability to use tools via the Model Context Protocol (MCP).
+What We Built: A Real-World Tool Use Leaderboard
+MCP-Atlas evaluates how well models handle
+single-turn requests that require multiple tools
+across real MCP servers. Think:
+"Look up Microsoft's IPO price in 1986, find the IPO prices of Apple, Amazon, and Google, then calculate which company had the lowest IPO price and by what percentage it was lower than the highest."
+The Setup:
+1,000 tasks spanning 40+ MCP servers and 300+ tools
+Real tools across buckets such as search engines, databases, file systems, APIs and development tools
+Realistic complexity: 3-6 tool calls per task, with distractors to test tool discovery
+Scoring: Pass/fail based on whether the final answer matches ground truth, plus detailed diagnostics
+Our Approach
+1. Scale & Diversity
+Our environment exposes 300+ tools across 40+ servers. We test against real filesystem operations, search engines, databases (MongoDB, Airtable), financial APIs, development tools (Git, GitHub), and specialized services (weather, maps, academic papers). This breadth mirrors the tool diversity agents encounter in production.
+2. Realism
+Every task is human-written with real-world data. Our Airtable tasks query real business datasets that Scale has acquired; search tasks pull live results.
+Each task includes 10+ available tools, but only 3-7 are needed. Models must discover the right tools among distractors and near-synonyms (Exa Search vs DuckDuckGo Search vs Brave Search), testing models’ ability to pick the right tool for the right job.
+3. Complexity
+Multi-tool workflows with 3-6 steps with conditional logic, cross-server coordination (65% of tasks), and branching decisions. A task like "Look up Microsoft's IPO price in 1986, find the IPO prices of Apple, Amazon, and Google, then calculate which company had the lowest IPO price and by what percentage it was lower than the highest" requires financial data retrieval and arithmetic computation in sequence.
+Results
+We ran
+11 leading models
+across our private leaderboard set and report
+pass rate
+as the share of tasks that reached a correct ground truth answer.
+Performance
+The top performer, GPT-5, passed 44.5% of tasks (445/1000)
+The median model, Kimi-K2, landed at 23.9%
+Half of the models scored between 8% and 38.3% pass rate
+Where Agents Stumble: The Diagnostic Picture
+These aren't abstract reasoning puzzles; they're the kinds of multi-step workflows that define practical AI utility. When the best model fails more than half the time, there's a significant opportunity for improvement.
+Beyond pass/fail rates, we categorized every failure to understand where models struggle most:
+Failure Category
+
+% of All Tasks (Across All Models)
+Tool Usage 34-52% Task Understanding 23-38% Response Quality 3-8% Logical Error 1-2%
+The dominant failure mode is Tool Usage, accounting for between a third to a half of all task failures (depending on the model). This breaks down into three primary issues:
+Tool Discovery Problems: Models frequently select plausible, but incorrect tools when faced with similar options. For example, choosing web search instead of local search for location-based queries, or selecting MongoDB when Airtable would be more appropriate for the task structure.
+Parameter Construction Issues: Even when models pick the right tool, they struggle with correctly invoking them. Common problems include incorrect date calculations, wrong units or data types, enum value mistakes, and schema compliance failures that cause API calls to fail.
+Orchestration Gaps: Models often demonstrate poor workflow management by stopping prematurely before completing all required steps, failing to combine intermediate results from multiple tools, or abandoning tasks entirely after encountering a single error rather than implementing retry strategies.
+The bottom line:
+even state-of-the-art frontier models leave a lot on the table once real tools and schemas are involved. The headroom for improvement is large, and now, measurable.
+What This Means for AI Teams
+For Model Developers
+The failure analysis points to three high-impact improvement areas.
+Tool selection accuracy
+shows models struggle with distinguishing between similar tools, particularly when schemas or descriptions are ambiguous.
+Parameter validation
+shows frequent issues with type conformance, date handling, and enum values.
+Error recovery
+represents a significant gap, as models often abandon tasks after single failures rather than attempting repairs or retries
+For Product Developers
+When evaluating models for production deployment, consider testing them on multi-tool workflows from your specific domain. Key questions include whether models can recover from tool errors or give up after single failures, and how accurately they discover relevant tools among distractors.
+Watch for models that excel at conversation, but struggle with structured output, systems that work in demos, but fail on edge cases, and Agents execute tools without stating
+why this tool
+was chosen. These patterns may indicate poor real-world reliability.
+What's Next?
+This initial release includes our private leaderboard and key findings. We plan to release a public dataset for reproducible research, an open-source evaluation harness with all MCP servers, and a research paper with comprehensive methodology and analysis.
+View the live
+leaderboard
+.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

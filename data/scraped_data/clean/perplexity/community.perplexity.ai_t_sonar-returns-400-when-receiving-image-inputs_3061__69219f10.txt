@@ -1,0 +1,186 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-returns-400-when-receiving-image-inputs/3061
+page path  : /t/sonar-returns-400-when-receiving-image-inputs/3061
+captured   : 2026-01-21 21:34:48 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-returns-400-when-receiving-image-inputs_3061__69219f10.html.gz
+========================================================================
+
+Sonar returns 400 when receiving image inputs - General - Perplexity API Platform Forum
+
+Sonar returns 400 when receiving image inputs - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Sonar returns 400 when receiving image inputs
+
+General
+
+sonar
+,
+
+chat-completions
+
+hieutrungmc
+
+December 13, 2025, 1:41am
+
+1
+
+Hi there! As of right now I am using Sonar for my school project, and the demo was a bit… failed because the Sonar API is constantly returning 400 error on any image url inputs.
+
+Payload:
+
+{
+"search_mode": "web",
+"temperature": 0.2,
+"top_p": 0.9,
+"return_images": false,
+"return_related_questions": false,
+"top_k": 0,
+"stream": false,
+"presence_penalty": 0,
+"frequency_penalty": 0,
+"disable_search": false,
+"enable_search_classifier": false,
+"web_search_options": {
+"image_search_relevance_enhanced": false
+},
+"model": "sonar",
+"messages": [
+{
+"role": "system",
+"content": `You are a food analyzer that analyzes the foods from an image and calculate the calories of the meal in 4 factors: "protein, fiber, fat, starch" (numbers, in grams), then calculate the total calories (in kcal) of this meal.
+Return the result as json in this format: {mealname, protein , fiber, fat, starch, calories} in ONE LINER.
+If the image doesn't contain food, make all values 0 and return the mealname "Invalid". Just the JSON.`
+},
+{
+"role": "user",
+"content": [
+{ "type": "image_url", "image_url": { "url": imageUrl } },
+{ "type": "text", "text": "Here's the attached image link" }
+]
+}
+]
+};
+
+Response:
+
+{
+"error": {
+"message": "Failed to load image. Please ensure the image URL is valid and accessible.",
+"type": "invalid_image",
+"code": 400
+}
+}
+
+Removing the image_url part will make it run normally, but since my use case requires giving an image to the system to analyze.
+
+I think it happened today because I was testing it normally yesterday, I hope the Perplexity Team should look into this and have a quick fix on this.
+
+Thank you.
+
+1 Like
+
+Ali_Sadeghi
+
+December 18, 2025, 8:19pm
+
+2
+
+I have the same problem with “sonar-pro” model!
+
+Perplexity API Error 400 {“error”:{“message”:“Failed to load image. Please ensure the image URL is valid and accessible.”,“type”:“invalid_image”,“code”:400}}
+
+hieutrungmc
+
+December 24, 2025, 2:55pm
+
+3
+
+Seems like everyone is getting this error, I’ve found a temporary workaround for this: Convert your image into a base64 image link and pass it into the url field instead of the image https url like in this section:
+Base64 Encoded Image Data
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Does the API support AWS Presigned URLs?
+
+General
+
+sonar
+
+1
+
+18
+
+January 12, 2026
+
+Posting image to sonar-deep-research leads to 500 error
+
+Bug Reports
+
+5
+
+98
+
+June 2, 2025
+
+Images from sonar API suddenly random
+
+Bug Reports
+
+sonar
+
+0
+
+26
+
+December 11, 2025
+
+Brand New Sonar API Documentation is now Live!
+
+Announcements
+
+0
+
+277
+
+July 18, 2025
+
+Got 404 error on any api request from openresty
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+2
+
+18
+
+December 1, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

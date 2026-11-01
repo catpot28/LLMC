@@ -1,0 +1,134 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/announcements/agent-sdk-with-callmodel
+page path  : /announcements/agent-sdk-with-callmodel
+captured   : 2026-05-14 07:22:48 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_announcements_agent-sdk-with-callmodel__af5edde4.html.gz
+========================================================================
+
+Agent SDK: Building Multi-turn Agent Workflows on OpenRouter
+
+Agent SDK: Building Multi-turn Agent Workflows on OpenRouter
+Skip to content
+OpenRouter
+/
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Agent SDK: Building Multi-turn Agent Workflows on OpenRouter
+Brian Thomas
+·
+
+4/24/2026
+Constructing an agent requires a layered set of behaviors beyond the chat completion: it needs to call a model, inspect the output for tool requests, execute those tools, feed the results back, and repeat until the task is done. Building a durable version of that loop means handling input validation, streaming, cost tracking, and knowing when to stop.
+
+@openrouter/agent
+(opens in new tab)
+is a model-agnostic TypeScript SDK that packages all of that into a single function that can execute this agentic loop on any of the 300+ models on OpenRouter. To show off how powerful this agentic loop is, we published a tutorial on how a skill on top of Agent SDK enables you to
+build your own personal agent harness
+.
+
+From chat completions to agentic behavior
+
+A standard chat completion is stateless: you send messages, you get a response. Turning that into an agent requires bolting on several behaviors:
+
+Tool execution.
+The model produces a structured tool call. Your code has to parse it, validate the arguments, run the function, and format the result for the next request. With
+callModel
+, you define tools using
+tool()
+and Zod schemas. Tools run separately from model calls, with clean boundaries and no tangled logic. The SDK validates inputs from the model and outputs from your function at runtime. If the model sends bad arguments, you get a clear error instead of a silent failure downstream.
+
+Multi-turn loops.
+An agent rarely finishes in one step. It might search, read results, search again, then write a summary. That means looping: call the model, execute tools, call the model again, repeat.
+callModel
+handles the loop internally. You control it with stop conditions: custom functions that receive the full step history and decide whether to keep going.
+
+Stop conditions.
+Without guardrails, an agent loop can run forever (or at least until your bill gets uncomfortable).
+callModel
+accepts composable stop conditions:
+stepCountIs(10)
+caps the loop at 10 turns,
+maxCost(1.00)
+sets a dollar limit,
+hasToolCall('done')
+stops when a specific tool gets called. Combine them, or write a custom function.
+
+Streaming.
+Agents that take multiple steps need to show progress.
+callModel
+gives you
+getTextStream()
+,
+getToolCallsStream()
+, and
+getReasoningStream()
+. Stream, extract, and process the same response concurrently, no need to choose upfront.
+
+Cost tracking.
+Every response includes token counts and cost data via
+result.getResponse()
+, so you know exactly what each agent run costs.
+
+Tool approval.
+For agents that take real-world actions, you can mark tools as requiring approval. When the model calls one, the SDK pauses execution, returns control to your code, and waits for you to collect a decision before resuming.
+
+callModel
+handles all of these so you can focus on the tools and logic specific to your application. And because the SDK is model-agnostic, you can swap between any model on OpenRouter without changing your agent code.
+
+Get Started
+
+The SDK calls the model, sees it wants to use
+get_time
+, validates the input against your Zod schema, executes the function, feeds the result back, and returns the final text. You wrote zero loop logic.
+
+Get your API key
+(opens in new tab)
+and point your agent at the
+callModel docs
+(opens in new tab)
+.
+
+Tell us what you're building on
+Discord
+(opens in new tab)
+.
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube

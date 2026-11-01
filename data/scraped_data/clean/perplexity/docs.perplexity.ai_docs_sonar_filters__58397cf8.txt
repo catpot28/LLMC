@@ -1,0 +1,1045 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/sonar/filters
+page path  : /docs/sonar/filters
+captured   : 2026-05-20 19:29:29 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_sonar_filters__58397cf8.html.gz
+========================================================================
+
+Search Filters - Perplexity
+
+Search Filters - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Features
+Search Filters
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Core Features
+Search Filters
+Media & Attachments
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Domain Filters
+Date & Time Filters
+Location Filters
+Language Filter
+Academic Filter
+SEC Filings Filter
+Context Size Control
+Search Control
+Combining Filters
+Next Steps
+Features
+Search Filters
+Copy page
+Control and customize Sonar API search results with filters
+Copy page
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+Control which websites appear in search results, filter by date and location, target specific languages, and fine-tune search behavior using Sonar API filters.
+
+​
+Domain Filters
+
+Control which websites are included or excluded from search results using
+search_domain_filter
+. Supports both domain-level and URL-level filtering.
+
+Key parameters:
+
+search_domain_filter
+: Array of domains or URLs (max 20)
+
+Allowlist mode
+: Include only specified domains (no prefix)
+
+Denylist mode
+: Exclude domains (prefix with
+-
+)
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Allowlist: Only search specific domains
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Tell me about space discoveries."
+}],
+
+search_domain_filter
+=
+[
+"nasa.gov"
+,
+"wikipedia.org"
+,
+"space.com"
+]
+
+)
+
+# Denylist: Exclude specific domains
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are renewable energy advances?"
+}],
+
+search_domain_filter
+=
+[
+"-reddit.com"
+,
+"-pinterest.com"
+]
+
+)
+
+You can add a maximum of 20 domains or URLs. Use either allowlist OR denylist mode, not both simultaneously.
+
+​
+Date & Time Filters
+
+Filter search results by publication date, last updated date, or recency using date range parameters.
+
+Key parameters:
+
+search_after_date_filter
+: Filter by publication date (format:
+%m/%d/%Y
+)
+
+search_before_date_filter
+: Filter by publication date (format:
+%m/%d/%Y
+)
+
+last_updated_after_filter
+: Filter by last updated date
+
+last_updated_before_filter
+: Filter by last updated date
+
+search_recency_filter
+: Predefined periods (
+"hour"
+,
+"day"
+,
+"week"
+,
+"month"
+,
+"year"
+)
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Publication date range
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Show me tech news from this week."
+}],
+
+search_after_date_filter
+=
+"3/1/2025"
+,
+
+search_before_date_filter
+=
+"3/5/2025"
+
+)
+
+# Last updated date range
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Show me recently updated articles."
+}],
+
+last_updated_after_filter
+=
+"3/1/2025"
+,
+
+last_updated_before_filter
+=
+"3/5/2025"
+
+)
+
+# Recency filter for real-time results (breaking news or live events)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What is happening right now in the markets?"
+}],
+
+search_recency_filter
+=
+"hour"
+
+)
+
+# Recency filter (convenient relative dates)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Latest AI developments?"
+}],
+
+search_recency_filter
+=
+"week"
+
+)
+
+Date filters must use
+%m/%d/%Y
+format (e.g.,
+"3/1/2025"
+).
+search_recency_filter
+cannot be combined with other date filters. Use
+hour
+for real-time data such as breaking news or live events.
+
+​
+Location Filters
+
+Customize search results based on geographic location using
+user_location
+within
+web_search_options
+.
+
+Key parameters:
+
+country
+: Two-letter ISO 3166 country code (required with coordinates)
+
+region
+: State, province, or administrative division
+
+city
+: City name
+
+latitude
+: Latitude coordinate (-90 to 90)
+
+longitude
+: Longitude coordinate (-180 to 180)
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Full location specification (recommended)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are good coffee shops nearby?"
+}],
+
+web_search_options
+=
+{
+
+"user_location"
+: {
+
+"country"
+:
+"US"
+,
+
+"region"
+:
+"California"
+,
+
+"city"
+:
+"San Francisco"
+,
+
+"latitude"
+:
+37.7749
+,
+
+"longitude"
+:
+-
+122.4194
+
+}
+
+}
+
+)
+
+# Country code only
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Summarize today's news."
+}],
+
+web_search_options
+=
+{
+
+"user_location"
+: {
+
+"country"
+:
+"US"
+
+}
+
+}
+
+)
+
+For best accuracy, provide as many location fields as possible. City and region significantly improve location precision.
+
+​
+Language Filter
+
+Filter search results by language using ISO 639-1 language codes.
+
+Key parameters:
+
+search_language_filter
+: Array of 2-letter language codes (max 10)
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Single language
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Tell me about AI developments."
+}],
+
+search_language_filter
+=
+[
+"en"
+]
+
+)
+
+# Multiple languages
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Renewable energy in Europe?"
+}],
+
+search_language_filter
+=
+[
+"en"
+,
+"fr"
+,
+"de"
+]
+
+)
+
+Language codes must be valid ISO 639-1 codes (e.g.,
+"en"
+,
+"fr"
+,
+"de"
+). You can filter by up to 10 languages per request.
+
+​
+Academic Filter
+
+Prioritize scholarly sources and peer-reviewed content by setting
+search_mode
+to
+"academic"
+.
+
+Key parameters:
+
+search_mode
+: Set to
+"academic"
+to target academic sources
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What is the scientific name of lion's mane mushroom?"
+}],
+
+search_mode
+=
+"academic"
+,
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"low"
+}
+
+)
+
+Date filters are
+not supported
+with
+search_mode="academic"
+and are silently ignored. This includes
+search_after_date_filter
+,
+search_before_date_filter
+,
+search_recency_filter
+,
+last_updated_after_filter
+, and
+last_updated_before_filter
+. To narrow academic results by date, include the desired time range directly in your query text (e.g., “findings on neural networks since 2023”).
+
+​
+SEC Filings Filter
+
+Target U.S. Securities and Exchange Commission filings and official financial documents.
+
+Key parameters:
+
+search_mode
+: Set to
+"sec"
+to target SEC filings
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Prepare me for markets opening."
+}],
+
+search_mode
+=
+"sec"
+
+)
+
+# Combine with date filters for recent filings
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Summarize latest 10-K filings for Apple Inc."
+}],
+
+search_mode
+=
+"sec"
+,
+
+search_after_date_filter
+=
+"1/1/2023"
+
+)
+
+​
+Context Size Control
+
+Control how much search context is retrieved to balance cost and comprehensiveness.
+
+Key parameters:
+
+search_context_size
+: Set to
+"low"
+(default),
+"medium"
+, or
+"high"
+within
+web_search_options
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Low context (cost-efficient, default)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"How many stars in our galaxy?"
+}],
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"low"
+}
+
+)
+
+# High context (comprehensive)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Explain the 2008 financial crisis."
+}],
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"high"
+}
+
+)
+
+Selecting
+"high"
+increases search costs due to more extensive web retrieval. Use
+"low"
+when cost efficiency is critical.
+
+​
+Search Control
+
+Control when web search is performed using the search classifier or by disabling search entirely.
+
+Key parameters:
+
+enable_search_classifier
+: Let AI decide when to search (boolean)
+
+disable_search
+: Disable web search completely (boolean)
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Search classifier (AI decides when to search)
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are latest quantum computing developments?"
+}],
+
+enable_search_classifier
+=
+True
+
+)
+
+# Disable search completely
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What is 2 + 2?"
+}],
+
+disable_search
+=
+True
+
+)
+
+Pricing remains the same regardless of whether search is triggered. Search control is for performance optimization, not cost reduction.
+
+​
+Combining Filters
+
+You can combine multiple filters for precise control over search results:
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Combine domain, language, date, and context size filters
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"Recent quantum computing breakthroughs?"
+}],
+
+search_domain_filter
+=
+[
+"nature.com"
+,
+"science.org"
+,
+"arxiv.org"
+],
+
+search_language_filter
+=
+[
+"en"
+,
+"de"
+],
+
+search_recency_filter
+=
+"month"
+,
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"high"
+}
+
+)
+
+​
+Next Steps
+
+Sonar Quickstart
+Get started with the Sonar API and learn the basics
+Was this page helpful?
+Yes
+No
+Core Features
+Previous
+Media & Attachments
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

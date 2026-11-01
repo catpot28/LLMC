@@ -1,0 +1,222 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/introducing-the-agent-api-a-managed-runtime-for-agentic-workflows/4733
+page path  : /t/introducing-the-agent-api-a-managed-runtime-for-agentic-workflows/4733
+captured   : 2026-04-12 12:11:40 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_introducing-the-agent-api-a-managed-runtime-for-agentic-workflows_4733__eba8dc92.html.gz
+========================================================================
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows - Announcements - Perplexity API Platform Forum
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Introducing the Agent API — A Managed Runtime for Agentic Workflows
+
+Announcements
+
+Kesku
+
+March 11, 2026, 10:00am
+
+1
+
+The Agent API is now live at
+POST /v1/agent
+.
+
+It’s a single endpoint for building agentic workflows with integrated search, tool execution, and multi-model orchestration. Swap between the latest frontier models, configure presets, tool access, step limits, and token budgets — all from one endpoint.
+
+Presets
+
+Skip the configuration and use a curated preset:
+
+Preset
+
+Best For
+
+fast-search
+
+Quick factual lookups
+
+pro-search
+
+Balanced multi-step research
+
+deep-research
+
+Deep multi-source analysis
+
+advanced-deep-research
+
+Institutional-grade research
+
+from perplexity import Perplexity
+
+client = Perplexity()
+response = client.responses.create(
+preset="pro-search",
+input="Compare current open-source LLM evaluation benchmarks."
+)
+print(response.output_text)
+
+Key Features
+
+Multi-provider models
+— OpenAI, Anthropic, Google, xAI, and Perplexity’s own Sonar, all at direct provider pricing with no markup
+
+Built-in tools
+—
+web_search
+($0.005/call) and
+fetch_url
+($0.0005/call) for real-time web grounding
+
+Custom function calling
+— Define your own tools to connect the model to your databases, APIs, and business logic
+
+Model fallback chains
+— Pass a list of models and we’ll try them in order
+
+Structured outputs
+— JSON Schema enforcement for predictable downstream parsing
+
+OpenAI compatible
+— The
+/v1/responses
+path is accepted as an alias, so the OpenAI SDK works out of the box by pointing
+base_url
+to
+https://api.perplexity.ai/v1
+
+OpenAI SDK Compatibility
+
+from openai import OpenAI
+
+client = OpenAI(
+api_key="YOUR_PERPLEXITY_API_KEY",
+base_url="https://api.perplexity.ai/v1"
+)
+
+response = client.responses.create(
+model="openai/gpt-5.1",
+input="What are the latest developments in AI?"
+)
+print(response.output_text)
+
+Get Started
+
+Quickstart
+
+Models & Pricing
+
+Presets
+
+Tools & Function Calling
+
+API Reference
+
+Blog Post
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+110
+
+November 3, 2025
+
+Perplexity Interface API vs Sonar LLM API
+
+General
+
+2
+
+291
+
+June 24, 2025
+
+Gemini Output in Agent API Response
+
+Bug Reports
+
+chat-completions
+
+1
+
+6
+
+April 7, 2026
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+135
+
+April 7, 2026
+
+How to get UI like response(correct) from Perplexity API?
+
+Bug Reports
+
+sonar-pro
+
+,
+
+chat-completions
+
+1
+
+156
+
+January 31, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

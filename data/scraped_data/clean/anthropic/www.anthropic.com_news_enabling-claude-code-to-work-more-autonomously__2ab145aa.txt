@@ -1,0 +1,166 @@
+=== SOURCE =============================================================
+company    : Anthropic (anthropic)
+url        : https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously
+page path  : /news/enabling-claude-code-to-work-more-autonomously
+captured   : 2026-05-17 14:33:55 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/anthropic/www.anthropic.com_news_enabling-claude-code-to-work-more-autonomously__2ab145aa.html.gz
+========================================================================
+
+Enabling Claude Code to work more autonomously \ Anthropic
+
+Skip to main content
+Skip to footer
+Research
+Economic Futures
+Commitments
+Learn
+News
+Try Claude
+Product
+Enabling Claude Code to work more autonomously
+Sep 29, 2025
+We’re introducing several upgrades to
+Claude Code
+: a native VS Code extension, version 2.0 of our terminal interface, and checkpoints for autonomous operation. Powered by
+Sonnet 4.5
+, Claude Code now handles longer, more complex development tasks in your terminal and IDE.
+Claude Code on more surfaces
+VS Code extension
+We’re introducing a
+native VS Code extension
+in beta that brings Claude Code directly into your IDE. You can now see Claude’s changes in real-time through a dedicated sidebar panel with inline diffs. The extension provides a richer, graphical Claude Code experience for users who prefer to work in IDEs over terminals.
+Enhanced terminal experience
+We’ve also refreshed Claude Code’s terminal interface. The updated interface features improved status visibility and searchable prompt history (Ctrl+r), making it easier to reuse or edit previous prompts.
+Claude Agent SDK
+For teams who want to create custom agentic experiences, the Claude Agent SDK (formerly the Claude Code SDK) gives access to the same core tools, context management systems, and permissions frameworks that power Claude Code. We’ve also released SDK support for subagents and hooks, making it more customizable for building agents for your specific workflows.
+Developers are
+already building agents
+for a broad range use cases with the SDK, including financial compliance agents, cybersecurity agents, and code debugging agents.
+Execute long-running tasks with confidence
+As Claude Code takes on increasingly complex tasks, we're releasing a checkpointing feature to help delegate tasks to Claude Code with confidence while maintaining control. Combined with recent feature releases, Claude Code is now more capable of handling sophisticated tasks.
+Checkpoints
+Complex development often involves exploration and iteration. Our new checkpoint system automatically saves your code state before each change, and you can instantly rewind to previous versions by tapping Esc twice or using the /rewind command. Checkpoints let you pursue more ambitious and wide-scale tasks knowing you can always return to a prior code state.
+When you rewind to a checkpoint, you can choose to restore the code, the conversation, or both to the prior state. Checkpoints apply to Claude’s edits and not user edits or bash commands, and we recommend using them in combination with version control.
+Subagents, hooks, and background tasks
+Checkpoints are especially useful when combined with Claude Code’s latest features that power autonomous work:
+Subagents
+delegate specialized tasks—like spinning up a backend API while the main agent builds the frontend—allowing parallel development workflows
+Hooks
+automatically trigger actions at specific points, such as running your test suite after code changes or linting before commits
+Background
+
+tasks
+keep long-running processes like dev servers active without blocking Claude Code’s progress on other work
+Together, these capabilities let you confidently delegate broad tasks like extensive refactors or feature exploration to Claude Code.
+Getting started
+These updates are available now for Claude Code users.
+Claude Sonnet 4.5
+is the new default model in Claude Code. Run /model to switch models
+VS Code extension
+(beta)
+:
+Download from the
+VS Code Extension Marketplace
+to get started
+Terminal updates
+, including the visual refresh and checkpoints, are available to all Claude Code users—just update your local installation
+Claude Agent SDK:
+See the docs
+to get started
+Related content
+PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients
+PwC will roll out Claude Code and Cowork starting with U.S. teams and expanding toward a global workforce of hundreds of thousands of professionals, establish a joint Center of Excellence, and train and certify 30,000 PwC professionals on Claude.
+Read more
+Anthropic forms $200 million partnership with the Gates Foundation
+Read more
+Introducing Claude for Small Business
+We're launching Claude for Small Business, a package of connectors and ready-to-run workflows that put Claude inside the tools small businesses use every day.
+
+Read more
+Products
+Claude
+Claude Code
+Claude Code Enterprise
+Claude Cowork
+Claude Security
+Claude for Chrome
+Claude for Slack
+Claude for Microsoft 365
+Skills
+Max plan
+Team plan
+Enterprise plan
+Download app
+Pricing
+Log in to Claude
+Models
+Mythos Preview
+Opus
+Sonnet
+Haiku
+Solutions
+AI agents
+Code modernization
+Coding
+Customer support
+Education
+Financial services
+Government
+Healthcare
+Legal
+Life sciences
+Nonprofits
+Security
+Small business
+Claude Platform
+Overview
+Developer docs
+Pricing
+Marketplace
+Regional compliance
+Claude on AWS
+Google Cloud’s Vertex AI
+Microsoft Foundry
+Console login
+Resources
+Blog
+Claude partner network
+Community
+Connectors
+Courses
+Customer stories
+Engineering at Anthropic
+Events
+Inside Claude Code
+Inside Claude Cowork
+Inside Claude Enterprise
+Inside Claude Security
+Plugins
+Powered by Claude
+Service partners
+Startups program
+Tutorials
+Use cases
+Help and security
+Availability
+Status
+Support center
+Company
+Anthropic
+Careers
+Economic Futures
+Research
+News
+Claude’s Constitution
+Responsible Scaling Policy
+Security and compliance
+Transparency
+Terms and policies
+Privacy policy
+Consumer health data privacy policy
+Responsible disclosure policy
+Terms of service: Commercial
+Terms of service: Consumer
+Usage policy
+© 2026 Anthropic PBC
+Enabling Claude Code to work more autonomously \ Anthropic

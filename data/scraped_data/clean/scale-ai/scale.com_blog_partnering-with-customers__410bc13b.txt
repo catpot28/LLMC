@@ -1,0 +1,121 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/partnering-with-customers
+page path  : /blog/partnering-with-customers
+captured   : 2026-04-19 05:40:15 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_partnering-with-customers__410bc13b.html.gz
+========================================================================
+
+Partnering with customers to architect data pipelines | Scale AI
+
+Partnering with customers to architect data pipelines | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Customers
+How Does Scale AI Partner with Customers to Produce High-Quality Training Data?
+by
+
+Taisia Karaseva
+Published
+November 16, 2021
+Reading Time
+8 min read
+Copy Link
+At Scale, we help our customers accelerate the development of their AI applications. We do this through a variety of products and services, but here we’ll focus on one:
+high-quality labels
+for training data. We’ve developed a process for delivering model-improving data quickly and efficiently, and we highlight parts of this process below.
+To move fast, we align with our customers early. We strive to understand what our customers ask for and why, so that we can use the best combination of product and operational expertise to
+label their data
+with high quality - with their ML goals in mind. We take a collaborative and thoughtful approach to architecting and building data annotation pipelines. It’s one of the many reasons that customers continue to trust Scale as their AI partner.
+We architect data annotation pipelines that map to our customers’ ML goals
+At Scale, we start by understanding what our customers need to accomplish. What specifically will the AI model need to do? Is it for an
+Autonomous Vehicle
+(AV) use case, perhaps predicting the action of another agent? Or is it for an application that can recognize and track objects for
+inventory management
+? From this, we can begin to understand:
+What data will the model ‘learn’ from?
+What data will be used for inference, once the model is deployed in production?
+What should the ideal output look like?
+What determines a good (or bad) inference output?
+We’ve found that the success of an AI project is highly correlated with the quality and specificity of the training data used. This means that a broad or general training dataset won’t usually be the most efficient or quickest way to build an ML model. As a result, we collaborate with customers to set up goal-oriented annotation pipelines that map directly to their ML roadmaps. This approach helps them achieve their KPIs and project milestones.
+As an example, it is common for new customers to ask us to replicate a broad-purpose public dataset, such as the AV-centric
+NuScenes
+, which we released with
+Aptiv
+. Once we deep dive on their ML roadmap however, we discover the sub-goals (such as lane planning and pedestrian intent recognition) and the desired timelines for each. We then build specialized pipelines that generate the required training data at higher quality and at faster speeds than the customer would otherwise have done themselves. In fact, our speed of operation has frequently helped customers meet key deadlines, like public conferences or demos.
+Scale seeks to understand our customers' timelines of ML goals and to spin up label pipelines targeted at the specific data needs for each goal.
+It’s important to note that few customers come to us with neatly-defined, single pipeline needs (they used to!). Today, our customers often bring multi-modal data from multiple sensors. For an AV customer, this could mean LiDAR, radar, and a combination of regular and fisheye cameras. Having a clear understanding of our customers' goals helps us be a thought partner on the types of objects or events to label across these sensors. It also helps us propose a pipeline architecture that incorporates the best product capabilities to produce a comprehensive, goal-oriented training dataset.
+For example, we might propose a string of dependent pipelines that weave together categorization, 3D LiDAR cuboids, and LiDAR linking. Weather attributes and 3D data defects might be caught and categorized in the categorization pipeline, vehicles might be tracked in the 3D LiDAR cuboids project, and camera-based attributes like blinker status might be generated in the linking project.
+AV customers often come to Scale with data from multiple sensors and with an idea of what labels they need. Scale's team then architects specialized label pipelines that bridge the two, producing high-quality labeled data quickly and efficiently.
+We test and fine tune pipeline architecture by creating a golden dataset and vetting it with our customers
+Following this thoughtful approach to customer alignment helps us achieve a data milestone: the creation of a golden dataset. A golden dataset is used to define what ‘good’ looks like. It is used as a reference for us, our human Taskers, and customers’ own stakeholders.
+Creating a golden dataset is a journey of discovery. We set out to create the golden dataset by annotating a representative sample of data in the pipeline we architected. Annotating some data always generates observations and insights about nuances in the data and requirements, which we surface to the customer along with our recommendations. We then review the resultant annotated data with our customer, tying open questions and considerations back to the customer’s ML goals.
+Reviewing the proposed golden dataset together with the customer is key. For example, we were working with an autonomous drone customer who needed polygon labeling of flyable space, ie where their drones could safely navigate. We found ourselves drawing pixel-perfect polygons around every tree branch, only to have the customer reject every task. Only once we debriefed live with the customer did we realize that for them, quality training data meant polygons that avoided tree pixels by a wide margin - ie, rough, simple polygons that just didn’t clip the treetops! That one collaborative sync put the project back on track with a clear path to consistent, relevant, and accurate labeled data.
+Attaining this mutually-vetted golden dataset is powerful. It powers our internal (human) Tasker training and assessment tools, giving both Taskers and the operations team a clear understanding of what success looks like. It also aligns our Quality Assurance (QA) team, whose job is to effectively mirror customers’ QA teams to reduce customers’ operational data-management burden.
+Reviewing label samples together with customers helps establish a golden dataset, which in turn makes is possible to scale up production of high-quality labels.
+We engage all relevant stakeholders to ensure customers are aligned with Scale - and amongst themselves
+We’ve recognized that our customers are running complex initiatives involving many stakeholders on many teams, including operations, engineering, legal, and procurement. Alignment isn’t complete until Scale has aligned with each customer subteam, AND the customer subteams are internally aligned amongst themselves.
+Projects can fail if the customer’s operations team is grading labeled data according to a different set of standards than what the ML team expected. This can take many forms - operations might be grading too easily (for example, approving polygons that are too swaggy), or grading too harshly (for example, rejecting boxes with acceptable sizing), or just grading according to a different or outdated rubric (for example, applying an old definition of “truck” that included small pickup trucks).
+The result of inconsistent labeling standards is that the ML team gets training data that doesn’t improve model performance. Or, the ML team gets starved for data, even though there is data available that would have improved performance! Few things are worse than delivering weeks or months of data, with a consistent green light from the customer’s operations team - only to get a mass rejection from the ML team once it tests model performance.
+Scale drives stakeholder alignment by bringing the right people into the discussion, especially at steps that we know to be high risk. We also actively monitor for hints that there might be misalignment (like radio silence from some stakeholders at key milestones) and work with our customers to drive alignment internally and with Scale. We pride ourselves at being a knowledgeable partner who knows how to avoid situations that de-ccelerate the development of AI applications.
+Alignment is never won and done; we continue to re-assess alignment to our customers’ ML goals
+It takes a deliberate effort to maintain alignment. Very often, model evaluations lead customers to update their data requirements and labeling guidelines. Even when the labeling guidelines remain constant, customer data itself can change. For example, we once built a reliable high-quality pipeline to label street scenes, only to find the next batch of customer data contained scenes of people lying on a racetrack.
+Throughout the lifecycle of the data annotation pipeline, we continue to apply our alignment process. We continue to check in on customer ML goals, refine pipeline setup, maintain the accuracy of the golden dataset, and ensure alignment between teams on the customer, Scale, and Tasker side. This accelerates the speed with which our customers receive high-quality labeled data, which in turn accelerates their development of AI applications.
+To experiment with Scale’s data labelling at a small scale, sign up for
+Scale Rapid
+, the fastest way to production-quality labels, with no data minimums. To set up custom pipelines for your ML needs,
+talk to our team
+.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

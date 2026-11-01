@@ -1,0 +1,504 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/a-dizzying-year-for-language-models-2024-in-review
+page path  : /stories/blog/a-dizzying-year-for-language-models-2024-in-review
+captured   : 2026-02-14 00:56:51 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_a-dizzying-year-for-language-models-2024-in-review__ee94c41e.html.gz
+========================================================================
+
+A Dizzying Year for Language Models: 2024 in Review
+
+A Dizzying Year for Language Models: 2024 in Review
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+A Dizzying Year for Language Models: 2024 in Review
+
+Jan 8, 2025
+
+5 min read
+
+/
+
+Vivien Tran-Thien
+
+With powerful models and features released at breathtaking speeds and a competitive playing field denser than ever before, 2024 was a dizzying year in the field of
+large language models
+(LLMs). It also ended with a raft of spectacular announcements. In this blog post, we review the most significant
+technological trends of the past year
+and discuss how practitioners can take advantage of them. In particular, we discuss:
+
+The improvements of LLMs;
+
+The emergence of small language models;
+
+The new multimodal features of LLMs;
+
+The development of reasoning capabilities through test-time compute;
+
+Our recommendations for practitioners in light of these evolutions.
+
+Competition Intensifies Among LLM Providers
+
+OpenAI's leadership faced stiff competition with GPT-4 by the end of 2024. GPT-4o is today tied with o1 — another OpenAI model — and two versions of Google’s Gemini model for the first place of the
+LMSYS Chatbot Arena leaderboard
+. OpenAI’s rivals, either established companies like Google, Anthropic and Meta, or newcomers, such as 01.ai, X.ai, and DeepSeek founded in 2023, make available powerful models which surpass the version of GPT-4 available in early 2024. This includes models whose weights are open, i.e., that can be downloaded and hosted locally, rather than accessed exclusively through an API.
+
+Figure 1: A year of progress for frontier models. The Chatbot Arena score is a relative ranking system (similar to chess ratings) that measures how well different AI chatbots perform against each other based on crowdsourced human preferences in head-to-head comparisons. Source:
+Chatbot Arena
+
+In parallel to this
+race to the most capable models
+, the features offered to developers by LLM providers tend to converge. Common features now include:
+
+Function calling
+: The possibility to include the description of functions in prompts so that LLMs can request their execution in their response;
+
+Constrained decoding
+: The possibility to enforce formatting constraints (i.e., a specific JSON schema) on the response of the LLM;
+
+Large context window
+: The possibility to process a very large amount of text, typically more than 100,000 tokens, while GPT-3 could only handle 2,048 tokens;
+
+Prompt caching
+: The caching of the computations related to previous prompts so that a new prompt sharing a prefix with a previous prompt could be processed in a more efficient (and less expensive) manner;
+
+Finetuning API
+: The possibility to adjust the weights of an LLM with one’s own data.
+
+Small Yet Powerful Models Become Available
+
+Until recently, the most effective recipe to train a better LLM was to increase the number of parameters as well as the size of the training corpus. This proved true with GPT-1 (117 million parameters trained on 4.5 GB of text), GPT-2 (1.5 billion parameters trained on 40 GB), GPT-3 (175 billion parameters trained on 570 GB), and GPT-4 (even though its architecture and training data were not disclosed).
+
+However, pre-training offers diminishing returns and
+organizations are massively investing in LLMs
+, so
+cost efficiency
+has become a significant concern and LLM providers now make significant efforts to
+reduce the size of models, diminish their memory footprint, and accelerate the text generation process
+. To achieve this, they often use a combination of knowledge distillation, model compression techniques (e.g.,
+quantization
+or pruning) and efficient decoding methods (e.g., speculative decoding).
+
+For example, OpenAI, Google, and Anthropic now all offer
+LLMs of various sizes
+to let developers choose the
+right compromise between quality on one hand and speed and costs on the other hand
+and, remarkably, some new iterations of fast models (GPT-4o, Gemini 2.0 Flash, and Claude 3.5 Sonnet) are more performant than the flagship models of the previous generation (GPT-4, Gemini 1.5 Pro, Claude 3 Opus). Several LLM providers have pushed this logic even further and created a series
+of small models
+(e.g., Phi 3, SmolLM, or Gemma) with a number of parameters ranging from one hundred million to a few billions. It is now possible to run lightweight models on
+local devices such as smartphones and laptops
+, when low latency or privacy are critical.
+
+LLMs Now Have Eyes and Ears
+
+The first LLMs able to process non-textual information appeared in 2022 and the first commercial offerings with such capabilities were made available at the end of 2023, but it was truly in 2024 that
+multimodal LLMs
+became mainstream. Now, all major LLM providers include the possibility to process
+images
+and sometimes
+audio
+and
+videos
+alongside texts.
+
+This opens up the possibility of effectively
+processing rich sources of information
+such as
+documents including not only text but also pictures, charts, and tables
+. Eighteen months ago, it would have been possible but challenging, time-consuming, and error-prone to implement a question-answering system based on these documents. In contrast, this is quite straightforward today, thanks to multimodal LLMs as well as recent multimodal retrieval models like
+ColPali
+or modern document parsing libraries or APIs. Multimodal LLMs also enable
+more natural and more reactive user interfaces
+, in particular by taking advantage of
+real-time sensors
+like the camera feed or the microphone of a smartphone.
+
+Is This the End of the Pre-Training Era?
+
+The era of scaling models purely through size is waning. As increasing the volume of pre-training computations and data becomes
+less and less efficient
+, LLM providers consider alternative routes to develop the next generation of models.
+
+In September 2024, OpenAI unveiled
+o1
+, a series of experimental models that were specifically fine-tuned to generate chains of thoughts before providing an answer. These models scored particularly high in math, coding, and science benchmarks. Interestingly, the performance of o1 increases with both
+train-time compute
+(i.e., the computations required to fine-tune the model) and
+test-time compute
+(i.e., the computations needed to generate answers and the associated chains of thoughts once the model has been finetuned).
+
+This offers the possibility of a
+compute-optimal scaling strategy
+that puts a
+higher emphasis on the text generation step
+and yields better results for reasoning tasks but potentially increases the cost and latency per response. Several OpenAI competitors work on a similar approach and Google and DeepSeek have already unveiled their
+reasoning models
+while OpenAI offered a glimpse of
+o3
+— o1’s successor with impressive capabilities — in December 2024.
+
+Figure 2: Score achieved by GPT-4o, o1-preview, and o3 on the ARC-AGI-1 dataset, a challenging benchmark measuring generalization on novel logical tasks. Please note that o3 and o1-preview required much more test-time computation than GPT-4o. Source:
+ARC Prize
+
+This mirrors the long-time trend to develop
+compound AI systems
+. These systems compensate for the shortcomings of models by modifying the way these models are queried or augmenting them with
+external components
+. They can involve relatively simple prompt engineering approaches such as chain-of-thought or retrieval-augmented generation or more sophisticated approaches like LLM agents,
+structured text generation techniques
+, and optimization frameworks (e.g.,
+DSPY
+).
+
+Future-Proof Tactics for LLM Practitioners
+
+One year ago, it would have been hard to imagine all the recent progress in the field of LLMs. This warrants some caution when trying to anticipate future developments. Nonetheless, given the intensity of the competition among LLM providers and how significant their investments are,
+it is safe to bet on significant improvements of LLMs
+and prepare to benefit from them. In this context, our recommendations are threefold:
+
+Be Ready to Incorporate New Models
+: Taking advantage of a new model requires being able to replace the LLM currently used with a new one, even if it is made available by a different provider. However, it is generally not enough to merely substitute a model with another one because the model interacts with the broader system in which it is embedded. You need robust evaluation pipelines to measure the performance with the new model and potentially adjust the prompts or other hyperparameters.
+
+Prioritize Simplicity in Pipelines
+: It is tempting to compensate for the weaknesses of a pipeline with additional engineering efforts. In practice, the resulting implementation tends to be more brittle and many of the refinements risk becoming irrelevant, if not harmful, when a new model is incorporated. Furthermore, the time spent marginally improving a project may be better used exploring other valuable LLM use cases in your organization.
+
+Embrace Multimodality
+: Now that LLMs can natively handle non-textual sources of information such as images and audio files, it is both simpler and more effective to process the input documents as they are rather than trying to create a purely textual representation of their content.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+You May Also Like
+
+Explore the Blog
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

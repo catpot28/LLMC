@@ -1,0 +1,508 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/graph-analytics/
+page path  : /product/plugins/graph-analytics/
+captured   : 2026-01-21 10:26:41 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_graph-analytics__54b0d068.html.gz
+========================================================================
+
+Plugin: Graph analytics | Dataiku
+
+Plugin: Graph analytics | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Graph analytics
+
+Graph analytics
+
+This plugin provides recipes to create graphs, compute their statistics, find their clusters and visualize them
+
+Plugin Information
+
+Version
+
+1.0.5
+
+Author
+
+Dataiku
+
+Released
+
+2016-06-28
+
+Last updated
+
+2025-02-10
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to:
+
+Create a projected graph from a bipartite graph dataset
+
+Compute common graph features
+
+Run clustering graph algorithms
+
+Visualize graphs in custom charts
+
+How To Use
+
+We will explain the different plugin components using a dataset of movies and their actors as example.
+
+Using the
+Projected graph
+recipe, we will first convert this dataset into a graph dataset that contains pairs of actors that played in movies together.
+
+We will use the
+Graph clustering
+recipe to assign actors to different clusters based on some selected graph clustering algorithms.
+
+Then, the
+Graph features
+recipe will compute for each actor some common graph features such as pagerank, degree, eigenvector centrality, etc … .
+
+Finally, we will be able to visualize the output of these recipes in a
+Graph chart
+in order to get some insights about the graph.
+
+Here are the first rows of the Movies and Actors dataset:
+
+Movies and actors dataset
+
+Create a projected graph from a bipartite graph
+
+Using this recipe we can convert this dataset into a graph of actors. Two actors are connected if they played in the same movie.
+
+Projected graph recipe form
+
+The output of this recipe is a dataset of pairs of actors. Because
+Weighted graph
+has been selected, the extra column
+weight
+is the number of movies in which the two actors played together.
+
+Projected graph of actors
+
+Graph clustering
+
+This recipe uses the iGraph library to compute clustering algorithms from a dataset of relations.
+
+You need to select the
+Source
+and
+Target
+columns of your input dataset that are linked together (
+Actors_1
+and
+Actors_2
+).
+
+This will create edges between actors in the same row. Here the graph is not directed because the order between Source and Target is irrelevant.
+
+We can select the
+weight
+column to create a weighted graph.
+
+There are two options for the
+Output Type
+:
+
+Dataset of edges
+to keep the same dataset structure: one row per edge and additional columns with the features of both the source and target nodes.
+
+Dataset of nodes
+to only keep information about the nodes (the edges are lost): one row per node and its features.
+
+Graph clustering recipe
+
+For each clustering algorithm selected, nodes are assigned their cluster id.
+
+Each row contains the clustering values of both the source and target nodes (
+fastgreedy_source
+are the cluster values computed by the
+fastgreedy
+algorithm corresponding to the source column).
+
+Graph clustering output
+
+Graph features
+
+This recipe works exactly like the
+Graph clustering
+recipe but compute different types of graph features.
+
+Graph features recipe
+
+Graph chart
+
+We can visualize the dataset as a graph using the custom chart of the plugin (in
+Charts
+
+>
+
+Other > Graph chart
+):
+
+You need to drag and drop the
+Source
+and
+Target
+columns and select a maximum number of nodes to be displayed.
+
+You can decide whether you want directed edges (edges with arrows).
+
+You can also use the filters on the left (here we choose to display only edges with a weight higher than one):
+
+Basic chart
+
+You can also zoom in to see more information about the nodes.
+
+Basic graph zoom
+
+By selecting
+Show advanced options
+you will be able to customise the graph display (node color, node size, edge width).
+
+For example, you can use the graph clustering values to set the nodes colors: nodes with the same values (in the same cluster) will have the same color.
+
+You can also set the nodes sizes by selecting numerical columns: the higher the value, the bigger the node.
+
+Customised graph chart
+
+When you zoom in, you can see the nodes labels (and if you hover a node or an edge, it will display more information about the attributes used to set the color, size or width).
+
+Customised graph chart zoom
+
+Finally, double clicking on a node will highlight only its neighbours.
+
+It’s now your turn to customise your graph and share it in a dashboard to other users !
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Graph analytics.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the Data Sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,147 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/announcements/distillable-models-and-synthetic-data-pipelines-with-nemo-data-designer
+page path  : /announcements/distillable-models-and-synthetic-data-pipelines-with-nemo-data-designer
+captured   : 2026-05-21 13:31:15 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_announcements_distillable-models-and-synthetic-data-pipelines-with-nemo-data-designer__1047e1df.html.gz
+========================================================================
+
+Distillable Models and Synthetic Data Pipelines with NeMo Data Designer
+
+Distillable Models and Synthetic Data Pipelines with NeMo Data Designer
+Skip to content
+OpenRouter
+/
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Distillable Models and Synthetic Data Pipelines with NeMo Data Designer
+Shashank Goyal
+·
+
+12/24/2025
+As AI systems move towards customization, the next challenge emerges:
+How do you efficiently create specialized models tailored to your domain, while staying compliant with licensing and data-usage constraints?
+
+Today, we’re introducing two pieces that fit together to solve that problem:
+
+Distillable Models on OpenRouter
+(opens in new tab)
+
+A reference
+synthetic-data workflow
+(opens in new tab)
+built with NVIDIA
+NeMo Data Designer
+(opens in new tab)
+
+Distillable Models on OpenRouter
+
+We now explicitly track Distillable Models available on OpenRouter. These are models whose licenses allow generating synthetic training data.
+
+License metadata is collected directly from model labs and providers, so developers don’t have to interpret terms themselves.
+
+Now you can:
+
+Filter for
+distillable models
+(opens in new tab)
+on the Models page
+
+Enforce compliance at runtime using the
+enforce_distillable_text
+(opens in new tab)
+request parameter
+When enabled, OpenRouter guarantees that all outputs come from models whose licenses permit reuse for training and distillation.
+
+NVIDIA NeMo Data Designer
+
+NVIDIA recently launched NeMo Data Designer, an
+open-source
+(opens in new tab)
+framework for programmatically generating large, high-quality datasets tailored to specific domains. Instead of one-off prompt scripts, it lets you define data generators as code.
+
+It supports:
+
+Instruction and task-oriented datasets
+
+Question–answer pairs
+
+Structured reasoning traces
+
+Multi-step agentic workflows
+
+Domain-specific schemas and constraints
+
+OpenRouter and NeMo Data Designer
+
+Using OpenRouter and NeMo Data Designer together enables teams to generate large volumes of synthetic data with clear, enforceable license guarantees, distill large reasoning models into smaller task-optimized variants, and significantly reduce inference costs without sacrificing accuracy. This approach supports repeatable, production-ready specialization workflows built entirely on open tooling.
+
+NVIDIA has also launched a few base models in the
+Nemotron
+(opens in new tab)
+series, including
+Nemotron 3 Nano
+(opens in new tab)
+, that are extremely well suited for generating synthetic data.
+
+Getting Started
+
+If you want to see how distillable endpoints and NeMo Data Designer work together in practice, the
+notebook
+(opens in new tab)
+is the best place to start.
+
+The notebook walks you through:
+
+Selecting distillable models via OpenRouter
+
+Generating structured synthetic data with NeMo Data Designer
+
+Preparing the dataset for distillation and fine-tuning
+
+You can also check out the OpenRouter
+distillation guide
+(opens in new tab)
+and more docs about NeMo Data Designer
+here
+(opens in new tab)
+.
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube

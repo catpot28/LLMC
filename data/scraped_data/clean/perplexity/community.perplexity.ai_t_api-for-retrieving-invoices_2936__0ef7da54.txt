@@ -1,0 +1,162 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/api-for-retrieving-invoices/2936
+page path  : /t/api-for-retrieving-invoices/2936
+captured   : 2026-01-21 22:44:17 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_api-for-retrieving-invoices_2936__0ef7da54.html.gz
+========================================================================
+
+API for retrieving invoices - General - Perplexity API Platform Forum
+
+API for retrieving invoices - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+API for retrieving invoices
+
+General
+
+search-api
+
+Amit_Bar
+
+December 4, 2025, 8:34am
+
+1
+
+Feature Request
+
+Add an API to retrieve billing invoices programmatically.
+
+Problem Statement
+
+Invoices are currently only accessible through the web dashboard or email. This prevents automation of accounting workflows, monthly reconciliation, and integration with internal finance systems. Manual downloads are slow, error-prone, and don’t scale.
+
+Proposed Solution
+
+Introduce a
+Billing / Invoices API
+with the ability to:
+
+List invoices
+(
+GET /v1/billing/invoices
+) with filters (date range, status).
+
+Retrieve a single invoice
+(
+GET /v1/billing/invoices/{invoice_id}
+).
+
+Download invoice PDFs
+via direct or pre-signed URLs.
+
+Enforce proper permissions (e.g.,
+billing.read
+scope).
+
+Example use case:
+
+A monthly automated job fetches all invoices, downloads PDFs, and syncs them to internal accounting tools.
+
+API Impact
+
+Affects the
+billing layer
+, not model APIs.
+
+Requires new endpoints and possibly a new auth scope (
+billing.read
+).
+
+No breaking changes to existing APIs.
+
+Alternatives Considered
+
+Manual dashboard downloads (slow, error-prone).
+
+Email parsing (fragile).
+
+Browser automation/scraping (insecure and brittle).
+
+None provides a reliable programmatic solution.
+
+Additional Context
+
+This would greatly improve financial automation for teams using usage-based billing.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Cost Information Now Included in API Response JSON!
+
+Announcements
+
+0
+
+202
+
+August 1, 2025
+
+Search API pricing clarity
+
+General
+
+search-api
+
+0
+
+39
+
+November 25, 2025
+
+About the Bug Reports category
+
+Bug Reports
+
+0
+
+139
+
+May 14, 2025
+
+API token usage reports and billing
+
+General
+
+1
+
+158
+
+May 15, 2025
+
+Perplexity Pro Bonus for the API is set to zero
+
+General
+
+1
+
+124
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

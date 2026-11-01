@@ -1,0 +1,685 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/new-datarobot-and-snowflake-integrations-seamless-data-prep-model-deployment-and-monitoring/
+page path  : /blog/new-datarobot-and-snowflake-integrations-seamless-data-prep-model-deployment-and-monitoring/
+captured   : 2026-04-19 17:27:52 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_blog_new-datarobot-and-snowflake-integrations-seamless-data-prep-model-deployment-and-monitoring__59113ea0.html.gz
+========================================================================
+
+New DataRobot and Snowflake Integrations: Seamless Data Prep, Model Deployment, and Monitoring | DataRobot Blog
+
+New DataRobot and Snowflake Integrations: Seamless Data Prep, Model Deployment, and Monitoring | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+New DataRobot and Snowflake Integrations: Seamless Data Prep, Model Deployment, and Monitoring
+
+Data scientists run experiments. They iterate. They experiment again. They generate insights that drive business decisions. They work with partners in IT to harden ML use cases into production systems. To work effectively, data scientists need agility in the form of access to enterprise data, streamlined tooling, and infrastructure that just works. Agility and enterprise security, compliance, and governance are often at odds. This tension results in more friction for data scientists, more headaches for IT, and missed opportunities for businesses to maximize their investments in data and
+AI platforms
+.
+
+Resolving this tension and helping you make the most of your current ecosystem investments is core to the DataRobot
+AI Platform
+. The DataRobot team has been working hard on new integrations that make data scientists more agile and meet the needs of enterprise IT, starting with Snowflake. In our 9.0 release, we’ve made it easy for you to rapidly prepare data, engineer new features and subsequently automate model deployment and monitoring into your Snowflake data landscape, all with limited data movement. We’ve tightened the loop between ML data prep, experimentation and testing all the way through to putting models into production. Now data scientists can be agile across the machine learning life cycle with the benefit of Snowflake’s scale, security, and governance.
+
+Why are we focusing on this? Because the current ML lifecycle process is broken. On average, 54% of AI projects make it from pilot to production. Hence, nearly half of AI projects fail. There are a couple of reasons for this.
+
+First, being able to experiment long enough to identify meaningful patterns and drivers of change is difficult. The prototyping loop, particularly the ML data prep for each new experiment, is tedious at best. It’s difficult for data scientists to securely connect to, browse and preview, and prepare data for ML models particularly when data is spread across multiple tables. From there, every time you run a new experiment, you’re back to prepping the data again. And when you do find a signal and have built a great model, it’s difficult to put those ML models into production.
+
+Models that do make it into production require time-consuming management through monitoring and replacement to maintain prediction quality. A lack of integrated tooling along the entire process not only slows down data scientist productivity, but it increases the total cost of ownership as teams have to stitch together tooling to get through this process. The DataRobot
+AI Platform
+has been focused on making the entire ML lifecycle seamless, and today we’re doing even more with our new Snowflake integration.
+
+Secure, Seamless, and Scalable ML Data Preparation and Experimentation
+
+Now DataRobot and Snowflake customers can maximize their return on investment in AI and their cloud data platform. You can seamlessly and securely connect to Snowflake with support for External OAuth authentication in addition to basic authentication. DataRobot secure OAuth configuration sharing allows IT administrators to configure and manage access to Snowflake.
+
+DataRobot will automatically inherit access controls, so you can focus on creating value-driven AI, and IT can streamline their backlog.
+
+With our new integration, you can quickly browse and preview data across the Snowflake landscape to identify the data you need for your machine learning use case. Automated data preparation and well-defined APIs allow you to quickly frame business problems as training datasets. The push-down integration minimizes data movement and allows you to leverage Snowflake for secure and scalable data preparation, and as a feature engineering engine so you don’t have to worry about compute resources, or wait on processes to complete. Now you can take full advantage of the scale and elasticity of your Snowflake instance.
+
+With our DataRobot hosted notebooks, you can leverage Snowpark for Python alongside the DataRobot Python Client to quickly connect to Snowflake, explore, prepare, and create machine learning experiments with your Snowflake data. You can leverage the two platforms in the way that make the most sense for you – leveraging Snowpark and the DataRobot developer framework that has native support for Python, Java, and Scala. Because this integration is native to the DataRobot AI Platform, you get your time back with one frictionless experience.
+
+One-Click Model Deployment and Monitoring in Snowflake
+
+Once trained models are ready to be deployed, you can operationalize them in Snowflake with a single click. Supported models can be deployed directly into Snowflake as a Java UDF by DataRobot. This functionality includes being able to deploy models, built outside of DataRobot, in Snowflake. This means you can bring a model directly into the governed runtime of Snowflake, allowing businesses to make accurate predictions in-database on sensitive data at scale, and without the fuss of configuration. One-click model deployment also gives ML practitioners the flexibility to use normal queries or more advanced features like Stored Procedures from within Snowflake to read scoring data, score data, and write predictions.
+
+Along with one-click model deployment come more robust monitoring capabilities, allowing for ongoing monitoring of not just deployment service health, but also drift and accuracy. Model replacement is made easy with retraining and deployment workflows to ensure enterprise-grade reliability of production machine learning on Snowflake.
+
+Snowflake and DataRobot: Combining Data and AI for Business Results
+
+The new Snowflake and DataRobot integration provides organizations a unique and scalable enterprise platform for data and AI driven business results. We shrunk the ML cycle time, and made it easy for you to experiment more, prepare datasets and build ML models fast, and then get those models out into production to drive value even faster.
+
+Demo
+
+Book a demo with our experts
+
+Learn how your team can develop, deliver, and govern AI apps and AI agents with DataRobot.
+
+1
+Gartner®, Gartner Survey Analysis: The Most Successful AI Implementations Require Discipline, not Ph.D.s, Erick Brethenoux, Anthony Mullen, Published 26 August 2022
+
+Related posts
+
+See other posts in AI Partners
+
+Blog
+
+DataRobot and Nutanix partner to deliver turnkey AI for on-premises deployments
+
+DataRobot and Nutanix deliver turnkey AI for on-premises deployments.
+
+Read More
+
+August 23, 2024
+
+|
+3 min read
+
+Blog
+
+Solving generative AI challenges with Google Cloud and DataRobot
+
+See how teams can harness Google Cloud and the DataRobot AI Platform to build a genAI stack that overcomes common generative AI challenges.
+
+Read More
+
+August 20, 2024
+
+|
+5 min read
+
+Authors
+
+by
+
+Kian Kamyab
+
+March 16, 2023
+
+|
+4 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Leaders
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+April 13, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Leaders
+
+Why enterprise AI ROI starts with observability
+
+April 10, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Leaders
+
+Best agentic AI platforms: Why unified platforms win
+
+April 8, 2026
+
+|
+10 min read
+
+Read More
+
+Related posts
+
+See other posts in AI Partners
+
+Blog
+
+DataRobot and Nutanix partner to deliver turnkey AI for on-premises deployments
+
+DataRobot and Nutanix deliver turnkey AI for on-premises deployments.
+
+Read More
+
+August 23, 2024
+
+|
+3 min read
+
+Blog
+
+Solving generative AI challenges with Google Cloud and DataRobot
+
+See how teams can harness Google Cloud and the DataRobot AI Platform to build a genAI stack that overcomes common generative AI challenges.
+
+Read More
+
+August 20, 2024
+
+|
+5 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

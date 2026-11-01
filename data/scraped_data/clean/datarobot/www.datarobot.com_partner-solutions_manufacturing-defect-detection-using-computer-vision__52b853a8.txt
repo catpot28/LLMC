@@ -1,0 +1,682 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/partner-solutions/manufacturing-defect-detection-using-computer-vision/
+page path  : /partner-solutions/manufacturing-defect-detection-using-computer-vision/
+captured   : 2026-04-19 18:15:55 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_partner-solutions_manufacturing-defect-detection-using-computer-vision__52b853a8.html.gz
+========================================================================
+
+Manufacturing Defect Detection Using Computer Vision | DataRobot
+
+Manufacturing Defect Detection Using Computer Vision | DataRobot
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Partners
+
+Partner Solutions
+
+Manufacturing Defect Detection Using Computer Vision
+
+Manufacturing Defect Detection Using Computer Vision
+
+Use Object Detection techniques to quickly identify and locate product flaws.
+
+Get Started Now
+
+Free Trial
+
+Enhanced Product Quality and Reliability
+
+Employing advanced machine learning for defect detection ensures higher-quality products, meets industry standards, and enhances overall reliability.
+
+Operational Efficiency and Cost Reduction
+
+Automating defect identification in industrial processing with computer vision optimizes efficiency, reduces production costs, and enables more effective resource allocation.
+
+Competitive Edge through Innovation
+
+Adopting machine learning-powered solutions streamlines development, positioning manufacturers as innovators with a competitive edge in delivering top-notch products for wide-ranging markets.
+
+How it Works
+
+Key Deliverables
+
+About the Partner
+
+Solution Diagram
+
+Success Story
+
+How It Works
+
+In this solution, we leverage computer vision to identify product defects in hot-rolled steel plates, widely used in construction and agriculture. Using an object detection model powered by machine learning, we achieve precise and efficient detection and classification of prevalent defects like scratches.
+
+Traditionally, the visual inspection of steel plates is time-consuming and potentially unreliable. Our approach automates the detection process, enhancing accuracy and reducing human effort and error.
+
+This solution is split into two phases, with model training contained in Phase 1 and model deployment with DataRobot detailed in Phase 2.
+
+Phase 1
+uses a dataset containing images of steel plates with different defects to fine-tune a pre-trained Faster R-CNN model, an incredibly powerful object detection machine learning architecture, to classify and locate scratches.
+
+How Faster RCNN works
+
+Phase 2
+uses the DataRobot platform to host a non-DataRobot, pre-trained object detection model to leverage a host of ML Production features such as model monitoring with custom metrics. The specific code applied here assumes the input/output schema of the resulting FasterR-CNN model from Phase 1 but any object detection model can work with the proper data handling updates.
+
+The output:
+a highly accurate and robust predictive model capable of detecting and classifying any sized scratch present in steel plates, with a DataRobot deployment monitoring model health and logging metrics.
+
+The model detects a scratch
+
+Key Deliverables
+
+AI-based defect detection solution
+
+Demonstration of data acquirement and preprocessing
+
+Custom training and validation loops for fine-tuning the model
+
+Significantly automated defect detection process
+
+Model observability in production with custom metrics to evaluate performance
+
+Practical application insights to other manufacturing industries
+
+About the Partner
+
+KUNGFU.AI is a management consulting and engineering firm focused exclusively on artificial intelligence. With a deep understanding of key contributors to AI outcomes, including data, designers, users, and leaders, KUNGFU.AI tailors strategies that propel businesses forward.
+
+The team, comprising experts in AI, machine learning, and software engineering, stays at the forefront of research to deliver cutting-edge solutions. By truly understanding client challenges and environments, KUNGFU.AI iteratively crafts solutions, optimizing AI operations at every stage. Their commitment extends beyond implementation to repeatability, reliability, and alignment with corporate objectives, empowering organizations to redirect resources toward innovation and sustainable advantage.
+
+Whether clients are initiating a data strategy or deploying production AI models, KUNGFU.AI ensures maximum return on investment in an AI-driven future.
+
+Solution Architecture
+
+Success Story
+
+KUNGFU.AI designed and developed a computer vision detection and pricing system capable of detecting dents of various sizes and magnitudes to calculate price estimates for repairs.
+
+The client, an automotive services company, sought innovative ways to automate service delivery and expand offerings through tech-enabled solutions. Our objective was to create a capability enabling customers to send images for automated damage inspection and cost estimates for common car repairs.
+
+This capability provides the client with a new source of revenue while reducing delivery overhead. It has initiated channel distribution alliances with third-party auto-traders and attributed to valuation expansion for acquisition by Repairify.
+
+Get Started with Free Trial
+
+Experience new features and capabilities previously only available in our full AI Platform product.
+
+Get Started Now
+
+Company
+
+www.kungfu.ai
+
+Industry
+
+Manufacturing
+
+Related AI Accelerator
+
+Steel Plate Defect Object Detection
+
+In this notebook, we are going to focus on detecting and classifying product defects using state of the art computer vision systems.
+
+View Accelerator
+
+Explore the Most Popular Resources
+
+See all Resources
+
+Data Sheet
+
+DataRobot Agent Workforce Platform for Fed
+
+Download the PDF
+
+Ebook
+
+The Unmet AI Needs Survey 2026
+
+DataRobot surveyed 413 AI practitioners and leaders across highly regulated industries to map the full agentic AI lifecycle — where organizations are investing, where they're stalling, and what it will take to close the gap. This report surfaces five critical unmet needs standing between today's pilots and a production-ready agent workforce.
+
+Read More
+
+Ebook
+
+The agentic AI enterprise playbook
+
+Read More
+
+Data Sheet
+
+DataRobot Agent Workforce Platform for Fed
+
+Download the PDF
+
+Ebook
+
+The Unmet AI Needs Survey 2026
+
+DataRobot surveyed 413 AI practitioners and leaders across highly regulated industries to map the full agentic AI lifecycle — where organizations are investing, where they're stalling, and what it will take to close the gap. This report surfaces five critical unmet needs standing between today's pilots and a production-ready agent workforce.
+
+Read More
+
+Ebook
+
+The agentic AI enterprise playbook
+
+Read More
+
+See all Resources
+
+Take AI From Vision to Value
+
+See how a value-driven approach to AI can accelerate time to impact.
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

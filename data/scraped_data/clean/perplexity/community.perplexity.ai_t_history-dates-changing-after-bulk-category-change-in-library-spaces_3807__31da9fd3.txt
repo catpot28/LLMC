@@ -1,0 +1,169 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/history-dates-changing-after-bulk-category-change-in-library-spaces/3807
+page path  : /t/history-dates-changing-after-bulk-category-change-in-library-spaces/3807
+captured   : 2026-06-16 12:18:34 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_history-dates-changing-after-bulk-category-change-in-library-spaces_3807__31da9fd3.html.gz
+========================================================================
+
+History dates changing after bulk category change in Library/Spaces - Bug Reports - Perplexity API Platform Forum
+
+History dates changing after bulk category change in Library/Spaces - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+History dates changing after bulk category change in Library/Spaces
+
+Bug Reports
+
+chat-completions
+
+Christopher_Smerald
+
+February 2, 2026, 3:43pm
+
+1
+
+Describe the Bug
+
+I just categorized about a years worth of searches and the old (actual) search date was overwritten with todays date.
+
+Expected Behavior
+
+I would have expected searches that were not amended to have their date unchanged.
+
+Actual Behavior
+
+dates were overwritten without new searches being made on old threads
+
+Steps to Reproduce
+
+take an item in your history (library)
+
+categorize it or change the categorization
+
+watch the date change
+
+API Request & Response (if applicable)
+
+API Version: Not using API (using Perplexity web app only)
+
+SDK (if applicable): None
+
+Operating System: Windows 11
+
+Logs or Screenshots (if applicable)
+
+Add any logs or screenshots that can help debug the issue.
+
+Additional Context
+
+dates should be part of all answers to aid debugging and data management. you are generally very weak on database management capability.
+
+Kesku
+
+April 7, 2026, 10:55pm
+
+3
+
+Hey — this forum is specifically for the Perplexity API (Sonar models, Search API, Agent API, SDKs, billing/credits). For issues with the Perplexity consumer product (web app, mobile, Spaces, Library), the best route is the in-app help or support at
+support.perplexity.ai
+.
+
+Closing this thread, but feel free to open a new one if you have an API-related question.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+It would help users find their previous searches in the library to provide a visible date for every search
+
+General
+
+sonar-deep-research
+
+,
+
+chat-completions
+
+0
+
+73
+
+August 25, 2025
+
+Provide a calendar date to be associated with each search
+
+Feature Requests
+
+sonar-pro
+
+1
+
+89
+
+August 25, 2025
+
+Search before date parameter
+
+General
+
+sonar-deep-research
+
+1
+
+75
+
+November 4, 2025
+
+Search_before_date and Search_after_date filters not working
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+search
+
+,
+
+python-sdk
+
+0
+
+65
+
+December 15, 2025
+
+Feature Request: Enable Renaming of Trheads
+
+Feature Requests
+
+chat-completions
+
+0
+
+104
+
+October 24, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

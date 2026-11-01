@@ -1,0 +1,175 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/the-real-cost-of-waiting-what-legacyerp-security-cant-do-anymore
+page path  : /blogs/the-real-cost-of-waiting-what-legacyerp-security-cant-do-anymore
+captured   : 2026-05-18 19:44:58 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/sap/www.sap.com_blogs_the-real-cost-of-waiting-what-legacyerp-security-cant-do-anymore__a3142591.html.gz
+========================================================================
+
+The Real Cost of Waiting: What Legacy ERP Security Can’t Do Anymore | SAP
+
+The Real Cost of Waiting: What Legacy ERP Security Can’t Do Anymore | SAP
+
+media-blend
+
+text-black
+
+The real cost of waiting: What legacy ERP security can’t do anymore
+
+What worked yesterday may not be enough tomorrow — and patching only goes so far.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+The threat landscape has fundamentally changed—and legacy architectures weren’t built for what’s coming next.
+
+What’s changed is not just the volume of attacks, but their nature. AI-driven capabilities are beginning to automate vulnerability discovery, exploit generation, and attack execution—compressing what once took weeks into hours, and enabling attackers to operate at scale with increasing precision.
+
+This marks a structural shift: attacks are no longer limited by human speed or expertise, while most enterprise systems remain designed for a fundamentally slower threat model.
+
+How can companies protect their business-critical applications as AI acts as a force multiplier for cyberattacks?
+
+The environment your ERP was built for no longer exists
+
+Legacy ERP systems were built for a very different world—one with more isolated networks, slower change cycles, and far fewer external dependencies. That world is gone.
+
+It’s not that these systems suddenly became unreliable. It’s that everything around them changed. Attacks move faster, systems are more interconnected, regulations are tighter, and the people who know how to run and secure these environments are becoming harder to find.
+
+At the same time, a new kind of risk is emerging. We’re starting to see systems that can automatically find, combine, and exploit vulnerabilities across entire application landscapes. That changes the game quite a bit.
+
+Even with good maintenance, it’s harder to keep up. Patching takes time, testing takes time, and in many cases the business can’t afford long or frequent downtime.
+
+The data reflects this:
+
+45.4% of discovered vulnerabilities
+remain unpatched after 12 months
+(Edgescan, 2025)
+
+Of those,
+17.4% are high or critical
+
+Two out of three organizations
+lack the skills needed
+to defend against sophisticated attacks (World Economic Forum, 2025)
+
+That last point is easy to underestimate. The people who understand these older systems are gradually moving on, and replacing that expertise isn’t simple. Over time, this leads to slower fixes, higher costs, and a bit more exposure than most teams are comfortable with.
+
+The maintenance contract question
+
+For some organizations, extending a maintenance contract for Legacy ERP becomes the immediate way to maintain business continuity—but it should not be mistaken for a long-term security strategy.
+
+For example, prolonged reliance on reactive patching can gradually become a constraint, particularly if it delays modernization and the shift toward continuous protection models. Organizations may also overestimate the depth of their internal expertise in securing complex legacy systems and outdated open-source dependencies.
+
+Maintenance extensions are not inherently wrong—but they need to be evaluated with a clear understanding of what they do and don’t cover.
+
+What legacy architectures structurally can’t do
+
+This isn’t about team capability. It’s about architectural limits.
+
+Open-source blind spots.
+Older systems weren’t designed to generate or maintain software bills of materials (SBOMs)—essentially a complete inventory of all software components and dependencies inside a system. Without that visibility, it becomes difficult to know what is actually running, trace vulnerabilities, or comply with regulations like the EU Cyber Resilience Act and NIS2 Directive. Many embedded open-source components have reached end of life and no longer receive security fixes—leaving a baseline level of unmitigated exposure.
+
+Remediation latency.
+On-premises environments typically require 90 to 150 days to remediate critical vulnerabilities. In a landscape where exposures can be identified and weaponized in near real time, that delay becomes a structural risk—not just an operational constraint.
+A significant share of successful cyberattacks exploit vulnerabilities for which patches already exist.
+
+Fixed cryptographic assumptions.
+Encryption (cryptography)—the methods used to protect data and communications—relies on mathematical problems that are difficult for today’s computers to solve. However, quantum computing is expected to change this by making some of these problems significantly easier to break in the future.
+
+As new, “quantum-resistant” encryption standards emerge, systems built on fixed cryptographic models are tied to older methods and can only adapt through disruptive reengineering—rather than simple updates. Modern ERPs, by contrast, are designed to evolve encryption standards over time without major disruption.
+
+What’s structurally different about cloud security
+
+Skepticism is warranted—so let’s stay specific.
+
+From reactive to proactive.
+Modern cloud environments change the security paradigm. In a landscape where threats can be generated, tested, and executed at machine speed, automated scanning, patching, and AI-driven anomaly detection are no longer enhancements—they are baseline requirements.
+Cloud providers commonly close critical issues within hours or days, compared to 90–150 days on-premises.
+
+Security that scales.
+Security updates, telemetry, and compliance mechanisms deployed across thousands of systems simultaneously offer a level of resilience and visibility that is difficult to replicate in individually managed environments.
+
+Transparency by design.
+Modern cloud infrastructure can automatically generate and update SBOMs, continuously scan dependencies, and provide the audit trail that regulators increasingly require.
+
+Crypto-agility.
+Encryption standards can be updated seamlessly as new requirements emerge—without disruptive reengineering.
+
+This is a leadership conversation, not just a technical one
+
+If your technology stack is aging and increasingly difficult to secure, this is not just a technical issue—it’s a leadership accountability question.
+
+Modernization is not simply a system upgrade—it’s a strategic investment in security, compliance, and long-term resilience. And the cost of delay compounds in ways that don’t appear on a license renewal invoice: growing technical debt, widening compliance gaps, shrinking talent pools, and accumulating unmitigated exposure.
+
+A structured path forward
+
+If the risk calculus has shifted, the question becomes how to modernize—not whether. And that requires a structured, governed approach.
+
+Evaluate current systems.
+Identify systems with the highest risk or modernization potential. Assess technical debt, dependencies, and compliance readiness.
+
+Consider a pilot.
+Migrate selected workloads to validate integration, performance, and security controls before scaling.
+
+Clarify responsibilities.
+Understanding how
+responsibilities for infrastructure, patching, and compliance
+are shared between provider and customer reduces operational blind spots.
+
+Focus on optimization.
+Post-migration, capabilities like automated threat detection, patching, cost management, and continuous compliance validation turn cybersecurity into an ongoing process.
+
+RISE with SAP
+is the journey to move ERP to the cloud, consolidating infrastructure, platform, and application management under a single SLA-driven framework—with SAP managing security across all layers and customers focusing on the security of the business processes .
+
+Furthermore, organizations that moved to SAP Cloud ERP Private Edition experienced up to
+89% faster cyberthreat detection
+(IDC, 2025), helping reduce operational risk during transformation.
+
+The bottom line
+
+Maintenance contracts will continue to support legacy environments. But the highest levels of protection, agility, and resilience require architectures built on continuous, secure-by-design principles.
+
+The pressure is building. We're entering a period where AI systems can autonomously map attack surfaces, chain vulnerabilities together, and execute exploits at a speed and scale no human team can match. Legacy architectures weren't designed for an adversary that doesn't sleep, doesn't slow down, and gets more capable every few months. That doesn't just raise the bar — it changes the game entirely.
+
+The question isn't whether to modernize. It's whether the accumulating cost of waiting is a choice you're making deliberately — or one you simply haven't measured yet.
+
+Want the full analysis?
+Download the brochure,
+The security risk of legacy on-premises systems and the advantage of managed cloud services
+, for the complete data, industry examples, and transition framework.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+section-grid-empty-inner-spacing
+
+false
+
+What’s really at risk?
+
+Learn where legacy ERP falls short and how modern cloud approaches strengthen protection.
+
+Learn more
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

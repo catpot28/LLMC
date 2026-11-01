@@ -1,0 +1,127 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/sdk
+page path  : /sdk
+captured   : 2026-05-12 06:16:12 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_sdk__75d1699e.html.gz
+========================================================================
+
+The Model-Agnostic Agent SDK | OpenRouter
+
+The Model-Agnostic Agent SDK | OpenRouter
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+The Model-Agnostic Agent SDK
+Agent SDK for TypeScript and Python with
+400+
+models. Streaming, tool calling, and multi-turn agent workflows built in.
+Get API Key
+View Docs
+TypeScript
+Python
+Go
+$
+npm i @openrouter/agent
+Flexible Results
+Stream, extract, and process the same response concurrently. No need to choose upfront.
+Built-In Streaming
+Streaming works out of the box. Custom events and transforms without the boilerplate.
+Isolated Tools
+Tools run separately from model calls. Clean boundaries, no tangled logic.
+Agentic Workflows
+Tools can modify the next request. Build complex agents as small, testable pieces.
+Scales Linearly
+Lightweight and modular. Small API that grows with you, no rewrites required.
+Drop-In Ready
+Works with existing AI SDKs. Migrate incrementally with full type safety.
+Simple, Powerful API
+Get started in minutes. TypeScript and Python SDKs available now.
+Basic
+Streaming
+Tool Calling
+Agent SDK for TypeScript
+Build AI agents with type-safe tools, multi-turn execution, and stop conditions. Install
+
+@openrouter/agent
+
+and start building autonomous workflows.
+callModel API
+One function to call any model. Get text, stream responses, or extract structured data from a single call.
+Type-Safe Tools
+Define tools with Zod schemas and automatic execution. Full TypeScript inference for inputs, outputs, and events.
+Multi-Turn Agents
+Build agentic loops with automatic tool execution. Tools can modify the next request for complex workflows.
+Stop Conditions
+Control agent execution with built-in helpers: stop by step count, tool calls, cost limits, or custom logic.
+Tool Approval
+Add human-in-the-loop approval gates before tool execution for safe, controlled agent behavior.
+CLI Integration
+Works with AI coding assistants like Claude Code, Cursor, and Copilot via installable agent skills.
+Build an Agent in Minutes
+Agent SDK Docs
+Migration Guide
+Chat Completions with the Client SDKs
+For chat completion primitives without the agent toolkit, install
+
+@openrouter/sdk
+
+directly. Auto-generated from the OpenAPI spec with full type safety.
+npm i @openrouter/sdk
+Client SDKs Docs
+1
+Install
+Add the SDK to your project. TypeScript and Python available today.
+2
+Call Any Model
+Access
+400+
+models through one interface. Stream, extract, or batch results.
+3
+Ship & Scale
+Go from prototype to production. The same API works at any scale.
+Start Building Today
+Get your API key and ship your first AI feature in minutes.
+Get API Key
+View Docs

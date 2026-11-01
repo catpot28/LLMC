@@ -1,0 +1,718 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/four-steps-to-take-after-training-your-model-realizing-the-value-of-machine-learning/
+page path  : /blog/four-steps-to-take-after-training-your-model-realizing-the-value-of-machine-learning/
+captured   : 2026-06-15 02:41:41 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_four-steps-to-take-after-training-your-model-realizing-the-value-of-machine-learning__7d8d3223.html.gz
+========================================================================
+
+Four Steps to Take After Training Your Model: Realizing the Value of Machine Learning | DataRobot Blog
+
+Four Steps to Take After Training Your Model: Realizing the Value of Machine Learning | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Four Steps to Take After Training Your Model: Realizing the Value of Machine Learning
+
+So, you have successfully trained a machine learning model after choosing the best algorithm and high-quality training data. Time to celebrate, right?
+
+Not quite!
+
+The best machine learning algorithms and models are of no use until you actually apply them to make predictions on future outcomes. Then, you must incorporate those predictions into your decision making. The business value of machine learning is realized only when it alters behavior to produce positive outcomes.
+
+In this blog post, we’ll look at how to derive value from a
+DataRobot
+model that is designed to answer the following question:
+
+“Which patients are more likely to be readmitted to the hospital?”
+
+Properly addressing this question requires you to periodically review new patients from the hospital’s systems, scrub them for quality, make predictions, and feed the results back into the hospital’s systems for driving action.
+
+Training, testing, and fine-tuning your model is the first part. The subsequent four steps are as follows:
+
+1. Deploy the model
+
+Make the model available for predictions. In DataRobot, you do this by creating a deployment. This involves selecting an algorithm (usually the best performing model from the training process). You also specify the training dataset which is used as a baseline to detect model drift.
+
+Deployment
+
+Switch to the “Integrations” tab and make a note of the deployment tokens and keys. You will need them in a later step.
+
+Integrations
+
+2. Predict and decide
+
+The next step is to build a production workflow that processes incoming data and gets predictions for new patients. We do this using
+Trifacta
+.
+
+In Trifacta, create a new flow and import your data. In this case, we’ll load a CSV file containing details of new patients.
+
+Import data
+
+Once imported, you can access the URL path to the file. Copy the URL and insert it into the recipe as shown below.
+
+Add filename
+
+To call the DataRobot API, you need the following information:
+
+API Token
+
+Deployment ID
+
+DataRobot Key
+
+Username
+
+Add a recipe step for UDF (invoke external function) and choose “DatarobotPredict”. Choose the filename column and enter an argument in the form API_TOKEN=api_token,DEPLOYMENT_ID=deployment_id,DATAROBOT_KEY=datarobot_key,USERNAME=username
+
+UDF
+
+The results of the DataRobot API call are returned in JSON format. Now use Trifacta to parse out key pieces of information into their own fields. Use the flatten transformation to create individual rows in the output. Choose the prediction column along with a row identifier.
+
+Parse JSON
+
+Now merge the prediction results with the original data to produce a combined output. This is accomplished by doing an inner join on rowId. If needed, you can perform additional transformations on this data to support analytics.
+
+You can now use the output of this process to drive decision making. In this case, patients with a higher readmission risk may be assigned to a nurse for additional checkups and preventive measures. All decisions and actions should be carefully recorded for later analysis.
+
+Merge Output
+
+After building the flow, you operationalize it using Trifacta. You do this by setting up a recurring schedule to process new patients on a daily basis. This pipeline feeds data back into the hospital’s systems for the next step.
+
+3. Measure
+
+It is critical to measure the accuracy of the predictions, as well as the effectiveness of the decisions taken based on those predictions.
+
+The first part of this measurement can be implemented in DataRobot, which can detect drift in model predictions. The second part is accomplished by further analyzing patient data from the hospital’s systems and analyzing trends in cost and health outcomes. This step is important to determine the ROI of the machine learning initiative in terms of cost savings as well as well-being of patients.
+
+4. Iterate
+
+The process doesn’t end here. To derive continued benefits from your machine learning initiative, you must iterate on your models to address model drift, as well as to incorporate new insights and additional data gained during the journey. Having a tight feedback loop will ensure that the machine learning initiative continues to provide ROI for a long time.
+
+Additional Resources
+
+If you are interested in trying DataRobot with Trifacta, you can request a free trial
+here
+.
+
+The Trifacta recipes and source code used in this post are
+available on Github
+. A video recording of the process is
+available on YouTube
+.
+
+Trial
+
+Try out the DataRobot AI Platform
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Authors
+
+by
+
+Vijay Balasubramaniam
+
+May 2, 2019
+
+|
+3 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build with Cursor and deploy production-ready AI agents on DataRobot
+
+June 12, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

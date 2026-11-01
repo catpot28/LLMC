@@ -1,0 +1,145 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/production-logistics-and-the-new-ot
+page path  : /blogs/production-logistics-and-the-new-ot
+captured   : 2026-02-14 14:46:47 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/sap/www.sap.com_blogs_production-logistics-and-the-new-ot__08d099b9.html.gz
+========================================================================
+
+Production logistics and the new OT | SAP
+
+Production logistics and the new OT | SAP
+
+flex-height
+
+text-black
+
+Production logistics and the new OT
+
+Operational technology is changing fast; new machines roam the shop floor. Time for IT/OT convergence at last. Here’s how.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+As a concept, the idea of merging operational technology (OT), or the systems that control industrial automation processes, with IT is roughly 30 or 40 years old. The now quaint term of art was that information would flow from “shop floor to top floor,” with executives making smart decisions using real-time visibility into key production metrics.
+
+Everyone understood the concept, and everyone understood how powerful it would be. But hardly anyone managed to do it. Unfortunately, the early visionaries had underestimated the vast divide separating the two groups—one that encompassed not only technology but culture, processes and philosophy, and would require a massive operational change to bridge.
+
+Now, in addition to evolving technologies and emerging machines, increasing demand for customization and personalization in manufacturing processes is creating highly complex shop-floor operations that need to be digitalized, automated, and networked. That means the time for keeping IT and OT separate is over.
+
+Orchestrating your production and supply chain to deliver next-level customer experiences simply can’t be done anymore by separate IT and OT functions. As you’ll read, the companies that have succeeded in merging—or at least cross-pollinating—IT and OT have started in
+areas like factory security
+and have not looked back. But these pioneers still don’t have a lot of company. We’ll give you some practical ideas to effectively bridge this all-too-familiar divide in your company.
+
+Never the twain shall meet?
+
+Today’s driver for IT/OT convergence is the emergence of smart machines connected by the Industrial Internet of Things (IIoT)—or in newer terminology, Industrial DataOps software. “Everyone realizes the products are getting smart and that you have to bring together automation technology and information technology to do that,” says Matthew Littlefield, president and research lead at LNS Research. “But the harder stuff is actually the cultural and organizational issues that come up when companies try to bring these groups together.”
+
+The OT side of the house, for example, has often taken the perspective that it runs the business and is therefore supreme, whereas IT is commodity technology whose worth is not easy to measure (and there’s some truth to that last point). OT also tends to view the cost of operating IT, its constant upgrades, and its ceaseless security vulnerabilities with a gimlet eye. On the other hand, IT often brings to the table the belief that it’s exciting and innovative, whereas OT systems, if reliable, are dinosaurs lacking the smarts and flexibility to keep up with changing business demands.
+
+Jim LaBonty, former head of global automation engineering at Pfizer, has talked about how the pharma giant had aimed to open lines of communication between IT and OT as opposed to truly merging the two. “IT and OT personnel don't always have the same goals or mindsets, but they have the ability to collaborate and understand each other enough to be able to make collective decisions,” LaBonty says in a
+Q&A
+published in 2021 by security vendor Claroty. Getting to this place of cooperation and understanding is a journey, and it takes time to get it right. It's not something that can be solved overnight, or even in a year, he adds.
+
+OT, of course, refers to a mélange of shop-floor machines and other industrial equipment, supervisory control and data acquisition (SCADA) systems, industrial human-machine interface (HMI) systems, schedulers, and other computer systems that control an industrial process. Traditionally, these systems were very different from IT systems: they usually had very limited software capabilities, used completely different protocols to communicate, were hard to upgrade, and so on. Therefore, OT was managed by a different group and kept separate from IT.
+
+But new equipment—sensors, robots, collaborative robots(cobots), autonomous forklifts and cleaners, 3D printers, hybrid 3D/CNC (computer numerical control) machines, advanced machine vision systems—is infiltrating the shop floor and modernizing the OT space, production logistics, and the other work processes OT touches. The longtime vision of connecting OT and IT systems has come a long way for some organizations, such as Pfizer, Kohler Co., and yogurt producer
+Chobani
+.
+
+LaBonty notes not to expect a perfect joining of the two distinct types, which have always been rewarded for their distinctly different worldviews. In a McKinsey piece, analysts Michael Chang, Bodo Koerber, and Murat Soganci wrote, “Historically, IT and OT implementations have catered to different problems and therefore evolved into significantly different architectures and protocols.”
+
+Still, the benefits of getting the two groups together in a meaningful way are many: greater automation, increased visibility, higher quality, better decision-making, increased process velocity, and lower costs. But it’s not as simple as buying stuff and putting OT under the CIO on the org chart or having the CIO report to operations.
+
+According to Littlefield, data generated by connected IIoT devices is at the center of IT/OT convergence. Connected devices use sensors to collect real-time data from equipment—data that relates to things like resource consumption or output, temperature, speed, chemical composition, humidity, and errors. The devices then use actuators to control machinery and trigger actions based on changes in the information collected. Since the data has to be stored and distributed using IT resources that directly affect OT processes, these two distinct sectors are converging.
+
+The lack of connection between IT and OT hinders an organization’s ability to grow IIoT investments, directly threatening digital transformation, according to McKinsey. If these disciplines are allowed to continue operating in separate worlds, there will be poor solution definition, deployment, and adoption of the proposed IIoT initiative, tanking the potential return from the get-go.
+
+The crux of the problem? IT/OT convergence is at the heart of digital transformation. Almost every manufacturing-centric customer we work with is pursuing a “smart factory” initiative. To get there, they all must focus on bringing about this IT/OT convergence because that’s what productivity is going to look like in the future.
+
+OT provides essential insight into business context
+
+A likely first step is for IT to get OT involved much earlier in all its projects, because operations knows the business context—the problems being solved. With predictive maintenance, for example, it’s possible to install thousands of sensors on a piece of equipment but still not have the data needed to solve a specific problem. You have to know which are the key components, and that knowledge comes from the OT side of the house. That means a predictive maintenance project has to start from the business context: identifying the key problems and determining whether the requisite data is available to solve them. If not, what steps need to be taken first?
+
+Peggy Gulick, who served as director of digital transformation operations and smart factory at Kohler Co., emphasizes
+in a 2022 article
+the crucial role that operational data plays in digital transformation. “The people in the plant understand where the biggest problems are and where the biggest value comes from,” she says. Once IT has a solid understanding of those problems, it can help craft solutions to use that data to the best effect.
+
+But you can’t simply flip a switch (or share a few meetings) and dissolve the traditional wall between IT and OT, says Littlefield. OT technicians need training in IT processes, and IT technicians need training in OT processes—so that each department understands how their decisions affect the other.
+
+The IT side may have to make an extra effort. In a
+case study
+published by the magazine Food Engineering, Chobani’s Hugh Roddy, senior vice president of global engineering & project management, noted that most CIOs come from the IT side—which means that OT is not executive leadership’s native language. The CIO may need to translate OT requirements and innovations into IT- and business-friendly communications.
+
+Working with SAP customers, we’ve seen companies that do this really well. Sometimes a few individuals have grown through the organization and have spent time on both the OT and IT side of the fence. They discovered that they enjoyed the cross-pollination and asked for more; on their own, whether by a master plan or happenstance, they got cross-trained. “This drives innovation,” Littlefield agrees. For example, smart products equipped with IIoT sensors might enable a new as-a-service business model by capturing the data relevant for billing and automatically generating invoices. (Read
+our recent panel discussion
+for more about innovation in the supply chain.)
+
+Many companies have leadership development programs that bring together people from different parts of the organization and rotate them around, Littlefield notes. Someone might spend six months in HR, six months in supply chain, six months in finance. This is a valuable concept because IT traditionally includes many siloed, specialized tracks that are not cross-functional.
+
+“Some of the leading companies are saying, ‘Actually, we do need our technologists to have business experience and knowledge.’ They are breaking down the silos between corporate and operations, supply chain, and technology and really doing it proactively. We have seen this drive innovation,” says Littlefield. Other organizations create a center of excellence, as recommended by McKinsey, where both IT and OT work on projects that require the perspective of both.
+
+Here are five strategies for building a closer, productive collaboration and understanding between IT and OT, if not a total convergence:
+
+Involve both functions earlier in each other’s projects.
+
+Provide training and exposure for OT people in IT processes and vice versa.
+
+Consider using cybersecurity as a natural starting point for tighter IT/OT collaboration. Attacks on industrial infrastructure have grabbed everyone’s attention, so that’s a natural reason to get more people into the same room.
+
+Create leadership development programs that bring IT and OT people together.
+
+Address the divide head-on with humor and empathy. Try an exercise in which each side role-plays the other.
+
+The OT and IT sides of the house are likely to always have a different take on the world. That’s not only understandable; it’s OK. Gaining an understanding of and respect for the other side lays a foundation for collaboration, paving the way for not only efficient operations but even business innovation.
+
+Shop floor to top floor, indeed.
+
+Supply chain resiliency 101
+
+Everything you need to know about building reliable, responsive supply chains.
+
+Get the guide
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Dive beneath the buzzwords
+
+Editorial
+
+Building the Future Factory: A Special Report
+
+Best Practice Guide
+
+The Sustainable Factory of the Future
+
+Editorial
+
+12 Security Issues to Address as Your Factories Evolve
+
+Business Case
+
+Advanced Manufacturing Skills Workers Will Need
+
+location
+
+sidebar
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

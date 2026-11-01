@@ -1,0 +1,495 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/agent-memory
+page path  : /stories/blog/agent-memory
+captured   : 2026-04-14 05:22:03 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_agent-memory__d6f9597e.html.gz
+========================================================================
+
+Agent memory: the missing layer in enterprise AI systems
+
+Agent memory: the missing layer in enterprise AI systems
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Agent memory: the missing layer in enterprise AI systems
+
+Mar 31, 2026
+
+5 min read
+
+/
+
+Julia Tran
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+Ask most people to describe the memory of a large language model and they'll point to the
+context window
+, the span of text the model can see during a given interaction. That's not wrong, but it's incomplete in a way that matters enormously for enterprise AI.
+The context window is more like working memory in the psychological sense: what's active right now. What LLMs lack by default is anything resembling long-term memory. When a session ends, nothing persists. The next conversation begins from zero.
+
+For consumer applications, a chatbot that helps draft an email or an assistant that answers a one-off question, this limitation is manageable. Users expect to re-explain themselves. The cost of forgetting is low. But enterprise AI workflows are increasingly different in character.
+They involve agents that execute multi-step tasks over hours or days, assistants that interact repeatedly with the same users across weeks and months, and systems that are supposed to get better over time by learning from past outcomes. For these applications, statelessness isn't an inconvenience. It's a fundamental architectural gap.
+
+What forgetting actually costs
+
+It's worth being concrete about what the absence of memory means in practice. Consider an AI-assisted research workflow where an analyst uses an agent to investigate a topic over several sessions.
+
+Without persistent memory, the agent can't recall what sources were already reviewed, what conclusions were reached in previous sessions, or what the analyst's evolving preferences and constraints are. Every session starts cold. The analyst must re-orient the agent, re-establish context, and re-explain what they've already ruled out. The overhead is substantial and the experience is frustrating.
+
+Or consider a customer-facing AI assistant deployed by an enterprise. Without memory, it can't recognize returning customers, can't reference previous interactions, and can't build up a model of a customer's situation over time. It behaves identically on the tenth interaction as on the first. For routine transactional queries this may be acceptable, but for complex, high-value customer relationships, it's a significant liability.
+
+The naive fix, simply appending all past interactions to the current prompt, doesn't scale. Context windows are finite and expensive. A comprehensive history of interactions with a single user or across a long project can easily exceed what any model can process in a single call, and even if it could, the performance degradation from bloated contexts applies here too. More history isn't the same as better memory.
+
+A taxonomy of AI memory
+
+Researchers and practitioners have developed a more nuanced vocabulary for thinking about memory in AI systems, much of it borrowed from cognitive science. The distinctions matter because different types of memory require different architectural solutions.
+
+The temporal categories break down as follows:
+
+Working memory refers to what's active in the current model call, the contents of the context window. This is the only memory that LLMs have natively. Everything else requires external infrastructure.
+
+Short-term memory spans the duration of a session or conversation. Some systems implement this by maintaining a structured conversation buffer that persists across API calls, summarizing as needed to stay within context limits. This is relatively straightforward to implement but evaporates when the session ends.
+
+Long-term memory is the hard problem. It encompasses information that should persist across sessions: facts about users, outcomes of past tasks, knowledge accumulated through repeated interactions, and preferences stated once that shouldn't need repeating.
+
+Cutting across these temporal categories are distinctions between memory types. Episodic memory captures specific past events and interactions. Semantic memory stores factual knowledge not tied to a specific episode, such as user preferences, domain facts, and policy constraints. Procedural memory encodes how to do things: workflows refined through past experience, learned preferences about communication style. Each type requires somewhat different storage and retrieval approaches.
+
+Memory architectures in practice
+
+The most common production approach to long-term memory is vector database retrieval. Past interactions, documents, and facts are encoded as dense vector embeddings and stored in a database that supports approximate nearest-neighbor search.
+
+At query time, the system retrieves the most semantically relevant memories and injects them into the current context. This architecture scales to large memory stores, handles semantic similarity rather than just keyword matching, and can be updated incrementally as new information accumulates.
+
+The limitations are also real. Vector retrieval is probabilistic: It finds what's semantically similar, not necessarily what's logically relevant. It can miss important memories that are phrased differently from the query and surface irrelevant ones that happen to use similar language. The quality of retrieval depends heavily on how memories were encoded and chunked in the first place, decisions that are harder to get right than they appear.
+
+More structured approaches store memory in explicit formats such as knowledge graphs, relational databases, or hierarchical directories that support precise querying. An agent with access to a knowledge graph can navigate explicit relationships between entities rather than relying on fuzzy semantic similarity.
+
+A third approach is periodic summarization: At the end of each session, a model generates a structured summary of what was learned or accomplished, stored as a retrievable artifact. This trades completeness for concision and works well for episodic memory, though it requires careful prompt design to ensure summaries capture the right level of detail.
+
+The governance and infrastructure problem
+
+Memory in enterprise AI isn't just a technical challenge; it's a
+governance
+
+challenge. When AI systems retain information about users, customers, or internal processes across sessions, several questions become unavoidable:
+
+Who can see what an AI remembers about them?
+
+How long is that information retained, and under what conditions can it be deleted?
+
+How do you audit what the AI knew when it made a particular decision?
+
+What controls exist to correct inaccurate or outdated memories?
+
+These aren't hypothetical concerns. Organizations deploying AI in regulated industries, including financial services, healthcare, and legal, face explicit requirements around data handling that apply to AI memory systems just as they apply to any other data store.
+
+Memory as a context layer for the enterprise
+
+A platform like Dataiku provides an environment where memory systems can be integrated with enterprise data governance frameworks. Access controls, retention policies, and audit logs can apply to AI memory stores just as they do to other enterprise data.
+
+More than that, it can serve as a true context management layer for the enterprise. At the highest level, company-wide best practices, policies, and knowledge can be encoded and made accessible to AI systems. This context can then cascade down into departments, where domain-specific constraints and expertise are added.
+
+From there, it continues to flow down to teams and individuals, where local preferences, workflows, and tacit knowledge further enrich the system. Instead of memory being a flat store of past interactions, it becomes a structured, hierarchical asset that reflects how the organization actually operates.
+
+In this model, AI agents don’t just retrieve context, they operate within it. An ambient agent layer, in the spirit of “openclaw”-style systems, could continuously maintain, update, and reconcile this context over time, ensuring that memory stays fresh, relevant, and aligned with evolving business realities.
+
+Building this from scratch on top of open-source components is possible but requires significant investment in infrastructure that isn't directly related to the AI capabilities themselves.
+
+Memory as a competitive moat
+
+One underappreciated aspect of agent memory is its potential as a source of sustainable competitive advantage. Models themselves are rapidly becoming commodities. The gap between frontier models and capable open-source alternatives is narrowing, and the models enterprises use today will be superseded within months.
+
+What endures is context. The structured, evolving memory an organization builds, spanning user preferences, domain knowledge, workflows, and past outcomes, becomes a form of intellectual property. In this sense, context will be the next frontier of competitive differentiation: not just what your models can do, but what they know about your business, your users, and how work actually gets done inside your organization.
+
+This context compounds over time. It reflects accumulated decisions, refined processes, and learned patterns that are deeply specific to each enterprise. Unlike models, which can be swapped out or replicated, this layer is proprietary and difficult to reproduce.
+
+Organizations that invest in building and maintaining this context layer early may find themselves with a significant advantage over those that treat each deployment as stateless. The value isn’t in the model; it’s in the context the model operates within. That’s the asset worth building.
+
+See how Dataiku turns AI from stateless interactions into reasoning systems grounded in enterprise context
+
+Get in touch
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+Context engineering: building AI systems that scale
+
+AI observability: how enterprises control autonomous agents
+
+Agentic workflows guide: definition, patterns, and use cases
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+By the end of 2026, the "AI honeymoon" will be officially concluded. For healthcare and life sciences...
+
+Apr 01, 2026
+
+GenAI & Agents
+
+Agent memory: the missing layer in enterprise AI systems
+
+Ask most people to describe the memory of a large language model and they'll point to the context window, the...
+
+Mar 31, 2026
+
+GenAI & Agents
+
+Context engineering: building AI systems that scale
+
+There's a version of the story where prompt engineering was always just a stepping stone. In 2022 and 2023, a...
+
+Mar 25, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

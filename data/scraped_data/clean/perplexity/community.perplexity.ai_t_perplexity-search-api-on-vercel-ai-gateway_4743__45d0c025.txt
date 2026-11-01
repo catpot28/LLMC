@@ -1,0 +1,157 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/perplexity-search-api-on-vercel-ai-gateway/4743
+page path  : /t/perplexity-search-api-on-vercel-ai-gateway/4743
+captured   : 2026-04-12 12:35:30 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_perplexity-search-api-on-vercel-ai-gateway_4743__45d0c025.html.gz
+========================================================================
+
+Perplexity Search API on Vercel AI Gateway - Announcements - Perplexity API Platform Forum
+
+Perplexity Search API on Vercel AI Gateway - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Perplexity Search API on Vercel AI Gateway
+
+Announcements
+
+Kesku
+
+January 15, 2026, 6:00pm
+
+1
+
+You can now use the Perplexity Search API to add real-time web search to any model from any provider via Vercel AI Gateway. No additional API keys required.
+
+img_vercel.jpg
+1200×648 53.8 KB
+
+import { gateway } from 'ai';
+
+const result = await generateText({
+model: gateway('openai/gpt-4o'),
+tools: {
+perplexity_search: gateway.tools.perplexitySearch()
+},
+prompt: 'What are the latest AI developments?'
+});
+
+Read more:
+Use Perplexity Web Search with Vercel AI Gateway
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+134
+
+April 7, 2026
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+135
+
+April 7, 2026
+
+Basic web search: chat v API
+
+General
+
+search-api
+
+2
+
+28
+
+April 4, 2026
+
+Perplexity api citations/sources like UI for "selected", "reviewed" and "more results"
+
+General
+
+chat-completions
+
+0
+
+110
+
+August 23, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

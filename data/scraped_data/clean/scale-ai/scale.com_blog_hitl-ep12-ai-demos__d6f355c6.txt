@@ -1,0 +1,130 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/hitl-ep12-ai-demos
+page path  : /blog/hitl-ep12-ai-demos
+captured   : 2026-06-14 22:42:01 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_hitl-ep12-ai-demos__d6f355c6.html.gz
+========================================================================
+
+We decided if these viral AI demos are hype or real | Scale AI
+
+We decided if these viral AI demos are hype or real | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Enterprise
+We decided if these viral AI agent demos are hype or real | Human in the Loop: Episode 12
+By
+
+Monica Mishra
+·
+August 21, 2025
+·
+19 min read
+Copy Link
+In today’s episode Scale’s enterprise team (Clemens Viernickel, Mark Pfeiffer, Sam Denton, and Felix Su) review several viral AI agent demos from the internet and decide how realistic they are in their current form to be deployed in an enterprise environment. What do you think of their votes?
+Demo 1: Resume Screening
+Demo 2: Building Internal Enterprise Apps
+Demo 3: Customer Service Agent
+Demo 4: GPT Agent
+About Human in the Loop
+We share our learnings from working with the largest enterprises, foundation model builders, and governments to equip you with the insights you need to build practical, powerful AI systems in your enterprise.
+Watch the video or read the transcript below to get their insights from working with leading enterprises and frontier model labs.
+Episode 12 - Voting on AI Agent Demos
+DEMO 1: Resume Screening Agent:
+Sam: You wanna kick us off, Felix?
+Felix: Yeah, I think they're all looking at me because this is definitely something that I've been invested in a lot. At a production level, I think, is maybe the more debatable part of this system. For sure, these asynchronous running agents and systems are possible—we've built it. I personally built a framework that we can use to do this.
+The real question is how many rollouts can you do? How accurate can it get? A demo is great because it looks like it's doing a lot of stuff, but in a real situation, if you actually sat down, is it doing the things that you would do? That's the challenging part. So, it's definitely real and definitely coming. Whether or not you can use it in an enterprise setting is up to Sam.
+Sam: Resumes are a really great place to start because there's a lot of textual processing. I don't know if that's exactly the way that I would do resume screening, and there's a whole other debate about whether you should be doing resume screening with an LLM. But using an LLM to process resumes, extract certain things that are key to you, and then put that information in a spreadsheet—I think that's something you can definitely do at an enterprise scale. It's just about designing the problem in a way that you want to process it.
+Felix: Can you do more complicated things? Could you do something with multiple modalities, many steps, and search functionality on it? This one was a lot of textual stuff.
+Sam: Yeah, I was thinking maybe going and looking at people's GitHubs would've been a good tool for Menace to show the real capabilities of what it can accomplish. But I'll let them do their product marketing how they see fit.
+Clemens: One of the things we should probably include is actually rating the layout of the resume as you screen it, because I always feel that the layout quality of the resume is a good leading indicator for the quality of the work that people will be doing. What do you think is under the hood of the system? Do you think we can create it and we can do it?
+Sam: Yeah, I think so.
+Mark: Yeah, I think the system, especially in this setup, is not particularly hard if you say, "I have a list of CVs. Hey, take a look at this." I think the interesting part is more about how you integrate it in a more automated way with the pipeline in general. Do you use it for auto-tagging or flagging CVs? Do you want to use it for decision-making, which then brings a whole new set of legal, data privacy, and bias questions that you need to address?
+So I guess the ML part is key—how accurate is it? How much can you map it to what you are looking for? But then the interesting questions are also about how you integrate it into the workflow so it works well alongside the recruiters.
+Clemens: I feel like this particular demo is maybe not an ideal demo for an async agent. You might as well just do this in a batch process; it's not the most difficult task. You don't typically have a crazy amount of resumes to screen. So maybe it's not the ideal example for running this type of agent.
+Felix: But I think the interesting tech behind the scenes is going to be the asynchronicity of it and the scalability of it—the fact that you could do a lot of them in parallel. The other interesting thing is there's definitely some sort of sandboxed file reading going on. So there's some VM or sandbox environment. Those are the interesting technologies behind the scenes. We've developed a lot of that stuff here as well. For this one, it's a vertical use case; for us, we want to build something more horizontal, but it's definitely possible. Definitely real.
+Sam: I agree. The code execution part is probably the most interesting part of that demo.
+DEMO 2: Multi-Agent App Builder:
+https://x.com/bradmenezes/status/1927414638632735069
+Clemens: I guess Mark, you can start with this one.
+Mark: The question is, is it real as is? I think it can be real. I'm a bit optimistic there. I would say if you have the right amount of resources to invest into building all these integrations and building the agent-to-agent communication and handovers, I think you can build it, probably in a very hacky way, to make it real. The idea that you can build it in a way that's pretty generalizable, such that you can swap agents and change policies, I think that's a bit questionable. But I would say there's definitely a scenario where this is real with the right levels of integrations and maybe also fairly strong priors of what you actually want the agents to do.
+Sam: I look at this prompt up there, which is maybe one sentence in three lines, and I think about a hundred prompts like that. The likelihood of getting a UI that looked like that end product on 99 of them is probably zero. But the idea of these agents helping you make progress towards that seems like we're barking up the right tree.
+Mark: That's what I thought. It could still work if you have fairly strong priors and in the follow-up, you specify more things. I agree this is probably too general. But if the agents also know what follow-up questions to ask or where you need to make the right decisions, I think it can be real.
+Clemens: I feel like every individual one of these tasks is already pretty hard to get right in an enterprise-level setting, as we're seeing when we implement this. It just seems like a bit of hype that you could orchestrate all of these agents with so many handoffs and degrees of failure. To me, this is the classic example of a demo that works on one example, but will not survive contact with real-world data. Or at least, to Mark's point, of course you can make it work, but it will be an insane amount of work. It's nowhere near out-of-the-box.
+Felix: You nailed it. The out-of-the-box nature of it is definitely hype because the possibility of anything going wrong in a system like that is just so high. The example you gave is perfect: if you want something to work like that, then the variance on your request has to be low, and that demo didn't give me confidence that the variance is going to be low. Now, do I think that you could deploy a team to a customer and say, "This is the framework we want to use, and we're going to get it right for you for a specific use case with a small enough scope for a specific customer base that's doing a specific thing?" Yes. But you can see how many qualifiers I had to put on that situation for us to get it right. We've talked about a ton how many things that seem so simple are so hard to get right, and we saw 25 of those right there. That's definitely challenging.
+Clemens: Another example we just saw in there is that it has full context of design principles. Sure, if you have three design principles and it executes them, that's fine. But if you have a very big design system with lots of principles, then assuming that the agent will just adjust the entire design correctly based on the principles and context is delusional at this point.
+Felix: I actually think there's a way to get that right. This is the product thing we're talking about. If you allow it to bootstrap, and I think they did get this right at the end, they said you can go in and insert your React code and edit, or that you could drag the padding if you didn't like it. If you can insert human behavior at any point and then offload things to an agent to adjust based on what you did, you could get it right. It's still useful that you don't have to do a bunch of that stuff. But if you just try to one-shot it, you're going to be pretty disappointed. It was pretty hyped though.
+Mark: It did look cool. I gotta say, it does exist. You just need to think a lot about the constraints. Is this a self-serve product or a set of agents that non-technical users can control by writing a few prompts? That's definitely hype or not real. But if you put the right constraints in place and say, "This is what you can do," and also incorporate what Felix mentioned—this human-in-the-loop concept where you do one step, let the human take a look, make a few corrections, and then keep going step-by-step—I think that's a good approach. It's more about how constrained the workflow can be, and then I think it can be pretty real.
+Clemens: I guess you just have to work with all of these agents pretty intensely to make it work in production, but it's possible.
+Sam: The way to do it is to have an IT team help with the IT agent, a design team help with the design agent, and have them constantly collaborating with those agents.
+DEMO 3: Conversational Shopping Assistant:
+Sam: I feel like I'm very biased by the scope they showed us, and I feel like the scope they showed us was very tractable. Every single step along the way, I was like, "Oh yeah, I can see how you could do that." I think it kind of depends on how wide the scope is when you talk about productionalizing this.
+Felix: Like you said, Sam, it's a very particular scope. When I analyze something that has multiple steps like that, we talked about the agent stuff, which I think is possible, but the individual units of work when you're being responded to—do those seem small enough? And if you looked at it, at one point it was like, "Look up potting soil after you identify a flower." That's reasonable; there's a model that can do that pretty well. "Can you look up soil?" There is a limited number of soil options and enough data for an LLM to process. So every single step seemed tractable. If you were to expand the catalog to every single possible thing on Amazon or Walmart, that would be a little bit challenging, but what we saw seemed reasonable.
+Clemens: I would agree that at least most of what they've shown, especially for a single vertical solution, seems manageable. You could manage all of that somewhat in context and have the right tools to get all that information. I thought it was getting a little dicey with the landscaping service. That seems like a more open-ended thing where, sure, it works for this particular, very staged example, but if you had any other type of request, I feel like the more natural, non-demo response would be, "Oh yeah, I can't help you with that." But I was surprised it was, "Oh, we happen to have this service." That seems a bit out there, but most of the rest of the shopping seems quite realistic.
+Mark: Alright, Debbie Downer here. So why is it not feasible? I think it's definitely feasible, but the impression I got from the demo was that it was kind of too scripted. I would assume an agent would have to ask a lot of follow-up questions to do it well. For example: "How exposed is it to the sun? Is it on a balcony or in the garden? Where do you live?" Maybe they know where he lives because he ordered something before, but do you have a big garden? How accessible is it? I lost it a bit with the gardening service part. A flat $200 fee. So I think technically it's feasible if the scope is fairly small, but the impression I got was that it was super scripted.
+Sam: Okay. So maybe the demo was real, but the vision is hype.
+Clemens: Yeah, that's a very fair point. If you think about it, you would need all this extra information and you might want to offer multiple options across the board. It just happens to be the one potting soil that you needed for this other type of flower. That seems pretty scripted.
+Felix: What you said, Mark, just triggered something in me, which is that there is a nuance. The reason it was triggering to hear the landscaping thing is because there was an intent analysis part of that. When Patrick was presenting, he just said, "Not unless you..." It was a joke, not an actual request. Yet, the AI interpreted it as a request for something. That, to me, sent more "demoware" vibes. There's likely a prompt in there that says, "Imagine everything is a request, even if it's not phrased that way." I feel like that would probably break down in an enterprise setting where you would have to hard-code those prompts. So those intent-based things could be a little bit hype and very specific, with poor generalization. But I would say for a small shop, it would totally be fine. It would probably work.
+Sam: It just depends on what enterprise you're talking about. If it's this small-to-medium business for gardening, maybe it is meaningful. But if you think about Fortune 50 companies, then the scope gets a little challenging.
+Clemens: On the other hand, voice agents for customer support in the broader sense—which this is, even though it's shopping—is something we are working on that's very real and has real impact. None of the voice agent part of this was hype. It actually felt a little clunky; I feel like voice agents are somewhat better than this already. So none of that part was surprising.
+Felix: I think it's useful. There are a few things I'd probably do a little differently. I was talking about this before: in the design phase of an agentic solution, you probably need to design it in a specific way. For example, there's no chance we would've expected it would know about landscaping services. When he said that, we were like, "Oh, what a scripted joke," and then it actually responded, we were like, "Oh shoot, they have landscaping services." That's one of the problems with this space: when something is agentic, you just don't know what it can do, so you don't even know what to ask. In 99% of settings, you probably would never even know that feature existed. I feel like a better job could be done in these scenarios to make things usable. You have to present it a certain way. You have to make sure that the scripted paths are high quality and the non-scripted paths are lower quality, so you should do your best to guide people down the scripted paths. That could yield pretty good impact.
+DEMO 4: Browser Automation Agent:
+Felix: Wow. I'm surprised you guys think it's real, to be honest.
+Sam: Instacart shopping with recipes is totally accessible. We did a hackathon a few months ago where we were trying to figure out how to incorporate multimodal stuff. I thought back to Alex's founding story of Scale, where he wanted to build a CV model to figure out if his roommate was taking things out of his fridge. We did a demo based off that, where you would upload a photo of a fridge and it would help you track your inventory with a multimodal LLM, trying to solve that problem for 19-year-old Alex. Then you could ask follow-up questions like, "What can I make with what I have in the fridge?" To me, this scope of actions and requirements is pretty reasonable, and grocery shopping is a pretty accessible domain for where Operator and these computer use models are today.
+Felix: I think it's doable. I just don't think it's the right way to do stuff. I don't think it's practical. You're telling me that shopping experience... you would use that?
+Mark: But that's not the question, right? Is this, the way it is, real?
+Felix: Well, I guess I'm interpreting the question of "real or hype" as in, is this just a demonstration to show that AI is cool, or is it actually going to be practically applied to your life? Is it something that I would pursue? Me personally, I'll say a little bit of a hot take: I don't believe that much in browser automation, to be completely honest. I don't think browsers are made for computers; they're made for humans. It's natural to assume that you'd want to interact with it the way that a human would.
+Now, here's something I do believe in, using an analogy from robotics. In robotics, you would think, "Do I need to make this complicated, dexterous robot with five fingers, two legs, and two arms?" That makes my life so much harder as a robot developer. But the reason you do it is because the human world is designed for humans. There are stairs, there's elevated everything. So you would want to build something that fits into that world, even though it adds complexity. That's the same analogy for Operator, so it makes sense in principle. But realistically, the way that a computer looks at the code of a webpage to interpret where the input boxes are is just so overly complex, and the code doesn't reflect what you see on the screen. To me, it's such a forced thing.
+I think it's correct in its principle, but I don't think it's tactically right. If I were to try to do this from first principles, this is a very expensive thing to do. If I were Google or somebody else, I would invent a browser that's made for AI interaction. I would go from that direction.
+Sam: I think that's what some of these labs are doing. And that's also why Microsoft announced that protocol around reading the internet for LLMs. You can basically make your website accessible to LLMs in a more first-class way. It makes a lot of sense.
+Mark: I agree with the robotics analogy. If you say, "I need to build a robot that grasps this cup," if it's a standard cup, it's fairly hard to grasp. But you could also make a cup which is a lot easier to grasp. From my perspective, this Operator thing is more like an intermediate step or a way to bridge a gap. If you look at enterprise use cases, there are a lot of internal tools that don't have APIs. The cool thing is if you have agents running asynchronously, they can take their time. If it takes 10 minutes, whatever, because I don't have to spend my time on it, as long as it's trusted. That's the interesting thing about Operator or computer use. It's not the best strategic or tactical approach in the long term. As he says in the demo, ideally you have an API, and if you don't, then this is probably a good way to approach it and bridge that gap.
+Clemens: It's definitely real; we've built similar things. I'm actually going to go with a reverse hot take to yours, Felix. I do also believe that this is maybe not the future of how everything is going to work, but I feel we're probably biased. We would be a lot more convinced that this is a very useful thing, even in terms of the experience, if the speed was 10x faster. If this was blazing fast, I think people would be very convinced that it's extremely useful. One of the things that makes it so dragging is that you just sit there and wait for the thing to be slow. It's just not practical to do things that you as a human can do at 5x speed. But if this were, which is very realistic given the speed of model development, to go 10x faster than a human could do it, and it just comes back with the one decision you need to make after a second, then suddenly people would go, "Oh, that's amazing." That thing can operate the web for me so much more efficiently. It's amazing.
+Felix: But one of the jarring things about it is that I'm not going to prompt something and then just sit here and do nothing. I need my computer. So if it's a farm of computers sitting around, or maybe there's a VM with no GUI, then you could farm it out. But I'm not going to let it do something while I just sit here and do nothing else.
+But I do have a question. Do you guys believe it is more likely for Operator to become useful in its current form, or do you think it's more likely that browser providers will change, and that's when it will become useful? Which comes first?
+Clemens: I feel that both will happen to a degree, at the same time. I'm very much with what you all said, that interfaces are going to change dramatically—both hardware and software. All of the smallest interfaces are going to change, no matter what. At the same time, I do feel that things like Operator that are in this weird middle ground are going to become super efficient and super useful as well.
+Monica: Thanks for listening to Human in the Loop. To stay in the loop for more AI-related content, make sure to like, comment, and subscribe.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

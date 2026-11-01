@@ -1,0 +1,800 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/deeplearning-image/
+page path  : /product/plugins/deeplearning-image/
+captured   : 2026-02-09 04:37:18 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_deeplearning-image__f798cbc6.html.gz
+========================================================================
+
+Plugin: Deep Learning Image | Dataiku
+
+Plugin: Deep Learning Image | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Deep Learning Image
+
+Deep Learning Image
+
+Classify your images from pre-trained models or retrain these models to best fit your data
+⚠️ Starting with Dataiku version 11 this plugin is partially superseded by the
+native image classification capabilities
+.
+
+Plugin Information
+
+Version
+
+2.0.3
+
+Author
+
+Dataiku (Henri Chabert)
+
+Released
+
+2021-06
+
+Last updated
+
+2022-09
+
+License
+
+Apache-2.0
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+⚠️ Starting with Dataiku version 11 this plugin is partially superseded by the native
+image classification capabilities
+.
+
+With this plugin, you will be able to classify you images without having to train a brand-new model. It can be done by downloading a pre-trained model from the web and then use it as it is, or retrain it to fit you own data. This plugin provides the following components:
+
+Recipes
+
+Image classification:
+Your model is ready? Well use this recipe to assign one or many labels to your images.
+
+Feature extraction:
+If you want to extract one of the layers of the CNN, this is your way to go!
+
+Model retraining:
+You are not happy with the performance of the model you downloaded on your data? Well try to retrain some layers of it with your own labels, the performances can only be better!
+
+Macros
+
+Model download:
+Choose between 9 different models trained on the famous ImageNet dataset, the one that is more likely to perform on your data.
+
+API endpoint generation:
+Whenever it is time to get your model to production, you can directly deploy an API endpoint on an API node and use this endpoint to score any images on your website or your app.
+
+Webapp
+
+Tensorboard webapp:
+Want to know how the re-training went? What could be improved? Use this Tensorboard webapp to visualise the training performances and metrics.
+
+Note:
+Though the previous version was split in two to handle GPU (One plugin for CPU and the other one for GPU) , the new version of tensorflow allows to use both GPU or CPU in the same plugin.
+
+How to set up
+
+Right after installing the plugin, you will need to build its code environment. If this is the first time you install this plugin, click on
+Build new environment
+.
+
+Code Environment Creation
+
+Note that Python version 3.6 is required, with system development tools and Python interpreter headers to build the packages. You can refer to
+this documentation
+if you need to install these beforehand.
+
+Warning
+: if you were previously using the former deep-learning image plugin (
+CPU
+or GPU) and now want to use this new deep-learning plugin instead, you will need to update the existing flows with new recipes and re-download the pre-trained models.
+
+How to use
+
+1. Images classification (recipe)
+
+Classify images stored in any data storage (local or cloud providers).
+
+Inputs:
+
+Image folder
+: Folder containing the images you want to classify. Files that are not images will be considered as errors but will not break the job.
+
+Model folder
+: Folder containing the model with which to classify the images. This folder must be either downloaded by the macro
+Download pre-trained model (v2)
+or the output of the
+retraining recipe.
+
+Output:
+
+Dataset with the predictions:
+
+images
+: The path of the image
+
+prediction
+: The labels and their prediction probability for each image
+
+error
+: Whether there has been an error loading the file (See logs for more details)
+
+Settings
+
+General parameters
+
+Max number of class labels:
+The maximum number of labels an image can have.
+
+Value 1 will assign the label with the maximum probability
+
+Value 3 will assign the three most probable labels
+
+Min probability threshold:
+The limit under which the label will not be added to the image
+
+Value nothing will not filter any label, even though they are very improbable
+
+Value 0,3 means that every label that has a probability less than 30% to be correct will not be added to the image
+
+GPU
+
+This section is not visible if you do not have any GPU on the machine on which you are running Dataiku.
+
+Use GPU:
+Specify whether you would like to use the GPU(s) on the machine for the recipe
+
+GPU Usage:
+Choose which GPU(s) you would like to use
+
+Use all GPU(s): All GPU(s) will be used without any filtering
+
+Use a custom set of GPU(s)…: Select only some GPU(s) to use
+
+↳
+Select GPU(s) to use:
+Use this multi-select to specify which GPU(s) you want to assign to the job
+
+GPU Memory:
+Select how you would like the GPUs memory to be handled
+
+No limitation:
+The entire GPU will be assigned to the job. No other process will be able to use it
+
+Allocate memory automatically:
+Let Tensorflow determine the memory it needs. The limit changes dynamically so you cannot know before how much memory will be allocated
+
+Set a custom memory limit…:
+Set yourself the percentage of the GPU to allocate. All the GPUs will have the same percentage
+
+↳ Memory limit per GPU:
+Use the cursor to select the percentage you want
+
+2. Features extraction (recipe)
+
+Extract the features coming from any layer of a pre-trained deep-learning model.
+
+Inputs:
+
+Image folder
+: Folder containing the images you want to extract de features from. Files that are not images will be considered as errors but will not break the job.
+
+Model folder
+: Folder containing the model with which to extract images features. This folder must be either downloaded by the macro
+Download pre-trained model (v2)
+or the output of the
+retraining recipe.
+
+Output:
+
+Dataset with the predictions:
+
+images
+: The path of the image
+
+prediction
+: A vector with one float per neuron in the input chosen model’s layer
+
+error
+: Whether there has been an error loading the file (See logs for more details)
+
+Settings
+
+General parameters
+
+Select extracted layer:
+The layer of the input CNN you want to extract the features from
+
+You can click on “SHOW MODEL SUMMARY” to see the layers composing the model
+
+The number of features extracted will depend on the layer you extract
+
+GPU
+
+This section is not visible if you do not have any GPU on the machine on which you are running Dataiku.
+
+See
+Image classification GPU section
+for more information
+
+c. Model retraining (recipe)
+
+Partially retrain a model to fit your own data, and parametrize it the way you want.
+
+Inputs:
+
+Label dataset:
+Dataset containing the mapping between your training images and their label. It should then contain at least two columns
+
+One with the paths to your images
+
+One with the image’s label
+
+Image Folder:
+Folder containing the images you want to train the model on. Files that are not images will be considered as errors but will not break the job.
+
+Model folder:
+Folder containing the model to partially retrain. This folder must be either downloaded by the macro
+Download pre-trained model (v2)
+or the output of the
+retraining recipe.
+
+Output:
+
+Folder with files representing the retrained model
+
+config.json
+: Main characteristics of the model
+
+model_info.json
+: Summary of the model retrained and before retrain
+
+model_labels.csv
+: Distinct labels of input label dataset
+
+model_weights_notop.h5
+: Weights of retrained model
+
+tensorboard_logs/ (optional)
+: Files used by Tensorboard Webapp (only if you selected the related option)
+
+Settings
+
+Dataset with labels
+
+Image filename column:
+Name of the column containing the path to images
+
+Label column:
+Name of the column containing the label of each image
+
+Train ratio:
+Proportion of input images to use in the train set (the others will be used in the test set)
+
+Random seed:
+Seed to get reproducible results
+
+Model
+
+Pooling:
+Max pooling operation for 2D spatial data
+
+Image shape (Height | Width):
+Shape of images classified by retrained model
+
+Layer(s) to retrain:
+Specifies which layers will be retrained
+
+Dropout:
+Dropout to apply to the input
+
+L1 regularization:
+L1 regularization penalty to apply
+
+L2 regularization:
+L2 regularization penalty to apply
+
+Optimization
+
+Optimizer:
+Specifies the optimizer algorithm to use
+
+Adam
+: Optimizer that implements the Adam algorithm
+
+Adagrad
+: Optimizer that implements the Adagrad algorithm
+
+SGD
+: Gradient descent (with momentum) optimizer
+
+Learning rate:
+Learning rate for the training
+
+Custom Parameters:
+Additional parameters for the selected optimizer. You can see available parameters there:
+https://keras.io/api/optimizers/#available-optimizers
+
+Training
+
+Batch size
+:
+Number of samples per batch of computation
+
+Number of epochs
+:
+Number of epochs to train the model
+
+Steps per epoch
+:
+Total number of steps (batches of samples) before declaring one epoch finished and starting the next epoch
+
+Number of validation steps
+:
+Total number of steps (batches of samples) to draw before stopping when performing validation at the end of every epoch
+
+Advanced
+
+Use data augmentation
+:
+Specifies whether to use data augmentation during training. This will generate transformations of the input images based on what you set up
+
+# augmentation per image
+: Number of additional images to generate for each image
+
+Custom Parameters:
+Additional parameters for image generation. You can see available parameters there:
+https://keras.io/api/preprocessing/image/#imagedatagenerator-class
+
+Use TensorBoard
+:
+Specifies whether to save Tensorboard logs in order to visualize training in a Tensorboard webapp
+
+GPU
+
+This section is not visible if you do not have any GPU on the machine on which you are running Dataiku.
+
+See
+Image classification GPU section
+for more information
+
+d. Model download (macro)
+
+Download a pre-trained model from available Keras Applications
+
+Settings
+
+General parameters
+
+Output managed folder:
+Where to save the downloaded model.
+
+Use a different folder for each model you download
+
+You can also create a new folder by selecting “Create new Filesystem folder…”
+
+Pre-trained model to download: Choose the model to download. Available are:
+
+Resnet
+
+Xception
+
+InceptionV3
+
+VGG16
+
+MobileNet
+
+InceptionResnetV2
+
+DenseNet201
+
+NasNetLarge
+
+NasNetMobile
+
+e. API endpoint creation (macro)
+
+Deploy your scoring to an API Node in order to use it either on your website or your app
+
+Settings
+
+Model folder
+
+Folder name: Name of the folder containing the model to use for the classification
+
+Api service
+
+API Service
+:
+Service in which to save the endpoint
+
+You can create a new service by selecting “Create new service…”
+
+API service ID
+: The ID of the new service to create
+
+Endpoint unique ID:
+The ID of the new endpoint
+
+If an endpoint with this ID already exists, it will be overwritten
+
+Code environment
+
+Code environment options: Code environment under which the classification will be executed
+
+If selecting an existing Python code env, make sure the right packages are installed:
+
+scikit-learn==0.23.1
+tensorflow==2.2.0
+h5py>=2.10.0
+Pillow==8.1.1
+tables==3.6.1
+GPUtil==1.4.0
+
+You can also choose to create a new Python virtual environment. If so, choose the name of this environment and the interpreter
+
+Params model results
+
+See
+Image classification settings section
+for more information
+
+f. Tensorboard vizualization (webapp)
+
+Visualize your training preogression
+
+Settings
+
+General settings
+
+Folder containing retrained model:
+The folder containing Tensorboard logs.
+
+Only folders with a folder named
+tensorboard_logs
+are displayed
+
+Examples
+
+Some projets that use the Deep-learning image plugin have been developed:
+
+Dataiku-Deep-Learning-Tutorial-Emotion-Classification-In-Videos
+
+Install In Dataiku
+
+To install the plugin, open the
+Apps menu, click Plugins and search for "Deeplearning".
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

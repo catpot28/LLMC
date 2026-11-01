@@ -1,0 +1,427 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/merchant/api-versions
+page path  : /docs/merchant/api-versions
+captured   : 2026-01-15 14:59:00 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_merchant_api-versions__f830573e.html.gz
+========================================================================
+
+API versions | Revolut Docs
+
+API versions | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Merchant API
+Version
+Introduction
+API versions
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Apple Pay merchant registration
+Other
+API versions
+On this page
+API versions
+
+Caution
+We highly recommend using versioning in your API calls. If you don't provide a version header on the operations where it's required, you will receive an error response.
+On endpoints using header versioning, if the version header is not required, the API will default to the earliest version.
+
+About API versioning
+​
+
+The Merchant API is versioned, meaning that in different API versions specific operations behave differently: consuming or returning different data, accepting different path parameters or enum values, etc.
+
+The API version name is based on the date when the respective version was released. For example, the API version
+2023-09-01
+was released on Fri, 1 Sep 2023.
+
+Note
+The Merchant API is transitioning to header versioning, with some endpoints already updated, while others still using path versioning.
+If the
+Revolut-Api-Version
+header is present in the API specification, it indicates that versioning is available for that endpoint and is required if specified.
+Using versioning will be mandatory for future releases. Integrations using older versions stay working and past versions won't be decommissioned.
+
+Breaking changes
+​
+
+When breaking changes are deployed, a new API version will be released. Breaking changes are changes that could break an integration, these changes include:
+
+removing an entire operation
+
+removing or renaming a parameter
+
+removing or renaming a response field
+
+adding a new required parameter
+
+making a previously optional parameter required
+
+changing the type of a parameter or response field
+
+removing enum values
+
+adding a new validation rule to an existing parameter
+
+changing authentication or authorization requirements
+
+Non-breaking changes
+​
+
+Non-breaking (additive) changes will be available in all supported API versions. Non-breaking changes are changes that should not break an integration, these changes include:
+
+adding an operation
+
+adding an optional parameter
+
+making a previously required parameter optional
+
+adding an optional request header
+
+adding a response field
+
+adding a response header
+
+adding enum values
+
+Deprecated endpoints
+​
+
+Endpoints labeled as deprecated will continue to function until further notice. They won't be decommissioned, ensuring that existing integrations remain operational.
+
+However, it is highly recommended to update to newer versions to take advantage of the latest features, improvements, and support. Keeping integrations up to date with the latest versions will ensure compatibility and performance as the API evolves.
+
+Request header versioning
+​
+
+The Merchant API uses request header versioning. Where it is required you need to use the
+Revolut-Api-Version
+header parameter to specify an API version. Each request, where it is indicated in the API specification, must contain a version header in the following format:
+
+'Revolut-Api-Version: YYYY-MM-DD'
+
+If the
+Revolut-Api-Version
+header is
+optional
+, the endpoint will default to the earliest version if the header is not provided.
+
+The Merchant API will return a
+400
+error response in the following cases when versioning is
+required
+:
+
+Using an invalid
+Revolut-Api-Version
+header, invalid values include:
+
+non-existent API versions,
+
+API versions removed from the list of supported versions
+
+Not providing the
+Revolut-Api-Version
+header where it's required
+
+Change log
+​
+
+Version
+2025-12-04
+​
+
+Refactored
+industry_data
+structure:
+
+Removed polymorphic structure in favor of flat structure
+
+Each industry type (airline, car_rental, crypto, marketplace, event, lodging) is now an optional top-level property within
+industry_data
+
+Support for multiple industry types in a single order
+
+New
+lodging
+structure with
+lodgings
+array to support multiple lodging entries per booking
+
+Create an order
+
+New request schema
+
+New response schema
+
+Retrieve an order
+
+New response schema
+
+Update an order
+
+New request schema
+
+New response schema
+
+Capture an order
+
+New response schema
+
+Cancel an order
+
+New response schema
+
+Version
+2025-10-16
+​
+
+New schema for
+industry_data.type: crypto
+, added new
+seller
+object
+
+New schema for
+industry_data.type: marketplace
+, added new
+seller
+object
+
+Version
+2024-09-01
+​
+
+Create an order
+
+New request schema
+
+New response schema
+
+Retrieve an order
+
+New response schema
+
+Update an order
+
+New request schema
+
+New response schema
+
+Capture an order
+
+New response schema
+
+Cancel an order
+
+New response schema
+
+Version
+2024-05-01
+​
+
+Create an order
+
+New request schema
+
+New response schema
+
+Retrieve an order
+
+New response schema
+
+Update an order
+
+New request schema
+
+New response schema
+
+Capture an order
+
+New response schema
+
+Cancel an order
+
+New response schema
+
+Retrieve payment details
+
+New response schema
+
+Version
+2023-09-01
+​
+
+Create an order
+
+New request schema
+
+New response schema
+
+Retrieve an order
+
+New response schema
+
+Update an order
+
+New request schema
+
+New response schema
+
+Capture an order
+
+New response schema
+
+Cancel an order
+
+New response schema
+
+Deprecated endpoints
+​
+
+Create an order (Deprecated)
+
+Retrieve an order (Deprecated)
+
+Update an order (Deprecated)
+
+Capture an order (Deprecated)
+
+Cancel an order (Deprecated)
+
+Was this page helpful?
+I like it
+Not really
+About API versioning
+Breaking changes
+Non-breaking changes
+Deprecated endpoints
+Request header versioning
+Change log
+Version
+2025-12-04
+Version
+2025-10-16
+Version
+2024-09-01
+Version
+2024-05-01
+Version
+2023-09-01
+Deprecated endpoints
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

@@ -1,0 +1,786 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/collections/distillable-models
+page path  : /collections/distillable-models
+captured   : 2026-05-17 05:46:30 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_collections_distillable-models__da884197.html.gz
+========================================================================
+
+Distillable AI Models | OpenRouter
+
+Distillable AI Models | OpenRouter
+Skip to content
+OpenRouter
+/
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Collections
+/
+Distillable Models
+Distillable AI Models
+Model rankings updated May 2026 based on real usage data.
+Distillable models explicitly allow their outputs to be used for training and distillation. Use them as teacher models to build training datasets, create smaller specialized models, or run compliant distillation pipelines. OpenRouter tracks distillation permissions, so you can confidently use these outputs in your distillation workflows.
+Browse All Models
+Compare Models
+Distillable Models on OpenRouter
+DeepSeek: DeepSeek V4 Flash
+1.92T
+tokens
+Academia
+(#2)
+Finance
+(#7)
+Health
+(#2)
+Legal
+(#8)
+Marketing
+(#13)
++
+7
+categories
+DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
+
+The model includes hybrid attention for efficient long-context processing. Reasoning efforts
+high
+and
+xhigh
+are supported;
+xhigh
+maps to max reasoning. It is well suited for applications such as coding assistants, chat systems, and agent workflows where responsiveness and cost efficiency are important.
+Show more
+by
+
+deepseek
+1.05M
+context
+$
+0.112
+/M input
+tokens
+$
+0.224
+/M output
+tokens
+MoonshotAI: Kimi K2.6
+1.15T
+tokens
+Academia
+(#14)
+Finance
+(#21)
+Health
+(#42)
+Legal
+(#47)
+Marketing
+(#20)
++
+6
+categories
+Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
+Show more
+by
+
+moonshotai
+262K
+context
+$
+0.73
+/M input
+tokens
+$
+3.49
+/M output
+tokens
+DeepSeek: DeepSeek V3.2
+1.03T
+tokens
+Academia
+(#16)
+Finance
+(#37)
+Health
+(#10)
+Legal
+(#35)
+Marketing
+(#37)
++
+7
+categories
+DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.
+
+Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+Show more
+by
+
+deepseek
+131K
+context
+$
+0.252
+/M input
+tokens
+$
+0.378
+/M output
+tokens
+DeepSeek: DeepSeek V4 Pro
+899B
+tokens
+Academia
+(#8)
+Finance
+(#5)
+Health
+(#30)
+Legal
+(#20)
+Marketing
+(#34)
++
+7
+categories
+DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
+
+Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid attention system for efficient long-context processing. Reasoning efforts
+high
+and
+xhigh
+are supported;
+xhigh
+maps to max reasoning. It is well suited for complex workloads such as full-codebase analysis, multi-step automation, and large-scale information synthesis, where both capability and efficiency are critical.
+Show more
+by
+
+deepseek
+1.05M
+context
+$
+0.435
+/M input
+tokens
+$
+0.87
+/M output
+tokens
+NVIDIA: Nemotron 3 Super (free)
+633B
+tokens
+Academia
+(#36)
+Finance
+(#24)
+Marketing
+(#50)
+SEO
+(#34)
+Programming
+(#7)
++
+5
+categories
+NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.
+
+The model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.
+
+Fully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere — from workstation to cloud.
+Show more
+by
+
+nvidia
+1M
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Qwen: Qwen3.6 Plus
+377B
+tokens
+Academia
+(#23)
+Finance
+(#17)
+Health
+(#27)
+Legal
+(#10)
+Marketing
+(#33)
++
+6
+categories
+Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers major gains in agentic coding, front-end development, and overall reasoning, with a significantly improved “vibe coding” experience. The model excels at complex tasks such as 3D scenes, games, and repository-level problem solving, achieving a 78.8 score on SWE-bench Verified. It represents a substantial leap in both pure-text and multimodal capabilities, performing at the level of leading state-of-the-art models.
+Show more
+by
+
+qwen
+1M
+context
+$
+0.325
+/M input
+tokens
+$
+1.95
+/M output
+tokens
+MoonshotAI: Kimi K2.5
+289B
+tokens
+Academia
+(#45)
+Finance
+(#3)
+Marketing
+(#49)
+SEO
+(#27)
+Programming
+(#16)
++
+5
+categories
+Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling.
+Show more
+by
+
+moonshotai
+262K
+context
+$
+0.40
+/M input
+tokens
+$
+1.90
+/M output
+tokens
+Qwen: Qwen3.5 397B A17B
+191B
+tokens
+Health
+(#36)
+Legal
+(#26)
+Programming
+(#32)
+Science
+(#28)
+Trivia
+(#46)
+The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.39
+/M input
+tokens
+$
+2.34
+/M output
+tokens
+Mistral: Mistral Nemo
+135B
+tokens
+Legal
+(#41)
+SEO
+(#14)
+Roleplay
+(#20)
+Trivia
+(#28)
+A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA.
+
+The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, and Hindi.
+
+It supports function calling and is released under the Apache 2.0 license.
+Show more
+by
+
+mistralai
+131K
+context
+$
+0.02
+/M input
+tokens
+$
+0.04
+/M output
+tokens
+Qwen: Qwen3 235B A22B Instruct 2507
+130B
+tokens
+Academia
+(#47)
+Finance
+(#45)
+Health
+(#8)
+Legal
+(#30)
+Programming
+(#33)
++
+4
+categories
+Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following, logical reasoning, math, code, and tool usage. The model supports a native 262K context length and does not implement "thinking mode" (
+<think>
+blocks).
+
+Compared to its base variant, this version delivers significant gains in knowledge coverage, long-context reasoning, coding benchmarks, and alignment with open-ended tasks. It is particularly strong on multilingual understanding, math reasoning (e.g., AIME, HMMT), and alignment evaluations like Arena-Hard and WritingBench.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.071
+/M input
+tokens
+$
+0.10
+/M output
+tokens
+Qwen: Qwen3.5-Flash
+111B
+tokens
+Health
+(#14)
+Legal
+(#44)
+Marketing
+(#28)
+Science
+(#47)
+Technology
+(#45)
+The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance.
+Show more
+by
+
+qwen
+1M
+context
+$
+0.065
+/M input
+tokens
+$
+0.26
+/M output
+tokens
+DeepSeek: DeepSeek V3 0324
+88.9B
+tokens
+Finance
+(#15)
+Roleplay
+(#12)
+Translation
+(#37)
+DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team.
+
+It succeeds the
+DeepSeek V3
+model and performs really well on a variety of tasks.
+Show more
+by
+
+deepseek
+164K
+context
+$
+0.20
+/M input
+tokens
+$
+0.77
+/M output
+tokens
+Meta: Llama 3.1 8B Instruct
+86.8B
+tokens
+Health
+(#37)
+Marketing
+(#25)
+SEO
+(#50)
+Translation
+(#6)
+Trivia
+(#20)
+Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient.
+
+It has demonstrated strong performance compared to leading closed-source models in human evaluations.
+
+To read more about the model release,
+click here
+. Usage of this model is subject to
+Meta's Acceptable Use Policy
+.
+Show more
+by
+
+meta-llama
+131K
+context
+$
+0.02
+/M input
+tokens
+$
+0.05
+/M output
+tokens
+Qwen: Qwen3 Embedding 8B
+74.6B
+tokens
+Legal
+(#21)
+The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. This series inherits the exceptional multilingual capabilities, long-text understanding, and reasoning skills of its foundational model. The Qwen3 Embedding series represents significant advancements in multiple text embedding and ranking tasks, including text retrieval, code retrieval, text classification, text clustering, and bitext mining.
+Show more
+by
+
+qwen
+32K
+context
+$
+0.01
+/M input
+tokens
+$
+0
+/M output
+tokens
+Qwen: Qwen3 VL 32B Instruct
+61.2B
+tokens
+Academia
+(#19)
+Finance
+(#18)
+Legal
+(#49)
+Technology
+(#31)
+Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video. With 32 billion parameters, it combines deep visual perception with advanced text comprehension, enabling fine-grained spatial reasoning, document and scene analysis, and long-horizon video understanding.Robust OCR in 32 languages, and enhanced multimodal fusion through Interleaved-MRoPE and DeepStack architectures. Optimized for agentic interaction and visual tool use, Qwen3-VL-32B delivers state-of-the-art performance for complex real-world multimodal tasks.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.104
+/M input
+tokens
+$
+0.416
+/M output
+tokens
+DeepSeek: DeepSeek V3.1
+60.4B
+tokens
+Programming
+(#46)
+Roleplay
+(#18)
+DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the
+reasoning
+
+enabled
+boolean.
+Learn more in our docs
+
+The model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows.
+
+It succeeds the
+DeepSeek V3-0324
+model and performs well on a variety of tasks.
+Show more
+by
+
+deepseek
+164K
+context
+$
+0.21
+/M input
+tokens
+$
+0.79
+/M output
+tokens
+Qwen: Qwen3 Coder Next
+53.5B
+tokens
+Programming
+(#30)
+Technology
+(#38)
+Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per token, delivering performance comparable to models with 10 to 20x higher active compute, which makes it well suited for cost-sensitive, always-on agent deployment.
+
+The model is trained with a strong agentic focus and performs reliably on long-horizon coding tasks, complex tool usage, and recovery from execution failures. With a native 256k context window, it integrates cleanly into real-world CLI and IDE environments and adapts well to common agent scaffolds used by modern coding tools. The model operates exclusively in non-thinking mode and does not emit
+<think>
+blocks, simplifying integration for production coding agents.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.11
+/M input
+tokens
+$
+0.80
+/M output
+tokens
+Qwen: Qwen3.5-35B-A3B
+50.8B
+tokens
+Programming
+(#43)
+Science
+(#38)
+The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.14
+/M input
+tokens
+$
+1
+/M output
+tokens
+Qwen: Qwen3 Coder 480B A35B
+49.1B
+tokens
+Programming
+(#31)
+Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).
+
+Pricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.
+Show more
+by
+
+qwen
+1.05M
+context
+$
+0.22
+/M input
+tokens
+$
+1.80
+/M output
+tokens
+Qwen: Qwen3.6 35B A3B
+39.2B
+tokens
+Translation
+(#45)
+Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.15
+/M input
+tokens
+$
+1
+/M output
+tokens
+DeepSeek: DeepSeek V4 Flash (free)
+38.3B
+tokens
+Programming
+(#41)
+DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
+
+The model includes hybrid attention for efficient long-context processing. Reasoning efforts
+high
+and
+xhigh
+are supported;
+xhigh
+maps to max reasoning. It is well suited for applications such as coding assistants, chat systems, and agent workflows where responsiveness and cost efficiency are important.
+Show more
+by
+
+deepseek
+1.05M
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Qwen: Qwen3 VL 235B A22B Instruct
+36.3B
+tokens
+Finance
+(#19)
+Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies strong text generation with visual understanding across images and video. The Instruct model targets general vision-language use (VQA, document parsing, chart/table extraction, multilingual OCR). The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.
+
+Beyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows—turning sketches or mockups into code and assisting with UI debugging—while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents.
+Show more
+by
+
+qwen
+262K
+context
+$
+0.20
+/M input
+tokens
+$
+0.88
+/M output
+tokens
+NVIDIA: Nemotron 3 Nano 30B A3B (free)
+35.2B
+tokens
+Legal
+(#48)
+NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.
+
+The model is fully open with open-weights, datasets and recipes so developers can easily
+customize, optimize, and deploy the model on their infrastructure for maximum privacy and
+security.
+Show more
+by
+
+nvidia
+256K
+context
+$
+0
+/M input
+tokens
+$
+0
+/M output
+tokens
+Mistral: Mistral Small 4
+34B
+tokens
+Trivia
+(#33)
+Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from Magistral, multimodal understanding from Pixtral, and agentic coding capabilities from Devstral, enabling one model to handle complex analysis, software development, and visual tasks within the same workflow.
+Show more
+by
+
+mistralai
+262K
+context
+$
+0.15
+/M input
+tokens
+$
+0.60
+/M output
+tokens
+Meta: Llama 3.3 70B Instruct
+31.6B
+tokens
+Health
+(#47)
+Legal
+(#43)
+Marketing
+(#16)
+Trivia
+(#31)
+The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.
+
+Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
+
+Model Card
+Show more
+by
+
+meta-llama
+131K
+context
+$
+0.10
+/M input
+tokens
+$
+0.32
+/M output
+tokens

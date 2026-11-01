@@ -1,0 +1,453 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/box-com/
+page path  : /product/plugins/box-com/
+captured   : 2026-01-21 09:08:04 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_box-com__a28ba81f.html.gz
+========================================================================
+
+Plugin: Box.com | Dataiku
+
+Plugin: Box.com | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Box.com
+
+Box.com
+
+This plugin provides a read/write connector to interact with files on Box.com
+
+Plugin information
+
+Version
+
+1.2.0
+
+Author
+
+Dataiku (Alex Bourret)
+
+Released
+
+2019-12-03
+
+Last updated
+
+2025-07-01
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+How to set up
+
+You need to install the plugin in Dataiku DSS. Go to the Administration > Plugins page. The plugin requires the installation of a code environment.
+
+In order to use the plugin, the administrator of the box.com account will have to create an box.com app:
+
+As administrator, go to your
+box.com account page
+and upgrade to developer.
+
+From the administrator’s
+developers console
+, create a new app, select
+Limited Access App
+
+Name your app.
+
+People given access to this app will be able to access all files shared to it. Where access to dataset must be restricted to a given group, make and name a separate app for this purpose.
+
+From the App configuration panel, create and copy a primary and / or secondary access token.
+
+Go to the plugin’s setting page (
+Plugins > Installed > Box.com > Settings > Box.com connection
+or
+Project > Settings> Plugins presets
+). Create a new preset, and paste the access token copied from step 4. Go to the plugin’s setting page and create a preset. In the preset, paste the access token.
+
+How to use
+
+The plugin does not have direct access to the user’s files, but to the app service account. Data can be share with DSS by sharing files or directory with this service account. To do so, you need first to retrieve the app’s sharing email address:
+
+Inside a DSS project, go to the
+Macros
+menu
+
+Select the
+Get Box.com
+sharing email macro
+
+Pick a previously created preset, or fill in the access token using
+Manually defined
+. Then press
+Run Macro
+
+Copy the email address returned.
+
+To make files visible to DSS, you will need to share them from your box account with this email address:
+
+Go to your box.com account, locate the files or directories you want to share with DSS and click “Share”
+
+Find and share your box.com items
+
+In the “Invite People” dialog box, paste the email address copied from step 4
+
+Share with the DSS plugin service account
+
+Once this is done, you can create a new dataset using the box.com plugin. First, create the dataset by picking box.com in the dataset section :
+
+Choose the Filesystem provider, and fill in the details copied from the app configuration panel.
+
+From the connector’s
+Settings > Files
+panel, you should now be able to browser your box directory and select the file or directory you want to access.
+
+Browsing speed can be slightly increased by activating the cache option. However this is not available in MUS context.
+
+Write data into Box.com
+
+In your DSS project flow, select
+Dataset > Folder
+
+Choose
+Box.com
+in the
+Store into
+parameter and click
+Create.
+An
+External code failed
+error may appear because you have not selected your Preset yet.
+
+In the
+Settings
+tab of the folder, select your Preset in the
+Box.com connection
+parameter, and save. You can now export your dataset into your newly created Box.com managed folder.
+
+Install In Dataiku
+
+To install the plugin, open the
+Apps menu, click Plugins and search for SharePoint Online.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

@@ -1,0 +1,291 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/design-thinking-ml
+page path  : /blog/design-thinking-ml
+captured   : 2026-04-19 04:49:32 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_design-thinking-ml__5b9a3496.html.gz
+========================================================================
+
+How we leverage concepts from design thinking to design ML systems in our internal processes to deliver results for customers. | Scale AI
+
+How we leverage concepts from design thinking to design ML systems in our internal processes to deliver results for customers. | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Engineering
+Design Thinking for ML Systems at Scale
+by
+
+Thomas Liao
+and
+Andrew Kondrich
+Published
+March 28, 2022
+Reading Time
+11 min read
+Copy Link
+Background
+At Scale AI, we’re always looking for ways to apply machine learning (ML) in
+our internal systems to deliver the best results for our customers. We’ve
+previously written about Scale’s
+ML-powered pre-labeling
+as well as our
+active tooling, like Autosegment
+, which helps our Taskers label faster and at higher quality.
+In this piece, we discuss how we think about and incorporate some basic tenets
+of design thinking to develop ML systems that make a difference for our
+labeling pipeline.
+Design thinking
+is a mindset and set of practices which foster the collaboration required to
+solve problems in human-centered ways and was notably popularized by
+organizations such as IDEO. It’s useful for machine learning engineers who
+need to understand the full scope of how the system they are building will be
+used and are responsible for both business and operational outcomes. We’ll
+describe how design thinking techniques can be applied to scoping machine
+learning problems and introduce some concepts to help business stakeholders
+communicate more effectively with ML engineers.
+Idealized phases of developing an ML system. In practice, it’s not this
+linear.
+In our experience, the different phases of developing an ML system are:
+Discovery - Locate a business or operational pain point
+Design - Map the different ways a new or existing model could fit into the
+Design - Map the different ways a new or existing model could fit into the
+extant pipeline
+stakeholders on scope and resourcing
+Development, Integration, Deployment - Deliver the system. Build data
+Decision & Alignment - Align with operational and engineering
+stakeholders on scope and resourcing
+an intervention on the existing pipeline.
+Continuous improvement - Monitor and retrain to account for distribution
+Development, Integration, Deployment - Deliver the system. Build data
+pipelines, train models, integrate into the pipeline, etc.
+Prepopulate the scene with bounding boxes (pre-labelling)
+Suggest fixes to bounding boxes made in real-time by a tasker (active
+Measurement & Experimentation - Identify the effect of the ML system as
+an intervention on the existing pipeline.
+For each of these, the inference API could have the exact same request and
+return formats. However, each of the four approaches above require different
+Continuous improvement - Monitor and retrain to account for distribution
+shifts and new edge cases
+humans and implicitly maps these to legible subpopulations of taskers.
+Active tooling can require nontrivial operational investment in teaching
+This is a descriptive mental model, not a prescriptive blueprint. In reality,
+a project is always moving between different phases and can often be in
+multiple phases at the same time. For example, measurement and development
+form a tight iteration loop. But, it’s still useful to think about these
+phases in isolation.
+Concepts from design thinking are mostly employed in the
+Discovery and Design phases when the problem
+statements are the most inchoate and ill-formed. In these phases, the need or
+specific outcome is communicated to an ML engineer and an initial strategy to
+address that need or deliver that outcome is designed. We focus on the
+Discovery and Design phases in this blog and cover the remaining phases
+briefly.
+Phase 1: Discovery
+An ML system gains life when a need is discovered. By need, we distinguish
+between a request for a specific feature, such as a linter (a tool we use to
+ensure data quality), and the underlying operational or business pain point or
+problem - such as a new labelling capability requiring ML support. It’s not
+uncommon for operational or business teams to stumble into the
+XY problem
+by pattern matching and requesting a clone of an existing feature, without
+realizing that their underlying problem is actually quite different. Or, they
+might ask for something which is incredibly difficult, unaware that a slightly
+modified version would save literally months of development time. So an ML
+engineer should always hunt down the true problem that needs to be solved.
+Pain points and problems can be project-specific or exist horizontally across
+business teams or units. Historically, many of the problems that the ML team
+at Scale have tackled are project-specific and brought to us
+by our cross-functional stakeholders. For example, a project manager running
+into issues with a labeling project or a product manager looking to launch a
+new feature will surface these project-specific issues to our team. Tackling
+these isolated problems can result in marooned solutions which aren’t readily
+reusable.
+Solving horizontal issues, in comparison, maximizes our
+leverage, since the ML systems we build will then scale with our business.
+However, cross-business issues that can be solved with ML are often harder to
+identify because of the sheer operational complexity. These issues require a
+more active discovery process and take more time and deeper alignment with
+partners. The problems with the highest stakes are not obvious to ML
+engineers, who don’t get day to day exposure to them, even as these frictions
+impose significant pain on the operations or business side. To get a sense for
+this, imagine explaining the pain of managing multiple python environments and
+package versions to an operational lead - it can be incredibly painful for
+you, yet esoteric, even cryptic, to them.
+As another example, while working on an image semantic segmentation project,
+we learned that pre-labels generated by a model specific to that project were
+sometimes ignored by taskers, but the root causes were unclear. A close
+investigation identified a number of culprits, ranging from the inflexibility
+of pre-labels to having optimized for the wrong metric during development.
+Autosegment
+, developed by Sean Li, Saleh Hamadeh, and the two of us, aims to tackle
+these problems. Autosegment solves a challenge for all image segmentation
+projects and isn’t restricted to a particular project. Learning about this
+challenge and building the appropriate solution required input from numerous
+stakeholders - from the project leads, who wanted to accelerate taskers; the
+taskers themselves, who used our tools and knew what worked and what didn’t;
+to engineers, who were familiar with the implementation of image segmentation
+in our interface and understood the kinds of tradeoffs that different tools
+would be need to make.
+Example overlap of concerns between different stakeholders for a new
+ML-assisted tool.
+Identifying the pain points of the end user always requires talking to the end
+user. Instead of theorizing what could be a problem for them, it’s always more
+effective to speak to users directly and observe them as they encounter the
+problem. When building systems to accelerate labeling operations, ML engineers
+need to build user empathy. A simple way to build user empathy is to spend
+time tasking and dogfooding our own platform. There is no substitute for first
+hand experience for understanding what makes tasking hard.
+Phase II: Design
+After Discovery, the project enters a design phase where an
+initial approach is sketched out - what kind of model to build, what sort of
+data is needed, the timelines, and so on.
+Designing effective ML systems at Scale requires two things: a clear need,
+which we’ve discussed above, and knowing the many different ways a model can
+fit into the labelling pipeline.
+This last point is worth further elaboration. The same machine learning model
+can be used for a variety of operational purposes. For example, a model that
+predicts bounding boxes for cars can be used to:
+Estimate the number of boxes in a task (task difficulty estimation)
+Prepopulate the scene with bounding boxes (pre-labelling)
+interface with the rest of the operational and engineering systems, in
+Suggest fixes to bounding boxes made in real-time by a tasker (active
+tooling)
+Identify missing boxes or unexpected boxes in a completed scene (linting)
+For each of these, the inference API could have the exact same request and
+return formats. However, each of the four approaches above require different
+operational adjustments, not all of which may be feasible. Task difficulty
+estimation makes assumptions about what makes a task difficult or easy for
+humans and implicitly maps these to legible subpopulations of taskers.
+Active tooling can require nontrivial operational investment in teaching
+taskers how to use the new tool and engineering lift to build new frontend
+components. Building a useful ML system means designing how an ML model will
+interface with the rest of the operational and engineering systems, in
+conjunction with actually training the ML model.
+The same model may be applied in different ways to an existing pipeline,
+requiring different accommodations by engineering or operational teams.
+We’ve noticed two particular traps for ML engineers which can lead them on
+wild goose chases during the design phase. The first is misalignment between
+the machine learning problem and the business problem. The second is confusing
+the customer and the end user of a system.
+ML engineers are trained to use models to solve machine learning tasks, like
+box detection or text classification. For a box detection dataset, you’d use a
+box detection model. For a text classification dataset, a text classification
+model. When the business problem looks like an image classification problem,
+you might reach for an image classification model, only to discover that what
+you really need to solve is tabular regression.
+Faced with using ML to assist, say, labelling semantic segmentation training
+data, a common reflex is to train a semantic segmentation model to do the
+labelling. But if you already had a capable model, you wouldn’t need to
+collect training data for it! The mistake here is to apply the familiar task
+paradigm - semantic segmentation - to solve the business problem -
+accelerating semantic segmentation.
+Many operational questions take the form “Is something X or not X?” To an ML
+engineer, this sounds like a classification problem, and it’s easy to reach
+for a classification model which directly answers the question. Putting aside
+whether modeling X directly is feasible, it’s often the case that we already
+have an operational or engineering system which could answer this question
+more effectively with some additional information. In this situation, it may
+be faster to figure out how to extract the augmenting information rather than
+replicate the existing system altogether; a strong reason to apply a modeling
+scheme that looks very different from the modeling question.
+Modeling the business problem to solve doesn’t always mean reaching for the
+most obvious machine learning task paradigm.
+The second trap is mistaking the end user of a system with the people who
+request or manage the system. When we build a tool like
+Autosegment
+, even though the end user of the active tooling is the Tasker, the internal
+customer is actually the Delivery Operations team. What we build has to meet
+the customer’s expectations, so even if Taskers enjoy using our tool, we need
+to make sure to move the needle for the Delivery Operations team. But the
+expectations and needs of the end user may differ or conflict from the
+internal customer (e.g. latency tradeoff with cost).
+In order to avoid falling into these two traps, ML engineers have to be
+deliberate in how they transport the business problem into a machine learning
+context; and always keep in mind the different stakeholders.
+Phases III - VI: Decision and Alignment Through Continuous Improvement
+After the initial Discovery and Design phases, the project needs a go / no-go
+decision by both the
+ML team as well as cross-functional teams. In this phase, all
+teams must decide whether to allocate the necessary resources to the project.
+If the ML team decides to dedicate resources but the cross-functional team
+cannot commit the time or spare the bandwidth, the effort will ultimately fall
+short. Some factors teams must consider when making this decision include:
+prioritization, level of effort needed, and available bandwidth.
+Once all teams commit to the project, we can develop the
+ML-specific components of the ML system. This is when we build data pipelines,
+train models, and ship an endpoint. Once the model is developed, the project
+nearly always needs engineering and operational integration.
+For example, if we are developing a new pre-labeling model, the model requires
+integration with our labeling pipelines to attach the pre-label to the task.
+Now the project is actually deployed. Deployment should also
+follow best practices: meaning the feature should only be enabled for a small
+percent of tasks or users at the beginning, making it easier to revert if
+there are any issues. The system should then be constantly
+measured. Especially in the first few weeks, close attention
+should be paid to ensure no issues arise.
+We then use the metrics and qualitative feedback gathered in the measurement
+step to continuously improve the model. Models often need to
+be retrained to account for new edge cases. As we maintain the production
+model, we often encounter data distribution shifts or taxonomic changes which
+must be addressed.
+Conclusion:
+We hope this post provided some insight on how we design our ML systems and
+how you and your teams can effectively partner with horizontal teams to deploy
+models that serve your business needs. Throughout the phases of ML
+development, we strive to ensure alignment with our cross-functional
+stakeholders. While gaining and maintaining alignment takes time and
+deliberate effort, it allows us to unlock capabilities on our platform that
+wouldn’t otherwise be possible.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

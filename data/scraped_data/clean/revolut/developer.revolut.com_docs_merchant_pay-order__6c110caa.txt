@@ -1,0 +1,477 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/merchant/pay-order
+page path  : /docs/merchant/pay-order
+captured   : 2026-01-15 14:49:42 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_merchant_pay-order__6c110caa.html.gz
+========================================================================
+
+Pay for an order | Revolut Docs
+
+Pay for an order | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Merchant API
+Version
+Introduction
+API versions
+Orders
+Introduction
+Create an order
+Retrieve an order
+Update an order
+Retrieve an order list
+Capture an order
+Cancel an order
+Refund an order
+Pay for an order
+Retrieve payment list of an order
+Customers
+Payments
+Introduction
+Pay for an order
+Retrieve payment list of an order
+Retrieve payment details
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Apple Pay merchant registration
+Other
+Orders
+Pay for an order
+Pay for an order
+
+Initiate a payment to pay full amount for an order using a customer's saved payment method.
+
+Note
+The
+/orders/{order_id}/confirm
+endpoint has been deprecated. It will be only supported for already existing implementations.
+
+Caution
+This endpoint is part of a new API, pay attention to the different endpoint URL.
+
+For more information about how to save and charge payment methods, see:
+Charge a customer's saved payment method
+.
+
+The following table shows who can initiate payments on saved payment methods (
+initiator
+parameter), depending on if the payment method was saved for the customer or the merchant (
+savedPaymentMethodFor
+parameter):
+
+savePaymentMethodFor: customer
+savePaymentMethodFor: merchant
+initiator: customer
+Allowed
+Allowed
+initiator: merchant
+Not allowed
+Allowed
+
+Note
+Using this endpoint, only merchant initiated payments are supported with Revolut Pay.
+
+For more information about customers' payment methods, see the
+Retrieve all payment methods of a customer
+operation.
+
+Request
+​
+Path parameters
+Path parameters
+Expand
+order_id
+string(uuid)
+required
+The ID of the
+Order
+object.
+Header parameters
+Header parameters
+Expand
+Authorization
+string(Bearer <yourSecretApiKey>)
+required
+Example:
+
+"Bearer sk_1234567890ABCdefGHIjklMNOpqrSTUvwxYZ_1234567890-Ab_cdeFGHijkLMNopq"
+This parameter accepts the
+Merchant API Secret key
+to authorise requests coming from the merchant's backend.
+
+It ensures that ensures that each request is authenticated and authorised by verifying the secret key. The secret key should be included in all request headers as a
+Bearer
+token.
+
+Info
+For more information, see:
+Authentication
+Request body
+Body
+
+object
+Expand
+saved_payment_method
+object
+required
+Object containing information about the saved payment method used to pay for the order.
+type
+string
+required
+Possible values:
+[
+card
+,
+revolut_pay
+]
+
+Example:
+
+"card"
+Type of saved payment method.
+id
+string
+required
+Saved payment method ID.
+initiator
+string
+required
+Possible values:
+[
+customer
+,
+merchant
+]
+
+Example:
+
+"customer"
+Indicates who is allowed to initiate the payment.
+
+Note
+Using this endpoint, only merchant initiated payments are supported with Revolut Pay.
+environment
+object
+required
+Environment object, indicating in which environment the payment was made.
+
+Caution
+Only required if
+initiator: customer
+.
+
+Note
+Only
+browser
+is available at the moment.
+One of
+·
+browser
+Browser environment
+type
+string
+required
+Possible values:
+[
+browser
+]
+
+Example:
+
+"browser"
+Type of environment where the payment was made.
+time_zone_utc_offset
+integer
+required
+Example:
+
+180
+Defines the offset to UTC in minutes.
+color_depth
+integer
+required
+Example:
+
+32
+The browser's available colour depth.
+screen_width
+integer
+required
+Example:
+
+1920
+The browser's screen width in pixels.
+screen_height
+integer
+required
+Example:
+
+1080
+The browser's screen height in pixels.
+java_enabled
+boolean
+required
+Example:
+
+false
+Indicates if the browser has Java enabled.
+challenge_window_width
+integer
+Example:
+
+640
+Defines the width of the pop-up window where the authentication challenge appears.
+browser_url
+string(url)
+Example:
+
+"https://business.revolut.com"
+The URL of the page where the payment was initiated.
+
+Response
+​
+200
+400
+401
+404
+Payment initiated
+Response body
+Body
+
+object
+Expand
+id
+string(uuid)
+required
+The ID of the payment.
+order_id
+string(uuid)
+required
+Permanent order ID used to retrieve, capture, cancel, or refund an order after authorization.
+payment_method
+object
+required
+The payment method used to pay for the order.
+One of
+·
+revolut_pay
+One of
+·
+revolut_pay_account
+type
+string
+required
+Possible values:
+[
+card
+,
+revolut_pay
+]
+The type of payment method used to pay for the order.
+subtype
+string
+required
+Possible values:
+[
+revolut_account
+,
+card
+]
+Indicates whether the customer used their card or Revolut account via Revolut Pay.
+id
+string(uuid)
+ID of the saved payment method.
+
+Note
+The
+id
+parameter is only returned if the payment method is saved.
+state
+string
+Possible values:
+[
+pending
+,
+authentication_challenge
+,
+authentication_verified
+,
+authorisation_started
+,
+authorisation_passed
+,
+authorised
+,
+capture_started
+,
+captured
+,
+refund_validated
+,
+refund_started
+,
+cancellation_started
+,
+declining
+,
+completing
+,
+cancelling
+,
+failing
+,
+completed
+,
+declined
+,
+soft_declined
+,
+cancelled
+,
+failed
+]
+The status of the payment.
+authentication_challenge
+object
+Details about the authentication challenge that should be performed to complete the authentication process. For more information about Revolut's 3DS solution, see:
+3D Secure overview
+.
+
+Only returned if the payment's state is
+authentication_challenge
+.
+One of
+·
+three_ds
+Information about the 3DS challenge.
+type
+string
+required
+Possible values:
+[
+three_ds
+,
+three_ds_fingerprint
+]
+Type of the authentication challenge the payment triggers.
+acs_url
+string(url)
+required
+The URL of the authentication challenge.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

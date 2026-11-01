@@ -1,0 +1,9 @@
+scenario,method,model_or_components,companies,evaluations_per_company,company_evaluations,model_calls,total_recorded_cost_usd,mean_cost_per_company_evaluation_usd,aggregated_correct,aggregated_accuracy
+main_three_runs,Single,mistralai/mistral-small-2603,49,3,147,147,0.9389310525,0.006387286071428571428571428571,35,0.7142857142857143
+main_three_runs,LLMC,three workers + judge,49,3,147,588,13.9147594930,0.09465822784353741496598639456,39,0.7959183673469388
+main_three_runs,GPT worker,openai/gpt-5-mini,49,3,147,147,1.82519625,0.01241630102040816326530612245,38,0.7755102040816326
+main_three_runs,Mistral worker,mistralai/mistral-small-2603,49,3,147,147,0.9653987250,0.006567338265306122448979591837,35,0.7142857142857143
+main_three_runs,Gemini worker,google/gemini-2.5-pro,49,3,147,147,10.66321975,0.07253890986394557823129251701,40,0.8163265306122449
+main_three_runs,Worker vote,three workers; no judge call,49,3,147,441,13.4538147250,0.09152254914965986394557823129,41,0.8367346938775511
+main_three_runs,Qwen judge,qwen/qwen3.7-plus,49,3,147,147,0.460944768,0.003135678693877551020408163265,,
+separate_gemini_single_run,Gemini standalone,google/gemini-2.5-pro,48,1,48,48,3.58459625,0.07467908854166666666666666667,41,0.8541666666666666

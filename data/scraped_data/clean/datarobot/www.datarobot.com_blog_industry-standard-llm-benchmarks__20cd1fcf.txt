@@ -1,0 +1,905 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/industry-standard-llm-benchmarks/
+page path  : /blog/industry-standard-llm-benchmarks/
+captured   : 2026-06-10 07:01:40 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_industry-standard-llm-benchmarks__20cd1fcf.html.gz
+========================================================================
+
+Industry-standard LLM benchmarks in DataRobot | DataRobot Blog
+
+Industry-standard LLM benchmarks in DataRobot | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Industry-standard LLM benchmarks in DataRobot
+
+Every LLM deployment has a ceiling, a latency curve, and a unit cost. Most teams operate blindly, discovering their deployment limits only when over-provisioning exhausts their GPU budget or peak traffic causes a catastrophic failure.
+
+Three numbers matter: maximum sustained concurrency before GPU saturation, end-to-end latency at that concurrency, and cost per million tokens at sustained load. These metrics emerge from how the model interacts with your hardware, runtime, tokenizer, and traffic mix.
+
+DataRobot 11.8 changes that with
+LLM Profiling Jobs
+: a native integration of
+NVIDIA AIPerf
+, the industry-standard generative AI benchmarking tool. One authenticated
+POST
+benchmarks any DataRobot LLM deployment serving an OpenAI-compatible web server, sweeps the concurrency range and use cases you define, and returns the empirical inputs to
+Quota Reservations
+(available in DataRobot 11.9).
+
+Why LLM capacity is hard to predict
+
+LLM inference doesn’t scale linearly. Compute and memory demands per request depend dynamically on prompt length, response length, sampling parameters, and KV cache utilization.A deployment that serves 50 short chat turns per second can stall at 5 long-context RAG requests per second on the same hardware. Four distinct behaviors make static or speculative capacity estimates unreliable:
+
+Latency is non-linear in concurrency.
+Time to first token and inter-token latency stay roughly flat across a wide concurrency range, then rise sharply once GPU memory bandwidth or compute saturates. TTFT rises when prefill compute saturates; inter-token latency rises when decode memory bandwidth saturates. Which one bites first depends on the workload mix and the deployment’s GPU configuration (single card or a cluster). The saturation knee is the operating point that matters, and it can’t be inferred from a single low-load measurement.
+
+Throughput and latency trade off.
+You can squeeze more total tokens per second out of a deployment by running it at higher concurrency, at the cost of slower per-user response. The right trade-off depends on your SLO, not on a generic recommendation.
+
+Use case mix matters.
+Two deployments running the same model on the same hardware can have very different capacity if one serves short Q&A and the other serves long-context summarization. The mix has to be in the test, or the test is wrong.
+
+Caching and routing change the answer.
+Prefix caching (common in agentic coding with periodic compaction) and KV-aware routing can lift effective throughput dramatically. Profiles run against a cold deployment with random inputs represent the floor, not the ceiling.
+
+LLM Profiling Jobs make those curves visible.
+
+How LLM benchmarks help
+
+Defend capacity and quota decisions with measured data.
+When finance questions a four-H100 footprint, or when cross-functional teams negotiate shared capacity, you can justify the architecture with empirical profiling data. Saturation knee, SLO target, and forecast traffic make GPU sizing an evidence-based line item. The same numbers feed Quota Reservations directly.
+
+Account for cost per consumer.
+Total token throughput plus the GPU instance cost gives a cost-per-million-tokens figure that supports chargeback or showback. Attribute spend to consumers proportionally to their reservations, not by guesswork.
+
+Compare models and hardware on equal terms.
+Hold the workload profile constant and vary one dimension at a time: the same model on different GPU configurations (a B200 node vs a B300 node, or 4×H100 vs 8×H100), or different models on the same configuration (Qwen3.6 35B-A3B MoE vs Qwen3.6 27B dense). Because AIPerf metrics match NVIDIA’s published NIM benchmarks, the numbers are also directly comparable to public benchmarks for the same model and hardware combinations. The right input for procurement and capacity-sizing decisions before a hardware order.
+
+Prove a change is safe before you ship it.
+Before a model upgrade, vLLM bump, driver swap, or GPU migration, rerun the same profile and compare against the prior baseline. Regressions show up in the metrics, not in incident reports.
+
+What LLM benchmark metrics mean
+
+The four headline metrics AIPerf returns map directly to user experience and to GPU economics:
+
+Time to first token (TTFT, ms).
+Measures how long a user waits between submitting a prompt and seeing the first character; this metric is dominated by prefill compute.
+
+Inter-token latency (ITL, ms).
+Average time between successive output tokens once generation has started. Sets the perceived “typing speed” of the response.
+
+Request throughput (requests/sec).
+Full request-and-response cycles per second at the tested concurrency. The basis for the Capacity (RPM) value on Quota Reservations.
+
+Total token throughput (tokens/sec).
+Total tokens (input plus output) processed per second across all concurrent requests. The basis for cost-per-token economics.
+
+For each metric, AIPerf reports averages and percentiles (p50, p90, p99). When GPU saturation is detected during the sweep,
+estimatedCapacity
+reports the iteration immediately before it. When saturation isn’t detected (the common case, since the profiler isn’t co-located with the deployment),
+estimatedCapacity
+reports the last iteration tested. Sweep wide enough that the curve clearly bends, or treat the result as a lower bound.
+
+Submitting a job
+
+A profiling request takes four parameters: a
+deploymentId
+(the ID of the DataRobot LLM deployment you want to profile), a list of concurrency levels to sweep, a request count scalar (how many requests each concurrent worker issues), and one or more use cases. Each use case defines an input sequence length (ISL), an output sequence length (OSL), standard deviations for both, and a weight (
+prob
+). Weights across all use cases must sum to 100.
+
+export DATAROBOT_ENDPOINT="https://app.datarobot.com"
+export DR_API_KEY="<your DataRobot API key>"
+export HUGGINGFACE_DR_CRED_ID="<your DataRobot credential ID>"
+export DEPLOYMENT_ID="<your DataRobot LLM deployment ID>"
+export CONCURRENCIES="[1,10,50,100]"
+export REQUEST_COUNT_SCALAR=2
+export MODEL_TOKENIZER="openai/gpt-oss-20b"
+export USE_CASES='[{"isl":200,"islStddev":15,"osl":1000,"oslStddev":15,"prob":100}]'
+
+curl -X POST -H "Authorization: Bearer ${DR_API_KEY}" \
+-H "Content-Type: application/json" \
+"${DATAROBOT_ENDPOINT}/api/v2/llmProfilingJobs/" \
+-d @- <<EOF
+{
+"deploymentId": "${DEPLOYMENT_ID}",
+"credentialId": "${HUGGINGFACE_DR_CRED_ID}",
+"concurrencies": ${CONCURRENCIES},
+"tokenizer": "${MODEL_TOKENIZER}",
+"requestCountScalar": ${REQUEST_COUNT_SCALAR},
+"useCases": ${USE_CASES}
+}
+EOF
+
+A
+202 Accepted
+response returns the job ID, an execution ID, and a status ID:
+
+{
+"id": "69e09f9e25fdfdfab0d27925",
+"jobExecutionId": "69e09f9f25fdfdfab0d27926",
+"statusId": "5633f028-3f68-4f83-bddc-560d266d6bd2"
+}
+
+Monitoring and retrieving LMM benchmark results
+
+Poll the Status API with the returned
+statusId
+. When the job finishes, the API returns
+303 See Other
+and the
+Location
+header points to the results endpoint:
+
+curl -s -L -i \
+-H "Authorization: Bearer ${DR_API_KEY}" \
+"${DATAROBOT_ENDPOINT}/api/v2/status/${STATUS_ID}/"
+
+Fetch the full results with the profiling job
+id
+:
+
+curl -H "Authorization: Bearer ${DR_API_KEY}" \
+"${DATAROBOT_ENDPOINT}/api/v2/llmProfilingJobs/${LLM_PROFILING_JOB_ID}/profilingResults/"
+
+Example payload (truncated):
+
+{
+"estimatedCapacity": {
+"metrics": [
+{ "name": "request_throughput", "units": "requests/sec", "measurements": [{ "name": "avg", "value": 8.84 }] },
+{ "name": "inter_token_latency", "units": "ms", "measurements": [{ "name": "avg", "value": 23.79 }] },
+{ "name": "time_to_first_token", "units": "ms", "measurements": [{ "name": "avg", "value": 833.06 }] },
+{ "name": "total_token_throughput", "units": "tokens/sec", "measurements": [{ "name": "avg", "value": 4524.80 }] }
+]
+},
+"results": [ "...per-iteration benchmark data..." ]
+}
+
+estimatedCapacity
+is the sustained operating point.
+results
+contains one entry per concurrency level tested, with the full metric set.
+
+Reading the curve
+
+The estimated-capacity numbers tell you the sustained ceiling. The per-iteration results show you how the deployment behaves as load climbs toward that ceiling. The table below is an illustrative example.
+
+Concurrent requests
+TTFT (ms)
+Total throughput (tokens/sec)
+Note
+1
+~150
+~600
+Low load, near-floor latency
+10
+~250
+~2,500
+Throughput scales nearly linearly
+50
+~800
+~4,500
+estimatedCapacity
+returned from this iteration
+100
+~1,500
+~4,600
+Saturated: TTFT roughly doubles, throughput plateaus
+
+When AIPerf detects GPU saturation during the sweep, it identifies the iteration before it (concurrency 50 here) and returns those metrics as
+estimatedCapacity
+. When saturation isn’t detected,
+estimatedCapacity
+is simply the last iteration tested, which is why the sweep needs to extend past the knee. Anything past that point trades user-perceived latency for marginal throughput gains. If the product spec calls for TTFT under 1 second, the curve shows the deployment supports up to roughly 50 concurrent requests with margin: provision GPU so peak concurrent demand stays at or below that level.
+
+From profiling result to Quota Reservations config
+
+The bridge from a profiling run to a Quota Reservations configuration is direct:
+
+Quota setting
+Where it comes from
+Example (from sample above)
+Capacity (RPM)
+estimatedCapacity.request_throughput
+× 60
+8.84 req/sec × 60 ≈
+530 RPM
+Utilization Threshold
+Pick 70–80% of Capacity so enforcement engages before the saturation knee
+80% → enforcement at ~424 RPM
+Reserved % per consumer
+Sized to the minimum each priority consumer needs during contention
+30% Production Agent A, 20% Agent B, 30% Agent C, 20% unreserved pool
+Refill rate
+Capacity / 60 (requests per second)
+530 / 60 ≈ 8.83 req/sec
+
+For a primer on how Capacity, Utilization Threshold, and Reserved % interact under load, see
+Rate Limiting vs. Quota Reservations
+.
+
+A worked cost example
+
+Take the sample result: 4,524 total tokens per second sustained (input plus output). That is roughly 16.3 million tokens per hour from one deployment.
+
+If the underlying GPU instance costs $X per hour, the cost per million tokens is $X / 16.3. For an instance at $4 per hour, that is about $0.25 per million tokens. For $12 per hour, about $0.74. To calculate cost per million
+output
+tokens—the standard benchmark for public API comparisons—divide the total cost by the workload’s output share. For example, given an ISL of 200 and an OSL of 1000, output accounts for roughly 83% of total tokens. At a $4 hourly instance price, this translates to approximately $0.30 per million output tokens.
+
+Every benchmark run gives you a fresh, accurate cost-per-token figure for the exact model, hardware, and quantization combination you’re running. After a vLLM upgrade or a hardware swap, re-run the same profile and confirm your unit economics improved instead of trusting a vendor claim. This is the foundation for per-token and per-agent cost transparency in chargeback.
+
+Choosing your inputs
+
+A useful profile starts with two questions: what concurrency range do you expect in production, and what does your traffic actually look like?
+
+Concurrencies to sweep.
+Start wide (
+[1, 10, 50, 100]
+) to locate the saturation knee, then narrow (such as
+[40, 50, 60, 70]
+) for an SLO-grade reading around that point.
+
+Request count scalar.
+Set it high enough that each iteration runs long enough to smooth out noise. A scalar of 2 is a reasonable starting point. Raise it if variance looks high.
+
+Use cases.
+Match your real traffic mix. If you serve 70% short chat turns (ISL 200, OSL 300) and 30% long-context RAG (ISL 4000, OSL 800), define two use cases with
+prob: 70
+and
+prob: 30
+. Testing a blended traffic mix exposes tail-latency behavior (such as p99 spikes) that a single-use-case average obscures.
+
+Tokenizer.
+Set it explicitly. The benchmark depends on accurate token counts, so the matching tokenizer is part of a correct measurement.
+
+Operational notes
+
+Profiling generates synthetic load. Run jobs against a non-production LLM deployment or during a maintenance window.
+
+Because the traffic is synthetic, prefill cache hits won’t appear in token metrics.
+
+Profiling treats the deployment as a black box. Whether the deployment runs on one GPU or many, and whatever combination of tensor, pipeline, data, or expert parallelism it uses, the profile measures the externally observable result.
+
+Jobs can be canceled with a
+DELETE
+to the profiling job ID. Cancellation is best-effort and may not stop a run that is nearly complete.
+
+Before you submit, store your Hugging Face token in
+DataRobot Credential Management
+as an “API Token (API Key)” credential. AIPerf uses it to fetch the model tokenizer, and the stored credential prevents rate-limit errors.
+
+Get access
+
+LLM Profiling Jobs are in private preview in DataRobot 11.8. To enable on your tenant, contact your DataRobot account team. They will turn on the
+Enable Dynamic Quota Capacity Profiling
+feature flag (the internal name for LLM Profiling Jobs) and configure the profiling job image in your cluster.
+
+Learn more
+
+Rate Limiting vs. Quota Reservations: When to Use Each and Why It Matters
+
+NVIDIA AIPerf project on GitHub
+
+NVIDIA NIM LLMs Benchmarking documentation
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Authors
+
+by
+
+Abdelrahman (Abdo) Mahmoud
+
+,
+
+Will Cunningham
+
+,
+
+Drew Bednar
+
+May 27, 2026
+
+|
+8 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+Inside the Product
+
+A practical guide for platform teams managing shared AI deployments
+
+May 22, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+How to design and run an agent in rehearsal – before building it
+
+Read More
+
+April 2, 2026
+
+|
+5 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

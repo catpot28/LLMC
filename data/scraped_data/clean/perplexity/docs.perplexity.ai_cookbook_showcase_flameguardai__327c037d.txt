@@ -1,0 +1,275 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/flameguardai
+page path  : /cookbook/showcase/flameguardai
+captured   : 2026-01-25 02:50:39 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_flameguardai__327c037d.html.gz
+========================================================================
+
+FlameGuardAI | AI-powered wildfire prevention - Perplexity
+
+FlameGuardAI | AI-powered wildfire prevention - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+FlameGuardAI | AI-powered wildfire prevention
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+🧠 What it does
+Demo
+Try it out
+Key Features:
+⚙️ How it works
+The FlameGuard AI™ Process
+🔍 Deep Research with Perplexity Sonar API
+Technical Stack
+🏆 Accomplishments that we’re proud of
+📚 What we learned
+🚀 What’s next for FlameGuard AI™ - Prevention is Better Than Cure
+Next Steps:
+Community Showcase
+FlameGuardAI | AI-powered wildfire prevention
+Copy page
+AI-powered wildfire prevention using OpenAI Vision + Perplexity Sonar API
+Copy page
+​
+🧠 What it does
+
+FlameGuard AI™
+helps homeowners, buyers, and property professionals detect and act on
+external fire vulnerabilities
+like wildfires or neighboring structure fires. It’s more than a scan — it’s a personalized research assistant for your home.
+
+​
+Demo
+
+​
+Try it out
+
+FlameGuard AI
+
+FlameGuard AI MCP
+
+GitHub Repo
+
+​
+Key Features:
+
+📸 Upload a home photo
+
+👁️ Analyze visible fire risks via
+OpenAI Vision API
+
+📚 Trigger deep research using the
+Perplexity Sonar API
+
+📄 Get a detailed, AI-generated report with:
+
+Risk summary
+
+Prevention strategies
+
+Regional best practices
+
+🛠️ Optional contractor referrals for mitigation
+
+💬 Claude (MCP) chatbot integration for conversational analysis
+
+🧾 GDPR-compliant data controls
+
+Whether you’re protecting your home, buying a new one, or just want peace of mind —
+FlameGuard AI™ turns a photo into a plan
+.
+
+​
+⚙️ How it works
+
+​
+The FlameGuard AI™ Process
+
+📸 Upload
+: User uploads a photo of their property
+
+👁️ AI Vision Analysis
+: OpenAI Vision API identifies specific vulnerabilities (e.g., flammable roof, dry brush nearby)
+
+🔍 Deep Research
+: For each risk, we generate a
+custom research plan
+and run
+iterative agentic-style calls
+to Perplexity Sonar
+
+📄 Report Generation
+: Research is
+aggregated, organized, and formatted
+into an actionable HTML report — complete with citations, links, and visual guidance
+
+📧 Delivery
+: Detailed report sent via email with DIY solutions and professional recommendations
+
+​
+🔍 Deep Research with Perplexity Sonar API
+
+The real innovation is how we use the
+Perplexity Sonar API
+:
+
+We treat it like a research assistant gathering the best available information
+
+Each vulnerability triggers multiple queries covering severity, mitigation strategies, and localized insights
+
+Results include regional fire codes, weather patterns, and local contractor availability
+
+This kind of
+structured, trustworthy, AI-powered research would not be possible without Perplexity
+.
+
+​
+Technical Stack
+
+FlameGuard AI™ is powered by a modern GenAI stack and built to scale:
+
+Frontend
+: Lightweight HTML dashboard with user account control, photo upload, and report access
+
+Backend
+: Python (Flask) with RESTful APIs
+
+Database
+: PostgreSQL (local) with
+Azure SQL-ready
+schema
+
+AI Integration
+: OpenAI Vision API + Perplexity Sonar API
+
+Cloud-ready
+: Built for
+Azure App Service
+with Dockerized deployment
+
+​
+🏆 Accomplishments that we’re proud of
+
+Successfully used
+OpenAI Vision + Perplexity Sonar API
+together in a meaningful, real-world workflow
+
+Built a functioning
+MCP server
+that integrates seamlessly with Claude for desktop users
+
+Created a product that is
+genuinely useful for homeowners today
+— not just a demo
+
+Kept the experience simple, affordable, and scalable from the ground up
+
+Made structured deep research feel accessible and trustworthy
+
+​
+📚 What we learned
+
+The
+Perplexity Sonar API
+is incredibly powerful when used agentically — not just for answers, but for reasoning.
+
+Combining
+multimodal AI (image + research)
+opens up powerful decision-support tools.
+
+Users want
+actionable insights
+, not just data — pairing research with guidance makes all the difference.
+
+Trust and clarity are key: our design had to communicate complex information simply and helpfully.
+
+​
+🚀 What’s next for FlameGuard AI™ - Prevention is Better Than Cure
+
+We’re just getting started.
+
+​
+Next Steps:
+
+🌐 Deploy to
+Azure App Services
+with production-ready database
+
+📱 Launch mobile version with location-based scanning
+
+🏡 Partner with
+home inspection services
+and
+homeowners associations
+
+💬 Enhance Claude/MCP integration with voice-activated AI reporting
+
+💸 Introduce B2B plans for real estate firms and home safety consultants
+
+🛡️ Expand database of
+local contractor networks
+and regional fire codes
+
+We’re proud to stand with homeowners — not just to raise awareness, but to enable action.
+
+FlameGuard AI™ – Because some homes survive when others don’t.
+
+Contact us to know more:
+[email protected]
+Was this page helpful?
+Yes
+No
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+Previous
+Monday – Voice-First AI Learning Assistant
+Next
+⌘
+I
+x
+discord
+website
+Powered by

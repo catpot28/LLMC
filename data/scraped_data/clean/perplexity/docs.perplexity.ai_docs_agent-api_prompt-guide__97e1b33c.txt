@@ -1,0 +1,566 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/agent-api/prompt-guide
+page path  : /docs/agent-api/prompt-guide
+captured   : 2026-03-10 19:28:10 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_agent-api_prompt-guide__97e1b33c.html.gz
+========================================================================
+
+Prompt Guide - Perplexity
+
+Prompt Guide - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Features
+Prompt Guide
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Tools & Integrations
+Perplexity SDK
+Quickstart
+Guides
+Agent API
+Quickstart
+Models & Configuration
+Features
+Tools
+Output Control
+Search Filters
+Image Attachments
+Prompt Guide
+OpenAI Compatibility
+Search API
+Quickstart
+Filters
+Best Practices
+Sonar API
+Quickstart
+Models
+Features
+Embeddings API
+Quickstart
+Standard Embeddings
+Contextualized Embeddings
+Best Practices
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Resources
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Instructions
+Input
+API Example
+Web Search Models: General Prompting Guidelines
+Best Practices for Prompting Web Search Models
+Web Search Model Pitfalls to Avoid
+Handling URLs and Source Information
+The Right Way to Access Sources
+Why This Matters
+Preventing Hallucination in Search Results
+Understanding the Helpfulness Problem
+Common Scenarios That Lead to Hallucination
+How to Prevent Hallucination
+Best Practices for Reliable Results
+Use Built-in Search Parameters, Not Prompts
+Why Built-in Parameters Are Better
+Common Mistakes: Prompt-Based Control
+Correct Approach: Use API Parameters
+Available Search Parameters
+Benefits of Using Built-in Parameters
+Advanced Techniques
+Tips for Different Query Types
+Features
+Prompt Guide
+Copy page
+Copy page
+​
+Instructions
+
+You can use the
+instructions
+parameter to provide instructions related to style, tone, and language of the response.
+
+The real-time search component of our models does not attend to the system prompt.
+
+Example of a system prompt
+
+Copy
+Ask AI
+You are a helpful AI assistant.
+
+Rules:
+
+1. Provide only the final answer. It is important that you do not include any explanation on the steps below.
+
+2. Do not show the intermediate steps information.
+
+Steps:
+
+1. Decide if the answer should be a brief sentence or a list of suggestions.
+
+2. If it is a list of suggestions, first, write a brief and natural introduction based on the original query.
+
+3. Followed by a list of suggestions, each suggestion should be split by two newlines.
+
+​
+Input
+
+You should use the
+input
+parameter to pass in the actual query for which you need an answer. The input will be used to kick off a real-time web search to make sure the answer has the latest and the most relevant information needed.
+
+Example of a user prompt
+
+Copy
+Ask AI
+What are the best sushi restaurants in the world currently?
+
+​
+API Example
+
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.responses.create(
+
+preset
+=
+"pro-search"
+,
+
+input
+=
+"What are the best sushi restaurants in the world currently?"
+,
+
+instructions
+=
+"You are a helpful AI assistant. Provide concise, well-researched answers."
+
+)
+
+print
+(response.output_text)
+
+​
+Web Search Models: General Prompting Guidelines
+
+Our web search-powered models combine the capabilities of LLMs with real-time web searches. Understanding how they differ from traditional LLMs will help you craft more effective prompts.
+
+​
+Best Practices for Prompting Web Search Models
+
+Be Specific and Contextual
+Unlike traditional LLMs, our web search models require specificity to retrieve relevant search results. Adding just 2-3 extra words of context can dramatically improve performance.
+Good Example
+: “Explain recent advances in climate prediction models for urban planning”
+Poor Example
+: “Tell me about climate models”
+Avoid Few-Shot Prompting
+While few-shot prompting works well for traditional LLMs, it confuses web search models by triggering searches for your examples rather than your actual query.
+Good Example
+: “Summarize the current research on mRNA vaccine technology”
+Poor Example
+: “Here’s an example of a good summary about vaccines: [example text]. Now summarize the current research on mRNA vaccines.”
+Think Like a Web Search User
+Craft prompts with search-friendly terms that would appear on relevant web pages. Consider how experts in the field would describe the topic online.
+Good Example
+: “Compare the energy efficiency ratings of heat pumps vs. traditional HVAC systems for residential use”
+Poor Example
+: “Tell me which home heating is better”
+Provide Relevant Context
+Include critical context to guide the web search toward the most relevant content, but keep prompts concise and focused.
+Good Example
+: “Explain the impact of the 2023 EU digital markets regulations on app store competition for small developers”
+Poor Example
+: “What are the rules for app stores?”
+
+​
+Web Search Model Pitfalls to Avoid
+
+Overly Generic Questions
+Generic prompts lead to scattered web search results and unfocused responses. Always narrow your scope.
+Avoid
+: “What’s happening in AI?”
+Instead
+: “What are the three most significant commercial applications of generative AI in healthcare in the past year?”
+Traditional LLM Techniques
+Prompting strategies designed for traditional LLM often don’t work well with web search models. Adapt your approach accordingly.
+Avoid
+: “Act as an expert chef and give me a recipe for sourdough bread. Start by explaining the history of sourdough, then list ingredients, then…”
+Instead
+: “What’s a reliable sourdough bread recipe for beginners? Include ingredients and step-by-step instructions.”
+Complex Multi-Part Requests
+Complex prompts with multiple unrelated questions can confuse the search component. Focus on one topic per query.
+Avoid
+: “Explain quantum computing, and also tell me about regenerative agriculture, and provide stock market predictions.”
+Instead
+: “Explain quantum computing principles that might impact cryptography in the next decade.”
+Assuming Search Intent
+Don’t assume the model will search for what you intended without specific direction. Be explicit about exactly what information you need.
+Avoid
+: “Tell me about the latest developments.”
+Instead
+: “What are the latest developments in offshore wind energy technology announced in the past 6 months?”
+
+​
+Handling URLs and Source Information
+
+Never ask for URLs or source links in your prompts.
+The generative model cannot see the actual URLs from the web search, which means any URLs it provides in the response text are likely to be hallucinated and incorrect.
+
+​
+The Right Way to Access Sources
+
+URLs and source information are automatically returned in the
+search_results
+field of the API response. This field contains accurate information about the sources used, including:
+
+title
+: The title of the source page
+
+url
+: The actual URL of the source
+
+date
+: The publication date of the content
+
+Example of incorrect prompting:
+
+Copy
+Ask AI
+❌ BAD: "From the past 5 days, identify high-potential Canadian news stories...
+
+For each item, include:
+
+- A clear headline
+
+- 1–2 sentence summary
+
+- Include a link to a source"
+
+Example of correct prompting:
+
+Copy
+Ask AI
+✅ GOOD: "From the past 5 days, identify high-potential Canadian news stories...
+
+For each item, include:
+
+- A clear headline
+
+- 1–2 sentence summary
+
+- Why it matters from a thought-leadership perspective"
+
+// Then parse URLs from the search_results field in the API response
+
+​
+Why This Matters
+
+The web search and language generation components work differently:
+
+Web Search Component
+: Finds and retrieves content from specific URLs
+
+Language Generation Component
+: Processes the retrieved content but doesn’t have access to the original URLs
+
+API Response
+: Provides both the generated text and the accurate source URLs separately
+
+When you ask for URLs in your prompt, the language model will attempt to generate them based on patterns it has seen, but these will not be the actual URLs that were searched. Always use the
+search_results
+field for accurate source information.
+
+​
+Preventing Hallucination in Search Results
+
+LLMs are designed to be “helpful” and may attempt to provide answers even when they lack sufficient information.
+This can lead to hallucinated or inaccurate responses, especially when asking about sources that Sonar cannot access.
+
+​
+Understanding the Helpfulness Problem
+
+Large Language Models are trained to be assistive and will often try to provide an answer even when they’re not confident about the information. This tendency can be problematic when:
+
+You request information from sources that Sonar cannot access (e.g., LinkedIn posts, private documents, paywalled content)
+
+The search doesn’t return relevant results for your specific query
+
+You ask for very recent information that may not be indexed yet
+
+​
+Common Scenarios That Lead to Hallucination
+
+Inaccessible Sources:
+
+Copy
+Ask AI
+❌ PROBLEMATIC: "What did the CEO of XYZ company post on LinkedIn yesterday about their new product launch?"
+
+Sonar may not be able to access LinkedIn content, but the model might still attempt to provide an answer based on general knowledge or patterns.
+
+Overly Specific Recent Events:
+
+Copy
+Ask AI
+❌ PROBLEMATIC: "What was discussed in the closed-door meeting between Company A and Company B last week?"
+
+Private information that wouldn’t be publicly searchable may still get a fabricated response.
+
+​
+How to Prevent Hallucination
+
+Use Explicit Instructions:
+
+Include clear guidance in your prompts about what to do when information isn’t available:
+
+Copy
+Ask AI
+✅ GOOD: "Search for recent developments in quantum computing breakthroughs.
+
+If you are not able to get search results or find relevant information,
+
+please state that clearly rather than providing speculative information."
+
+Set Clear Boundaries:
+
+Copy
+Ask AI
+✅ GOOD: "Based on publicly available sources from the past week, what are the latest policy changes in Canadian healthcare?
+
+If no recent information is found, please indicate that no recent updates were discovered."
+
+Request Source Transparency:
+
+Copy
+Ask AI
+✅ GOOD: "Find information about Tesla's latest earnings report.
+
+Only provide information that you can verify from your search results,
+
+and clearly state if certain details are not available."
+
+​
+Best Practices for Reliable Results
+
+Be Explicit About Limitations
+Always instruct the model to acknowledge when it cannot find information rather than guessing.
+Example
+: “If you cannot find reliable sources for this information, please say so explicitly.”
+Focus on Accessible Sources
+Stick to information that is likely to be publicly indexed and searchable.
+Avoid
+: LinkedIn posts, private company documents, closed meetings
+
+Prefer
+: News articles, public reports, official announcements
+Use Conditional Language
+Frame requests with conditional statements that give the model permission to say “I don’t know.”
+Example
+: “If available, provide details about… Otherwise, indicate what information could not be found.”
+Verify with Multiple Queries
+For critical information, consider breaking complex requests into smaller, more specific queries to verify consistency.
+Strategy
+: Ask the same question in different ways and compare results for consistency.
+
+​
+Use Built-in Search Parameters, Not Prompts
+
+Always use Perplexity’s built-in search parameters instead of trying to control search behavior through prompts.
+API parameters are guaranteed to work and are much more effective than asking the model to filter results.
+
+​
+Why Built-in Parameters Are Better
+
+When you want to control search behavior—such as limiting sources, filtering by date, or adjusting search depth—use the API’s built-in parameters rather than prompt instructions. The search component processes these parameters directly, ensuring reliable and consistent results.
+
+​
+Common Mistakes: Prompt-Based Control
+
+❌ Ineffective - Trying to control via prompts:
+
+Copy
+Ask AI
+{
+
+"model"
+:
+"sonar-pro"
+,
+
+"messages"
+: [
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+:
+"Search only on Wikipedia and official government sites for information about climate change policies. Make sure to only look at sources from the past month."
+
+}
+
+]
+
+}
+
+​
+Correct Approach: Use API Parameters
+
+✅ Effective - Using built-in parameters:
+
+Copy
+Ask AI
+{
+
+"model"
+:
+"sonar-pro"
+,
+
+"messages"
+: [
+
+{
+
+"role"
+:
+"user"
+,
+
+"content"
+:
+"What are the latest climate change policies?"
+
+}
+
+],
+
+"search_domain_filter"
+: [
+"wikipedia.org"
+]
+
+}
+
+​
+Available Search Parameters
+
+​
+Benefits of Using Built-in Parameters
+
+Guaranteed Execution
+Built-in parameters are processed directly by the search engine, ensuring they’re applied correctly every time.
+Better Performance
+Parameters filter results before they reach the language model, leading to more focused and relevant responses.
+Cleaner Prompts
+Keep your prompts focused on what you want the model to generate, not how to search.
+Consistent Results
+API parameters provide predictable behavior across different queries and use cases.
+
+​
+Advanced Techniques
+
+Parameter Optimization
+Adjust model parameters based on your specific needs:
+
+Search Domain Filter
+: Limit results to trusted sources for research-heavy queries.
+
+Search Context Size
+: Use “high” for comprehensive research questions and “low” for simple factual queries.
+
+Example configuration for technical documentation:
+Copy
+Ask AI
+{
+
+"search_domain_filter"
+: [
+"wikipedia.org"
+,
+"docs.python.org"
+],
+
+"web_search_options"
+: {
+
+"search_context_size"
+:
+"medium"
+
+}
+
+}
+
+​
+Tips for Different Query Types
+
+Query Type
+Best Practices
+Factual Research
+• Use specific questions • Use search domain filters for academic sources • Consider “high” search context size
+Creative Content
+• Provide detailed style guidelines in system prompt • Specify tone, voice, and audience
+Technical Questions
+• Include relevant technical context • Specify preferred programming language/framework • Use domain filters for documentation sites
+Analysis & Insights
+• Request step-by-step reasoning • Ask for specific metrics or criteria
+Was this page helpful?
+Yes
+No
+Image Attachments
+Previous
+OpenAI Compatibility
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

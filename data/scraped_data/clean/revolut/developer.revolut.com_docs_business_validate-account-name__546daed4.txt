@@ -1,0 +1,432 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/validate-account-name
+page path  : /docs/business/validate-account-name
+captured   : 2026-01-15 14:05:41 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_validate-account-name__546daed4.html.gz
+========================================================================
+
+Validate an account name (CoP/VoP) | Revolut Docs
+
+Validate an account name (CoP/VoP) | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Card invitations
+Counterparties
+Introduction
+Retrieve a list of counterparties
+Retrieve a counterparty
+Delete a counterparty
+Create a counterparty
+Validate an account name (CoP/VoP)
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Simulations
+Team members
+Transactions
+Transfers
+Webhooks
+Counterparties
+Validate an account name (CoP/VoP)
+Validate an account name (CoP/VoP)
+
+Validate a counterparty's account name against their account details when
+adding a counterparty
+or
+making a transfer
+to a new or existing counterparty.
+
+Caution
+The CoP check is
+not
+a complete fraud-prevention tool, and it does
+not
+guarantee the person is who they claim to be.
+It only confirms that the name and account details your provide match the bank's records.
+Even if the counterparty's details match, you should still exercise due caution when transferring funds.
+
+Availability & Sandbox behaviour
+
+This feature is only available to businesses in the
+supported regions
+.
+If you would like to make use of it, please contact
+Revolut API Support
+.
+
+In Sandbox, this feature is only available for
+testing
+.
+While
+incomplete or invalid requests
+will return production-like error responses,
+complete and valid requests
+in Sandbox do
+not
+undergo real validation and will always return
+cannot_be_checked
+.
+
+The validation relies on different underlying services, depending on the recipient's payment scheme (region and currency).
+These factors determine which fields you must provide and what response you get.
+
+For examples, refer to the request body samples.
+
+For more information, see the guides:
+Validate an account name (CoP/VoP)
+.
+
+Request
+​
+Counterparty account details
+Request body
+Body
+
+any
+Expand
+Variant
+·
+UK
+account_no
+string
+required
+The account number of the counterparty.
+sort_code
+string
+required
+The sort code of the counterparty's account.
+company_name
+string
+The name of the business counterparty.
+
+Required
+when the account type is business (
+individual_name
+is not specified).
+individual_name
+object
+The name of the individual counterparty, split into first name and last name.
+
+Required
+when the account type is personal (
+company_name
+isn't specified).
+first_name
+string
+required
+The first name of the recipient.
+last_name
+string
+required
+The last name of the recipient.
+
+Response
+​
+200
+400
+401
+404
+4xx
+Account name validation result
+
+Note
+
+The actual results returned in the response come from the CoP services, not from Revolut.
+The Business API passes them on as received.
+
+Because of this, the descriptions below should be treated as an approximation rather than complete documentation.
+
+The responses differ depending on the CoP service, even when the schema appears the same.
+Make sure that you refer to the appropriate response variant.
+
+Response body
+Body
+
+any
+Expand
+Variant
+·
+UK
+result_code
+string
+required
+Possible values:
+[
+matched
+,
+close_match
+,
+not_matched
+,
+cannot_be_checked
+,
+temporarily_unavailable
+]
+The result of the check.
+
+Possible values for UK:
+
+matched
+:
+The name and account type match the provided details.
+
+close_match
+:
+The name and/or account type are similar to the provided values:
+
+The name is a match, but the account type is incorrect.
+For example, an individual recipient's name was provided under
+company_name
+.
+The
+actual account type
+is returned.
+
+The name is similar to the provided values.
+Account type is correct.
+The
+actual name
+is returned.
+
+The name is similar to the provided values, and the account type is incorrect.
+The
+actual values
+are returned.
+
+The actual values are returned.
+
+not_matched
+:
+The name and account type don't match the provided values.
+
+cannot_be_checked
+:
+The check cannot be performed and retries won't help.
+For example, the recipient's bank doesn't support CoP.
+
+temporarily_unavailable
+:
+The check cannot be performed right now.
+For example, the recipient's bank didn't respond to our request.
+You should retry the request later.
+
+reason
+object
+A code which explains why a given result was returned, and the service that returned it.
+For example, it might happen that the details you provided match the account details, but you specified the counterparty as an individual, and the account type is business.
+type
+string
+Possible values:
+[
+uk_cop
+,
+eu_cop
+,
+ro_cop
+,
+au_cop
+]
+The reason type.
+Determines the
+service
+used for the validation that returned the reason code.
+For UK, the values is:
+uk_cop
+.
+code
+string
+Possible values:
+[
+close_match
+,
+individual_account_name_matched
+,
+company_account_name_matched
+,
+individual_account_close_match
+,
+company_account_close_match
+,
+not_matched
+,
+account_does_not_exist
+,
+account_switched
+,
+cannot_be_checked
+]
+The reason code. Possible values for UK:
+
+close_match
+: The provided name is similar to the account name, the account type is correct.
+The actual name is returned.
+
+individual_account_name_matched
+: The names match but the counterparty is an individual, not a business.
+
+company_account_name_matched
+: The names match but the counterparty is a business, not an individual.
+
+individual_account_close_match
+: The provided name is similar to the account name, and the account type is incorrect – the counterparty is an individual, not a business.
+The actual name is returned.
+
+company_account_close_match
+: The provided name is similar to the account name, and the account type is incorrect - the counterparty is a business, not an individual.
+The actual name is returned.
+
+not_matched
+: The account details don't match the provided values.
+
+account_does_not_exist
+: The account does not exist.
+
+account_switched
+: The account has been switched using the Current Account Switching Service.
+Please contact the recipient for updated account details.
+
+cannot_be_checked
+: The account cannot be checked.
+
+company_name
+string
+The name of the recipient when the account type is business.
+Provided only if
+individual_name
+is not specified.
+
+When the name is a close match, the actual full name is returned, otherwise, the name you provided is returned.
+individual_name
+object
+The name of the recipient when the account type is personal.
+Provided only if
+company_name
+is not specified.
+
+When the name is a close match, the actual first and last names are returned in full.
+first_name
+string
+required
+The first name of the recipient.
+last_name
+string
+required
+The last name of the recipient.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

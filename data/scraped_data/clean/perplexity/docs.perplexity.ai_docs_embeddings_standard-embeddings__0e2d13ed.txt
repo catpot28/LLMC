@@ -1,0 +1,565 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/embeddings/standard-embeddings
+page path  : /docs/embeddings/standard-embeddings
+captured   : 2026-06-17 07:31:07 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_embeddings_standard-embeddings__0e2d13ed.html.gz
+========================================================================
+
+Standard Embeddings - Perplexity
+
+Standard Embeddings - Perplexity
+Documentation Index
+Fetch the complete documentation index at:
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Get Started
+Get Started
+Search...
+Navigation
+Embeddings API
+Standard Embeddings
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Agent SDKs
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Computer Analytics API
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Models
+Basic Usage
+Semantic Search Example
+Parameters
+Related Resources
+Embeddings API
+Standard Embeddings
+Copy page
+Generate embeddings for independent texts, search queries, and single sentences.
+Copy page
+​
+Overview
+
+Use standard embeddings for independent text embedding (queries, documents, and semantic search) where each text is self-contained.
+
+​
+Models
+
+Model
+Dimensions
+Context
+MRL
+Quantization
+Price ($/1M tokens)
+pplx-embed-v1-0.6b
+1024
+32K
+Yes
+INT8/BINARY
+$0.004
+pplx-embed-v1-4b
+2560
+32K
+Yes
+INT8/BINARY
+$0.03
+
+​
+Basic Usage
+
+Generate embeddings for a list of texts:
+
+Python
+TypeScript
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+response
+=
+client.embeddings.create(
+
+input
+=
+[
+
+"Scientists explore the universe driven by curiosity."
+,
+
+"Curiosity compels us to seek explanations, not just observations."
+,
+
+"Historical discoveries began with curious questions."
+,
+
+"The pursuit of knowledge distinguishes human curiosity from mere stimulus response."
+,
+
+"Philosophy examines the nature of curiosity."
+
+],
+
+model
+=
+"pplx-embed-v1-4b"
+
+)
+
+for
+emb
+in
+response.data:
+
+print
+(
+f
+"Index
+{
+emb.index
+}
+:
+{
+emb.embedding
+}
+"
+)
+
+Response
+{
+
+"object"
+:
+"list"
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+0
+,
+
+"embedding"
+:
+"/* base64-encoded signed int8 values */"
+
+},
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+1
+,
+
+"embedding"
+:
+"/* base64-encoded signed int8 values */"
+
+},
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+2
+,
+
+"embedding"
+:
+"/* base64-encoded signed int8 values */"
+
+},
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+3
+,
+
+"embedding"
+:
+"/* base64-encoded signed int8 values */"
+
+},
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+4
+,
+
+"embedding"
+:
+"/* base64-encoded signed int8 values */"
+
+}
+
+],
+
+"model"
+:
+"pplx-embed-v1-4b"
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+42
+,
+
+"total_tokens"
+:
+42
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+0.0000013
+,
+
+"total_cost"
+:
+0.0000013
+,
+
+"currency"
+:
+"USD"
+
+}
+
+}
+
+}
+
+​
+Semantic Search Example
+
+Build a simple semantic search system:
+
+Python
+TypeScript
+import
+base64
+
+import
+numpy
+as
+np
+
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+def
+decode_embedding
+(
+b64_string
+):
+
+"""Decode a base64-encoded int8 embedding."""
+
+return
+np.frombuffer(base64.b64decode(b64_string),
+dtype
+=
+np.int8).astype(np.float32)
+
+def
+cosine_similarity
+(
+a
+,
+b
+):
+
+return
+np.dot(a, b)
+/
+(np.linalg.norm(a)
+*
+np.linalg.norm(b))
+
+# 1. Embed your documents
+
+documents
+=
+[
+
+"Python is a versatile programming language"
+,
+
+"Machine learning automates analytical model building"
+,
+
+"The Eiffel Tower is located in Paris, France"
+
+]
+
+doc_response
+=
+client.embeddings.create(
+input
+=
+documents,
+model
+=
+"pplx-embed-v1-4b"
+)
+
+doc_embeddings
+=
+[decode_embedding(emb.embedding)
+for
+emb
+in
+doc_response.data]
+
+# 2. Embed a search query
+
+query
+=
+"What programming languages are good for data science?"
+
+query_response
+=
+client.embeddings.create(
+input
+=
+[query],
+model
+=
+"pplx-embed-v1-4b"
+)
+
+query_embedding
+=
+decode_embedding(query_response.data[
+0
+].embedding)
+
+# 3. Find most similar documents
+
+scores
+=
+[
+
+(i, cosine_similarity(query_embedding, doc_emb))
+
+for
+i, doc_emb
+in
+enumerate
+(doc_embeddings)
+
+]
+
+ranked
+=
+sorted
+(scores,
+key
+=
+lambda
+x
+: x[
+1
+],
+reverse
+=
+True
+)
+
+print
+(
+"Search results:"
+)
+
+for
+idx, score
+in
+ranked:
+
+print
+(
+f
+"
+{
+score
+:.4f}
+:
+{
+documents[idx]
+}
+"
+)
+
+​
+Parameters
+
+Parameter
+Type
+Required
+Default
+Description
+input
+string | array[string]
+Yes
+-
+Text(s) to embed. Max 512 texts per request. Each input must not exceed 32K tokens. Total tokens must not exceed 120,000. Empty strings are not allowed.
+model
+string
+Yes
+-
+Model identifier:
+pplx-embed-v1-0.6b
+or
+pplx-embed-v1-4b
+dimensions
+integer
+No
+Full
+Matryoshka dimension (128-1024 for 0.6b, 128-2560 for 4b)
+encoding_format
+string
+No
+base64_int8
+Output encoding:
+base64_int8
+(signed int8) or
+base64_binary
+(packed bits)
+
+Input limits:
+Each text must not exceed 32K tokens. Requests exceeding this limit will be rejected. All inputs in a single request must not exceed 120,000 tokens combined.
+
+​
+Related Resources
+
+Contextualized Embeddings
+Document-aware embeddings for chunks that share context.
+Best Practices
+Batch processing, caching, and RAG patterns.
+Was this page helpful?
+Yes
+No
+Best Practices
+Previous
+Contextualized Embeddings
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

@@ -1,0 +1,388 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/guides/mcp-server
+page path  : /guides/mcp-server
+captured   : 2026-01-25 03:24:42 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_guides_mcp-server__8e286d3b.html.gz
+========================================================================
+
+Perplexity MCP Server - Perplexity
+
+Perplexity MCP Server - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Getting Started
+Perplexity MCP Server
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Getting Started
+Overview
+Pricing
+Perplexity MCP Server
+Perplexity SDK
+Quickstart
+Guides
+Search
+Quickstart
+Best Practices
+Search and Filtering
+Grounded LLM
+Quickstart
+Models
+Pro Search
+Chat Completions SDK
+OpenAI Compatibility
+Prompting & Output Control
+Search & Filtering
+Working with Attachments
+Admin
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Help & Resources
+Changelog
+Get in Touch
+API Roadmap
+Frequently Asked Questions
+System Status
+Privacy & Security
+Perplexity Crawlers
+On this page
+Overview
+Installation
+One-Click Install
+Manual Setup
+Available Tools
+Getting Started
+Perplexity MCP Server
+Copy page
+Connect AI assistants to Perplexity’s search and reasoning capabilities using the Model Context Protocol (MCP).
+Copy page
+​
+Overview
+
+The Perplexity MCP Server enables AI assistants to access Perplexity’s powerful search and reasoning capabilities directly within their workflows. Using the Model Context Protocol (MCP), you can integrate real-time web search, conversational AI, and advanced reasoning into any MCP-compatible client.
+
+The
+Model Context Protocol (MCP)
+is an open standard that connects AI assistants with external data sources and tools. Learn more at
+modelcontextprotocol.io
+.
+
+​
+Installation
+
+​
+One-Click Install
+
+Get started instantly with these one-click installers:
+
+Install in Cursor
+Automatically configure the Perplexity MCP server in Cursor with one click.
+Install in VS Code
+Automatically configure the Perplexity MCP server in VS Code with one click.
+
+​
+Manual Setup
+
+1
+Get Your API Key
+Generate API Key
+Navigate to the API Portal and generate a new key.
+Get Key
+2
+Configure Your Client
+Add the MCP server to your client configuration:
+
+Claude Code
+
+Cursor
+
+Codex
+
+Other Clients
+Option 1: CLI Command (Recommended)
+The easiest way to get started:
+Copy
+Ask AI
+claude
+mcp
+add
+perplexity
+--env
+PERPLEXITY_API_KEY="your_key_here"
+--
+npx
+-y
+@perplexity-ai/mcp-server
+
+Option 2: Plugin Install
+Install via plugin:
+Copy
+Ask AI
+export
+PERPLEXITY_API_KEY
+=
+"your_key_here"
+
+claude
+
+# Then run: /plugin marketplace add perplexityai/modelcontextprotocol
+
+# Then run: /plugin install perplexity
+
+Option 3: Manual Configuration
+Add to your
+claude.json
+:
+Copy
+Ask AI
+{
+
+"mcpServers"
+: {
+
+"perplexity"
+: {
+
+"type"
+:
+"stdio"
+,
+
+"command"
+:
+"npx"
+,
+
+"args"
+: [
+"-y"
+,
+"perplexity-mcp"
+],
+
+"env"
+: {
+
+"PERPLEXITY_API_KEY"
+:
+"your_key_here"
+
+}
+
+}
+
+}
+
+}
+
+We recommend using the one-click install above for setting up the MCP server in Cursor.
+If you prefer to configure it manually, add the following to your
+mcp.json
+:
+Copy
+Ask AI
+{
+
+"mcpServers"
+: {
+
+"perplexity"
+: {
+
+"command"
+:
+"npx"
+,
+
+"args"
+: [
+"-y"
+,
+"@perplexity-ai/mcp-server"
+],
+
+"env"
+: {
+
+"PERPLEXITY_API_KEY"
+:
+"your_key_here"
+
+}
+
+}
+
+}
+
+}
+
+Copy
+Ask AI
+codex
+mcp
+add
+perplexity
+--env
+PERPLEXITY_API_KEY="your_key_here"
+--
+npx
+-y
+@perplexity-ai/mcp-server
+
+Most MCP-compatible clients (including Claude Desktop, VS Code, and Windsurf) use the
+mcpServers
+format. Configuration file locations:
+Client
+Config File
+Cursor
+~/.cursor/mcp.json
+VS Code
+.vscode/mcp.json
+Claude Desktop
+claude_desktop_config.json
+Windsurf
+~/.codeium/windsurf/mcp_config.json
+Google Antigravity
+~/.gemini/antigravity/mcp_config.json
+Standard
+mcpServers
+format:
+Copy
+Ask AI
+{
+
+"mcpServers"
+: {
+
+"perplexity"
+: {
+
+"command"
+:
+"npx"
+,
+
+"args"
+: [
+"-y"
+,
+"@perplexity-ai/mcp-server"
+],
+
+"env"
+: {
+
+"PERPLEXITY_API_KEY"
+:
+"your_key_here"
+
+}
+
+}
+
+}
+
+}
+
+VS Code uses a slightly different format:
+Copy
+Ask AI
+{
+
+"servers"
+: {
+
+"perplexity"
+: {
+
+"type"
+:
+"stdio"
+,
+
+"command"
+:
+"npx"
+,
+
+"args"
+: [
+"-y"
+,
+"@perplexity-ai/mcp-server"
+],
+
+"env"
+: {
+
+"PERPLEXITY_API_KEY"
+:
+"your_key_here"
+
+}
+
+}
+
+}
+
+}
+
+If your client doesn’t work with these formats, check its documentation for the correct wrapper format.
+3
+Start Using
+Restart your MCP client and start using Perplexity’s tools in your AI workflows.
+
+​
+Available Tools
+
+perplexity_search
+Direct web search using the Perplexity Search API. Returns ranked search results with titles, URLs, snippets, and metadata.
+Best for:
+Finding current information, news, facts, or specific web content.
+perplexity_ask
+General-purpose conversational AI with real-time web search using the
+sonar-pro
+model.
+Best for:
+Quick questions, everyday searches, and conversational queries that benefit from web context.
+perplexity_research
+Deep, comprehensive research using the
+sonar-deep-research
+model. Provides thorough analysis with citations.
+Best for:
+Complex topics requiring detailed investigation, comprehensive reports, and in-depth analysis.
+perplexity_reason
+Advanced reasoning and problem-solving using the
+sonar-reasoning-pro
+model.
+Best for:
+Logical problems, complex analysis, decision-making, and tasks requiring step-by-step reasoning.
+
+For detailed setup instructions, troubleshooting, and proxy configuration, visit our
+GitHub repository
+.
+Was this page helpful?
+Yes
+No
+Pricing
+Previous
+Quickstart
+Next
+⌘
+I
+x
+discord
+website
+Powered by

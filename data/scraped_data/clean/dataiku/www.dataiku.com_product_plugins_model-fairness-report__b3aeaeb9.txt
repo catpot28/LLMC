@@ -1,0 +1,439 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/model-fairness-report/
+page path  : /product/plugins/model-fairness-report/
+captured   : 2026-01-21 09:16:49 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_model-fairness-report__b3aeaeb9.html.gz
+========================================================================
+
+Plugin: Model Fairness Report | Dataiku
+
+Plugin: Model Fairness Report | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Model Fairness Report
+
+Model Fairness Report
+
+Compute fairness metrics for machine learning models
+
+Share
+
+Plugin information
+
+Version
+
+1.0.8
+
+Author
+
+Dataiku
+
+Released
+
+2020-12-01
+
+Last updated
+
+2022-09-13
+
+License
+
+MIT License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+Description
+
+Evaluating the fairness of machine learning models has been a topic of both academic and business interest in recent years. However, before prescribing any resolution to the problem of model bias, it is crucial to learn more about how biased a model is, by measuring some fairness metrics. This plugin is intended to help you with this measurement task.
+
+Depending on the context and domain, different metrics of fairness can be applied. No model will be perfect toward all the metrics, thus the choice of metric is crucial. The goal of the plugin is to show users in a most transparent way several metrics and the difference between them, and from there users can choose the one that best evaluates the fairness of the situation at hand.
+
+Setup
+
+From DSS 11 on, since the version 1.0.8 of the plugin, you do no longer need a code environment. There is no Python version restriction for the models to use the model view.
+
+Before DSS 11
+
+Right after installing the plugin, you will need to build its code environment; note that it requires Python version 3.6. The plugin works for Python models trained with Python 3.
+
+How to use
+
+Model views: Model Fairness Report
+
+Reminder: A model view is an additional way to visualize information about a model, model views appear in a deployed model’s version page. This feature was introduced in Dataiku DSS 6.0, if your models were deployed to your flows before v6.0 and you don’t see the “Views” tab, please go back to the saved model screen -> Settings and fill the
+Model type
+field with “
+prediction/py_memory
+“
+.
+
+Inputs
+
+Sensitive column: the column contains sensitive group based on which we want to compute fairness metric.
+
+Sensitive group: the reference group from which we will compute the metric discrepancies.
+
+Positive outcome: the target value that is advantageous.
+
+Metrics and Charts
+
+Four different metrics will be computed. Here for illustration purposes we suppose that we are in a loan assessment use case:
+
+Demographic Parity
+: people across groups have the same chance of
+getting the loan
+.
+
+Equalized Odds
+:
+
+Among people who will
+not default
+, they have the same chance of
+getting the loan.
+
+Among people who will
+default
+, they have the same chance of
+being rejected
+.
+
+Equality of Opportunity
+: among all people who will
+not default
+, they have the same chance of
+getting the loan
+.
+
+Predictive Rate Parity
+:
+among all people who are given the loan, across groups there is the same
+portion
+of people who will
+not default
+(equal chance of success given acceptance).
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Model Fairness Report.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

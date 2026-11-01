@@ -1,0 +1,309 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/speech-engine
+page path  : /speech-engine
+captured   : 2026-06-12 01:16:35 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_speech-engine__4ae21714.html.gz
+========================================================================
+
+Turn your chat agent into a voice agent
+
+Turn your chat agent into a voice agent
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+ElevenAPI
+APIs
+Customers
+Pricing
+Menu
+ElevenAPI
+ElevenAPI
+APIs
+Customers
+Pricing
+Sign up
+Sign up
+Introducing Speech Engine
+Turn your chat agent into a voice agent
+Get started
+Contact sales
+Add human-like voice to your existing chat agent with a single prompt. We handle the voice. Your agent's LLM, RAG, and architecture all remain untouched.
+Enable Speech Engine
+Bring a voice layer to your existing stack
+Get started
+Watch demo
+Speech Engine integrates on top of your existing stack. Nothing is rearchitected and your text-based agent remains untouched.
+The full voice layer, in one integration
+Speech Engine combines our leading speech, transcription, and voice orchestration models into a single pipeline - all custom built to work best together.
+Speech Engine
+Speech to Text
+Turn Detection
+Interrupt Detection
+Text to Speech
+Audio Orchestration
+Elevate your chatbot with voice
+Voice is the fastest and richest way to exchange information, making products and services more accessible for customers.
+Seamless conversation flow
+Our voice models are optimized for conversation, delivering ultra-low latency in real-world environments.
+Turn-taking and interruption handling
+Dedicated models handle overlapping speech and mid-sentence changes without custom logic on your end.
+Global coverage across 70+ languages
+Get expressive, human-like voices that support the full range of emotion across a broad range of languages.
+A voice stack tested across millions of real conversations
+Every component built and optimized to work best together.
+Speech to Text
+Our transcription model is optimized for conversational accuracy, transcribing user speech at ultra-low 80ms latency.
+Text to Speech
+Expressive, human-like voices across 70+ languages. Choose from our 11,000+ voice library or create your own with Voice Cloning.
+Turn detection
+Knows when the user has finished speaking versus pausing - controlling exactly when the transcript is sent to your LLM.
+Interruption handling
+Monitors for user speech while the agent is talking. Stops playback and loops back instantly when the user cuts in.
+Voice activity detection
+Filters speech from background noise at the input level, so only clean audio reaches the transcription model.
+Audio orchestration
+Manages the full voice lifecycle - from capturing user audio to delivering the agent's spoken response.
+Add Speech Engine to your agent with one prompt
+Install with one command using our skill. The skill sets up everything you need so you can go from chat to voice in a single prompt.
+Server SDK
+Attach Speech Engine to your server. Receive transcripts, pass them to your LLM, and send the response back - all in a few lines.
+import
+{ ElevenLabsClient }
+from
+"@elevenlabs/elevenlabs-js"
+;
+
+import
+"dotenv/config"
+;
+
+const
+elevenlabs
+= new ElevenLabsClient({
+
+apiKey:
+process.env.
+ELEVENLABS_API_KEY
+,
+});
+
+const
+engine
+=
+await
+elevenlabs.speechEngine.create({
+
+name:
+"My Speech Engine"
+,
+
+speechEngine:
+{
+
+// Note we use the wss protocol instead of https
+
+wsUrl:
+"wss://abc123.ngrok.io/ws"
+,
+},
+});
+console.log(
+"Speech Engine ID:"
+, engine.
+engineId
+);
+ElevenLabs UI
+Drop in pre-built UI components - agent orbs, waveforms, and chat widgets - or build your own on top of the same SDK.
+View ElevenLabs UI
+Client SDK
+Start a conversation session from the browser or mobile app in three lines. The same client integration as ElevenAgents, so upgrading later requires no changes.
+import
+express
+from
+"express"
+;
+
+import
+{ ElevenLabsClient }
+from
+"@elevenlabs/elevenlabs-js"
+;
+
+import
+"dotenv/config"
+;
+
+const
+app
+= express();
+
+const
+elevenlabs
+= new ElevenLabsClient({
+apiKey:
+process.env.
+ELEVENLABS_API_KEY
+});
+
+const
+speechEngineId
+=
+"seng_8k3m9xr4hjnfg983brhmhkd98n6"
+;
+
+app.get(
+"/api/token"
+,
+async
+(
+req
+,
+res
+)
+=>
+{
+
+const
+{
+token
+} =
+await
+elevenlabs.conversationalAi.conversations.getWebrtcToken({
+agentId:
+speechEngineId });
+res.json({ token });
+});
+
+app.listen(
+3002
+, ()
+=>
+console.log(
+"Token server listening on port 3002"
+));
+Enterprise-grade security
+Our platform is designed for deployments at scale with enterprise-level data protections, including support for SOC 2, HIPAA, and GDPR compliance. EU Data Residency and Zero Retention Mode are available for stricter data control.
+Learn more
+A single platform to power experiences across channels
+Speech Engine
+Maximum flexibility
+Your own LLM and orchestration
+Same Conversation SDK
+Custom RAG and business logic
+Get started
+ElevenAgents
+Maximum performance
+Fully-managed LLM
+Built-in tools and knowledge base
+Dashboard for non-devs
+Telephony out of the box
+Lowest possible latency
+Discover Agents
+Frequently asked questions
+What LLMs are supported?
+Any LLM that produces text. The SDK has built-in stream extraction for OpenAI (Responses API and Chat Completions API), Anthropic Messages API, and Google Gemini API. For other providers, pass a plain string or an async iterable of string chunks.
+What is the difference between Speech Engine and ElevenAgents?
+ElevenAgents is a fully-hosted platform where ElevenLabs provides the LLM, knowledge base, and tools. Speech Engine is for developers who want to bring their own LLM and control the conversation logic on their own server.
+What server frameworks are supported?
+In TypeScript, you can attach Speech Engine to any Node.js HTTP server (Express, Fastify, or plain http.createServer()), or run a standalone WebSocket server. In Python, the SDK provides a standalone server via engine.serve(), or you can integrate with FastAPI, Starlette, or any ASGI framework using engine.create_session().
+Latest stories
+All stories
+Automating 92% of inbound calls at an IT service provider
+Category
+ElevenAgents Stories
+Date
+Aug 1, 2025
+Meesho delivers real-time, multilingual customer support with voice agents
+Category
+ElevenAgents Stories
+Date
+Jul 17, 2025
+Tony Robbins launches real-time AI coaching in his own voice with Steno.ai and ElevenLabs
+Category
+ElevenAgents Stories
+Date
+Jul 10, 2025
+AI Communication Platform
+Talk to sales
+Create an AI agent
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

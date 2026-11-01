@@ -1,0 +1,581 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/data-quality-for-machine-learning-genai-and-agentic-ai
+page path  : /stories/blog/data-quality-for-machine-learning-genai-and-agentic-ai
+captured   : 2026-05-09 17:35:22 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_data-quality-for-machine-learning-genai-and-agentic-ai__e74ac6f4.html.gz
+========================================================================
+
+Data quality for machine learning, generative AI, and agentic AI
+
+Data quality for machine learning, generative AI, and agentic AI
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Machine Learning
+
+Data quality for machine learning, generative AI, and agentic AI
+
+May 5, 2026
+
+7 min read
+
+/
+
+Jed Dougherty
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+Nobody builds bad models on purpose. They build them on data that looked clean until it wasn't. By the time the defect surfaces, a pricing model has shipped a $2.3M margin shortfall, a chatbot has delivered confident wrong answers to customers, or an autonomous agent has committed budget on incomplete data. Poor data quality is the most common reason AI projects stall, drift, or fail silently in production.
+
+In traditional ML, these failures are at least visible. A dashboard shows the wrong number, an analyst catches it, someone retrains the model. The damage is contained. That is the familiar relationship between machine learning and
+data quality
+.
+
+Generative AI and agentic AI break that containment. A chatbot pulling from a stale knowledge base delivers a confident, wrong answer with no signal that anything is wrong. An autonomous procurement agent commits budget on incomplete supplier data before anyone reviews it. The AI operated exactly as designed, on data that was never fit for purpose.
+
+The further AI moves from prediction to action, the less tolerance there is for data quality failures, and the harder those failures are to catch before they cause damage.
+
+At a glance
+
+Poor data quality drives more AI system failures across machine learning, generative AI, and agentic AI than any other single factor.
+
+Poor data quality produces different failure modes depending on the AI type: biased predictions in ML, hallucinations in GenAI, and cascading errors in agentic systems.
+
+Five core quality dimensions (accuracy, completeness, consistency, timeliness, fitness for purpose) map directly to specific AI risks that enterprises must control.
+
+Operationalizing data quality at scale requires ML-driven automation, continuous monitoring, and governance embedded into every stage of the data pipeline.
+
+Why is data quality foundational for ML, generative AI, and agentic AI?
+
+Data quality is foundational for ML, GenAI, and agentic AI because every defect in the data an AI system learns from or acts on becomes encoded in its outputs. Models learn from the data they are given, and every defect in that data – missing values, mislabeled records, stale entries – becomes encoded in the model's behavior.
+With generative AI, the dependency deepens. Large language models retrieve and synthesize information from knowledge bases, documents, and structured datasets. When that source material is inaccurate, outdated, or contradictory, the model generates confident, fluent answers without any indication that the source material was wrong. The failure is invisible until a user acts on it.
+Agentic AI raises the stakes further. Autonomous
+agents execute multi-step workflows
+, make decisions, and trigger actions with minimal human oversight. Each step in an agentic workflow compounds the consequences of the data it relies on. A single stale record produces a bad decision that feeds into the next, and by the time a human intervenes, the chain of actions is already difficult to unwind.
+This guide covers the quality dimensions that matter most, the techniques that scale beyond manual rules, and the pipeline architecture that makes data quality an operational discipline rather than a periodic cleanup.
+
+How poor data quality breaks AI systems at scale
+
+Poor data quality breaks AI systems through a direct causal chain: Defects in training data become defects in model behavior, and those defects compound as AI systems move from prediction to autonomous action.
+In traditional ML, these defects surface as prediction errors or unexplained drift. In generative AI, they produce hallucinations that users cannot distinguish from valid responses.
+The business consequences are not abstract. According to
+"7 career-making AI decisions for CIOs in 2026"
+, based on a Dataiku/Harris Poll survey of 600 enterprise CIOs, 85% say gaps in traceability or explainability have already delayed or stopped AI projects from reaching production. Data quality problems are a primary driver of those gaps: When teams cannot trace a model's behavior back to trustworthy inputs, the project stalls.
+
+5 core dimensions of data quality for ML, generative AI, and agentic AI
+
+Five dimensions determine whether data is fit for AI use. Each maps to specific failure modes across AI types. The table below provides an overview of how each dimension manifests as a distinct failure mode depending on the AI paradigm.
+
+Click on the image above to zoom into full PDF
+
+1. Accuracy
+measures whether data values correctly represent reality. In ML, inaccurate labels produce biased models. In generative AI, inaccurate source documents produce hallucinated responses. In agentic systems, inaccurate inputs produce incorrect autonomous actions.
+
+2. Completeness
+measures whether the required data is present. Missing values force imputation that may introduce bias. In generative AI, incomplete knowledge bases create coverage gaps that the model fills with fabricated content. In agentic workflows, missing data can cause an agent to skip critical steps or make decisions on partial context.
+
+3. Consistency
+measures whether the same entity is represented the same way across sources. Inconsistent customer records across CRM and billing systems produce conflicting features. In generative AI, contradictory source documents produce unreliable outputs. In agentic systems, inconsistency causes different agents in a pipeline to operate on conflicting versions of truth.
+
+4. Timeliness
+measures whether data reflects current conditions. Stale training data teaches models patterns that no longer hold. In generative AI, outdated documents produce responses that were correct six months ago but are misleading today. In agentic systems, stale data triggers actions based on conditions that have already changed.
+
+5. Fitness
+for purpose measures whether data is appropriate for its intended AI use case. Data that is perfectly valid for one application may be inappropriate for another. A dataset suitable for aggregate reporting may lack the granularity needed for individual-level predictions, or the provenance documentation required for regulated AI applications.
+
+Enterprise-scale data quality challenges
+
+At enterprise scale, data quality debt accumulates faster than manual processes can clear it, and every AI system built on uncorrected data inherits that debt.
+
+Volume, variety, and velocity:
+Structured transactional data arrives alongside unstructured documents, logs, and embeddings. Schema drift breaks pipelines silently. Quality improvements in one system don't propagate to others.
+
+Static validation rules:
+Manual rules miss novel defect patterns and maintenance effort grows linearly with data volume, so novel defects pass through unchecked as data evolves.
+
+Compounding data quality debt:
+Every model trained on uncorrected data inherits those defects, and every downstream consumer of that model's outputs inherits them again.
+
+What ML-driven techniques improve data quality across AI systems?
+
+Moving beyond manual rules requires ML-based automation that learns from data patterns and adapts as those patterns change.
+
+Anomaly detection for early risk and compliance safeguards
+
+Statistical and ML-based anomaly detection identifies outliers, distribution shifts, and unexpected patterns in both training and production data. These checks catch silent failures, values that are technically valid but statistically implausible, before they mislead models or agentic systems.
+
+Imputation and gap filling to ensure complete and reliable datasets
+
+ML-based imputation infers missing values from surrounding data patterns rather than applying static defaults. The risk is that poor imputation introduces systematic bias. Imputed values should be flagged, documented, and monitored for downstream impact.
+
+Deduplication and record linkage for accurate reporting and traceability
+
+Entity resolution and fuzzy matching consolidate duplicate or fragmented records that skew training distributions and produce inconsistent outputs. At enterprise scale, deduplication and record linkage have to run continuously across every pipeline that feeds AI systems, not as a periodic cleanup.
+
+Automated rule generation to strengthen governance controls
+
+ML can learn validation rules from data patterns, identifying expected ranges, format conventions, and cross-field dependencies that would take months to codify manually. Automated rule generation scales governance controls alongside data volume and reduces the human bias that comes with manually authored rules.
+
+Continuous monitoring to maintain ongoing regulatory readiness
+
+Real-time monitoring tracks data quality metrics (freshness, completeness, anomaly rates) and triggers alerts when degradation crosses defined thresholds. For generative AI pipelines and long-running agentic workflows, real-time monitoring is essential because a quality issue that goes undetected for hours can propagate through thousands of decisions before anyone notices.
+
+Designing an end-to-end AI-ready data quality pipeline
+
+Enterprises that catch data defects before they reach AI systems structure their pipelines around six sequential stages, each with a defined quality gate.
+
+Click on the image above to zoom into full PDF
+
+The architecture must support both batch and real-time processing. Batch pipelines handle large-scale retraining datasets. Real-time pipelines handle the live data feeds that agentic systems and generative AI applications depend on for current-state reasoning.
+
+Responsible AI governance and human oversight
+
+Data quality requires governance ownership just as much as technical ownership. Every dataset that feeds an AI system needs a documented owner, a defined steward, and clear accountability for quality standards.
+For generative AI and agentic systems, human-in-the-loop controls serve as the last line of defense against quality failures that automated checks miss. Escalation paths must be defined: when a quality alert fires, who reviews it, who decides whether to halt the pipeline, and who approves the fix before data flows resume.
+Auditability ties everything together, and responsible AI use requires that every transformation and quality decision be traceable before it reaches a model or agent.
+
+Measuring data quality and driving continuous improvement
+
+Four metrics anchor a data quality monitoring program:
+
+Freshness:
+Is the data current
+
+Completeness:
+Are required fields populated?
+
+Anomaly rate:
+What percentage of records fail quality checks?
+
+Detection precision:
+Are quality alerts flagging real issues or generating noise?
+
+These metrics feed back into two cycles. The retraining cycle uses quality trends to determine when models need updated data. The governance cycle uses quality findings to refine validation rules, update ownership assignments, and identify systemic issues that require pipeline redesign.
+
+As AI systems evolve, the data they consume and the quality standards they require have to evolve alongside them. Treating data quality for
+machine learning
+and other AI applications as a fixed baseline will eventually break the systems built on top of it.
+
+Build trusted AI on trusted data
+
+The pattern across every AI failure in this article is the same: data that was not accurate enough, complete enough, current enough, or appropriate enough for the AI system consuming it. The fix is better data, profiled and monitored at every stage of the pipeline, with clear ownership and governance, before any model touches it.
+Dataiku, the Platform for AI Success
+, brings data preparation, quality monitoring, and AI governance into a single platform where every dataset that feeds an ML model, a generative AI application, or an agentic workflow is profiled, validated, and traceable.
+
+Get data quality right for GenAI and AI agents
+
+Get the playbook
+
+FAQs about machine learning and data quality
+
+What is the minimum data quality baseline before deploying AI?
+
+At a minimum, you need accuracy and completeness rates that are measurable and documented, not assumed. That means profiling every dataset that feeds the model, establishing baseline metrics, and defining thresholds below which deployment is blocked. There's no universal number, but if you cannot quantify the quality of your training data, you're not ready to trust the model it produces.
+
+How does data quality impact generative AI hallucinations?
+
+Generative AI models retrieve and synthesize content from source material. When that material contains inaccuracies, contradictions, or outdated information, the model weaves those defects into fluent, confident responses that look correct but are not. Better source data reduces the most preventable class of hallucinations, the ones that trace directly back to inaccurate or outdated source documents.
+
+Why is data quality especially critical for agentic AI systems?
+
+Because agents act on data autonomously. In a traditional ML system, a bad prediction sits in a dashboard until a human reviews it. In an agentic system, that same bad prediction triggers an action that feeds into the next decision and compounds from there.
+
+How do enterprises balance rule-based and ML-driven quality checks?
+
+Rule-based checks handle known, stable patterns: format validation, range checks, and required fields. ML-driven checks handle novel or evolving patterns: anomaly detection, distribution drift, and cross-field dependencies that are too complex to codify manually. Most mature organizations run both in parallel, with rule-based checks as the first pass and ML-driven checks as the adaptive layer.
+
+How can organizations measure ROI from data quality initiatives?
+
+Track the downstream costs that data quality prevents: model retraining frequency, production incident rates, manual reconciliation hours, regulatory remediation costs, and the number of AI projects delayed or abandoned due to data trust issues. Even reducing that stall rate by a fraction translates to significant time and budget recovered.
+
+Tags
+
+GenAI & Agents
+
+Machine Learning
+
+Share
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Enterprise AI agents: architecture, use cases, and ROI guide
+
+Building production-ready AI agents: an enterprise guide
+
+Recursive AI: when models start managing their own context
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+Data quality for machine learning, generative AI, and agentic AI
+
+Nobody builds bad models on purpose. They build them on data that looked clean until it wasn't. By the time...
+
+May 05, 2026
+
+GenAI & Agents
+
+Enterprise AI agents: architecture, use cases, and ROI guide
+
+Your IT team spends 40% of its week on ticket triage, status updates, and routing. A chatbot handles the easy...
+
+Apr 23, 2026
+
+GenAI & Agents
+
+Building production-ready AI agents: an enterprise guide
+
+Imagine your enterprise service desk handling 12,000 tickets a month. Each one is routed through a...
+
+Apr 21, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

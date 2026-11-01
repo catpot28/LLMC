@@ -1,0 +1,440 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/servicenow/
+page path  : /product/plugins/servicenow/
+captured   : 2026-02-12 04:07:30 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_servicenow__c3b9a570.html.gz
+========================================================================
+
+Plugin: ServiceNow | Dataiku
+
+Plugin: ServiceNow | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+ServiceNow
+
+ServiceNow
+
+Import your ServiceNow data into Dataiku, let your LLM mesh create tickets on ServiceNow
+
+Plugin information
+
+Version
+
+0.0.11
+
+Author
+
+Dataiku (Alex Bourret)
+
+Released
+
+2025-04
+
+Last updated
+
+2025-11
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+This Dataiku DSS plugin provides a read connector to interact with
+ServiceNow
+tables, and an agent tool to allow LLMs to create ServiceNow issues.
+
+How to set up
+
+Create service accounts
+
+As a DSS admin, go to
+Applications > Plugins > Installed > ServiceNow > Settings > Service accounts > + Add preset
+. Add the URL to the ServiceNow instance to reach. Add the user name and password of the ServiceNow account that will be used to interact with the instance. Finally, share the preset with the relevant groups.
+
+Create an instance preset for user accounts
+
+As a DSS admin, go to
+Applications > Plugins > Installed > ServiceNow > Settings > User accounts > + Add preset
+. Add the URL to the ServiceNow instance to reach. Share the preset with everyone.
+
+Once this preset is create, each DSS user that requires accessing to the ServiceNow instance will have to go to their own
+profile page > Credentials > created preset > Edit symbol
+, and add their own user name and password.
+
+How to use
+
+Read a ServiceNow table
+
+In the flow, click on
++Dataset > Plugins/ServiceNow > ServiceNow
+table to dataset. Select the appropriate authentication type and preset and the table to retrieve. Press
+Test & get schema
+and
+Create
+
+Use with a LLM agent
+
+This plugin can be used as a tool by an agent to create ServiceNow issues. This requires Dataiku >= 12.6.2.
+
+Example Use Case: Create Issues Based on User Input
+
+In this example, we aim to process a dataset of messages from user tickets and create ServiceNow issues if necessary.
+
+First, we need to create the agent tool. In the project’s flow, click on
+Analysis > Agent tools > +New agent tool > Create a ServiceNow issue
+. Name the identifier and the agent.
+
+Then, we can create the actual agent. Click on
++Other > Generative AI > Visual Agent
+, name the agent, click on v1, and add the tool (
++Add tool
+) created in the previous step. In the agent’s
+Additional prompt
+section, describe what are your specifications on what the parameters in the ticket should contain. The agent tool can fill in the following parameters:
+description
+,
+summary
+,
+emergency
+and
+impact
+. An example of specification could be
+The impact should be set to 1 only if the problem impact production
+
+Once this is done, the agent can be used in place of an LLM in your prompt and LLM settings. For instance, a simple LLM recipe with the prompt
+You are an IT agent and your mission is to write ServiceNow ticket if the user’s message requires it.
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for servicenow plugin name.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

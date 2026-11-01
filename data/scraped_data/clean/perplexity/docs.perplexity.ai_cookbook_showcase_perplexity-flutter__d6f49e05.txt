@@ -1,0 +1,248 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/cookbook/showcase/perplexity-flutter
+page path  : /cookbook/showcase/perplexity-flutter
+captured   : 2026-01-25 02:50:13 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_cookbook_showcase_perplexity-flutter__d6f49e05.html.gz
+========================================================================
+
+Perplexity Dart & Flutter SDKs - Perplexity
+
+Perplexity Dart & Flutter SDKs - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Community Showcase
+Perplexity Dart & Flutter SDKs
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Cookbook
+Perplexity API Cookbook
+Community Showcase
+Briefo | Perplexity Powered News & Finance Social App
+CityPulse | AI-Powered Geospatial Discovery Search
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Perplexity Dart & Flutter SDKs
+PerplexiGrid | Interactive Analytics Dashboards
+Valetudo AI | Trusted Medical Answer Assistant
+CycleSyncAI | Personalized Health Plans Powered by Sonar API
+FlameGuardAI | AI-powered wildfire prevention
+Monday – Voice-First AI Learning Assistant
+Ellipsis | One-Click Podcast Generation Agent
+FirstPrinciples | AI Learning Roadmap Generator
+BazaarAISaathi | AI-Powered Indian Stock Market Assistant
+4Point Hoops | AI Basketball Analytics Platform
+MVP LifeLine | AI Youth Empowerment Platform
+Executive Intelligence | AI-Powered Strategic Decision Platform
+Flow & Focus | Personalized News for Genuine Understanding
+Perplexity Lens | AI-Powered Knowledge Graph Browser Extension
+Greenify | Localized community-driven greenification/plantation solution with AI
+Sonar Chromium Browser | Native Search Omnibox and Context Menu
+PosterLens | Scientific Poster Scanner & Research Assistant
+Daily News Briefing | AI-Powered News Summaries for Obsidian
+UnCovered | Real-Time Fact-Checking Chrome Extension
+PerplexiCart | AI-Powered Value-Aligned Shopping Assistant
+TruthTracer | AI-Powered Misinformation Detection Platform
+StarPlex | AI-Powered Startup Intelligence Platform
+Perplexity Client | Desktop AI Chat Interface with API Controls
+Examples
+Integration Guides
+On this page
+Perplexity Dart & Flutter SDKs
+Features
+Prerequisites
+Installation
+For Dart Projects (Core API Only)
+For Flutter Projects (Full Widget Support)
+Environment variables
+Usage
+Core API Integration
+Flutter Widget Layer
+Code Explanation
+Architecture
+Two-layer design
+Links
+Packages
+Examples
+Community Showcase
+Perplexity Dart & Flutter SDKs
+Copy page
+Lightweight, type-safe SDKs for seamless Perplexity API integration in Dart and Flutter applications
+Copy page
+​
+Perplexity Dart & Flutter SDKs
+
+Perplexity Dart & Flutter SDKs
+provide a comprehensive toolkit for integrating Perplexity’s AI capabilities into Dart and Flutter applications. Built specifically for the Flutter community, these packages include a lightweight core API client and ready-to-use Flutter widgets with BLoC state management.
+
+​
+Features
+
+Type-safe API client with fully typed models and compile-time safety
+
+Streaming and non-streaming chat completions with real-time response handling
+
+Support for all Perplexity models (Sonar, Sonar Pro, Deep Research, Reasoning variants)
+
+Multi-image processing with base64, data URI, and HTTPS URL support
+
+Ready-to-use Flutter widgets with BLoC state management integration
+
+Advanced configuration options (temperature, top-p, search filters, domain restrictions)
+
+Cross-platform support for iOS, Android, Web, and Desktop
+
+Future-proof design with custom model string support for new Perplexity releases
+
+​
+Prerequisites
+
+Dart SDK 2.17.0 or newer
+
+Flutter SDK 3.0.0 or newer (for Flutter-specific features)
+
+Perplexity API key from Perplexity API Console
+
+Basic knowledge of Flutter BLoC pattern for widget integration
+
+​
+Installation
+
+​
+For Dart Projects (Core API Only)
+
+Copy
+Ask AI
+dart
+pub
+add
+perplexity_dart
+
+​
+For Flutter Projects (Full Widget Support)
+
+Copy
+Ask AI
+flutter
+pub
+add
+perplexity_flutter
+
+​
+Environment variables
+
+Copy
+Ask AI
+// Add to your app's configuration
+
+const
+String
+perplexityApiKey
+=
+'your_perplexity_api_key_here'
+;
+
+​
+Usage
+
+​
+Core API Integration
+
+Type-safe client with all Perplexity models (Sonar, Sonar Pro, Deep Research, Reasoning)
+
+Streaming and non-streaming chat completions
+
+Multimodal processing with flexible MessagePart system for text + images
+
+​
+Flutter Widget Layer
+
+ChatWrapperWidget
+for BLoC state management
+
+PerplexityChatView
+for real-time message display
+
+PerplexityChatInput
+for user interaction handling
+
+​
+Code Explanation
+
+Core Layer: Pure Dart API client (
+perplexity_dart
+) for cross-platform Perplexity API integration
+
+UI Layer: Flutter widgets (
+perplexity_flutter
+) with BLoC state management for rapid development
+
+Type Safety: Fully typed models and responses prevent runtime errors and provide IntelliSense
+
+Multimodal: Flexible MessagePart system for combining text and images in single requests
+
+Streaming: Built-in support for real-time chat completions with proper chunk handling
+
+Architecture: Two-layer design allows lightweight API usage or full Flutter widget integration
+
+​
+Architecture
+
+​
+Two-layer design
+
+Core (
+perplexity_dart
+)
+- Pure Dart API client for all platforms
+
+UI (
+perplexity_flutter
+)
+- Flutter widgets + BLoC state management
+
+Uses flexible MessagePart system for multimodal content combining text and images.
+
+​
+Links
+
+​
+Packages
+
+perplexity_dart on pub.dev
+|
+GitHub
+
+perplexity_flutter on pub.dev
+|
+GitHub
+
+​
+Examples
+
+Flutter Example App
+
+Dart Examples
+
+Was this page helpful?
+Yes
+No
+Fact Dynamics | Real-time Fact-Checking Flutter App
+Previous
+PerplexiGrid | Interactive Analytics Dashboards
+Next
+⌘
+I
+x
+discord
+website
+Powered by

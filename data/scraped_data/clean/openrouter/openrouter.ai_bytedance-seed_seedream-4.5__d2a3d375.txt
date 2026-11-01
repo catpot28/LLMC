@@ -1,0 +1,143 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/bytedance-seed/seedream-4.5
+page path  : /bytedance-seed/seedream-4.5
+captured   : 2026-04-15 04:45:46 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/openrouter/openrouter.ai_bytedance-seed_seedream-4.5__d2a3d375.html.gz
+========================================================================
+
+Seedream 4.5 - API Pricing & Providers | OpenRouter
+
+Seedream 4.5 - API Pricing & Providers | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Fusion
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+ByteDance Seed: Seedream 4.5
+bytedance-seed
+/
+seedream-4.5
+Chat
+Compare
+Released
+Dec 23, 2025
+4,096
+context
+$0.04 per image
+Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement and small-text rendering. The model’s multi-image composition capabilities have been significantly strengthened, and both reasoning performance and visual aesthetics continue to advance, enabling more accurate and artistically expressive image generation.
+
+Pricing is $0.04 per output image, regardless of size.
+Chat
+Compare
+Overview
+Playground
+Providers
+Performance
+Pricing
+Apps
+Activity
+Uptime
+API
+Providers for Seedream 4.5
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for Seedream 4.5
+Compare different providers across OpenRouter
+All locations
+Sorting API Example
+Effective Pricing for Seedream 4.5
+Actual cost per million tokens across providers over the past hour
+Apps using Seedream 4.5
+Top public apps this month
+Recent activity on Seedream 4.5
+Total usage per day on OpenRouter
+Completion
+5.82M
+Prompt
+1.26M
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for Seedream 4.5
+Uptime stats for
+Seedream 4.5
+
+across all providers
+Sample code and API for Seedream 4.5
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports image generation models that only output images and not text. These models can create images from text prompts when you specify
+
+modalities: ["image"]
+in your request. The generated images are returned as base64-encoded data URLs in the assistant message.
+
+Learn more about image generation
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

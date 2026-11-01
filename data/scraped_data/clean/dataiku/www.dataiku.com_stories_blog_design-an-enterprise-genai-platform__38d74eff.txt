@@ -1,0 +1,502 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/design-an-enterprise-genai-platform
+page path  : /stories/blog/design-an-enterprise-genai-platform
+captured   : 2026-03-05 21:02:46 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_design-an-enterprise-genai-platform__38d74eff.html.gz
+========================================================================
+
+A How-to Guide to Design an Enterprise GenAI Platform
+
+A How-to Guide to Design an Enterprise GenAI Platform
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+AI Governance & Architecture
+
+A How-to Guide to Design an Enterprise GenAI Platform
+
+Sep 9, 2024
+
+5 min read
+
+/
+
+Anjaney Shrivastava
+
+As part of their global AI strategy, companies want to ensure they are at the forefront in developing and implementing cutting-edge technology. A large chunk of that AI strategy is to provide hundreds and thousands of employees with the tech stack to build and/or consume GenAI applications with proper governance and control. But what are the components of that state-of-the-art architecture?
+
+Just take a look at the current
+MAD
+landscape of AI/machine learning (ML) tools.
+
+The speed at which old and new tech companies are creating GenAI tools is quite revolutionary. There are hundreds of LLMs, hundreds of thousands of GenAI foundational models, a myriad of ways for inferencing, and thousands of companies with point solutions available. The biggest question that large enterprises are trying to solve is: “What’s the framework for picking and choosing the right blueprint architecture for your organization that will drive adoption of GenAI?” That’s what we’ll unpack in this article.
+
+Capability Segments for Enterprise GenAI Architecture
+
+The figure below captures the main capabilities that need to be made available to all GenAI application developers and users. Large enterprises wish to democratize the ability for all business users to be able to build and leverage GenAI applications. This would mean standing up a centralized approach for self-serve infrastructure and governance and then further pushing the responsibility and authority of creating and leveraging GenAI products to business teams.
+
+How These Capabilities Fit Together in a Simplified Abstraction
+
+Let’s look at how the four capability segments fit together.
+
+The key takeaways are:
+
+Companies need to look at the technology (or products to buy), which consequently should be aligned and provided centrally.
+
+GenAI use cases themselves should be delivered close to the business, thus locally / decentralized. In order to deliver actionable insights, these use cases must be operationalized and then maintained.
+
+Let's Build a Simplified GenAI Architecture
+
+Figure below is a further drill-down to build out an enterprise architecture.
+
+Enterprise AI Strategy and Tech Architecture Managed Centrally (Hub)
+
+It all starts with a consistent GenAI strategy. But we need to get from current state to future state of GenAI adoption, which means change management and alignment across all the domains, business units, etc.
+
+To make that possible, we need a “technology stack” which includes:
+
+Infrastructure:
+On-premises, hybrid cloud, multi-cloud — and even run by business units themselves. There are two components to this:
+
+Compute: On-prem or provided
+
+Storage: On-prem or provided
+
+Data layer for GenAI
+: This enables three things:
+
+Data hub layer for bringing together quality data from many silos.
+
+Data catalog and metadata management to ensure reusability and discovery.
+
+Data transformations to prepare the data to develop GenAI apps.
+
+GenAI/LLM Model Repository
+(where all the hundreds of LLMs sit): Abstract away the logic to connect to many LLMs to enable the use of the right models for the right jobs at scale.
+
+Prompt management:
+Easy-to-use control plane for prompt engineering and management that can control the underlying infrastructure. You should have abilities to do things like test prompts easily and deploy them to automate inference at scale.
+
+GenAI application development
+: Ability to build apps that can act like agents for end consumers to leverage the GenAI use cases developed.
+
+The tech stack should fit into a common architecture — and of course needs some type of platform operations. Also, we want consistent policies and access control / security across the whole stack, preferably fully integrated (SSO, OAuth, etc.). The lower layers of this tech stack are where tooling for data governance sits. For the upper layers, we also should think of
+tooling AI Governance
+around all types of GenAI use cases.
+
+For each of these capabilities, we see a common pattern of a bare bones modernized tech stack. The core components of the framework we propose for the enterprise tech architecture includes:
+
+NVIDIA or AWS/GCP/Azure or Databricks/Snowflake for compute
+
+Databricks/Snowflake for data management and warehousing
+
+AI/ML workbench with a UI-based control plane like Dataiku for the enterprise.
+
+Because knowledge workers in the business aren’t always experienced developers with a coding skill set, it’s important that the chosen tech stack can support all profiles, from full code to low/no code users. The more people who are able to utilize or contribute subject matter expertise to GenAI applications, the more powerful the total impact can be on an organization.
+
+Once we have more than one GenAI product (in reality there are many of these yellow boxes in parallel), we should keep an overview of the portfolio of GenAI use cases, and their associated cost and leveraged value. Ancillary to that, we should establish teams to support the domains themselves, talking about a central funding and resource strategy as well as a (second level) consulting of experts that can support the domain teams in tricky cases. That also includes general support and building a community that fosters the AI culture. To get started, you want to think about a ramp-up support team that provides initial training.
+
+Use Case Development and Operations Managed Locally (Spoke)
+
+The actual GenAI use case, as the key of why we are all doing this, should be done within the business units — keeping lifecycle management in mind, meaning clear
+LLMOps
+/
+DataOps
+
+processes. Although the central IT hub will define general governance and compliance practices, it’s up to line-of-business teams to have ownership and accountability for implementing
+Responsible GenAI
+processes for individual use cases. Thus, it’s a good practice to have all people on your team trained and aware of the governance aspects of integrating GenAI into existing business processes.
+
+Common Infrastructure Enabler for GenAI Systems
+
+So, bringing it all together, overarching all the business teams is the consistent strategy and governance — and now we are talking about the corporate governance to enable that! Now imagine you establish that self-service data infrastructure — any business team can use it and leverage its benefits.
+
+This approach, leveraging
+the Dataiku LLM Mesh
+, avoids re-inventing the wheel by providing a turnkey GenAI platform that can enable business units to deliver GenAI use cases at scale and with ease, while ensuring compliance. And it effectively hides (and unifies) what is below it — both on where the data is stored (cloud vs. on-premises) and where the compute is happening. For the user in a business unit building GenAI use cases, it should really not matter! Also, it’s important that the self-serve structure is highly interoperable with other key tech players in the market to adapt and scale as the tech landscape changes (which is imminent).
+
+There are multiple studies done by large System Integrators that prove that currently businesses have
+
+over
+$300 billion in unused cloud commitments.
+It is important for the CDO/CIO to see that their investment in tech is being fully utilized and the backlog of multiple use cases is resolved. This design also helps extract every ounce of compute provided by your cloud and data vendors. With investment in Dataiku as the middle self-service platform layer now, not just few hundreds but thousands of users in your enterprise can build their GenAI use cases that will start leveraging the compute and data layer investment.
+
+A Sample GenAI Enterprise Tech Architecture With Dataiku, AWS, Databricks, & NVIDIA
+
+The sample enterprise GenAI architecture below shows what we can propose to Dataiku customers who have adopted AWS and Databricks. We can use this blueprint to build reference architectures with AWS/GCP/Azure, Databricks/Snowflake, and NVIDIA.
+
+Building a robust and scalable GenAI platform requires a well-orchestrated combination of centralized technology and governance and decentralized execution. By aligning your technology stack with a clear AI strategy, you enable business units to leverage GenAI use cases while maintaining compliance and efficiency.
+
+The key is to provide a self-serve infrastructure that supports a wide range of users, from low-code developers to advanced coders, ensuring broad adoption across the organization. With the right architecture in place, companies can fully utilize their cloud and data investments, driving meaningful business outcomes through GenAI.
+
+Your Journey With The Universal AI Platform™ Starts Now
+
+START FREE TRIAL
+
+Keep Reading
+
+Before AI Agents: The Technology Foundations CIOs Can’t Skip
+
+Dataiku Named a Leader for Unified AI Governance in IDC MarketScape 2025-2026
+
+Why Shadow AI Agents Are Accumulating Automation Debt
+
+CIOs on the Frontlines: Lessons From Perdue Farms and BCLC
+
+How Databricks & Dataiku Embed Governance Into AI Workflows
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+Before AI Agents: The Technology Foundations CIOs Can’t Skip
+
+AI agents require data readiness first and foremost. They don’t transform enterprises; they reveal whether the...
+
+Jan 30, 2026
+
+Recommended
+
+Dataiku Named a Leader for Unified AI Governance in IDC MarketScape 2025-2026
+
+As enterprises scale generative AI and AI agents across the business, governance has evolved from a compliance...
+
+Jan 28, 2026
+
+Recommended
+
+Why Shadow AI Agents Are Accumulating Automation Debt
+
+For many enterprises, AI risk still centers on unsanctioned prompts and shadow tools. But the next wave of...
+
+Jan 21, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2025 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

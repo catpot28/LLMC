@@ -1,0 +1,125 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/async-endpoints-return-different-status-for-list-vs-get-on-completions-endpoint/3681
+page path  : /t/async-endpoints-return-different-status-for-list-vs-get-on-completions-endpoint/3681
+captured   : 2026-02-07 07:58:11 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_async-endpoints-return-different-status-for-list-vs-get-on-completions-endpoint_3681__ddd1aaaa.html.gz
+========================================================================
+
+Async endpoints return different status for List vs Get on /completions endpoint - Bug Reports - Perplexity API Platform Forum
+
+Async endpoints return different status for List vs Get on /completions endpoint - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Async endpoints return different status for List vs Get on /completions endpoint
+
+Bug Reports
+
+sonar-deep-research
+
+cfdude
+
+January 26, 2026, 2:15am
+
+1
+
+I need to report a bug I found in the API for Async calls, here is the details: I tested Perplexity’s API directly using curl:
+
+# Direct curl to Perplexity’s LIST endpoint
+
+curl “
+https://api.perplexity.ai/async/chat/completions?limit=5
+”
+
+Returns: status: “COMPLETED”, completed_at: 1769385424
+
+# Direct curl to Perplexity’s GET endpoint
+
+curl “
+https://api.perplexity.ai/async/chat/completions/
+[id]”
+
+Returns: status: “IN_PROGRESS”, completed_at: null
+
+Same API key, same job ID, same moment in time - two different answers from Perplexity’s servers.
+
+Sonar-deep-research taking longer than expected
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Async chat completion stuck in IN_PROGRESS for hours while sync returns successfully
+
+Bug Reports
+
+sonar-deep-research
+
+2
+
+30
+
+February 3, 2026
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+7
+
+128
+
+February 5, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+279
+
+June 1, 2025
+
+API very slow / returning 5xx errors
+
+General
+
+2
+
+150
+
+May 15, 2025
+
+Subpar responses when using pplx api when compared to perplexity labs
+
+General
+
+2
+
+140
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

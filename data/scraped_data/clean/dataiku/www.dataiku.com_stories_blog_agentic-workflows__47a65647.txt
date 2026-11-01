@@ -1,0 +1,624 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/agentic-workflows
+page path  : /stories/blog/agentic-workflows
+captured   : 2026-04-14 06:43:36 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_agentic-workflows__47a65647.html.gz
+========================================================================
+
+Agentic workflows guide: definition, patterns, and use cases
+
+Agentic workflows guide: definition, patterns, and use cases
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+GenAI & Agents
+
+Agentic workflows guide: definition, patterns, and use cases
+
+Mar 23, 2026
+
+7 min read
+
+/
+
+Clément Stenac
+
+Table of Contents
+
+From Shadow AI to Shadow Agents
+
+The Hidden Cost of Autonomy
+
+Why Traditional Governance Breaks Down
+
+Visibility Is the Missing Primitive
+
+Human-in-the-Loop as a Design Choice
+
+The Real Shift: From Limiting AI to Seeing It
+
+Most enterprises already rely on automation to keep work moving. Ticket routing. Triage workflows. Rule-based handoffs. These systems handle the bulk of routine demand just fine.
+
+But the cracks show up at the edges.
+
+Every week, ambiguous requests, partial context, or unfamiliar situations fall outside predefined rules. Work gets misrouted. Decisions stall. Issues escalate that didn’t need to. These aren’t failures of effort but limits of rigid logic.
+
+Agentic workflows are designed to operate exactly in that gap. They step in where traditional automation stops and human judgment used to be the only option. To see why that matters, it helps to start with what makes a workflow
+agentic
+.
+
+At a glance:
+
+Agentic workflows handle ambiguity by letting AI agents plan, act, and adapt in real time, stepping in where rule-based automation breaks down.
+
+They deliver faster execution and better decisions by connecting agents directly to enterprise data, tools, and systems.
+
+The biggest risks come from weak governance, unclear boundaries, and lack of visibility into agent behavior.
+
+Teams that succeed treat agentic workflows as an enterprise capability, with clear KPIs, guardrails, and a path from pilot to scale.
+
+What are agentic workflows?
+
+An agentic workflow is a sequence of steps where an AI agent independently plans how to accomplish a goal, selects and uses tools, evaluates results, and adjusts its approach with minimal human intervention.
+
+Unlike traditional automation, agentic workflows don’t assume the world is predictable. They adapt in real time as new information shows up.
+
+What makes them “agentic” comes down to four traits:
+
+Autonomy:
+The system figures out how to complete the task instead of waiting for predefined conditions to fire.
+
+Adaptability:
+When inputs change or results fall short, the workflow adjusts rather than failing or escalating by default.
+
+Tool use:
+Beyond just generating text,
+
+agents call Application Programming Interface (APIs), query databases, run code, and trigger actions across enterprise systems.
+
+Goal orientation:
+Instead of following a checklist, the agent reasons backward from a desired outcome and adapts execution as it goes.
+
+Agentic vs. traditional automation: what's the difference?
+
+Traditional automation and agentic workflows solve different problems. The contrast becomes obvious when you compare how each approach handles ambiguity, decision-making, and change.
+
+Core components of agentic workflows
+
+Agentic workflows rely on a small set of components working together as a governed system:
+
+Reasoning engine
+
+Usually powered by a large language model (LLM), this component interprets the goal, breaks it into steps, and decides what to do next. It’s what allows the workflow to move beyond fixed rules.
+
+Tools and integrations
+
+An agent is only useful if it can act. This layer connects it to APIs, databases, search, code execution, and core enterprise systems like Customer Relationship Management (CRM), Enterprise Resource Planning (ERP), or IT Service Management (ITSM) platforms.
+
+Memory
+
+Short-term memory preserves context within a task. Long-term memory carries knowledge across runs. Together, they prevent agents from starting from scratch every time.
+
+Orchestration layer
+
+This is where
+execution is governed
+. Tasks are sequenced. Failures are handled. Decisions are logged. Access controls are enforced. It’s also where observability and auditability live, so agent activity can be monitored alongside existing data pipelines and models.
+
+How agentic workflows operate: plan, act, reflect
+
+Agentic workflows follow a simple loop that mirrors how people approach complex work.
+
+Plan:
+The agent receives a goal, interprets intent, and breaks the task into steps. It decides what information it needs and which tools to use.
+
+Act:
+Those steps are executed through controlled tool calls (querying data, running calculations, triggering actions), not free-form text generation.
+
+Reflect:
+The agent evaluates the result. Did it meet the goal? Is anything missing? If not, it updates the plan and tries again.
+
+This loop continues until a stopping condition is reached, such as a confidence threshold or a required human approval. That reflection step is what separates agentic workflows from chained prompts. It’s how they self-correct instead of producing one-shot outputs.
+
+What are the business benefits of agentic workflows?
+
+When you execute agentic workflows, the impact shows up fast in decision quality, execution speed, and how much value you get from the systems you already run.
+
+Efficiency gains
+
+Agents take on multi-step work that usually bounces between people and tools. Think support triage, reading the request, pulling account history, assessing severity, and routing it correctly. That’s often twenty minutes of context gathering. An agent does the same sequence in seconds.
+
+Scalable decision quality
+
+Rule-based systems get brittle as exceptions pile up. Agentic workflows move the other way. In predictive maintenance, an agent can adjust inspection schedules based on live sensor data and past outcomes instead of fixed intervals. Each decision feeds the next one.
+
+Faster execution cycles
+
+Most delays come from waiting for data, handoffs, or reformatting. Agents absorb that connective work. In marketing operations, an agent can review campaign performance and prepare recommendations without waiting for manual coordination.
+
+Compounding returns
+
+Every improvement you make, that is, cleaner data, better models, and clearer processes, directly improves agent performance. Over time, that means fewer escalations and faster outcomes. The infrastructure you’ve already invested in becomes more useful, not more complex.
+
+Limitations, risks, and governance safeguards
+
+According to a Capgemini Research Institute survey, executive trust in fully autonomous agents dropped from
+43% to 27% year-over-year
+. The shift signals that governance maturity, not just technology, drives enterprise adoption.
+Agentic workflows introduce risks that require proactive management:
+
+The
+NIST AI Risk Management Framework
+provides a solid foundation for structuring these safeguards, and Dataiku's own
+series on agentic AI governance
+offers a practical deep dive into policies, rules, and evaluation criteria.
+
+Agentic workflows examples across industries
+
+These examples show how real teams are putting agentic workflows into practice. The wins look different from one industry to the next, but a common thread is that agents are taking work off people’s plates and into governed, repeatable processes.
+
+Agentic workflows in logistics and operations
+
+European Air Transport
+
+(DHL Aviation) built an AI agent-powered document intelligence platform in Dataiku. Instead of analysts manually sifting through operational PDFs, they trigger an agent that extracts data, validates it, generates calculation formulas, and structures the output, cutting document processing from roughly 50 hours to 30 minutes.
+
+Teams now use those near-real-time insights in Excel and Power BI to keep emissions dashboards current, accelerate ESG submissions, and respond to operational issues the same day they arise.
+
+Agentic workflows in healthcare and life sciences
+
+Roche
+built an agentic AI interface in Dataiku that unified fragmented patent research into a single, orchestrated system. When an attorney submits a query, Lex uses Dataiku Agent Connect to route it to the right sub-agent (knowledge management, deep search, or dataset lookups) and returns results in one interface.
+
+Built initially for 80 European patent attorneys and paralegals, with plans to scale to 250+ globally, Lex saved an estimated $375K to $475K in consultancy spend by enabling citizen developers to build and extend agents internally rather than relying on external consultants.
+
+Agentic workflows in financial services
+
+Wisr Finance
+,
+an Australian lending platform, built an AI agent in Dataiku to automatically classify cases, surface relevant precedents, and give BDMs more consistent value-driven decisions.
+
+The agent evaluates loan applications flagged as exceptions against policy criteria, pulling context from multiple data sources and applying reasoning to recommend approve, decline, or escalate. This replaced a fully manual review process and was recognized as a finalist for the 2025 Dataiku Frontrunner Award for Best Agentic AI Use Case.
+
+Agentic workflows in manufacturing and supply chain
+
+SoftBank Corp. built an
+AI-agent-powered sales operating model in Dataiku
+that rethinks how meeting data turns into action. Sales conversations are captured, structured, and linked to CRM opportunities automatically.
+
+The results reported include ~20 hours saved per seller per month and a projected 250,000+ hours reclaimed annually, helping sellers spend more time on customers and less on admin.
+
+A 7-step guide to implementing agentic workflows
+
+Agentic workflows work best when you treat them like a change to how work gets done, not just a new tool to test.
+1. Assess readiness.
+Start with the basics. Audit your data infrastructure, integration coverage, and governance maturity. Agentic workflows depend on clean, accessible data and clear ownership around oversight and approvals.
+2. Select the right process.
+Pick something your team already understands but that burns time because of the steps involved. It should be complex enough for an agent to add value, yet concrete enough that everyone agrees on what “good” looks like.
+3. Choose your tooling.
+Look beyond model quality. Focus on how many systems the platform connects to, how it handles audit trails and access controls, and whether non-engineers can actually use it. Don’t stop at license costs. Integration work, governance overhead, and ramp-up time are where budgets quietly grow. Ideally, agents should live alongside your existing data pipelines and models, not as a bolt-on.
+4. Build a pilot with fallback paths.
+Scope tightly: one workflow, one team, one measurable KPI. Design for failure by building clear escalation paths for when the agent encounters something outside its confidence threshold.
+5. Scale with governance and controlled autonomy.
+Extend successful pilots to adjacent workflows with centralized oversight. Define explicit boundaries for what each agent can decide independently versus what requires human approval. Start conservative and widen as trust builds.
+6. Upskill your teams.
+Agentic workflows shift roles from executing tasks to designing and supervising AI-driven processes. Invest in training that bridges technical and business understanding.
+7. Monitor against business KPIs.
+Track what matters: cycle time reduction, decision accuracy, cost per resolution, and adoption. Token counts and API calls are operational details. You also need visibility into agent decisions, tool calls, and outputs for debugging, learning, and compliance.
+
+Best practices and design checklist for agentic workflows
+
+No matter where you are in the rollout, these design checks help keep agentic workflows safe, explainable, and useful at scale.
+
+Bound autonomy by risk, not ambition.
+Let agents act freely on low-risk tasks, but require human approval when decisions affect customers, money, or compliance.
+
+Assume uncertainty and plan exits.
+Agents should know when to stop, ask for help, or fall back to a simpler workflow instead of pushing ahead blindly.
+
+Make decisions traceable.
+You should always be able to answer two questions:
+what did the agent do
+and
+why did it do it
+.
+
+Watch outcomes, not activity.
+If cycle time, accuracy, or cost per resolution aren’t improving, autonomy isn’t helping, no matter how active the agent is.
+
+Review behavior, not just performance.
+Regular reviews help catch drift, bias, or cost creep before they show up as business problems.
+
+Making agentic workflows work at scale
+
+Agentic workflows are a practical way to move work faster, reduce handoffs, and handle complexity without adding more process. But the challenge here is making sure your data, teams, and governance are connected so you can actually trust them at scale.
+
+Whether you’re just getting started or moving beyond early experiments, having everything in one place makes the difference.
+
+Explore Dataiku for agentic workflows
+
+Build and scale enterprise AI agents
+
+FAQs about agentic workflows
+
+What is an example of an agentic workflow?
+
+A customer support agent reads an incoming ticket, pulls account history, diagnoses the issue, and either executes the fix or escalates to a human. The agent decides how to resolve the issue based on context, not a predefined rulebook.
+
+What is the difference between agentic and non-agentic workflows?
+
+Non-agentic workflows follow fixed rules: if X, then Y. Agentic workflows reason through problems, use tools dynamically, and self-correct based on results. Non-agentic workflows break when facing ambiguity; agentic workflows adapt.
+
+What are the different types of agentic flows?
+
+The most common patterns include single-agent workflows (one agent handling end-to-end tasks), multi-agent systems (specialized agents collaborating on complex processes), human-in-the-loop workflows (agents that pause for human judgment at critical decisions), and orchestrated pipelines (agents embedded within broader data and ML workflows). Choose based on process complexity and risk tolerance.
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+Agent memory: the missing layer in enterprise AI systems
+
+Context engineering: building AI systems that scale
+
+AI observability: how enterprises control autonomous agents
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+3 AI trends reshaping healthcare and life sciences in 2026
+
+By the end of 2026, the "AI honeymoon" will be officially concluded. For healthcare and life sciences...
+
+Apr 01, 2026
+
+GenAI & Agents
+
+Agent memory: the missing layer in enterprise AI systems
+
+Ask most people to describe the memory of a large language model and they'll point to the context window, the...
+
+Mar 31, 2026
+
+GenAI & Agents
+
+Context engineering: building AI systems that scale
+
+There's a version of the story where prompt engineering was always just a stepping stone. In 2022 and 2023, a...
+
+Mar 25, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

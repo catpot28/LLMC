@@ -1,0 +1,260 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-deep-research-intermittently-fails-to-activate-web-search-via-the-api/4264
+page path  : /t/sonar-deep-research-intermittently-fails-to-activate-web-search-via-the-api/4264
+captured   : 2026-04-12 13:03:38 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-deep-research-intermittently-fails-to-activate-web-search-via-the-api_4264__dd0f391b.html.gz
+========================================================================
+
+`sonar-deep-research` intermittently fails to activate web search via the API - Bug Reports - Perplexity API Platform Forum
+
+`sonar-deep-research` intermittently fails to activate web search via the API - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+`sonar-deep-research` intermittently fails to activate web search via the API
+
+Bug Reports
+
+sonar-deep-research
+
+rshepherd
+
+March 21, 2026, 7:07pm
+
+1
+
+### Summary
+
+Starting March 7, 2026, the `sonar-deep-research` model intermittently fails to perform web search, instead responding with “knowledge cutoff” and “Real-time web search is not available” messages. This affects ~16% of API calls since onset, after a period of zero failures across 318 consecutive calls (Feb 1 – Mar 6).
+
+This bug has been experienced across multiple API keys. The individual calls that intermittently fail and succeed are being executed by the
+exact same code paths and in some cases with the same data.
+
+Environment
+
+**Model**: `sonar-deep-research`
+
+**Endpoint**: `
+https://api.perplexity.ai/chat/completions`
+
+**Integration**: Production application making programmatic API calls with
+
+Bug Report: `sonar-deep-research` intermittently fails to activate web search
+
+Summary
+
+Starting March 7, 2026, the `sonar-deep-research` model intermittently fails to perform web search, instead responding with “knowledge cutoff” errors indicating it is operating without its online search capability. Prior to this date, we had **318 consecutive successful calls (239 in February + 79 in March 1–6) with zero web search failures.**
+
+Environment
+
+**Model**: `sonar-deep-research`
+
+**Endpoint**: `
+https://api.perplexity.ai/chat/completions`
+
+**Integration**: Automated research pipeline making 5–30 calls/day via the Chat Completions API
+
+**No changes to our API integration code** were deployed between the last successful day (March 6) and the first failure (March 7)
+
+Failure Rate
+
+Period
+
+API Calls
+
+Web Search Failures
+
+Failure Rate
+
+Feb 1 – Feb 28
+
+239
+
+0
+
+0.0%
+
+Mar 1 – Mar 6
+
+79
+
+0
+
+0.0%
+
+Mar 7 – Mar 14
+
+83
+
+13
+
+15.7%
+
+Failure Pattern
+
+The failures are **intermittent and non-deterministic**:
+
+March 10 (5 calls) and March 11 (23 calls) had **zero failures**
+
+March 7 and March 14 had **40–100% failure rates**
+
+44 out of 52 distinct query topics (85%) have never experienced a failure
+
+The same topic can succeed on one day and fail on another
+
+Symptoms
+
+When the failure occurs, the model responds as though web search is not available. It explicitly states it cannot access real-time information and references an **April 2024 knowledge cutoff**, confirming the search tool was not activated for that request. The response is well-formed JSON — this is not an API error or timeout. The model completes normally but without search results.
+
+Representative Failure Responses
+
+**March 7, 20:52 UTC** — query about Western Canada pipeline capacity:
+
+`“0 queries executed; 0 abstracts reviewed; 0 full documents analyzed. Data cutoff prevents access to real-time sources and regulatory filings published March 1–8, 2026.”`
+
+**March 7, 21:01 UTC** — query about Alberta/Saskatchewan drilling:
+
+`“0 queries executed; no sources accessible for date range 2026-03-01 to 2026-03-08 UTC. Knowledge cutoff prevents retrieval of materials published after April 2024. Real-time data from Baker Hughes, CAOEC, AER, Saskatchewan Energy, ECMC, CBSA/CITT, and operator investor relations unavailable for this future date range.”`
+
+**March 9, 16:34 UTC** — query about AI software engineering tools:
+
+`“0 queries executed; no sources with publication dates within 2026-03-08 20:31 UTC to 2026-03-09 20:31 UTC retrieved due to knowledge cutoff limitations.”`
+
+**March 9, 19:25 UTC** — query about Zoetis veterinary drug litigation:
+
+`“1 curated source reviewed; unable to access real-time feeds, regulatory databases, court dockets, or news archives for the specified 24-hour window”`
+
+**March 12, 19:00 UTC** — query about generative engine optimization:
+
+`“Unable to query live sources; knowledge cutoff precedes target date range 2026-03-11 to 2026-03-12 UTC. No materials available for analysis.”`
+
+**March 14, 02:33 UTC** — query about AI code generation (most explicit):
+
+`“Unable to complete analysis. The requested date range (March 7–14, 2026) falls beyond the knowledge cutoff for this model. Real-time web search is not available.”`
+
+What We’ve Ruled Out
+
+**Not a code change on our side.** No commits touching LLM provider code, proposer logic, or API integration were deployed between the last clean day (Mar 6) and first failure (Mar 7). The only commit on Mar 7 was a merge of email formatting changes.
+
+**Not an API key issue.** We did experience separate 401 Unauthorized errors on March 9 (resolved with a new key), but the web search failures are a distinct issue — the API returns 200 OK with a well-formed response that simply lacks search results.
+
+**Not query-length or prompt-related.** The same prompts and system instructions that succeed for 85% of topics fail for others. No prompt changes were made.
+
+**Not deterministic.** The same data set succeeded on Mar 2, 4, 6, 11, 13 but failed on Mar 9.
+
+We have thoroughly verified that this issue is not caused by our application code or prompts. We audited every commit deployed in the 48 hours preceding the first failure: all changes were limited to email formatting, unrelated prompt wording, and frontend cleanup — nothing in the Perplexity API call path. We also compared the exact system and user prompts sent to the API for the same topic on a day it failed versus days it succeeded: the prompts are identical except for the naturally advancing date range. Same prompt, same model, same endpoint — succeeds one day, fails another, with no code or configuration changes on our side.
+
+### Impact
+
+13 out of 83 calls since March 7 (15.7%) produce empty analyses that our users receive as “no updates found” when in reality the model simply didn’t search. This is a silent data quality issue — there is no error code or HTTP status that distinguishes a legitimate “no results” from a “search tool not activated” failure.
+
+Request
+
+Are you aware of any such type of failure? Is anyone else experiencing this?
+
+3 Likes
+
+Rfairweather
+
+March 26, 2026, 2:26pm
+
+2
+
+I have also observed this. I spent days trying to debug the behavior, exactly as you describe it here. Exact same API calls, one works and one responds with a warning that it is unable to complete the task as requested due to its knowledge cut off date and that it is unable to access the internet.
+
+I finally came here to check to see if anyone else had a similar issue and found this report which describes it precisely. Is this being actively investigated?
+
+1 Like
+
+"I cannot perform live web searches in real-time"
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+"I cannot perform live web searches in real-time"
+
+General
+
+sonar-deep-research
+
+,
+
+chat-completions
+
+,
+
+node-sdk
+
+2
+
+53
+
+March 27, 2026
+
+sonar-deep-research⁠ requests randomly stopping mid-run
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+10
+
+April 7, 2026
+
+API response is different to web response
+
+Bug Reports
+
+1
+
+150
+
+May 15, 2025
+
+API vs Web Quality Issues
+
+Bug Reports
+
+sonar-pro
+
+3
+
+438
+
+November 5, 2025
+
+# Perplexity Sonar Deep Research Model Timeout Issue - Seeking Solution
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+324
+
+October 25, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

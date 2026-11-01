@@ -1,0 +1,159 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/anthropic/claude-opus-4.6
+page path  : /anthropic/claude-opus-4.6
+captured   : 2026-03-11 01:45:00 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/openrouter/openrouter.ai_anthropic_claude-opus-4.6__8a8785e8.html.gz
+========================================================================
+
+Claude Opus 4.6 - API Pricing & Providers | OpenRouter
+
+Claude Opus 4.6 - API Pricing & Providers | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Models
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Redeem
+Enterprise
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Anthropic: Claude Opus 4.6
+anthropic
+/
+claude-opus-4.6
+Chat
+Compare
+Released
+Feb 4, 2026
+1,000,000
+context
+Starting at
+$
+5
+/M input tokens
+Starting at
+$
+25
+/M output tokens
+$
+10
+/K web search
+Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective for large codebases, complex refactors, and multi-step debugging that unfolds over time. The model shows deeper contextual understanding, stronger problem decomposition, and greater reliability on hard engineering tasks than prior generations.
+
+Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-production-ready documents, plans, and analyses in a single pass, and maintains coherence across very long outputs and extended sessions. This makes it a strong default for tasks that require persistence, judgment, and follow-through, such as technical design, migration planning, and end-to-end project execution.
+
+For users upgrading from earlier Opus versions, see our
+official migration guide here
+Chat
+Compare
+Standard
+Overview
+Providers
+Performance
+Pricing
+Apps
+Activity
+Uptime
+Quickstart
+Providers for Claude Opus 4.6
+OpenRouter
+routes requests
+to the best providers that are able to handle your prompt size and parameters, with fallbacks to maximize
+
+uptime
+.
+
+Performance for Claude Opus 4.6
+Compare different providers across OpenRouter
+All locations
+Sorting API Example
+Effective Pricing for Claude Opus 4.6
+Actual cost per million tokens across providers over the past hour
+Apps using Claude Opus 4.6
+Top public apps this month
+Recent activity on Claude Opus 4.6
+Total usage per day on OpenRouter
+Prompt
+4.9B
+Completion
+59.1M
+Reasoning
+2.96M
+Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.
+Uptime stats for Claude Opus 4.6
+Uptime stats for
+Claude Opus 4.6
+
+across all providers
+Sample code and API for Claude Opus 4.6
+OpenRouter normalizes requests and responses across providers for you.
+Create API key
+OpenRouter supports reasoning-enabled models that can show their step-by-step thinking process. Use the
+reasoning
+parameter in your request to enable reasoning, and access the
+reasoning_details
+array in the response to see the model's internal reasoning before the final answer. When continuing a conversation, preserve the complete
+reasoning_details
+when passing messages back to the model so it can continue reasoning from where it left off.
+
+Learn more about reasoning tokens
+.
+In the examples below, the
+
+OpenRouter-specific headers
+are optional. Setting them allows your app to appear on the OpenRouter leaderboards.
+Using third-party SDKs
+For information about using third-party SDKs and frameworks with OpenRouter, please see our
+
+frameworks documentation
+.
+See the
+Request docs
+for all possible fields, and
+
+Parameters
+for explanations of specific sampling parameters.

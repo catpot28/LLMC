@@ -1,0 +1,225 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/add-elevenlabs-conversational-ai-to-framer-website
+page path  : /blog/add-elevenlabs-conversational-ai-to-framer-website
+captured   : 2026-06-13 21:32:54 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_add-elevenlabs-conversational-ai-to-framer-website__04e6742b.html.gz
+========================================================================
+
+Add ElevenLabs Conversational AI to your Framer website
+
+Add ElevenLabs Conversational AI to your Framer website
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+How to add the ElevenLabs Conversational AI widget to your Framer website
+Published
+Nov 1, 2024
+Last updated
+Apr 7, 2026
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+On this page
+Introduction
+Before you get started
+Step-by-step guide
+Common issues and troubleshooting
+Advanced tips
+Final thoughts
+The ElevenLabs
+Conversational AI
+widget allows you to enhance your Framer website with interactive, AI-driven conversations. Whether you’re looking to boost
+customer engagement
+or
+enhance your customer support
+, Conversational AI can help.
+In this guide, we’ll walk you through the steps to add the widget to your Framer website. You’ll learn how to configure site-wide or page-specific widgets and troubleshoot common issues.
+Before you get started
+Before starting, ensure you have the following:
+Framer account
+: Access to a Framer project with the ability to add custom code (available on paid plans).
+ElevenLabs account
+: Configure your
+Conversational AI agent
+and copy its embed
+
+code (including the < script > and < div > snippets).
+Familiarity with Framer
+: Basic understanding of Framer’s Site Settings and Embed Elements
+Step-by-step guide
+Step 1: Prepare your ElevenLabs widget
+Log in to your ElevenLabs account.
+Navigate to the Conversational AI section.
+Configure your
+AI agent
+and copy the provided embed code, which includes:
+A < script > snippet to load the widget's functionality.
+A < div > snippet to define where the widget will appear.
+Step 2: Add the script to Framer’s site settings
+Open your Framer project.
+In the top-right corner, click on Project Settings.
+Navigate to the General tab and scroll down to the Custom Code section.
+Paste the < script > snippet from your ElevenLabs embed code into the End of < body > tag field.
+Save your changes. This step ensures the required script is loaded for your site.
+Step 3: Add the widget to a specific page
+In your Framer project, go to the page where you want the widget to appear.
+Add an Embed Element from the Utilities section of the Insert menu.
+Select the Embed Element on your canvas to access its settings.
+Switch the Type to HTML.
+Paste the < div > snippet from the ElevenLabs embed code into the HTML field.
+Position and size the Embed Element on your canvas as needed.
+Step 4: Publish and test
+Click Publish to make your changes live.
+Open your website in a browser to verify that the widget appears and functions correctly.
+Note: Custom code won’t display in Framer’s Preview mode—it must be published to view.
+Common issues and troubleshooting
+If you’re struggling to get the integration working, don’t worry—check out these troubleshooting tips below.
+Issue 1: Widget not displaying
+Cause
+: Missing or improperly placed < script > or < div > snippet.
+Solution
+: Ensure the < script > snippet is added to the End of < body > tag field in Site Settings and the < div > snippet is in the Embed Element.
+Issue 2: Widget only partially visible
+Cause
+: Embed Element is incorrectly sized or positioned.
+Solution
+: Adjust the dimensions and alignment of the Embed Element in the Framer Editor.
+Issue 3: Script errors
+Cause
+: Conflicting scripts or blocked external resources.
+Solution
+: Open the browser console to check for JavaScript errors. Ensure Framer has permissions to load external scripts.
+Advanced tips
+Looking for more advanced customization options? These tips should help.
+Customizing the widget
+: Use custom CSS to style the widget and integrate it seamlessly with your website’s design.
+Testing across devices
+: Framer’s responsive design tools make it easy to test the widget on mobile, tablet, and desktop views to ensure proper scaling.
+Adding widgets to specific pages
+: To include the widget on specific pages only, add the < div > snippet to an Embed Element on the desired pages and ensure the < script > snippet is present in the Site Settings.
+Final thoughts
+By following this guide, you can enhance your Framer site with dynamic, AI-driven interactions, tailored to your audience’s needs. Publish your changes, test your setup, and let your conversational AI start engaging visitors today. For further assistance, contact ElevenLabs
+support
+.
+Sign up
+for
+AI Voice Agents
+today to get started.
+Do I need coding skills to add the widget in Framer?
+No. This process only requires copying and pasting code into the appropriate fields in Framer.
+Why doesn’t the widget appear in Preview mode?
+Framer does not render custom code in Preview mode. Publish your site to see the widget.
+Can I add multiple widgets to different pages?
+Yes. Add Embed Elements to the specific pages and configure each with its own
+snippet.
+
+Similar articles
+How to add the ElevenLabs conversational AI widget to your Webflow website
+Date
+Nov 1, 2024
+How to add the ElevenLabs Conversational AI widget to your WordPress website
+Date
+Nov 1, 2024
+ElevenLabs is a Proud Partner of the San Francisco Giants
+Category
+Company
+Date
+Apr 6, 2026
+Zen Educate extends after-hours support for educators with ElevenAgents
+Category
+ElevenAgents Stories
+Date
+Apr 6, 2026
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

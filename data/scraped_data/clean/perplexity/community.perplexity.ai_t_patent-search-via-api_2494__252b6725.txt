@@ -1,0 +1,279 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/patent-search-via-api/2494
+page path  : /t/patent-search-via-api/2494
+captured   : 2026-04-12 11:38:08 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_patent-search-via-api_2494__252b6725.html.gz
+========================================================================
+
+Patent search via API - General - Perplexity API Platform Forum
+
+Patent search via API - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Patent search via API
+
+General
+
+sonar
+,
+
+search-api
+
+ynaoto
+
+November 6, 2025, 8:37am
+
+1
+
+Can I use Perplexity Patent search via API?
+
+8 Likes
+
+Kesku
+
+November 6, 2025, 4:44pm
+
+2
+
+Not at the moment, but this is a great suggestion! We’ll keep it in mind for future development. Could you share a bit about your use case or how you’d plan to use it?
+
+6 Likes
+
+Ajinkya_Gokule
+
+November 7, 2025, 1:26am
+
+3
+
+I also want this feature please, I’m making this tool for my school which can help the intellectual property team make workflows that can use this patent search api tool.
+
+6 Likes
+
+Aljosa_Rakita
+
+November 13, 2025, 8:45am
+
+4
+
+I’m interested in using this as well, as the current search over API with sonar returns hallucinated patents. Please let us know once it is available.
+
+5 Likes
+
+Ronan_Morgan
+
+December 29, 2025, 4:02pm
+
+5
+
+I am also interested in this feature. I am making a patent search retrieval tool, and wanted to use the LLM to retrieve the patent info. Then l found out that the patent beta isnt available within the sonar-pro api. Can this be made available? Thanks
+
+1 Like
+
+Natural_Stupidity
+
+January 8, 2026, 2:56pm
+
+6
+
+Also intrerested to use this via API
+
+Axiom
+
+January 11, 2026, 5:10pm
+
+7
+
+A concrete use case would be patent grounding and verification inside automated workflows. Specifically:
+
+– Retrieve actual patent documents (USPTO / EPO / WIPO IDs) rather than synthesized summaries.
+
+– Use Sonar for semantic narrowing, then fetch authoritative patent records for citation-safe output.
+
+– Prevent hallucinated patents in downstream tools (IP analysis, prior-art checks, diligence reports).
+
+Right now, LLM-only search is useful for ideation, but without a patent-backed API layer it breaks trust for legal and IP workflows. An official patent search endpoint would close that gap.
+
+Axiom
+
+January 11, 2026, 7:38pm
+
+8
+
+Artifact name
+
+Patent Reality Layer (PRL)
+
+Category
+
+AI-assisted patent validation and grounding layer
+
+Problem it solves
+
+General-purpose AI search systems frequently hallucinate patent numbers, misattribute assignees, or conflate jurisdictions. This creates downstream risk for IP teams, researchers, startups, and students who rely on early-stage patent discovery.
+
+What the artifact is
+
+Patent Reality Layer is a visual and conceptual artifact that represents a safety boundary between generative AI and authoritative patent sources. It formalizes a workflow where AI is used for interpretation and synthesis, while patent existence and metadata are verified against real registries.
+
+Core functions (conceptual)
+
+Separates generation from verification
+
+Forces grounding against authoritative patent databases
+
+Flags unverifiable or ambiguous patent claims
+
+Prevents hallucinated citations from entering workflows
+
+Makes AI-assisted patent research auditable
+
+Intended use cases
+
+IP team early-stage patent landscaping
+
+Academic or student patent research tools
+
+Startup novelty checks before attorney review
+
+AI search products that need legal-grade trust boundaries
+
+Teaching responsible AI use in IP contexts
+
+What it is not
+
+Not a patent database
+
+Not a legal opinion
+
+Not a replacement for patent attorneys
+
+Not dependent on any single AI vendor
+
+Why it matters now
+
+As AI search expands faster than verification infrastructure, patent hallucinations become a silent failure mode. This artifact makes that failure mode visible, explicit, and correctable.
+
+Status
+
+Conceptual artifact + visual system
+
+Deployable today as:
+
+Product concept
+
+UX metaphor
+
+Investor or internal alignment asset
+
+Community signal for unmet API demand
+
+Axiom
+
+January 11, 2026, 7:39pm
+
+9
+
+image
+1024×1536 255 KB
+
+jacobozj
+
+January 26, 2026, 1:28am
+
+10
+
+Hi im also developing a tool for my school on this topic, can you reach me out and share more? Im interested. Thx
+
+Real_Usecases
+
+April 3, 2026, 10:11am
+
+11
+
+Also interested - any chance this is on your roadmap already?
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Expose Patent Beta Capabilities to Sonar API for Programmatic Lookup
+
+Feature Requests
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+39
+
+December 29, 2025
+
+Upload Documents and Cross-Reference with Live Web Search
+
+Announcements
+
+0
+
+1
+
+October 8, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Pro Search — Now Generally Available for Sonar Pro
+
+Announcements
+
+0
+
+0
+
+November 15, 2025
+
+PerplexityPro response vs SonarPro response
+
+Bug Reports
+
+sonar-pro
+
+1
+
+156
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

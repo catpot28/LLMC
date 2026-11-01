@@ -1,0 +1,167 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/humanitys-last-exam-results
+page path  : /blog/humanitys-last-exam-results
+captured   : 2026-06-07 17:26:08 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_humanitys-last-exam-results__26ef41bd.html.gz
+========================================================================
+
+Scale AI and CAIS Unveil Results of Humanity’s Last Exam | Scale AI
+
+Scale AI and CAIS Unveil Results of Humanity’s Last Exam | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Scale AI and CAIS Unveil Results of Humanity’s Last Exam, a Groundbreaking New Benchmark
+By
+
+The Scale Team
+·
+January 23, 2025
+·
+13 min read
+Copy Link
+Scale AI and the Center for AI Safety (CAIS) are proud to publish the results of Humanity’s Last Exam, a groundbreaking new AI benchmark that was designed to test the limits of AI knowledge at the frontiers of human expertise. The results demonstrated a significant improvement from the reasoning capabilities of earlier models, but current models still were only able to answer fewer than 10 percent of the expert questions correctly. The paper can be read
+here
+.
+The new benchmark, called “Humanity’s Last Exam,” evaluated whether AI systems have achieved world-class expert-level reasoning and knowledge capabilities across a wide range of fields, including math, humanities, and the natural sciences. Throughout the fall, CAIS and Scale AI crowdsourced questions from experts to assemble the hardest and broadest problems to stump the AI models. The exam was developed to address the challenge of “benchmark saturation”: models that regularly achieve near-perfect scores on existing tests, but may not be able to answer questions outside of those tests. Saturation reduces the utility of a benchmark as a precise measurement of future model progress.
+“We wanted problems that would test the capabilities of the models at the frontier of human knowledge and reasoning,” said Dan Hendrycks, CAIS co-founder and executive director. “We can’t predict how quickly the models will advance. When I released the MATH benchmark—a challenging competition mathematics dataset—in 2021, the best model scored less than 10%; few predicted that scores higher than 90% would be achieved just three years later. Right now, Humanity’s Last Exam shows that there are still some expert closed-ended questions that models are not able to answer. We will see how long that lasts.”
+Testing Methodology
+Altogether, CAIS and Scale researchers collected more than 70,000 trial questions. That led to a selection of 13,000 questions for human expert review which, in turn, were finalized to a set of 3,000 questions on the final exam’s public release. The questions were aimed at world-class expert levels and were put to several multi-modal, frontier LLMs including OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 1.5 Pro, and OpenAI o1.
+“We know the AI revolution is being shaped by human ingenuity, and we're proud to be at the forefront. To help humans measure AI progress, we engineered what might be the ultimate test, meticulously distilled and designed to challenge the world's most advanced models at the frontiers of intelligence—requiring precise, multi-step logical reasoning and unambiguous answers at a level that pushes even the most sophisticated AI systems to their limits.” Summer Yue, Director of Research at Scale AI said.
+Humanity’s Last Exam was a global collaborative effort involving nearly 1,000 contributors from more than 500 institutions across 50 countries, with most contributors being active researchers or professors. The questions spanned multiple formats, including text-only and multi-modal challenges that integrated images and diagrams.
+The questions were designed to deeply test the capability of the models across diverse domains. For example, a question submitted in Ecology asked:
+Hummingbirds within Apodiformes uniquely have a bilaterally paired oval bone, a sesamoid embedded in the caudolateral portion of the expanded, cruciate aponeurosis of insertion of m. depressor caudae. How many paired tendons are supported by this sesamoid bone? Answer with a number.
+Additional sample questions can be found here
+lastexam.ai
+.
+In the final round of testing, Yue said they saw some of the models begin to answer a fraction of the questions correctly (less than 10%); however, she said variations frequently happen in model testing and could be the result of randomness. CAIS and Scale AI said they will open up the dataset to the research community, to dig deeper into the variations and to evaluate new AI systems while continuing to explore the limitations of existing models. A small subset of questions will be held back to preserve integrity for future evaluations.
+Top Questions
+CAIS and Scale AI offered financial awards for the best contributions to Humanity’s Last Exam, with $5,000 USD awarded for each of the top 50 questions and $500 USD for the next 500 best submissions, along with the opportunity for coauthorship of the final paper.
+“By identifying the gaps in AI’s reasoning capabilities, Humanity’s Last Exam not only benchmarks current systems but also provides a roadmap for future research and development,” said Yue.
+Humanity's Last Exam Community Feedback Expansion - Bug Bounty
+Humanity's Last Exam Bug Bounty Program ended on March 21, 2025.
+As part of our existing commitment to ensuring the integrity of Humanity’s Last Exam, we are releasing an expansion of our community feedback program into a Bug Bounty to incentivize harder-to-notice issues along with improved beta of Humanity’s Last Exam at
+lastexam.ai
+. We invite individuals who believe they have identified significant errors in this new beta of Humanity’s Last Exam (HLE) questions—errors that compromise the validity or accuracy of the questions—to report them through our bounty program. HLE is being cleaned as indicated during its announcement last month.
+Submissions will be evaluated based on their validity, relevance, and impact on the dataset’s quality. Duplicate submissions will be rewarded on a first-come, first-serve basis. We're looking for major errors that directly affect the quality of the exam's questions and answers—minor typos or issues not related to the core integrity of the questions will not be rewarded.
+Our team will review all submissions, and the determination of what constitutes a valid report, the severity of an issue, and whether it qualifies for a reward rests solely with us. Please note that not all reported bugs may qualify for a payout, as we reserve the right to prioritize submissions based on available resources and program objectives.
+Finally, we will maintain and publish a
+public list
+highlighting all reported bugs under review and those that qualify for a bounty. For full details on how to submit your findings and get involved, please review our full
+Terms & Conditions
+below. We look forward to working together to ensure Humanity’s Last Exam sets the standard for AI benchmarks worldwide.
+Confidentiality and Non-Disclosure: To maintain the integrity of the benchmark, all bug reports must be submitted exclusively through the approved Google Form (submissions now closed).
+. Publicly posting questions or errors on any other platform (e.g., social media) will result in disqualification from the bounty program.
+For questions or clarifications, reach out to
+agibenchmark@safe.ai
+Scope of the Program
+Participants are encouraged to report
+Major errors which compromise the validity or accuracy of the question.
+Incorrect answers in the dataset.
+Completely AI generated questions.
+Out of Scope:
+Feedback on AI model performance.
+Feature requests or general comments not tied to question integrity.
+Minor numerical differences in answers.
+Typos and minor errors.
+Errors in the original author’s rationale which does not affect the final answer.
+Submission Process
+Upload your findings to this Google Form (submissions now closed).
+
+Include the question, detailed description of the issue, and any proposed corrections.
+Submissions will be reviewed by CAIS and Scale AI.
+Valid bugs, as deemed by Scale and CAIS, will be logged, resolved, and the resolution will be shared with the participant. If that participant is the first person to flag the validated error, they will be paid $100 USD.
+Payouts:
+
+Approved reports will receive a payout confirmation email to provide their identity and payment information for the option(s) below. We do not support other payment options.
+Payment options: PayPal, Hyperwallet
+Timeline
+Submissions will be accepted starting February 11th, 2025.
+Humanity’s Last Exam Bug Bounty Program Terms and Conditions
+Humanity’s Last Exam Bug Bounty Program ended on March 21, 2025.
+Scale AI, Inc. (“Scale AI”) and the Center for AI Safety (“CAIS”) (“we,” “us,” or “our”) is offering a Bug Bounty Program (the “Program”) to incentivize responsible disclosure of vulnerabilities in Humanity’s Last Exam.
+By participating in the Program, you agree to comply with the following terms and conditions.
+1. Eligibility
+Participation in the Program is open to individuals who are at least 18 years old and are legally eligible to participate in the Program under applicable local laws. Employees, contractors, and affiliates of Scale AI and CAIS, as well as individuals residing in countries or regions where participation is prohibited by law, including sanctioned countries and any countries at the sole discretion of Scale AI and CAIS, are not eligible to participate. In the event of any suspicion of fraudulent conduct, including providing false or misleading personal identity information, or submitting false or misleading vulnerabilities, Scale AI and CAIS may at their sole discretion take immediate action to disqualify any person from the Program and any related rewards.
+2. Scope of the Program
+The Program covers only Humanity’s Last Exam. Only vulnerabilities that fall within the scope of this Program, as defined by Scale AI and CAIS, will be eligible for rewards. Vulnerabilities in third-party systems, networks, or services are not eligible.
+3. Responsible Disclosure
+You agree to responsibly disclose vulnerabilities discovered in Humanity’s Last Exam by submitting them through our official reporting channels. You must not disclose, exploit, or publish any discovered vulnerabilities without prior written consent from Scale AI and CAIS. You agree not to engage in any activity that could disrupt or damage the normal functioning of Humanity’s Last Exam.
+4. No Guarantee of Reward
+While Scale AI and CAIS may issue rewards for valid and verified vulnerabilities, there is no guarantee of a reward for any submission, regardless of severity or impact. The reward amounts and eligibility for rewards will be determined by Scale AI and CAIS, at its sole discretion, based on factors such as the severity, impact, and quality of the submission. Scale AI and CAIS reserve the right to reduce, deny, or revoke any rewards at any time, without notice, for any reason, including, but not limited to, non-compliance with these terms or for any other reason deemed appropriate by Scale AI and CAIS.
+5. Reporting Guidelines
+All submissions must be made through the official reporting system (https://forms.gle/RXk5cvcoeb1oE3qX8) to be eligible for consideration. Vulnerabilities are evaluated and eligible for rewards based on chronological order at the time of submission (
+link
+). You must provide sufficient details and technical information for Scale AI and CAIS to reproduce and understand the vulnerability, including but not limited to a clear description and impact assessment. You must not submit vulnerabilities that are already known or previously disclosed to Scale AI and CAIS. By submitting a vulnerability report, you fully grant Scale AI and CAIS an irrevocable and perpetual right to use and disclose your first and last name both privately and publicly, including on Scale AI and CAIS websites and social media, as it relates to your submitted vulnerability report.
+6. Exclusions
+Vulnerabilities that fall under the following categories are not eligible for rewards: issues that require insider access or specific user credentials unless explicitly authorized by Scale AI and CAIS; vulnerabilities in third-party systems or services that are not controlled by Scale AI and CAIS; issues that are theoretical or highly speculative in nature; and minor issues that do not substantially impact security, such as low-level informational disclosures or cosmetic flaws.
+7. Ownership and Use of Submissions
+By submitting a vulnerability report, you grant Scale AI and CAIS a non-exclusive, irrevocable, worldwide, royalty-free, perpetual, and sublicensable license to use, modify, disclose, or otherwise exploit the report and any associated materials as we see fit. All submissions are considered the property of Scale AI and CAIS, and you relinquish any claim to intellectual property or other rights over the reported vulnerability or related materials once submitted.
+8. Confidentiality
+You agree to maintain confidentiality with respect to any information, materials, or data provided by Scale AI and CAIS during the course of participation in the Program. You may not publicly disclose any vulnerability or issue until Scale AI and CAIS have had a reasonable time to address and resolve the vulnerability.
+9. Prohibited Activities
+You may not attempt to exploit or gain unauthorized access to any personal data or private information during your testing. You may not participate in activities that could damage, disrupt, or degrade the performance of Humanity’s Last Exam. You may not engage in any form of harassment, abuse, or threats toward Scale AI and CAIS staff or others involved in the Program. Any activity that violates applicable laws or regulations, including those related to privacy, data protection, and intellectual property, is prohibited.
+10. Disqualification
+Scale AI and CAIS reserve the right to disqualify any participant from the Program at their sole discretion, including for violations of these terms or any unethical or malicious behavior. Disqualified participants will forfeit any rewards, and Scale AI and CAIS reserve the right to take further legal action if necessary.
+11. Disclaimers and Limitation of Liability
+Scale AI and CAIS make no representations or warranties about the Program, including its accuracy, reliability, or completeness. Participation in the Program is at your own risk. Scale AI and CAIS will not be held liable for any damages, losses, or claims arising from your participation.
+12. Changes to the Program
+Scale AI and CAIS reserve the right to modify, suspend, or terminate the Program at any time, for any reason, and without notice. Any changes to these terms will be communicated via the Program’s website or other appropriate channels.
+13. Payment
+Rewards will be paid within 30 days of validation. You are responsible for any applicable taxes. Scale AI and CAIS reserve the right to cancel or modify rewards for any reason.
+14. Governing Law
+These terms and conditions are governed by the laws of the State of California in the United States of America, without regard to its conflict of laws principles. Any disputes arising under or in connection with the Program shall be subject to the exclusive jurisdiction of the courts located in the State of California in the United States of America.
+15. Contact Information
+For questions or concerns about the Program, please contact agibenchmark@safe.ai
+By participating in Humanity’s Last Exam Bug Bounty Program, you confirm that you have read, understood, and agree to these Terms and Conditions.
+# # #
+About Scale AI
+Scale AI is the Humanity-first AI Company. Backed by our Data Foundry, we generate high quality data and provide technology solutions that allow our enterprise and public sector customers to build, deploy, and evaluate the smartest AI tools and applications. By making data abundant, rigorous, and high-quality, we are accelerating the progress of AI. Scale AI was founded in 2016 and is headquartered in San Francisco.
+About The Center for AI Safety
+The Center for AI Safety (CAIS) is a research organization whose mission is to reduce societal-scale and national security risks from AI. CAIS research focuses on mitigating high-consequence risks in areas like monitoring, alignment, and systemic safety. CAIS works to expand the field of AI safety and security by providing compute resources and technical infrastructure to top researchers and engaging with the global research community. Through its CAIS Action Fund, CAIS advocates for safe and secure AI. CAIs was founded in 2022 and is headquartered in San Francisco.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

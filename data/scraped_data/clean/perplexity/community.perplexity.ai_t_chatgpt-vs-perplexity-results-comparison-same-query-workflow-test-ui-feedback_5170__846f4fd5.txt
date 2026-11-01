@@ -1,0 +1,187 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/chatgpt-vs-perplexity-results-comparison-same-query-workflow-test-ui-feedback/5170
+page path  : /t/chatgpt-vs-perplexity-results-comparison-same-query-workflow-test-ui-feedback/5170
+captured   : 2026-06-16 12:02:25 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/perplexity/community.perplexity.ai_t_chatgpt-vs-perplexity-results-comparison-same-query-workflow-test-ui-feedback_5170__846f4fd5.html.gz
+========================================================================
+
+ChatGPT vs Perplexity results comparison (same query workflow test + UI feedback) - General - Perplexity API Platform Forum
+
+ChatGPT vs Perplexity results comparison (same query workflow test + UI feedback) - General - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+ChatGPT vs Perplexity results comparison (same query workflow test + UI feedback)
+
+General
+
+chat-completions
+
+alishawinson
+
+May 18, 2026, 9:25pm
+
+1
+
+I ran a small test comparing how ChatGPT and Perplexity handle the same set of technical queries (API workflows, hosting, and media pipeline questions). The goal was to evaluate clarity, structure, and how actionable the outputs are.
+
+What I noticed:
+
+ChatGPT tends to produce more structured “workflow-style” answers with clearer step breakdowns
+
+Perplexity is stronger at quick sourcing and concise summaries
+
+However, Perplexity responses sometimes feel less “implementation-ready” for multi-step technical setups
+
+In my case (video hosting + API-driven workflows), ChatGPT gave more step-by-step architecture thinking, while Perplexity was faster but slightly less detailed in system design.
+
+Suggestions for Perplexity improvement:
+
+Add an optional “expand into implementation plan” mode for technical queries
+
+Improve multi-step workflow continuity (so answers feel like a pipeline, not isolated facts)
+
+Allow users to switch between “concise answer” vs “engineering design mode”
+
+Better grouping of API + infrastructure steps when multiple systems are involved. I can share the exact prompts I used —
+download this
+comparison dataset and test it on your own workflows to see the difference.
+
+Would be curious how others here see ChatGPT vs Perplexity for real engineering or automation use cases.
+
+dev
+
+May 20, 2026, 1:33am
+
+2
+
+Hey
+@alishawinson
+, welcome to this community! I believe this question is mistagged
+chat-completions
+refers to a specific developer API — e.g.
+https://api.perplexity.ai/chat/completions
+— and your use case seems to be more about using Perplexity’s chat.
+
+While I can’t answer for sure, I believe Perplexity’s chat may use GPT internally for certain tasks. And when using chat apps such as Perplexity’s or ChatGPT, if you change the LLM model (e.g. GPT) and/or add custom prompts, you also can change the behavior and quality of response for each task.
+
+Suggestions for Perplexity improvement:
+
+…
+
+I would recommend you trying those suggestions as a system prompt on perplexity and see if you get better results! Even try them with different LLMs (=models).
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Perplexity-API---Complete-GUI-Suite
+
+Show and Tell
+
+sonar
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+python-sdk
+
+2
+
+194
+
+April 7, 2026
+
+Perplexity Search output is getting worse compared to ChatGPT on Non-Technical Creating Documents or Templates related output
+
+Feature Requests
+
+0
+
+120
+
+May 15, 2025
+
+Perplexity CLI - Premium Node.js Suite
+
+Show and Tell
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+,
+
+search
+
+,
+
+node-sdk
+
+1
+
+267
+
+April 7, 2026
+
+Perplexity api citations/sources like UI for "selected", "reviewed" and "more results"
+
+General
+
+chat-completions
+
+0
+
+133
+
+August 23, 2025
+
+Perplexity API GUI NEW UPDATE
+
+Show and Tell
+
+chat-completions
+
+0
+
+103
+
+April 7, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,217 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/agentex-temporal-tutorial
+page path  : /blog/agentex-temporal-tutorial
+captured   : 2026-04-19 04:36:14 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_agentex-temporal-tutorial__39992ff6.html.gz
+========================================================================
+
+How to Build and Scale Long-Running Enterprise Agents | Scale AI
+
+How to Build and Scale Long-Running Enterprise Agents | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Engineering
+Agentex Tutorial: How to Build and Scale Long-Running Enterprise Agents
+by
+
+Daniel Miller
+and
+Jason Yang
+Published
+November 19, 2025
+Reading Time
+9 min read
+Copy Link
+Join us live on Thursday, Nov 20, for a technical deep dive and demo of this tutorial.
+Register here
+. | Jump to the
+tutorial on GitHub.
+Imagine a world where an agent lives in the background and works autonomously on your behalf, asking for your input only on key decisions. It makes your life easier by freeing you from small tasks, allowing you to focus on more interesting and meaningful work. This is the world we are building towards. Now we’re demonstrating a step in that direction with a tutorial we developed with
+Temporal
+. On today’s blog: how to build long-running, enterprise agents.
+Earlier this week,
+we open-sourced Agentex
+, the agentic infrastructure layer of the Scale GenAI Platform, to enable long-running enterprise agents that run reliably for weeks or months. Today, we’re releasing a tutorial we built with our development partners, Temporal, that shows how to build a long-running procurement agent. It’s a concrete example of an agent that manages extended workflows, responds to external signals, and escalates to humans only when needed.
+In this blog, we walk through the technical architecture behind these agents and share the full implementation, including code you can pull down and run yourself. But before we dive into the tutorial, we explain why long-running capabilities are essential for the next generation of enterprise agents and what they unlock for large-scale workflows.
+Understanding The Problem: Procurement Without Agents
+One of the hardest parts about long-running agents is seeing what they actually solve, so let’s make it concrete with building construction procurement. Procurement is buying everything a project needs: steel, HVAC units, flooring, electrical panels. Today, senior procurement managers juggle multiple projects to keep everything on schedule.
+Before modern ERP systems, this was pure chaos: phone calls, spreadsheets, and guesswork. ERP helped, but humans still play a crucial role in tying everything together. Why? Because software can automate deterministic steps: “if A then B,” simple record-keeping—but the real world isn’t deterministic. Inspections fail. Shipments slip. Delays cascade into schedule conflicts. Those are the moments where humans still have to step in.
+Enter Procurement Agents
+The idea behind this
+procurement agent
+is not to remove the human. Rather, it is to free the human and involve them only for key decisions.
+The beauty of current AI systems is that they provide a nondeterministic intelligence layer on top of existing automations. This enables key decision-making that was previously a heavy burden for a human. The goal is not to rip out old software systems, but to move the human to a higher levelaway from low-level logistical decisions.
+By doing this, we can imagine deploying a fleet of AI agents, one per building, with a human overseeing them. This not only reduces overhead, but increases capacity: a manager can take on more projects since AI agents handle low-level work and escalate only when necessary. The agents autonomously take actions based on external events, and when things are uncertain, they defer to the human in the loop.
+This allows senior procurement managers to focus on more meaningful work, such as meeting with vendors, and frees them from the laborious task of tracking tasks involved in building procurement.
+Why Is This Hard?
+Now that we've visualized the goal and its value, why isn’t this done today?
+Challenge 1: Long-Running Processes
+One of the fundamental issues is longevity. Building construction can take weeks to months, so the system must be able to live that long. While many AI systems today support conversations, few can persist for months with ambient, continuous behavior. This requires resilient systems that can turn on and off, survive failures, and remain available for extended periods.
+Challenge 2: The Paradigm Flip
+There is also a fundamental shift from how most AI systems work today. Typically, a human prompts the AI to do things, and the AI uses tools to access the external world. We need the reverse: the AI receives inputs from the external world and then asks humans for help when needed. Instead of humans using AI for assistance, the AI works autonomously and requests human input only when necessary.
+Solving these problems requires reimagining system design and building reliable software infrastructure capable of supporting this new paradigm.
+What We’re Building
+At a practical level, for this demo we will not be building the full scope of procurement—that would be too much to show. Instead, we want to demonstrate how it could be done in a focused capacity to illustrate the fundamental paradigms.
+Here are example signals for a procurement agent:
+Event
+Agent Action
+Submittal_Approved
+Wake up, issue a purchase order to the vendor, create a tracking workflow, then go back to sleep.
+Shipment_Departed_Factory
+Wake up, ingest the ETA, cross-reference it with the master construction schedule, flag any potential conflicts, then go back to sleep.
+Shipment_Arrived_Site
+Wake up, notify the receiving team, schedule the required quality inspection, then go back to sleep.
+Inspection_Failed
+Wake up, escalate to the Project Manager with all relevant data, and pause this workflow until human input is received.
+The agent is event-driven, autonomous, and knows when to ask for help.
+Our Approach: Agentex + Temporal
+To build these long-running, self-driving agents, we've combined two powerful technologies: Agentex for the AI orchestration layer and Temporal for durable workflow execution.
+Agentex is our open-source framework for building, deploying, and managing AI agents. It's designed to be future-proof, enabling you to build agents at any level of autonomy, from simple chatbots to fully autonomous systems. As your needs grow, you can seamlessly progress from basic to advanced agentic AI without changing your core architecture.
+Temporal provides the underlying durable execution engine. The reality is that most real-world processes span long periods of time. Thanks to Temporal, we are able to create workflows that handle restarts, crashes, and can live for months and even years. This is not achievable by most AI systems today. Temporal ensures that every step of your workflow is reliably executed with automatic retries, state persistence, and the ability to survive failures.
+Together, they enable a new class of autonomous agents. These are systems that don't just respond to queries but take ownership of processes, continuously acting, observing, and adapting over time.
+Tutorial: Building the Procurement Agent
+Let's walk through how we built the
+procurement agent
+using Agentex and Temporal.
+Long-Running Workflows
+We run our AI agents in Temporal workflows. This gives us durability guarantees.
+@workflow.defn(name="procurement-agent")
+class ProcurementAgentWorkflow(BaseWorkflow):
+def __init__(self):
+super().__init__(display_name="procurement-agent")
+self.event_queue: asyncio.Queue = asyncio.Queue() # External events
+self.human_queue: asyncio.Queue = asyncio.Queue() # Human input
+This workflow can run for months or years. If the worker crashes, Temporal restarts it from the last checkpoint. If you deploy new code, ongoing workflows continue with the old version until they complete. Agentex’s BaseWorkflow handles all boilerplate so you can focus on your agent logic.
+External Event Integration
+Instead of waiting for human input, the agent reacts to signals from external systems:
+@workflow.signal
+async def send_event(self, event: str) -> None:
+"""
+Receives events from external systems (ERP, logistics, QA).
+Validates them against expected types and queues for processing.
+"""
+# Validate event is properly formatted
+if not event or len(event) > 50000:
+raise ValueError("Invalid event")
+event_data = json.loads(event)
+event_type_str = event_data["event_type"]
+# Validate against Pydantic models for type safety
+if event_type_str == EventType.SUBMITTAL_APPROVED.value:
+SubmitalApprovalEvent(**event_data)
+elif event_type_str == EventType.SHIPMENT_DEPARTED_FACTORY.value:
+ShipmentDepartedFactoryEvent(**event_data)
+elif event_type_str == EventType.INSPECTION_FAILED.value:
+InspectionFailedEvent(**event_data)
+# Queue for processing
+await self.event_queue.put(event)
+Agentex’s event routing system ensures that events are validated, queued, and processed asynchronously. The agent wakes up when events arrive, processes them with full context, and returns to sleep.
+Human-in-the-Loop Pattern
+When the agent encounters a critical decision, it escalates to a human:
+@function_tool
+async def wait_for_human(recommended_action: str) -> str:
+"""
+Pauses workflow execution until human provides guidance.
+The AI asks the human for help — not the other way around.
+"""
+workflow_instance = workflow.instance()
+try:
+# Wait indefinitely (up to 24 hours) for human response
+await workflow.wait_condition(
+lambda: not workflow_instance.human_queue.empty(),
+timeout=timedelta(hours=24),
+)
+while not workflow_instance.human_queue.empty():
+human_input = await workflow_instance.human_queue.get()
+return human_input
+except TimeoutError:
+return "TIMEOUT: No human response received within 24 hours."
+The workflow pauses and waits for human input, but continues accepting external events in the background. This creates a clean division of labor: the agent handles routine work, humans handle edge cases.
+State and Context Management
+Long-running agents need to manage two types of state: conversation history for the LLM and structured data.
+We maintain conversation history as a class variable in the workflow, which Temporal automatically persists:
+@workflow.defn(name="procurement-agent")
+class ProcurementAgentWorkflow(BaseWorkflow):
+def __init__(self):
+super().__init__(display_name="procurement-agent")
+self._state = None # Will hold StateModel with conversation history
+class StateModel(BaseModel):
+"""State model for preserving conversation history across turns."""
+input_list: List[Dict[str, Any]] # Full conversation history
+Temporal gives us persistence for free: if a workflow restarts, all prior context is restored. The agent resumes exactly where it left off, with full knowledge of previous events and decisions.
+In addition to conversation history, we maintain structured state in database tables—including procurement items and the construction schedule. The agent updates these tables as it works, providing automatic conversation summarization and the ability to learn from human decisions.
+Automatic Conversation Summarization
+Long-running workflows generate large histories, so we use automatic summarization to stay within context limits. When the conversation exceeds ~40k tokens, the system:
+Preserves the last 10 user turns (recent context).
+Identifies all older content that has not yet been summarized.
+Uses a dedicated summarization agent to extract key events, decisions, and state.
+Replaces the older section with a compact summary.
+We never re-summarize old summaries; only new content is condensed.
+This keeps the context window fresh and allows workflows to run indefinitely without losing important information or exceeding token limits.
+Learning from Human Decisions
+The more you use the agent, the better it gets. This creates a flywheel effect: the agent learns from each human decision, becomes more autonomous over time, and requires fewer escalations. Whenever a human makes a critical decision, we distill a 1–2 sentence rule from it. For example: “When inspection fails, remove the item from the schedule instead of re-ordering.” These learnings are stored in workflow state and fed into the agent’s system prompt on future runs, so it can handle similar situations autonomously instead of escalating again.
+Let’s build together
+The key insight is that AI agents don’t have to be stateless chatbots. They can be persistent, event-driven systems that autonomously run real-world processes over long periods of time. We’ve shown one example in construction procurement, but the same patterns apply to many areas of business. We encourage you to consider how these capabilities can be integrated into your own workflows.
+We’ve brought this technology to life with Temporal and Agentex, and we’d love to collaborate if you’re exploring how long-running autonomous agents could work in your organization.
+Reach out to the team here
+.
+We’re hosting a webinar on Thursday, November 20 where we will demonstrate these patterns in depth and show the procurement agent in action. To receive the recording or attend live,
+register here
+.
+Acknowledgements
+We'd like to thank the
+Temporal team
+for partnering with us on this tutorial and on Agentex overall, particularly, Maxim Fateev, Ethan Ruhe, and everyone else who jumped in to help.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

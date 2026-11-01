@@ -1,0 +1,84 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/announcements/reasoning-tokens-for-thinking-models
+page path  : /announcements/reasoning-tokens-for-thinking-models
+captured   : 2026-01-22 00:50:58 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/openrouter/openrouter.ai_announcements_reasoning-tokens-for-thinking-models__1357f561.html.gz
+========================================================================
+
+Reasoning Tokens for Thinking Models | OpenRouter | OpenRouter
+
+Reasoning Tokens for Thinking Models | OpenRouter | OpenRouter
+OpenRouter
+Search
+/
+Models
+Chat
+Rankings
+Enterprise
+Pricing
+Docs
+Skip to content
+OpenRouter
+/
+Models
+Chat
+Rankings
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Models
+Providers
+Pricing
+Enterprise
+Company
+About
+Announcements
+Careers
+Hiring
+Partners
+Privacy
+Terms of Service
+Support
+State of AI
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Posts
+1/24/2025
+
+by
+OpenRouter
+Reasoning Tokens for Thinking Models
+We're excited to announce
+Reasoning Tokens
+, a new feature that lets you observe how models reason, both in the Chatroom and via the API.
+
+Reasoning tokens provide a transparent look into the reasoning steps taken by a model.
+
+To use, add
+include_reasoning: true
+to your API request. When enabled, reasoning tokens will appear in the
+reasoning
+field of each message:
+
+Reasoning tokens are initially available for
+DeepSeek R1
+models (and derived models), with upcoming support for Gemini Thinking models.
+
+You can of course inspect the reasoning, but this can also potentially be used in more complex workflows. Below is a toy example (inspired by
+@skirano on X
+) of injecting R1's reasoning into a much less advanced model to make it smarter. This example is of questionable utility per se, but we're excited to see the evolution of reason token use cases!

@@ -1,0 +1,102 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/how-synthetic-data-can-avoid-company-risk-with-ai
+page path  : /blogs/how-synthetic-data-can-avoid-company-risk-with-ai
+captured   : 2026-01-25 07:25:17 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sap/www.sap.com_blogs_how-synthetic-data-can-avoid-company-risk-with-ai__88f98a31.html.gz
+========================================================================
+
+How Synthetic Data Can Prevent AI Bias and Cyber Threats | SAP
+
+How Synthetic Data Can Prevent AI Bias and Cyber Threats | SAP
+
+flex-height
+
+text-black
+
+How synthetic data can avoid company risk with AI
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+While 2023 brought a wave of excitement around generative artificial intelligence (AI) tools, 2024 promises a wave of lawsuits, as companies grapple with the consequences of using public copyrighted data or sensitive information to train their AI models. Not only
+authors
+and members of creative industries are filing complaints about their copyrighted work being used to train AI; even
+The New York Times
+is suing OpenAI and Microsoft over the use of millions of articles to train AI models that now compete with it.
+
+Synthetic data offers an alternative because it avoids the issues concerned with the quality, integrity, and privacy of public data. And an alternative data source is imperative as high-quality public data sources may be running out, with
+predictions
+suggesting the supply might be depleted by 2026.
+
+What is synthetic data generation?
+
+The core challenge in training AI models lies in the need for better-quality data. Synthetic data generation uses algorithms to generate realistic data that accurately mirrors statistical properties in real-world data. This method, according to
+Gartner
+, is expected to surpass the use of real data in AI models by 2030.
+
+Synthetic data is similar in structure, statistics, and correlations to the original data, but because it is simulated information, it eliminates the risk of real-world individuals’ data being compromised while training AI systems. In this way, synthetic data generation is supposed to preserve privacy without losing utility.
+
+Businesses can also avoid the costs and time needed to collect and process real data. Along with flexibility in the data output volume, synthetic data generation provides strong anonymization, helping companies avoid lawsuits and other legal issues.
+
+The most effective technique for generating synthetic data begins by extracting the main characteristics of a dataset. Businesses can then introduce differential privacy that adds slight alterations to the data—in other words, noise. That noise is intended to ensure that the new, synthetic data will strongly resemble the original dataset and its key characteristics but mask confidential information—supposedly without privacy or copyright concerns.
+
+Where can synthetic data be used?
+
+Synthetic data has applications in any field that needs to train AI. Synthetic data can train
+self-driving vehicle applications
+like object detection and parking. In
+healthcare
+, synthetic data trains AI to help simulate, predict, diagnose, and treat diseases while also bridging data access gaps in public health research and education.
+
+J.P. Morgan
+and
+American Express
+are using synthetic data to improve fraud detection and prevent money laundering. Public insurance group Provinzial harnessed the full potential of its customer data with synthetic data to improve predictive analytics and better identify the needs of its customers.
+
+Data and privacy regulations can hinder telecommunications firms from benefiting from customer data analysis.
+Vodaphone
+, however, used synthetic data for training and testing machine learning models for customer value management. The synthetic datasets saved time and costs and increased the models‘ performance, providing better understanding of the behavior and needs of customers.
+
+For HR, synthetic data can help detect patterns and identify reasons that employees leave and thus improve talent retention rates. And synthetic data is used at SAP to create HR tickets to train ticket classification models and generate
+synthetic curriculum vitae
+for testing purposes. These strategies radically improve HR tools without compromising sensitive personal data.
+
+AI bias: Navigating the road ahead
+
+On the other hand, synthetic data may be a double-edged sword in some cases. The quality of synthetic data is highly correlated with the quality of the original data and the data generation model. Synthetic data can act as fair training data for AI models, with added artificial data points for better representation and increased diversity. Training AI on fair synthetic datasets reduces the chance of biased outcomes. However, caution is advised—if not accurately adjusted, biases from original datasets can unintentionally be magnified in synthetic data.
+
+Technologies such as
+face recognition and motion detectors
+struggle with skin shades when trained on real-world datasets. Fairer synthetic data could help avoid these biases by improving the distribution of different skin colors in training data. Some
+synthetic databases
+contain information on gender, age, education, or employment that represents the population without AI bias; this makes them a useful resource for simulations such as planning for emergency response.
+
+To avoid the wave of lawsuits from privacy and copyright issues when using data to train AI models, synthetic data provides a privacy- and copyright-conscious solution to combat dwindling data sources. But considering that the bias in data can be prevented – or unintentionally amplified—when generated synthetically, it is vital to test and verify the accuracy of datasets before training your AI tools.
+
+Creating future-focused solutions
+
+SAP Innovation Center Network shapes the next generation of enterprise software.
+
+Explore our projects
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer

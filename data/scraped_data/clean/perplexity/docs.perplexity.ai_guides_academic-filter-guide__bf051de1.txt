@@ -1,0 +1,305 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/guides/academic-filter-guide
+page path  : /guides/academic-filter-guide
+captured   : 2026-01-25 03:03:47 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_guides_academic-filter-guide__bf051de1.html.gz
+========================================================================
+
+Academic Filter Guide - Perplexity
+
+Academic Filter Guide - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Search & Filtering
+Academic Filter Guide
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Getting Started
+Overview
+Pricing
+Perplexity MCP Server
+Perplexity SDK
+Quickstart
+Guides
+Search
+Quickstart
+Best Practices
+Search and Filtering
+Grounded LLM
+Quickstart
+Models
+Pro Search
+Chat Completions SDK
+OpenAI Compatibility
+Prompting & Output Control
+Search & Filtering
+Sonar Domain Filter Guide
+Sonar Language Filter Guide
+Academic Filter Guide
+Sonar Date and Time Filters
+SEC Filings Filter Guide
+User Location Filter Guide
+Sonar Search Context Size
+Sonar Web Search Control
+Returning Images with Sonar
+Returning Videos with Sonar
+Working with Attachments
+Admin
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Help & Resources
+Changelog
+Get in Touch
+API Roadmap
+Frequently Asked Questions
+System Status
+Privacy & Security
+Perplexity Crawlers
+Search & Filtering
+Academic Filter Guide
+Copy page
+Copy page
+The
+search_mode: "academic"
+parameter allows you to tailor your searches specifically to academic and scholarly sources, prioritizing peer-reviewed papers, journal articles, and research publications.
+
+​
+Overview
+
+The academic filter—sometimes referred to as “academic mode” or “Focus: Academic”—is a feature in Perplexity that allows users to target their searches specifically to academic and scholarly sources. This is especially useful for students, researchers, and professionals who require peer-reviewed papers, journal articles, and research-focused answers rather than general web content.
+
+When you activate the academic filter by setting
+search_mode: "academic"
+, Perplexity prioritizes results from scholarly databases, journals, and reputable academic publications, filtering out non-academic or general web sources. This ensures that the answers you receive are grounded in research and scholarly consensus.
+
+​
+Key Features and Functionality
+
+Source Filtering
+: Prioritizes scholarly databases, academic journals, and research publications
+
+Research Focus
+: Returns results based on peer-reviewed research rather than general web content
+
+Enhanced Precision
+: Provides more technical and discipline-specific information for academic queries
+
+Compatibility
+: Works with other search parameters like
+search_context_size
+to further refine results
+
+​
+Usage Examples
+
+​
+Basic Academic Search
+
+This example shows how to perform a basic search using the academic filter.
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What is the scientific name of the lions mane mushroom?"
+}],
+
+search_mode
+=
+"academic"
+,
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"low"
+}
+
+)
+
+print
+(completion.choices[
+0
+].message.content)
+
+​
+Combining Academic Mode with Other Parameters
+
+You can combine the academic filter with other parameters for more refined searches:
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar"
+,
+
+messages
+=
+[{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are the latest findings on neural networks for image recognition?"
+}],
+
+search_mode
+=
+"academic"
+,
+
+search_after_date_filter
+=
+"1/1/2023"
+,
+
+web_search_options
+=
+{
+"search_context_size"
+:
+"high"
+}
+
+)
+
+print
+(completion.choices[
+0
+].message.content)
+
+​
+Recommended Use Cases
+
+The academic filter is particularly valuable for:
+
+Research Literature Reviews
+: When you need to gather scholarly information on a specific topic
+
+Technical and Scientific Queries
+: For questions requiring scientifically accurate, peer-reviewed answers
+
+Academic Writing Assistance
+: When working on papers, theses, or dissertations that require scholarly sources
+
+Educational Support
+: For students and educators requiring academically rigorous information
+
+​
+Best Practices
+
+​
+Optimizing Academic Searches
+
+Be Specific
+: Formulate clear, focused questions to receive more precise academic responses
+
+Use Technical Terminology
+: Include field-specific terms to better target relevant academic literature
+
+Combine with Date Filters
+: For the most recent research, combine with
+search_after_date_filter
+
+Adjust Context Size
+: Use higher
+search_context_size
+values for more comprehensive academic responses
+
+​
+Performance Considerations
+
+Academic searches may sometimes take slightly longer due to the specialized nature of scholarly databases
+
+Consider using models like
+sonar-deep-research
+for particularly complex academic inquiries
+
+For more comprehensive literature reviews, set
+stream: false
+to receive complete responses
+
+​
+Limitations
+
+Availability of academic sources varies by field and topic
+
+Very recent research (published within the last few months) may not always be included
+
+Some paywalled or subscription-only academic content may not be fully accessible
+
+⸻
+Was this page helpful?
+Yes
+No
+Sonar Language Filter Guide
+Previous
+Sonar Date and Time Filters
+Next
+⌘
+I
+x
+discord
+website
+Powered by

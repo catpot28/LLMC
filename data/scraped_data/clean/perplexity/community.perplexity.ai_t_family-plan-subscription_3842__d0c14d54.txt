@@ -1,0 +1,197 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/family-plan-subscription/3842
+page path  : /t/family-plan-subscription/3842
+captured   : 2026-02-07 07:24:05 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/perplexity/community.perplexity.ai_t_family-plan-subscription_3842__d0c14d54.html.gz
+========================================================================
+
+Family Plan Subscription - Feature Requests - Perplexity API Platform Forum
+
+Family Plan Subscription - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Family Plan Subscription
+
+Feature Requests
+
+chat-completions
+
+liberfree
+
+February 4, 2026, 5:00pm
+
+1
+
+Here’s a feature request you can post, using that exact structure.
+
+Feature Request: Perplexity Family Plan (2 adults + 2–4 minors under $24/month)
+
+Problem Statement
+
+Right now, Perplexity’s Pro and Max plans are explicitly “for personal use only,” and each subscription is tied to a single user account. This makes it expensive and logistically awkward for families who want multiple members (parents and school‑age children) to use Perplexity regularly.[
+perplexity
+]​
+
+If each family member must maintain a separate paid plan, the total monthly cost quickly exceeds what most households can justify, especially compared with competitors that offer bundled family access. A family plan would solve the affordability and account‑management problem for households that view Perplexity as a shared learning tool, not just an individual productivity app.
+
+Proposed Solution
+
+Create a
+Perplexity Family Plan
+with these characteristics:
+
+Pricing:
+
+Target price: under $24/month (monthly or annual billing) for the entire family.
+
+Included seats:
+
+2 adult accounts (full access).
+
+2–4 minor accounts (child/teen profiles with age‑appropriate defaults).
+
+Features/limits (example):
+
+Access to the same core capabilities as Perplexity Pro for all members, such as deep research, multiple top models, and higher usage limits.[
+perplexity
+]​
+
+Optional parent controls for minors (e.g., content filters, usage reports).
+
+Shared billing and simple member management from the primary account.
+
+Example use case:
+
+A household with two parents and three kids (middle/high school) uses Perplexity daily for homework help, research projects, and learning new skills. Instead of buying multiple Pro subscriptions, they subscribe once to a Family Plan under $24/month. Parents manage billing and can see or adjust the kids’ settings, while each person keeps their own history, preferences, and spaces.
+
+API Impact
+
+API components affected:
+
+Primarily
+billing, account, and seat management
+, not the core chat/retrieval APIs themselves.
+
+No change required to chat completions, retrieval, or search filters at the model level.
+
+Models:
+
+The same models used in Pro (e.g., GPT‑5.x, Claude, Gemini, etc.) can be exposed to family members according to the plan’s limits.[
+perplexity
+]​
+
+Parameters:
+
+No new core API parameters appear strictly necessary.
+
+Internally, you might tag requests by seat type (adult/minor) for policy and rate‑limit enforcement, but that can be handled in your account/subscription layer rather than the public API.
+
+Alternatives Considered
+
+Buying multiple individual Pro subscriptions for each family member.
+
+This becomes too expensive for many households relative to competitors that offer bundled family options.
+
+Sharing one account among multiple family members.
+
+This breaks individual history and personalization, mixes up work and school queries, and can violate terms or create security/privacy issues.
+
+These workarounds are either cost‑prohibitive or conflict with the way Perplexity is meant to be used. A proper Family Plan is a cleaner, more user‑friendly solution.
+
+Additional Context
+
+Perplexity is already positioned as a tool for learning, research, and productivity, which naturally extends to family and educational use cases.[
+perplexity
+]​
+
+A Family Plan would:
+
+Strengthen Perplexity’s role as a “household learning assistant.”
+
+Make pricing more competitive against products that already offer family tiers.
+
+Increase engagement and loyalty by introducing younger users to Perplexity early, under parental supervision.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+More transparity and options for Perplexity pro application "labs" features
+
+Feature Requests
+
+0
+
+130
+
+June 16, 2025
+
+Perplexity Pro Bonus for the API is set to zero
+
+General
+
+1
+
+129
+
+May 15, 2025
+
+About the Feature Requests category
+
+Feature Requests
+
+1
+
+227
+
+August 13, 2025
+
+API Pricing- Sonar
+
+General
+
+sonar
+
+,
+
+search-api
+
+2
+
+95
+
+October 22, 2025
+
+Will Perplexity: Sonar Pro Search be coming to the API?
+
+General
+
+sonar-pro
+
+0
+
+79
+
+November 3, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

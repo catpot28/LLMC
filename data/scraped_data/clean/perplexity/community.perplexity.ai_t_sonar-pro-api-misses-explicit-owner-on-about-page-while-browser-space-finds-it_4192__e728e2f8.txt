@@ -1,0 +1,293 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/sonar-pro-api-misses-explicit-owner-on-about-page-while-browser-space-finds-it/4192
+page path  : /t/sonar-pro-api-misses-explicit-owner-on-about-page-while-browser-space-finds-it/4192
+captured   : 2026-04-12 13:10:15 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_sonar-pro-api-misses-explicit-owner-on-about-page-while-browser-space-finds-it_4192__e728e2f8.html.gz
+========================================================================
+
+Sonar Pro API misses explicit owner on About page, while browser/Space finds it - Bug Reports - Perplexity API Platform Forum
+
+Sonar Pro API misses explicit owner on About page, while browser/Space finds it - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Sonar Pro API misses explicit owner on About page, while browser/Space finds it
+
+Bug Reports
+
+sonar-pro
+,
+
+search-api
+
+mike_new
+
+March 20, 2026, 5:37am
+
+1
+
+109
+
+Draft post
+
+Title:
+Sonar Pro API misses explicit owner on About page, while browser/Space finds it
+
+Hi all,
+
+I’m testing Perplexity for business contact sourcing via API and I’ve hit a consistency issue that looks bigger than prompt tuning.
+
+Scenario
+
+Target business:
+http://www.murwillumbahcombatclub.com.au/
+
+Relevant page:
+/about
+
+Use case: identify business owner/operator and return structured JSON
+
+What the browser/Space does
+
+In the browser, Perplexity finds the owners correctly.
+
+What the API does
+
+Using
+sonar-pro
+, the API returns no owner found.
+
+The structured output has blank values for:
+
+ownerName
+
+ownerSource
+
+ownerEvidence
+
+It sets
+ownerConfidence
+to
+0
+.
+
+Why this looks wrong
+
+The About page explicitly says the business is:
+
+“family-owned and operated by locals, Ian McLachlan and wife Gemma”
+
+So this is not a case where the owner is hidden in some obscure external source. The owner signal is right there on the first-party website.
+
+Odd part
+
+The API output includes the About page in
+pages_searched
+, but still concludes no owner or proprietor was named on the website.
+
+So it seems the API:
+
+found the page,
+
+looked at the page,
+
+but failed to extract the obvious owner evidence.
+
+What I already tested
+
+Same/similar prompt as used in browser
+
+sonar-pro
+
+higher search context setting
+
+confirmed this is not an n8n parsing issue, because the raw API JSON itself has no owner in it
+
+My questions
+
+Is the browser/Space retrieval and extraction path different from the API for this kind of task?
+
+Is there a known issue with API extraction pages?
+
+Is there a recommended API pattern for ownership/contact sourcing where the owner is named on the target website?
+
+Has anyone here seen cases where the API lists the correct page in
+pages_searched
+but still misses plainly stated facts on that page?
+
+Is this a Perplexity Bug?
+
+Are there settings I’m missing in the API call?
+
+Practical impact
+
+This matters because for contact sourcing workflows, finding the page is not enough. The API has to reliably extract obvious entity relationships like:
+
+owner
+
+founder
+
+operator
+
+director
+
+At the moment, this makes the API less reliable than the browser for structured sourcing.
+
+Recommendation to Perplexity team
+
+A good improvement would be:
+
+stronger first-party page extraction for structured tasks,
+
+or an API mode that prioritises exact evidence extraction from target pages before broader web synthesis.
+
+Interested to know whether others have hit the same issue.
+
+image
+1920×891 285 KB
+
+Kesku
+
+April 7, 2026, 2:40pm
+
+2
+
+Hey
+@mike_new
+— good writeup. The difference you are seeing is expected, though understandably frustrating.
+
+When you use Perplexity in the browser, it runs a
+multi-step Pro Search
+workflow — it actively fetches and reads page content, follows links, and synthesizes information from multiple sources. A standard
+sonar-pro
+API call does a single-step search and works from snippets in the search index, which may not always include the specific text on an
+/about
+page.
+
+To get browser-equivalent results via the API, you have two good options:
+
+Option 1: Agent API with
+pro-search
+preset
+(recommended)
+
+This replicates the browser’s multi-step research behavior:
+
+from perplexity import Perplexity
+
+client = Perplexity()
+response = client.responses.create(
+preset="pro-search",
+input="Who owns the business at murwillumbahcombatclub.com.au? Check the About page."
+)
+print(response.output_text)
+
+Option 2: Agent API with explicit
+fetch_url
+tool
+
+If you know the exact page to read:
+
+response = client.responses.create(
+model="openai/gpt-5.1",
+input="Read the About page at http://www.murwillumbahcombatclub.com.au/about and extract the business owner name.",
+tools=[
+{"type": "web_search"},
+{"type": "fetch_url"}
+]
+)
+
+The
+fetch_url
+tool will actually retrieve the page content (like a browser would), so the model can read the owner information directly.
+
+See the
+Agent API docs
+for more on presets and tools.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+API vs Web Quality Issues
+
+Bug Reports
+
+sonar-pro
+
+3
+
+438
+
+November 5, 2025
+
+Same query yields inconsistent results between Perplexity API (sonar) and Web UI: API matches the wrong person, Web UI is correct
+
+General
+
+sonar
+
+,
+
+search-api
+
+1
+
+36
+
+February 26, 2026
+
+Sonar AP returning empty results or malformated |
+
+Bug Reports
+
+sonar
+
+0
+
+90
+
+September 5, 2025
+
+Why does the Perplexity Sonar PRO API fail to fetch detailed profiles from web links like the Perplexity Chat UI does—should I use a different Perplexity model for this?
+
+General
+
+sonar-pro
+
+0
+
+65
+
+October 28, 2025
+
+API response is different to web response
+
+Bug Reports
+
+1
+
+150
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

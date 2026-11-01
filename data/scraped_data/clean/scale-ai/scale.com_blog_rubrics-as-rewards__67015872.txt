@@ -1,0 +1,106 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/rubrics-as-rewards
+page path  : /blog/rubrics-as-rewards
+captured   : 2026-05-16 02:34:49 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/scale-ai/scale.com_blog_rubrics-as-rewards__67015872.html.gz
+========================================================================
+
+Using Rubrics to Build Better Models | Scale AI
+
+Using Rubrics to Build Better Models | Scale AI
+Please rotate your device for the best experience.
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Using Rubrics to Build Better Models
+By
+
+Matthew Siegel
+&
+The Scale Research Team
+·
+September 2, 2025
+·
+6 min read
+Copy Link
+In a new paper, Scale researchers introduce
+Rubrics as Rewards (RaR)
+, a framework that uses structured, checklist-style rubrics to guide AI training. Instead of relying on a simple "good/bad" signal, RaR evaluates model outputs against explicit criteria: what facts should be included, what reasoning steps matter, and what pitfalls to avoid. This helps models learn why a response is good, not just whether it looks good.
+This approach was designed to solve critical flaws in the two leading methods for post-training language models. One method, Reinforcement Learning from Human Feedback (RLHF), teaches models based on subjective preferences. Its flaw is a reliance on "opaque reward functions" that are prone to "spurious correlations," meaning the model can learn to be persuasive based on superficial qualities rather than genuine understanding.
+The other main method, Reinforcement Learning with Verifiable Rewards (RLVR), works very well for objective tasks where answers can be easily confirmed, like in math or coding. However, it is not well-suited for more subjective "real-world tasks" like medicine or science. RaR was designed to fix the problems inherent in RLHF by extending the principles of RLVR to these more complex subjective domains.
+How RaR Works
+The effectiveness of the Rubrics as Rewards framework hinges on the quality of the rubrics themselves. To ensure the rubrics are reliable and effective, the researchers established four key design principles:
+Grounded in Expert Guidance: Rubrics are based on reference answers produced by human experts or stronger LLMs.
+Comprehensive Coverage: They span multiple quality dimensions, including factual accuracy, logical structure, and even negative "pitfall" criteria to penalize common errors.
+Semantic Weighting: Each criterion is labeled with a categorical importance level, like "Essential" or "Important," to reflect its priority.
+Self-Contained: Each item can be evaluated in isolation without needing external context or specialized domain knowledge
+Once a quality rubric is designed, it's put to work teaching the model to get better. The researchers use a "learn-as-you-go" training process powered by an algorithm called GRPO. In this loop, the model generates answers, gets a score based on the rubric, and is immediately updated with that feedback. While this paper focuses on improving the score (the reward signal), related research like Adaptive Guidance explores how to speed up the learning part of this loop by giving the model helpful hints.
+But how do you turn a multi-part rubric into a single score? The paper tested two methods, revealing a key insight:
+Explicit Aggregation: a rigid “checklist” where an AI judge checks each box on the rubric and adds up the points according to a fixed formula.
+Implicit Aggregation: similar to asking an expert for a holistic judgment. The AI judge is shown the model's answer and the entire rubric and uses its overall understanding to assign a single, final score.
+The paper found this implicit, holistic method was consistently more effective, indicating that for complex tasks, it's better to trust a capable AI judge's nuanced understanding than to rely on a simple, mathematical formula.
+Proving the Concept: The Datasets
+To prove the RaR method could handle high-stakes, real-world problems, the researchers built two new, large-scale datasets:
+RaR-Medicine-20k
+: A set of 20,000 medical prompts focused heavily on complex reasoning tasks like diagnosis (50.3% of the data) and treatment (16.0%).
+RaR-Science-20k
+: A collection of roughly 20,000 expert-level science prompts aligned with the GPQA Diamond benchmark, covering topics from quantum mechanics to molecular biology.
+Curating these challenging datasets was a crucial step, demonstrating that RaR is not just a theoretical idea but a practical framework for improving AI in domains where quality and reliability matter most.
+Key Results
+RaR provides a clear and substantial performance gain over existing post-training methods. The best-performing variant, RaR-Implicit, yielded up to a 28% relative improvement on OpenAI’s HealthBench-1k medical benchmark compared to baselines that use a Likert Score as reward. As shown in the table below, this represents the performance leap from a score of 0.2489 for the Simple-Likert baseline to 0.3194 for RaR-Implicit. The RaR method also matched or surpassed the performance of stronger baselines which use expert written reference answers to generate rewards for evaluation across medicine and science domains.
+The research also shows that rubrics make AI judges significantly more efficient. By providing a structured rubric, a smaller, more cost-effective judge model can evaluate responses with an accuracy that rivals its much larger counterparts. This effect is clearly visible in the LLM Judge Alignment graph, where the orange "Rubrics" line remains high and stable even for the smallest models, while the blue "Pure Likert" line struggles. This highlights a tangible path toward more scalable and cost-effective AI training and alignment, a major benefit for enterprise applications.
+Finally, the research shows that rubric quality is paramount and that expert human insight is also crucial. Consistently, the most effective rubrics were those generated with "expert guidance." In this process, a high-quality "reference answer" written by a human expert or a stronger LLM serves as a guide for the AI that generates the rubric's criteria. Rubrics developed with this guidance were more accurate and led to significantly better models than those generated by an AI alone. The alignment graph demonstrates this clearly: the orange line, representing rubrics created with expert guidance, consistently outperforms the green line, which represents rubrics created without it. RaR is not about replacing human experts, but about creating a more effective framework to distill, scale, and apply their knowledge.
+The Future of Rubric-Guided AI
+The principles behind RaR point toward a future of safer AI, as this method offers a more transparent, interpretable approach to post-training. It is particularly useful against reward hacking, akin to another method developed by Scale researchers which explores training models to
+verbalize
+when they are exploiting a loophole to trigger a reward function.
+RaR also serves as a stepping stone for training more capable AI on complex, multi-step agentic tasks like tool use. These environments are notoriously difficult for conventional training methods because the rewards are often too sparse, with models only getting feedback at the very end of a long sequence of actions. This push into the next frontier is also exemplified by work like
+Agent-RLVR
+, which makes RLVR effective in these settings by introducing "agent guidance" to steer the agent toward success, much like a teacher guiding a student.
+Ultimately, Rubrics as Rewards represents a key shift in post-training. By elevating the human role from a simple preference labeler to an expert architect of the evaluation criteria, RaR offers a more transparent and effective path toward building AI that can better handle real-world complexity.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

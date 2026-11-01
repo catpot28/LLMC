@@ -1,0 +1,756 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/how-to-safeguard-your-models-with-datarobot-a-comprehensive-guide/
+page path  : /blog/how-to-safeguard-your-models-with-datarobot-a-comprehensive-guide/
+captured   : 2026-04-21 11:03:56 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_blog_how-to-safeguard-your-models-with-datarobot-a-comprehensive-guide__79c70c0d.html.gz
+========================================================================
+
+How to safeguard your models with DataRobot: a comprehensive guide | DataRobot Blog
+
+How to safeguard your models with DataRobot: a comprehensive guide | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+How to safeguard your models with DataRobot: a comprehensive guide
+
+In today’s data-driven world, ensuring the security and privacy of machine learning models is a must-have, as neglecting these aspects can result in hefty fines, data breaches, ransoms to hacker groups and a significant loss of reputation among customers and partners.
+
+DataRobot offers robust solutions to protect
+against the top 10 risks identified by The Open Worldwide Application Security Project
+(OWASP), including security and privacy vulnerabilities.
+
+Whether you’re working with custom models, using the DataRobot playground, or both, this
+7-step safeguarding guide
+will walk you through how to set up an effective moderation system for your organization.
+
+Step 1: Access the Moderation Library
+
+Begin by opening DataRobot’s Guard Library, where you can select various guards to safeguard your models. These guards can help prevent several issues, such as:
+
+Personal Identifiable Information (PII) leakage
+
+Prompt injection
+
+Harmful content
+
+Hallucinations (using Rouge-1 and Faithfulness)
+
+Discussion of competition
+
+Unauthorized topics
+
+Step 2: Utilize Custom and Advanced Guardrails
+
+DataRobot not only comes equipped with built-in guards but also provides the flexibility to use any custom model as a guard, including large language models (LLM), binary, regression, and multi-class models. This allows you to tailor the moderation system to your specific needs. Additionally, you can employ state-of-the-art ‘NVIDIA NeMo’ input and output self-checking rails to ensure that models stay on topic, avoid blocked words, and handle conversations in a predefined manner. Whether you choose the robust built-in options or decide to integrate your own custom solutions, DataRobot supports your efforts to maintain high standards of security and efficiency.
+
+Step 3: Configure Your Guards
+
+Setting Up Evaluation Deployment Guard
+
+Choose the entity to apply it to (prompt or response).
+
+Deploy global models from the DataRobot Registry or use your own.
+
+Set the moderation threshold to determine the strictness of the guard.
+
+Example how to set threshold
+
+Example of response with PII moderation criteria > 0.8
+
+Example of response with PII moderation criteria > 0.5
+
+Configuring NeMo Guardrails
+
+Provide your OpenAI key.
+
+Use pre-uploaded files or customize them by adding blocked terms. Configure the system prompt to determine blocked or allowed topics, moderation criteria and more.
+
+Step 4: Define Moderation Logic
+
+Choose a moderation method:
+
+Report:
+Track and notify admins if the moderation criteria are not met.
+
+Block:
+Block the prompt or response if it fails to meet the criteria, displaying a custom message instead of the LLM response.
+
+By default, the moderation operates as follows:
+
+First, prompts are evaluated using configured guards in parallel to reduce latency.
+
+If a prompt fails the evaluation by any “blocking” guard, it is not sent to the LLM, reducing costs and enhancing security.
+
+The prompts that passed the criteria are scored using LLM and then, responses are evaluated.
+
+If the response fails, users see a predefined, customer-created message instead of the raw LLM response.
+
+Step 5: Test and Deploy
+
+Before going live, thoroughly test the moderation logic. Once satisfied, register and deploy your model. You can then integrate it into various applications, such as a Q&A app, a custom app, or even a Slackbot, to see moderation in action.
+
+Step 6: Monitor and Audit
+
+Keep track of the moderation system’s performance with automatically generated custom metrics. These metrics provide insights into:
+
+The number of prompts and responses blocked by each guard.
+
+The latency of each moderation phase and guard.
+
+The average scores for each guard and phase, such as faithfulness and toxicity.
+
+Additionally, all moderated activities are logged, allowing you to audit app activity and the effectiveness of the moderation system.
+
+Step 7: Implement a Human Feedback Loop
+
+In addition to automated monitoring and logging, establishing a human feedback loop is crucial for refining the effectiveness of your moderation system. This step involves regularly reviewing the outcomes of the moderation process and the decisions made by automated guards. By incorporating feedback from users and administrators, you can continuously improve model accuracy and responsiveness. This human-in-the-loop approach ensures that the moderation system adapts to new challenges and evolves in line with user expectations and changing standards, further enhancing the reliability and trustworthiness of your AI applications.
+
+from datarobot.models.deployment import CustomMetric
+
+custom_metric = CustomMetric.get(
+deployment_id="5c939e08962d741e34f609f0", custom_metric_id="65f17bdcd2d66683cdfc1113")
+
+data = [{'value': 12, 'sample_size': 3, 'timestamp': '2024-03-15T18:00:00'},
+{'value': 11, 'sample_size': 5, 'timestamp': '2024-03-15T17:00:00'},
+{'value': 14, 'sample_size': 3, 'timestamp': '2024-03-15T16:00:00'}]
+
+custom_metric.submit_values(data=data)
+
+# data witch association IDs
+data = [{'value': 15, 'sample_size': 2, 'timestamp': '2024-03-15T21:00:00', 'association_id': '65f44d04dbe192b552e752aa'},
+{'value': 13, 'sample_size': 6, 'timestamp': '2024-03-15T20:00:00', 'association_id': '65f44d04dbe192b552e753bb'},
+{'value': 17, 'sample_size': 2, 'timestamp': '2024-03-15T19:00:00', 'association_id': '65f44d04dbe192b552e754cc'}]
+
+custom_metric.submit_values(data=data)
+
+Final Takeaways
+
+Safeguarding your models with DataRobot’s comprehensive moderation tools not only enhances security and privacy but also ensures your deployments operate smoothly and efficiently. By utilizing the advanced guards and customizability options offered, you can tailor your moderation system to meet specific needs and challenges.
+
+Monitoring tools and detailed audits further empower you to maintain control over your application’s performance and user interactions. Ultimately, by integrating these robust moderation strategies, you’re not just protecting your models—you’re also upholding trust and integrity in your machine learning solutions, paving the way for safer, more reliable AI applications.
+
+Experience DataRobot’s comprehensive AI suite and discover how it can safeguard your models. Start your
+14-day free trial today
+.
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Authors
+
+by
+
+Aslihan Buner
+
+,
+
+Kateryna Bozhenko
+
+June 4, 2024
+
+|
+4 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Leaders
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+April 13, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Leaders
+
+Why enterprise AI ROI starts with observability
+
+April 10, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Leaders
+
+Best agentic AI platforms: Why unified platforms win
+
+April 8, 2026
+
+|
+10 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+Blog
+
+How to achieve zero-downtime updates in large-scale AI agent deployments
+
+Read More
+
+April 6, 2026
+
+|
+8 min read
+
+Blog
+
+Your agentic AI pilot worked. Here’s why production will be harder.
+
+Read More
+
+April 3, 2026
+
+|
+11 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

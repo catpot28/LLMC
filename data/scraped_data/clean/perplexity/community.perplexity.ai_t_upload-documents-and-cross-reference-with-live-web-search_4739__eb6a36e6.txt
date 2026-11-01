@@ -1,0 +1,142 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/upload-documents-and-cross-reference-with-live-web-search/4739
+page path  : /t/upload-documents-and-cross-reference-with-live-web-search/4739
+captured   : 2026-04-12 12:15:21 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_upload-documents-and-cross-reference-with-live-web-search_4739__eb6a36e6.html.gz
+========================================================================
+
+Upload Documents and Cross-Reference with Live Web Search - Announcements - Perplexity API Platform Forum
+
+Upload Documents and Cross-Reference with Live Web Search - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Upload Documents and Cross-Reference with Live Web Search
+
+Announcements
+
+Kesku
+
+October 8, 2025, 10:30pm
+
+1
+
+You can now upload documents and ask Sonar to analyze them — then instantly cross-reference findings with live web search.
+
+Get answers grounded in your data and the latest facts.
+
+img_file_upload.jpg
+1200×846 54.3 KB
+
+Pass a file URL in your messages using the
+file_url
+content type:
+
+{
+"model": "sonar-pro",
+"messages": [
+{
+"role": "user",
+"content": [
+{"type": "text", "text": "Summarize this document and fact-check the key claims."},
+{"type": "file_url", "file_url": {"url": "https://example.com/report.pdf"}}
+]
+}
+]
+}
+
+Docs:
+File Attachments Guide
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Document analysis
+
+General
+
+sonar-deep-research
+
+2
+
+180
+
+August 5, 2025
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+73
+
+September 24, 2025
+
+PDF Upload with Sonar API Questions
+
+General
+
+chat-completions
+
+0
+
+93
+
+August 29, 2025
+
+Basic web search: chat v API
+
+General
+
+search-api
+
+2
+
+28
+
+April 4, 2026
+
+Pereplexity Deep Research Report Cut-Off Midway
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+3
+
+177
+
+October 22, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,199 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/designing-secure-caller-identity-authentication-flows-for-voice-agents
+page path  : /blog/designing-secure-caller-identity-authentication-flows-for-voice-agents
+captured   : 2026-06-06 08:17:40 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_designing-secure-caller-identity-authentication-flows-for-voice-agents__e440b100.html.gz
+========================================================================
+
+Designing secure caller identity authentication flows for voice agents
+
+Designing secure caller identity authentication flows for voice agents
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+Resources
+Designing secure caller identity authentication flows for voice agents
+Written by
+Louise
+
+Meyer-Schoenherr
+Radoslaw
+
+Lodzinski
+Published
+Dec 4, 2025
+Last updated
+Jun 3, 2026
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+Voice agents
+are rapidly evolving from simple FAQ responders to action-taking systems that modify accounts, process transactions, and access sensitive customer data. This shift introduces a critical challenge: How do you verify caller identity in a
+conversational AI
+system where traditional visual authentication methods don't exist?
+When a voice agent can update subscriptions, retrieve account balances, or initiate refunds, it must authenticate callers with the same rigor as human call centers, but through an entirely voice-based interaction. Unlike human agents who follow company policies, AI agents require deterministic, tool-based authentication that doesn't rely on LLM judgment.
+This article outlines proven authentication patterns from our work as Forward Deployed Engineers across enterprise deployments. We'll cover five core approaches, from session-based authentication for embedded widgets to telephony-specific methods and OTP verification, and explain how to implement each using deterministic workflow gating on the ElevenLabs platform.
+Most importantly, we'll demonstrate why authentication cannot be left to conversational inference. Instead, it must be architected through isolated sub-agents, tool-based verification, and conditional workflow routing that ensures only authenticated users reach privileged operations.
+The architectural foundation to deterministic authentication
+To ensure that only authenticated users can access account-related information, we recommend a strict environment and access segregation through ElevenLabs’ workflows. Authentication should always be implemented using a tool call with a boolean success or failure output, configured as a dispatch tool within the ElevenLabs workflow builder.
+By linking the transfer condition directly to the tool call result, the sub-agent with access to account data is only reachable after successful authentication and remains fully isolated from unauthenticated users. This ensures authentication is deterministic, not left to an LLM decision, and prevents any progression to downstream nodes without a verified identity.
+As an alternative, transfer expressions can be used as a reliable transfer method. These expressions reference dynamic variables that are updated through tool call results.
+Example implementation
+Verify the user in Salesforce (tool call). If successful, retrieve customer transaction data from Salesforce (another tool call) and then transfer the user to a subagent responsible for using this data to communicate with the customer and perform other actions if needed.
+User identity authentication methods
+These authentication methods are not natively supported in the ElevenLabs platform. They can be implemented through server-side tools that integrate with your CRM or backend/database, where authentication data is stored.
+Host application authentication
+For voice agents embedded in a website, the host application can pass user session data (such as logged-in status, account ID, or session tokens) through dynamic variables when initializing the agent/widget. These variables are automatically injected into tool calls using the same dynamic variables, enabling the agent to retrieve personalized data from integrated systems without requiring separate authentication.
+This enables a seamless support flow, because the user was already verified by the host application. You can set this up via custom configuration or use the ElevenLabs widget, where you pass variables at runtime via the widget configuration (e.g., <elevenlabs-convai dynamic-variables='{"user_id": "123", "account_tier": "premium"}'>).
+Documentation on Dynamic Variables:
+
+https://elevenlabs.io/docs/agents-platform/customization/personalization/dynamic-variables#pass-variables-at-runtime
+
+Knowledge-based authentication (KBA)
+The voice agent asks the caller to provide authentication data such as account number, postcode, date of birth, or security answers. A server-side tool (webhook or client-side) verifies these values against your database (e.g., CRM or identity store). The tool returns a success/failure result that includes both a boolean status (is_error) and descriptive text. You can implement this via deterministic workflow gating: After requesting the relevant information, configure a tool dispatch and use workflow conditional transfer edges that branch based on the tool's success/failure status, routing authenticated users to “privileged” agent nodes.
+This approach supports static security questions and dynamic "out-of-wallet" style verification, depending on your fraud risk requirements.
+Documentation on Tools:
+https://elevenlabs.io/docs/agents-platform/customization/tools/server-tools
+
+https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows#dispatch-tool-node
+
+System dynamic variables (Telephony only)
+For phone-based conversations (via Twilio or SIP trunk), your agent automatically has access to telephony-specific system variables, including system__caller_id (the caller's phone number), This variable automatically populates when the conversation starts and can be referenced two ways: 1) In prompts/messages: Reference them using double curly braces, e.g., {{system__caller_id}}, and they'll be substituted with actual values: 2) In tool parameters: Configure tool parameters to use these variables, enabling silent authentication without mentioning them in the prompt
+For example, you can configure a tool to automatically pass the caller ID to your CRM lookup endpoint, allowing the agent to silently verify if the incoming number matches the customer's registered number for user authentication. Instead of a tool call, the authentication can also be configured as a conversation initiation webhook that executes before the conversation begins.
+Security Note: Because callers may use different numbers than those on file, or stored numbers may be accessible to unauthorized individuals, caller ID-based authentication should require prior customer opt-in or be combined with additional authentication methods (e.g., knowledge-based questions).
+Documentation on System Dynamic Variables and Initiation webhook:
+https://elevenlabs.io/docs/agents-platform/customization/personalization/dynamic-variables#system-dynamic-variables
+
+https://elevenlabs.io/docs/agents-platform/customization/personalization/twilio-personalization
+
+Advanced knowledge-based / security question authentication
+The agent can authenticate a user by asking a set of security questions and granting access only if the caller answers a pre-defined count correctly.The agent can be prompted to select random questions from a predefined list (e.g., date of birth, postcode, pet's name) and validate caller answers through a tool call to your database.
+The authentication tool returns a JSON response including the current success count. Using tool assignments, this count is automatically extracted and stored/updated in a dynamic variable (e.g., auth_success_count). After each successful verification, the variable increments.
+Once the required number of verifications is reached (e.g., 3), a workflow expression condition checks the dynamic variable value and transitions to a privileged sub-agent node. The expression uses comparison operators (e.g., auth_success_count >= 3) to deterministically gate access based on the authentication status.
+Documentation here:
+https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows#edges-and-flow-control
+
+One-Time Code
+This is a universal method where a one-time code is sent to the user's device via SMS or email. The user must then communicate the code back to the agent for verification to gain access.
+Implementation workflow:
+Code Generation: The agent initiates the process with a server tool call to a dedicated endpoint. This action triggers the generation of a secure, one-time code and sends it to the user via their preferred channel (SMS or email).
+User Prompt: The agent then asks the user to provide the code they received. In voice mode, users speak the code aloud, which is captured through speech-to-text.
+Code Verification: The agent sends the user-provided code to a backend verification service using a second tool call. The backend validates that the code matches, hasn't expired, and hasn't been used already.
+Workflow Routing: The agent handles the outcome based on the verification response: Success: If the code is correct, the user is directed to the post-authentication part of the workflow via a success condition. Failure: If the code is incorrect, the agent can prompt the user to enter the code again or initiate a fallback procedure (e.g., send a new code).
+Security considerations: Rate limiting should be implemented to prevent brute force attempts, codes should have short expiration times (3-5 minutes), and retry attempts should be tracked and limited. For voice interactions, consider confirmation prompts to ensure speech-to-text accuracy when capturing codes.
+Conclusion
+These authentication methods represent flexible building blocks, not prescriptive solutions. Your choice should reflect your specific risk profile, regulatory requirements, and user experience goals. A customer service bot needs different security than a banking assistant handling transactions. The platform's flexibility ensures your security strategy can evolve as threats change and requirements grow, always balancing protection with user experience.
+Similar articles
+How to self-publish an audiobook
+Category
+Resources
+Date
+Apr 18, 2024
+How to promote audiobooks
+Category
+Resources
+Date
+Apr 18, 2024
+How to make Text to Speech sound less robotic
+Category
+Resources
+Date
+Apr 17, 2024
+AI content creation: essential guidelines
+Category
+Resources
+Date
+Apr 17, 2024
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

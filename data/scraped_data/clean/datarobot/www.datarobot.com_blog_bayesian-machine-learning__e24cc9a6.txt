@@ -1,0 +1,758 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/bayesian-machine-learning/
+page path  : /blog/bayesian-machine-learning/
+captured   : 2026-05-17 15:16:44 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/datarobot/www.datarobot.com_blog_bayesian-machine-learning__e24cc9a6.html.gz
+========================================================================
+
+Bayesian machine learning | DataRobot Blog
+
+Bayesian machine learning | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Bayesian machine learning
+
+This article was originally published at Algorithimia’s website. The company was
+acquired by DataRobot
+in 2021. This article may not be entirely up-to-date or refer to products and offerings no longer in existence.
+
+Bayesian ML is a paradigm for constructing statistical models based on Bayes’ Theorem. Learn more from the experts at DataRobot.
+
+Think about a standard machine learning problem. You have a set of training data, inputs and outputs, and you want to determine some mapping between them. So, you splice together a model and soon you have a deterministic way of generating predictions for a target variable 𝑦y given an unseen input 𝑥x.
+
+There’s just one problem – you don’t have any way to explain what’s going on within your model! All you know is that it’s been trained to minimize some loss function on your training data, but that’s not much to go on. Ideally, you’d like to have an objective summary of your model’s parameters, complete with confidence intervals and other statistical nuggets, and you’d like to be able to reason about them using the language of probability.
+
+That’s where Bayesian Machine Learning comes in.
+
+What is Bayesian machine learning?
+
+Bayesian ML is a paradigm for constructing statistical models based on Bayes’ Theorem
+
+p(θ|x)=p(x|θ)p(θ)p(x)
+
+Generally speaking, the goal of Bayesian ML is to estimate the posterior distribution (𝑝(𝜃|𝑥)p(θ|x)) given the likelihood (𝑝(𝑥|𝜃)p(x|θ)) and the prior distribution, 𝑝(𝜃)p(θ). The likelihood is something that can be estimated from the training data.
+
+In fact, that’s exactly what we’re doing when training a regular machine learning model. We’re performing Maximum Likelihood Estimation, an iterative process which updates the model’s parameters in an attempt to maximize the probability of seeing the training data 𝑥x having already seen the model parameters 𝜃θ.
+
+So how does the Bayesian paradigm differ? Well, things get turned on their head in that in this instance we actually seek to maximize the posterior distribution which takes the training data as fixed and determines the probability of any parameter setting 𝜃θ given that data. We call this process
+Maximum a Posteriori (MAP)
+. It’s easier, however, to think about it in terms of the likelihood function. By Bayes’ Theorem we can write the posterior as
+
+p(θ|x)∝p(x|θ)p(θ)
+
+Here we leave out the denominator, 𝑝(𝑥)p(x), because we are taking the maximization with respect to 𝜃θ which 𝑝(𝑥)p(x) does not depend on. Therefore, we can ignore it in the maximization procedure. The key piece of the puzzle which leads Bayesian models to differ from their classical counterparts trained by MLE is the inclusion of the term 𝑝(𝜃)p(θ). We call this the
+prior distribution
+over 𝜃θ.
+
+The idea is that its purpose is to encode our beliefs about the model’s parameters before we’ve even seen them. That’s to say, we can often make reasonable assumptions about the “suitability” of different parameter configurations based simply on what we know about the problem domain and the laws of statistics. For example, it’s pretty common to use a Gaussian prior over the model’s parameters. This means we assume that they’re drawn from a normal distribution having some mean and variance. This distribution’s classic bell-curved shape consolidates most of its mass close to the mean while values towards its tails are rather rare.
+
+By using such a prior, we’re effectively stating a belief that most of the model’s weights will fall in some narrow range about a mean value with the exception of a few outliers, and this is pretty reasonable given what we know about most real world phenomena.
+
+It turns out that using these prior distributions and performing MAP is equivalent to performing MLE in the classical sense
+along with the addition of regularization
+. There’s a pretty easy mathematical proof of this fact that we won’t go into here, but the gist is that by constraining the acceptable model weights via the prior we’re effectively imposing a regularizer.
+
+Methods of Bayesian ML
+
+MAP
+
+While MAP is the first step towards fully Bayesian machine learning, it’s still only computing what statisticians call a
+point estimate
+, that is the estimate for the value of a parameter at a single point, calculated from data. The downside of point estimates is that they don’t tell you much about a parameter other than its optimal setting. In reality, we often want to know other information, like how certain we are that a parameter’s value should fall within this predefined range.
+
+To that end, the true power of Bayesian ML lies in the computation of the entire posterior distribution. This is a tricky business though. Distributions are not nicely packaged mathematical objects that can be manipulated at will. Often they come defined to us as tricky, intractable integrals over continuous parameter spaces that are infeasible to analytically compute. Therefore, a number of fascinating Bayesian methods have been devised that can be used to
+sample
+(i.e. draw sample values) from the posterior distribution.
+
+MCMC
+
+Probably the most famous of these is an algorithm called
+Markov Chain Monte Carlo
+, an umbrella which contains a number of subsidiary methods such as
+Gibbs
+and
+Slice Sampling.
+The math behind MCMC is difficult but intriguing. In essence, these methods work by constructing a known Markov chain which settles into a distribution that’s equivalent to the posterior. A number of successor algorithms improve on the MCMC methodology by using gradient information to allow the sampler to more efficiently navigate the parameter space.
+
+MCMC and its relatives are often used as a computational cog in a broader Bayesian model. Their downside is that they are often very computationally inefficient, although this drawback has been improved tremendously in recent years. That said, it’s often preferable to use the simplest tool possible for any given job.
+
+To that end, there exist many simpler methods which can often get the job done. For example, there exist Bayesian linear and logistic regression equivalents in which something called the
+Laplace Approximation
+is used. This algorithm provides an analytical approximation to the posterior distribution by computing a second-order Taylor expansion around the log-posterior and centered at the MAP estimate.
+
+Gaussian process
+
+One popular Bayesian method capable of performing both classification and regression is the
+Gaussian process
+. A GP is a stochastic process with strict Gaussian conditions imposed upon its constituent random variables. GPs have a rather profound theoretical underpinning, and much effort has been devoted to their study. In effect, these processes provide the ability to perform regression in function space.
+
+That is, instead of choosing a single line to best fit your data, you can determine a probability distribution over the
+space of all possible lines
+and then select the line that is most likely given the data as the actual predictor. This is Bayesian estimation in the truest sense in that the full posterior distribution is analytically computed. The ability to actually work out the method in this instance is due to the suitability of
+conjugate functions
+.
+
+In the case of classification using GPs, the posterior is once again no longer conjugate to the likelihood, and the ability to do analytic computations breaks down. In this case, it’s necessary to once again resort to approximate solvers like the Laplace Approximation in order to suitably train the model to a desired level of accuracy.
+
+The presence of Bayesian models in ML
+
+While Bayesian models are not nearly as widespread in industry as their counterparts, they are beginning to experience a new resurgence due to the recent development of computationally tractable sampling algorithms, greater access to CPU/GPU processing power, and their dissemination in arenas outside academia.
+
+They are especially useful in low-data domains where deep learning methods often fail and in regimes in which the ability to reason about a model is essential. In particular, they see wide use in Bioinformatics and
+Healthcare
+, as in these fields taking a point estimate at face value can often have catastrophic effects and more insight into the underlying model is necessary.
+
+For example, one would not want to naively trust the outputs of an MRI cancer prediction model without at least first having some knowledge about how that model was operating. Similarly, within bioinformatics, variant callers such as Mutect2 and Strelka rely heavily on Bayesian methods underneath the hood.
+
+These software programs take in DNA reads from a person’s genome and label “variant” alleles which differ from those in the reference. In this domain, accuracy and statistical soundness are paramount, so Bayesian methods make a lot of sense despite the complexity that they add in implementation.
+
+Overall, Bayesian ML is a fast growing subfield of machine learning and looks to develop even more rapidly in the coming years as advancements in computer hardware and statistical methodologies continue to make their way into the established canon.
+
+Trial
+
+Try now: create ML projects code-free
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Authors
+
+by
+
+DataRobot
+
+September 3, 2020
+
+|
+7 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+A playbook to run an agent Build Club
+
+May 13, 2026
+
+|
+9 min read
+
+Read More
+
+AI for Leaders
+
+From Planning to Action: SAP Enterprise Planning enhanced by DataRobot
+
+May 11, 2026
+
+|
+6 min read
+
+Read More
+
+AI for Practitioners
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+April 23, 2026
+
+|
+6 min read
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+Related posts
+
+See other posts in AI for Practitioners
+
+New
+
+Blog
+
+A playbook to run an agent Build Club
+
+Read More
+
+May 13, 2026
+
+|
+9 min read
+
+Blog
+
+Introducing ACL Hydration: secure knowledge workflows for agentic AI
+
+DataRobot's new ACL Hydration framework preserves source-system access controls and enforces them at query time — so agentic AI retrieves the right information for the right user, every time.
+
+Read More
+
+April 23, 2026
+
+|
+6 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Dell Technologies World
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved
+
+Open Modal
+
+Agentic AI at DTW 2026
+
+with Dell + NVIDIA
+
+May 18–21
+
+Meet us at DTW

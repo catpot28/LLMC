@@ -1,0 +1,198 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/business/counterparties
+page path  : /docs/business/counterparties
+captured   : 2026-01-15 14:39:19 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_business_counterparties__d21c9083.html.gz
+========================================================================
+
+Counterparties | Revolut Docs
+
+Counterparties | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Business API
+Introduction
+Accounts
+Cards
+Card invitations
+Counterparties
+Introduction
+Retrieve a list of counterparties
+Retrieve a counterparty
+Delete a counterparty
+Create a counterparty
+Validate an account name (CoP/VoP)
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Simulations
+Team members
+Transactions
+Transfers
+Webhooks
+Counterparties
+Counterparties
+Manage counterparties that you intend to transact with.
+
+Request and response examples can vary based on the account provider's location and type of the counterparty.
+For more information, see the guides:
+Create a counterparty
+.
+
+Note
+In the Sandbox environment, you cannot add real people and businesses as Revolut counterparties.
+Therefore, to help you simulate
+Create a counterparty
+requests, we have created some test accounts for counterparties of profile type
+personal
+.
+To add a counterparty via Revtag, use one of these pairs for the
+name
+and
+revtag
+fields respectively:
+
+Test User 1
+&
+john1pvki
+
+Test User 2
+&
+john2pvki
+
+...
+
+Test User 9
+&
+john9pvki
+
+If you are on a freelancer account, to be compliant with PSD2 Strong Customer Authentication regulations, you must manually approve the counterparty with 2-factor authentication (2FA) on the Revolut Business Portal before you can make a transfer.
+This can ensure maximum security in case of access token leakages and other fraudulent activities.
+
+Retrieve a list of counterparties
+Get all the counterparties that you have created, or use the query parameters to filter the results.
+Retrieve a counterparty
+Get the information about a specific counterparty by ID.
+Delete a counterparty
+Delete a counterparty with the given ID. When a counterparty is deleted, you cannot make any payments to the counterparty.
+Create a counterparty
+Create a new counterparty to transact with.
+Validate an account name (CoP/VoP)
+Validate a counterparty's account name against their account details when
+adding a counterparty
+or
+making a transfer
+to a new or existing counterparty.
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

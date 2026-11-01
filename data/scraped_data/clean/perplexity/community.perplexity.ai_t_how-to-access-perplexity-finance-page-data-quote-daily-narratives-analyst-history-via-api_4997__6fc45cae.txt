@@ -1,0 +1,255 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/how-to-access-perplexity-finance-page-data-quote-daily-narratives-analyst-history-via-api/4997
+page path  : /t/how-to-access-perplexity-finance-page-data-quote-daily-narratives-analyst-history-via-api/4997
+captured   : 2026-05-14 03:27:43 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/community.perplexity.ai_t_how-to-access-perplexity-finance-page-data-quote-daily-narratives-analyst-history-via-api_4997__6fc45cae.html.gz
+========================================================================
+
+How to access Perplexity Finance page data (quote, daily narratives, analyst history) via API? - Feature Requests - Perplexity API Platform Forum
+
+How to access Perplexity Finance page data (quote, daily narratives, analyst history) via API? - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+How to access Perplexity Finance page data (quote, daily narratives, analyst history) via API?
+
+Feature Requests
+
+search-api
+,
+
+search
+
+Feng_Chen
+
+April 25, 2026, 1:03am
+
+1
+
+Hi team — I’m building a stock analysis agent and would love to use data from the
+Perplexity Finance
+pages (e.g.
+https://www.perplexity.ai/finance/FICO
+). Those pages contain uniquely valuable data that I can’t find elsewhere, in particular:
+
+Daily narrative timeline
+— for each trading day: close, change%, and a 1-2 paragraph English summary synthesizing that day’s catalysts (regulatory, analyst actions, earnings, macro). This is Perplexity’s signature output and massively useful for building a catalyst map.
+
+Full analyst action history
+— each firm’s target price changes with dates (e.g. “JPM cut target $1,825 → $1,325 on 3/24”), not just current consensus.
+
+Real-time quote block
+— current price, pre/post-market, PE (TTM), market cap, 52w range, day high/low, EPS, etc.
+
+Earnings analysis with highlights
+— beat/miss with analyst-style bullets.
+
+What I’ve tried
+
+1.
+sonar-pro
+/
+sonar-reasoning-pro
+with
+search_domain_filter: ["perplexity.ai"]
+
+The model’s citations correctly point to
+perplexity.ai/finance/FICO
+, but only short snippets come back. When forced into a JSON schema response, the model
+hallucinates
+numbers to fill the schema (e.g. returned
+price_current: 909
+when actual was
+970.17
+). The reasoning trace even admits “I can’t fetch
+
+URLs or access real-time data.”
+
+2. Pro Search with
+fetch_url_content
+tool
+
+The
+Pro Search Tools doc
+mentions a
+fetch_url_content
+tool that “retrieves complete content from specified URLs”. In practice, pointing the model at the Perplexity Finance URL does not actually fetch it — the tool appears not to trigger or returns empty
+
+content for these internal pages.
+
+3.
+/search
+API with
+search_domain_filter: ["perplexity.ai"]
+
+Returns results but the
+content
+field is only ~60 characters for Perplexity Finance pages (likely because the SPA content isn’t fully indexed). Most returned results are unrelated changelog pages.
+
+4. Browser automation (works, but heavy)
+
+I can reliably extract the data by driving a real Chrome session via CDP, passing Cloudflare Turnstile, then reading
+window.__NEXT_DATA__
+or the internal
+/rest/finance/*
+endpoints with session cookies. But this feels like it’s going against the grain — the data is already produced by Perplexity, I’d much
+
+rather pay for API access.
+
+What I’m asking
+
+Is there a roadmap
+for exposing
+/rest/finance/*
+(or a finance-specific API surface) as a public, API-key-authenticated endpoint? The schema I care about:
+
+/rest/finance/quote/{symbol}
+→ real-time quote
+
+/rest/finance/timeline/{symbol}/entries
+→ daily narratives
+most valuable
+
+/rest/finance/analyst-ratings/{symbol}
+→ ratings + history
+
+/rest/finance/earnings/{symbol}
+→ earnings with highlights
+
+Is this intentionally product-siloed
+(Finance is a consumer product, not on the API roadmap)? If so, happy to know so I stop asking.
+
+Any existing workaround
+I’m missing? Is there a way to authorize
+sonar-deep-research
+or Pro Search to actually fetch these specific pages via cookies/auth?
+
+For context: I’ve already integrated
+sonar-pro
+with
+search_mode: "sec"
+for SEC filings (works beautifully, thanks!) and the general
+/search
+API for broader sources. The Finance page data is the last and hardest piece — and it’s the most differentiated, since nowhere else produces daily narratives with
+
+Perplexity’s synthesis quality.
+
+Would genuinely pay a premium for a
+/finance/*
+API tier. Thanks for any guidance!
+
+Alex_Romanov
+
+April 27, 2026, 9:26pm
+
+2
+
+Hey Feng Chen ! No public API for the Finance pages right now — the /rest/finance/* endpoints are consumer-only. Finance tooling is on the roadmap but no timeline yet.
+
+Alex_Romanov
+
+May 1, 2026, 4:00pm
+
+3
+
+Hey
+@Feng_Chen
+! Pleas take a look:
+Finance Search - Perplexity
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+I'm unable to provide the requested financial summary
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+,
+
+search-api
+
+3
+
+35
+
+May 8, 2026
+
+SEC Filings Search now Live!
+
+Announcements
+
+1
+
+265
+
+June 30, 2025
+
+Search Over SEC Filings with Sonar
+
+Announcements
+
+0
+
+14
+
+July 1, 2025
+
+Finance Search is now live in the Perplexity Agent API
+
+Announcements
+
+agent-api
+
+,
+
+finance
+
+0
+
+65
+
+May 6, 2026
+
+Multi‑ticker / batching support for financial research
+
+Feature Requests
+
+sonar
+
+,
+
+search-api
+
+0
+
+30
+
+January 20, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,712 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/eu-ai-act-high-risk-requirements
+page path  : /stories/blog/eu-ai-act-high-risk-requirements
+captured   : 2026-05-09 17:16:51 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_eu-ai-act-high-risk-requirements__ee387384.html.gz
+========================================================================
+
+EU AI Act High-Risk Requirements: What Companies Need to Know
+
+EU AI Act High-Risk Requirements: What Companies Need to Know
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+Plugins And Connectors
+
+Plans And Editions
+
+Build With Dataiku
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+
+AI Engineering Operations
+
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine Learning
+
+Dataiku For Enterprise AI
+
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+All Stories
+
+Dataiku AI Stories
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering At Dataiku
+
+About Dataiku
+
+About Dataiku
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Dataiku Summit
+
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+Contact Us
+
+Start Free Trial
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+Recommended
+
+AI Governance & Architecture
+
+AI Insights
+
+EU AI Act High-Risk Requirements: What Companies Need to Know
+
+Aug 26, 2025
+
+5 min read
+
+/
+
+Rémy Ibarcq, Jacob Beswick
+
+Table of Contents
+
+Section1
+
+Section1
+
+Section1
+
+As the EU AI Act enters implementation, organizations developing (or “providing” in the Act’s parlance), using (or “deploying”), importing, and distributing high-risk AI systems will face new obligations set out in Sections 2 and 3 of the Act.
+
+Of these, providers and deployers will face the most substantive, structured set of obligations such as those found in Articles 9 to 15. These requirements are designed to ensure that identified high-risk AI systems do not undermine the fundamental rights, safety, and health of European citizens.
+The AI Act defines four risk tiers:
+prohibited
+,
+high-risk
+,
+limited-risk
+, and
+minimal-risk
+. Prohibited systems are banned outright (Article 5), and limited-risk systems face only light transparency duties (e.g., chatbot disclosures). In contrast,
+high-risk systems come with the most detailed compliance burden
+, especially for providers and deployers. That’s why we’re focusing here: These are the rules most likely to impact organizational processes, procurement, and oversight.
+
+Dataiku Govern
+, our AI governance solution, helps organizations operationalize these obligations, from risk management to post-market monitoring. In this article, we explain what each Article requires and where further guidance from the European Commission is still expected. This is essential reading for non-technical teams preparing for compliance or planning procurement.
+
+What Are High-Risk AI Systems?
+
+In addition to the scope laid out, which indicates high-risk AI systems have potential to undermine identified protected public interests, the AI Act provides further definition by laying out specific use cases (found in Annex III). We tend to talk about these use cases as sitting within Domains, which include: biometrics; critical infrastructure; education and vocational training; employment, workers’ management and access to self-employment; access to and enjoyment of essential private and public services and benefits; law enforcement; migration, asylum and border control management; and the administration of justice and democratic processes. Within each of these Domains, high-risk Use Cases or applications are clarified. The Commission has made clear that these Domains and Use Cases may evolve over time.
+
+In addition to the Domains and Use Cases approach, the definition of high-risk AI systems extends to AI systems covered by specific harmonization legislation (found in Annex I).
+
+This includes AI systems that are safety components of products already regulated under EU product safety laws, such as those found in medical devices (e.g., the Medical Device Regulation) or machinery (e.g., the Machinery Regulation).
+
+Key deadlines to know:
+
+August 2, 2026
+
+→ All high-risk AI systems must comply with core requirements (Articles 9–49), including risk management, data governance, and conformity assessment.
+
+August 2, 2027
+
+→ Compliance deadline for high-risk AI systems
+
+embedded in regulated products
+
+(e.g., medical devices, machinery) under EU product safety laws.
+
+If your organization builds, buys, or uses AI in these areas, you are likely affected, and preparation should start now.
+
+Before diving into compliance, you must first know with confidence whether your organization develops or uses AI systems that fall into the high-risk category. Without this clarity, you are exposed to significant risk. This assessment isn't always black and white, as some specialized use cases may require consultation with legal teams. For example, a fraud detection agent might be used in a way that assesses fraud risk and embeds this into an insurance premium cost. Whether this qualifies as a high-risk system requires consideration: AI to detect fraud is not inherently high-risk; but using AI to determine the costs of insurance is. Therefore, the first step for any organization is a thorough, documented assessment of your entire AI portfolio to qualify which systems are impacted.
+
+Articles 9-15: Key Obligations and Open Questions
+
+So you've assessed your portfolio and identified your high-risk systems. What's next? In the rest of this article, we'll walk through the core obligations outlined in Articles 9-15. While these are critical, there's more to the story of the EU AI Act, including the roles of different actors, compliance for general-purpose AI, and how enforcement will work (which we'll cover in future updates).
+
+1. Article 9 - Risk Management System
+
+What we know:
+
+You must implement a documented, ongoing risk management process covering the entire AI lifecycle, from design to post-market monitoring. This includes identifying and evaluating known and foreseeable risks to health, safety, and fundamental rights.
+
+What’s ambiguous:
+
+What counts as a “known and foreseeable” risk;
+
+How risks can be identified where AI systems are novel and where operational data is limited (a data gap problem);
+
+What good retraining methodologies look like when new risks are discovered and how retraining should tie into updating risk controls (a best practice problem).
+
+2. Article 10 - Data and Data Governance
+
+What we know:
+
+AI systems must be trained, validated, and tested on datasets that are relevant, representative, free of errors, and complete, within reasonable bounds.
+
+What’s ambiguous:
+
+Operational definitions of “representative” or “free of errors”;
+
+Acceptable
+
+thresholds
+
+for data imperfections;
+
+What mitigation measures are acceptable when ideal data is unavailable (e.g., biased historical datasets).
+
+3. Article 11- Technical Documentation
+
+What we know:
+You must maintain detailed technical documentation proving compliance (including system design, intended purpose, training data sources, testing methods, and risk controls) as outlined in
+
+Annex IV
+
+of the Act.
+
+What’s ambiguous:
+
+Clarification on the
+
+level of detail
+
+required across multiple required themes;
+
+Guidance on handling
+
+confidential or IP-sensitive information;
+
+How to
+
+manage updates over time
+
+(e.g., versioning, traceability).
+
+4. Article 12 - Record-Keeping
+
+What we know:
+High-risk systems must automatically
+
+log events
+
+to support traceability, performance tracking, and post-market monitoring. Logs must be
+
+tamper-resistant
+
+and retained appropriately.
+
+What’s ambiguous:
+
+Implementation guidelines
+
+that cover key topics such as log
+
+granularity, format, and retention
+
+are expected, especially in relation to
+
+post-market monitoring
+
+(Articles 29–30).
+
+5. Article 13 - Transparency and Information for Users
+
+What we know:
+Users must be informed in clear terms about:
+
+The system’s intended purpose,
+
+Its limitations and performance characteristics,
+
+How to use it appropriately.
+
+What’s ambiguous:
+
+What qualifies as
+
+meaningful information
+
+for end-users or affected individuals;
+
+How AI
+
+literacy requirements
+
+(Art 4) align to Art 13;
+
+How this interacts with
+
+trade secrets
+
+or
+
+black-box models
+
+(e.g., deep learning).
+
+6. Article 14 - Human Oversight
+
+What we know:
+
+You must design systems to ensure
+
+effective human oversight
+
+that prevents or minimizes risks. Oversight mechanisms must be documented, and people assigned to oversight roles must be adequately trained.
+
+What’s ambiguous:
+
+What counts as
+
+sufficient human oversight
+
+in practice;
+
+Clarification on the
+
+modes of interaction
+
+with the system (e.g.
+
+human-in-the-loop
+,
+
+on-the-loop
+,
+
+over-the-loop
+);
+
+What
+
+level of authority
+
+or intervention capability the human must have.
+
+7. Article 15 - Accuracy, Robustness, and Cybersecurity
+
+What we know:
+High-risk AI systems must maintain appropriate levels of
+
+accuracy
+,
+
+robustness
+, and
+
+cybersecurity
+
+throughout their lifecycle, and resist errors, misuse, or adversarial attacks.
+
+What’s ambiguous:
+
+Performance benchmarks or
+
+tolerance thresholds
+;
+
+Whether
+
+accuracy must be uniform across subpopulations
+
+or contexts;
+
+What cybersecurity standards or certifications are expected.
+
+Post-Market Monitoring (Articles 29-30)
+
+Articles 9–15 interact closely with
+
+post-deployment monitoring
+
+obligations. For example:
+
+If your system’s accuracy
+
+degrades over time
+, it must be detected, reported, and corrected.
+
+Ongoing risk assessments are required after market entry, this is not a “one and done” process.
+
+We are awaiting further guidance on how to align these operational tasks with compliance requirements.
+
+What You Can Do Now
+
+In order to ensure stakeholders and teams are prepared for meeting new obligations once they hit the market, many organizations are taking steps towards compliance despite existing ambiguities. While this may introduce a need to revise the operational approximations of what is expected from guidance later on, the goal is to shrink the distance between current practices today and practices outlined under guidance once it becomes available.
+
+Even while waiting for guidance, some examples of what non-technical stakeholders can do to begin preparing:
+
+Get a solid understanding of the high-risk requirements as outlined in the AI Act.
+
+Map your current and planned use of AI against
+
+Annex III
+
+(high-risk domains) and
+
+Annex I
+
+(Union harmonisation legislation) in order to designate which of your AI systems may qualify as high risk.
+
+Assess whether your current practices meet
+
+Articles 9–15
+
+in principle.
+
+Identify key gaps such as logging practices, oversight roles, data governance policies and
+
+defining responsibilities
+
+across your team and organization so that you know where to focus your energies down the line.
+
+Start building a
+
+compliance policy
+
+supported by documentation, it will be needed later.
+
+Dataiku Govern
+
+is designed to help organizations secure documentation and controls over their AI systems today. This includes support for AI Act readiness as well as other diverse compliance activities.
+
+What's Next?
+
+The Commission is expected to publish implementation guidelines in the
+
+second half of 2025
+. In the meantime, early preparation, guided by the structure of Articles 9–15, is the best way to stay ahead of the curve and demonstrate responsible AI leadership.
+
+Stay tuned: We will continue publishing actionable updates to help you operationalize the EU AI Act with clarity and confidence.
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Introducing The Platform for AI Success
+
+Why Traditional Evaluation Doesn't Work for Agentic AI
+
+Dataiku Joins the Agentic AI Foundation to Strengthen AI Trust
+
+The 5 Places Analytics Value Leaks Before It Reaches a Decision
+
+How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI
+
+You May Also Like
+
+Explore the Blog
+
+Recommended
+
+Introducing The Platform for AI Success
+
+Somewhere inside your organization, an AI agent is making a decision right now. You didn’t authorize it. You...
+
+Mar 09, 2026
+
+Recommended
+
+Why Traditional Evaluation Doesn't Work for Agentic AI
+
+For years, “human-in-the-loop” has been enterprise AI’s safety valve. If a model might behave unpredictably,...
+
+Feb 19, 2026
+
+Recommended
+
+Dataiku Joins the Agentic AI Foundation to Strengthen AI Trust
+
+AI systems are making critical decisions right now, yet most organizations can't explain how those decisions...
+
+Feb 18, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep For AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins And Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers For Every Team
+
+Dataiku For Data Analytics
+
+Dataiku For AI & Machine
+
+Learning
+
+Dataiku For Enterprise AI
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+The Dataiku Conference Live
+
+Generative AI Bootcamp Live
+
+AI And Us
+
+Center Of Excellence
+
+AI Governance Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku For The Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku At An Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

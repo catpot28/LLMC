@@ -1,0 +1,109 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/leaderboard
+page path  : /blog/leaderboard
+captured   : 2026-06-14 23:35:28 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_leaderboard__a37621db.html.gz
+========================================================================
+
+Scale's SEAL Leaderboards | Scale AI
+
+Scale's SEAL Leaderboards | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Testing & Evals
+Scale's SEAL Research Lab Launches Expert-Evaluated LLM Leaderboards
+By
+
+The Scale Team
+·
+May 29, 2024
+·
+5 min read
+Copy Link
+We now live in a world where there are hundreds of large language models. But as these models become increasingly powerful and widely deployed, comparison of their performance and safety remains opaque.
+As a third-party model evaluator trusted by leading AI labs, Scale is excited to release the
+SEAL Leaderboards
+, which rank frontier LLMs using curated private datasets that can’t be gamed. Developed by our Safety, Evaluations, and Alignment Lab (SEAL) and assessed by verified domain experts, these leaderboards are regularly updated to include new models and capabilities. The SEAL Leaderboards maintain neutrality and integrity, ensuring rankings are tamper-proof and provide a true measure of model performance.
+The initial domains covered include:
+Coding
+Instruction Following
+Math (based on GSM1k)
+Multilinguality
+We hope this initiative advances transparency and openness in the development and evaluation of frontier models, which will in turn accelerate the adoption of AI.
+Companies are incentivized to game leaderboards in order to one-up one another. This makes it hard to tell whether AI systems are actually improving. That’s why it’s important that organizations such as Scale assess these AI systems with their private evaluations.
+— Dan Hendrycks, Director of the Center for AI Safety
+The work Scale is doing to evaluate the performance, reliability, and safety of AI models is crucial. Government agencies and the general public alike need an independent, third-party like Scale to have confidence that AI systems are trustworthy and to accelerate responsible AI development.
+– Dr. Craig Martell, Former Chief Digital and Artificial Intelligence Officer (CDAO) for the U.S. Department of Defense
+While progress has already been made to evaluate the performance of frontier models by the research community, there are some issues that Scale is uniquely positioned to solve. These challenges include:
+Contamination & Overfitting: There is a lack of high quality, trustworthy evaluation datasets that have not been contaminated and shared widely.
+Inconsistent Reporting: There is a lack of consistency in model comparisons and reliability in how eval results are reported.
+Unverified Expertise: There is a lack of rigorous assessment of evaluators’ expertise for specific domains (e.g. coding) in community-based evaluations.
+Inadequate Tooling: There is a lack of good product tooling for understanding and iterating on eval results to improve models without overfitting.
+It is with these problems in mind that Scale launched our
+SEAL
+research lab last November, aimed at enhancing evaluation quality, transparency, and standardization for frontier models.
+The SEAL Leaderboards are a set of LLM model rankings across a number of popular public models, based upon curated private datasets that can’t be gamed, all funded and developed by Scale. Compared to existing benchmarks and community driven approaches, we place a high emphasis on:
+Leaderboard Integrity1: Unlike most public benchmarks, Scale's proprietary datasets will remain private and unpublished, ensuring they cannot be exploited or incorporated into model training data. We limit entries to the SEAL Leaderboards from AI developers who may have seen the specific prompt sets via API logging, ensuring unbiased evaluations. To ensure rigorous results and maintain accountability, we plan to collaborate with trusted third party organizations to help review our work.
+Domain Specialization: The SEAL Leaderboards cover a range domains including coding, instruction following, math, and multilinguality. For each domain, experts create prompt sets from scratch, and tailor the evaluation methods to what we believe works best for that specific area. We ensure that evaluators are qualified domain experts, including via domain-specific interviews and tests, such as accurately completing golden tasks with known answers.
+Data Quality: Both the prompts and the ratings have undergone extensive, multi-round reviews and passed internal QAs, to ensure that the results are trustworthy and high quality. To ensure rigorous results and maintain accountability, we plan to collaborate with trusted third party organizations to help review our work.
+Methods Transparency: We publish details about our evaluation methodology, along with key insights from our evaluation runs, beyond just the raw SEAL Leaderboard rankings. We welcome community feedback to refine our methods further.
+Evaluation Challenge
+SEAL Solution
+Contamination & Overfitting Private Unexploitable Datasets Inconsistent Reporting Transparent & Consistent Methodologies Unverified Expertise Vetted Domain Experts Inadequate Tooling Scale Evaluation Platform
+In an effort to drive improved evaluation across the AI community, we plan to continue launching new
+SEAL Leaderboards
+covering additional domains and capabilities, refreshing the prompt sets, and adding in new frontier models as they become available. As the industry develops and new models are released, we aim to refresh these leaderboards multiple times a year, ensuring that the rankings remain up-to-date and reflective of the latest advancements. This approach underpins the first truly expert-driven, trustworthy LLM contest open to all.
+Finally, in addition to the SEAL Leaderboards, we are also announcing the general availability of Scale Evaluation: a platform to enable AI researchers, developers, enterprises, and public sector organizations to analyze, understand, and iterate on their AI models and production applications. Learn more about Scale Evaluation
+here
+.
+Today's announcement marks a significant milestone in Scale's mission of accelerating the development of AI applications. As we continue to build upon the SEAL Leaderboards, we remain dedicated to working closely with the research community, AI developers, and other stakeholders to address the most pressing challenges of AI evaluation in service of enabling the potential of AI models.
+If you have feedback on the SEAL Leaderboards, would like to run your model against these evaluations, or would like to be included in future leaderboards, we’d love to hear from you at
+seal@scale.com
+.
+1To maintain the integrity of the SEAL Leaderboards, by default, models are only eligible for inclusion the first time their developers have one of their models prompted on the evaluation prompts. In exceptional cases, such as major launches where we believe the overfitting risks are low, we may include newly launched models even if the AI developers may have previously seen the prompt set in API logs. In such instances, the new model will be included but grayed out on the leaderboard, with its overfitting risks clearly noted. Additional detail on how these datasets were created and evaluated is available alongside each leaderboard.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

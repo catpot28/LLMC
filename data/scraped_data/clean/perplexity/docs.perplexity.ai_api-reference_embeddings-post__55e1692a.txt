@@ -1,0 +1,385 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/embeddings-post
+page path  : /api-reference/embeddings-post
+captured   : 2026-03-10 19:13:54 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_embeddings-post__55e1692a.html.gz
+========================================================================
+
+Create Embeddings - Perplexity
+
+Create Embeddings - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Embeddings API
+Create Embeddings
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Response
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Create Embeddings
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/embeddings
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>",
+
+"model": "pplx-embed-v1-0.6b"
+
+}
+
+'
+200
+422
+Copy
+Ask AI
+{
+
+"object"
+:
+"list"
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+123
+,
+
+"embedding"
+:
+"<string>"
+
+}
+
+],
+
+"model"
+:
+"<string>"
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"currency"
+:
+"USD"
+
+}
+
+}
+
+}
+Embeddings API
+Create Embeddings
+Copy page
+Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+Copy page
+POST
+/
+v1
+/
+embeddings
+Try it
+Create Embeddings
+cURL
+Copy
+Ask AI
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/v1/embeddings
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"input": "<string>",
+
+"model": "pplx-embed-v1-0.6b"
+
+}
+
+'
+200
+422
+Copy
+Ask AI
+{
+
+"object"
+:
+"list"
+,
+
+"data"
+: [
+
+{
+
+"object"
+:
+"embedding"
+,
+
+"index"
+:
+123
+,
+
+"embedding"
+:
+"<string>"
+
+}
+
+],
+
+"model"
+:
+"<string>"
+,
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+123
+,
+
+"total_tokens"
+:
+123
+,
+
+"cost"
+: {
+
+"input_cost"
+:
+123
+,
+
+"total_cost"
+:
+123
+,
+
+"currency"
+:
+"USD"
+
+}
+
+}
+
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+Request body for creating embeddings
+​
+input
+string
+string[]
+string
+string[]
+required
+Input text to embed, encoded as a string or array of strings. Maximum 512 texts per request. Each input must not exceed 32K tokens. All inputs in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
+Minimum string length:
+1
+​
+model
+enum<string>
+required
+The embedding model to use
+Available options
+:
+
+pplx-embed-v1-0.6b
+,
+
+pplx-embed-v1-4b
+
+​
+dimensions
+integer
+Number of dimensions for output embeddings (Matryoshka). Range: 128-1024 for pplx-embed-v1-0.6b, 128-2560 for pplx-embed-v1-4b. Defaults to full dimensions (1024 or 2560).
+Required range
+:
+128 <= x <= 2560
+​
+encoding_format
+enum<string>
+default:
+base64_int8
+Output encoding format for embeddings. base64_int8 returns base64-encoded signed int8 values. base64_binary returns base64-encoded packed binary (1 bit per dimension).
+Available options
+:
+
+base64_int8
+,
+
+base64_binary
+
+Response
+200
+application/json
+Successful Response
+Response body for embeddings request
+​
+object
+string
+The object type
+Example
+:
+"list"
+​
+data
+Embedding Object · object[]
+List of embedding objects
+Show
+
+child attributes
+​
+model
+string
+The model used to generate embeddings
+​
+usage
+Embeddings Usage · object
+Token usage for the embeddings request
+Show
+
+child attributes
+Was this page helpful?
+Yes
+No
+Get Async Chat Completion
+Previous
+Create Contextualized Embeddings
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

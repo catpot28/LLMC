@@ -1,0 +1,453 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/digital-twins-at-work
+page path  : /blogs/digital-twins-at-work
+captured   : 2026-01-16 01:04:00 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/sap/www.sap.com_blogs_digital-twins-at-work__18215193.html.gz
+========================================================================
+
+Digital twins at work: 9 examples | SAP
+
+Digital twins at work: 9 examples | SAP
+
+flex-height
+
+text-black
+
+Digital twins at work: 9 examples
+
+Here’s how nine organizations are using digital twins to simulate factories, products, stores, water systems, and more.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+The U.S. Apollo 13 spacecraft may not have made it to the moon in 1970, narrowly avoiding tragedy when one of its oxygen tanks ruptured and exploded en route, but some count its rescue as the first documented example of what was essentially the digital twin. Both the crew and mission control had trained using various simulators controlled by a network of digital computers. When Houston realized there was a problem, mission control teams turned to those same simulators to work out plans on the fly to get the astronauts safely home.
+
+Fifty years later, thanks to advances in analytics, AI, and computing power,
+digital twin technologies
+—virtual replicas of systems that can model, simulate, monitor, analyze, and optimize the physical world—are being deployed across many industries. The vast majority (96%) of business leaders said they see value in digital twins, with 62% saying they see immense value, according to a
+2024 survey by Hexagon
+. Those who had deployed digital twins reported an average of:
+
+19% cost savings
+
+18% revenue growth
+
+15% carbon emissions reduction
+
+22% return on investment
+
+Progress continues as researchers around the globe, from the Netherlands-based
+Digital Twin group
+to the
+Digital Twin Consortium
+in the United States, are partnering with industry to tame some of the complexity and further put these approaches into operation.
+
+Let’s dive into nine examples of digital twins at work in different settings today.
+
+Example 1: BMW’s digital twin factories support sustainability, efficiency, and digital transformation goals
+
+BMW is all revved up. The German automaker first began developing virtual replicas of aspects of its production line in 2014. Before rolling out the drivetrains for its electric vehicles in 2021, BMW had created a fully operational virtual version at its Regensburg, Bavaria, factory. The real-time digital twin can simulate production and scheduling at the factory, down to the work-order level.
+
+Today, BMW is fully supportive of digital twins, with a virtual version of all 31 of its production sites so that anyone can “walk through” the factories in real time, across locations and time zones, and from any device. In its official announcement, the company said this project rolls up under its global “iFactory” strategy, noting that with digital twins as a foundation, the automaker can reduce production planning by nearly a third.
+
+Takeaways
+
+For BMW, this is an efficiency play, supporting its sustainability and digital transformation goals. According to the company’s original announcement, the iFactory initiative “focuses the BMW Group’s production expertise on three key topic areas: Lean, Green, and Digital.”
+
+The twinning project starts with a 3D digital scan of each factory.
+
+Roughly 15,000 employees can access the data through a customized application called BMW Factory Viewer and use it to virtually inspect specific areas, carry out precise measurements, and collaborate simultaneously across locations and time zones.
+
+This access allows plant designers to create more efficient layouts and connections between different shop-floor processes.
+
+The company says that data science provides the foundation for real-time, data-based decision-making, as well as quick and proactive identification of root causes of issues that BMW can use to improve plant processes.
+
+Nvidia’s Omniverse software helps BMW teams collaborate across all its virtual factories from anywhere and make global changes in real time.
+
+Learn more
+
+BMW provides information
+on its website
+.
+
+CIO highlights how the German automaker used a digital twin to
+plan and perfect
+its new electric vehicle plant in Debrecen, Hungary.
+
+An Nvidia case study highlights the role of
+industrial AI
+in BMW’s virtual factories.
+
+IoT World Today offers more details
+on the sustainability connection
+.
+
+style
+
+additional-reading
+
+Example 2: Lowe’s uses digital twins, augmented reality to sharpen retail operations
+
+U.S. home improvement retailer Lowe’s has created digital duplicates of individual stores, combining spatial data with other information such as product location and order histories. Lowe’s says these store twins give its employees “superpowers to optimize operations and localize plans.”
+
+The system was built by Lowe’s Innovation Labs unit, which explores new technologies and applications for the chain. Supercharged by AI that can understand the weight, depth, and size of products ranging from tiny screws to massive refrigerators, the digital twins are now updated multiple times a day to more accurately mirror what’s going on in the real-world brick-and-mortar locations. Lowe’s operates roughly 1,700 stores nationwide.
+
+The integration of real-time product location data, together with the use of augmented reality (AR) headsets to view the digital twin while standing anywhere in the store, hints at how the use of digital twin technology goes well beyond the simple replication of a physical facility.
+
+Consider, for example, the standard retail task of resetting and restocking shelves. A store employee can use the AR headset to overlay what the shelf is supposed to look like and adjust the products accordingly. Employees can also use the AR overlay for a complete view of an item that is partially out of sight on an upper shelf.
+
+Takeaways
+
+Retailers of all sorts, as well as event spaces and multi-tenant building operators, can garner potential lessons in operational improvement from Lowe’s digital twin work.
+
+Lowe’s uses Nvidia’s Omniverse 3D development tool to underpin the creation of digital twins.
+
+Merchandisers can use a video-game-style interface to virtually move products, displays, and fixtures to make better-informed decisions.
+
+For operational improvements, the system can display heat maps showing foot traffic, measure the distance between items frequently purchased together, and suggest improved product placement or floor layouts.
+
+“Optimizing layouts in the physical world is very capital-intensive and disruptive, but with a physics-based omniverse simulation platform, you can simulate different layouts and see how objects and people behave in them, and more accurately estimate what the throughput would be,” says Azita Martin, Nvidia’s VP and general manager, retail and consumer packaged goods (CPG) during a session at the 2025 NRF (National Retail Federation) Big Show. Seemantini Godbole, EVP, chief digital and information officer at Lowe’s, said the technology offers the ability to perform hundreds of experiments at lower cost and then try out a few in the physical space.
+
+In the future, the company expects to add more streaming data application programming interfaces (APIs) to the application and smart Internet of Things (IoT) sensors in its stores, with additional data opening up new use cases. There are also opportunities to integrate robotics and generative AI into the digital twin approach.
+
+Learn more
+
+Both
+Lowe’s Innovation Labs
+and
+Nvidia
+offer additional details on the digital stores, including video walk-throughs of some features.
+
+RetailTouchpoints offers a rundown from the 2025
+NRF Big Show
+session “How Lowe’s Leverages AI to Become an Agile Digital Retailer.”
+
+style
+
+additional-reading
+
+Example 3: Tata Steel turns to digital twins to support radical innovation in a centuries-old industry
+
+One of the world’s biggest steel companies is also an ardent fan of digital twin technologies, evaluating the approach’s value for everything from
+remote factory management
+to keep production going during a pandemic, to identifying factory process failures that might affect quality before products go into production, and supporting smart mining.
+
+One of the areas in which these carbon copies may have the biggest effect is on Tata’s vision for a more sustainable steel industry. Companies in the industry are redesigning their production process to reduce emissions to meet the EU’s target of an 80% to 95% reduction (from 1990 levels) by 2050. Tata’s European unit was picked to lead a €75 million (approximately US$79 million) project to develop new technology, and its IJmuiden plant in the Netherlands became the testing ground for an alternative to using the blast furnace for iron making. The new method, called HIsarna, processes ore almost directly into liquid iron. If successful, it will be more energy efficient, have a lower carbon footprint, produce fewer emissions of nitrogen, sulfur oxides, and nitrogen oxides, allow more efficient use of raw materials, and lower the operating costs of steelmaking. But it’s a big if. Blast furnaces, which date back to the 14th century, are proven; HIsarna is not.
+
+Takeaways
+
+Tata Steel is counting on digital simulation to help overcome a huge hurdle to introducing a more energy efficient method to steelmaking. To commercialize the novel HIsarna steelmaking method, the company needs to stabilize it first.
+
+The company observed fluctuations in this new, more complex steelmaking process that were not easily explained or controlled. Researchers had some hypotheses but could not definitely pinpoint the cause.
+
+A real-time replica of the sintering method will allow the company to alter the process digitally to test possible performance improvements.
+
+The goal is to develop an adaptive digital doppelgänger that guarantees real-time, accurate representation of the physical systems. This could have applicability for any industry seeking to perform real-time updates of dynamic systems and multi-physics models (think of simulating fluid dynamics, acoustics, or electromagnetic fields, for example).
+
+By digitalizing the thermal process management at iron and steelmaking plants and using simulation-based digital twins and AI/machine learning modeling, Tata Steel can identify the weak spots in the process and solve them more cost effectively.
+
+Tata’s
+2023–2024 annual report
+indicated the company was continuing trials at its HIsarna pilot plant in IJmuiden, with plans to perform test runs with high-alumina ore and natural gas and a goal to build a second large demo plant in India.
+
+Learn more
+
+The Digital Twin research group, helping Tata on dynamic digital model enrichment, explains the use case in more detail in “
+Automated Model Updating of Digital Twins
+” and “
+Use Case: HIsarna Process Stability
+.”
+
+The Economic Times describes the HIsarna process as beginning by injecting iron ore at the top of a reactor where it is
+liquefied inside a high-temperature cyclone
+.
+
+The Avenue Mail points out that, once proven at scale, HIsarna will accelerate the
+decarbonization of the steel value chain
+.
+
+A case study offers more background on the original project to
+develop new steelmaking technology
+.
+
+style
+
+additional-reading
+
+Example 4: Thames Water plugs leaks with a replica of its water supply network
+
+Aside from the fable of the little Dutch boy who placed his finger in a hole in the dike and saved the town of Haarlem, there are few stories of quick and easy methods for finding and repairing leaks in complex, crucial water supply systems. Digital twins could change that.
+
+The Thames Water network provides clean water for 15 million people who live within a 13,000-square-kilometer (5,000-square-mile) region in and around London, from Gloucestershire in the west to Kent and Essex in the east. Every day, the company supplies 2.6 billion liters of water, but as it notes on its website: “Not all of that gets to our customers.” Nearly a quarter of Thames Water’s supply is lost to leakage within the network and through its customers’ pipes.
+
+Some of those leaks are visible, rising to the surface, reported by customers, and quickly fixed. But those don’t tend to lose as much water. The majority (95%) are insidious and invisible. The causes vary, including natural wear and tear on the infrastructure, heavy traffic causing ground instability, temperature changes and extreme weather events, and sudden changes in pressure. In addition to doubling down on some of the more conventional efforts to stem leaks—including increasing detection, repair, and plumbing field force; analyzing meter data to better manage demand on pipes; employing no-dig technology to prevent further water loss; and enhancing approaches to balancing water pressure—Thames Water is building a digital version of the full water supply network.
+
+Takeaways
+
+Thames Water’s leak-finding digital replica connects an early warning system for water loss to other risk-management tools. “Reducing leakage is one of our most important priorities, and also one of our biggest challenges,” says David Gable, Thames Water’s project delivery manager. “Being able to capture a range of data streams and present them in a simple format adds another tool to our armoury in the fight against leakage and I hope this is a model that can be rolled out across our network.”
+
+Compiling data from a number of connected devices, like smart meters and acoustic loggers installed on pipes to “listen” for leaks, the water company is creating a digital dupe of the water network.
+
+The digital twin is one of several digital applications that feeds into the company’s system risk visualization tool, which leaders and managers use to monitor network performance and identify risks.
+
+Thames Water is testing the digital twin—a first in the industry—in Deptford, South London, where the pilot project uncovered a number of leaks caused by high pressure and damaged valves.
+
+In addition to saving a million liters of water lost to leaks every day, the digital duplicate can simulate the effect of various repair methods to help identify the best solution in each case.
+
+Learn more
+
+Thames Water and its partners will help create standards for digital twin use in the industry, according to
+Smart Water
+magazine.
+
+The virtual water network can help the company identify
+risks
+beyond leaks, according to a description from Ofwat’s Innovation Fund for water sector innovation.
+
+Thames Water data scientists
+explain
+how they used sensors and geospatial information system (GIS) asset data to develop the application.
+
+Thames Water indicates that post-project benefits tracking and knowledge sharing will begin
+later in 2025
+.
+
+style
+
+additional-reading
+
+Example 5: Battling rising tides, South Pacific nation Tuvalu taps digital twins in face of existential climate threat
+
+Comprised of 124 islands and islets in the Pacific Ocean, Tuvalu is one of the world’s lowest-lying countries. Experiencing sea level rise at a rate 1.5 times faster than the global average, according to a NASA report, the country could find much of its land area and critical infrastructure covered by average high-tide levels by 2050. Indeed, a massive king tide flooded the country in 2024, cutting electricity to parts of the capital, Funafuti, leaving newly elected members of parliament stranded on their islands, and delaying the formation of the new government by almost a month. Recognizing the growing threat, Tuvalu’s government initiated a plan five years ago to digitally duplicate the nation.
+
+Takeaways
+
+Tuvalu’s digital twin project is part of its Future Now initiative, which includes migrating government administrative processes to a blockchain and “Digital Ark” project that will save copies of the country’s cultural and historical artifacts to a digital database.
+
+As a proof of concept, Te Afualiku, a small islet predicted to be one of the first to be completely underwater, was mapped and digitized during the COVID-19 pandemic using drone footage and photos sent in by residents.
+
+The country plans to create digital doubles of the remaining coral-ringed islands, which will be accessible online and through virtual reality headsets.
+
+“Scientists are predicting that our islands could be fully submerged within a matter of decades,” Tuvalu foreign minister Simon Kofe told Cosmos magazine. “This is a plan for that worst-case scenario.”
+
+Managing the impacts of climate change is an increasingly popular digital twin use case, as simulations can be run to show what will happen and when—for example, sea level rise—in order to better prepare.
+
+Learn more
+
+NASA
+released a technical assessment
+of Tuvalu’s future environmental prospects.
+
+Cosmos magazine highlights Tuvalu’s plans as an example of how digital twin technology can illustrate and plan for the
+impacts of climate change
+.
+
+The BBC paints Tuvalu’s broader digital plan as a way to “
+back up
+” the island nation.
+
+style
+
+additional-reading
+
+Example 6: Orlando Economic Partnership builds an immersive regional replica to guide future development
+
+Digital twins are becoming the cornerstone of many smart-city initiatives from
+Singapore to Zurich
+. Because they allow simulation prior to implementation, digital twins provide insights across numerous key areas of city governance, from urban planning to land-use optimization.
+
+The Orlando Economic Partnership (OEP) unveiled its own immersive 3D representation of its metropolitan area, created with input from multiple stakeholders. Project leaders at the private–public coalition say theirs is the first digital twin in use by an economic development organization for mapping out an entire region, recreating the 800 square miles of Orange, Seminole, and Osceola counties in virtual form. Developed by Unity, first known for creating a real-time 3D engine for gaming, the first iteration was built on municipal demographics, transportation, real estate, and education data, with the goal of incorporating additional datasets from public and private sources.
+
+Takeaways
+
+OEP’s goal is to create an essential urban planning tool for companies, local governments, and nonprofits—a scenario-testing engine for visualizing how decisions about infrastructure, utilities, and business development could play out.
+
+The OEP worked back from ​​the digital twin it wanted to build to determine what it had to model, and then identify which datasets it needed to create ​​it.
+
+The first version of the digital representation, on display in holographic form at OEP’s headquarters, is being used as a marketing tool to drive further involvement in and iterations of the project.
+
+The OEP hopes the technology will allow greater cross-functional collaboration through the design, build, testing, deployment, and operation of complex systems, business development, and other regional projects in a more interactive and immersive way.
+
+Company leaders and site selectors could use the technology to explore available land and real estate along with infrastructure and connectivity, staff availability in the area, and industry-specific insights. City planners and utility companies might map out proposed infrastructure improvements and simulate their effects.
+
+The digital twin could be used to assess rail line expansion for airport master planning, due to be voted on in an upcoming referendum, or to improve hurricane recovery efforts.
+
+Learn more
+
+An article in
+VentureBeat
+reports that future phases of the project will expand into virtual reality, AR, and mobile applications, and support live sensor feeds for traffic and weather updates.
+
+Smart Cities Dive coverage of OEP’s initial announcement notes that future versions could include an
+open back end
+that will allow a range of users to run their own data scenarios.
+
+Mixed paid a
+real-life visit
+to the regional digital twin.
+
+style
+
+additional-reading
+
+Example 7: Kaeser twins its way to a modern air compressor sales model
+
+Coburg, Germany-based Kaeser entered the air compressor business in 1948, cut off from its original auto parts market in a divided Germany and sensing strong ​​demand for compressors in the post-war economy. Kaeser changed the game in air compressor sales in 2018 when it built digital replicas of its compressors; this technology became the basis for its networked compressor products, whose operating data can be monitored in real time, allowing predictive maintenance ahead of any equipment failures.
+
+Taking its cues from other digitally disrupted spaces, Kaeser’s leaders also seized the opportunity of a new way of selling its smart compressors:
+air as a service
+. Rather than making a large capital expense, customers can pay for compressed air through a monthly subscription, with additional as-needed top-ups for a fee. Kaeser owns, installs, and maintains the equipment. As the company says in its sales materials: “You simply give us a few square meters of floor space, and we’ll take care of the rest.”
+
+The future of field service management
+
+Field service workers can solve problems remotely, leading to efficiency, speed and even new business models.
+
+Explore the insights
+
+Takeaways
+
+With the ability to monitor operating data in real time, Kaeser has been able to build a profitable as-a-service business. The company also uses the resulting insights to improve product quality.
+
+The digital twins are used throughout the product life cycle of the company’s smart air compressor stations.
+
+The company can monitor operating data in real time, allowing technicians to intervene before there is a problem with a product.
+
+Kaeser’s compressed air subscription offering saves its customers money compared to the conventional approach to equipment repairs—at regular intervals or upon request—which can result in performing maintenance too early or too late, leading to unnecessary downtime.
+
+Digital twin tech is part of Kaeser’s core configure–price–quote process, allowing the company to offer bespoke product and service pairings without blowing its margins. Engineering simulations allow technical verification of customer configurations, the testing of various scenarios to balance costs against customer requirements, and increased efficiency in the sales funnel for these one-off options.
+
+Learn more
+
+See how Kaeser started selling compressed
+air as a utility service
+.
+
+Quality Digest says charging customers for the air they use has been a
+profitable move
+for Kaeser.
+
+The book
+Managing Industrial Services
+includes a chapter on Kaeser as an example of how the technology can underpin new service models.
+
+Kaeser explains how operating data from its specially configured compressed air system feeds into its data center, allowing
+real-time performance monitoring
+.
+
+Kaeser’s KAirFree site notes an
+uptime of 99.987%
+.
+
+style
+
+additional-reading
+
+Example 8: GE Vernova gets more power with digital wind farms
+
+When it made its first spins, gathering electrical power out of thin air, the wind turbine was a radical new way of harnessing a sustainable and natural source of energy. Some 125 years on, GE Vernova is innovating again by taking the whole process virtual. The company’s Digital Wind Farm—more accurately described as digital twin farms—is a project designed to create a replica for each of its wind farms to improve their design and ongoing operation.
+
+GE, the former conglomerate, had been working at the forefront of digital twin adoption for some time, investing in the development of digital replicas of its massive, complex, and expensive industrial products that were often essential to crucial infrastructure: jet engines, locomotives, and healthcare equipment. In the mid-2010s, the company had ambitions to fully digitalize its resources so that it could shift from selling capital-intensive assets to selling their capabilities as a service instead (much like Kaeser is doing with air compression in the example above). That transformation ultimately stalled (and the GE Digital business unit that rose to support it, along with other energy-related businesses, was officially combined into GE Vernova in 2024), but digital twins still play a prominent role.
+
+Which brings us back to the wind turbines. Company leaders thought that if they could capture more data from the machines about their interaction with the landscape and the wind, they could improve their design and performance.
+
+GE Vernova uses the digital twin to design the most efficient turbine for each pad, and maximize the wind farm’s energy generation as conditions change. (It’s a method that’s worked before. The company used AI to build a simulation
+of its gas turbines
+that runs in the background to find optimal flame temperatures and fuel splits that minimize emissions and electrical noise.)
+
+Takeaways
+
+GE Vernova uses the digital twin to help design the most efficient turbine for each pad and improve the wind farm’s energy generation as conditions change. (It’s a method that’s worked before. The company used AI to build a simulation of its gas turbinesthat runs in the background to find the best flame temperatures and fuel splits that minimize emissions and electrical noise.)
+
+Each three-blade, upwind, horizontal-axis 2MW wind turbine is equipped with a wind power application that can both monitor the asset’s performance and improve it as it runs.
+
+Operating this hardware and software together can increase energy production by as much as 20% and deliver an additional $100 million in revenue over the life of the wind turbine.
+
+Taking things further, a cloud-based model of an entire wind farm allows engineers to mix and match turbine configurations to ensure the best option based on its location specifics.
+
+Once the wind turbines are in place, the digital twin collects and analyzes data from their real-world likeness and suggests efficiency improvements.
+
+Learn more
+
+These digital twins allow scenario planning of what would happen to power production from the turbine if the wind blew harder, for longer, or not at all, as an
+AWS blog post
+explains.
+
+Windpower Engineering
+describes how digital twins are transforming the industry.
+
+The use of digital technology in wind turbine design enhances performance, reliability, and profitability, says a market report on the growth of digital wind farms from
+AMA Research.
+
+In a Forbes blog post, AWS shares some digital twin lessons learned, including the importance of
+regular performance audits
+and executive support.
+
+style
+
+additional-reading
+
+Example 9: NASA deploys digital twinning at massive scale for facilities management
+
+Returning to the OG of digital twins, NASA offers a modern example of deployment on a grand scale.
+
+NASA’s oldest research site in Hampton, Virginia—the Langley Research Center, where the agency builds its colossal space shuttles—encompasses more than 300 buildings, housing 1,800 employees and unique equipment such as wind tunnels and industrial “shaker tables” to simulate reentry vibration. Dating back to the earliest days of aviation, the campus is now ground zero for digital virtualization.
+
+The foundation for a digital double of the 764-acre campus was developed over three decades as technologists built a GIS to better manage operations and maintenance. The detailed map of Langley became the core of the center’s digital twin, which is used to manage most key tasks at the research center—from safety and flood prevention to daily maintenance and sustainability. A testament to the GIS team’s attention to detail: the mapping includes intricate facets of underground utilities. “We surveyed all of our visible features, all of our utilities, all of our roads, and then we backed that up with high-resolution aerial photography,” GIS team leader Brad Ball says in a blog post from GIS software maker ESRI. “We can compare the map to the aerial photo and they align exactly to where things are.”
+
+Takeaways
+
+As trust in digital twins grows, new applications will emerge. NASA’s mapping began by digitalizing paper floor plans and employing optimization algorithms to determine the facility needs of each department, resulting in a first-of-its-kind space-allocation tool built in 2004. Since then, digital twin tools have taken off.
+
+Today, the 3D model feeds into all sorts of functionality, from a locator app that guides maintenance staff to the right piece of equipment, to flood impact analysis and scenario planning.
+
+The ReVITALization team, which manages the agency’s 20-year plan to replace legacy facilities with new state-of-the art structures, uses nearly 50 twin-based apps for space management, real property management, and planning.
+
+Bonus: The digital twin even helps NASA get better deals from suppliers, with its facility intelligence boosting bidding for maintenance and operations.
+
+Digital twin adoption has its challenges even at NASA, with some paper-lovers still insisting on rolled-up blueprints.
+
+Learn more
+
+The ESRI blog post covers the
+genesis and evolution
+of the Langley Research Center digital twin.
+
+Earlier coverage includes ESRI’s 2004 peek at the
+first use of digital twin tech
+.
+
+style
+
+additional-reading
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+/content/sapcom/countries/en_us/fragments/insights/article-read-more
+
+location
+
+document-footer
+
+Digital twins + AI
+
+Digital twins continue transforming industries through smarter simulations and real-time analytics.
+
+Read the article
+
+location
+
+sidebar

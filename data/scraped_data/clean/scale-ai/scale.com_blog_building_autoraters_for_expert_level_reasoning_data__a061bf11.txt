@@ -1,0 +1,136 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/building_autoraters_for_expert_level_reasoning_data
+page path  : /blog/building_autoraters_for_expert_level_reasoning_data
+captured   : 2026-04-19 05:35:25 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/scale-ai/scale.com_blog_building_autoraters_for_expert_level_reasoning_data__a061bf11.html.gz
+========================================================================
+
+Building Autoraters | Scale AI
+
+Building Autoraters | Scale AI
+Scale AI logo
+Products
+Research
+Enterprise
+Government
+Resources
+Book a Demo
+→
+Log In
+←
+Blog
+Engineering
+Building Autoraters for Expert-Level Reasoning Data
+by
+
+Tu Trinh
+,
+Noah Jacobson
+,
+Rahul Shukla
+,
+Rafael Cruz
+and
+Mohamed Elfeki
+Published
+July 28, 2025
+Reading Time
+8 min read
+Copy Link
+Built upon foundational work by Henry So, John Ling, Sam Slezek, Sydney Wang, Kevin Chavez, via the Human Frontier Collective platform.
+Scale is one of the world’s leading suppliers of high-quality foundation model training data. In recent months we’ve seen a marked increase in demand for PhD-level, multimodal reasoning data across a wide variety of domains, including math, coding, science, and humanities. This data is particularly useful for training models via reinforcement learning to be skilled at extended thinking.
+Because of the ever-increasing complexity of such expert-level data, we have developed a new method of quality control (QC) with LLM agents, known as “autoraters.” In this post, we present a human-in-the-loop, in-house approach to autorate reasoning data leveraging model debate[1].
+If added to our existing human review pipeline after data is labeled, this approach can help us detect four times as many incorrect answers to reasoning problems in our most advanced dataset as using a single model, from 23% to 82%. When we used this approach to provide live feedback during the data-labeling process, our human experts who engaged with the autorater saw an ~87% improvement in correctness when writing their answers.
+Upgrading Our Pipeline
+Our existing data labeling pipelines for PhD-level data consist of a blind-solve “attempter” round and a blind-solve “reviewer” round, both done by human experts, followed by a discussion round if needed to reach consensus, followed by a final human QC round. Every datapoint receives at least three human touches. Though effective, by inserting a consistently precise autorating process, we can filter out lingering errors, critical to minimizing chances of delivering incorrect data to customers.
+Problems in our PhD-level dataset often cannot be solved by just one human and need collaboration between two or more experts to agree on a final answer. We hypothesized that our autoraters also would benefit from leveraging interaction between multiple viewpoints. After all, at this level of difficulty, individual LLMs often perform poorly; the best score on Humanity’s Last Exam (HLE)[2] is less than 30%. So, we developed a multi-agent LLM-as-a-judge autorater system that uses model debate to enable precise, automatic QC. Our system is designed to evaluate whether a proposed answer to a difficult reasoning question, and the reasoning trace behind the answer, is correct. With this we were able to revamp our quality review pipelines into one with multiple LLMs and humans in collaboration.
+Agents and Experiments
+Our model debate setup utilizes foundation models in a multi-round debate consisting of two LLM debaters and one LLM judge to provide a final verdict. In our debate approach, the debaters attempt to solve the problem themselves independently, then debate if they disagree with each other or with the provided solution. We call this approach “Solve-then-Debate.” As baselines[3] to compare with our in-house model-debate agents, we used a single call to a reasoning LLM that is given its maximum allowable inference budget, in order to be as close a comparison as possible to the total budget used by model debate.
+Below we show the performance using both closed-source and open-source models. Our setup is as follows:
+Closed-source
+Model debate: Gemini 2.5 Pro and Claude Sonnet 4 debaters, o3 judge
+Single model: Gemini 2.5 Pro and Claude Sonnet 4
+Open-source
+Model debate: Magistral Small 24B and Qwen 3 32B debaters, Deepseek-R1-distilled Llama 8B judge
+Single model: Magistral Small 24B and Qwen 3 32B
+Our agentic framework is compatible with various underlying foundation models, allowing for interchangeability. For this post, we evaluated our in-house approach with both open-source and closed-source models to demonstrate the strength of our agent. Internally, however, Scale uses open-source LLMs running on our own servers to protect customer trust and data confidentiality.
+Evaluation Datasets
+To test our agents, we created an expert-level autorating eval set built from both our private human-labeled data and public reasoning benchmarks. Results on this eval set show that our custom in-house QC methods are robust for even the most difficult of problems in various domains. They can also more precisely identify correct data and flag incorrect data compared to single-model-based QC methods, the default approach for many LLM-as-a-judge applications.
+We sourced our eval set’s questions and ground-truth correct answers from the following:
+Humanities Last Exam - text-only subset (Open HLE): A challenging reasoning dataset composed of expert-level questions in a wide variety of domains
+Closed HLE: A proprietary Scale dataset of over 500 HLE-level problems annotated by contributors with PhDs in the respective fields
+GPQA Diamond[4]: A highly challenging subset of the GPQA dataset, consisting of extremely difficult multiple-choice questions in biology, physics, and chemistry
+In order to test our autoraters, we needed both correct and incorrect answers. Closed HLE already had both as the contributor-submitted answers were already labeled as correct/incorrect in the final human review round. For Open HLE and GQPA Diamond, we generated synthetic yet plausible incorrect answers and reasoning traces for all questions using a multi-agent pipeline with frontier reasoning models. Finally, we balanced all our datasets such that there is an even distribution of correct and incorrect answers.
+Our number-one priority is to ensure only good data makes it through to our customers, so we optimized primarily for the percentage of incorrect answers caught. Our secondary focus is to provide a high volume of data, corresponding to minimizing correct answers falsely flagged as incorrect.
+Key Results
+On the enhanced GPQA Diamond and Open HLE datasets, we ran the experimental setup with closed-source models.
+On our privately labeled closed HLE dataset, we ran the same experimental setup with open-source models.
+Using model debate, we observed an improvement in identifying low-quality tasks by up to 35 percentage points for closed-source models and up to 67 percentage points for open-source models. Interestingly, the performance gain from using model debate is higher for open-source models. We hypothesize this is because collaboration is more impactful when the individual models are weaker at advanced reasoning and quality control. While model debate does mistakenly flag correct answers more often, this overflagging rate only increased by 29 percentage points on average. We view this as a worthwhile tradeoff for the significant improvement in data quality. In short, model debate helps our autoraters catch more errors, allowing fewer incorrect data points to pass through.
+Live Results
+Using our model debate autorater system in the LLM-based reviewer round right before the final PhD-level human review round, we saw a 90% reduction in datapoints ultimately flagged by the reviewer (9% to 1%), massively reducing incorrect human annotations propagating through our pipeline.
+Previous work[5] has demonstrated that humans collaborating with AI can yield much higher performance than either party alone. Having established a successful autorating process for later in the pipeline, we extended our model debate approach to a copilot aiding human contributors during the data-labeling process. Our objective was to proactively nudge experts to course-correct as soon as possible, reducing the necessity for a second expert to fix their work or having to ultimately discard their attempt down the line.
+We used our debate system and an LLM summarizer on the system’s output to provide live feedback on potential mistakes (if any) in the contributors’ attempted solution and suggestions (if needed) on how to arrive at the correct solution. Like on all projects, we additionally employed a suite of cheating detectors to ensure that the final submitted data does not contain LLM outputs. We also made sure to never directly provide the correct answer so we don’t bias the contributor.
+After deploying the copilot to an internal HLE-level project, we found that 15% of contributors engaged with the copilot’s suggestions. Out of this group, 87% changed their initially incorrect answer to the correct answer because of the copilot’s guidance. Future work will focus on how to increase contributors’ engagement with the copilot, whether it’s UI/UX changes to improve the feature’s visibility and/or method changes to improve the helpfulness of the nudges.
+The Future of Data QC
+As frontier model training data becomes increasingly complex, it is important to combine the strengths of human data labelers and LLM autoraters in order to maintain a high bar for data quality. Scale’s in-house approach outperforms both open- and closed-source reasoning models in reasoning data QC, enabling us to deliver unparalleled value to our customers. Experiments show our multi-agent debate system can catch 82% of errors in expert-level data, as opposed to 23% using a single LLM, and on production projects, reduce the amount of human errors slipping through to the final review layer from 9% to 1%. Combining our system with another human in the loop during the labeling process, we were able to push performance even further, demonstrating a promising path to scalable oversight of advanced AI systems to build even more capable, intelligent models.
+References
+1 A. Tillmann. Literature Review Of Multi-Agent Debate For Problem-Solving, 2025.
+https://arxiv.org/abs/2506.00066
+.
+2 L. Phan et al. Humanity's Last Exam, 2025.
+https://arxiv.org/abs/2501.14249
+.
+3 D. Rein et al. GPQA: A Graduate-Level Google-Proof Q&A Benchmark, 2023.
+https://arxiv.org/abs/2311.12022
+.
+4 H. Li. LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods, 2024.
+https://arxiv.org/abs/2412.05579
+.
+5 S. R. Bowman et al. Measuring Progress on Scalable Oversight for Large Language Models, 2022.
+https://arxiv.org/abs/2211.03540
+.
+Break Through
+
+industry
+Data Bottleneck
+Talk to our experts
+→
+Products
+Scale Data Engine
+Scale GenAI Platform
+Scale Donovan
+Government
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Community
+Research
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Follow Us
+Copyright ©
+2026
+Scale AI, Inc. All rights reserved.
+Terms of Use
+
+&
+
+Privacy Policy

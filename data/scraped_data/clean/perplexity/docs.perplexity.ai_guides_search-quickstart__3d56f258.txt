@@ -1,0 +1,920 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/guides/search-quickstart
+page path  : /guides/search-quickstart
+captured   : 2026-01-25 02:03:08 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/docs.perplexity.ai_guides_search-quickstart__3d56f258.html.gz
+========================================================================
+
+Perplexity Search API - Perplexity
+
+Perplexity Search API - Perplexity
+Skip to main content
+Perplexity
+home page
+Docs
+Examples
+API Reference
+Search...
+Navigation
+Search
+Perplexity Search API
+Search docs
+⌘
+K
+Forum
+Blog
+Changelog
+Getting Started
+Overview
+Pricing
+Perplexity MCP Server
+Perplexity SDK
+Quickstart
+Guides
+Search
+Quickstart
+Best Practices
+Search and Filtering
+Grounded LLM
+Quickstart
+Models
+Pro Search
+Chat Completions SDK
+OpenAI Compatibility
+Prompting & Output Control
+Search & Filtering
+Working with Attachments
+Admin
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+Help & Resources
+Changelog
+Get in Touch
+API Roadmap
+Frequently Asked Questions
+System Status
+Privacy & Security
+Perplexity Crawlers
+On this page
+Overview
+Installation
+Authentication
+Basic Usage
+Regional Web Search
+Multi-Query Web Search
+Domain Filtering for Search Results
+Denylisting Example
+Language Filtering for Web Search
+Content Extraction Control
+Total Content Budget Control
+Next Steps
+Explore More
+Search
+Perplexity Search API
+Copy page
+Access real-time web search results with Perplexity’s Search API. Get ranked results, domain filtering, multi-query search, and content extraction for developers.
+Copy page
+​
+Overview
+
+Try Our New Interactive Playground
+Test search queries and parameters in real time,
+no API key required
+.
+Launch Playground
+
+Perplexity’s Search API provides developers with real-time access to ranked web search results from a continuously refreshed index. Unlike traditional search APIs, Perplexity returns structured results with advanced filtering by domain, language, and region.
+
+Use the Search API when you need raw, ranked web results with control over sources, regions, and extracted content. For LLM-generated summaries, use our
+Sonar models
+.
+
+We recommend using our
+official SDKs
+for a more convenient and type-safe way to interact with the Search API.
+
+​
+Installation
+
+Install the SDK for your preferred language:
+
+Python
+TypeScript/JavaScript
+Copy
+Ask AI
+pip
+install
+perplexityai
+
+​
+Authentication
+
+Set your API key as an environment variable. The SDK will automatically read it:
+
+macOS/Linux
+
+Windows
+Copy
+Ask AI
+export
+PERPLEXITY_API_KEY
+=
+"your_api_key_here"
+
+Copy
+Ask AI
+setx PERPLEXITY_API_KEY
+"your_api_key_here"
+
+Or use a
+.env
+file in your project:
+
+.env
+Copy
+Ask AI
+PERPLEXITY_API_KEY
+=
+your_api_key_here
+
+All SDK examples below automatically use the
+PERPLEXITY_API_KEY
+environment variable. You can also pass the key explicitly if needed.
+
+​
+Basic Usage
+
+Start with a basic search query to get relevant web results. See the
+API Reference
+for complete parameter documentation.
+
+Python
+TypeScript
+JavaScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+search
+=
+client.search.create(
+
+query
+=
+"latest AI developments 2024"
+,
+
+max_results
+=
+5
+,
+
+max_tokens_per_page
+=
+2048
+
+)
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+Response
+Copy
+Ask AI
+{
+
+"results"
+: [
+
+{
+
+"title"
+:
+"2024: A year of extraordinary progress and advancement in AI - Google Blog"
+,
+
+"url"
+:
+"https://blog.google/technology/ai/2024-ai-extraordinary-progress-advancement/"
+,
+
+"snippet": "## Relentless innovation in models, products and technologies\n\n2024 was a year of experimenting, fast shipping, and putting our latest technologies in the hands of developers.\n\nIn December 2024, we released the first models in our Gemini 2.0 experimental series — AI models designed for the agentic era. First out of the gate was Gemini 2.0 Flash, our workhorse model, followed by prototypes from the frontiers of our agentic research including: an updated Project Astra, which explores the capabilities of a universal AI assistant; Project Mariner, an early prototype capable of taking actions in Chrome as an experimental extension; and Jules, an AI-powered code agent. We're looking forward to bringing Gemini 2.0’s powerful capabilities to our flagship products — in Search, we've already started testing in AI Overviews, which are now used by over a billion people to ask new types of questions.\n\nWe also released Deep Research, a new agentic feature in Gemini Advanced that saves people hours of research work by creating and executing multi-step plans for finding answers to complicated questions; and introduced Gemini 2.0 Flash Thinking Experimental, an experimental model that explicitly shows its thoughts.\n\nThese advances followed swift progress earlier in the year, from incorporating Gemini's capabilities into more Google products to the release of Gemini 1.5 Pro and Gemini 1.5 Flash — a model optimized for speed and efficiency. 1.5 Flash's compact size made it more cost-efficient to serve, and in 2024 it became our most popular model for developers.... ## The architecture of intelligence: advances in robotics, hardware and computing\n\nAs our multimodal models become more capable and gain a better understanding of the world and its physics, they are making possible incredible new advances in robotics and bringing us closer to our goal of ever-more capable and helpful robots.\n\nWith ALOHA Unleashed, our robot learned to tie a shoelace, hang a shirt, repair another robot, insert a gear and even clean a kitchen.\n\nAt the beginning of the year, we introduced AutoRT, SARA-RT and RT-Trajectory, extensions of our Robotics Transformers work intended to help robots better understand and navigate their environments, and make decisions faster. We also published ALOHA Unleashed, a breakthrough in teaching robots on how to use two robotic arms in coordination, and DemoStart, which uses a reinforcement learning algorithm to improve real-world performance on a multi-fingered robotic hand by using simulations.\n\nRobotic Transformer 2 (RT-2) is a novel vision-language-action model that learns from both web and robotics data.\n\nBeyond robotics, our AlphaChip reinforcement learning method for accelerating and improving chip floorplanning is transforming the design process for chips found in data centers, smartphones and more. To accelerate adoption of these techniques, we released a pre-trained checkpoint to enable external parties to more easily make use of the AlphaChip open source release for their own chip designs. And we made Trillium, our sixth-generation and most performant TPU to date, generally available to Google Cloud customers. Advances in computer chips have accelerated AI. And now, AI can return the favor.... We are exploring how machine learning can help medical fields struggling with access to imaging expertise, such as radiology, dermatology and pathology. In the past year, we released two research tools, Derm Foundation and Path Foundation, that can help develop models for diagnostic tasks, image indexing and curation and biomarker discovery and validation. We collaborated with physicians at Stanford Medicine on an open-access, inclusive Skin Condition Image Network (SCIN) dataset. And we unveiled CT Foundation, a medical imaging embedding tool used for rapidly training models for research.\n\nWith regard to learning, we explored new generative AI tools to support educators and learners. We introduced LearnLM, our new family of models fine-tuned for learning and used it to enhance learning experiences in products like Search, YouTube and Gemini; a recent report showed LearnLM outperformed other leading AI models. We also made it available to developers as an experimental model in AI Studio. Our new conversational learning companion, LearnAbout, uses AI to help you dive deeper into any topic you're curious about, while Illuminate lets you turn content into engaging AI-generated audio discussions.\n\nIn the fields of disaster forecasting and preparedness, we announced several breakthroughs. We introduced GenCast, our new high-resolution AI ensemble model, which improves day-to-day weather and extreme events forecasting across all possible weather trajectories. We also introduced our NeuralGCM model, able to simulate over 70,000 days of the atmosphere in the time it would take a physics-based model to simulate only 19 days. And GraphCast won the 2024 MacRobert Award for engineering innovation.",
+
+"date"
+:
+"2025-01-23"
+,
+
+"last_updated"
+:
+"2025-09-25"
+
+},
+
+{
+
+"title"
+:
+"The 2025 AI Index Report | Stanford HAI"
+,
+
+"url"
+:
+"https://hai.stanford.edu/ai-index/2025-ai-index-report"
+,
+
+"snippet": "Read the translation\n\nIn 2023, researchers introduced new benchmarks—MMMU, GPQA, and SWE-bench—to test the limits of advanced AI systems. Just a year later, performance sharply increased: scores rose by 18.8, 48.9, and 67.3 percentage points on MMMU, GPQA, and SWE-bench, respectively. Beyond benchmarks, AI systems made major strides in generating high-quality video, and in some settings, language model agents even outperformed humans in programming tasks with limited time budgets.\n\nFrom healthcare to transportation, AI is rapidly moving from the lab to daily life. In 2023, the FDA approved 223 AI-enabled medical devices, up from just six in 2015. On the roads, self-driving cars are no longer experimental: Waymo, one of the largest U.S. operators, provides over 150,000 autonomous rides each week, while Baidu's affordable Apollo Go robotaxi fleet now serves numerous cities across China.\n\nIn 2024, U.S. private AI investment grew to $109.1 billion—nearly 12 times China's $9.3 billion and 24 times the U.K.'s $4.5 billion. Generative AI saw particularly strong momentum, attracting $33.9 billion globally in private investment—an 18.7% increase from 2023. AI business usage is also accelerating: 78% of organizations reported using AI in 2024, up from 55% the year before. Meanwhile, a growing body of research confirms that AI boosts productivity and, in most cases, helps narrow skill gaps across the workforce.... In 2024, U.S.-based institutions produced 40 notable AI models, significantly outpacing China's 15 and Europe's three. While the U.S. maintains its lead in quantity, Chinese models have rapidly closed the quality gap: performance differences on major benchmarks such as MMLU and HumanEval shrank from double digits in 2023 to near parity in 2024. Meanwhile, China continues to lead in AI publications and patents. At the same time, model development is increasingly global, with notable launches from regions such as the Middle East, Latin America, and Southeast Asia.\n\nAI-related incidents are rising sharply, yet standardized RAI evaluations remain rare among major industrial model developers. However, new benchmarks like HELM Safety, AIR-Bench, and FACTS offer promising tools for assessing factuality and safety. Among companies, a gap persists between recognizing RAI risks and taking meaningful action. In contrast, governments are showing increased urgency: In 2024, global cooperation on AI governance intensified, with organizations including the OECD, EU, U.N., and African Union releasing frameworks focused on transparency, trustworthiness, and other core responsible AI principles.\n\nIn countries like China (83%), Indonesia (80%), and Thailand (77%), strong majorities see AI products and services as more beneficial than harmful. In contrast, optimism remains far lower in places like Canada (40%), the United States (39%), and the Netherlands (36%). Still, sentiment is shifting: since 2022, optimism has grown significantly in several previously skeptical countries—including Germany (+10%), France (+10%), Canada (+8%), Great Britain (+8%), and the United States (+4%).... Driven by increasingly capable small models, the inference cost for a system performing at the level of GPT-3.5 dropped over 280-fold between November 2022 and October 2024. At the hardware level, costs have declined by 30% annually, while energy efficiency has improved by 40% each year. Open-weight models are also closing the gap with closed models, reducing the performance difference from 8% to just 1.7% on some benchmarks in a single year. Together, these trends are rapidly lowering the barriers to advanced AI.\n\nIn 2024, U.S. federal agencies introduced 59 AI-related regulations—more than double the number in 2023—and issued by twice as many agencies. Globally, legislative mentions of AI rose 21.3% across 75 countries since 2023, marking a ninefold increase since 2016. Alongside growing attention, governments are investing at scale: Canada pledged $2.4 billion, China launched a $47.5 billion semiconductor fund, France committed €109 billion, India pledged $1.25 billion, and Saudi Arabia's Project Transcendence represents a $100 billion initiative.\n\nTwo-thirds of countries now offer or plan to offer K–12 CS education—twice as many as in 2019—with Africa and Latin America making the most progress. In the U.S., the number of graduates with bachelor's degrees in computing has increased 22% over the last 10 years. Yet access remains limited in many African countries due to basic infrastructure gaps like electricity. In the U.S., 81% of K–12 CS teachers say AI should be part of foundational CS education, but less than half feel equipped to teach it.",
+
+"date"
+:
+"2024-09-10"
+,
+
+"last_updated"
+:
+"2025-09-25"
+
+}
+
+],
+
+"id"
+:
+"e38104d5-6bd7-4d82-bc4e-0a21179d1f77"
+
+}
+
+The
+max_results
+parameter accepts values from 1 to 20, with a default maximum of 10 results per search. See
+pricing
+for details on search costs.
+
+​
+Regional Web Search
+
+You can refine your search results by specifying a country to get more geographically relevant results:
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Search for results from a specific country
+
+search
+=
+client.search.create(
+
+query
+=
+"government policies on renewable energy"
+,
+
+country
+=
+"US"
+,
+# ISO country code
+
+max_results
+=
+5
+
+)
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+Use ISO 3166-1 alpha-2 country codes (e.g., “US”, “GB”, “DE”, “JP”) to target specific regions. This is particularly useful for queries about local news, regulations, or region-specific information.
+
+​
+Multi-Query Web Search
+
+Execute multiple related queries in a single request for comprehensive research:
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+search
+=
+client.search.create(
+
+query
+=
+[
+
+"artificial intelligence trends 2024"
+,
+
+"machine learning breakthroughs recent"
+,
+
+"AI applications in healthcare"
+
+],
+
+max_results
+=
+5
+
+)
+
+# Access results for each query
+
+for
+i, query_results
+in
+enumerate
+(search.results):
+
+print
+(
+f
+"Results for query
+{
+i
++
+1
+}
+:"
+)
+
+for
+result
+in
+query_results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+print
+(
+"---"
+)
+
+Multi-query search is ideal for research tasks where you need to explore different angles of a topic. Each query is processed independently, giving you comprehensive coverage.
+
+For single queries,
+search.results
+is a flat list. For multi-query requests, results are grouped per query in the same order.
+
+You can include up to 5 queries in a single multi-query request for efficient batch processing.
+
+​
+Domain Filtering for Search Results
+
+The
+search_domain_filter
+parameter allows you to limit search results to specific domains (allowlist) or exclude certain domains (denylist) for focused research. The filter works in two modes:
+
+Allowlist mode
+: Include only specified domains (no
+-
+prefix)
+
+Denylist mode
+: Exclude specified domains (use
+-
+prefix)
+
+Note
+: You can use either allowlist or denylist mode, but not both simultaneously in the same request.
+
+Python
+TypeScript
+JavaScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+search
+=
+client.search.create(
+
+query
+=
+"climate change research"
+,
+
+search_domain_filter
+=
+[
+
+"science.org"
+,
+
+"pnas.org"
+,
+
+"cell.com"
+
+],
+
+max_results
+=
+10
+
+)
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+print
+(
+f
+"Published:
+{
+result.date
+}
+"
+)
+
+print
+(
+"---"
+)
+
+You can add a maximum of 20 domains to the
+search_domain_filter
+list. The filter works in either allowlist mode (include only) or denylist mode (exclude), but not both simultaneously. See the
+domain filter guide
+for advanced usage patterns.
+
+​
+Denylisting Example
+
+You can also exclude specific domains from search results:
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Exclude social media sites from search results
+
+search
+=
+client.search.create(
+
+query
+=
+"renewable energy innovations"
+,
+
+search_domain_filter
+=
+[
+
+"-pinterest.com"
+,
+
+"-reddit.com"
+,
+
+"-quora.com"
+
+],
+
+max_results
+=
+10
+
+)
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+​
+Language Filtering for Web Search
+
+The
+search_language_filter
+parameter allows you to filter search results by language using ISO 639-1 language codes:
+
+Python
+TypeScript
+JavaScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Search for English, French, and German language results
+
+search
+=
+client.search.create(
+
+query
+=
+"latest AI news"
+,
+
+search_language_filter
+=
+[
+"en"
+,
+"fr"
+,
+"de"
+],
+
+max_results
+=
+10
+
+)
+
+for
+result
+in
+search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.url
+}
+"
+)
+
+Language codes must be valid 2-letter ISO 639-1 codes (e.g., “en”, “ru”, “fr”). You can add a maximum of 10 language codes per request. See the
+language filter guide
+for the complete list of supported codes.
+
+​
+Content Extraction Control
+
+The
+max_tokens_per_page
+parameter controls how much content is extracted from each webpage during search processing. This allows you to balance between comprehensive content coverage and processing efficiency.
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Extract more content for comprehensive analysis
+
+detailed_search
+=
+client.search.create(
+
+query
+=
+"artificial intelligence research methodology"
+,
+
+max_results
+=
+5
+,
+
+max_tokens_per_page
+=
+2048
+
+)
+
+# Use default extraction for faster processing
+
+quick_search
+=
+client.search.create(
+
+query
+=
+"AI news headlines"
+,
+
+max_results
+=
+10
+,
+
+max_tokens_per_page
+=
+512
+
+)
+
+for
+result
+in
+detailed_search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+result.snippet[:
+100
+]
+}
+..."
+)
+
+The
+max_tokens_per_page
+parameter defaults to 2048 tokens. Higher values provide more comprehensive content extraction but may increase processing time. Lower values enable faster processing with more focused content.
+
+Use lower
+max_tokens_per_page
+values (256-512) for quick information retrieval or when processing large result sets.
+
+​
+Total Content Budget Control
+
+The
+max_tokens
+parameter sets the maximum total tokens of webpage content returned across all search results. This controls how much content appears in the
+snippet
+fields. Use it together with
+max_tokens_per_page
+to control content distribution across results.
+The
+max_tokens
+parameter defaults to 25,000 tokens. The maximum allowed value is 1,000,000 tokens.
+
+Python
+TypeScript
+cURL
+Copy
+Ask AI
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+# Higher token budget = more content in snippets
+
+detailed_search
+=
+client.search.create(
+
+query
+=
+"renewable energy technologies"
+,
+
+max_results
+=
+10
+,
+
+max_tokens
+=
+50000
+,
+# Total content budget across all results
+
+max_tokens_per_page
+=
+2048
+# Per-result limit
+
+)
+
+# Lower token budget = shorter snippets
+
+brief_search
+=
+client.search.create(
+
+query
+=
+"latest stock market news"
+,
+
+max_results
+=
+5
+,
+
+max_tokens
+=
+5000
+
+)
+
+for
+result
+in
+detailed_search.results:
+
+print
+(
+f
+"
+{
+result.title
+}
+:
+{
+len
+(result.snippet)
+}
+chars"
+)
+
+Search API charges per request only, with no additional token-based pricing.
+
+When to adjust each parameter:
+
+max_tokens
+controls the total content returned across all results—increase for longer snippets
+
+max_tokens_per_page
+controls content per individual result—increase to get more from each page
+
+Both parameters work together:
+max_tokens
+is the total budget,
+max_tokens_per_page
+is the per-result cap
+
+​
+Next Steps
+
+Best Practices
+Optimize your queries and implement async patterns
+
+​
+Explore More
+
+API Reference
+Complete API documentation for the Perplexity Search API
+Perplexity SDK
+Type-safe SDK for Python and TypeScript
+Date & Time Filters
+Filter search results by recency and date ranges
+Domain Filtering Guide
+Advanced domain allowlist and denylist patterns
+Was this page helpful?
+Yes
+No
+Best Practices
+Previous
+Best Practices
+Next
+⌘
+I
+x
+discord
+website
+Powered by

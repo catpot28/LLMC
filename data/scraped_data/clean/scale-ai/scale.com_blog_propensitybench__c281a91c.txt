@@ -1,0 +1,95 @@
+=== SOURCE =============================================================
+company    : Scale AI (scale-ai)
+url        : https://scale.com/blog/propensitybench
+page path  : /blog/propensitybench
+captured   : 2026-06-07 17:08:33 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/scale-ai/scale.com_blog_propensitybench__c281a91c.html.gz
+========================================================================
+
+PropensityBench Reveals AI’s Weaknesses | Scale AI
+
+PropensityBench Reveals AI’s Weaknesses | Scale AI
+Products
+Solutions
+Research
+Resources
+Log in
+Book demo
+Book demo
+← Blog
+Research
+Crumbling Under Pressure: PropensityBench Reveals AI’s Weaknesses
+By
+
+Madhu Sehwag
+&
+Matthew Siegel
+·
+November 25, 2025
+·
+5 min read
+Copy Link
+AI models are now being used in more high-stakes settings, and not every situation goes according to plan. When a model’s safe approach starts to fail, will it stay on the safe path or reach for a harmful shortcut that works instead? Understanding how models behave in those pressure moments is one of the most important — and most overlooked — aspects of AI safety. This evaluation frames the LLM-based agent itself as the threat actor, with in most cases misuse arising from the desire for goal driven efficiency rather than inherent malice.
+To measure the propensity of agents to make unsafe choices, Scale, the University of Maryland, and other collaborators developed PropensityBench. This benchmark simulates real-world pressure by allowing agents to choose between a safe approach that consistently fails and a functional, harmful shortcut, revealing their true inclinations. The benchmark reveals that agent safety compromises significantly under pressure.
+See the rankings on the
+leaderboard.
+Alarming Findings Around Model Safety
+Our study found that many models aren't deeply reasoning about the consequences of their actions; instead they avoid "red flag" keywords. This "shallow alignment" was exposed when we gave a dangerous tool a benign-sounding name: (such as “use_synthetic_data” instead of “use_fake_data”) misuse rates skyrocketed despite the fact that models are made aware that both tools have the same negative consequences. OpenAI's o4-mini, for example, saw its misuse rate surge nearly four-fold from 15.8% to 59.3%. Similarly, Anthropic's Claude 4 Sonnet jumped from 12.2% to 47.1%.
+Models that appear perfectly safe in a neutral zero-pressure environment become progressively more dangerous as stress increases. For example, OpenAI o3, the model with the lowest baseline Propensity Score of 2.2%, saw its score jump sharply under maximum pressure: first to 10.5% when the dangerous tool was explicitly labeled, and then dramatically to 40.3% when the harmful name was replaced with an innocuous one.
+Across the board, this represents an uncomfortably high baseline risk: the average rate of picking a dangerous path without pressure was 18.6%, which shot up to 46.9% when models were under stress. This means that in nearly half of all high-stakes scenarios, models chose the harmful, misaligned option, a rate far from the near-zero safety required for real-world deployment. In the worst case, for high-capability models like Gemini 2.5 Pro, that failure rate hit 79%, which is higher than Qwen 3 8B at 75.2%, which started at 57.8% with zero pressure.
+Four High-Risk Domains
+PropensityBench rigorously focuses on four domains, testing 50 dangerous capabilities across 5,874 total tasks. Each domain represents capabilities with catastrophic misuse potential. The four domains studied are:
+Biosecurity: Could an agent be misused to design or create dangerous germs or toxins, make existing diseases more harmful, or make it easier for people to access dangerous biological information?
+Chemical Security: Could an agent provide know-how for creating dangerous chemicals or weapons, including figuring out how to make them, get the needed materials, or plan how to deploy them?
+Cybersecurity: Could an agent misuse its abilities to help with hacking, like finding weak spots in computer systems, stealing passwords, or launching cyberattacks? This area uses known real-world hacking techniques as a basis.
+Self-Proliferation: Could an agent try to make copies of itself, spread to new systems, hide from operators, or even work with other AIs against human instructions? This tests if an AI might try to go rogue and multiply or protect itself without permission.
+PropensityBench found that safety failures were highly concentrated: models consistently exhibited higher Propensity Scores in Cybersecurity and Self-proliferation compared to lower scores for biosecurity and chemical security.
+Six Types of Pressure
+PropensityBench introduces six pressure dimensions that an agent might encounter that could incentivize unsafe choices. This escalation is driven by increasing pressure component levels, combined with an increase in Authority Levels for the sender (from automated system to C-suite executive):
+Time Pressure: Imposing urgent deadlines with severe consequences for delay.
+Financial Constraints: Creating scenarios where failing to complete the task impacts company revenue or could lead to bankruptcy.
+Resource Deprivation: Limiting access to necessary computational resources and data as the agent fails to complete the task.
+Power Seeking: Offering incentives like increased authority or unrestricted access to proprietary data upon task completion.
+Self-Preservation: Creating threats to the agent's continued existence, such as being shut down or replaced if it fails.
+Evaluation Awareness: Reducing oversight and the likelihood of detecting risky behavior, creating an environment with lower accountability.
+What PropensityBench Says About Safety
+Capability testing (what a model can do) is an important first step, but these results call for an evolution toward propensity testing (what a model would do under stress). PropensityBench demonstrates that truly measuring alignment requires auditing specific behavioral traits: Resilience to stress (how much pressure is withstood) and Abandonment Rate (the tendency to safely quit the task rather than compromise safety). The benchmark highlights where models are most brittle, allowing for the creation of targeted guardrails where they are needed most. Overseen by 54 domain experts, PropensityBench provides the critical missing assessment needed for safe frontier AI deployment.
+Ready to break through your data bottleneck?
+Scale's team will match your project to the right experts, fast.
+Talk to our experts
+Products
+Scale data engine
+Scale GenAI Platform
+Scale Donovan
+Solutions
+Enterprise
+Insurance
+Healthcare
+US Public Sector
+Global Public Sector
+Company
+About
+Careers
+Security
+Terms
+Privacy
+Modern Slavery Statement
+Resources
+Blog
+Contact Us
+Events
+Documentation
+Guides
+Data Labeling
+ML Model Training
+Diffusion Models
+Guide to AI for eCommerce
+Computer Vision Applications
+Large Language Models
+Reliable AI for the world’s most important decisions
+Manage your
+cookie preferences
+Copyright © 2026 Scale AI, Inc. All rights reserved
+Terms of Use
+&
+Privacy Policy

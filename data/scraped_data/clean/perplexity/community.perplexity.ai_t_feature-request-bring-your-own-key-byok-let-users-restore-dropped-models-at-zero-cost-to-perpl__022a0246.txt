@@ -1,0 +1,202 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/feature-request-bring-your-own-key-byok-let-users-restore-dropped-models-at-zero-cost-to-perplexity/4078
+page path  : /t/feature-request-bring-your-own-key-byok-let-users-restore-dropped-models-at-zero-cost-to-perplexity/4078
+captured   : 2026-04-12 11:36:50 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_feature-request-bring-your-own-key-byok-let-users-restore-dropped-models-at-zero-cost-to-perpl__022a0246.html.gz
+========================================================================
+
+Feature Request: Bring Your Own Key (BYOK) — Let Users Restore Dropped Models at Zero Cost to Perplexity - Feature Requests - Perplexity API Platform Forum
+
+Feature Request: Bring Your Own Key (BYOK) — Let Users Restore Dropped Models at Zero Cost to Perplexity - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Feature Request: Bring Your Own Key (BYOK) — Let Users Restore Dropped Models at Zero Cost to Perplexity
+
+Feature Requests
+
+search-api
+
+Taylor
+
+March 7, 2026, 10:25pm
+
+1
+
+Feature Request
+
+Problem Statement
+
+TL;DR: Allow Pro and Max subscribers to connect their own API keys from third-party LLM providers (xAI/Grok, Mistral, Cohere, etc.) so that models Perplexity removes from the default lineup can still be accessed through the Perplexity interface. This costs Perplexity nothing and restores one of the platform’s most beloved differentiators.
+
+One of Perplexity’s greatest strengths has been multi-model access — the ability to choose the right LLM for the right task within a single, citation-powered research interface. Recently, models like Grok and Gemini Flash have been removed from the model selector, and earlier instances of silent model downgrades have eroded user trust.
+
+For power users and paying subscribers, this is a significant loss. Many of us chose Perplexity specifically because we could access Claude for nuanced writing, GPT for general reasoning, and Grok for its unique training perspective — all without juggling multiple subscriptions and interfaces. Every model removed chips away at that core value proposition and pushes users toward competitors.
+
+Proposed Solution
+
+The Solution: BYOK Integration
+
+Allow users to input their own API keys from supported LLM providers directly within their Perplexity account settings. The concept is straightforward:
+
+User obtains an API key from a provider like xAI (Grok), Mistral, Cohere, or any OpenAI-compatible endpoint.
+
+User enters the key in a new “Connected Models” section of Perplexity account settings.
+
+The model reappears in the Perplexity model selector, routed through the user’s own API key.
+
+Perplexity’s orchestration layer — citations, source ranking, Deep Research, and the search pipeline — still wraps around the model output, preserving the Perplexity experience.
+
+Why This Benefits Perplexity
+
+Zero incremental cost. API calls are billed directly to the user’s account with the third-party provider. Perplexity bears no compute, licensing, or negotiation overhead for BYOK models.
+
+Reduced churn. The multi-model experience is a key retention driver. Users who lose access to a preferred model have one less reason to stay. BYOK eliminates that friction entirely.
+
+Reinforces the real moat. Perplexity’s competitive advantage isn’t raw model access — it’s the citation engine, search pipeline, Deep Research, Model Council, and Comet browser. BYOK reframes the subscription around what Perplexity actually does best: orchestration and research infrastructure.
+
+Precedent already exists. Perplexity’s Sonar API is OpenAI-client-compatible, meaning the architecture for routing between different model endpoints is already in place. Platforms like Requesty, Langdock, and Cloudflare AI Gateway have successfully implemented BYOK patterns — this is a proven model.
+
+Pro/Max tiers become more valuable, not less. BYOK could be gated to Pro or Max subscribers only, making those tiers more attractive. Users who bring their own keys are your most engaged power users — the ones most likely to maintain long-term subscriptions.
+
+Addressing Potential Concerns
+
+Latency from external API calls — Acceptable trade-off for user choice. Label BYOK models with a “user-provided” badge and latency disclaimer. Users are opting in knowingly.
+
+Inconsistent citation quality — Perplexity already handles varied model outputs across GPT, Claude, and Gemini. The citation extraction pipeline is model-agnostic by design.
+
+Support burden — Clearly mark BYOK models as “community-supported” or “user-configured.” Perplexity is not responsible for third-party model quality — only for the orchestration layer.
+
+Undermines subscription value — The opposite. Users paying $20–$200/mo plus their own API costs are your highest-value customers. They’re paying for Perplexity’s interface, not subsidized model access.
+
+Implementation Sketch
+
+New settings panel: Account → Connected Models → Add API Key
+
+Dropdown for provider (xAI, Mistral, Cohere, OpenRouter, custom OpenAI-compatible endpoint)
+
+Validated on entry with a test ping
+
+Connected models appear in model selector with a distinct icon (e.g., a “BYOK” tag)
+
+Optional: expose in Model Council as additional council members for Max users
+
+Who This Serves
+
+Power users who relied on multi-model workflows
+
+Developers and researchers who already have API keys from multiple providers
+
+Enterprise teams with existing vendor agreements
+
+Anyone who left or considered leaving because their preferred model was removed
+
+This isn’t asking Perplexity to do more — it’s asking Perplexity to let its users do more, at no cost to the platform. The multi-model experience is what made Perplexity special. BYOK is the sustainable way to keep it alive.
+
+Submitted by a Perplexity Max subscriber.What problem or limitation does this feature aim to solve? Please describe the issue you’re facing and how this feature would help.
+
+API Impact
+
+Which API component is affected?
+[e.g., chat completions, retrieval, search filters]
+
+Is this related to a specific model?
+[e.g., Sonar Deep Research]
+
+Would this require new API parameters or changes to existing ones?
+
+Alternatives Considered
+
+Have you explored any workarounds? If so, what were they, and why are they insufficient?
+
+Additional Context
+
+Add any other relevant information, links, or screenshots that can help us better understand your request.
+
+For direct inquiries, please reach out to
+api@perplexity.ai
+
+2 Likes
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Where can i find the price of perplexity API CHAT models (not online)?
+
+Bug Reports
+
+1
+
+122
+
+May 15, 2025
+
+Perplexity Interface API vs Sonar LLM API
+
+General
+
+2
+
+291
+
+June 24, 2025
+
+Family Plan Subscription
+
+Feature Requests
+
+chat-completions
+
+0
+
+30
+
+February 4, 2026
+
+More transparity and options for Perplexity pro application "labs" features
+
+Feature Requests
+
+0
+
+142
+
+June 16, 2025
+
+API/Billing Major Problem!
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+search-api
+
+1
+
+118
+
+March 31, 2026
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

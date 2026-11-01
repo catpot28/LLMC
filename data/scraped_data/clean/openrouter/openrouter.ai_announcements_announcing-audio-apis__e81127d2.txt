@@ -1,0 +1,199 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/announcements/announcing-audio-apis
+page path  : /announcements/announcing-audio-apis
+captured   : 2026-05-15 17:40:58 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_announcements_announcing-audio-apis__e81127d2.html.gz
+========================================================================
+
+New Audio APIs for Speech and Transcription | OpenRouter
+
+New Audio APIs for Speech and Transcription | OpenRouter
+Skip to content
+OpenRouter
+/
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+New Audio APIs for Speech and Transcription
+Jacky Liang
+·
+
+5/1/2026
+OpenRouter now has two dedicated audio endpoints:
+/api/v1/audio/speech
+for text-to-speech and
+/api/v1/audio/transcriptions
+for speech-to-text.
+
+These new endpoints deliver specialized models that are generally faster and more cost-efficient than the
+general audio models
+(opens in new tab)
+we already support, but are more narrowly useful for specific audio tasks.
+
+You can now generate speech from text with OpenAI, Google, or Mistral voices and transcribe audio files with OpenAI Whisper. All with the same routing, billing, and key management you already use for text, video and image generation.
+
+Speech models
+(opens in new tab)
+·
+Transcription models
+(opens in new tab)
+·
+Speech docs
+(opens in new tab)
+·
+Transcription docs
+(opens in new tab)
+
+Choosing a model: Audio vs. Speech vs. Transcription
+
+The choice of models is a balance of specialization, cost, and speed. We've enabled access to the breadth of options so you can choose the right path for each use case:
+
+Audio models
+Speech models
+Transcription models
+What it does
+Understands audio input and reasons over it, like a voice-native LLM
+Converts text into lifelike spoken audio
+Converts audio into text
+Input → Output
+Text/audio → text/audio
+Text → audio
+Audio → text
+Best for
+Voice agents, mixed-modality conversations, audio Q&A
+Reading text aloud with built-in voices and streaming
+Meeting notes, subtitles, feeding voice input into text pipelines
+Endpoint
+/chat/completions
+/audio/speech
+/audio/transcriptions
+Trade-offs
+More powerful but heavier and more expensive
+Simpler, faster, cheaper (no reasoning needed)
+Purpose-built for accuracy across languages and accents
+Browse models
+Audio models
+(opens in new tab)
+Speech models
+(opens in new tab)
+Transcription models
+(opens in new tab)
+Docs
+Audio output guide
+(opens in new tab)
+Speech docs
+(opens in new tab)
+Transcription docs
+(opens in new tab)
+
+Try it in the Playground
+
+Both Speech and Transcription have dedicated Playground tabs on model pages (here's
+GPT-4o Mini TTS's Playground
+(opens in new tab)
+and
+GPT-4o Transcribe's Playground
+(opens in new tab)
+as examples). For speech models, pick a voice from the dropdown, type your text, and hear the result. For transcription models, drag and drop an audio file and see the transcription.
+
+Each model page also shows quickstart code in Python, TypeScript, curl, and the OpenRouter SDK, so you can copy a working example and have audio running in your app in minutes.
+
+Getting started with Speech models
+
+Send text, get audio back. The response is a raw byte stream you can pipe straight to a file or audio player.
+
+Speech providers currently include
+OpenAI
+(
+GPT-4o Mini TTS
+(opens in new tab)
+),
+Google
+(
+Gemini Flash TTS
+(opens in new tab)
+), and
+Mistral
+(
+Voxtral Mini TTS
+(opens in new tab)
+). Each model brings its own voice set, and you can browse available voices on each model's page. Output comes in MP3 or PCM format.
+
+Provider-specific options pass through cleanly. For example, OpenAI's speech models accept an
+instructions
+field for tone control (e.g., "speak in a warm, friendly tone").
+
+Getting started with Transcription models
+
+The transcription endpoint takes a base64-encoded audio file and returns text. It supports WAV, MP3, FLAC, and other common formats.
+
+Transcription providers currently include
+OpenAI
+(
+Whisper
+(opens in new tab)
+,
+GPT-4o Transcribe
+(opens in new tab)
+,
+GPT-4o Mini Transcribe
+(opens in new tab)
+),
+Google
+(
+Chirp 3
+(opens in new tab)
+), and
+Groq
+(with their fast
+Whisper
+(opens in new tab)
+inference). You can optionally pass a
+language
+hint to improve accuracy for non-English audio.
+
+What's next
+
+We're actively adding more providers and voices. If there's a speech or transcription model you want to see on OpenRouter, tell us on
+Discord
+(opens in new tab)
+.
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube

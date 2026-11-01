@@ -1,0 +1,230 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/generate-auth-token-post
+page path  : /api-reference/generate-auth-token-post
+captured   : 2026-05-20 19:29:54 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_generate-auth-token-post__23afe7e0.html.gz
+========================================================================
+
+Generate Auth Token - Perplexity
+
+Generate Auth Token - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Authentication
+Generate Auth Token
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Generate Auth Token
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/generate_auth_token
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"token_name": "Production API Key"
+
+}
+
+'
+200
+{
+
+"auth_token"
+:
+"pplx-1234567890abcdef"
+,
+
+"created_at_epoch_seconds"
+:
+1735689600
+,
+
+"token_name"
+:
+"Production API Key"
+
+}
+Authentication
+Generate Auth Token
+Copy page
+Generates a new authentication token for API access.
+Copy page
+POST
+/
+generate_auth_token
+Try it
+Generate Auth Token
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/generate_auth_token
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"token_name": "Production API Key"
+
+}
+
+'
+200
+{
+
+"auth_token"
+:
+"pplx-1234567890abcdef"
+,
+
+"created_at_epoch_seconds"
+:
+1735689600
+,
+
+"token_name"
+:
+"Production API Key"
+
+}
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+token_name
+string
+Optional name for the authentication token to help identify its purpose.
+Example
+:
+"Production API Key"
+Response
+200 - application/json
+Successfully generated authentication token.
+​
+auth_token
+string
+required
+The newly generated authentication token. Store this securely as it cannot be retrieved again.
+Example
+:
+"pplx-1234567890abcdef"
+​
+created_at_epoch_seconds
+number
+required
+Unix timestamp (in seconds) of when the token was created.
+Example
+:
+1735689600
+​
+token_name
+string
+The name associated with this token, if provided.
+Example
+:
+"Production API Key"
+Was this page helpful?
+Yes
+No
+Create Contextualized Embeddings
+Previous
+Revoke Auth Token
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

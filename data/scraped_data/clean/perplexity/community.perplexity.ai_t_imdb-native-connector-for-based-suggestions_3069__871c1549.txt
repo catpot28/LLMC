@@ -1,0 +1,196 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/imdb-native-connector-for-based-suggestions/3069
+page path  : /t/imdb-native-connector-for-based-suggestions/3069
+captured   : 2026-01-21 22:38:55 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_imdb-native-connector-for-based-suggestions_3069__871c1549.html.gz
+========================================================================
+
+IMDb native Connector for based suggestions - Feature Requests - Perplexity API Platform Forum
+
+IMDb native Connector for based suggestions - Feature Requests - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+IMDb native Connector for based suggestions
+
+Feature Requests
+
+chat-completions
+,
+
+search-api
+
+X_S
+
+December 13, 2025, 11:49am
+
+1
+
+Feature Request
+
+Native IMDb connector in Perplexity/Comet that keeps user’s watch history and ratings in sync automatically, so movie recommendations are personalized and never include titles already watched.
+
+Problem Statement
+
+When a user asks Perplexity/Comet for movie recommendations, the suggestions are random and vague, with titles already seen.
+
+There is no native connector in Perplexity’s “Connectors” area (like Gmail/Calendar) that can read this data and use it to personalize or filter recommendations.​
+
+Users don’t want to manage exports, files, or manual lists; just want to click “Connect IMDb” once and have everything stay up to date in the background.
+
+Proposed Solution
+
+Add
+IMDb as a first‑class Connector
+in the Perplexity account “Connectors” section, alongside Gmail and Google Calendar.​
+
+User flow:
+
+Go to Settings → Connectors.
+
+Click “Connect IMDb”.
+
+Go through IMDb’s OAuth/login flow and grant read access to watchlist/ratings/history.
+
+From then on, Perplexity/Comet has a continuously updated, private view of the content.
+
+Behavior:
+
+When asked for movie suggestions, Perplexity automatically:
+
+Excludes anything in the watched history.
+
+Can optionally bias toward genres, years, and ratings the user tends to enjoy, inferred from that history.
+
+No extra prompts, no copy‑pasting lists, no re‑exports; just like the Gmail/Calendar connector where, once enabled, queries can transparently pull from email/calendar.​
+
+Scope:
+
+Read‑only access to my IMDb lists is sufficient; Perplexity does not need to modify anything in IMDb, potentially it could add titles to the watch list, rate and everything else.
+
+If a full IMDb connector is not immediately feasible, Perplexity could still prepare the connector infrastructure and later plug in alternative sources (e.g., Letterboxd, Trakt) using the same “Connect” pattern.
+
+API Impact
+
+Affected components:
+
+Chat completions / conversations
+that generate recommendations.
+
+Retrieval / search
+if Perplexity exposes recommendation or personalization APIs.
+
+Model scope:
+
+Especially relevant for
+Sonar Deep Research
+and any recommendation‑heavy workflows.
+
+Possible API changes:
+
+Introduce a generic concept like a
+user_profile_connector
+or
+media_history_connector
+that the API can reference (e.g.,
+source: "imdb"
+), so the backend can inject “already watched” constraints and preference signals without the client sending raw lists each time.
+
+Alternatives Considered
+
+Manually exporting IMDb to CSV and pasting it into prompts or opening it in a Comet tab.
+
+This is fragile, token‑heavy, and would require the user to repeat the process after every change in IMDb, which is exactly what a connector is meant to avoid.
+
+Periodically re‑uploading updated CSV files to some internal “library” space.
+
+Still too much friction; the whole point is to have a one‑click, OAuth‑style connection like Gmail/Calendar, where data stays in sync automatically.​
+
+Additional Context
+
+This would showcase Perplexity’s connector strategy beyond productivity (email/calendar) and into entertainment and personalization, which is a huge real‑world use case.​
+
+The same pattern could later generalize to other media services (Letterboxd, Trakt, TV Time, etc.), using the same “Connect once, always up to date” model.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+About the Feature Requests category
+
+Feature Requests
+
+1
+
+222
+
+August 13, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+59
+
+December 18, 2025
+
+📢 Sonar API Updates – August 29, 2025
+
+Announcements
+
+sonar
+
+,
+
+chat-completions
+
+0
+
+292
+
+August 29, 2025
+
+Idea: Integrate Amazon Kindle with Perplexity AI
+
+Feature Requests
+
+2
+
+119
+
+June 11, 2025
+
+Modify/Select sources to answer from
+
+Bug Reports
+
+2
+
+127
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

@@ -1,0 +1,217 @@
+=== SOURCE =============================================================
+company    : SAP (sap)
+url        : https://www.sap.com/blogs/how-to-balance-risk-rewards-genai-coding
+page path  : /blogs/how-to-balance-risk-rewards-genai-coding
+captured   : 2026-03-11 13:44:27 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/sap/www.sap.com_blogs_how-to-balance-risk-rewards-genai-coding__5a880dd6.html.gz
+========================================================================
+
+How to balance risks and rewards of GenAI coding | SAP
+
+How to balance risks and rewards of GenAI coding | SAP
+
+flex-height
+
+text-black
+
+How to balance risks and rewards of GenAI coding
+
+The rush is on to incorporate AI tools into software development processes. While productivity is up, so are risks. Insist on safeguards.
+
+default
+
+{}
+
+default
+
+{}
+
+primary
+
+default
+
+{}
+
+secondary
+
+After sales and marketing software vendor ZoomInfo rolled out generative AI (GenAI) tools to its nearly 900 developers, 90% of them reported finishing tasks in 20% less time. Not only that, 70% of the developers reported GenAI had increased the quality of their work, says CTO Ali Dasdan.
+
+At Greenlane—a joint venture between Daimler Truck, NextEra Energy, and BlackRock working to develop a nationwide, zero-emission public charging network for zero-emission commercial vehicles—CTO Raj Jhaveri has seen GenAI save two to three hours of work for each quality assurance engineer when testing each software release. The technology also saves developers hours of time searching for code libraries to reuse.
+
+With productivity increases like this, it’s no surprise the hype over—and adoption of—GenAI shows no signs of slowing. According to a
+quarterly survey report
+released by developer research company SlashData in June 2024, 59% of coders worldwide use AI tools in their development workflows. This finding is consistent with 2023
+research
+by Gartner predicting that by 2028, 75% of enterprise software engineers will use GenAI code assistants.
+
+For application developers and programmers, GenAI tools are versatile and useful. They can create database queries. They can migrate legacy code to new platforms. They can write software tests. They can answer business-focused questions (“Help me outline the site structure for an e-commerce store”) and deeply technical queries (“What are the keyboard shortcuts for Visual Studio IDE when working with C#?”).
+
+For businesses that equip their coders with AI tools, the potential upsides are lower development costs and greater efficiency and innovation. But what we’re calling
+secret AI adoption
+—when developers sidestep corporate guidelines—leaves businesses vulnerable to a number of risks: faulty or malicious code, the loss of proprietary data, copyright infringement, and the long-term cost of maintaining AI-generated code no one can understand.
+
+4 questions business leaders should ask CIOs about AI and software development
+
+Do you know which of your developers are using AI to develop software, and how they are using it? If not, what is your plan to monitor their use?
+
+How are you assuring that the code used to train these AI development tools will not expose us to legal or security liability?
+
+How are you limiting our liability in the case of financial or other losses caused by the output of these AI tools?
+
+How will you ensure these AI-aided development tools aren’t creating a new generation of expensive technical debt that will slow future innovation?
+
+style
+
+additional-reading
+
+Ask: What’s in it for the business—and what could go wrong?
+
+Leaders are particularly concerned about the risks involved in unfettered use of GenAI programming tools.
+
+“Technology and business executives are more scared than they are aware,” says Yugal Joshi, a partner at Everest Group. Potential security issues are “like a sword hanging over their heads. [AI] is not something they want to risk their careers over. Finding the right initial use cases is a challenge. And even if that use case is fine, if you replicate it across the enterprise, the same issues begin again.”
+
+To safely maximize the development benefits of GenAI, CIOs and CTOs can follow a three-pronged approach. First, educate internal parties (ranging from the board to C-level executives to business unit leaders) about exactly where the development can best help the business and how the risks might harm it. Next, roll out GenAI development tools quickly enough to keep ambitious developers from taking their skills elsewhere while prioritizing GenAI use with applications that most benefit the company. Finally, hold developers, and vendors, responsible for the quality and security of the code these tools help produce.
+
+GenAI coding tools are trained by examining and recognizing patterns and drawing inferences from vast amounts of code and other data. They then offer suggestions based on prompts from a developer. Thus far, there are several promising areas in which generative AI-aided software development tools can cut costs and increase productivity:
+
+Finding reusable code, thus eliminating the time and cost required to recreate and test it.
+
+Examining code for defects to verify it is safe to use.
+
+Documenting the source of the code, as well as its intended function, making it easier and less expensive to maintain and enhance it.
+
+Writing software test cases, reducing manual testing.
+
+Revamping legacy code for use on new platforms, such as the cloud.
+
+Educating younger developers in new development tools and languages.
+
+With these points in mind, let’s delve into making the best use of GenAI development tools for coding.
+
+The pros of GenAI-aided coding: Productivity, innovation, and morale
+
+The most obvious business benefit for deploying GenAI-enabled coding tools is faster, and less expensive, development of new applications and services to meet changing business needs.
+
+In June 2023, a
+McKinsey Digital survey
+of more than 40 of its own developers reported they can complete coding tasks up to twice as fast using GenAI. It also reported developers saying that GenAI allows them to complete new code in half the time and refactor code (making it easier to understand and enhance without changing its function) in nearly two-thirds the time.
+
+At SAP, internal surveys of the first 500 users of GenAI tools showed a “significantly positive” effect on their cognitive load, flow, and feedback loops, says Sumeet Shetty, head of Tools India at SAP. Rather than splitting their attention among multiple screens for code editing and code research, developers now see code suggestions within the code editor, letting them stay focused on coding, he says.
+
+Providing access to such tools is also a talent retention factor. McKinsey reported that developers using generative AI–based tools were more than twice as likely to report overall happiness, fulfillment, and a state of “flow,” or deep involvement in their work.
+
+Time saved presents another potential benefit: developers can use that time to create new, innovative applications or redirect their time to closing out the backlog of improvements languishing on their company’s to-do list, McKinsey reported.
+
+Risks to guard against with GenAI-aided coding: Legal, compliance, and security
+
+While the benefits of deploying GenAI to support coders are pronounced, so are the potential downsides. Even though GenAI tools can automate and speed up many tasks, business and IT leaders must carefully manage their use.
+
+For example, these development tools can suggest code that delivers the wrong results, exposes proprietary data, infects corporate systems with malware, or hampers companies with poor quality, hard-to-maintain code. All these liabilities can lead to lost revenue, market share, and reputation as well as higher costs, reduced flexibility, expensive fines, or unfavorable publicity.
+
+Business leaders also need to be aware of the technical debt—the future work that will be required to maintain a new application—that GenAI-aided development can produce.
+
+Some developers are aware of this issue. A
+survey
+conducted by code search and analysis tool vendor Sourcegraph found that developers spend only 14% of their time writing new code for core products. They spend the rest of their time searching for, understanding, and fixing existing code. The survey found that more than 6 in 10 respondents are concerned about GenAI’s potential to increase the “code sprawl” in their organizations, which robs time from more productive work.
+
+The lower the quality of code produced with the help of GenAI, the more future work it will require and the higher the organization’s technical debt.
+
+The cost has the potential to add up. Developer metrics tracking vendor GitClear analyzed 153 million lines of code authored between January 2020 and December 2023 and found “disconcerting trends for maintainability.” Code churn—the percentage of lines that are reverted or updated less than two weeks after being authored—is projected to double in 2024 compared to its 2021, pre-GenAI baseline.
+
+All this, the report said, suggests GenAI can lead inexperienced developers to accept code that must later be corrected or enhanced rather than reusing code that has proven to be safe and stable.
+
+AI buyer beware: Know how your AI works
+
+Businesses are on the hook if their AI systems harm someone. Here’s how to be prepared.
+
+Read more
+
+Three steps to maximize the benefits of GenAI-enabled coding
+
+Finding the ideal use of GenAI in development will continue to pose a challenge as new AI models and tools change. But business and technology managers can take three sensible, cost-effective steps now to ensure that their teams get the most efficiency and innovation out of GenAI-aided software development while minimizing the security, compliance, and liability risks.
+
+1. Educate the business on GenAI-aided development.
+
+CIOs and other technical leaders must educate their peers about exactly how AI-aided development tools work and the implications for areas such as legal, compliance, and security so that they can make educated decisions when the risks outweigh the benefits.
+
+At SAP, Shetty developed an onboarding process for development teams. As SAP has expanded the use of AI assisted coding to over 15,000 developers business wide, Shetty and his team organize presentations by expert speakers to encourage development teams to use AI assisted coding.
+
+What is AI ethics?
+
+AI ethics encompasses a broad range of considerations, including fairness, transparency, accountability, privacy, security, and potential societal effects.
+
+Read more
+
+2. Manage the rollout.
+
+Blanket bans of GenAI development tools are difficult, if not impossible, to enforce and will just drive more adoption underground. But
+early adopters
+are finding ways to control the deployment of GenAI development tools while maintaining essential controls.
+
+SAP first deployed a GenAI coding assistant to 500 early adopters while telling the other nearly 20,000 when they, too, would get access to it. This clear communication prevented the use of unauthorized AI coding assistants, says Shetty.
+
+At Greenlane, the approach is to regulate where developers use the GenAI tools. Jhaveri said his company avoids using AI to develop the core software that will control its commercial electric vehicle charging network. He instead restricts its use to support activities, such as reviewing existing code, searching for reusable software libraries, and writing automated code tests.
+
+Even though GenAI tools provide a great learning environment for junior and mid-level developers, Jhaveri suggests a case-by-case analysis of each potential use of GenAI development. For example, using such a tool to convert a mobile app coded in one language to another could expose your intellectual property to the outside world. However, he adds, “If you’re testing the user experience and it’s not code specific or functional, you can probably avoid exposing anything sensitive,” he says.
+
+Jhaveri said he also requires any developer who wants a license for a GenAI tool to brief him on their planned use, as purchasing it for all our users can get costly very quickly. “We also don’t want our developers to become overly dependent” on the tool, he says. “If you hire someone senior and you see their overuse of [GenAI] for basic work, it’s better to intervene earlier rather than later.”
+
+AI adoption in 2024: SAP survey insights
+
+AI is hot, and business executives recognize that fact, according to a 2024 survey of SAP customers.
+
+Read more
+
+3. Hold developers and vendors accountable for the quality of their code.
+
+To minimize risk and assure quality customer experiences, it’s essential to remind developers that any code they produce, with or without the help of GenAI, is their responsibility. That means it’s up to them to follow common-sense precautions, such as regularly testing for malware and assuring the usability, security, and legality of any open-source code suggested to them by an AI tool.
+
+Just creating and publicizing an AI security policy isn’t enough. A
+2023 report
+by developer security vendor Snyk found that 80% of the developers they surveyed bypass their employer’s policies concerning the use of AI development tools, and only 25% of them are using an automated scanning tool to assure the security of the code those tools suggest.
+
+At SAP, “we educate developers on their responsibility to use AI coding assistants. We communicate that the AI coding assistant is only a copilot. As the pilot, the developer is firmly in charge of their code,” says Shetty. “We have created a list of dos and don’ts for our developers to responsibly use AI coding assistants at SAP, which includes guidance from experts on legal, data protection, privacy and security topics.”
+
+Management oversight is also needed to reduce the amount of unvetted code developers cut and paste into new systems that will eventually require review or fixing, says the GitClear study. Without a “CTO or VP of engineering who actively schedules time to reduce tech debt,” it’s all too easy to let such code find its way into production and become a future headache for the business, the study says.
+
+Oversight also should extend to the vendors who provide an organization’s GenAI tools.
+
+Joshi of Everest Group recommends asking such vendors how their AI tools check for copyrighted code in the data used to train their models, what levels of access security they maintain for their developer environments, and how they guard against e-mail hacks or phishing.
+
+Joshi also recommends that companies understand a vendor’s indemnification policy at the beginning of their contract negotiations. Some vendors may only offer such a policy to specific clients, he says.
+
+Andy Thurai, VP and principal analyst at Constellation Research, recommends holding vendors’ feet to the fire. Businesses may take measures such as demanding that their vendors offer an isolated GenAI instance hosted just for them (versus a multi-tenant system also used by others), a secure interface to the GenAI model, isolation of business data firewalled from other companies’ data, and a guarantee that the vendors will not store or use company data to retrain their models, he says.
+
+“If you use an AI tool that doesn't offer unlimited indemnity for the output they produce and its derivatives, your organization will be exposed to liabilities,” says Thurai. “The efficiency and cost savings that comes from using them may not be worth the legal liabilities that your organization is exposed to.”
+
+Upskilling your workforce for the AI era
+
+Advice for companies and employees for incorporating AI into existing work and seizing opportunities to elevate skills.
+
+Read more
+
+Managing the future
+
+The excitement for GenAI-enabled development tools is understandable given the benefits on offer. But even as businesses balance these benefits with the risks the tools introduce, it’s worth taking time to think about the next round of challenges in using AI-aided development tools.
+
+For example, will the proliferation of GenAI tools mean that developers will lose basic programming skills through overreliance on GenAI? What will be the effect on corporate culture if developers come to rely on AI more than each other?
+
+In the short term, business leaders must satisfy their developers’ curiosity about AI-enabled coding assistants and minimize risk to the company with the right security and other guidelines in place. The benefits are too great to wait. If businesses wait for GenAI to turn out perfect code, they will lose out on efficiency gains and increases in morale. The best course of action is to use GenAI for coding but with guardrails. Don’t treat its output like gospel.
+
+/content/sapcom/countries/en_us/fragments/insights/article-details
+
+Read More
+
+/content/sapcom/countries/en_us/resources/what-is-app-development
+
+/content/sapcom/countries/en_us/resources/digital-transformation-strategy-road-map
+
+/content/sapcom/countries/en_us/blogs/6-surprising-innovations-for-the-future-of-computing
+
+location
+
+document-footer
+
+location
+
+sidebar

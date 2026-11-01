@@ -1,0 +1,113 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/increased-api-latency-since-12-25/3271
+page path  : /t/increased-api-latency-since-12-25/3271
+captured   : 2026-01-21 21:27:37 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/perplexity/community.perplexity.ai_t_increased-api-latency-since-12-25_3271__f42cd67c.html.gz
+========================================================================
+
+Increased API latency since 12/25 - Bug Reports - Perplexity API Platform Forum
+
+Increased API latency since 12/25 - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Increased API latency since 12/25
+
+Bug Reports
+
+sonar-pro
+,
+
+chat-completions
+,
+
+node-sdk
+
+R6_James
+
+December 28, 2025, 12:44am
+
+1
+
+We have an API Service that is utilizing Perplexity’s chat completion via the official NodeJS SDK. We’re using the sonar-pro model with high reasoning effort. With no changes on our end, we’ve started noticing a huge increase in latency from perplexity API, we were originally averaging requests in the 3-10 second range and now we’re seeing 30+ second requests with the exact same prompt / configurations. Has something changed internally and is this is expected? is there a service degradation that we should be aware of? I am happy to provide any additional details or information to help figure this out, just hoping to get some clarity as this is impacting our customers.
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+API very slow / returning 5xx errors
+
+General
+
+2
+
+147
+
+May 15, 2025
+
+Api request speed is very slow, is there any solution？
+
+Bug Reports
+
+2
+
+431
+
+May 15, 2025
+
+Perplexity charged $5 (USD) in only 03 requests
+
+General
+
+sonar-deep-research
+
+,
+
+node-sdk
+
+0
+
+36
+
+November 10, 2025
+
+After updating: Network timeout at: https://api.perplexity.ai/chat/completions
+
+Bug Reports
+
+4
+
+264
+
+May 15, 2025
+
+Subpar responses when using pplx api when compared to perplexity labs
+
+General
+
+2
+
+138
+
+May 15, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

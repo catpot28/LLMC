@@ -1,0 +1,752 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/identity-first-ai-governance-securing-the-agentic-workforce/
+page path  : /blog/identity-first-ai-governance-securing-the-agentic-workforce/
+captured   : 2026-04-19 01:56:30 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/datarobot/www.datarobot.com_blog_identity-first-ai-governance-securing-the-agentic-workforce__ea6f781d.html.gz
+========================================================================
+
+Identity-first AI governance: Securing the agentic workforce | DataRobot Blog
+
+Identity-first AI governance: Securing the agentic workforce | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Agents
+
+Our agents are engineered to drive innovation, scale effortlessly, and deliver meaningful impact across departments and industries.
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Identity-first AI governance: Securing the agentic workforce
+
+AI agents are now operating inside production systems, querying Snowflake, updating Salesforce, and executing business logic autonomously. In many enterprises, they authenticate using static API keys or shared credentials rather than distinct identities in the corporate IDP.
+
+Authenticating autonomous systems through shared credentials introduces real governance risk.
+
+When an agent executes an action, logs often attribute it to a developer key or service account instead of a clearly defined autonomous actor. Attribution becomes ambiguous. Least privilege weakens. Revocation may require rotating credentials or modifying code rather than disabling a governed identity. In a non-deterministic environment, that delay slows investigation and containment.
+
+Shared credentials turn autonomous systems into “shadow identities”: actors operating inside production without a distinct, governed identity in the enterprise directory.
+
+Most organizations have monitoring and guardrails in place. The issue is structural. Autonomous systems are operating outside first-class identity governance within the same control plane that secures human users. Closing this gap requires aligning agents with the identity model that governs your workforce, ensuring every autonomous actor is traceable, permission scoped, and centrally revocable.
+
+The hidden risk: Modern agentic AI is non-deterministic
+
+Traditional enterprise software follows predefined logic. Given the same input, it produces the same output.
+
+Agentic AI systems operate differently. Instead of executing a fixed script, they use probabilistic models to:
+
+Evaluate context
+
+Retrieve information dynamically
+
+Construct action paths in real time
+
+If you instruct an agent to optimize a supply chain route, it may reference weather forecasts, fuel cost data, and historical performance before determining a route. That flexibility enables agents to solve complex, multi-system problems that traditional software cannot address.
+
+However, non-deterministic systems introduce new governance considerations
+:
+
+Execution paths may vary from one request to the next.
+
+Retrieved data sources may differ depending on context.
+
+Outputs can contain reasoning errors or inaccurate conclusions.
+
+Actions may extend beyond what a developer explicitly scripted.
+
+When a system can continuously access company data and execute actions autonomously, it cannot be governed like a static application.
+It requires clear identity attribution, tightly scoped permissions, continuous monitoring, and centralized revocation authority.
+
+Why credential-based security breaks in agentic environments
+
+Most enterprises still secure AI agents using static API keys or shared service credentials. That model worked when software executed predictable logic. It breaks down when autonomous systems operate across production environments.
+
+When an agent authenticates with a shared credential, activity is logged but not clearly attributed. A Salesforce update or Snowflake query may appear to originate from a developer key rather than from a distinct autonomous system. Attribution becomes blurred. Least privilege is harder to enforce. Containment depends on rotating credentials or modifying code instead of disabling a governed identity.
+
+The problem is identity governance, not monitoring visibility.
+
+Traditional security assumes credentials map to accountable users or services. Shared credentials break that assumption. In a non-deterministic environment, that ambiguity slows investigation and increases exposure.
+
+The strategic shift: Identity-first governance
+
+The governance gap created by shadow identities cannot be solved with additional monitoring. It requires a structural shift in how autonomous systems are governed.
+
+When a system can dynamically retrieve data, generate probabilistic outputs, and execute actions across enterprise platforms, it is no longer just an application. It is an operational actor. Governance must reflect that.
+
+Identity-first governance treats autonomous systems as first-class identities within the same directory that governs human users.
+
+Each agent receives a distinct identity, clearly scoped permissions, and auditable activity attribution.
+
+This changes the control model. Access is tied to identity rather than static credentials. Actions are logged to a specific actor. Permissions can be adjusted without modifying code. Revocation occurs at the identity layer, not inside application logic.
+
+The result is a unified identity plane for human and autonomous actors. Instead of building parallel AI security stacks, organizations extend existing identity controls. Policy remains consistent. Incident response remains centralized. Innovation scales without fragmenting governance.
+
+A practical example: Identity backed agents in practice
+
+One architectural response to the identity governance gap is to provision autonomous systems as first-class identities inside the corporate directory, rather than authenticating them through static API keys.
+
+This approach requires coordination between agent orchestration and enterprise identity infrastructure. Through a deep integration between DataRobot and
+Okta
+, organizations can now provision agents built in the DataRobot Agentic Workforce Platform as governed, first-class identities directly inside Okta.
+Agents deployed within the
+DataRobot Agentic Workforce Platform
+can be provisioned as governed identities inside Okta instead of relying on shared credentials.
+
+In this model, each agent receives a directory backed identity. Authentication occurs through short lived, policy controlled tokens rather than long lived credentials embedded in code. Actions are logged to a specific autonomous actor. Permissions are scoped using existing least privilege controls.
+
+This directly addresses the attribution and revocation challenges described earlier.
+When an agent is deployed, its identity is created within the corporate IDP. When permissions change, governance workflows apply.
+If behavior deviates from expectation, security teams can restrict or disable the agent at the identity layer, immediately adjusting its access across integrated systems such as Salesforce or Snowflake.
+
+The impact is operational. Autonomous systems become visible actors inside the same identity plane that secures human users. Rather than introducing a parallel AI security stack, organizations extend the controls they already operate and audit.
+
+Three governance principles for agentic AI
+
+As autonomous systems move into production environments, governance must become explicit. At minimum, three principles are essential.
+
+1. Eliminate static credentials
+
+Autonomous systems should not authenticate through long lived API keys or shared service accounts. Production agents must use short lived, policy controlled credentials tied to a governed identity. If an autonomous system can access enterprise systems, it must authenticate as a distinct actor within the identity provider.
+
+2. Audit the actor, not the platform
+
+Security logs should attribute actions to specific autonomous identities, not to generic services or developer keys. In non-deterministic systems, platform level visibility is insufficient. Governance requires actor level attribution to support investigation, anomaly detection, and access review.
+
+3. Centralize revocation authority
+
+Security teams must be able to restrict or disable an autonomous system through the primary identity control plane. Containment should not depend on code changes, credential rotation, or redeployment. Identity must function as an operational control surface.
+
+Non-deterministic systems are not inherently unsafe. But when autonomous systems operate without identity level governance, exposure increases. Clear identity boundaries convert autonomy from a governance liability into a manageable extension of enterprise operations.
+
+AI governance is workforce governance
+
+Agentic systems now operate inside core workflows, access regulated data, and execute actions with real consequence. Governance models designed for deterministic software are not sufficient for autonomous systems.
+
+If a system can act, it must exist as a governed identity within the same control plane that secures your workforce.
+Identity becomes the foundation for attribution, least privilege, monitoring, and centralized revocation. When agents operate inside the corporate directory rather than outside it, oversight scales with innovation.
+
+This model is taking shape through closer integration between agent orchestration platforms and enterprise identity providers, including the collaboration between DataRobot and Okta. Rather than building parallel AI security stacks, organizations can extend the identity infrastructure they already operate to autonomous systems. To see how identity-backed agents can operate securely inside enterprise environments, explore
+The Enterprise Guide to Agentic AI
+or schedule a demo to learn how DataRobot and
+Okta
+integrate agent orchestration with enterprise identity governance.
+
+Related posts
+
+See other posts in AI for Leaders
+
+New
+
+Blog
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+Read More
+
+April 13, 2026
+
+|
+8 min read
+
+Blog
+
+Why enterprise AI ROI starts with observability
+
+Read More
+
+April 10, 2026
+
+|
+7 min read
+
+Authors
+
+by
+
+Jayanth Rajashekariah
+
+,
+
+Prachi Hetamsaria
+
+March 16, 2026
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Leaders
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+April 13, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Leaders
+
+Why enterprise AI ROI starts with observability
+
+April 10, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Leaders
+
+Best agentic AI platforms: Why unified platforms win
+
+April 8, 2026
+
+|
+10 min read
+
+Read More
+
+Related posts
+
+See other posts in AI for Leaders
+
+New
+
+Blog
+
+Agentic AI costs more than you budgeted. Here’s why.
+
+Read More
+
+April 13, 2026
+
+|
+8 min read
+
+Blog
+
+Why enterprise AI ROI starts with observability
+
+Read More
+
+April 10, 2026
+
+|
+7 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Agents
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Oil and Gas
+
+Financial Services
+
+Government
+
+Healthcare
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+NVIDIA GTC
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

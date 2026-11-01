@@ -1,0 +1,270 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/building-an-agent-for-our-own-docs
+page path  : /blog/building-an-agent-for-our-own-docs
+captured   : 2026-06-08 21:06:46 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_building-an-agent-for-our-own-docs__ab909a0f.html.gz
+========================================================================
+
+Building an effective Voice Agent for our own docs
+
+Building an effective Voice Agent for our own docs
+Skip to content
+ElevenCreative
+ElevenAgents
+ElevenAPI
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Contact sales
+Log in
+Contact Sales
+Learn More
+Learn More
+Blog
+Product
+Building an effective Voice Agent for our own docs
+Written by
+Oswin
+
+Kruger Ruiz
+Published
+Jan 21, 2025
+Last updated
+Apr 7, 2026
+Listen
+Listen to this article
+0:00
+0:00
+0:00
+1.0x
+Contact Sales
+Learn More
+On this page
+Introduction
+Our goals
+Results and Impact
+Strengths and Limitations
+How we built it
+Summary
+At ElevenLabs, we recently embedded a Conversational
+AI voice agent
+in our docs to help reduce the support burden for documentation-related questions (Test it out
+here
+). Our support agent is now successfully handling
+over 80%
+of user inquiries across
+200 calls per day
+. These results demonstrate the potential for AI to augment traditional documentation support while highlighting the continued importance of human support for complex queries. In this post, I will detail our iterative process you can follow to replicate our success.
+Our goals
+We set out to build an agent that can:
+Resolve support questions that can be answered from the context of our product and support documentation
+Redirect users to relevant documentation sections
+Forward complex queries to email/discord support when needed
+Have a fluid and natural conversation, with low latency and realistic interruption handling
+Results and Impact
+We implemented two layers of evaluation:
+(1) AI Evaluation Tooling
+: For each call, our built-in evaluation tooling runs through the finished conversation and evaluates if the agent has been successful. The criteria is fully customizable. We ask if the agent solved the user inquiry, or was able to redirect them to a relevant support channel.
+We have been able to steadily improve the ability of the LLM to solve or redirect the inquiry successfully, reaching 80% according to our evaluation tooling.
+Excluding calls with less than 1 turn in the conversation, which imply no question / issue was raised by the caller.
+Now, it’s important to consider that not all types of support queries or questions can be solved by an LLM, especially for a startup that builds fast and innovates constantly, and with extremely technical and creative users. As an additional disclaimer, an evaluation LLM will not evaluate correctly 100% of the time.
+(2) Human Validation
+: To contrast the efficacy of our LLM validation tooling, we conducted a human validation of 150 conversations, using the same evaluation criteria provided to the LLM tooling:
+solved_user_inquiry
+: defined as success when the agent answered the user questions with relevant information or was able to redirect to the relevant page / support channel.
+The LLM and the Human agreed on
+81%
+of cases
+hallucination_kb
+: this criteria will check the final transcript and verify if the answers given to by the LLM about ElevenLabs products adhere to the information in the knowledge base or go beyond it.
+The LLM and the Human agreed on
+83%
+of cases
+The human evaluation also revealed that
+89%
+of relevant support questions were answered or redirected correctly by the Documentation agent.
+Other findings:
+Several callers just wanted to play around and try talking in different languages without asking a support question.
+Currently, our Conversational AI supports various languages, but these have to be defined at the start of the conversation.
+Several callers engage in conversations not relevant to the objective of the agent to talk about ElevenLabs, its products and documentation. Prompt guard rails helped most of the time, but not always.
+Several callers were looking for coding or debugging support.
+Strengths and Limitations
+Strengths
+The LLM-powered agent is adept at resolving clear and specific questions that can be answered with our documentation, pointing callers to the relevant documentation, and providing some initial guidance on more complex queries. In most of these cases, the agent provides quick, straightforward, and correct answers that are immediately helpful.
+Questions include:
+Does ElevenLabs have an API endpoint for deleting a voice?
+How can I configure conversation overrides in my agent?
+How do I integrate with telephony?
+Does ElevenLabs support the spanish language?
+Recommendations:
+Target an audience that will mostly have clear / specific questions that an LLM with documentation and tools is good at answering.
+Leverage redirects to other channels for the vague questions / those requiring investigation. This helps a lot!
+Add evaluation tooling to capture all questions asked and monitor those -> adjust prompt with learnings. Add evaluation tooling for success and hallucinations/deviations from the knowledge base.
+Limitations
+On the flip side, the agent is less helpful with account issues, pricing/discount questions, or non-specific questions that would benefit from deeper investigation / querying. Also, issues that are fairly vague and generic -> despite being prompted to ask questions, the LLM usually favours answering with something that might seem relevant from the documentation.
+Questions include:
+The verification step of my PVC is repeatedly failing. Why?
+How much will an AI agent cost? Can I have a discount?
+I am getting an error with the JS SDK? -> The agent can redirect the relevant documentation, but cannot find and resolve the issue easily via voice.
+Recommendations
+Voice is not the right medium to share code. Prompt it not to try, but instead to redirect to pages with examples or redirect to Discord/Support.
+Prompt the agent to not answer in long lists of recommendations when the issues / questions are more complicated. This works in text, but less via voice.
+LLMs tend to favour answering over asking questions - prompt it aggressively for that if needed for the support use case. (i.e. ask these 3 questions before moving on). This is easier for outbound use case cases with fixed scripts.
+How we built it
+Agent Configuration:
+System Prompt
+“You are a technical support agent named Alexis. You will try to answer any questions that the user might have about ElevenLabs products. You will be given documentation on ElevenLabs products and should only use this information to answer questions about ElevenLabs. You should be helpful, friendly and professional. If you're unable to answer the question, redirect callers with redirectToEmailSupport (which opens an email on their end to support), if that does not seem to work, they can email directly to
+team@elevenlabs.io
+.
+If the question or issue is not fully clear or specific enough, ask for more details and for which product they are requesting support. If the question is vague or very broad, ask them more specifically what they are trying to achieve and how.
+Strictly stick to the language of your first message in the conversation, even when asked or spoken to in a different language. Say that it's better if they end and re-start the call, selecting the desired alternative language.
+Your output will be read by a text to speech model so it should be formatted as it is pronounced. For example: instead of outputting "please contact team@elevenlabs.io" you should output "please contact 'team at elevenlabs dot I O'". Do not format your text response with bullet points, bold or headers. Do not return long lists but instead summarize them and ask which part the user is interested in. Do not return code samples but instead suggest the user views the code samples in our documentation. Return the response directly, do not start responses with "Agent:" or anything similar. Do not correct spelling mistakes, simply ignore them.
+Answer succinctly in a couple of sentences and let the user guide you on where to give more detail.
+You have the following tools at your disposal. Use them as appropriate based on the user's request:
+`redirectToDocs`:
+- When to use: In most situations, especially when the user needs more detailed information or guidance.
+- Why: Providing direct access to documentation is helpful for complex topics, ensuring the user can review and understand the content on their own.
+`redirectToEmailSupport`:
+- When to use: If the user requires assistance with personal or account-specific issues.
+- Why: Account-related inquiries are best handled by our support team via email, where they can securely access relevant details.
+`redirectToExternalURL`:
+- When to use: If the user asks about enterprise-level solutions or wants to join external communities such as our Discord server. Also if they seem to be a developer having technical difficulties with ElevenLabs.
+- Why: Enterprise inquiries and community interactions fall outside the scope of direct in-platform support and are better handled through external links.
+Guardrails:
+- Stick to Elevenlabs related topics and products. If someone asks about non-elevenlabs subjects, say you are only here to answer about Elevenlabs products.
+- Only redirect the caller to one page at a time, as each redirect overrides the previous one.
+- Don't answer in long lists or with code. Instead direct to the documentation for coding samples.”
+Knowledge Base
+Alongside the prompt, we are passing the LLM a Knowledge Base of relevant information in the context. This knowledge base includes a summarised, but still large (80k characters) version of all ElevenLabs documentation, as well as some relevant URLs.
+We are also adding clarifications and FAQs as part of the knowledge base.
+Tools
+We have three tools configured:
+redirectToExternalURL: redirects to contact sales or to discord.
+redirectToEmailSupport: open up email to
+team@elevenlabs.io
+redirectToDocs: this tool is configured to redirect the caller to relevant pages within our documentation.
+Built-in Evaluation
+Our evaluation tooling involves an LLM going over the final transcript and assessing the conversation against defined criteria.
+Evaluation Criteria (success / failure / unknown)
+hallucination_kb: this criteria will check the final transcript and verify if the answers given to by the LLM about ElevenLabs products adhere to the information in the knowledge base or go beyond it.
+interaction: assesses if the conversation went beyond one turn of conversation. A quick way to mark if conversations were started but never engaged with.
+solved_user_inquiry: defined as success when the agent answered the user questions with relevant information or was able to redirect to the relevant page / support channel.
+positive_interaction: assess if the conversation went without negative caller reactions.
+Data Collection:
+Issue_type: categorize the conversation as bug, support issue, fr or other
+Product category: extract the relevant product (TTS, ConvAI, etc)
+AllQuestions: extract all questions asked by the caller
+Unsolved_question: extract questions not answered by the LLM with relevant information
+Redirects: extract the redirect paths triggered by the agent and the reaction of the caller
+Summary
+Our documentation agent has proven to be effective for helping users navigate common product and support questions, and is an engaging copilot for users navigating our docs. We’re able to consistently iterate and improve our agent through continuous automated and manual monitoring. We recognize that not all types of support queries or questions can be solved by an LLM, especially for a startup that builds fast and innovates constantly, and with extremely technical and creative users. But we’ve found that the more we are able to automate, the more time our team can spend focused on tackling the tricky and interesting problems that come up at the margins as our community continues to push the boundaries of what is possible with AI Audio.
+Our agent is powered by
+ElevenLabs Conversational AI
+. If you’d like to reproduce my results, you can
+create an account for free
+and follow my steps. If you get stuck, you can speak to the agent we’ve deployed
+on our docs
+or get in touch with me and my team in
+Discord
+. For high volume use cases (>100 calls per day),
+contact our sales team for volume discounts
+.
+Similar articles
+Introducing Conversational AI Agents
+Category
+Product
+Date
+Dec 3, 2024
+Meet Flash
+Category
+Research
+Date
+Dec 18, 2024
+How we scaled inbound sales with an AI SDR that can qualify 78% of leads end-to-end
+Category
+Product
+Date
+Oct 10, 2025
+Introducing Agent Workflows
+Category
+Product
+Date
+Oct 6, 2025
+Create with the highest quality AI Audio
+Contact Sales
+Sign up
+English
+ElevenCreative
+Text to Speech
+Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Studio
+Voice Design
+AI Voice Generator
+AI Image Generator
+AI Video Generator
+ElevenAgents
+Voice Agents
+Conversational AI
+Integrations
+Telecommunications
+Financial Services
+Healthcare
+Technology
+Retail & E-commerce
+Customer Support
+Chatbots
+ElevenAPI
+API Reference
+Agents API
+Speech Engine
+Dubbing API
+Text to Speech API
+Speech to Text API
+Sound Effects API
+Music API
+API Key
+Resources
+Blog
+Iconic Marketplace
+Impact Program
+Startup Grants
+Help Center
+Webinars
+Docs
+Enterprise
+Trust Center
+India
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Careers
+Safety
+Brand & Press Kit
+ElevenLabs Summit
+Policies
+Terms
+Privacy
+EU Digital Services Act (DSA)
+Modern Slavery Policy
+CCPA Notice
+EU-US DPF Policy
+AI Transparency
+Cookie Settings
+Voice chat

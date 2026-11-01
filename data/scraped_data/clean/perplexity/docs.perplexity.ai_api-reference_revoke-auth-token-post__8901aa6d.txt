@@ -1,0 +1,170 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/api-reference/revoke-auth-token-post
+page path  : /api-reference/revoke-auth-token-post
+captured   : 2026-05-20 19:09:41 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_api-reference_revoke-auth-token-post__8901aa6d.html.gz
+========================================================================
+
+Revoke Auth Token - Perplexity
+
+Revoke Auth Token - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Authentication
+Revoke Auth Token
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Agent API
+POST
+Create Agent Response
+GET
+List Models
+Search API
+POST
+Search the Web
+Sonar API
+POST
+Create Chat Completion
+POST
+Create Async Chat Completion
+GET
+List Async Chat Completions
+GET
+Get Async Chat Completion
+Embeddings API
+POST
+Create Embeddings
+POST
+Create Contextualized Embeddings
+Authentication
+POST
+Generate Auth Token
+POST
+Revoke Auth Token
+Revoke Auth Token
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/revoke_auth_token
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"auth_token": "pplx-1234567890abcdef"
+
+}
+
+'
+Authentication
+Revoke Auth Token
+Copy page
+Revokes an existing authentication token.
+Copy page
+POST
+/
+revoke_auth_token
+Try it
+Revoke Auth Token
+cURL
+curl
+--request
+POST
+\
+
+--url
+https://api.perplexity.ai/revoke_auth_token
+\
+
+--header
+'Authorization: Bearer <token>'
+\
+
+--header
+'Content-Type: application/json'
+\
+
+--data
+'
+
+{
+
+"auth_token": "pplx-1234567890abcdef"
+
+}
+
+'
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+Authorizations
+​
+Authorization
+string
+header
+required
+Bearer authentication header of the form
+Bearer <token>
+, where
+<token>
+is your auth token.
+Body
+application/json
+​
+auth_token
+string
+required
+The authentication token to revoke.
+Example
+:
+"pplx-1234567890abcdef"
+Response
+200
+Successfully revoked authentication token.
+Was this page helpful?
+Yes
+No
+Generate Auth Token
+Previous
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

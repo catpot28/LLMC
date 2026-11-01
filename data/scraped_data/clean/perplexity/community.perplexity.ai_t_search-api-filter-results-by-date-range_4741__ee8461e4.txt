@@ -1,0 +1,138 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/search-api-filter-results-by-date-range/4741
+page path  : /t/search-api-filter-results-by-date-range/4741
+captured   : 2026-04-12 12:29:53 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_search-api-filter-results-by-date-range_4741__ee8461e4.html.gz
+========================================================================
+
+Search API — Filter Results by Date Range - Announcements - Perplexity API Platform Forum
+
+Search API — Filter Results by Date Range - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Search API — Filter Results by Date Range
+
+Announcements
+
+Kesku
+
+October 29, 2025, 5:00pm
+
+1
+
+New in the Perplexity Search API — developers can now filter search results by specific time periods or recency.
+
+Perfect for getting only the most recent results or narrowing to a specific date window.
+
+img_date_filter.jpg
+1166×832 66.6 KB
+
+# Simple recency filter
+search = client.search.create(
+query="AI safety research",
+search_recency_filter="month"
+)
+
+# Precise date range
+search = client.search.create(
+query="AI safety research",
+search_after_date_filter="01/01/2025",
+search_before_date_filter="06/30/2025"
+)
+
+Available recency values:
+hour
+,
+day
+,
+week
+,
+month
+,
+year
+.
+
+Docs:
+Date/Time Filters
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Date Range Filtering Capability for Search API
+
+Feature Requests
+
+search-api
+
+2
+
+100
+
+October 22, 2025
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Search API — Filter by Specific Domains
+
+Announcements
+
+0
+
+0
+
+October 13, 2025
+
+Perplexity Search API on Vercel AI Gateway
+
+Announcements
+
+0
+
+2
+
+January 15, 2026
+
+Query Length restriction in Search API
+
+General
+
+search-api
+
+0
+
+50
+
+October 9, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

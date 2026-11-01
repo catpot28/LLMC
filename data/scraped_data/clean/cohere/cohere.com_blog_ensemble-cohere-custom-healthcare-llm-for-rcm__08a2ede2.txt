@@ -1,0 +1,320 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/blog/ensemble-cohere-custom-healthcare-llm-for-rcm
+page path  : /blog/ensemble-cohere-custom-healthcare-llm-for-rcm
+captured   : 2026-04-14 20:57:40 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/cohere/cohere.com_blog_ensemble-cohere-custom-healthcare-llm-for-rcm__08a2ede2.html.gz
+========================================================================
+
+Ensemble Brings Agentic AI to RCM Platform with Cohere
+
+Ensemble Brings Agentic AI to RCM Platform with Cohere
+Products
+Products
+
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Transcribe
+NEW
+A speech recognition model for generating highly accurate audio transcripts
+Aya
+A family of multilingual research models covering 70+ languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Telecommunications
+Model Vault
+Your dedicated, secure model inference platform — managed by Cohere
+Security
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Community
+Discord
+Events
+On-Demand Events
+Customer Stories
+Explore enterprise AI case studies and success stories
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+Mar 31, 2026
+5 minute read
+Ensemble and Cohere building the first RCM‑native healthcare LLM
+
+Blog
+Written By
+Neeral Beladia
+Member of Technical Staff
+Tags
+Healthcare & Life Sciences
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Key takeaways
+US healthcare’s first RCM-native LLM
+Custom model shaped by insights, expertise, processes
+Unlocks opportunities for automated orchestration in RCM
+The healthcare payments ecosystem is a labyrinth, producing friction and the risk of loss at every turn.
+Ensemble
+offers an end-to-end revenue cycle management (RCM) solution tailored to the needs of the healthcare industry. Their team of experts and an AI-powered platform help providers like hospitals, health systems, and medical groups orchestrate the revenue cycle across people, processes, and technology, from scheduling to final bill.
+At Cohere, we’re excited to
+continue our partnership
+with Ensemble to build the US healthcare industry’s first RCM-native large language model (LLM). Unlike recent market offerings that wrap prompts around general purpose LLMs, Ensemble and Cohere are creating a fully custom model shaped by RCM insights, long-standing operator expertise, and well-defined processes to deliver measurable, reliable performance for health systems. Purpose‑built for healthcare’s complexity, this capability strengthens Ensemble’s ability to orchestrate the revenue cycle with precision and confidence.
+Benefits of a healthcare RCM-native LLM
+Generic LLMs may be powerful, but they lack the precision and speed of a model that’s been fine-tuned on industry- and business-specific knowledge. Bridging that gap can require significant context engineering during inference, creating a trade-off between supplying enough domain context and preserving the model’s ability to reason effectively. In addition, it is very difficult for a generic model to understand an organization’s industry knowledge, such as an accounts receivable operator’s bespoke patterns of how they review and resolve outstanding issues.
+Healthcare RCM complexity is driven by industry‑wide rules, regulations, and payer behavior that generic models cannot fully understand through prompts alone. A customized, secure strategy that is grounded in industry expertise and amplified by technology is essential to deliver reliable results.
+This smaller-sized model aligns with an industry like healthcare finance with a complex, highly regulated ecosystem. We’re not alone, the analyst Gartner® cites, “Smaller, efficient models support secure, on-premises deployments and lower costs. Domain-specific models are key for regulatory compliance and sovereign AI, leading to greater fragmentation and localization of models and data.”(1)
+Model customization and building a benchmark together
+Based on Cohere’s
+Command
+family of AI models, the new LLM will use our own post-training data and synthetic data generation pipelines, as well as our proven
+customization strategies and techniques
+. This custom model will leverage Cohere’s pre-training and post-training data, reinforcement learning environments, and public healthcare RCM knowledge sources for domain adaptation, alongside Ensemble’s operational logs for capability-focused customization. Annotation from Ensemble specialists provides domain-level oversight to ensure that the model reflects real-world RCM orchestration and decision-making patterns.
+A key component of this approach is incorporating data derived from Ensemble’s operational logs, which capture how claims are reviewed and resolved in practice with situational factors infused. This allows the model to learn and apply consistent processing patterns across tasks, such as claim review and denial resolution, improving accuracy and reducing variability in outcomes. These patterns are highly specialized and proprietary, shaped by operator experience and Ensemble-specific guardrails, leading to consistent and accurate outcomes in complex claim scenarios that general-purpose models can not capture.
+Cohere and Ensemble will also establish a domain-specific benchmark to evaluate core model capabilities for healthcare RCM. This evaluation framework defines performance standards across key capabilities, including domain knowledge, reasoning accuracy, and agentic automation, and benchmarks performance against general-purpose models to demonstrate superior performance on healthcare RCM-specific tasks.
+About our new LLM
+This first healthcare RCM–focused LLM is developed through continual pre-training and customized post-training to domain-adapt a pre-trained Cohere model and deliver a custom LLM that is strong at performing Ensemble's complex agentic reasoning. It incorporates Ensemble’s proprietary data and healthcare expertise, along with deeply customized capabilities, to support complex reasoning, agentic orchestration, and coordinated decision‑making across the full revenue cycle. This includes training the model in simulated RCM environments to learn multi-step claim resolution strategies.
+By combining a strong base understanding of healthcare RCM with Ensemble-specific knowledge, including coding practices, standard rules, and operational guidelines derived from real-world operator processes, the model delivers a reliable and context-aware performance across a wide range of revenue cycle management tasks.
+This capability layers reasoning and decision‑making on top of existing EHRs, improving revenue cycle orchestration without replacing core platforms
+Opportunities for automation in healthcare RCM
+Our collaboration with Ensemble focuses on the manual RCM orchestrations that produce the highest operational overhead, starting with administrative and clinical use cases.
+Financial orchestration: Reducing friction and accelerating payment
+Issuing invoices and receiving payments involve several tasks that traditionally have been performed manually. The stability and predictability of a healthcare organization’s revenue depend on accurate, timely billing and the lowest possible number of claim denials.
+Accounts receivable intelligence:
+The model learns payer denial patterns and predicts claim risk before submission — flagging documentation gaps, coding inconsistencies and authorization issues early.
+Value: Prevent delays by avoiding denials rather than processing them faster.
+Billing quality assurance:
+It monitors billing in real time and learns from audits and expert corrections as payer rules and enforcement evolve. Our enterprise model infrastructure enables this continuous QA loop to operate securely at scale.
+Value: Continuous QA with less retrospective rework and time, lowered compliance risk.
+Clinical orchestration: Guiding documentation at the point of care
+Utilization review and documentation guidance:
+The model predicts when medical‑necessity documentation will be scrutinized and guides clinicians at the point of care to capture the right evidence — reducing preventable denials.
+Value: Fewer denials and less administrative burden, with tighter alignment between clinical intent and reimbursement.
+Clinical appeals as exception of handling:
+Appeals become the exception. When escalation is needed, the system assembles payer‑specific documentation using patterns from past successes and expert feedback — powered by our foundation model and refined by Ensemble’s operational history.
+Value: Higher appeal win rates with far less manual effort.
+With agentic AI and a custom LLM in place, Ensemble builds agents to automate orchestration and deliver a document that meets payer requirements. Nurse practitioners, doctors, and staff save time and effort, and the hospital saves operating costs and increases collections.
+A new era of healthcare RCM innovation
+With an RCM‑native LLM embedded across operations, Ensemble is moving the revenue cycle toward a self‑improving intelligence layer. Fueled by our secure enterprise and AI stack, this partnership can help health systems reduce administrative friction so patients get access to care faster.
+Learn more about
+Cohere for the healthcare industry
+, or
+reach out to us
+to discuss your specific business needs.
+(1) Roberta Cozza,
+Gartner, Emerging Tech: AI Vendor Race — The Multibillion-Dollar Mistake: One-Size-Fits-All LLMs Are Failing Tech Providers
+, 06 March, 2025. Gartner is a trademark of Gartner, Inc. and/or its affiliates.
+Blog
+Written By
+Neeral Beladia
+Member of Technical Staff
+Tags
+Healthcare & Life Sciences
+Share
+AI isn’t a shortcut.
+It’s how business gets ahead.
+Contact sales
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Products
+North
+Compass
+Command
+Transcribe
+Embed
+Rerank
+Customization
+Pricing
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Telecommunications
+Deployment Options
+Model Vault
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Cohere ©
+2026
+Privacy
+Terms of Use
+SaaS Agreement
+Manage Cookies
+English

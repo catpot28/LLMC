@@ -1,0 +1,739 @@
+=== SOURCE =============================================================
+company    : Datarobot (datarobot)
+url        : https://www.datarobot.com/blog/bias-mitigation-with-datarobot/
+page path  : /blog/bias-mitigation-with-datarobot/
+captured   : 2026-06-10 06:38:55 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/datarobot/www.datarobot.com_blog_bias-mitigation-with-datarobot__ed0757b9.html.gz
+========================================================================
+
+Bias Mitigation with DataRobot | DataRobot Blog
+
+Bias Mitigation with DataRobot | DataRobot Blog
+
+Skip to content
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Why DataRobot
+
+Why DataRobot
+
+Discover the benefits and impact of DataRobot.
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Agent Solutions
+
+Some agents modernize how your business runs. Others unlock what wasn’t possible before. Build both with DataRobot.
+
+Agents by Industry
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Agents by Function
+
+Finance
+
+Supply Chain & Operations
+
+Platform
+
+Platform
+
+Our platform and solutions integrate into core business processes so teams can build, operate and govern AI at scale.
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Tech Partners
+
+Learn about our ecosystem of technology partners that power and extend the DataRobot platform.
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Resources
+
+Explore all resources to learn more about DataRobot.
+
+Watch
+
+Demo Center
+
+Webinars
+
+Connect
+
+Events
+
+Agents in the AM
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Support
+
+Documentation
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+About
+
+Explore the latest news, partnerships, and open positions at DataRobot.
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Log In
+
+Try DataRobot
+
+Request a Demo
+
+Resources
+
+Blog
+
+Bias Mitigation with DataRobot
+
+The ability to test models for algorithmic bias is an important part of ensuring that models are fair and balanced. Many platforms, including DataRobot’s Bias and Fairness suite, allow you to do this. However, correcting the biased behavior behind the models is more challenging. We’re excited to share that we’ve now extended our Bias and Fairness capabilities to include automated Bias Mitigation. With Bias Mitigation, you can make your models behave more fairly towards a feature of your choosing, which we’ll review in this post.
+
+Mitigation Workflows
+
+DataRobot offers two workflows for mitigating bias:
+
+Mitigate individual models of your choosing after starting Autopilot.
+
+Mitigate the top three models found on the leaderboard by configuring mitigation to run automatically as part of Autopilot.
+
+We’ll start with the individual model workflow and then move on to the automatic workflow. Many of the concepts between the two workflows are similar.
+
+The Use Case
+
+We’ll be using a use case that predicts income levels for individuals. The dataset includes features for race and gender. We want to make sure the model is not unfairly predicting low income levels for these groups. In the example below, we see a portion of our training data, including the target (green) and the features we’re examining bias towards (yellow).
+
+Checking for Bias
+
+Using DataRobot’s AutoML platform, we’ve developed a number of models and are now ready to evaluate them for bias. We’ve previously configured the Bias and Fairness
+
+tool, which is required to enable
+Bias Mitigation
+. Let’s take a look at this Light Gradient Boosted Trees Classifier.
+
+The
+Per-Class Bias
+insight tells us if classes in a feature are receiving different outcomes. Right now, we’re looking at the feature
+gender
+. Looking at the bar chart, we see that the classes are “male” and “female.” The chart tells us the ratio of women that receive the positive outcome— having an income over $50K—to that of men. We see that women are receiving the positive outcome at a ratio of 0.21 to that of men. This means that for every man that is predicted to have an income of over $50K, only 0.21 women are. Clearly, this model is biased and we need to apply corrective measures to it if we wish to deploy it in the future.
+
+Mitigating Bias
+
+Using
+Bias Mitigation
+, we can make this model behave more fairly towards women. Let’s navigate to the
+Bias Mitigation
+section of the
+Bias and Fairness tool
+to configure
+Bias Mitigation
+. First, we need to choose which feature we’d like the model to behave more fairly towards. In our case, that will be the feature
+gender
+.
+
+Next, we need to choose which mitigation technique to use. DataRobot offers two options:
+pre-processing reweighing
+and
+post-processing rejection option
+. Depending on the metric you are using to measure bias, these techniques will have different effects. Consulting the Bias and Fairness documentation will help guide you on the right mitigation technique to use. We’ll use
+post-processing rejection option
+for this use case.
+
+Finally, we have the option to include the feature we are mitigating on as a training input to the model. This means you can mitigate a model without it learning from the mitigation feature. This is useful in scenarios where you are prohibited from using certain features in a model. We will not include
+gender
+in this example.
+
+Selecting
+Apply
+will cause a mitigated version of our Light Gradient Boosted Tree Classifier to start running.
+
+Evaluating the Mitigated Model
+
+Our mitigated model can be identified on the leaderboard by the
+Bias Mitigation
+badge. If we look at the
+Blueprint
+, we see there is a new
+Bias Mitigation
+task. Otherwise, it is the same as the original model.
+
+Looking at
+Per-Class Bias
+under
+Bias and Fairness
+will show us just how much more fair this model has become. Now women are receiving much fairer outcomes and are almost at parity with men. You will recall that previously the ratio of women receiving the positive outcome to men was 0.21. Now it is 0
+.
+89
+.
+
+We can set thresholds of bias that are acceptable to us. A commonly used heuristic is the four-fifths rule, meaning classes need to receive the positive outcome at a ratio of 4/5 (or 0.80) to that of the most favored class. In the example above, the dotted line represents this fairness threshold. We see that mitigation has caused the predictions for women to cross this threshold and become acceptable to us.
+
+Automatic Mitigation
+
+To configure mitigation to run automatically, we need to navigate to
+Bias and Fairness
+under
+Advanced Options
+prior to starting a project. Looking at the
+Bias Mitigation
+section, we see the same options as before. We’ll use the same settings so we can see the result of automatic mitigation for our use case. Also shown in this screenshot are some of the settings required to configure
+Bias and Fairness
+.
+
+With these settings, we are ready to start Autopilot. DataRobot will automatically mitigate the top three models found and attempt to make them behave more fairly towards women.
+
+We’ve filtered the leaderboard on the
+Bias Mitigation
+badge. We see three mitigated models, which represent the mitigated versions of the top three models.
+
+To compare all the mitigated vs. non-mitigated models together, we can use the
+Bias vs Accuracy
+insight. This feature plots the accuracy of the models against their bias score. In the red box are the original non-mitigated versions of the top three models. In the green box are the mitigated versions of those models. We see that they have become much more fair and have even crossed the fairness threshold of 0.8 that we set for this model.
+
+Conclusion
+
+Evaluating AI bias is an important part of making sure your models are not perpetuating harm. With DataRobot Bias and Fairness, you can test your models for bias and take corrective action to make them behave more fairly.
+
+Demo
+
+Book a demo with our experts
+
+Learn how your team can develop, deliver, and govern AI apps and AI agents with DataRobot.
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Authors
+
+by
+
+Natalie Bucklin
+
+June 14, 2022
+
+|
+5 min read
+
+Share this resource
+
+Latest Posts
+
+AI for Practitioners
+
+Build an agent that writes its own tools
+
+June 4, 2026
+
+|
+8 min read
+
+Read More
+
+AI for Practitioners
+
+How to build a digital twin agent (with guardrails)
+
+June 2, 2026
+
+|
+7 min read
+
+Read More
+
+AI for Practitioners
+
+Industry-standard LLM benchmarks in DataRobot
+
+May 27, 2026
+
+|
+8 min read
+
+Read More
+
+Related posts
+
+See other posts in Inside the Product
+
+Blog
+
+A practical guide for platform teams managing shared AI deployments
+
+Read More
+
+May 22, 2026
+
+|
+8 min read
+
+Blog
+
+Talk to My Docs: A new AI agent for multi-source knowledge
+
+Read More
+
+December 5, 2025
+
+|
+7 min read
+
+Realize Value from AI, Fast.
+Get Started Today.
+
+Request a Demo
+
+Why DataRobot
+
+Discover
+
+AI Leaders
+
+AI Practitioners
+
+Validation
+
+Awards and Recognition
+
+Customers
+
+Enterprise AI Suite
+
+AI Apps & Agents
+
+Agentic AI Platform
+
+Solutions
+
+Department
+
+Finance
+
+Supply Chain & Operations
+
+Purpose-Built
+
+Government
+
+Oil and Gas
+
+Life Sciences
+
+Financial Services
+
+Manufacturing
+
+Co-Engineered
+
+NVIDIA
+
+SAP
+
+Platform
+
+AI Platform
+
+Agentic AI
+
+Generative AI
+
+Predictive AI
+
+AI Governance
+
+AI Observability
+
+AI Foundation
+
+Open Source
+
+Covalent
+
+syftr
+
+Learn More
+
+Integrations
+
+Services
+
+Tech Partners
+
+Co-Engineered
+
+NVIDIA
+
+Dell
+
+Nebius
+
+SAP
+
+Resources
+
+Watch
+
+Demo Center
+
+Webinars
+
+Read
+
+Analyst Reports
+
+Blog
+
+Customer Stories
+
+Data Sheets
+
+eBooks
+
+White Papers
+
+Connect
+
+Events
+
+Agents in the AM
+
+Support
+
+Documentation
+
+Training
+
+Support
+
+Learn More
+
+All Resources
+
+About
+
+Company
+
+Who We Are
+
+Careers
+
+Open Positions
+
+Contact Us
+
+Press
+
+Newsroom
+
+Partners
+
+Find a Partner
+
+Partner Portal
+
+Connect with us
+
+LinkedIn
+
+YouTube
+
+Legal
+
+Privacy
+
+Trust
+
+copyright © 2026 DataRobot, Inc - All Rights Reserved

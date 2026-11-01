@@ -1,0 +1,179 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/pro-search-now-generally-available-for-sonar-pro/4742
+page path  : /t/pro-search-now-generally-available-for-sonar-pro/4742
+captured   : 2026-04-12 12:55:34 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_pro-search-now-generally-available-for-sonar-pro_4742__d368fd09.html.gz
+========================================================================
+
+Pro Search — Now Generally Available for Sonar Pro - Announcements - Perplexity API Platform Forum
+
+Pro Search — Now Generally Available for Sonar Pro - Announcements - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Pro Search — Now Generally Available for Sonar Pro
+
+Announcements
+
+Kesku
+
+November 15, 2025, 6:00pm
+
+1
+
+Pro Search is now generally available for
+sonar-pro
+.
+
+Pro Search enhances your queries with automated tool usage, enabling multi-step reasoning through intelligent tool orchestration.
+
+What’s new
+
+Multi-step reasoning
+— the model automatically performs multiple web searches and fetches URL content to build comprehensive answers
+
+Real-time thought streaming
+— watch the model’s reasoning process as it works through your question
+
+Automatic classification
+— use
+search_type: "auto"
+to let the system route queries based on complexity
+
+Built-in tools
+—
+web_search
+and
+fetch_url_content
+are used automatically
+
+completion = client.chat.completions.create(
+model="sonar-pro",
+messages=[{"role": "user", "content": "Research solar panel ROI for California homes"}],
+search_type="pro",
+stream=True # Required for Pro Search
+)
+
+for chunk in completion:
+print(chunk.choices[0].delta.content or "", end="")
+
+Important:
+Pro Search requires
+stream=True
+. Non-streaming requests will return an error.
+
+Search Type
+
+Description
+
+Per 1K Requests
+
+pro
+
+Full multi-step reasoning
+
+$14–$22
+
+fast
+
+Quick search, fewer steps
+
+$6–$14
+
+auto
+
+AI decides based on query
+
+varies
+
+Docs:
+Pro Search Quickstart
+|
+Pro Search Tools
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+Pro Search API
+
+Bug Reports
+
+0
+
+88
+
+May 15, 2025
+
+Basic web search: chat v API
+
+General
+
+search-api
+
+2
+
+28
+
+April 4, 2026
+
+PerplexityPro response vs SonarPro response
+
+Bug Reports
+
+sonar-pro
+
+1
+
+156
+
+April 7, 2026
+
+We’d love your feedback on the Perplexity Search API
+
+Announcements
+
+search-api
+
+0
+
+83
+
+December 18, 2025
+
+Introduction to myself on this website. I need to know how to enable each LLM (specifically Sonar Pro)
+
+General
+
+sonar-pro
+
+,
+
+chat-completions
+
+0
+
+73
+
+September 24, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

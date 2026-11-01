@@ -1,0 +1,197 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/comparing-elevenlabs-conversational-ai-v-openai-realtime-api
+page path  : /blog/comparing-elevenlabs-conversational-ai-v-openai-realtime-api
+captured   : 2026-01-15 12:17:52 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_comparing-elevenlabs-conversational-ai-v-openai-realtime-api__931ea453.html.gz
+========================================================================
+
+Comparing ElevenLabs Conversational AI and OpenAI Realtime API
+
+Comparing ElevenLabs Conversational AI and OpenAI Realtime API
+Sign up
+Skip to content
+Creative Platform
+Agents Platform
+Developers
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Blog
+Resources
+Comparing ElevenLabs Conversational AI and OpenAI Realtime API
+Last updated
+Dec 7, 2025
+•
+5 minutes reading time
+Comparing two recent product launches to help you find the best product for your use case
+On this page
+Introduction
+Overview
+How they stack up
+Understanding Emotion & Pronunciation
+Flexibility
+Latency
+Voice Options
+Price
+Additional Platform Features
+Updated as of October 18th, 2024
+There were two major product launches in the world of Conversational AI in the last month - our Conversational AI orchestration platform and OpenAI's Realtime
+API
+. We put together this post to help you distinguish between the two and figure out which is best for your use case.
+Overview
+Both of these products are designed to help you create realtime,
+conversational voice agents
+.
+ElevenLabs Conversational AI
+makes that possible through an orchestration platform that creates a transcript from speech using Speech to Text, sends that transcript to an LLM of your choice along with a custom knowledge base, and then voices the LLM response using
+Text to Speech
+. It's an end to end solution including monitoring and analytics on past calls and will soon offer a testing framework and phone integrations.
+OpenAI's Realtime API
+is built on a different architecture whereby the model takes audio (speech) as input and provides audio (speech) directly as the output. There is no step by which audio is converted into a written transcript and passed to an LLM, which likely provides latency gains. It’s only available via API and is not an end to end platform.
+Feature
+ElevenLabs Conv AI
+OpenAI Realtime
+Total Number of Voices
+3k+
+6
+
+LLMs Supported
+Bring your own server or choose from any leading provider
+OpenAI models only
+
+Call tracking and analytics
+Yes, built-in dashboard
+No, must build using API
+
+Latency
+1-3 seconds depending on network latency and size of knowledge base
+Likely faster due to no transcription step
+
+Price
+8.8 cents per minute on business, with discounts for high volume (+LLM cost)
+~15 cents per minute (6 cents per minute input, 24 cents per minute output)
+Voice Cloning
+Yes, bring your own voice with a PVC
+No voice cloning
+API Access
+Yes, all plans
+Yes, all plans
+
+How they stack up
+Understanding Emotion & Pronunciation
+When our Conversational AI converts speech into text, some information is lost, including the emotion, tone and pronunciation of the speech. Since OpenAI's Realtime API goes directly from speech to speech, no context is lost. This makes it more adept for certain use cases like correcting someone's pronunciation when learning a new language or identifying and responding to emotion in therapy.
+Flexibility
+When using the Realtime API, you are using OpenAI's infrastructure for the full conversational experience. It's not possible to integrate another company's LLM, or to bring your own, as the Realtime API only takes audio as input and returns audio as output.
+With our Conversational AI platform, you can change the LLM powering your model at any time (including using OpenAI's models). As Anthropic, OpenAI, Google, NVIDIA, and others continue to one up each other in the race to have the most performant LLM, you can update at any time so you are always using state of the art technology.
+And for companies that have built their own in house fine-tuned LLM, either for performance or privacy reasons, it's possible to integrate that with ElevenLab’s Conversational AI platform but not with OpenAI’s Realtime API.
+Latency
+When evaluating any model for latency, there are two important factors to consider
+(1) Is the average latency low enough to create a seamless user experience?
+(2) How much does latency fluctuate and what does the user experience look like for P90 and P99 latency?
+One potential benefit of the OpenAI Realtime API is that because it cuts out the intermediate step of turning speech into text, it is likely to have an overall lower latency.
+One potential downside however comes back to the flexibility we discussed earlier. In our testing over the last few weeks, 40-mini was initially the lowest latency LLM to pair with our Conversational AI platform. This week, its latency more than doubled which led our users to switch to Gemini Flash 1.5. With the Realtime API, it's not possible to rotate to a faster LLM.
+Also note that the end to end latency for your Conversational AI application will depend not just on your provider, but also on the size of your
+agent
+'s knowledge base and your network conditions.
+Voice Options
+OpenAI's Realtime API currently has 6 voice options. Our voice library has over 3.000 voices. You can also use Professional Voice Cloning to use your own custom voice on our platform. This means the Realtime API won't allow you to pick a voice unique to your brand or content.
+Price
+In the Realtime API, Audio input is priced at $100 per 1M tokens and output is $200 per 1M tokens. This equates to approximately $0.06 per minute of audio input and $0.24 per minute of audio output.
+ElevenLabs
+Conversational AI
+offers 15 minutes to get started on the free plan. The Business plan offers 13,750 minutes of Conversational AI ($0.08 per minute), with extra minutes billed at $0.08, as well as significantly discounted pricing at higher volumes.
+Additional Platform Features
+At the end of each call, the Realtime API sends JSON-formatted events containing text and audio chunks including the transcript and recordings of the call and any functional calls made. It's up to you to read, process, report on, and display that information in a way that is useful to your team.
+Our platform has built-in functionality for evaluating the success of a call, extracting structure data, and displaying that along with the transcript, summary and recording within our dashboard for your team to review.
+Explore articles by the ElevenLabs team
+Research
+Research
+Introducing Turbo v2.5
+High quality, low latency text to speech in 32 languages
+Company
+Company
+Deutsche Telekom and ElevenLabs announce partnership
+Bringing ElevenLabs' AI voice agents to the customer service of Europe’s largest Telco (via app and phone).
+ElevenLabs
+Create with the highest quality AI Audio
+Get started free
+Already have an account?
+
+Log in
+English
+Research
+Text to Speech (TTS)
+Speech to Text
+Realtime Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Products
+Studio
+Agents Platform
+Dubbing Studio
+Voice Library
+Image & Video
+Audio Native
+ElevenStudios
+API
+Voiceover Studio
+ElevenReader
+Mobile App
+AI Voice Generator
+Solutions
+For Enterprise
+For Teams
+For Developers
+For Startups
+For Students
+Retail and E-Commerce
+Telecommunications
+Financial Services
+Technology
+Customer Support
+AI Voice Agents
+Earn As
+Affiliate
+Voice Actor
+Data Partner
+Commercial Partner
+Resources
+API Reference
+Product Guides
+Help Centre
+Languages
+Webinars
+Terms
+Privacy
+Cookie Settings
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Safety
+Careers
+Blog
+Impact Program
+Brand and Press Kit
+Iconic Marketplace
+Modern Slavery Policy
+CCPA Notice
+Voice chat
+Powered by ElevenLabs
+
+Agents
+Chat

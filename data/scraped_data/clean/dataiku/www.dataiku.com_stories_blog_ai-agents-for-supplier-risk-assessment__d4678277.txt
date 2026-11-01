@@ -1,0 +1,309 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/stories/blog/ai-agents-for-supplier-risk-assessment
+page path  : /stories/blog/ai-agents-for-supplier-risk-assessment
+captured   : 2026-06-06 01:55:20 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/dataiku/www.dataiku.com_stories_blog_ai-agents-for-supplier-risk-assessment__d4678277.html.gz
+========================================================================
+
+Everything to Know: AI Agents for Supplier Risk Assessment
+
+Everything to Know: AI Agents for Supplier Risk Assessment
+
+Skip to content
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Close
+
+This is a search field with an auto-suggest feature attached.
+
+There are no suggestions because the search field is empty.
+
+Product
+
+Solutions
+
+Stories
+
+Company
+
+Sign in
+
+Request demo
+
+Start Trial
+
+GenAI & Agents
+
+Use Cases
+
+Everything to Know: AI Agents for Supplier Risk Assessment
+
+Sep 26, 2025
+
+4 min read
+
+/
+
+Christine Andrews, Romain Menini
+
+Table of Contents
+
+Section1
+
+Section1
+
+Section1
+
+Over the past several decades, supply chains have grown more global, diversified, and complex. Even with initiatives geared to near or onshoring, the complexity remains and the risk of disruption continues to loom.
+
+Supply chain leaders have necessarily evolved supply chain management strategies to navigate this complexity and manage some of that risk. Nowhere is this more evident than in the realm of supplier management. A key part of any organization’s supply chain, supplier management incorporates both the ability to better manage supplier relationships and improve sourcing strategies to mitigate supplier risks. This means supply chain leaders need good visibility into their current supplier portfolio and innovative strategies for assessing and reducing supplier risk.
+
+To gain this insight, organizations must improve their ability to gather and process data from myriad sources. But, given that
+roughly 60%-70%
+of an analyst’s time is spent on data gathering, adding more data elements to their already burgeoning workload can be unrealistic. This is one reason why supply chain leaders are increasingly turning to AI.
+
+AI in Supplier Risk Assessment
+
+What constitutes a good supplier and what constitutes a risk? These seemingly simple questions can have a variety of answers and implications.
+
+Good can be measured in terms of on-time delivery, contract compliance, responsiveness, and favorable pricing terms. Some customers incorporate hundreds of parameters to characterize supplier performance, making binary classifications hard to ascribe and highly dependent upon oft-conflicting departmental priorities. This is one way AI can help with supplier management, providing an objective means of scoring supplier performance on myriad attributes including recent trends and performance from a delivery, quality, and compliance perspective.
+
+Another way AI helps with supplier risk is exposing new risks based on geolocation details, pertinent news, weather events and other publicly available information referencing suppliers. GenAI in particular is well designed to summarize supplier information across internal and external myriad sources. Knowing when a key supplier is in the news and why can help identify the need for contingencies and alternates more quickly.
+
+A third way AI is being used is to help identify the right alternate suppliers to use for greater diversification in your supplier network: AI agents.
+Agentic AI
+in particular is well suited to provide sourcing guidance and recommendations. The technology allows you to go beyond simple alignment based on item type or category, but rather incorporate more detailed requirements and specifications. Whether via web scraping or APIs, agents can identify potential new vendors considering multiple criteria and supercharge a purchasing analyst’s or buyer’s research.
+
+Real-World Applications
+
+One manufacturer in the automotive sector is surfacing supplier risks using a variety of data sources and criteria, including regional news and events related to key supplier locations.
+
+Market data sourced from external providers, supplier information obtained via web scraping, and compliance information from internal records on historic supplier performance were combined to identify risks across different tiers in their supply chain. In so doing, this automotive original equipment manufacturer (OEM) can use the analysis to inform a more reliable production schedule and avoid the $5,000 per minute downtime cost that supplier delays can incur. They estimated over $300,000 in savings by minimizing production losses due to component shortages.
+
+In another instance, an aerospace Tier 1 supplier used a combination of AI and machine learning techniques to validate component traceability and reduce the risk of fraud. They do this by processing millions of supplier documents to detect inconsistencies or inaccuracies in submissions including key fields such as country of origin. This provides a fast, automated, and accurate means of ensuring that all components come from reliable suppliers with trusted traceability. Using AI enhances their analysts’ productivity and provides a more consistent means of fraud detection.
+
+Introducing: Supplier Management Assistant
+
+To illustrate how these AI concepts translate into practical solutions, we'll examine a specific use case: the Supplier Management Assistant. This real-world application addresses one of the most complex challenges facing procurement teams: assessing supplier risk across fragmented data sources while managing hundreds or thousands of vendor relationships.
+
+The Supplier Management Assistant demonstrates how modern AI platforms can transform procurement decision-making by integrating multiple data sources into actionable intelligence. Built with Dataiku, The Universal AI Platform™, this assistant enables organizations to create sophisticated, multi-step analytical workflows without extensive coding expertise. Dataiku's multi-agent architecture allows procurement managers to ask natural language questions to the Supply Chain Risk Agent, such as “Which suppliers are most impacted by recent tariff changes?” or “What's the financial health of our top 10 suppliers?” and receive answers in near real-time.
+
+Architecture Deep Dive & Implementation
+
+The assistant runs as a single, orchestrated agent in Dataiku’s
+Agent Connect
+. It routes each request to two purpose-built capabilities, retrieval over unstructured sources and querying of structured procurement data, and returns a consolidated answer in the chat interface. This keeps user interaction simple while enforcing a clear separation of concerns in the backend.
+
+In this example project, there are two types of data:
+
+Unstructured
+: Supplier annual reports and disclosures used for qualitative context.
+
+Structured
+: A purchase orders dataset with a defined schema (supplier IDs, part numbers, confirmed vs. actual delivery dates, unit prices, quantities), complemented by forecasts and tariff tables.
+
+Core Components
+
+Agent Connect
+(orchestration, named Supply Chain Risk Agent in the graphic above): Handles a request's lifecycle, selects which capabilities to invoke, and merges their outputs into a single response. It is both the user entry point and the control point for governance.
+
+Knowledge Bank Search
+(unstructured): Performs retrieval-augmented search over supplier financial reports and communications. It surfaces grounded passages that indicate qualitative risk factors such as liquidity concerns, restructuring activity, or market exposure.
+
+Dataset Query
+(structured): Translates natural language prompts into queries over procurement datasets including purchase order history (prices, quantities, delivery performance), demand forecasts, and duty/tariff data by country and product.
+
+Best Practices for Scaling AI Agents in Supply Chain
+
+To move from a demo to production, the agent needs to be hardened around clear workflows, strong data foundations, and a modular design. The following practices help ensure reliability and scalability.
+
+1. Target high-value use cases with technical specialization.
+
+Focus the agent on the most critical procurement workflows first, and shape the architecture to support them.
+
+Restrict available tools in Agent Connect to those required for the workflow (e.g., Knowledge Bank Search scoped to supplier reports, Dataset Query with SQL templates for delivery metrics).
+
+Define routing rules or lightweight classifiers that map specific intents (
+delivery performance
+,
+financial health
+,
+tariff simulation
+) to deterministic tool sequences.
+
+Enforce strict schema contracts by predefining the KPIs structured queries can return (avg_delay_days, on_time_ratio, unit_price_trend).
+
+Limit embeddings to curated supplier reports tagged with supplier IDs and reporting periods to keep the knowledge base focused.
+
+2. Enforce strict data quality standards.
+
+Data quality is the foundation of reliable retrieval and computation; errors upstream will surface directly in the agent’s outputs.
+
+Maintain unique, consistent supplier keys across ERP exports, forecasts, and tariff registries to prevent join errors.
+
+Normalize unstructured sources by tagging supplier names, reporting periods, and formats before embedding.
+
+Automate quality checks: schema validation for structured tables, duplicate detection in transactions, and coverage reports for embeddings.
+
+Monitor data drift and refresh schedules to ensure the agent always works on current and reliable information.
+
+3. Build for modular extensibility.
+
+The architecture should remain stable while allowing new data sources and tools to be integrated over time.
+
+Treat each capability (Knowledge Bank Search, Dataset Query, forecasting models, tariff tables) as a pluggable module with its own lifecycle.
+
+Design orchestration logic to remain stable even as new datasets or knowledge sources are introduced.
+
+With Dataiku’s codeless environment, new modules can be added or existing ones updated through visual interfaces rather than heavy re-engineering. This makes it much easier to maintain the agent, evolve it module by module, and keep governance in place without complex refactoring.
+
+Your path to AI success starts now
+
+Start free trial
+
+Keep Reading
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+I have Snowflake, why do I need Dataiku?
+
+AI decision automation: how enterprises use AI to make faster, more consistent decisions
+
+3 ways Dataiku makes AI agents on Databricks production-ready
+
+Agent orchestration explained: how enterprises manage multi-agent AI workflows
+
+You May Also Like
+
+Explore the Blog
+
+GenAI & Agents
+
+Enterprise agent systems: how to design, deploy, and govern AI agent networks at scale
+
+A single agent is a tool. An enterprise agent system is infrastructure. That distinction determines whether AI...
+
+May 29, 2026
+
+GenAI & Agents
+
+I have Snowflake, why do I need Dataiku?
+
+Snowflake is an exceptional AI data foundation. It centralizes enterprise data, scales compute elastically,...
+
+May 28, 2026
+
+GenAI & Agents
+
+AI decision automation: how enterprises use AI to make faster, more consistent decisions
+
+The bottleneck in most enterprise AI programs is not model accuracy, and it is not the quality of GenAI...
+
+May 26, 2026
+
+Ready to Start Building?
+Get Your Free Trial Today
+
+START BUILDING
+
+Get in touch
+
+Product
+
+Discover Dataiku
+
+Run enterprise AI as one system
+
+Deliver AI Agents
+
+Govern AI Everywhere
+
+Deliver Trusted Analytics
+
+Scale Machine Learning
+
+Solutions
+
+Solutions By Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Solutions By Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Blog
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI And Us
+
+Center Of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Dataiku Customers
+
+Analyst Recognition
+
+Events Calendar
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Dataiku Partners
+
+Partner with Dataiku
+
+Subscribe to Our Newsletter
+
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

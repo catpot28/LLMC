@@ -1,0 +1,509 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/open-weather-map/
+page path  : /product/plugins/open-weather-map/
+captured   : 2026-02-12 03:19:13 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_open-weather-map__fd6fd74d.html.gz
+========================================================================
+
+Plugin: OpenWeatherMap | Dataiku
+
+Plugin: OpenWeatherMap | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Explore Dataiku AI Stories
+
+Dataiku in Action
+Frontrunner Awards
+GenAI & Agents
+AI Gov & Architecture
+Analytics Modernization
+Use Cases
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+OpenWeatherMap
+
+OpenWeatherMap
+
+This plugin provides a read connector to import historical & forecast weather data from OpenWeatherMap
+
+Plugin information
+
+Version
+
+1.1.0
+
+Author
+
+Dataiku (Henri Chabert)
+
+Released
+
+2020-06-01
+
+Last updated
+
+2025-05-19
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+How to set up
+
+General set up
+
+Create an OpenWeatherMap account
+here
+.
+
+Login to the platform and go on the API keys tab
+
+Use the Default key or create a new one. Copy the key.
+
+In DSS, go to
+App > Plugins > Installed > OpenWeatherMap > Settings > OpenWeatherMap API configuration
+
+Add a new preset, name it and fill in the details:
+
+OpenWeatherMap API key: The API key you just copied
+
+System of units: The default system of units you want to use (It can be overwritten when running the recipe)
+
+Language: Language of the text describing the weather (It can be overwritten when running the recipe).
+
+Cache set up
+
+The OpenWeatherMap plugin uses a cache system to store data locally, in order to avoid repeating identical queries. You can change preferences by following the following steps:
+
+In DSS, go to
+App > Plugins > Installed >
+OpenWeatherMap
+> Settings >
+Parameters
+
+Choose the cache storage location between the following options:
+
+User $HOME directory (Default): The cache will be stored under the folder
+$HOME/.cache/dss/plugins/open_weather_map
+
+Custom: You can choose a custom location. Write in the input below the
+absolute location
+(Example: /Users/johnsnow/Documents/dss_cache).
+Be cautious using this with an UIF instance as permission errors could occur
+
+None: Do not use a cache
+
+Choose the cache parameters:
+
+Cache size (in MegaBytes): The maximum size of the cache file (Default is 1Go)
+
+Cache eviction policy: The way you want the data to be deleted once the maximum size is reached. You have the choice between three modes:
+
+Least Recently Stored: Delete the oldest cache records first
+
+Least recently Used: Deleted cache records that weren’t used for the longest time
+
+Least Frequently Used: Deleted cache records that are the least frequently used
+
+No eviction: Overwrite cache size, the cache will grow without bounds
+
+How to use
+
+The plugin is made of two main components:
+
+A
+connector
+that allows you to retrieve the data directly from OpenWeatherMap API and put it in a new dataset.
+
+A
+recipe
+that allows you to add weather information to your data containing lat/lon and data column
+
+OpenWeatherMap connector
+
+Go to your DSS flow
+
+Select OpenWeatherMap in the plugin section of the dataset menu
+
+Click on OpenWeatherMap weather generating
+
+Pick a preset of parameters
+
+Write the latitude and the longitude of the location you want the weather of
+
+Choose the desired granularity
+
+Daily information are available 5 days in the past and 7 days in the future. The output dataset is 12 rows long
+
+Hourly information are available 5 days in the past and 2 days in the future. The output dataset is 168 rows long
+
+Advanced mode
+
+You can configure more settings by checking “Advanced mode”. The available options are:
+
+Data type: You can choose whether you wish to have historical data, forecast data or both (Default is both)
+
+System of units: It overwrites the settings of the preset for this specific job
+
+Language: It overwrites the settings of the preset for this specific job
+
+Use cache: It overwrites the settings of the preset for this specific job
+
+Parse output JSON: If you prefer to get a unique column containing the entire response in JSON format, you can check this
+
+OpenWeatherMap recipe
+
+Go to your DSS flow
+
+Select OpenWeatherMap in the plugin section of the recipe menu
+
+Click on OpenWeatherMap Weather mapping
+
+Select the input dataset and the output dataset, and then click on “CREATE”
+
+Fill in the latitude and longitude columns
+
+Select whether you need the current weather or the weather at a date provided by a column (having date format)
+
+Run the recipe
+
+In addition of the weather data, a column named “error” will be added to the output dataset. If something went wrong when retrieving the data for the specific pair location/date, this column will tell you what it is. The errors usually come from the fact that the date is not in the available range [today – 5 days ; today + 7 days] or that you reached your API calls limit.
+
+Advanced mode
+
+You can configure more settings by checking “Advanced mode”. The available options are:
+
+System of units: It overwrites the settings of the preset for this specific job
+
+Language: It overwrites the settings of the preset for this specific job
+
+Use cache: It overwrites the settings of the preset for this specific job
+
+Parse output JSON: If you prefer to get a unique column containing the entire response in JSON format, you can check this.
+You should check this option if you use the option “Append instead of overwrite”
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for OpenWeatherMap.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

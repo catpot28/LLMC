@@ -1,0 +1,235 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://community.perplexity.ai/t/unable-to-retrieve-the-result-of-an-async-deep-research/4530
+page path  : /t/unable-to-retrieve-the-result-of-an-async-deep-research/4530
+captured   : 2026-04-12 12:53:18 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/community.perplexity.ai_t_unable-to-retrieve-the-result-of-an-async-deep-research_4530__9e8a58e6.html.gz
+========================================================================
+
+Unable to retrieve the result of an async deep research - Bug Reports - Perplexity API Platform Forum
+
+Unable to retrieve the result of an async deep research - Bug Reports - Perplexity API Platform Forum
+
+Perplexity API Platform Forum
+
+Unable to retrieve the result of an async deep research
+
+Bug Reports
+
+sonar-deep-research
+
+blinard
+
+April 2, 2026, 7:48am
+
+1
+
+Describe the Bug
+
+I’m starting a deep research with the API in curl on the POST route /v1/async/sonar.
+
+I’m successfully retrieving the ID, but the GET route /v1/async/sonar/{api_request} (where api_request is replaced by the ID returned by the POST) only returns the list of deep research (as if I had used the GET route /v1/async/sonar), never the result of the targeted ID (the deepresearch is indeed in completed status.)
+
+I also tried from the playground, but without success.
+
+Expected Behavior
+
+Retrieve the response from a deepresearch on the /v1/async/sonar/{api_request}
+
+Actual Behavior
+
+I retrieve the list of deepresearch, as if I were using /v1/async/sonar
+
+Steps to Reproduce
+
+Call POST /v1/async/sonar with model sonar-deep-research
+
+Get the ID returned
+
+Call GET /v1/async/sonar/{ID}
+
+you will have the list of deepresearch and not the deepresearch response
+
+Kesku
+
+April 7, 2026, 2:40pm
+
+2
+
+Hey
+@blinard
+— just to confirm the expected pattern:
+
+# 1. Create the async request
+curl -X POST https://api.perplexity.ai/v1/async/sonar \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"model": "sonar-deep-research", "messages": [{"role": "user", "content": "Your query"}]}'
+# Returns: {"request_id": "req_abc123", ...}
+
+# 2. Fetch the specific result by request_id
+curl https://api.perplexity.ai/v1/async/sonar/req_abc123 \
+-H "Authorization: Bearer $PERPLEXITY_API_KEY"
+
+A couple things to double-check:
+
+Make sure you are using the
+id
+or
+request_id
+value from the POST response
+
+The URL path should be
+/v1/async/sonar/{request_id}
+with no trailing slash
+
+If the request is still processing, you will get a status object rather than the full result
+
+If you have confirmed all of the above and it is still returning the list instead of the specific result, please email
+api@perplexity.ai
+with the exact
+request_id
+you are using so the team can investigate on the backend.
+
+blinard
+
+April 7, 2026, 3:02pm
+
+3
+
+Hey
+@Kesku
+Thank you for your response.
+
+The API call I am making is as follows:
+
+curl --request POST \
+--url https://api.perplexity.ai/v1/async/sonar \
+--header 'Authorization: Bearer <token>' \
+--header 'Content-Type: application/json' \
+--data '
+{
+"request": {
+"model": "sonar-deep-research",
+"messages": [
+{
+"role": "<string>",
+"content": "<string>"
+}
+]
+}
+}
+'
+
+That can be found in the documentation:
+List Async Chat Completions - Perplexity
+
+But this API call does not return a “request_id”, only an “id”. How can I retrieve this “request_id”?
+
+Like that :
+
+{"id":"xxxx-xxxx","model":"sonar-deep-research","created_at":1775573869,"started_at":null,"completed_at":null,"response":null,"failed_at":null,"error_message":null,"status":"CREATED"}
+
+Thanks again.
+
+Kesku
+
+April 7, 2026, 9:27pm
+
+4
+
+Thanks for following up! We were able to escalate this and apply a fix for it. You should be all set now (please let me know if not!)
+
+blinard
+
+April 8, 2026, 5:57am
+
+5
+
+all good, thanks a lot
+
+1 Like
+
+Related topics
+
+Topic
+
+Replies
+
+Views
+
+Activity
+
+GET /v1/async/sonar/{api_request} returns the list of all requests instead of single request data
+
+Bug Reports
+
+sonar-deep-research
+
+,
+
+chat-completions
+
+2
+
+35
+
+April 7, 2026
+
+Sonar-deep-research taking longer than expected
+
+Bug Reports
+
+sonar-deep-research
+
+6
+
+213
+
+February 5, 2026
+
+sonar-deep-research⁠ requests randomly stopping mid-run
+
+Bug Reports
+
+sonar-deep-research
+
+1
+
+10
+
+April 7, 2026
+
+New Async Mode for Sonar Deep Research!
+
+Announcements
+
+0
+
+317
+
+June 1, 2025
+
+Sonar Deep Research — Async Mode and Reasoning Effort Now Live
+
+Announcements
+
+0
+
+0
+
+June 5, 2025
+
+Home
+
+Categories
+
+Guidelines
+
+Terms of Service
+
+Privacy Policy
+
+Powered by
+Discourse
+, best viewed with JavaScript enabled

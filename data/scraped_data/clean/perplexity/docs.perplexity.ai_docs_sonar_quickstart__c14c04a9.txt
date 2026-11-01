@@ -1,0 +1,386 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://docs.perplexity.ai/docs/sonar/quickstart
+page path  : /docs/sonar/quickstart
+captured   : 2026-05-20 19:59:36 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/perplexity/docs.perplexity.ai_docs_sonar_quickstart__c14c04a9.html.gz
+========================================================================
+
+Sonar API - Perplexity
+
+Sonar API - Perplexity
+Skip to main content
+For AI agents: see the complete
+llms.txt
+documentation index.
+Perplexity
+home page
+Docs
+Cookbook
+API Reference
+Search...
+Navigation
+Sonar API
+Sonar API
+Search
+⌘
+K
+Community
+Blog
+Changelog
+Getting Started
+Overview
+Quickstart
+Pricing
+Perplexity MCP Server
+Agent API
+Overview
+Models & Configuration
+Tools
+Features
+OpenAI Compatibility
+Prompt Guide
+Search API
+Quickstart
+Best Practices
+Filters
+Sonar API
+Quickstart
+Models
+Prompt Guide
+Features
+Pro Search
+OpenAI SDK Compatibility
+Embeddings API
+Quickstart
+Best Practices
+Standard Embeddings
+Contextualized Embeddings
+Perplexity SDK
+Quickstart
+Guides
+Admin & Management
+API Groups & Billing
+API Key Management
+Rate Limits & Usage Tiers
+AWS Marketplace
+Resources
+Integrations
+API Roadmap
+Privacy & Security
+Frequently Asked Questions
+System Status
+Changelog
+Get in Touch
+Perplexity Crawlers
+On this page
+Overview
+Installation
+Authentication
+Generating an API Key
+Basic Usage
+Non-Streaming Request
+Streaming Response
+Response Structure
+Next Steps
+Sonar API
+Sonar API
+Copy page
+Get started with Perplexity’s Sonar API for web-grounded AI responses. Make your first API call in minutes.
+Copy page
+Documentation Index
+Fetch the complete documentation index at:
+https://docs.perplexity.ai/llms.txt
+Use this file to discover all available pages before exploring further.
+​
+Overview
+
+Perplexity’s Sonar API provides web-grounded AI responses with support for streaming, tools, search options, and more. You can use it with OpenAI-compatible client libraries or our native SDKs for type safety and enhanced features.
+
+Use the Sonar API when you need web search capabilities built-in, streaming responses, or Perplexity’s Sonar models. For structured outputs and third-party models, use our
+Agent API
+.
+
+Keep using your existing OpenAI SDKs to get started fast; switch to our
+native SDKs
+later as needed.
+
+​
+Installation
+
+Install the SDK for your preferred language:
+
+Python
+Typescript
+OpenAI Python (Compatible)
+OpenAI Typescript (Compatible)
+pip
+install
+perplexityai
+
+​
+Authentication
+
+Set your API key as an environment variable. The SDK will automatically read it:
+
+macOS/Linux
+
+Windows
+export
+PERPLEXITY_API_KEY
+=
+"your_api_key_here"
+
+setx PERPLEXITY_API_KEY
+"your_api_key_here"
+
+All SDK examples below automatically use the
+PERPLEXITY_API_KEY
+environment variable. You can also pass the key explicitly if needed.
+
+​
+Generating an API Key
+
+Get your Perplexity API Key
+Navigate to the
+API Keys
+tab in the API Portal and generate a new key.
+Click here
+
+OpenAI SDK Compatible:
+Perplexity’s API supports the OpenAI Chat Completions format. You can use OpenAI client libraries by pointing to our endpoint.
+
+​
+Basic Usage
+
+​
+Non-Streaming Request
+
+Python SDK
+Typescript SDK
+OpenAI Python SDK
+OpenAI Typescript SDK
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+completion
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[
+
+{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are the latest developments in quantum computing?"
+}
+
+]
+
+)
+
+print
+(completion.choices[
+0
+].message.content)
+
+​
+Streaming Response
+
+Python SDK
+Typescript SDK
+cURL
+from
+perplexity
+import
+Perplexity
+
+client
+=
+Perplexity()
+
+stream
+=
+client.chat.completions.create(
+
+model
+=
+"sonar-pro"
+,
+
+messages
+=
+[
+
+{
+"role"
+:
+"user"
+,
+"content"
+:
+"What are the most popular open-source alternatives to OpenAI's GPT models?"
+}
+
+],
+
+stream
+=
+True
+
+)
+
+for
+chunk
+in
+stream:
+
+if
+chunk.choices[
+0
+].delta.content:
+
+print
+(chunk.choices[
+0
+].delta.content,
+end
+=
+""
+)
+
+For a full guide on streaming, including parsing, error handling, citation management, and best practices, see our
+Agent API streaming guide
+.
+
+​
+Response Structure
+
+Sonar API responses follow an OpenAI-compatible format:
+
+{
+
+"id"
+:
+"a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+,
+
+"model"
+:
+"sonar-pro"
+,
+
+"created"
+:
+1234567890
+,
+
+"choices"
+: [
+
+{
+
+"index"
+:
+0
+,
+
+"message"
+: {
+
+"role"
+:
+"assistant"
+,
+
+"content"
+:
+"Recent developments in quantum computing include advances in error correction, new qubit architectures, and progress toward fault-tolerant systems..."
+
+},
+
+"finish_reason"
+:
+"stop"
+
+}
+
+],
+
+"usage"
+: {
+
+"prompt_tokens"
+:
+14
+,
+
+"completion_tokens"
+:
+287
+,
+
+"total_tokens"
+:
+301
+
+}
+
+}
+
+​
+Next Steps
+
+Agent API
+Need structured outputs or third-party models? Check out the Agent API.
+Search API
+Get raw search results with the Search API.
+Sonar API Features
+Complete guide to the Sonar API with advanced features and examples.
+Models
+Explore available Sonar models and their capabilities.
+API Reference
+View complete endpoint documentation and parameters.
+Search Filters
+Learn how to control search behavior with filters and parameters.
+
+Need help? Check out our
+community
+for support and discussions with other developers.
+Was this page helpful?
+Yes
+No
+People Search
+Previous
+Next
+⌘
+I
+x
+discord
+website
+Powered by
+This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Suggestions
+What is the Agent API?
+Which Agent API model should I use?
+How do I create an API key?

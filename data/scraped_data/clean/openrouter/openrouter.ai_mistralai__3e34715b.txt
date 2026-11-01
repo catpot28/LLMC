@@ -1,0 +1,916 @@
+=== SOURCE =============================================================
+company    : OpenRouter (openrouter)
+url        : https://openrouter.ai/mistralai
+page path  : /mistralai
+captured   : 2026-05-18 23:50:07 UTC  (CommonCrawl CC-MAIN-2026-21)
+raw file   : raw/openrouter/openrouter.ai_mistralai__3e34715b.html.gz
+========================================================================
+
+Mistral AI API and Models | OpenRouter
+
+Mistral AI API and Models | OpenRouter
+Skip to content
+OpenRouter
+/
+Models
+Fusion
+Chat
+Rankings
+Apps
+Enterprise
+Pricing
+Docs
+OpenRouter
+© 2026 OpenRouter, Inc
+Product
+Chat
+Rankings
+Apps
+Models
+Providers
+Pricing
+Enterprise
+Labs
+Company
+About
+Announcements
+Careers
+Hiring
+Privacy
+Terms of Service
+Support
+State of AI
+Works With OR
+Data
+Developer
+Documentation
+API Reference
+SDK
+Status
+Connect
+Discord
+GitHub
+LinkedIn
+X
+YouTube
+Mistral AI
+Access
+45 Mistral AI models
+through the
+
+OpenRouter unified API
+including Voxtral Mini Transcribe, Mistral Medium 3.5, and Voxtral Mini TTS
+.
+Compare pricing, context windows, benchmarks, and capabilities between different Mistral AI models.
+Mistral AI
+
+tokens processed
+on OpenRouter
+Mistral: Voxtral Mini Transcribe
+Voxtral Mini Transcribe
+681K
+tokens
+Voxtral Mini Transcribe is Mistral's speech-to-text model, derived from the Voxtral Mini family. It accepts audio input and returns transcribed text via the standard transcription API. Suited for transcribing meetings, voice notes, podcasts, and other spoken content.
+by
+
+mistralai
+May 15, 2026
+$0.003 per minute
+Mistral: Mistral Medium 3.5
+Mistral Medium 3.5
+3.66B
+tokens
+Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex multi-step reasoning. It is particularly strong at reliable multi-tool calling and long-horizon tasks, with a 256K context window, configurable reasoning effort per request, and a custom vision encoder that handles variable image sizes and aspect ratios. Self-hostable on as few as four GPUs and available under open weights.
+by
+
+mistralai
+Apr 30, 2026
+262K
+context
+$
+1.50
+
+/M
+
+input
+
+tokens
+$
+7.50
+
+/M
+
+output
+
+tokens
+Mistral: Voxtral Mini TTS
+Voxtral Mini TTS
+116K
+tokens
+Voxtral Mini TTS is Mistral's text-to-speech model featuring zero-shot voice cloning and multilingual support. It converts text input into natural-sounding audio output.
+by
+
+mistralai
+Apr 19, 2026
+4K
+context
+$16 per 1M characters
+Mistral: Mistral Small 4
+Mistral Small 4
+39.1B
+tokens
+Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from Magistral, multimodal understanding from Pixtral, and agentic coding capabilities from Devstral, enabling one model to handle complex analysis, software development, and visual tasks within the same workflow.
+by
+
+mistralai
+Mar 16, 2026
+262K
+context
+$
+0.15
+
+/M
+
+input
+
+tokens
+$
+0.60
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Small Creative
+Mistral Small Creative
+Mistral Small Creative is an experimental small model designed for creative writing, narrative generation, roleplay and character-driven dialogue, general-purpose instruction following, and conversational agents.
+by
+
+mistralai
+Dec 16, 2025
+33K
+context
+Mistral: Devstral 2 2512
+Devstral 2 2512
+3.27B
+tokens
+Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring codebases and orchestrating changes across multiple files while maintaining architecture-level context. It tracks framework dependencies, detects failures, and retries with corrections—solving challenges like bug fixing and modernizing legacy systems. The model can be fine-tuned to prioritize specific languages or optimize for large enterprise codebases. It is available under a modified MIT license.
+by
+
+mistralai
+Dec 9, 2025
+262K
+context
+$
+0.40
+
+/M
+
+input
+
+tokens
+$
+2
+
+/M
+
+output
+
+tokens
+Mistral: Ministral 3 14B 2512
+Ministral 3 14B 2512
+4.44B
+tokens
+The largest model in the Ministral 3 family, Ministral 3 14B offers frontier capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart. A powerful and efficient language model with vision capabilities.
+by
+
+mistralai
+Dec 2, 2025
+262K
+context
+$
+0.20
+
+/M
+
+input
+
+tokens
+$
+0.20
+
+/M
+
+output
+
+tokens
+Mistral: Ministral 3 8B 2512
+Ministral 3 8B 2512
+21.8B
+tokens
+A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.
+by
+
+mistralai
+Dec 2, 2025
+262K
+context
+$
+0.15
+
+/M
+
+input
+
+tokens
+$
+0.15
+
+/M
+
+output
+
+tokens
+Mistral: Ministral 3 3B 2512
+Ministral 3 3B 2512
+4.1B
+tokens
+The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities.
+by
+
+mistralai
+Dec 2, 2025
+131K
+context
+$
+0.10
+
+/M
+
+input
+
+tokens
+$
+0.10
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Large 3 2512
+Mistral Large 3 2512
+5.71B
+tokens
+Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.
+by
+
+mistralai
+Dec 1, 2025
+262K
+context
+$
+0.50
+
+/M
+
+input
+
+tokens
+$
+1.50
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Embed 2312
+Mistral Embed 2312
+1.36B
+tokens
+Mistral Embed is a specialized embedding model for text data, optimized for semantic search and RAG applications. Developed by Mistral AI in late 2023, it produces 1024-dimensional vectors that effectively capture semantic relationships in text.
+by
+
+mistralai
+Oct 31, 2025
+8K
+context
+$0.10 per 1M tokens
+Mistral: Codestral Embed 2505
+Codestral Embed 2505
+688M
+tokens
+Mistral Codestral Embed is specially designed for code, perfect for embedding code databases, repositories, and powering coding assistants with state-of-the-art retrieval.
+by
+
+mistralai
+Oct 30, 2025
+8K
+context
+$0.15 per 1M tokens
+Mistral: Voxtral Small 24B 2507
+Voxtral Small 24B 2507
+172M
+tokens
+Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance. It excels at speech transcription, translation and audio understanding. Input audio is priced at $100 per million seconds.
+by
+
+mistralai
+Oct 30, 2025
+32K
+context
+$
+0.10
+
+/M
+
+input
+
+tokens
+$
+0.30
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Medium 3.1
+Mistral Medium 3.1
+2.5B
+tokens
+Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost compared to traditional large models, making it suitable for scalable deployments across professional and industrial use cases. The model excels in domains such as coding, STEM reasoning, and enterprise adaptation. It supports hybrid, on-prem, and in-VPC deployments and is optimized for integration into custom workflows. Mistral Medium 3.1 offers competitive accuracy relative to larger models like Claude Sonnet 3.5/3.7, Llama 4 Maverick, and Command R+, while maintaining broad compatibility across cloud environments.
+by
+
+mistralai
+Aug 13, 2025
+131K
+context
+$
+0.40
+
+/M
+
+input
+
+tokens
+$
+2
+
+/M
+
+output
+
+tokens
+Mistral: Codestral 2508
+Codestral 2508
+793M
+tokens
+Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation. [Blog Post](https://mistral.ai/news/codestral-25-08)
+by
+
+mistralai
+Aug 1, 2025
+256K
+context
+$
+0.30
+
+/M
+
+input
+
+tokens
+$
+0.90
+
+/M
+
+output
+
+tokens
+Mistral: Devstral Medium
+Devstral Medium
+139M
+tokens
+Devstral Medium is a high-performance code generation and agentic reasoning model developed jointly by Mistral AI and All Hands AI. Positioned as a step up from Devstral Small, it achieves 61.6% on SWE-Bench Verified, placing it ahead of Gemini 2.5 Pro and GPT-4.1 in code-related tasks, at a fraction of the cost. It is designed for generalization across prompt styles and tool use in code agents and frameworks. Devstral Medium is available via API only (not open-weight), and supports enterprise deployment on private infrastructure, with optional fine-tuning capabilities.
+by
+
+mistralai
+Jul 10, 2025
+131K
+context
+$
+0.40
+
+/M
+
+input
+
+tokens
+$
+2
+
+/M
+
+output
+
+tokens
+Mistral: Devstral Small 1.1
+Devstral Small 1.1
+5.2B
+tokens
+Devstral Small 1.1 is a 24B parameter open-weight language model for software engineering agents, developed by Mistral AI in collaboration with All Hands AI. Finetuned from Mistral Small 3.1 and released under the Apache 2.0 license, it features a 128k token context window and supports both Mistral-style function calling and XML output formats. Designed for agentic coding workflows, Devstral Small 1.1 is optimized for tasks such as codebase exploration, multi-file edits, and integration into autonomous development agents like OpenHands and Cline. It achieves 53.6% on SWE-Bench Verified, surpassing all other open models on this benchmark, while remaining lightweight enough to run on a single 4090 GPU or Apple silicon machine. The model uses a Tekken tokenizer with a 131k vocabulary and is deployable via vLLM, Transformers, Ollama, LM Studio, and other OpenAI-compatible runtimes.
+by
+
+mistralai
+Jul 10, 2025
+131K
+context
+$
+0.10
+
+/M
+
+input
+
+tokens
+$
+0.30
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Small 3.2 24B
+Mistral Small 3.2 24B
+28.4B
+tokens
+Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on WildBench and Arena Hard, reduces infinite generations, and delivers gains in tool use and structured output tasks. It supports image and text inputs with structured outputs, function/tool calling, and strong performance across coding (HumanEval+, MBPP), STEM (MMLU, MATH, GPQA), and vision benchmarks (ChartQA, DocVQA).
+by
+
+mistralai
+Jun 20, 2025
+128K
+context
+$
+0.075
+
+/M
+
+input
+
+tokens
+$
+0.20
+
+/M
+
+output
+
+tokens
+Mistral: Magistral Small 2506
+Magistral Small 2506
+Magistral Small is a 24B parameter instruction-tuned model based on Mistral-Small-3.1 (2503), enhanced through supervised fine-tuning on traces from Magistral Medium and further refined via reinforcement learning. It is optimized for reasoning and supports a wide multilingual range, including over 20 languages.
+by
+
+mistralai
+Jun 10, 2025
+40K
+context
+Mistral: Magistral Medium 2506
+Magistral Medium 2506
+Magistral is Mistral's first reasoning model. It is ideal for general purpose use requiring longer thought processing and better accuracy than with non-reasoning LLMs. From legal research and financial forecasting to software development and creative storytelling — this model solves multi-step challenges where transparency and precision are critical.
+by
+
+mistralai
+Jun 8, 2025
+41K
+context
+Mistral: Devstral Small 2505
+Devstral Small 2505
+Devstral-Small-2505 is a 24B parameter agentic LLM fine-tuned from Mistral-Small-3.1, jointly developed by Mistral AI and All Hands AI for advanced software engineering tasks. It is optimized for codebase exploration, multi-file editing, and integration into coding agents, achieving state-of-the-art results on SWE-Bench Verified (46.8%). Devstral supports a 128k context window and uses a custom Tekken tokenizer. It is text-only, with the vision encoder removed, and is suitable for local deployment on high-end consumer hardware (e.g., RTX 4090, 32GB RAM Macs). Devstral is best used in agentic workflows via the OpenHands scaffold and is compatible with inference frameworks like vLLM, Transformers, and Ollama. It is released under the Apache 2.0 license.
+by
+
+mistralai
+May 21, 2025
+131K
+context
+Mistral: Mistral Medium 3
+Mistral Medium 3
+284M
+tokens
+Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost compared to traditional large models, making it suitable for scalable deployments across professional and industrial use cases. The model excels in domains such as coding, STEM reasoning, and enterprise adaptation. It supports hybrid, on-prem, and in-VPC deployments and is optimized for integration into custom workflows. Mistral Medium 3 offers competitive accuracy relative to larger models like Claude Sonnet 3.5/3.7, Llama 4 Maverick, and Command R+, while maintaining broad compatibility across cloud environments.
+by
+
+mistralai
+May 7, 2025
+131K
+context
+$
+0.40
+
+/M
+
+input
+
+tokens
+$
+2
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Small 3.1 24B
+Mistral Small 3.1 24B
+913M
+tokens
+Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and vision tasks, including image analysis, programming, mathematical reasoning, and multilingual support across dozens of languages. Equipped with an extensive 128k token context window and optimized for efficient local inference, it supports use cases such as conversational agents, function calling, long-document comprehension, and privacy-sensitive deployments. The updated version is [Mistral Small 3.2](mistralai/mistral-small-3.2-24b-instruct)
+by
+
+mistralai
+Mar 17, 2025
+128K
+context
+$
+0.351
+
+/M
+
+input
+
+tokens
+$
+0.555
+
+/M
+
+output
+
+tokens
+Mistral: Saba
+Saba
+18.6M
+tokens
+Mistral Saba is a 24B-parameter language model specifically designed for the Middle East and South Asia, delivering accurate and contextually relevant responses while maintaining efficient performance. Trained on curated regional datasets, it supports multiple Indian-origin languages—including Tamil and Malayalam—alongside Arabic. This makes it a versatile option for a range of regional and multilingual applications. Read more at the blog post [here](https://mistral.ai/en/news/mistral-saba)
+by
+
+mistralai
+Feb 17, 2025
+33K
+context
+$
+0.20
+
+/M
+
+input
+
+tokens
+$
+0.60
+
+/M
+
+output
+
+tokens
+Mistral: Mistral Small 3
+Mistral Small 3
+6.21B
+tokens
+Mistral Small 3 is a 24B-parameter language model optimized for low-latency performance across common AI tasks. Released under the Apache 2.0 license, it features both pre-trained and instruction-tuned versions designed for efficient local deployment. The model achieves 81% accuracy on the MMLU benchmark and performs competitively with larger models like Llama 3.3 70B and Qwen 32B, while operating at three times the speed on equivalent hardware. [Read the blog post about the model here.](https://mistral.ai/news/mistral-small-3/)
+by
+
+mistralai
+Jan 30, 2025
+33K
+context
+$
+0.05
+
+/M
+
+input
+
+tokens
+$
+0.08
+
+/M
+
+output
+
+tokens
+Mistral: Codestral 2501
+Codestral 2501
+[Mistral](/mistralai)'s cutting-edge language model for coding. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation. Learn more on their blog post: https://mistral.ai/news/codestral-2501/
+by
+
+mistralai
+Jan 14, 2025
+256K
+context
+Mistral Large 2411
+Mistral Large 2411
+571M
+tokens
+Mistral Large 2 2411 is an update of [Mistral Large 2](/mistralai/mistral-large) released together with [Pixtral Large 2411](/mistralai/pixtral-large-2411) It provides a significant upgrade on the previous [Mistral Large 24.07](/mistralai/mistral-large-2407), with notable improvements in long context understanding, a new system prompt, and more accurate function calling.
+by
+
+mistralai
+Nov 19, 2024
+131K
+context
+$
+2
+
+/M
+
+input
+
+tokens
+$
+6
+
+/M
+
+output
+
+tokens
+Mistral Large 2407
+Mistral Large 2407
+187M
+tokens
+This is Mistral AI's flagship model, Mistral Large 2 (version mistral-large-2407). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/). It supports dozens of languages including French, German, Spanish, Italian, Portuguese, Arabic, Hindi, Russian, Chinese, Japanese, and Korean, along with 80+ coding languages including Python, Java, C, C++, JavaScript, and Bash. Its long context window allows precise information recall from large documents.
+by
+
+mistralai
+Nov 19, 2024
+131K
+context
+$
+2
+
+/M
+
+input
+
+tokens
+$
+6
+
+/M
+
+output
+
+tokens
+Mistral: Pixtral Large 2411
+Pixtral Large 2411
+79M
+tokens
+Pixtral Large is a 124B parameter, open-weight, multimodal model built on top of [Mistral Large 2](/mistralai/mistral-large-2411). The model is able to understand documents, charts and natural images. The model is available under the Mistral Research License (MRL) for research and educational use, and the Mistral Commercial License for experimentation, testing, and production for commercial purposes.
+by
+
+mistralai
+Nov 19, 2024
+131K
+context
+$
+2
+
+/M
+
+input
+
+tokens
+$
+6
+
+/M
+
+output
+
+tokens
+Mistral: Ministral 8B
+Ministral 8B
+Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length and excels in knowledge and reasoning tasks. It outperforms peers in the sub-10B category, making it perfect for low-latency, privacy-first applications.
+by
+
+mistralai
+Oct 17, 2024
+128K
+context
+Mistral: Ministral 3B
+Ministral 3B
+Ministral 3B is a 3B parameter model optimized for on-device and edge computing. It excels in knowledge, commonsense reasoning, and function-calling, outperforming larger models like Mistral 7B on most benchmarks. Supporting up to 128k context length, it’s ideal for orchestrating agentic workflows and specialist tasks with efficient inference.
+by
+
+mistralai
+Oct 17, 2024
+128K
+context
+Mistral: Pixtral 12B
+Pixtral 12B
+The first multi-modal, text+image-to-text model from Mistral AI. Its weights were launched via torrent: https://x.com/mistralai/status/1833758285167722836.
+by
+
+mistralai
+Sep 10, 2024
+4K
+context
+Mistral: Mistral Nemo
+Mistral Nemo
+155B
+tokens
+A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, and Hindi. It supports function calling and is released under the Apache 2.0 license.
+by
+
+mistralai
+Jul 19, 2024
+131K
+context
+$
+0.02
+
+/M
+
+input
+
+tokens
+$
+0.03
+
+/M
+
+output
+
+tokens
+Mistral: Codestral Mamba
+Codestral Mamba
+A 7.3B parameter Mamba-based model designed for code and reasoning tasks. - Linear time inference, allowing for theoretically infinite sequence lengths - 256k token context window - Optimized for quick responses, especially beneficial for code productivity - Performs comparably to state-of-the-art transformer models in code and reasoning tasks - Available under the Apache 2.0 license for free use, modification, and distribution
+by
+
+mistralai
+Jul 19, 2024
+256K
+context
+Mistral: Mistral 7B Instruct v0.3
+Mistral 7B Instruct v0.3
+A high-performing, industry-standard 7.3B parameter model, with optimizations for speed and context length. An improved version of [Mistral 7B Instruct v0.2](/models/mistralai/mistral-7b-instruct-v0.2), with the following changes: - Extended vocabulary to 32768 - Supports v3 Tokenizer - Supports function calling NOTE: Support for function calling depends on the provider.
+by
+
+mistralai
+May 27, 2024
+33K
+context
+Mistral: Mistral 7B Instruct
+Mistral 7B Instruct
+A high-performing, industry-standard 7.3B parameter model, with optimizations for speed and context length. *Mistral 7B Instruct has multiple version variants, and this is intended to be the latest version.*
+by
+
+mistralai
+May 27, 2024
+33K
+context
+Mistral: Mixtral 8x22B Instruct
+Mixtral 8x22B Instruct
+181M
+tokens
+Mistral's official instruct fine-tuned version of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b). It uses 39B active parameters out of 141B, offering unparalleled cost efficiency for its size. Its strengths include: - strong math, coding, and reasoning - large context length (64k) - fluency in English, French, Italian, German, and Spanish See benchmarks on the launch announcement [here](https://mistral.ai/news/mixtral-8x22b/). #moe
+by
+
+mistralai
+Apr 17, 2024
+66K
+context
+$
+2
+
+/M
+
+input
+
+tokens
+$
+6
+
+/M
+
+output
+
+tokens
+Mistral: Mixtral 8x22B (base)
+Mixtral 8x22B (base)
+Mixtral 8x22B is a large-scale language model from Mistral AI. It consists of 8 experts, each 22 billion parameters, with each token using 2 experts at a time. It was released via [X](https://twitter.com/MistralAI/status/1777869263778291896). #moe
+by
+
+mistralai
+Apr 10, 2024
+66K
+context
+Mistral Large
+Mistral Large
+733M
+tokens
+This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-2407`). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/). It supports dozens of languages including French, German, Spanish, Italian, Portuguese, Arabic, Hindi, Russian, Chinese, Japanese, and Korean, along with 80+ coding languages including Python, Java, C, C++, JavaScript, and Bash. Its long context window allows precise information recall from large documents.
+by
+
+mistralai
+Feb 26, 2024
+128K
+context
+$
+2
+
+/M
+
+input
+
+tokens
+$
+6
+
+/M
+
+output
+
+tokens
+Mistral Tiny
+Mistral Tiny
+Note: This model is being deprecated. Recommended replacement is the newer [Ministral 8B](/mistral/ministral-8b) This model is currently powered by Mistral-7B-v0.2, and incorporates a "better" fine-tuning than [Mistral 7B](/models/mistralai/mistral-7b-instruct-v0.1), inspired by community work. It's best used for large batch processing tasks where cost is a significant factor but reasoning capabilities are not crucial.
+by
+
+mistralai
+Jan 10, 2024
+32K
+context
+Mistral Small
+Mistral Small
+With 22 billion parameters, Mistral Small v24.09 offers a convenient mid-point between (Mistral NeMo 12B)[/mistralai/mistral-nemo] and (Mistral Large 2)[/mistralai/mistral-large], providing a cost-effective solution that can be deployed across various platforms and environments. It has better reasoning, exhibits more capabilities, can produce and reason about code, and is multiligual, supporting English, French, German, Italian, and Spanish.
+by
+
+mistralai
+Jan 10, 2024
+32K
+context
+Mistral Medium
+Mistral Medium
+This is Mistral AI's closed-source, medium-sided model. It's powered by a closed-source prototype and excels at reasoning, code, JSON, chat, and more. In benchmarks, it compares with many of the flagship models of other companies.
+by
+
+mistralai
+Jan 10, 2024
+32K
+context
+Mistral: Mistral 7B Instruct v0.2
+Mistral 7B Instruct v0.2
+A high-performing, industry-standard 7.3B parameter model, with optimizations for speed and context length. An improved version of [Mistral 7B Instruct](/modelsmistralai/mistral-7b-instruct-v0.1), with the following changes: - 32k context window (vs 8k context in v0.1) - Rope-theta = 1e6 - No Sliding-Window Attention
+by
+
+mistralai
+Dec 28, 2023
+33K
+context
+Mistral: Mixtral 8x7B Instruct
+Mixtral 8x7B Instruct
+Mixtral 8x7B Instruct is a pretrained generative Sparse Mixture of Experts, by Mistral AI, for chat and instruction use. Incorporates 8 experts (feed-forward networks) for a total of 47 billion parameters. Instruct model fine-tuned by Mistral. #moe
+by
+
+mistralai
+Dec 10, 2023
+33K
+context
+Mistral: Mistral 7B Instruct v0.1
+Mistral 7B Instruct v0.1
+162M
+tokens
+Going away May 30, 2026
+A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.
+by
+
+mistralai
+Sep 28, 2023
+4K
+context
+$
+0.11
+
+/M
+
+input
+
+tokens
+$
+0.19
+
+/M
+
+output
+
+tokens

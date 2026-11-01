@@ -1,0 +1,223 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/updates/2025-03-19-open-banking-refresh-tokens
+page path  : /updates/2025-03-19-open-banking-refresh-tokens
+captured   : 2026-01-15 15:17:29 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_updates_2025-03-19-open-banking-refresh-tokens__4ef29b06.html.gz
+========================================================================
+
+Open Banking API Refresh Tokens | Revolut Docs
+
+Open Banking API Refresh Tokens | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Recent updates
+2025
+Open Banking API: Updates to OpenID config file, account subtype, and DCR scopes
+Merchant API: Push payments to Revolut Terminal
+New Pay by Bank integration example on GitHub
+Revolut APIs: Public API Specs on GitHub
+Merchant API: New Disputes endpoints
+Merchant API: New Apple Pay unregistration endpoint
+Release announcement: Pay by Bank
+Open Banking API Refresh Tokens
+Financial-grade API 1.0 (FAPI 1) Advanced
+Open Banking API SCA restrictions update
+2024
+Restrictions on AIS endpoints
+Payment Initiation status update
+Migration of Swiss users
+Open Banking API Refresh Tokens
+March 19, 2025
+·
+3 min read
+Revolut
+Revolut team
+Breaking Change
+The changes come into effect starting
+7 April 2025
+and will impact the expiry date of all new access tokens issued for account access consents.
+
+We're making some changes to our Open Banking API, which will affect responses returned when obtaining access tokens for account information consents.
+
+To ensure a smooth transition and backwards compatibility, we'll introduce these changes in 2 stages, giving you enough time to adapt:
+
+Starting from
+7 April 2025
+, in the API response alongside the
+access_token
+, you'll also obtain a
+refresh_token
+.
+
+At this stage, the expiry of the refresh token will be the same as that for the access token, and will be returned in the field
+refresh_token_expires_at
+.
+
+Info
+A refresh token is used to obtain a new access token once the previous access token has expired. To regenerate an access token using the refresh token, you make a call to the
+/token
+endpoint with
+grant_type=refresh_token
+, following the steps described
+here
+. The new access token that you get replaces the previous access token.
+
+Starting from
+4 August 2025
+, newly-issued access tokens will expire after
+60 minutes
+. The refresh tokens will continue to have an expiration of:
+
+180 days for EU users
+
+50 years for long-lived tokens for UK users
+
+90 days for other regions
+
+What do I need to do?
+​
+
+Starting from
+7 April 2025
+and by
+4 August 2025
+, you should start recording the refresh tokens that you obtain, together with your new access tokens. You'll then be able to use the refresh token to get a new access token.
+
+Note
+You don’t need the refresh token if you only need to be able to access user data until the first access token expires. However, we recommend that you store the refresh token either way. This will ensure hassle-free token regeneration if your business needs change along the way and your access token expires before you’re done using it.
+
+After
+4 August 2025
+, once your access token expires, if you want to continue accessing customer data, you'll need to get a new access token using the refresh token.
+
+Note
+When refreshing an access token, the previously issued access token linked to that refresh token will automatically be invalidated.
+
+Info
+Any access tokens already issued to EU customers will still work until they expire.
+Any long-lived access tokens already issued for UK customers will still work, but we encourage AISPs to reauthorise their consents to obtain a refresh token.
+
+For more information, please check
+our online documentation
+.
+
+If you have any questions, please email
+[email protected]
+.
+Tags:
+open-banking-api
+breaking-change
+Newer post
+Release announcement: Pay by Bank
+Older post
+Financial-grade API 1.0 (FAPI 1) Advanced
+What do I need to do?
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

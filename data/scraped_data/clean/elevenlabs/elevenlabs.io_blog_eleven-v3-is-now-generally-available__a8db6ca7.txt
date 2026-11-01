@@ -1,0 +1,234 @@
+=== SOURCE =============================================================
+company    : ElevenLabs (elevenlabs)
+url        : https://elevenlabs.io/blog/eleven-v3-is-now-generally-available
+page path  : /blog/eleven-v3-is-now-generally-available
+captured   : 2026-02-11 10:18:45 UTC  (CommonCrawl CC-MAIN-2026-08)
+raw file   : raw/elevenlabs/elevenlabs.io_blog_eleven-v3-is-now-generally-available__a8db6ca7.html.gz
+========================================================================
+
+Eleven v3 is Now Generally Available
+
+Eleven v3 is Now Generally Available
+Sign up
+Sign up
+Skip to content
+Creative Platform
+Agents Platform
+Developers
+Resources
+Enterprise
+Pricing
+Log in
+Sign up
+Blog
+Research
+Eleven v3 is Now Generally Available
+Last updated
+Feb 2, 2026
+•
+2 minutes reading time
+Authors
+Joe Reeve
+, Growth
+Eleven v3, our most advanced Text to Speech model, is now out of Alpha and generally available.
+On this page
+Introduction
+Accuracy improvements
+Availability
+Eleven v3, our most advanced Text to Speech model, is now out of Alpha and generally available.
+Since the Alpha release, we've continued refining the model. Two key improvements:
+More stable.
+In testing, users preferred the new version 72% of the time over the previous Alpha release.
+More accurate.
+We significantly improved how the model handles numbers, symbols, and specialized notation across languages.
+Accuracy improvements
+Text to Speech models need to interpret what you write and decide how to say it. The same symbols can mean different things in different contexts.
+Consider a phone number: "+49 170 9876543"
+In some cases, our models would read this as "plus forty-nine, one hundred seventy, nine million eight hundred seventy-six thousand five hundred forty-three" - interpreting the digits as large numbers rather than a digit sequence. The correct reading is "plus four nine, one seven zero, nine eight seven six five four three."
+These kinds of errors showed up across categories - sports scores, chemical formulas, currencies, coordinates - anywhere the models had to interpret symbols and decide how to vocalize them.
+We tested against an internal benchmark covering 27 categories across 8 languages.
+Overall:
+68% reduction in errors. Error rate dropped from 15.3% to 4.9%.
+Error rate by category:
+Before
+Chemical Formulas
+45.6%
+Phone Numbers
+16.9%
+URLs / Emails
+45.6%
+ISBNs
+17.9%
+License Plates
+14.4%
+Mathematical Expressions
+23.8%
+Geographic Coordinates
+46.2%
+After
+Chemical Formulas
+0.6%
+Phone Numbers
+0.6%
+URLs / Emails
+3.9%
+ISBNs
+0.0%
+License Plates
+1.2%
+Mathematical Expressions
+6.9%
+Geographic Coordinates
+17.5%
+Error Reduction
+Chemical Formulas
+99%
+Phone Numbers
+99%
+URLs / Emails
+91%
+ISBNs
+100%
+License Plates
+91%
+Mathematical Expressions
+71%
+Geographic Coordinates
+62%
+Before
+After
+Error Reduction
+Chemical Formulas
+45.6%
+0.6%
+99%
+Phone Numbers
+16.9%
+0.6%
+99%
+URLs / Emails
+45.6%
+3.9%
+91%
+ISBNs
+17.9%
+0.0%
+100%
+License Plates
+14.4%
+1.2%
+91%
+Mathematical Expressions
+23.8%
+6.9%
+71%
+Geographic Coordinates
+46.2%
+17.5%
+62%
+The improvements are most significant in categories where context determines interpretation - where a colon might indicate a sports score, a time, or an aspect ratio depending on surrounding text.
+Examples
+Currencies
+— correct magnitude:
+Input: ¥250,000
+Before: 25,000 yen
+After: 250,000 yen
+Chemical formulas
+— symbols preserved correctly:
+Input: SO₂
+Before: "sulfur double" (garbled)
+After: "S O two"
+Sports scores
+— context-aware interpretation:
+Input: Final score: 102-98
+Before: "one hundred two minus ninety-eight"
+After: "one hundred two to ninety-eight"
+Availability
+Eleven v3 is now generally available across all platforms.
+Explore articles by the ElevenLabs team
+Agents Platform Stories
+Agents Platform Stories
+3Shape and ElevenLabs announce collaboration on conversational AI
+Bringing ElevenAgents to customer support for a global dental tech company.
+Agents Platform Stories
+Agents Platform Stories
+Eldra delivers trusted phone support for elderly home care using ElevenAgents
+Resolving 90% of calls about schedules and visit details for elderly home care.
+ElevenLabs
+Create with the highest quality AI Audio
+Get started free
+Already have an account?
+
+Log in
+English
+Research
+Text to Speech (TTS)
+Speech to Text
+Realtime Speech to Text
+Voice Changer
+Text to Sound Effects
+Voice Cloning
+Voice Isolator
+AI Music Generator
+Products
+Studio
+Agents Platform
+Dubbing Studio
+Voice Library
+Image & Video
+Audio Native
+ElevenStudios
+API
+Voiceover Studio
+ElevenReader
+Mobile App
+AI Voice Generator
+Solutions
+For Enterprise
+For Teams
+For Developers
+For Startups
+For Students
+Retail and E-Commerce
+Telecommunications
+Financial Services
+Technology
+Customer Support
+AI Voice Agents
+Earn As
+Affiliate
+Voice Actor
+Data Partner
+Commercial Partner
+Resources
+API Reference
+Product Guides
+Help Centre
+Languages
+Webinars
+Terms
+Privacy
+CCPA Notice
+EU-US DPF Policy
+Cookie Settings
+Socials
+X
+LinkedIn
+GitHub
+YouTube
+Discord
+TikTok
+Instagram
+Facebook
+Reddit
+Company
+About
+Safety
+Careers
+Blog
+Impact Program
+Brand and Press Kit
+Iconic Marketplace
+Modern Slavery Policy
+EU Digital Services Act (DSA)
+ElevenLabs Summit

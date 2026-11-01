@@ -1,0 +1,278 @@
+=== SOURCE =============================================================
+company    : Cohere (cohere)
+url        : https://cohere.com/customer-stories/bluedot
+page path  : /customer-stories/bluedot
+captured   : 2026-01-18 01:56:11 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/cohere/cohere.com_customer-stories_bluedot__38cb7bb1.html.gz
+========================================================================
+
+BlueDot Fights Disease Outbreaks with Cohere | Cohere
+
+BlueDot Fights Disease Outbreaks with Cohere | Cohere
+Products
+Products
+
+Workplace Systems
+North
+NEW
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Aya Expanse
+Leading multilingual models that excel across 23 different languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Security
+Best-in-class AI security and data protection
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Customer Stories
+Draftwise
+Fujitsu
+BambooHR
+Notion
+Oracle
+Atomicwork
+Community
+Discord
+Events
+On-Demand Events
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Sign in
+Request a demo
+Products
+Products
+
+overview
+Workplace Systems
+North
+NEW
+An enterprise-ready AI platform that powers modern workplace productivity
+Compass
+An intelligent search and discovery system to surface business insights
+Generative Models
+Command
+A family of high-performance, scalable language models
+Aya Expanse
+Leading multilingual models that excel across 23 different languages
+Advanced Retrieval Models
+Embed
+A leading multimodal search and retrieval tool
+Rerank
+A powerful model that provides a semantic boost to search quality
+Customization
+Pricing
+Solutions
+Industries
+Technology
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Energy and Utilities
+Public Sector
+Security
+Best-in-class AI security and data protection
+Private Deployments
+Research
+Cohere Labs
+Cohere's research lab that seeks to solve complex ML problems
+Model
+Aya
+RESOURCES
+Papers
+Videos
+Blog
+Initiatives
+Open Science Community
+Scholars Program
+Catalyst Grant Program
+The Leaderboard Illusion
+Events
+Resources
+Resources
+Blog
+Developers
+Docs
+LLM University
+Cookbooks
+Customer Stories
+Draftwise
+Fujitsu
+BambooHR
+Notion
+Oracle
+Atomicwork
+Community
+Discord
+Events
+On-Demand Events
+Company
+Company
+About
+Careers
+Newsroom
+Partners
+Request a demo
+Sign in
+BlueDot Fights Disease Outbreaks with Cohere
+BlueDot
+BlueDot empowers public and private organizations to identify relevant global outbreaks that demand your attention, anticipate how they will impact your organization, and respond appropriately without over or under-reacting on your mandate. Using the power of AI and human expertise, we monitor 190+ diseases for signs of outbreaks to deliver personalized, unbiased insights that are locally relevant. This enables our partners to mobilize timely, effective actions. With BlueDot, you can help create a world more resilient to disease outbreaks.
+BlueDot website
+Overview
+Infectious diseases, like the mpox emergency, COVID-19 pandemic, and rising avian influenza outbreaks, pose a growing global threat. To prevent disruption, organizations must identify, anticipate, and respond to these threats effectively. For over a decade,
+BlueDot
+has provided such intelligence through its technology platform, but it has been limited in speed and accessible only through complex API calls designed for data engineers and scientists.
+Using the fine-tuned
+Cohere Classify
+solution, BlueDot moved from “near real-time” to “real-time” insights and launched BlueDot Assistant, an interactive platform that makes infectious disease intelligence available to users through natural language. In the world of infectious diseases, making confident decisions and moving fast is critical, underscoring the importance of swift, accurate updates.
+The Challenge
+The early signals of outbreaks are hidden across thousands of sources, in hundreds of languages, and reside in every corner of the world. Prior to working with Cohere, BlueDot used simplistic techniques to sort and filter hundreds of thousands of sources with the goal of identifying credible clues of emerging outbreaks within them. However, the process had significant limitations when processing articles in non-English languages, and required ongoing human intervention that hindered the speed at which clues were uncovered and communicated to clients.
+Previously, accessing BlueDot’s real-time infectious disease intelligence required significant technical expertise. Users had to understand which of BlueDot’s many API endpoints – including real-time reports of disease cases, disease spread forecasts, and more – to leverage and structure programmatic calls to the API. This limited the adoption of the tool to skilled data scientists, engineers, and epidemiologists, creating delays in insight generation and ultimately, real-world action. Dr. Kamran Khan, CEO of BlueDot, explains, “By reducing the technical barriers to interact with a diverse array of complex global data, almost anyone can now generate powerful insights in just a matter of seconds.”
+BlueDot’s vision was to create BlueDot Assistant, a highly accessible tool that empowers users to ask questions in plain language and receive accurate responses instantly. This involved addressing a translation challenge: converting questions like 'What’s happening with dengue in Brazil?' into a series of API calls directed to the appropriate endpoints with the correct parameters.
+Translating intricate data queries into precise API calls presented a problem. Initial trials proved inadequate, failing to discern the subtleties between queries, such as “COVID cases in Italy” and “disease outbreaks in Italy.” To preserve the integrity of insights and client trust, BlueDot needed a system that consistently and reliably identified the most appropriate API endpoint for every user query made in natural language.
+The Solution
+BlueDot first experimented with various techniques and struggled to achieve the necessary level of accuracy, delivering less than a 50% match rate in early exploration. The BlueDot team found their answer with Cohere, using a fine-tuned
+Cohere Classify
+. In production, these endpoints and the Cohere API work in tandem with impressive, low-latency query processing in milliseconds.
+A Cohere Classify model was fine-tuned on the dataset of user queries, with output labels corresponding to one or more API endpoints required to fulfill the query. The integration of Cohere’s technology marked a significant leap in performance. The right endpoint now appears more than 94% of the time.
+With Cohere, BlueDot implemented a series of custom classifiers to make sorting and filtering faster, more efficient, and fully multilingual. Now, sources pass through multiple classifiers that automatically filter out irrelevant articles and classify the remaining ones by type. All relevant and tagged sources are further annotated with disease and location and consolidated into a live, highly searchable, feed of emerging outbreak signals – giving clients the needles in the haystack.
+The new system captures subtle linguistic nuances, with fast and affordable implementation compared to developing a similar in-house solution. BlueDot Director of Technology Beatriz Kanzki explains, “It takes only minutes to train, test and deploy Cohere’s fine-tuned models.”
+BlueDot employs an evaluation protocol that rigorously and repeatedly assesses the accuracy of the solutions. This protocol makes sure that the system consistently interprets user queries correctly and reliably directs them to the right data source for accurate responses. Efforts are ongoing to further refine the system, targeting perfect 100% accuracy.
+Cohere’s UX makes it easy to perform iterative improvements by fine-tuning the models quickly and easily. The new system exclusively uses BlueDot's data assets, curated and maintained by infectious disease epidemiologists, clinicians, veterinarians, and data scientists.
+The Impact
+With Cohere’s custom models in place, BlueDot launched BlueDot Assistant in August 2024.
+BlueDot’s CEO, Dr. Khan noted, “BlueDot’s intelligence informs decisions that impact millions of lives worldwide. This is why our approach to AI development is so rigorous. Cohere is a key partner in helping us make our intelligence more accessible through natural language, while ensuring users are empowered with the specific data they need."
+Cohere remains a valued partner as BlueDot advances the natural language interface to handle multi-turn conversations and queries requiring orchestration across multiple endpoints. Together, BlueDot and Cohere are driving transformational change in how organizations combat, prepare for, and respond to infectious disease outbreaks worldwide. What once took days to generate actionable insights now takes minutes, thanks to the broader access to BlueDot’s global intelligence through natural language.
+"Cohere is a key partner in helping us make our intelligence more accessible through natural language, while ensuring users are empowered with the specific data they need."
+Dr. Kamran Khan
+—
+CEO
+BlueDot
+01
+/
+02
+Prev
+Next
+Ready to put AI to work?
+Request a demo
+AI moves fast
+We’ll keep you up to date with the latest.
+Enter your business email below to receive updates from Cohere. Please refer to our
+privacy policy
+for details or to contact us. You can unsubscribe at any time.
+Products
+North
+Compass
+Command
+Embed
+Rerank
+Customization
+Pricing
+Deployment Options
+Private Deployments
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Products
+North
+Compass
+Command
+Embed
+Rerank
+Customization
+Pricing
+Deployment Options
+Private Deployments
+Solutions
+Technology
+Energy and Utilities
+Financial Services
+Healthcare and Life Sciences
+Manufacturing
+Public Sector
+Resources
+Blog
+Developers
+Events
+On-Demand Events
+LLM University
+Documentation
+Release Notes
+Company
+About
+Careers
+Research
+Newsroom
+Partners
+Security
+Trust Center
+Modern Slavery Act
+Cohere ©
+2026
+Privacy
+Terms of Use
+Manage Cookies
+English

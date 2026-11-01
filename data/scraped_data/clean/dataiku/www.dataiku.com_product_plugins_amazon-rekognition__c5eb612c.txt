@@ -1,0 +1,606 @@
+=== SOURCE =============================================================
+company    : Dataiku (dataiku)
+url        : https://www.dataiku.com/product/plugins/amazon-rekognition/
+page path  : /product/plugins/amazon-rekognition/
+captured   : 2026-01-24 23:06:04 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/dataiku/www.dataiku.com_product_plugins_amazon-rekognition__c5eb612c.html.gz
+========================================================================
+
+Plugin: Amazon Rekognition | Dataiku
+
+Plugin: Amazon Rekognition | Dataiku
+
+en
+
+de
+
+ja
+
+Close
+
+Join Dataiku
+
+Learning Center
+
+Sign in
+
+Product
+
+Discover Dataiku
+
+Where everyone can create
+and consume AI
+
+Dataiku Key Capabilities
+Plugins and Connectors
+Plans and Editions
+
+Build With Dataiku
+GenAI & Agents
+Machine Learning
+Analytics & Insights
+Data Prep for AI
+
+Deploy & Monitor With Dataiku
+
+AI Governance
+AI Engineering Operations
+AI Ecosystem
+
+Get An End-to-End Demo of Dataiku in 3 Minutes
+
+ACCESS DEMO NOW
+
+Solutions
+
+Dataiku For Your Industry
+
+Banking
+Life Sciences
+Manufacturing
+Telecommunications
+Insurance
+Retail & CPG
+Public Sector
+Utilities & Energy
+Healthcare
+
+Dataiku For Your Department
+
+Marketing
+Logistics & Supply Chain
+Finance & Audit
+
+Dataiku Offers for Every Team
+
+Dataiku for Data Analytics
+Dataiku for AI & Machine Learning
+Dataiku for Enterprise AI
+Dataiku Solutions Catalog
+
+Easily tailor marketing strategies for maximum ROI with this plug-and-play template.
+
+CHECK OUT THE DATAIKU SOLUTION
+
+Stories
+
+Dataiku AI Stories
+
+Turning analytics, AI, and agents into
+measurable impact.
+
+Dataiku Customer Stories
+
+Watch a Web Series
+
+AI Agents Builders
+Governing AI Agents
+AI and Us
+Center of Excellence
+The Dataiku Conference Live
+
+Prologis Productionalized 12x More AI & ML Projects
+
+SEE HOW THEY DID IT WITH DATAIKU
+
+Company
+
+Join Dataiku
+
+We're hiring, join the adventure
+
+Engineering at Dataiku
+
+About Dataiku
+Customers
+Analyst Recognition
+Dataiku for the Future
+Press Releases
+Media Kit
+
+Meet Dataiku at an Event
+Live Dataiku Demos
+Dataiku Summit
+Events Calendar
+
+The 2025 Gartner Magic Quadrant for Data Science and ML Platforms
+
+GET A COMPLIMENTARY COPY
+
+Partners
+
+Find a Dataiku Partner
+
+Work with our expert Partners
+
+Service Partners
+Technology Alliances
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+Databricks
+Deloitte
+Snowflake
+
+Dataiku + Deloitte Boost Rolls-Royce’s Efficiency
+
+DISCOVER THE FULL STORY
+
+START FREE TRIAL
+CONTACT US
+
+Contact Us
+
+START FREE TRIAL
+
+Dataiku
+
+Product
+
+Plugins
+
+Amazon Rekognition
+
+Amazon Rekognition
+
+This plugin provides recipes to call the Amazon Rekognition APIs for Computer Vision
+
+Share
+
+Plugin information
+
+Version
+
+1.0.5
+
+Author
+
+Dataiku (Alex COMBESSIE, Joachim ZENTICI)
+
+Released
+
+2020-09
+
+Last updated
+
+2025-02
+
+License
+
+Apache Software License
+
+Source code
+
+Github
+
+Reporting issues
+
+Github
+
+With this plugin, you will be able to:
+
+Detect objects in images to obtain labels and draw bounding boxes
+
+Detect text (up to 50 words in Latin script) in images
+
+Detect unsafe content (nudity, violence, etc.) in images
+
+Note that the Amazon Rekognition API is a paid service. You can consult the
+API pricing page
+to evaluate the future cost.
+
+How to set up
+
+If you are a Dataiku and AWS admin user, follow these configuration steps right after you install the plugin. If you are not an admin, you can forward this to your admin and scroll down to the
+How to use
+section.
+
+1. Create an IAM user with the Amazon Rekognition policy – in AWS
+
+Let’s assume that your AWS account has already been created and that you have full admin access. If not, please follow this
+guide
+.
+
+Start by creating a dedicated IAM user to centralize access to the Rekognition API, or select an existing one. Next, you will need to attach a policy to this user following this
+documentation
+. We recommend using the
+“AmazonRekognitionFullAccess”
+managed policy, as shown below:
+
+IAM policy for Amazon Rekognition
+
+Alternatively, you can create a custom IAM policy to allow
+“rekognition:*”
+actions. After completing this step, you will be able to retrieve the user
+Access key ID
+and
+Secret access key.
+
+Completed IAM User Creation
+
+2. Create an API configuration preset – in Dataiku DSS
+
+In Dataiku DSS, navigate to the Plugin page > Settings > API configuration and create your first preset.
+
+API Configuration Preset Creation
+
+3. Configure the preset – in Dataiku DSS
+
+Completed API Configuration Preset
+
+Fill the AUTHENTIFICATION settings
+
+Copy-paste your
+Access key ID
+and
+Secret access key
+from
+Step 1
+in the corresponding fields.
+
+The
+AWS region
+parameter needs to be specified within this
+list
+.
+
+Alternatively, you may leave the fields empty so that the credentials are ascertained from the server environment. If you choose this option, please follow
+this documentation
+on the server hosting DSS.
+
+(Optional) Review the API QUOTA settings
+
+The default API Quota settings ensure that one recipe calling the API will be throttled at 50 requests (
+Rate limit
+parameter) per second (
+Period
+parameter). In other words, after sending 50 requests, it will wait for 1 second, then send another 50, etc.
+
+This default quota is defined by Amazon. You can request a quota increase, as documented on this
+page.
+
+If your quota is at its maximum and if you envision that multiple recipes will run concurrently to call the API, you may need to decrease the
+Rate limit
+parameter. For instance, if you want to allow 5 concurrent DSS activities, you can set this parameter at 50/5 = 10 requests per second.
+
+(Optional) Review the PARALLELIZATION settings
+
+The default
+Concurrency
+parameter means that 4
+threads
+will call the API in parallel. This parallelization operates within the API Quota settings defined above.
+
+We do not recommend to change this default parameter unless your server has a much higher number of
+CPU cores
+.
+
+Set the Permissions of your preset.
+
+You can declare yourself as Owner of this preset and make it available to everybody, or to a specific group of users.
+
+Any user belonging to one of these groups on your Dataiku DSS instance will be able to see and use this preset.
+
+Voilà! Your preset is ready to be used.
+
+Later, you (or another Dataiku admin) will be able to add more presets. This can be useful to segment plugin usage by user group. For instance, you can create a “Default” preset for everyone and a “High performance” one for your Marketing team, with separate billing for each team.
+
+How to use
+
+Let’s assume that you have a Dataiku DSS project with a folder containing JPG and PNG images. As an example, we will use a sample of the
+COCO dataset.
+You can follow the same steps with your own images.
+
+First, create an Amazon Rekognition recipe from the
++ RECIPE
+button or from the right panel if your folder is selected.
+
+Plugin Recipe Creation
+
+Object Detection & Labeling
+
+Input
+
+Folder with JPG/PNG images
+
+Output
+
+Dataset with object labels for each image
+
+Object Detection & Labeling Output Dataset
+
+(Optional) Folder with object bounding boxes drawn on each image
+
+This is definitely a Bear
+
+Note that including this folder will increase the recipe runtime, as each image needs to be re-downloaded to draw the bounding boxes after the API calls.
+
+Settings
+
+Object Detection & Labeling Recipe Settings
+
+Review CONFIGURATION parameters
+
+The
+API configuration preset
+parameter is automatically filled by the default one made available by your Dataiku admin. You may select another one if multiple presets have been created.
+
+The
+Number of labels
+parameter limits the number of object labels returned by the API for each image.
+
+(Optional) Review ADVANCED parameters
+
+You can activate the
+Expert mode
+to access advanced parameters.
+
+The
+Minimum score
+parameter allows you to filter out results with a low confidence score from the model. Default is 0.55 which is the AWS default value.
+
+The
+Orientation correction parameter
+let you detect and correct the orientation in case some of your images are wrongfully rotated. Note that it incurs an additional cost of one API call per image.
+
+The
+Error handling
+parameter determines how the recipe will behave if the API returns an error:
+
+In “Log” error handling, this error will be logged to the output but it will not cause the recipe to fail.
+
+We do not recommend to change this parameter to “Fail” mode unless this is the desired behaviour.
+
+Text detection
+
+Input
+
+Folder with JPG/PNG images
+
+Output
+
+Dataset with detected text for each image
+
+Text Detection Output Dataset
+
+(Optional) Folder with text bounding boxes drawn on each image
+
+Magical Mystery Bus
+
+Note that including this folder will increase the recipe runtime, as each image needs to be re-downloaded to draw the bounding boxes after the API calls.
+
+Settings
+
+Text Detection Recipe Settings
+
+The parameters are almost exactly the same as the
+Object Detection & Labeling
+recipe (see above).
+
+The only change is that there is no Number of labels parameter. This API will detect up to 50 words in Latin script (see documentation
+here
+). Hence, it is not applicable to images with a lot of text or non-Latin characters.
+
+Unsafe Content Moderation
+
+Input
+
+Folder with JPG/PNG images
+
+Output
+
+Dataset with moderation labels for each image
+
+Unsafe Content Moderation Output Dataset
+
+Settings
+
+Unsafe Content Moderation Recipe Settings
+
+The parameters are almost exactly the same as the
+Object Detection & Labeling
+recipe (see above). The only change is the addition of Content category parameters:
+
+The
+Content category level
+parameter lets you choose which level of the
+Amazon Rekognition hierarchical taxonomy
+you want to use.
+
+If you choose “Top-level (simple)”, the
+Top-level categories
+parameter lets you select which type of unsafe content you need to detect among 4 categories.
+
+If you choose “Second-level (detailed)”, the
+Second-level categories
+parameter lets you select which type of unsafe content you need to detect among 18 detailed categories.
+
+Install In DSS
+
+To install the plugin, open the
+Apps menu, click Plugins and search for Amazon Rekognition.
+
+Alternatively, you can download a zipped version
+here
+.
+
+Get the Dataiku Data Sheet
+
+Learn everything you ever wanted to know about Dataiku (but were afraid to ask), including detailed specifications on features and integrations.
+
+Get the data sheet
+
+Close
+
+Product
+
+Discover Dataiku
+
+Dataiku Key Capabilities
+
+GenAI & Agents
+
+Machine Learning
+
+Analytics & Insights
+
+Data Prep for AI
+
+AI Engineering Operations
+
+AI Governance
+
+AI Ecosystem
+
+Plugins and Connectors
+
+Plans And Editions
+
+Solutions
+
+Solutions by Industry
+
+Banking
+
+Life Sciences
+
+Manufacturing
+
+Telecommunications
+
+Insurance
+
+Retail & CPG
+
+Public Sector
+
+Utilities & Energy
+
+Healthcare
+
+Offers for Every Team
+
+Dataiku for Data Analytics
+
+Dataiku for AI & Machine Learning
+
+Dataiku for Enterprise AI
+
+Solutions by Department
+
+Marketing
+
+Logistics & Supply Chain
+
+Finance & Audit
+
+Stories
+
+Dataiku Customer Stories
+
+AI Agents Builders
+
+Governing AI Agents
+
+AI and Us
+
+Center of Excellence
+
+The Dataiku Conference Live
+
+Company
+
+About Dataiku
+
+Careers
+
+Customers
+
+Analyst Recognition
+
+Dataiku for the Future
+
+Press Releases
+
+Media Kit
+
+Blog
+
+Meet Dataiku at an Event
+
+Live Dataiku Demos
+
+Events Calendar
+
+Dataiku Legal
+
+Dataiku Legal
+
+Privacy Policy
+
+Trust and Security at Dataiku
+
+Events Code Of Conduct
+
+Your Privacy Settings
+
+Partners
+
+Find A Dataiku Partner
+
+Service Partners
+
+Technology Alliances
+
+Partner With Dataiku
+
+Featured Partners
+
+AWS
+
+Databricks
+
+Deloitte
+
+Snowflake
+
+Language
+
+English
+
+Deutsch
+
+日本語
+
+Subscribe to Our Newsletter
+Get a monthly email about everything we’re thinking about, from thought leadership topics to technical articles and product updates.
+
+2026 Dataiku. All rights reserved.
+
+Privacy Policy
+
+Trust
+
+Legal

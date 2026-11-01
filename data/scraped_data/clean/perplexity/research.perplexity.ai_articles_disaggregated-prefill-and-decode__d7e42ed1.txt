@@ -1,0 +1,148 @@
+=== SOURCE =============================================================
+company    : Perplexity (perplexity)
+url        : https://research.perplexity.ai/articles/disaggregated-prefill-and-decode
+page path  : /articles/disaggregated-prefill-and-decode
+captured   : 2026-04-16 15:17:07 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/perplexity/research.perplexity.ai_articles_disaggregated-prefill-and-decode__d7e42ed1.html.gz
+========================================================================
+
+Disaggregated Prefill and Decode
+
+Disaggregated Prefill and Decode
+
+We're Hiring
+We're Hiring
+We're Hiring
+systems
+Aug 1, 2025
+Disaggregated Prefill and Decode
+Separating prefill and decode across devices speeds up LLM inference and improves performance
+In order to generate output tokens from an input prompt, LLM inference is split into two stages: prefill and decode. Prefill runs on the input tokens, populating KV caches, before entering the decode stage that generates tokens one-by-one. While a single decode step typically runs for tens of milliseconds, prefill takes substantially longer. If run on the same devices, mixing prefill with decode degrades decode performance. In this article we explore an established solution in the form of disaggregated prefill and decode, running them on separate devices to maximize both prefill throughput and decode latencies.
+Prefill vs Decode Performance
+In a typical LLM serving engine, the batch scheduler selects requests to process in each execution step of a model. When running on a single device or node, both prefill and decode requests are batched together. The cost of attention, which aggregates along the sequence length, grows for both prefill and decode, proportionally to the length of entries in the KV cache (
+kv_len
+). Decode requests usually forward a single token (
+qo_len=1
+), at a minimal cost through other layers which operate independently on the tokens of a sequence. Prefill requests forward thousands or tens of thousands of tokens at a significant cost through dense layers (large
+qo_len
+).
+The latency of a forward pass is more strongly influenced by the number of independent tokens passed through dense layers (
+qo_len
+) than the number of tokens retrieved from the KV cache during attention (
+kv_len
+). Attention can parallelize both across the number of requests and the
+kv_len
+proportional to sequence lengths, achieving good utilization. Prefill is compute bound:
+qo_len
+being high, GEMM kernels can allocate sufficient blocks along the
+M
+dimension to fully utilize the compute capabilities of modern GPUs. Decode is memory bound: due to typically low batch sizes, the number of inputs along
+M
+is usually small, sufficient for only one block. While Split-K GEMM kernels can improve SM utilization for low token batch sizes, the caches and the matrix multiplication units typically remain under-utilized.
+When mixed together, batches containing requests for prefill incur higher latencies through the forward pass, negatively affecting the decode throughput of the entire instance. While mixing prefill requests with decode requests or employing chunked prefill can slightly improve decode performance, it is difficult to maintain sufficient prefill throughput to process enough requests on an instance to maximize decode throughput. In the case of large models, with typical output lengths, to maintain a large batch size for decode, prefill must be performed often enough that it significantly degrades average latency and causes stutter in the output.
+These issues can be addressed by using a separate set of nodes to perform prefill and decode. By associating a prefiller node with multiple decoder nodes, sufficient requests can be scheduled for prefill to maximize throughput and maintain a large enough number of concurrent requests on the decoder nodes to also maximize decode throughput. The prefiller nodes populate the KV caches, which are then transferred to the decoder nodes. Since the decoders no longer have to break for prefill, latencies become much more deterministic, as the overall impact of growing
+kv_len
+of active requests is much less pronounced. The cost is paid in an increase in Time to First Token (TTFT), as the transfer of KV caches over the network can take tens to hundreds of milliseconds.
+KV Messenger
+At Perplexity, our implementation for disaggregated prefill and decode is built around a KV messenger which interacts with the LLM engine to orchestrate KV cache transfers from prefiller nodes to the decoder nodes through a network. On the prefiller side, the messenger accepts requests from decoder nodes, handing them over to the batch scheduler and keeping track of the forward pass execution to dispatch KV caches with as little latency as possible. On the decoder side, after un-evictable pages are allocated, the messenger blocks the request from being scheduled for decode until it is notified of the completion of the KV cache and decoder context transfers.
+Disaggregating prefill requires high throughput, low-latency connections, thus our implementation is tailored for RDMA, supporting both EFA and ConnectX Network Interface Controllers (NICs). The KV Messenger is built upon
+libfabric
+, using our
+fabric-lib
+wrappers to provide higher-level low-latency abstractions over the Remote Direct Memory Access (RDMA) primitives, implementing efficient page and metadata transfers, along with low-latency signaling. In the background,
+fabric-lib
+coordinates a GPU and its directly connected NICs to copy data from the prefiller node to the decoder node.
+Upon receipt, the prefiller node allocates a corresponding set of source KV pages and schedules the request for prefill using its local engine. To minimize latency, transfers do not wait for the forward pass: instead, KV page copies are initiated as soon as the model finishes appending KV cache entries to the KV cache for individual layers. Since prefill requests can be chunked, the batch scheduler notifies the KV messenger of the currently scheduled chunks before execution. To support CUDA graphs whilst being able to track layers, the messenger keeps a dedicated thread polling a counter incremented after the output projection of attention. The counter is maintained only on the lead node in a sharded environment: even though the KV cache entries are valid after append and before attention, the output projection is reduced across ranks, implicitly synchronizing them. Once a change in the counter is observed, the messenger is notified and it calls
+fabric-lib
+to initiate the transfer of a layer.
+After the transfer of the last chunk is complete, any additional metadata is also copied over: speculative decoding or MTP require logits and hidden states to be moved to the decoder. These copies are also performed through RDMA, to and from pre-allocated buffers.
+Upon the completion of all pending transfers of the last chunk, the prefiller node de-allocates the KV pages and completes the request. The decoder node is not explicitly notified: instead, it uses immediate counters to keep track of the number of operations completed. The number of RDMA operations on the prefiller side is proportional to the number of pages transferred. Upon the completion of the known number of page and context copies,
+fabric-lib
+calls the KV messenger to indicate that a request is ready for decoding. The messenger de-allocates any context and hands the request over to the LLM engine.
+Sharded KV Cache Transfers
+If the prefiller and decoder rely on Tensor Parallelism (TP) and shard or replicate the KV caches identically, a single transfer engine coordinates multiple devices to send and receive the pages of all the replicas. In order to be able to use a single messenger and transfer engine despite the fact that the executor of the model is replicated across multiple devices and processes,
+cuMem
+and
+cuMemImportFromShareableHandle
+are used to allocate the device memory backing the KV caches and to map it into the main process. The transfer engine inspects the node’s topology to find the NICs and the CPUs in the closest NUMA node to use for the transfers of each of the KV cache slices.
+If the source and destination shard identically, transfers are trivial as there is a one-to-one mapping from the devices and pages of the source and destination. In this situation, sharding implicitly helps transfer latencies: by using more GPUs, more associated NICs can be employed, reaching closer to full bandwidth utilization. However, if there is a mismatch, the transfer engine must split or reconstruct pages depending on the ratio between source and destination slices.
+If the prefiller splits the KV cache across more devices, full pages are reconstructed on the decoder by sending the corresponding halves out from the prefiller devices. If the decoder has more shards, it receives pages from multiple sources. The decoder needs to know of the sharding scheme of the prefiller in order to be able to compute the number of RDMA writes it is expected to receive. If replication is involved, the prefiller groups the devices into replica sets that replicate the full KV cache within themselves. Destination replica sets are randomly assigned one of the source sets in order to use all the available devices to initiate RDMA writes.
+Sharded transfers require a slight tweak to KV caches. By default, FlashInfer relies on the
+NHD
+layout, which orders the tokens within a page within the heads. Since caches are most likely sharded along the number of attention heads, this creates discontinuity within the head. RDMA transfers do not implicitly support strided writes, requiring one operation per head to perform the transfer. Instead, in order to reduce the number of interactions with
+libfabric
+, we organize KV caches using the
+HND
+layout which places the head dimension before the number of tokens. This ensures continuity, allowing a page to be copied over with a single write.
+Speculative Decoding
+Speculative decoding requires slight tweaks to disaggregated prefill-decode. In our implementation, prefiller nodes are not allowed to sample tokens. Since the Sonar models of Perplexity support structured output, we do not want to incur the complexity of synchronizing the schema processor implementations across prefillers and decoders. In the MTP and speculative decoding mechanisms, prefiling the draft model up to the last token involves sampling tokens from the target model.
+To work around these issues, prefill does not include the last token of the input sequence. Instead, hidden states or logits from prefill preceding the last token are transferred and it is treated as a decode token in the next step on the decoder. While this slightly increases latencies, as a full decode step must be performed after prefill to issue the first token, the complexity of the implementation is greatly reduced.
+Disaggregated Deployments
+We have deployed or experimented with multiple disaggregated configurations with different models, to support either production traffic or in-house evaluation workloads. Based on the size and attention mechanism of models, we chose suitable sharding schemes for prefiller and decoder nodes to best utilize GPUs.
+DeepSeek-R1
+With DeepSeek, we considered both Tensor-Parallel (TP) and Data-Parallel (DP) deployments. As discussed in previous blog posts, TP deployments provide better latency and the cost of lower throughput, requiring more GPUs to serve heavy traffic. DP deployments scale much better with load, however their peak throughput is lower due to the cost of inter-device or inter-node communication.
+DeepSeek relies on Multi-Head Latent Attention, compressing KV caches. Since all the KV heads are compressed into a single latent vector, TP cannot shard the KV caches, as it must instead replicate the latent vectors on all ranks. Sharding happens after decompression, as each rank can extract different heads from the same latent representation. Consequently, all KV cache shards are identical across both prefiller and decoder shards.
+With an intranode TP setup, both prefillers and decoders are sharded identically. Transfers are dispatched from all ranks in order to fully utilize all available NICs. However, with a DP deployment, where the TP rank size is lower or each DP rank is assigned to a single GPU, any prefiller device that holds a replicated copy of the KV cache can dispatch it. To balance requests across all available NICs, we randomly select a GPU and a NIC to send the KV cache from the prefiller to the decoder.
+With mixed prefill-decode, our R1 deployment was struggling to consistently exceed 50 TPS due to frequent prefill interruptions in the order of hundreds of milliseconds. In contrast, by separating prefill, we incurred a penalty of about 100ms to TTFT for each request, but a single prefiller node could maintain consistent batch sizes on 3 decoder nodes, delivering a throughput in excess of 90 TPS while handling a load of about 1 QPS per decoder node. With data-parallel deployments, TPS was slightly lower at around 50, however the instances could handle a load of 1 QPS per rank, with 8 ranks to a single node.
+Qwen3-Coder
+This 480B model uses Grouped-Query Attention (GQA), so attention can be easily sharded and can benefit from tensor parallelism without sacrificing memory for KV caches. Consequently, we could shard the model across 8 GPUs for both prefill and decode, pairing around 3 decoder nodes with a single prefiller node. Since attention is sharded, we rely on the HND KV cache layout to shard prefiller and decoder KV caches, pairing prefiller ranks with decoder ranks and fully utilizing all NICs to transfer slices in parallel.
+COMPANY
+Careers
+Press Inquires
+Brand Guidelines
+Supply Store
+Privacy Policy
+Security
+Terms & Conditions
+PRODUCT
+Comet Browser
+Desktop App
+iPhone App
+Android App
+Email Assistant
+RESOURCES
+Getting Started
+Help Center
+Changelog
+Give Feedback
+API PLATFORM
+API Platform Overview
+API Models
+Playground
+API Documentation
+API FAQs
+API Terms of Service
+FOLLOW US
+X (Twitter)
+Discord
+Threads
+Linkedin
+YouTube
+© Copyright 2025 Perplexity — Where Knowledge Begins
+COMPANY
+Careers
+Press Inquires
+Brand Guidelines
+Supply Store
+Privacy Policy
+Security
+Terms & Conditions
+RESOURCES
+Getting Started
+Help Center
+Changelog
+Give Feedback
+API PLATFORM
+API Platform Overview
+API Models
+Playground
+API Documentation
+API FAQs
+API Terms of Service
+FOLLOW US
+X (Twitter)
+Discord
+Threads
+Linkedin
+YouTube
+© Copyright 2025 Perplexity — Where Knowledge Begins

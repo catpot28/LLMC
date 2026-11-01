@@ -1,0 +1,385 @@
+=== SOURCE =============================================================
+company    : Accenture (accenture)
+url        : https://www.accenture.com/nl-en/support/google-privacy-sandbox
+page path  : /nl-en/support/google-privacy-sandbox
+captured   : 2026-03-09 12:53:05 UTC  (CommonCrawl CC-MAIN-2026-12)
+raw file   : raw/accenture/www.accenture.com_nl-en_support_google-privacy-sandbox__e9d5d158.html.gz
+========================================================================
+
+Accenture Selected by Google for Privacy Sandbox Aggregation Service | Accenture
+
+Accenture Selected by Google for Privacy Sandbox Aggregation Service | Accenture
+
+Skip to main content
+
+Skip to footer
+
+Menu
+
+Close Menu
+
+What we do
+
+Back
+
+What we do
+
+Capabilities
+
+Capabilities
+
+Cloud
+
+Customer Service
+
+Cybersecurity
+
+Data and Artificial Intelligence
+
+Digital Engineering and Manufacturing
+
+Ecosystem Partners
+
+Emerging Technology
+
+Finance and Risk Management
+
+Infrastructure and Capital Projects
+
+Learning
+
+Managed Services
+
+Marketing and Experience
+
+Metaverse
+
+Sales and Commerce
+
+Strategy
+
+Supply Chain
+
+Sustainability
+
+Talent and Organization
+
+Technology Transformation
+
+Industries
+
+Industries
+
+Aerospace and Defense
+
+Automotive
+
+Banking
+
+Capital Markets
+
+Chemicals
+
+Communications and Media
+
+Consumer Goods and Services
+
+Energy
+
+Health
+
+High Tech
+
+Industrial
+
+Insurance
+
+Life Sciences
+
+Natural Resources
+
+Public Service
+
+Private Equity
+
+Retail
+
+Software and Platforms
+
+Travel
+
+Utilities
+
+What we think
+
+Who we are
+
+Back
+
+About Accenture
+
+Our organization
+
+Our organization
+
+Awards and Recognition
+
+Corporate Sustainability
+
+Industry Analyst Recognition
+
+Leaders
+
+Locations
+
+360° Value Report
+
+Media & Investors
+
+Media & Investors
+
+Media Relations
+
+Investor Relations
+
+Board of Directors
+
+How we serve
+
+How we serve
+
+Strategy and Consulting
+
+Technology
+
+Operations
+
+Industry X
+
+Song
+
+Careers
+
+Back
+
+Careers homepage
+
+Find a job
+
+Find a job
+
+Search for jobs
+
+Career areas
+
+Life at Accenture
+
+Life at Accenture
+
+Working here
+
+Benefits
+
+Work environment
+
+Careers blog
+
+How we hire
+
+How we hire
+
+Using AI
+
+Hiring journey
+
+Pro tips
+
+Contact Us
+
+Careers
+
+Locations
+
+linkedin
+
+facebook
+
+instagram
+
+Search
+
+Netherlands
+
+Current Country: United States
+
+Default (English)
+
+All COUNTRIES & LANGUAGES
+
+Argentina (Spanish)
+
+Australia (English)
+
+Austria (German)
+
+Belgium (English)
+
+Brazil (Portuguese)
+
+Bulgaria (English)
+
+Canada (English)
+
+Canada (French)
+
+Chile (Spanish)
+
+China/Hong Kong SAR (English)
+
+China/Mainland (Chinese)
+
+China/Mainland (English)
+
+Colombia (Spanish)
+
+Costa Rica (English)
+
+Czech Republic (English)
+
+Denmark (English)
+
+Finland (English)
+
+France (French)
+
+Germany (German)
+
+Greece (English)
+
+Hungary (English)
+
+India (English)
+
+Indonesia (English)
+
+Ireland (English)
+
+Israel (English)
+
+Italy (Italian)
+
+Japan (Japanese)
+
+Latvia (English)
+
+Luxembourg (English)
+
+Malaysia (English)
+
+Mauritius (English)
+
+Mexico (Spanish)
+
+Morocco (English)
+
+Netherlands (English)
+
+New Zealand (English)
+
+Norway (English)
+
+Philippines (English)
+
+Poland (English)
+
+Poland (Polish)
+
+Portugal (Portuguese)
+
+Romania (English)
+
+Saudi Arabia (English)
+
+Singapore (English)
+
+Slovakia (English)
+
+South Africa (English)
+
+Spain (Spanish)
+
+Sweden (English)
+
+Switzerland (English)
+
+Thailand (English)
+
+UAE (English)
+
+United Kingdom (English)
+
+USA (English)
+
+SOFTWARE & PLATFORMS
+
+Accenture selected as a Privacy Sandbox Coordinator
+
+Accenture has been selected by Google to play the role of an independent Coordinator for Aggregation Service, as part of the
+Privacy Sandbox
+initiative. The Privacy Sandbox is a set of proposals, which aims to create technologies that both protect people's privacy online and give AdTech and developers tools to build thriving digital businesses. The Privacy Sandbox reduces cross-site and cross-app tracking while helping to keep online content and services free.
+
+As an independent coordinator, Accenture is responsible for provisioning and operating key management systems that will distribute decryption keys to Aggregation services after service attestation, in addition to operating an accounting service to track aggregatable event metadata. Accenture started fully operating the coordinator services on September 25, 2023.
+
+As part of the Privacy Sandbox initiative, Google recently announced
+general availability
+of the relevance and measurement APIs on Google Chrome as part of its plan to deprecate third-party cookies in 2024.
+1
+The
+Aggregation Service
+, a component of the Privacy Sandbox measurement APIs, enables reporting on events across users using a differentially private framework. For example, together with the
+Attribution Reporting API
+the service enables advertisers to determine the revenue generated through ads. In a typical flow, an AdTech instructs a client (Chrome or Android) to produce an aggregatable report on an event. The AdTech then deploys the Aggregation Service to produce a summary report of events across clients.
+
+To protect user privacy, the Aggregation Service can only process events as allowed by independent Coordinators. As a measure of spreading trust among multiple parties, Privacy Sandbox has chosen to split the operation of the key management and Aggregatable Report Accounting service to two coordinators, each holding a part of the decryption key necessary to perform report decryption and a complete copy of the report accounting ledger. Google has contracted Accenture to be one of the two Coordinators for Aggregation Service deployments, with Google continuing to operate the other coordinator. The Coordinators first distribute keys to clients for encrypting the events. Coordinators then only provide the decryption keys to the Aggregation Service when it’s running an allowlisted version of the aggregation logic inside a Trusted Execution Environment (TEE); TEEs ensure the operator of the service (e.g., an AdTech) cannot observe the operations or tamper with them. Finally, Coordinators operate the Aggregatable Report Accounting service to track which buckets of aggregatable reports were processed, which prevents unlimited reuse of events in aggregation for summary reports, as reuse may reveal personal identifying information.
+
+Accenture, as an independent entity, operates its coordinator services with industry leading security practices to prevent unauthorized access to its systems. For transparency across the ecosystem, Accenture is running an
+open source implementation of the coordinator services
+on its servers. Accenture will also comply with Aggregation Service policies to maintain integrity of the system, including that Google does not have special access to keys or the Aggregatable Reporting Accounting service outside of standard usage of the Aggregation Service.
+
+Note: the above does not apply to Aggregation Service deployments on Google Cloud Platform (GCP), and Google will announce plans for coordinators on GCP separately.
+
+1
+Subject to addressing any remaining competition concerns of the
+UK’s Competition and Markets Authority (CMA)
+.
+
+Like this content?
+
+Stay ahead of change by downloading the Accenture Foresight App.
+
+Let there be change
+
+Preference Center
+
+Careers
+
+About Us
+
+Contact Us
+
+Locations
+
+Sitemap
+
+Privacy Statement
+
+Terms & Conditions
+
+Cookie Policy/Settings
+
+Accessibility Statement
+
+©
+2026
+
+Accenture. All Rights Reserved.

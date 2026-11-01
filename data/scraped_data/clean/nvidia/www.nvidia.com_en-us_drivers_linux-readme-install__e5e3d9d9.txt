@@ -1,0 +1,1301 @@
+=== SOURCE =============================================================
+company    : Nvidia (nvidia)
+url        : https://www.nvidia.com/en-us/drivers/linux-readme-install/
+page path  : /en-us/drivers/linux-readme-install/
+captured   : 2026-04-20 01:10:27 UTC  (CommonCrawl CC-MAIN-2026-17)
+raw file   : raw/nvidia/www.nvidia.com_en-us_drivers_linux-readme-install__e5e3d9d9.html.gz
+========================================================================
+
+NVIDIA
+
+NVIDIA
+
+Platforms
+
+Autonomous Machines
+
+Cloud & Data Center
+
+Deep Learning & AI
+
+Design & Pro Visualization
+
+Healthcare & Life Sciences
+
+High Performance Computing
+
+Networking (Mellanox)
+
+Self-driving Cars
+
+Gaming & Entertainment
+
+Other Links
+
+Developers
+
+Industries
+
+Shop
+
+Drivers
+
+Support
+
+About NVIDIA
+
+View All Products
+
+GPU Tech Conference
+
+NVIDIA Blog
+
+Community
+
+Careers
+
+Technologies
+
+Platforms
+
+Autonomous Machines
+
+Industries
+
+Drones
+
+Robotics
+
+Intelligent Video Analytics (IVA)
+
+Products
+
+Jetson Nano
+
+Jetson AGX Xavier
+
+Jetson TX2
+
+For Developers
+
+Jetson Store
+
+Cloud & Data Center
+
+Products
+
+Tesla
+
+T4 Enterprise Server
+
+DGX
+
+DGX 2
+
+DGX-Station
+
+HGX
+
+NGC
+
+Virtual GPU
+
+EGX
+
+Solutions
+
+AI and Deep Learning
+
+High Performance Computing
+
+Cloud Gaming
+
+GPU Cloud Computing
+
+Virtualization
+
+Analytics
+
+Apps
+
+GPU Apps Catalog
+
+GPU Ready Apps
+
+For Developers
+
+Technologies
+
+NVIDIA VOLTA
+
+NVIDIA Pascal
+
+NVlink/NVswitch
+
+Tensor Cores
+
+IndeX ParaView Plugin
+
+Virtual GPU Technology
+
+Deep Learning & AI
+
+Industries
+
+AI Innovators
+
+AI Cities
+
+AI for Public Good
+
+Healthcare
+
+Higher Education
+
+Retail
+
+Robotics
+
+Self-Driving Cars
+
+Developer
+
+Products
+
+AGX Systems
+
+DGX Systems
+
+NGC
+
+NVIDIA TITAN RTX
+
+NVIDIA TITAN V
+
+NVIDIA Tesla
+
+T4 Enterprise Server
+
+Solutions
+
+Data Science
+
+Inference
+
+Education
+
+AI Startups
+
+Design & Pro Visualization
+
+Industries
+
+Architecture, Engineering and Construction
+
+Education
+
+Manufacturing
+
+Media and Entertainment
+
+Products
+
+Quadro
+
+Quadro vDWS
+
+GRID vPC/vAPPS
+
+NVIDIA TITAN RTX
+
+NVIDIA TITAN Xp
+
+NVS
+
+Quadro View
+
+Solutions
+
+Multi-display
+
+Rendering
+
+Virtualization
+
+Virtual Reality
+
+HPC Visualization
+
+For Creators
+
+For Data Scientists
+
+Technologies
+
+Material Definition Language
+
+NVIDIA RTX
+
+NVLink
+
+Turing Architecture
+
+Virtual GPU Technology
+
+Holodeck
+
+For Creators
+
+For Developers
+
+Quadro Store
+
+Healthcare & Life Sciences
+
+Solutions
+
+Genomics
+
+Medical Imaging
+
+Smart Hospitals
+
+For Developers
+
+High Performance Computing
+
+Products
+
+Tesla
+
+T4 Enterprise Server
+
+DGX
+
+DGX-2
+
+NGC
+
+GPU Cloud Computing
+
+Apps
+
+GPU Apps Catalog
+
+GPU Ready Apps
+
+For Developers
+
+Deep Learning & AI
+
+Index ParaView Plug-in
+
+CUDA
+
+Networking (Mellanox)
+
+Overview
+
+Products
+
+Overivew
+
+Ethernet
+
+InfiniBand
+
+DPU
+
+Interconnect
+
+Software
+
+Solutions
+
+Overivew
+
+HPC
+
+Data Center
+
+Web 2.0
+
+AI / Machine Learning
+
+Cloud
+
+Storage
+
+Security
+
+Technology Partners
+
+Industries
+
+Overivew
+
+Finance
+
+Telecommunications
+
+Media & Entertainment
+
+Support
+
+How to Buy
+
+Self-Driving Cars
+
+Solutions
+
+NVIDIA DRIVE Platform
+
+NVIDIA DGX Systems
+
+NVIDIA DRIVE Constellation
+
+NVIDIA DRIVE IX
+
+HD Mapping
+
+Advanced Driver Assistance Systems
+
+Partners
+
+For Developers
+
+Gaming & Entertainment
+
+GeForce
+
+20 Series Graphics Cards
+
+16 Series Graphics Cards
+
+Gaming Laptops
+
+G-SYNC Displays
+
+GeForce NOW
+
+SHIELD
+
+Displays with SHIELD TV
+
+For Creators
+
+For Broadcasters
+
+Developers
+
+NVIDIA Developer
+
+Developer News
+
+Developer Blog
+
+Developer Forums
+
+Open Source Portal
+
+Training
+
+GPU Tech Conference
+
+CUDA
+
+Industries
+
+Game Development
+
+Healthcare
+
+Higher Education & Research
+
+Industrial
+
+Media & Entertainment
+
+Public Sector
+
+Retail
+
+Supercomputing
+
+Telecommunications
+
+Transportation
+
+All Industries
+
+Shop
+
+Drivers
+
+GeForce Drivers
+
+All NVIDIA Drivers
+
+Support
+
+About NVIDIA
+
+NVIDIA Partner Network
+
+AI Computing Model
+
+Technologies
+
+Newsroom
+
+NVIDIA Blog
+
+Research
+
+Webinars
+
+Events
+
+Company Information
+
+Careers
+
+Investors
+
+Social Responsibility
+
+NVIDIA Foundation
+
+Subscribe
+
+NVIDIA Accelerated Linux Driver README & Installation Guide
+
+Last updated: May 14, 2001
+
+The NVIDIA Accelerated Linux Driver Set brings both accelerated 2D
+functionality and high performance OpenGL support to Linux x86 with
+the use of NVIDIA GPUs.
+This file describes how to install, configure, and use the NVIDIA
+Accelerated Linux Driver Set. Please refer to the following additional
+README files as appropriate:
+ALI_USERS_README - for problems with ALI chipsets
+TNT_USERS_README - for problems with TNT card with SGRAM/SDRAM
+LAPTOP_README - for instructions on how to set up your laptop system
+TWINVIEW_README - for instructions on how to set up TwinView
+TVOUT_README - for instructions on connecting a TV
+-----
+Contents:
+(sec-01) CHOOSING THE NVIDIA PACKAGES APPROPRIATE FOR YOUR SYSTEM
+(sec-02) INSTALLING THE NVIDIA_KERNEL AND NVIDIA_GLX PACKAGES
+(sec-03) EDITING YOUR XF86CONFIG FILE
+(sec-04) TROUBLESHOOTING
+(sec-05) FREQUENTLY ASKED QUESTIONS
+(sec-06) CONTACTING US
+(sec-07) FURTHER RESOURCES
+(app-a) APPENDIX A: SUPPORTED NVIDIA GRAPHICS CHIPS
+(app-b) APPENDIX B: MINIMUM SOFTWARE REQUIREMENTS
+(app-c) APPENDIX C: INSTALLED COMPONENTS
+(app-d) APPENDIX D: XF86Config OPTIONS
+(app-e) APPENDIX E: OPENGL ENVIRONMENT VARIABLE SETTINGS
+(app-f) APPENDIX F: CONFIGURING AGP
+(app-g) APPENDIX G: KNOWN BUGS
+(app-h) APPENDIX H: BUGS FIXED SINCE LAST RELEASE
+Please note that, in order to keep the instructions more concise,
+most caveats and frequently encountered problems are not detailed in
+the installation instructions, but rather in the troubleshooting and
+FAQ sections. Therefore, it is recommended that you read this entire
+README before proceeding to perform any of the steps described.
+-----
+(sec-01) CHOOSING THE NVIDIA PACKAGES APPROPRIATE FOR YOUR SYSTEM
+=================================================================
+NVIDIA has a unified driver architecture model; this means that one driver
+set can be used with all supported NVIDIA hardware. Please see Appendix
+A for a list of the NVIDIA hardware supported by the current drivers.
+The NVIDIA Accelerated Linux Driver Set consists of two packages
+which you will need to download and install: the NVIDIA_GLX package
+which contains the OpenGL libraries and the XFree86 driver, and the
+NVIDIA_kernel package which contains the NVdriver kernel module needed
+by the X driver and OpebGL libraries in the NVIDIA_GLX package (for
+more details on the components of each package, please see Appendix C).
+You will need to install both packages, with matching version numbers
+(ie NVIDIA_GLX-0.9-6 should only be used with NVIDIA_kernel-0.9-6 and
+not NVIDIA_kernel-0.9-3).
+The packages are available in several formats: RPM, SRPM, and tar file.
+Installation of each package type is described below. The package
+type is largely a matter of personal preference, though please note
+that the binary RPMs are for use only with the kernel shipped with a
+particular distribution (eg NVIDIA_kernel-0.9-6.rh62.i386.rpm should
+only be used with the uni-processor kernel shipped with RedHat 6.2).
+Where appropriate, NVIDIA has provided separate RPMs for the distinct SMP
+and uni-processor kernels of each distribution. If you have upgraded
+your kernel, or a specific NVIDIA_kernel rpm is not available for your
+distribution, then use either the NVIDIA_kernel SRPM or tar file.
+In the case where distributors ship multiple kernels (as is often
+the case with uni-processor and SMP machines), there will be
+multiple RPMs available, ie: NVIDIA_kernel-0.9-7.rh62.i386.rpm and
+NVIDIA_kernel-0.9-7.rh62.smp.i386.rpm.
+The NVIDIA_GLX RPM, however, is not dependent upon the kernel version,
+and therefore an SRPM is not needed. Install the NVIDIA_GLX package
+either by RPM or tar file.
+-----
+(sec-02) INSTALLING THE NVIDIA_KERNEL AND NVIDIA_GLX PACKAGES
+=============================================================
+Before beginning the driver installation, you should exit the X server. In
+addition you should set your default runlevel so you will boot to console
+and not start up X (please consult the documentation that came with your
+linux distribution if you are unsure how to do this). This will make
+it easier to recover if there is a problem during the installation.
+Please note that package revision numbers have been omitted in the
+following directions to make them as general as possible. While the
+directions might say "NVIDIA_kernel.tar.gz" you should replace
+that with the name of the driver version you are installing; eg:
+"NVIDIA_kernel.0.9-6.tar.gz".
+Installing by RPM
+-----------------
+Instructions for the Impatient:
+$ rpm -ivh NVIDIA_kernel.i386.rpm
+$ rpm -ivh NVIDIA_GLX.i386.rpm
+Instructions:
+Before installing from RPM, make sure that you have downloaded the
+NVIDIA_kernel RPM appropriate for your kernel. Once you have verified
+that you do indeed have the correct RPM, install NVIDIA_kernel by doing:
+$ rpm -ivh NVIDIA_kernel.i386.rpm
+Next, install the NVIDIA_GLX RPM by doing:
+
+$ rpm -ivh NVIDIA_GLX.i386.rpm
+Upgrading by RPM
+----------------
+Instructions for the Impatient:
+$ rpm -Uvh NVIDIA_kernel.i386.rpm
+$ rpm -e NVIDIA_GLX
+$ rpm -ivh NVIDIA_GLX.i386.rpm
+Instructions:
+Before upgrading from RPM, make sure that you have downloaded the
+NVIDIA_kernel RPM appropriate for your kernel. Once you have verified
+that you do indeed have the correct RPM, upgrade the NVIDIA_kernel
+package by doing:
+$ rpm -Uvh NVIDIA_kernel.i386.rpm
+You should not use the "-U" option to rpm to upgrade the NVIDIA_GLX
+RPM because a bug in the uninstall section of older NVIDIA RPMs will
+cause some files to be removed that shouldn't be. Instead, use "-e"
+to remove the old NVIDIA_GLX RPM, and then install the new one:
+$ rpm -e NVIDIA_GLX
+$ rpm -ivh NVIDIA_GLX.i386.rpm
+Installing/Upgrading by SRPM
+----------------------------
+Instructions for the Impatient:
+$ rpm --rebuild NVIDIA_kernel.src.rpm
+$ rpm -ivh /path/to/rpms/RPMS/i386/NVIDIA_kernel.i386.rpm
+$ rpm -ivh NVIDIA_GLX.i386.rpm
+Instructions:
+To build a custom NVIDIA_kernel RPM for your system, pass 'rpm' the
+'--rebuild' flag:
+$ rpm --rebuild NVIDIA_kernel.src.rpm
+Watch for the line that looks something like (the path may be different):
+Wrote: /usr/src/redhat/RPMS/i386/NVIDIA_kernel.i386.rpm
+and use that as input to rpm to install:
+$ rpm -ivh /usr/src/redhat/RPMS/i386/NVIDIA_kernel.i386.rpm
+or upgrade:
+$ rpm -Uvh /usr/src/redhat/RPMS/i386/NVIDIA_kernel.i386.rpm
+To install the NVIDIA_GLX package, follow the instructions above for
+either installing or upgrading NVIDIA_GLX from RPM.
+Installing/Upgrading by Tar file
+--------------------------------
+Instructions for the Impatient:
+
+$ tar xvzf NVIDIA_kernel.tar.gz
+$ tar xvzf NVIDIA_GLX.tar.gz
+$ cd NVIDIA_kernel
+$ make install
+$ cd ../NVIDIA_GLX
+$ make install
+
+Instructions:
+To install from tar file, unpack each file:
+$ tar xzf NVIDIA_kernel.tar.gz
+$ tar xzf NVIDIA_GLX.tar.gz
+cd into the NVIDIA_kernel directory. Type 'make install'. This will
+compile the kernel interface to the NVdriver, link the NVdriver, copy
+the NVdriver into place, and attempt to insert the NVdriver into the
+running kernel:
+$ cd NVIDIA_kernel
+$ make install
+Next, move into the NVIDIA_GLX directory. Type 'make install' -- this
+will copy the files into place:
+$ cd ../NVIDIA_GLX
+$ make install
+Note that the "make install" for each package will remove any previously
+installed NVIDIA drivers.
+-----
+(sec-03) EDITING YOUR XF86CONFIG FILE
+=====================================
+When XFree86 4.0 was released, it used a slightly different XF86Config
+file syntax than the 3.x series did, and so to allow both 3.x and 4.x
+versions of XFree86 to co-exist on the same system, it was decided that
+XFree86 4.x was to use the configuration file "/etc/X11/XF86Config-4"
+if it existed, and only if that file did not exist would the file
+"/etc/X11/XF86Config" be used (actually, that is an over-simplification of
+the search criteria; please see the XF86Config manpage for a complete
+description of the search path). Please make sure you know what
+configuration file XFree86 is using. If you are in doubt, look for a
+line beginning with "(==) Using config file:" in the your XFree86 log
+file ("/var/log/XFree86.0.log"). This README will use "XF68Config"
+to refer to your configuration file, whatever it is named.
+If you do not have a working XF86Config file, there are several ways
+to start: there is a sample config file that comes with XFree86, and
+there is a sample config file included with the NVIDIA_GLX package
+(it gets installed in the /usr/share/doc tree). You could also use a
+program like 'xf86config'; some distributions provide their own tool
+for generating an XF86Config file. For more on XF86Config file syntax,
+please refer to the manpage.
+If you already have an XF86Config file working with a different driver
+(such as the 'nv' driver), then all you need to do is find the relevant
+Device section and replace the line:
+Driver "nv"
+with
+Driver "nvidia"
+In the Module section, make sure you have:
+Load "glx"
+You should also remove the following lines:
+
+Load "dri"
+Load "GLcore"
+if they exist. There are also numerous options that can be added to
+the XF86Config file to fine-tune the NVIDIA XFree86 driver. Please see
+Appendix D for a complete list of these options.
+Once you have configured your XF86Config file, you are ready to restart
+X and begin using the accelerated OpenGL libraries. After you restart X,
+you should be able to run any OpenGL application and it will automatically
+use the new NVIDIA libraries. If you encounter any problems, please
+see the troubleshooting section below.
+-----
+(sec-04) TROUBLESHOOTING
+========================
+Here are a few strategies to keep in mind when troubleshooting problems
+with the NVIDIA Accelerated Linux Driver Set:
+- One of the most useful tools for diagnosing problems is the XFree86 log
+file in /var/log (the file is usually named "/var/log/XFree86.0.log").
+Lines that begin with "(II)" are information, "(WW)" are warnings, and
+"(EE)" are errors. You should make sure that the correct config file
+(ie the config file you are editing) is being used; look for the line
+that begins with: "(==) Using config file:". Also check that the NVIDIA
+driver is being used, rather than the 'nv' driver; you can look for:
+"(II) LoadModule: "nvidia"", and lines from the driver should begin with:
+"(II) NVIDIA(0)".
+- By default, the NVIDIA X driver prints relatively few messages to
+stderr and the XFree86 log file. If you need to troubleshoot, then
+it may be helpful to enable more verbose output by using the XFree86
+commandline options "-verbose" and "-logverbose" which can be used to set
+the verbosity level for the stderr and log file messages, respectively.
+The NVIDIA X driver will output more messages when the verbosity level
+is at or above 5 (XFree86 defaults to verbosity level 1 for stderr and
+level 3 for the log file). So, to enable verbose messaging from the
+NVIDIA X driver to both the log file and stderr, you could start X by
+doing the following: 'startx -- -verbose 5 -logverbose 5'.
+- Nothing will work if the NVdriver kernel module doesn't function
+properly. If you see anything in the X log file like "(EE) NVIDIA(0):
+Failed to initialize the NVdriver kernel module!" then there is most
+likely a problem with the NVdriver kernel module. First, you should
+verify that if you installed from RPM that the RPM was built specifically
+for the kernel you are using. You should also check that the module is
+loaded ('/sbin/lsmod'); if it is not loaded try loading it explicitly with
+'insmod' or 'modprobe' (be sure to exit the X server before installing
+a new kernel module). If you receive errors about unresolved symbols,
+then the kernel module has most likely been built using header files
+for a different kernel revision than what you are running. You can
+explicitly control what kernel header files are used by building with:
+'make install SYSINCLUDE=/path/to/kernel/headers'. Please note that
+the convention for the location of kernel header files is in a state of
+transition, as is the location of kernel modules. If the kernel module
+fails to load properly, modprobe/insmod may be trying to load an older
+kernel module (assuming you've upgraded). cd'ing into the directory
+with the new kernel module and doing 'insmod ./NVdriver' may help.
+- If X starts, but OpenGL causes problems, you most likely have a
+problem with other libraries in the way, or there are stale symlinks.
+See Appendix C for details. Sometimes, all it takes is to rerun
+'ldconfig'.
+- You should also check that the correct extensions are present;
+'xdpyinfo' should show the "GLX", "NV-GLX" and "NVIDIA-GLX" extensions
+present. If these three extensions are not present, then there is most
+likely a problem with the glx module getting loaded or it is unable
+to implicitly load GLcore. Check your XF86Config file and make sure
+that you are loading glx (see "Editing Your XF86Config File" above). If
+your XF86Config file is correct, then check the XFree86 log file for
+warnings/errors pertaining to GLX. Also check that all of the necessary
+symlinks are in place (refer to Appendix C).
+- If you are trying to install/upgrade by SRPM and the command:
+rpm --rebuild ...
+only prints out a list of rpm command line options then you likely
+don't have the rpm development packages installed. In most situations
+you can fix this problem by installing the rpm-devel package for your
+distribution. Alternatively, you can install/upgrade by tar file as the
+tar files don't require rpm.
+- If installing the NVIDIA_kernel module gives an error message like:
+#error Modules should never use kernel-headers system headers
+#error but headers from an appropriate kernel-source
+then you need to install the source for the Linux kernel. In most
+situations you can fix this problem by installing the kernel-source
+package for you distribution
+-----
+(sec-05) FREQUENTLY ASKED QUESTIONS
+===================================
+Q: When I start X it fails and my XFree86 log file contains:
+(II) LoadModule: "nvidia"
+(II) Loading /usr/X11R6/lib/modules/drivers/nvidia_drv.o
+No symbols found in this module
+(EE) Failed to load /usr/X11R6/lib/modules/drivers/nvidia_drv.o
+(II) UnloadModule: "nvidia"
+(EE) Failed to load module "nvidia" (loader failed, 256)
+...
+(EE) No drivers available.
+A: The nvidia_drv.o X driver has been stripped of needed symbols;
+some versions of rpm (wrongly) strip object files while installing.
+You should probably upgrade your version of rpm. Or, you can install
+the NVIDIA_GLX package from tarfile.
+Q: Why does the NVdriver not work with DevFS?
+A: DevFS will be supported in a future NVIDIA release. In the meantime,
+you will need to recreate the NVIDIA device nodes after each reboot.
+Several patches have been suggested by users to make NVdriver DevFS-aware.
+You may trying one of these if you like; a websearch should provide you
+with several options.
+Q: My system runs, but seems unstable. What's wrong?
+A: You might be using the wrong AGP module. See Appendix E for details
+of AGP configuration.
+Q: The kernel module doesn't get loaded dynamically when X starts;
+I always have to do 'modprobe NVdriver' first. What's wrong?
+A: Make sure the line "alias char-major-195 NVdriver" appears in
+your module configuration file, generally one of "/etc/conf.modules",
+"/etc/modules.conf" or "/etc/modutils/alias"; consult the documentation
+that came with your distribution for the details.
+Q: I can't build the NVdriver kernel module, or I can build the NVdriver
+kernel module, but modprobe/insmod fails to load the module into my
+kernel. What's wrong?
+A: These problems are generally caused by the build using the wrong kernel
+header files (ie header files for a different kernel version than the
+one you are running). The convention used to be that kernel header files
+should be stored in "/usr/include/linux/", but that is being depracated
+in favor of "/lib/modules/`uname -r`/build/include". The NVIDIA_kernel
+Makefile should be able to determine the location on your system; however,
+if you encounter a problem you can force the build to use certain header
+files by doing: 'make SYSINCLUDE=/path/to/kernel/headers'. Obviously,
+for any of this to work, you need the appropriate kernel header files
+installed on your system. Consult the documentation that came with your
+distribution; some distributions don't install the kernel header files
+by default, or they install headers that don't coincide properly with
+the kernel you are running.
+Q: Why do OpenGL applications run so slow?
+A: The application is probably using a different library still on your
+system, rather than the NVIDIA supplied OpenGL library. Please see
+APPENDIX C for details.
+Q: There are problems getting Quake2 going.
+A: Quake2 requires some minor setup to get it going. First, in the
+Quake2 directory, the install creates a sym link called libGL.so that
+points at libMesaGL.so. This symlink should be removed or renamed. Then,
+to run Quake2 in OpenGL mode, you would type: 'quake2 +set vid_ref glx
++set gl_driver libGL.so'. Quake2 does not seem to support any kind of
+full-screen mode, but you can run your X server at whatever resolution
+Quake2 runs at to emulate full-screen mode.
+Q: There are problems getting Heretic II going.
+A: Heretic II also installs, by default, a symlink called libGL.so in
+the application directory. You can remove or rename this symlink, since
+the system will then find the default libGL.so (which our drivers install
+in /usr/lib). From within Heretic II you can then set your render mode
+to OpenGL in the video menu.
+There is also a patch available to Heretic II from lokigames at:
+//www.lokigames.com/products/heretic2/updates.php3
+Q: Where can I get gl.h or glx.h so I can compile OpenGL programs.
+A: Most systems come with these headers preinstalled. However, NVIDIA
+has provided our own gl.h and glx.h file in case your system did not
+come with them or in case you want to develop OpenGL apps that use
+the new NVIDIA OpenGL extensions. These files have been installed in
+/usr/share/doc/NVIDIA_GLX-x.y.z/usr/include/GL to avoid conflicting
+with the system installed versions. To use these headers copy them
+into /usr/include/GL.
+-----
+(sec-06) CONTACTING US
+======================
+If, after following the troubleshooting help, you are still having
+problems with the NVIDIA Accelerated Linux Driver Set, you can
+contact NVIDIA for support at: linux-bugs@nvidia.com. If you email
+linux-bugs for assistance, please attach a copy of your XFree86 log file
+(/var/log/XFree86.0.log) along with any other information you think may
+be relevant. Please send a log file generated with verbose messaging
+enabled (ie 'startx -- -logverbose 5'); please see the TROUBLESHOOTING
+section for more on verbose messages.
+-----
+(sec-07) FURTHER RESOURCES
+==========================
+Linux OpenGL ABI
+//oss.sgi.com/projects/ogl-sample/ABI/
+NVIDIA Linux HowTo
+//www.linuxdoc.org/HOWTO/mini/Nvidia-OpenGL-Configuration/index.html
+OpenGL
+www.opengl.org
+The XFree86 Project
+www.xfree86.org
+#nvidia (irc.openprojects.net)
+-----
+(app-a) APPENDIX A: SUPPORTED NVIDIA GRAPHICS CHIPS
+===================================================
+o RIVA TNT 0x0020
+o RIVA TNT2 0x0028
+o RIVA TNT2 (Ultra) 0x0029
+o RIVA TNT2 (Vanta) 0x002C
+o RIVA TNT2 (M64) 0x002D
+o RIVA TNT2 (??) 0x002E
+o RIVA TNT2 (??) 0x002F
+o RIVA TNT2 (Integrated) 0x00A0
+o GeForce 256 0x0100
+o GeForce DDR 0x0101
+o Quadro 0x0103
+o GeForce2 MX 0x0110
+o GeForce2 MX DDR 0x0111
+o GeForce2 Go 0x0112
+o Quadro2 MXR 0x0113
+o GeForce2 GTS 0x0150
+o GeForce2 GTS 0x0151
+o GeForce2 Ultra 0x0152
+o Quadro2 Pro 0x0153
+o GeForce3 0x0200
+Please note that the RIVA 128/128ZX chips are supported by the open
+source 'nv' driver for XFree86, but not by the NVIDIA Accelerated Linux
+Driver Set.
+-----
+(app-b) APPENDIX B: MINIMUM SOFTWARE REQUIREMENTS
+=================================================
+o linux kernel 2.2.12 # cat /proc/version
+o XFree86 4.0.1 # cat /var/log/XFree86.0.log|grep "XFree86 Version"
+o Kernel modutils 2.1.121 # insmod -V
+If you need to build the NVdriver kernel module:
+o binutils 2.9.5 # size --version
+o GNU make 3.77 # make --version
+o gcc 2.7.2.3 # gcc --version
+If you build from source rpms:
+o spec-helper rpm # rpm -qi spec-helper
+All official kernel releases from 2.2.12 and up are supported;
+"prerelease" versions such as "2.4.3-pre2" are not necessarily supported.
+The linux kernel can be gotten from www.kernel.org or one of its mirrors.
+binutils and gcc will only be needed if you install the NVIDIA_kernel
+package by SRPM or tarfile; binary RPM installations do not require these.
+binutils and gcc can be gotten from www.gnu.org or one of its mirrors.
+If you are using XFree86, but do not have a file /var/log/XFree86.0.log,
+then you probably have a 3.x version of XFree86... you will definitely
+need to upgrade. When first setting up XFree86 4.x, it is often easier
+to use one of the open source drivers that ships with XFree86 (either
+'nv', 'vga' or 'vesa'). Please note that not all NVIDIA cards will work
+with these drivers; for example, the nv driver that shipped with XFree86
+4.0.1 did not recognize the GeForce2 family of cards. XFree86 can be
+obtained from www.xfree86.org.
+All of these software packages are also likely to be available through
+your linux distributor.
+-----
+(app-c) APPENDIX C: INSTALLED COMPONENTS
+========================================
+The NVIDIA Accelerated Linux Driver Set consists of the following
+components (the file in parenthesis is the full name of the component
+after installation; "x.y.z" denotes the current version -- in these
+cases appropriate symlinks are created during installation):
+o An XFree86 driver (/usr/X11R6/lib/modules/drivers/nvidia_drv.o);
+this driver is needed by XFree86 to use your NVIDIA hardware.
+The nvidia_drv.o driver is binary compatible with XFree86 4.0.1
+and greater.
+o A GLX extension module for XFree86
+(/usr/X11R6/lib/modules/extensions/libglx.so.x.y.z); this module
+is used by XFree86 to provide server-side glx support.
+o An OpenGL library (/usr/lib/libGL.so.x.y.z); this library
+provides the API entry points for all OpenGL and GLX function
+calls. It is linked to at run-time by OpenGL applications.
+o An OpenGL core library (/usr/lib/libGLcore.so.x.y.z); this
+library is implicitly used by libGL and by libglx. It contains
+the core accelerated 3D functionality. You should not explicitly
+load it in your XF86Config file -- that is taken care of by
+libglx.
+o A kernel module (/lib/modules/[kernel version]/video/NVdriver
+or /lib/modules/[kernel version]/kernel/drivers/video/NVdriver).
+This kernel module provides low-level access to your NVIDIA
+hardware for all of the above components. It is generally
+loaded into the kernel when the X server is started, and is
+used by the XFree86 driver and OpenGL. NVdriver consists of two
+pieces: the binary-only core, and a kernel interface that must
+be compiled specifically for your kernel version. Note that
+the linux kernel does not have a consistent binary interface
+like XFree86, so it is important that this kernel interface
+be matched with the version of the kernel that you are using.
+This can either be accomplished by compiling yourself, or using
+precompiled binaries provided for the kernels shipped with some
+of the more common linux distributions.
+o OpenGL and GLX header files
+(/usr/share/doc/NVIDIA_GLX-x.y.z/usr/include/GL/gl.h,
+/usr/share/doc/NVIDIA_GLX-x.y.z/usr/include/GL/glx.h). In most
+circumstances the system provided headers in /usr/include/GL
+should suffice for OpenGL development. But NVIDIA has provided
+these headers as they contain the most up to date versions of
+NVIDIA's OpenGL extensions. If you wish to make use of these
+headers it is recommmended that you copy them to /usr/include/GL.
+The first four components listed above (XFree86 driver, GLX module, libGL,
+and libGLcore) are included in the NVIDIA_GLX package. The NVdriver
+kernel module is included in the NVIDIA_kernel package.
+Documentation and the OpenGL and GLX header files are also part of the
+NVIDIA_GLX package and get installed in /usr/share/doc/NVIDIA_GLX-x.y.z.
+Problems will arise if applications use the wrong version of a library.
+This can be the case if there are either old libGL libraries or stale
+symlinks left lying around. If you think there may be something awry
+in your installation, check that the following files are in place
+(these are all the files of the NVIDIA Accelerated Linux Driver Set,
+plus their symlinks):
+/usr/X11R6/lib/modules/drivers/nvidia_drv.o
+/usr/X11/lib/modules/extensions/libglx.so.x.y.z
+/usr/X11/lib/modules/extensions/libglx.so -> libglx.so.x.y.z
+/usr/lib/libGL.so.x.y.z
+/usr/lib/libGL.so.x -> libGL.so.x.y.z
+/usr/lib/libGL.so -> libGL.so.x
+/usr/lib/libGLcore.so.x.y.z
+/usr/lib/libGLcore.so.x -> libGLcore.so.x.y.z
+/lib/modules/[kernel version]/video/NVdriver, or
+/lib/modules/[kernel version]/kernel/drivers/video/NVdriver
+Installation of the NVIDIA_kernel package will also create the /dev files:
+crw-rw-rw- 1 root root 195, 0 Feb 15 17:21 nvidia0
+crw-rw-rw- 1 root root 195, 1 Feb 15 17:21 nvidia1
+crw-rw-rw- 1 root root 195, 2 Feb 15 17:21 nvidia2
+crw-rw-rw- 1 root root 195, 3 Feb 15 17:21 nvidia3
+crw-rw-rw- 1 root root 195, 255 Feb 15 17:21 nvidiactl
+If there are other libraries whose "soname" conflicts with that of
+the NVIDIA libraries, ldconfig may create the wrong symlinks. It is
+recommended that you manually remove or rename (be sure to rename
+clashing libraries to something that ldconfig won't look at -- we've
+found that prepending "XXX" to a library name generally does the trick)
+conflicting libraries, rerun 'ldconfig', and check that the correct
+symlinks were made. Some libraries that often create conflicts are
+"/usr/X11R6/lib/libGL.so*" and "/usr/X11R6/lib/libGLcore.so*".
+If the libraries checks out, then verify that the application is using
+the correct libraries. For example, to check that the application
+/usr/X11R6/bin/gears is using the NVIDIA libraries, you would do:
+$ ldd /usr/X11R6/bin/gears
+libglut.so.3 => /usr/lib/libglut.so.3 (0x40014000)
+libGLU.so.1 => /usr/lib/libGLU.so.1 (0x40046000)
+libGL.so.1 => /usr/lib/libGL.so.1 (0x40062000)
+libc.so.6 => /lib/libc.so.6 (0x4009f000)
+libSM.so.6 => /usr/X11R6/lib/libSM.so.6 (0x4018d000)
+libICE.so.6 => /usr/X11R6/lib/libICE.so.6 (0x40196000)
+libXmu.so.6 => /usr/X11R6/lib/libXmu.so.6 (0x401ac000)
+libXext.so.6 => /usr/X11R6/lib/libXext.so.6 (0x401c0000)
+libXi.so.6 => /usr/X11R6/lib/libXi.so.6 (0x401cd000)
+libX11.so.6 => /usr/X11R6/lib/libX11.so.6 (0x401d6000)
+libGLcore.so.1 => /usr/lib/libGLcore.so.1 (0x402ab000)
+libm.so.6 => /lib/libm.so.6 (0x4048d000)
+libdl.so.2 => /lib/libdl.so.2 (0x404a9000)
+/lib/ld-linux.so.2 => /lib/ld-linux.so.2 (0x40000000)
+libXt.so.6 => /usr/X11R6/lib/libXt.so.6 (0x404ac000)
+Note the files being used for libGL and libGLcore -- if they are something
+other than the NVIDIA libraries, then you will need to either remove the
+libraries that are getting in the way, or adjust your ld search path.
+If any of this seems foreign to you, then you may want to read the man
+pages for "ldconfig" and "ldd" for pointers.
+-----
+(app-d) APPENDIX D: XF86Config OPTIONS
+======================================
+The following driver options are supported by the NVIDIA XFree86 driver:
+Option "SWCursor" "boolean"
+Enable or disable software rendering of the X cursor.
+Default: off.
+Option "HWCursor" "boolean"
+Enable or disable hardware rendering of the X cursor.
+Default: on.
+Option "NoAccel" "boolean"
+Disable or enable 2D acceleration using the XAA module
+(note that this is different that 3D acceleration).
+Default: acceleration is enabled.
+Option "Rotate" "CW"
+Option "Rotate" "CCW"
+Rotate the display clockwise or counterclockwise.
+This mode forces NoAccel and SWCursor to both be TRUE.
+Default: no rotation.
+Option "ShadowFB" "boolean"
+Enable or disable use of the shadow framebuffer layer.
+See shadow fb(4) for further information. Default: off.
+Option "NvAGP" "integer"
+Configure AGP support. Integer argument can be one of:
+0 : disable agp
+1 : use NVIDIA's internal AGP support, if possible
+2 : use AGPGART, if possible
+3 : use any agp support (try AGPGART, then NVIDIA's AGP)
+Default: 1.
+Option "IgnoreEDID" "boolean"
+Disable probing of EDID (Extended Display Identification
+Data) from your monitor. Requested modes are compared
+against values gotten from your monitor EDIDs (if any)
+during mode validation. Some monitors are known to lie
+about their own capabilities. Ignoring the values that
+the monitor gives may help get a certain mode validated.
+On the other hand, this may be dangerous if you don't
+know what you are doing. Default: Use EDIDs.
+Option "NoDDC" "boolean"
+Synonym for "IgnoreEDID"
+Option "ConnectedMonitor" "string"
+Allows you to override what the NVIDIA kernel module
+detects is connected to your video card. This may
+be useful, for example, if you use a KVM (keyboard,
+video, mouse) switch and you are switched away when
+X is started. In such a situation, the NVIDIA kernel
+module can't detect what display devices are connected,
+and the NVIDIA X driver assumes you have a single CRT
+connected. If, however, you use a digital flatpanel
+instead of a CRT, use this option to explicitly tell
+the NVIDIA X driver what is connected. Valid values for
+this option are "CRT" (cathode ray tube), "DFP" (digital
+flatpanel), or "TV" (television); if using TwinView, this
+option may be a comma-separated list of display devices;
+e.g.: "CRT, CRT" or "CRT, DFP". Default: string is NULL.
+Option "NoRenderAccel" "boolean"
+Enable or disable experimental hardware acceleration of
+the RENDER extension. Default: RENDER is accelerated
+when possible.
+Option "TwinView" "boolean"
+Enable or disable TwinView. Please see the file
+TWINVIEW_README for details. Default: TwinView is
+disabled.
+Option "TwinViewOrientation" "string"
+Controls the relationship between the two display devices
+when using TwinView. Takes one of the following values:
+"RightOf" "LeftOf" "Above" "Below" "Clone". Please see the
+file TWINVIEW_README for details. Default: string is NULL.
+Option "SecondMonitorHorizSync" "range(s)"
+This option is like the HorizSync entry in the Monitor
+section, but is for the second monitor when using
+TwinView. Please see the file TWINVIEW_README for
+details. Default: none.
+Option "SecondMonitorVertRefresh" "range(s)"
+This option is like the VertRefresh entry in the
+Monitor section, but is for the second monitor when
+using TwinView. Please see the file TWINVIEW_README
+for details. Default: none.
+Option "MetaModes" "string"
+This option describes the combination of modes to use
+on each monitor when using TwinView. Please see the file
+TWINVIEW_README for details. Default: string is NULL.
+-----
+(app-e) APPENDIX E: OPENGL ENVIRONMENT VARIABLE SETTINGS
+========================================================
+The following is a list of environment variables that affect the
+behavior of OpenGL applications.
+Note that these environment variables are not guaranteed to be the
+same from release to release, or even exist in future releases.
+__GL_SYNC_TO_VBLANK
+Setting this to a non-zero value will force glXSwapBuffers
+to sync to your monitor's vertical refresh rate (perform
+a swap only during the vertical blanking period).
+__GL_ENABLE_FSAA
+Setting this to a non-zero value will enable full scene
+antialiasing.
+__GL_FSAA_QUALITY:
+This can be set to either 0, 1 or 2. 0 means 1.5x1.5
+oversampling. 1 means 2x2 oversampling with texture LOD
+bias. 2 means 2x2 oversampling with no texture LOD bias.
+Note that this variable only makes sense when
+__GL_ENABLE_FSAA is set.
+-----
+(app-f) APPENDIX F: CONFIGURING AGP
+===================================
+There are several options for configuring the NVdriver kernel module's
+use of AGP: you can choose to either use NVIDIA's AGP module (nvagp),
+or the AGP module that comes with the linux kernel (agpgart). This is
+controlled through the "NvAGP" option in your XF86Config file:
+Option "NvAgp" "0" ... disables AGP support
+Option "NvAgp" "1" ... use NVAGP, if possible
+Option "NvAgp" "2" ... use AGPGART, if possible
+You should use the AGP module that works best with your AGP chipset.
+If you are experiencing stability problems, then you may want to
+start by disabling AGP and seeing if that alleviates your problems.
+Then you can experiment with either of the other AGP modules. You can
+check your AGP status by doing: `cat /proc/nv/card0'. Note that to use
+the linux AGPGART module, it will need to be compiled with your kernel,
+either statically linked in, or built as a module.
+Please note that changing AGP drivers generally requires a reboot before
+the changes actually take effect.
+-----
+(app-g) APPENDIX G: KNOWN BUGS
+==============================
+The following problems still exist in this release. We are aware of these
+issues and are working towards resolving them.
+- OpenGL + Pixmap rendering
+glClear() does not work correctly to a pixmap.
+- OpenGL + Xinerama
+Currently, OpenGL is not functional with Xinerama.
+- OpenGL and dlopen()
+The current thought is that there are some bugs in the glibc
+dynamic library loading and libdl.so that cause problems with
+applications that use dlopen() to load the OpenGL library.
+Apps that use dlopen() include Quake3 and Radiant. A workaround
+has been implemented that will fix some, but not all, cases
+where this happens.
+- OpenGL on SMP machines
+With this release, OpenGL and X on SMP machines is much more
+stable. However, there are still some intermittant failures,
+especially when using 2.4.x kernels.
+- glReadPixels and glCopyPixels after window is moved
+When the window moves, the data that is read back from the back
+buffer, stencil buffer and/or depth buffer will be incorrect
+unless the window is redrawn after the move
+- DPMS and TwinView
+DPMS modes "suspend" and "standby" do not work correctly on a
+second CRT when using TwinView -- the screen is just blanked,
+rather than putting the monitor into the requested DPMS state.
+- DPMS and Flat Panel
+DPMS modes "suspend" and "standby" do not work correctly on a
+flat panel display -- the screen is just blanked,
+rather than putting the flat panel into the requested DPMS state.
+- Multicard, Multimonitor
+The PCI card does not get initialized properly when a GEForce 2 or
+GEForce 3 AGP card is also installed. In addition, X does not work
+reliably when two cards are used to drive multiple monitors.
+- GeForce2 Go on Dell laptops
+After running X and exitting X, if you restart X, the system
+hangs. The only current workaround is to reboot the laptop before
+restarting X.
+-----
+(app-h) APPENDIX H: BUGS FIXED SINCE LAST RELEASE
+=================================================
+The following problems were fixed between release 0.9-769 and the
+current release:
+- Preliminary GeForce2 Go support
+- Added support for GeForce3 OpenGL and GLX extensions
+- Fixed many SMP bugs
+- Added TV-Out support
+- Fixed DGA depth change bug
+- Rewrote 2D offscreen memory allocation
+- Fixed X-Video in TwinView
+- Acceleration for X-Render extension
+- Fixed up GLXPixmap rendering
+- Fixed problem with make current to same drawable but different dpy
+- Fixed problem in which OpenGL would segfault when reading X atoms
+- X now gets the DPI (dots per inch) from the monitor's EDID (rather
+than just defaulting to 75 dpi)
+- All DPMS modes are now supported. There are still issues on flat panels and
+on the second head of a TwinView system (please see the list of problems above)
+- Fixed support for AGP on systems with 1 GB or more of memory
+The following problems were fixed between release 0.9-767 and release 0.9-769:
+- Fix problem where an old version of the release documentation (an old
+version of this file!) was being installed instead of the current one.
+The following problems were fixed between release 0.9-6 and release 0.9-767:
+- Fixed problem where direct rendering applications were allowed to
+continue rendering after xkill was called
+- Fixed problem where Tribes 2 crashed when compressed textures (s3tc
+textures) were used
+- Some drawable leaks were fixed in X and GLX
+- Fixed problem where the application would hang when calling
+glXMakeCurrent while holding the X server grab
+- Bios-posting problems on GEForce2 GTS and GEForce Ultra cards were
+fixed. This bug resulted in a significant performance loss.
+- Added support for the X Render extension.
+- TwinView functionality was enhanced so that each head can pan independently.
+- Fixed problem on TNT and TNT2 where Xv(Shm)PutImage returned BadAlloc in
+high resolutions when there was not enough video bandwidth to display
+the YUV video overlay correctly. This works now but the resulting
+display has artifacts.
+- Fixed problem with cursor hanges in X.
+- Fixed problem with X console not restoring on some monitors.
+- Fixed problem with fork() and OpenGL rendering
+- Fixed problem with X driver module, nvidia_drv.o, being stripped when RPM
+was rebuilt.
+- Added missing PCI device ids for some TNT2 variants and GeForce3
+- Fixed problem where the kernel would often hang during X and/or OpenGL
+operation when on an SMP machine and using the 2.4 kernel.
+- Fixed SYNC_TO_VBLANK hang with 2.4 kernels.
+- Dpms is partially working again. It is possible to set the "off"
+option for dpms. Dpms options "suspend" and "standby" are not fully
+supported-- they simply blank the screen. Be sure to include 'Option
+"DPMS"' in your XF86Config file (please see the XF86Config manpage).
+
+Platforms
+
+CUDA-X
+
+Autonomous Machines
+
+Cloud & Data Center
+
+Deep Learning & AI
+
+Design and Visualization
+
+Healthcare & Life Sciences
+
+High Performance Computing
+
+Self-Driving Cars
+
+Gaming & Entertainment
+
+NGC
+
+Products
+
+DGX Systems
+
+DRIVE AGX
+
+GeForce RTX 20-Series
+
+NVIDIA Virtual GPU
+
+Jetson
+
+Quadro
+
+SHIELD TV
+
+Tesla
+
+T4 Enterprise Server
+
+Developers
+
+NVIDIA Developer
+
+Developer News
+
+Developer Blog
+
+Developer Forums
+
+Open Source Portal
+
+Training
+
+GPU Tech Conference
+
+CUDA
+
+Corporate
+
+NVIDIA Partner Network
+
+Careers
+
+Contact Us
+
+Security
+
+Communities
+
+NVIDIA Blog
+
+Email Signup
+
+Privacy Center
+
+Sign Up for NVIDIA News
+
+Subscribe
+
+Follow NVIDIA
+
+USA - United States
+
+Privacy Policy
+
+Legal Info
+
+Contact Us
+
+Copyright © 2021 NVIDIA Corporation

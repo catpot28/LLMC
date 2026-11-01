@@ -1,0 +1,314 @@
+=== SOURCE =============================================================
+company    : Revolut (revolut)
+url        : https://developer.revolut.com/docs/crypto-ramp/retrieve-configuration
+page path  : /docs/crypto-ramp/retrieve-configuration
+captured   : 2026-01-15 15:04:16 UTC  (CommonCrawl CC-MAIN-2026-04)
+raw file   : raw/revolut/developer.revolut.com_docs_crypto-ramp_retrieve-configuration__caf658ee.html.gz
+========================================================================
+
+Retrieve configuration | Revolut Docs
+
+Retrieve configuration | Revolut Docs
+
+Guides
+Merchant
+Overview
+Accept Revolut Pay payments
+Accept card payments
+Accept Apple Pay and Google Pay payments
+Accept direct bank payments
+Accept payments with Revolut Checkout
+Accept payments via Hosted Checkout Page
+Plugins and integrations
+In-person payments
+Business
+Overview
+Send money
+Manage your money
+Exchange currency
+Manage cards
+Manage your team
+Open Banking
+Overview
+Make payments
+Get account information
+Crypto Ramp
+Integrate with Revolut Ramp
+APIs
+Merchant API
+Orders
+Customers
+Payments
+Subscriptions
+Payouts
+Disputes
+Report runs
+Webhooks
+Locations
+Business API
+Accounts
+Cards
+Counterparties
+Expenses
+Foreign exchange
+Payment drafts
+Payout links
+Team members
+Transactions
+Transfers
+Webhooks
+Open Banking API
+Accounts
+Applications
+Payments
+Transactions
+Crypto Ramp API
+Partners
+Webhooks
+Crypto Exchange API
+Crypto Exchange FIX API
+Crypto Exchange REST API
+SDKs
+Merchant Web SDKs
+Revolut Pay
+Apple Pay and Google Pay
+Pay by Bank
+Revolut Checkout
+Revolut Promotional Widget
+Merchant iOS SDKs
+Revolut Pay
+Apple Pay
+Card Form
+Merchant Android SDKs
+Revolut Pay
+Card Form
+Resources
+Revolut Pay marketing assets and guidelines
+Revolut Pay button guidelines
+Revolut Open Banking logo assets and guidelines
+More...
+Support
+Developer Portal
+Sandbox
+Crypto Ramp API
+Version
+Introduction
+Partners
+Introduction
+Retrieve configuration
+Retrieve an order quote
+Retrieve a redirect URL
+Retrieve an order
+Retrieve all orders
+Webhooks
+Partners
+Retrieve configuration
+Retrieve configuration
+
+Retrieve Revolut Ramp configuration, such as available fiat currencies and crypto tokens with corresponding limits and supported countries.
+
+For more information, see the guides:
+Leverage the Crypto Ramp API -> Get your configuration details
+.
+
+Request
+​
+Header parameters
+Header parameters
+Expand
+X-API-KEY
+required
+Your API key that you received during integration setup.
+For more information, see the
+Authorization
+section.
+
+Response
+​
+200
+401
+429
+500
+503
+OK
+Response body
+Body
+
+object
+Expand
+version
+string
+required
+The Revolut Ramp configuration version.
+countries
+array of strings
+required
+Example:
+
+"GB"
+The list of client countries supported by Ramp – for your customer to be able to use Revolut Ramp, they must be resident in one of those countries.
+fiat
+array of objects
+required
+The supported fiat currencies and limits.
+currency
+string(ISO 4217)
+required
+Example:
+
+"GBP"
+The
+ISO 4217
+code of the supported currency.
+min_limit
+number(float)
+required
+The minimum allowed amount.
+max_limit
+number(float)
+required
+The maximum allowed amount.
+crypto
+array of objects
+required
+The list of cryptocurrencies supported by Revolut Ramp.
+id
+string
+required
+Example:
+
+"USDT-ETH"
+The unique identifier of the crypto currency-blockchain pair.
+Should be used throughout the API to reference the specific crypto.
+currency
+string
+required
+Example:
+
+"ETH"
+The
+cryptocurrency code
+.
+blockchain
+string
+required
+Possible values:
+[
+BITCOIN
+,
+RIPPLE
+,
+BITCOINCASH
+,
+LITECOIN
+,
+ETHEREUM
+,
+DOGECOIN
+,
+CARDANO
+,
+STELLAR
+,
+POLKADOT
+,
+SOLANA
+,
+AVALANCHE
+,
+EOS
+,
+TEZOS
+,
+DASH
+,
+ALGORAND
+,
+CELO
+,
+SMARTCHAIN
+,
+POLYGON
+,
+FANTOM
+,
+OPTIMISM
+,
+COSMOS
+,
+KUSAMA
+,
+ETHEREUMCLASSIC
+,
+ETHEREUMPOW
+,
+HEDERAHASHGRAPH
+,
+TRON
+,
+KAVA
+,
+NEAR
+,
+SONGBIRD
+,
+FLARE
+,
+CELESTIA
+,
+BASE
+]
+The cryptocurrency blockchain/network.
+smartContractAddress
+string
+The smart contract address. Returned only for tokens.
+feePercentages
+array of numbers(float)
+The list of fee percentages that can be applied for the order as partner fee.
+payment_methods
+array of strings
+required
+Possible values:
+[
+card
+,
+revolut
+,
+apple-pay
+,
+google-pay
+]
+The list of available payment methods.
+
+Was this page helpful?
+I like it
+Not really
+Company and products
+Discover Revolut
+Join the team!
+Email us for API support
+Build Banking Apps
+Documentation
+Open Banking API
+API Status
+Developer Portal
+Request Sandbox access
+Manage Accounts
+Documentation
+Business API
+Accept Payments
+Documentation
+Merchant API
+Merchant Web SDKs
+Merchant iOS SDKs
+Merchant Android SDKs
+In-person Payments
+Documentation
+Revolut POS
+Download the Revolut POS app
+Revolut Reader
+Revolut Terminal
+© Revolut Ltd 2026
+If you would like to find out more about which Revolut entity you receive services from, or if you have any other questions, please reach out to us via the in-app chat in the Revolut app. Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: 30 South Colonnade, Canary Wharf, London, England, E14 5HX. Insurance related-products are arranged by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance distribution activities (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities. Trading and investment products are provided by Revolut Trading Ltd (No. 832790) is wholly owned subsidiary of Revolut Ltd and is an appointed representative of Resolution Compliance Ltd which is authorised and regulated by the Financial Conduct Authority.
+We are also registered with the Financial Conduct Authority to offer cryptocurrency services under the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017.
+Revolut's commodities service is not regulated by the FCA.

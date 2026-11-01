@@ -1,0 +1,419 @@
+=== SOURCE =============================================================
+company    : Mistral AI (mistral-ai)
+url        : https://mistral.ai/it/customers/snowflake/
+page path  : /it/customers/snowflake/
+captured   : 2026-06-06 16:14:40 UTC  (CommonCrawl CC-MAIN-2026-25)
+raw file   : raw/mistral-ai/mistral.ai_it_customers_snowflake__804d656c.html.gz
+========================================================================
+
+Snowflake | Mistral AI
+
+Snowflake | Mistral AI
+
+Contatta le vendite
+
+Menu
+
+Products
+
+Solutions
+
+Models
+
+Developers
+
+Blog
+
+Customers
+
+Company
+
+Contatta le vendite
+
+Inizia a costruire
+
+Studio
+
+Build, test, and run AI agents and apps.
+
+Forge
+
+Train, align, and evaluate custom AI models.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe for code
+
+Coding agents in the terminal, IDE, and background.
+
+Compute
+
+Frontier-scale infrastructure for training and inference.
+
+Pricing
+
+Plans
+
+API pricing
+
+For enterprises
+
+Services
+
+Delivery methodology
+
+Model customization
+
+Industries
+
+Financial services
+
+Public sector & government
+
+Manufacturing
+
+Use cases
+
+Use case overview
+
+Coding
+
+Document intelligence
+
+Speech
+
+Latest models
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+See all models
+
+Docs
+
+API Reference
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Leggi tutte le notizie
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured stories
+
+ASML
+
+CMA CGM
+
+HSBC
+
+BMW
+
+See all
+
+Who we are
+
+About us
+
+Careers
+
+Brand
+
+Connect
+
+Community
+
+Partners
+
+Help center
+
+Products
+Solutions
+Models
+Developers
+Blog
+Customers
+Company
+
+Studio
+
+Build, test, and run AI agents and apps.
+
+Forge
+
+Train, align, and evaluate custom AI models.
+
+Vibe
+
+AI agent for long-horizon work.
+
+Vibe for code
+
+Coding agents in the terminal, IDE, and background.
+
+Compute
+
+Frontier-scale infrastructure for training and inference.
+
+Pricing
+
+Plans
+
+API pricing
+
+For enterprises
+
+Services
+
+Delivery methodology
+
+Model customization
+
+Industries
+
+Financial services
+
+Public sector & government
+
+Manufacturing
+
+Use cases
+
+Use case overview
+
+Coding
+
+Document intelligence
+
+Speech
+
+Latest models
+
+Mistral Medium 3.5
+
+Mistral Small 4
+
+Mistral 3
+
+Voxtral TTS
+
+See all models
+
+Docs
+
+API Reference
+
+Cookbooks
+
+Latest posts
+
+AI Now Summit 2026
+
+Vibe gets to work.
+
+Introducing Search Toolkit
+
+Leggi tutte le notizie
+
+Categories
+
+Product
+
+Research
+
+Engineering
+
+Solutions
+
+Company
+
+Featured stories
+
+ASML
+
+CMA CGM
+
+HSBC
+
+BMW
+
+See all
+
+Who we are
+
+About us
+
+Careers
+
+Brand
+
+Connect
+
+Community
+
+Partners
+
+Help center
+
+Inizia a costruire
+
+Studio
+
+Vibe
+
+Vibe for Code
+
+Contatta le vendite
+
+Beyond basic queries: Achieving 2x greater accuracy with text-to-sql on Snowflake.
+
+Technology and Software
+
+April 24, 2026
+
+Achieving 2x greater accuracy with text-to-sql on Snowflake.
+
+Torna ai clienti
+
+5 min read
+
+Snowflake is the AI data cloud company that helps companies get more value from their data, processing billions of queries each day across thousands of customers to drive important business insights. Central to the success of
+Cortex Analyst
+, their AI-powered assistant for structured data, was a partnership with Mistral and the integration of two LLMs — Mistral Large and Codestral — selected for their excellent natural language understanding and SQL generation ability.
+By leveraging Mistral's LLMs, Snowflake Cortex Analyst achieved:
+2X higher accuracy compared to state-of-the-art LLMs
+14% higher accuracy than other competing solutions
+90% or higher accuracy consistently across customer evaluations
+This collaboration has set a new standard for user experience in generative AI SQL products, making it easier for non-technical team members to tap into self-service analytics fast.
+Background
+The need for LLMs to help interpret data is growing as customers look for access to insights in both structured and unstructured data. The Snowflake development team needed a solution for Cortex Analyst that could generate SQL with expertise, while also providing conversational skills for high-quality natural language interactions. Given the importance of accuracy to data teams and business users using query results to inform critical business decisions, the solution needed to be state-of-the-art and outperform existing evaluation metrics.
+
+"With Mistral Large and Codestral, Snowflake is delivering cutting-edge text-to-sql capabilities for complex and nuanced enterprise data.”
+Yusuf Ozuysal, Director of Engineering, Snowflake
+
+SQL: A barrier to quick insight
+For anyone frequently writing SQL queries in an enterprise environment, the learning curve of finding the right schema and understanding the nuance of complex datasets can be steep. To further complicate matters, SQL queries can be subtle and ambiguous, and the “correct” answer may be written more than one way. Writing and optimizing SQL queries can be complex and time-consuming for non-technical users, making a seamless and intuitive user experience crucial to driving adoption and satisfaction among a diverse user base.
+To provide faster access to insights, Snowflake wanted to enhance Cortex Analyst with highly accurate text-to-SQL capabilities. The goal was to develop highly accurate text-to-SQL capabilities that could handle complex datasets, simplify the learning curve for schema identification, and provide an intuitive experience for non-technical users. Most critically, Snowflake needed to ensure state-of-the-art accuracy to support critical business decisions.
+Codestral and Mistral Large: Delivering accurate, conversational responses
+Snowflake needed to generate a SQL query, evaluate that query for accuracy and fix any potential issues, and then deliver the query and relevant information conversationally to business users. Snowflake turned to two Mistral models as potential answers:
+Codestral
+, an open-weight model explicitly tailored for code generation tasks, and
+Mistral Large
+, for reasoning, language generation, and code generation.
+For robust query generation, Snowflake uses a two-step approach: first, asking multiple agents to generate SQL and then asking another agent to synthesize the final SQL based on the expert responses. Snowflake uses Mistral Large and a finetuned Codestral for the initial SQL generation and uses Codestral for synthesizing the final SQL response.
+Cortex Analyst also needed to present queries and important contextual information conversationally using natural language that any user, regardless of their technical expertise, could understand. An important consideration was identifying ambiguous or unanswerable questions given available data and alerting the user or suggesting alternatives.
+
+“Mistral was the perfect fit for text-to-sql generation. Our goal was to exceed accuracy when compared to existing benchmarks. We tried several other models, but even with fine-tuning, they did not meet the required execution accuracy.”
+Yusuf Ozuysal, Director of Engineering, Snowflake
+
+Mistral Large was critical in providing both the SQL knowledge and conversational quality. The additional explanation of how the query was generated and reference documentation gives users confidence in the output and the ability to research more when needed.
+Why Mistral
+Snowflake selected Mistral Large and Codestral models for their:
+Superior natural language understanding and SQL generation capabilities
+Strong performance in both code generation and reasoning tasks
+Ability to provide high-quality conversational explanations
+Competitive advantage in SQL expertise compared to other models
+Results and impact: Setting new standards in accuracy and user experience
+The results were impressive. Based on internal evaluation sets, using Mistral Large and Codestral, Cortex Analyst is consistently close to 2x more accurate than single-shot SQL generation from state-of-the-art LLMs and delivers approximately 14% higher accuracy than another competing text-to-SQL solution in the market. Additionally, Cortex Analyst achieved ~90% or higher accuracy reliably across customer evaluations as well as in benchmark tests, which is critical for enterprise use cases.
+Beyond numerical improvements, the collaboration between Snowflake and Mistral has set a new standard for user experience in generative AI SQL products. It has enhanced natural language interactions for non-technical users and improved the ability to identify ambiguous questions and suggest alternatives. This partnership has allowed Snowflake to further deliver on their promise of democratizing generative AI for customers and delivering value on their enterprise data.
+Looking ahead: Expanding the horizons of data analytics
+As Snowflake increases the accessibility of data insights through AI-powered data applications, the collaboration with Mistral opens up new possibilities. Higher quality outputs lead to user satisfaction and adoption, allowing data teams to confidently build business applications using state-of-the-art solutions without the accuracy, latency, and cost challenges that come with building and maintaining internal models.
+This partnership between Snowflake and Mistral is just the beginning of a journey to provide customers with fast and insightful access to data, making self-service analytics more accessible and efficient for enterprises across various sectors.
+To learn more about why businesses across the globe trust Mistral for open, efficient and performant LLMs, check out our customer stories at
+https://mistral.ai/customers/
+.
+
+Products
+
+Vibe
+
+Vibe Code
+
+Studio
+
+Forge
+
+Compute
+
+Pricing
+
+Solutions
+
+Delivery methodology
+
+Model customization
+
+Coding
+
+Document intelligence
+
+Speech
+
+Mistral for finance
+
+Mistral for public institutions
+
+Mistral for manufacturing
+
+Why Mistral
+
+About us
+
+Careers
+
+Partners
+
+Our customers
+
+Our models
+
+Brand
+
+Legal
+
+Terms of Service
+
+Privacy Policy
+
+Privacy choices
+
+Data processing agreement
+
+Legal notice
+
+Get Mistral Vibe
+
+Mistral AI © 2026
+
+Seleziona lingua
+
+Italiano
+
+English
+Français
+Italiano
